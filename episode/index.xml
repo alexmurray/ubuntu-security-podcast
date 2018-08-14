@@ -19,17 +19,17 @@
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
-    <copyright>Copyright 2018 Alex Murray</copyright>
+    <copyright>Copyright 2018 Canonical</copyright>
     
     <itunes:author>Ubuntu Security Team</itunes:author>
     <itunes:type>episodic</itunes:type>
     <googleplay:author>Ubuntu Security Team</googleplay:author>
-    <googleplay:email>security@ubuntu.com</googleplay:email>
+    <googleplay:email>alex.murray@canonical.com</googleplay:email>
     <itunes:summary>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</itunes:summary>
     <googleplay:description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</googleplay:description>
     <itunes:owner>
       <itunes:name>Alex Murray</itunes:name>
-      <itunes:email>security@ubuntu.com</itunes:email>
+      <itunes:email>alex.murray@canonical.com</itunes:email>
     </itunes:owner>
     <itunes:image href="https://ubuntusecuritypodcast.org/img/logo_1400.png" />
     <googleplay:image href="https://ubuntusecuritypodcast.org/img/logo_1400.png"></googleplay:image>
