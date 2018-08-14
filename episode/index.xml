@@ -12,8 +12,8 @@
     >
   <channel>
     <title>Ubuntu Security Podcast</title>
-    <atom:link href="http://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
-    <link>http://ubuntusecuritypodcast.org/</link>
+    <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</description>
     <lastBuildDate>Tue, 14 Aug 2018 15:45:55 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -36,14 +36,14 @@
     <image>
       <url>https://ubuntusecuritypodcast.org/img/logo_1400.png</url>
       <title>Ubuntu Security Podcast</title>
-      <link>http://ubuntusecuritypodcast.org/</link>
+      <link>https://ubuntusecuritypodcast.org/</link>
     </image>
     <itunes:category text="Technology">
       </itunes:category>
     <generator>Hugo -- gohugo.io</generator>
         <item>
           <title>Episode 0</title>
-          <link>http://ubuntusecuritypodcast.org/episode/episode-0/</link>
+          <link>https://ubuntusecuritypodcast.org/episode/episode-0/</link>
           <pubDate>Tue, 14 Aug 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3</guid>
