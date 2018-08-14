@@ -12,7 +12,6 @@
 * TODO Episode 1
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-1
-:EXPORT_HUGO_MENU: :menu "main"
 :END:
 #+begin_description
 The upcoming episode..
@@ -20,7 +19,6 @@ The upcoming episode..
 * Episode 0
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-0
-:EXPORT_HUGO_MENU: :menu "main"
 :EXPORT_DATE: 2018-08-14
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :podcast_file "USP_E000.mp3"
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :podcast_duration "12:42"
