@@ -1,0 +1,22 @@
+#+HUGO_SECTION: .
+#+HUGO_BASE_DIR: ../
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+# ensure only a single author is listed, not an array otherwise breaks castinet theme?
+# https://github.com/kaushalmodi/ox-hugo/issues/180
+#+AUTHOR:
+#+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray"
+#+HUGO_CUSTOM_FRONT_MATTER: :explicit no
+#+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png
+* About
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:EXPORT_HUGO_MENU: :menu "main"
+:END:
+TODO - fixme
+* Contact
+:PROPERTIES:
+:EXPORT_FILE_NAME: contact
+:EXPORT_HUGO_MENU: :menu "main"
+:END:
+TODO - fixme
