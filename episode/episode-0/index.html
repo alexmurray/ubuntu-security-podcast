@@ -55,7 +55,7 @@
 <meta itemprop="keywords" content="" />
 
 
-<meta itemprop="wordCount" content="552">
+<meta itemprop="wordCount" content="590">
 
 
 
@@ -173,6 +173,12 @@
       <h2>Show Notes</h2>
       
 
+<p><summary>
+Includes a summary of the security vulnerabilities and fixes from the last
+week as well as a discussion on some of the goings on in the wider Ubuntu
+Security community.
+</summary></p>
+
 <h2 id="introduction">Introduction</h2>
 
 <h3 id="what-will-be-covered">What will be covered</h3>
@@ -185,7 +191,7 @@
 
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 
-<h3 id="segmentsmack--cve-2018-5390----usn-3732-1">SegmentSmack (CVE-2018-5390) (USN-3732-1)</h3>
+<h3 id="segmentsmack--cve-2018-5390----usn-3732-1">SegmentSmack (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390">CVE-2018-5390</a>) (<a href="https://usn.ubuntu.com/3732-1/">USN-3732-1</a>)</h3>
 
 <ul>
 <li>DoS via expensive algorithmic computation in TCP stream reassembly</li>
@@ -195,27 +201,27 @@
 <li>No known exploits in the wild</li>
 </ul>
 
-<h3 id="linux-kernel--lsn-0041-1">linux kernel (LSN-0041-1)</h3>
+<h3 id="linux-kernel--lsn-0041-1">linux kernel (<a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2018-August/004529.html">LSN-0041-1</a>)</h3>
 
 <ul>
 <li>brief description of livepatch</li>
 <li>Several issues (5 CVEs)
 
 <ul>
-<li>stack overflow in SCSI / cdrom layers</li>
-<li>DoS / crash via specially crafted ext4 filesystem</li>
-<li>files can be created with group permissions which the original owner did not have within sgid directories
+<li>stack overflow in SCSI / cdrom layers (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-11506">CVE-2018-11506</a>)</li>
+<li>DoS / crash via specially crafted ext4 filesystem (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-1094">CVE-2018-1094</a>)</li>
+<li>files can be created with group permissions which the original owner did not have within sgid directories (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405">CVE-2018-13405</a>)
 
 <ul>
 <li>Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu</li>
 </ul></li>
-<li>DoS / crash via specially crafted xfs filesystem</li>
-<li>SegmentSmack fix</li>
+<li>DoS / crash via specially crafted xfs filesystem (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094">CVE-2018-13094</a>)</li>
+<li>SegmentSmack fix (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390">CVE-2018-5390</a>)</li>
 </ul></li>
 <li>generic &amp; lowlatency kernels for Trusty, Xenial and Bionic</li>
 </ul>
 
-<h3 id="gnupg--cve-2017-7526----usn-3733-1">gnupg (CVE-2017-7526) (USN-3733-1)</h3>
+<h3 id="gnupg--cve-2017-7526----usn-3733-1">gnupg (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526">CVE-2017-7526</a>) (<a href="https://usn.ubuntu.com/3733-1/">USN-3733-1</a>)</h3>
 
 <ul>
 <li>Cache side-channel attack on RSA implementation</li>
@@ -230,14 +236,14 @@
 <li>No known exploits in the wild</li>
 </ul>
 
-<h3 id="openjdk--cve-2018-2952----usn-3734-1">openjdk (CVE-2018-2952) (USN-3734-1)</h3>
+<h3 id="openjdk--cve-2018-2952----usn-3734-1">openjdk (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952">CVE-2018-2952</a>) (<a href="https://usn.ubuntu.com/3734-1/">USN-3734-1</a>)</h3>
 
 <ul>
 <li>Denial of service via excessive memory consumption</li>
 <li>openjdk-7 in trusty and openjdk-8 in xenial</li>
 </ul>
 
-<h3 id="lxc--cve-2018-6556----usn-3730-1">lxc (CVE-2018-6556) (USN-3730-1)</h3>
+<h3 id="lxc--cve-2018-6556----usn-3730-1">lxc (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-6556">CVE-2018-6556</a>) (<a href="https://usn.ubuntu.com/3730-1/">USN-3730-1</a>)</h3>
 
 <ul>
 <li>Allows opening (but not reading) of arbitrary files
@@ -248,7 +254,7 @@
 <li>For lxc &gt;=2.0 - bionic, xenial-backports</li>
 </ul>
 
-<h3 id="libxcursor--cve-2015-9262----usn-3729-1">libxcursor (CVE-2015-9262) (USN-3729-1)</h3>
+<h3 id="libxcursor--cve-2015-9262----usn-3729-1">libxcursor (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2015-9262">CVE-2015-9262</a>) (<a href="https://usn.ubuntu.com/3729-1/">USN-3729-1</a>)</h3>
 
 <ul>
 <li>Classic off-by-one error - string allocation but forgot to allocate byte for NUL terminator
@@ -261,7 +267,7 @@
 <li>Affects libxcursor in trusty and xenial - both fixed</li>
 </ul>
 
-<h3 id="lftp--cve-2018-10196----usn-3731-1">lftp (CVE-2018-10196) (USN-3731-1)</h3>
+<h3 id="lftp--cve-2018-10196----usn-3731-1">lftp (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-10196">CVE-2018-10196</a>) (<a href="https://usn.ubuntu.com/3731-1/">USN-3731-1</a>)</h3>
 
 <ul>
 <li>Command-line FTP / HTTP / BitTorrent clients</li>
@@ -360,9 +366,9 @@
 <h2 id="get-in-contact">Get in contact</h2>
 
 <ul>
-<li>security@ubuntu.com</li>
-<li>#ubuntu-hardended on freenode</li>
-<li>@ubuntu_sec on twitter</li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 
     </div>
