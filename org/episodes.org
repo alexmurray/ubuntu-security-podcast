@@ -9,7 +9,7 @@
 #+HUGO_CUSTOM_FRONT_MATTER: :explicit no
 #+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png
 
-* TODO Episode 1
+* Episode 1
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-1
 :END:
@@ -26,29 +26,35 @@ The upcoming episode..
 #+begin_description
 The first ever episode of the Ubuntu Security Podcast!
 #+end_description
+#+begin_summary
+Includes a summary of the security vulnerabilities and fixes from the last
+week as well as a discussion on some of the goings on in the wider Ubuntu
+Security community.
+#+end_summary
+
 ** Introduction
 *** What will be covered
 - Overview of latest security updates for Ubuntu
 - In depth discussion of trending CVEs
 - Other things the team has been up to
 ** This week in Ubuntu Security Updates
-*** SegmentSmack (CVE-2018-5390) (USN-3732-1)
+*** SegmentSmack ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390][CVE-2018-5390]]) ([[https://usn.ubuntu.com/3732-1/][USN-3732-1]])
 - DoS via expensive algorithmic computation in TCP stream reassembly
 - Requires attacker to have an existing TCP session
 - Affecting kernel >= 4.9
 - Fixed in Bionic and Xenial for HWE
 - No known exploits in the wild
-*** linux kernel (LSN-0041-1)
+*** linux kernel ([[https://lists.ubuntu.com/archives/ubuntu-security-announce/2018-August/004529.html][LSN-0041-1]])
 - brief description of livepatch
 - Several issues (5 CVEs)
-  - stack overflow in SCSI / cdrom layers
-  - DoS / crash via specially crafted ext4 filesystem
-  - files can be created with group permissions which the original owner did not have within sgid directories
+  - stack overflow in SCSI / cdrom layers ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-11506][CVE-2018-11506]])
+  - DoS / crash via specially crafted ext4 filesystem ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-1094][CVE-2018-1094]])
+  - files can be created with group permissions which the original owner did not have within sgid directories ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405][CVE-2018-13405]])
     - Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu
-  - DoS / crash via specially crafted xfs filesystem
-  - SegmentSmack fix
+  - DoS / crash via specially crafted xfs filesystem ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094][CVE-2018-13094]])
+  - SegmentSmack fix ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390][CVE-2018-5390]])
 - generic & lowlatency kernels for Trusty, Xenial and Bionic
-*** gnupg (CVE-2017-7526) (USN-3733-1)
+*** gnupg ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526][CVE-2017-7526]]) ([[https://usn.ubuntu.com/3733-1/][USN-3733-1]])
 - Cache side-channel attack on RSA implementation
 - When CVE was created, only assigned to libgcrypt
 - gnupg quietly announced 1.4.23 as fixing this CVE as well in June
@@ -56,20 +62,20 @@ The first ever episode of the Ubuntu Security Podcast!
   - So Bionic etc not affected
 - Fixed in Trusty and Xenial
 - No known exploits in the wild
-*** openjdk (CVE-2018-2952) (USN-3734-1)
+*** openjdk ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952][CVE-2018-2952]]) ([[https://usn.ubuntu.com/3734-1/][USN-3734-1]])
 - Denial of service via excessive memory consumption
 - openjdk-7 in trusty and openjdk-8 in xenial
-*** lxc (CVE-2018-6556) (USN-3730-1)
+*** lxc ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-6556][CVE-2018-6556]]) ([[https://usn.ubuntu.com/3730-1/][USN-3730-1]])
 - Allows opening (but not reading) of arbitrary files
   - Information disclosure / DoS since could open pseudoterminals or other kernel devices and cause exhausting of resources
 - For lxc >=2.0 - bionic, xenial-backports
-*** libxcursor (CVE-2015-9262) (USN-3729-1)
+*** libxcursor ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2015-9262][CVE-2015-9262]]) ([[https://usn.ubuntu.com/3729-1/][USN-3729-1]])
 - Classic off-by-one error - string allocation but forgot to allocate byte for NUL terminator
   - As on the heap allows heap memory corruption
   - Possible code execution etc
   - In handling of cursor themes so could be triggered when loading a malicious themes
 - Affects libxcursor in trusty and xenial - both fixed
-*** lftp (CVE-2018-10196) (USN-3731-1)
+*** lftp ([[http://people.canonical.com/~ubuntu-security/cve/CVE-2018-10196][CVE-2018-10196]]) ([[https://usn.ubuntu.com/3731-1/][USN-3731-1]])
 - Command-line FTP / HTTP / BitTorrent clients
 - Does not properly validate filenames from server when mirroring locally
   - Could allow a malicious server to remove all files in PWD
@@ -117,6 +123,6 @@ The first ever episode of the Ubuntu Security Podcast!
 **** Ubuntu Security Engineer
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
-- security@ubuntu.com
-- #ubuntu-hardended on freenode
-- @ubuntu_sec on twitter
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]

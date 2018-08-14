@@ -2,11 +2,18 @@
 title = "Episode 0"
 description = "The first ever episode of the Ubuntu Security Podcast!"
 date = 2018-08-14
-lastmod = 2018-08-14T12:34:34+09:30
+lastmod = 2018-08-14T15:45:56+09:30
 draft = false
 weight = 1002
 podcast_file = "USP_E000.mp3"
 +++
+
+<summary>
+Includes a summary of the security vulnerabilities and fixes from the last
+week as well as a discussion on some of the goings on in the wider Ubuntu
+Security community.
+</summary>
+
 
 ## Introduction {#introduction}
 
@@ -21,7 +28,7 @@ podcast_file = "USP_E000.mp3"
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
 
 
-### SegmentSmack (CVE-2018-5390) (USN-3732-1) {#segmentsmack--cve-2018-5390----usn-3732-1}
+### SegmentSmack ([CVE-2018-5390](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390)) ([USN-3732-1](https://usn.ubuntu.com/3732-1/)) {#segmentsmack--cve-2018-5390----usn-3732-1}
 
 -   DoS via expensive algorithmic computation in TCP stream reassembly
 -   Requires attacker to have an existing TCP session
@@ -30,20 +37,20 @@ podcast_file = "USP_E000.mp3"
 -   No known exploits in the wild
 
 
-### linux kernel (LSN-0041-1) {#linux-kernel--lsn-0041-1}
+### linux kernel ([LSN-0041-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2018-August/004529.html)) {#linux-kernel--lsn-0041-1}
 
 -   brief description of livepatch
 -   Several issues (5 CVEs)
-    -   stack overflow in SCSI / cdrom layers
-    -   DoS / crash via specially crafted ext4 filesystem
-    -   files can be created with group permissions which the original owner did not have within sgid directories
+    -   stack overflow in SCSI / cdrom layers ([CVE-2018-11506](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-11506))
+    -   DoS / crash via specially crafted ext4 filesystem ([CVE-2018-1094](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-1094))
+    -   files can be created with group permissions which the original owner did not have within sgid directories ([CVE-2018-13405](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405))
         -   Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu
-    -   DoS / crash via specially crafted xfs filesystem
-    -   SegmentSmack fix
+    -   DoS / crash via specially crafted xfs filesystem ([CVE-2018-13094](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094))
+    -   SegmentSmack fix ([CVE-2018-5390](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390))
 -   generic & lowlatency kernels for Trusty, Xenial and Bionic
 
 
-### gnupg (CVE-2017-7526) (USN-3733-1) {#gnupg--cve-2017-7526----usn-3733-1}
+### gnupg ([CVE-2017-7526](http://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526)) ([USN-3733-1](https://usn.ubuntu.com/3733-1/)) {#gnupg--cve-2017-7526----usn-3733-1}
 
 -   Cache side-channel attack on RSA implementation
 -   When CVE was created, only assigned to libgcrypt
@@ -54,20 +61,20 @@ podcast_file = "USP_E000.mp3"
 -   No known exploits in the wild
 
 
-### openjdk (CVE-2018-2952) (USN-3734-1) {#openjdk--cve-2018-2952----usn-3734-1}
+### openjdk ([CVE-2018-2952](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952)) ([USN-3734-1](https://usn.ubuntu.com/3734-1/)) {#openjdk--cve-2018-2952----usn-3734-1}
 
 -   Denial of service via excessive memory consumption
 -   openjdk-7 in trusty and openjdk-8 in xenial
 
 
-### lxc (CVE-2018-6556) (USN-3730-1) {#lxc--cve-2018-6556----usn-3730-1}
+### lxc ([CVE-2018-6556](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-6556)) ([USN-3730-1](https://usn.ubuntu.com/3730-1/)) {#lxc--cve-2018-6556----usn-3730-1}
 
 -   Allows opening (but not reading) of arbitrary files
     -   Information disclosure / DoS since could open pseudoterminals or other kernel devices and cause exhausting of resources
 -   For lxc >=2.0 - bionic, xenial-backports
 
 
-### libxcursor (CVE-2015-9262) (USN-3729-1) {#libxcursor--cve-2015-9262----usn-3729-1}
+### libxcursor ([CVE-2015-9262](http://people.canonical.com/~ubuntu-security/cve/CVE-2015-9262)) ([USN-3729-1](https://usn.ubuntu.com/3729-1/)) {#libxcursor--cve-2015-9262----usn-3729-1}
 
 -   Classic off-by-one error - string allocation but forgot to allocate byte for NUL terminator
     -   As on the heap allows heap memory corruption
@@ -76,7 +83,7 @@ podcast_file = "USP_E000.mp3"
 -   Affects libxcursor in trusty and xenial - both fixed
 
 
-### lftp (CVE-2018-10196) (USN-3731-1) {#lftp--cve-2018-10196----usn-3731-1}
+### lftp ([CVE-2018-10196](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-10196)) ([USN-3731-1](https://usn.ubuntu.com/3731-1/)) {#lftp--cve-2018-10196----usn-3731-1}
 
 -   Command-line FTP / HTTP / BitTorrent clients
 -   Does not properly validate filenames from server when mirroring locally
@@ -144,6 +151,6 @@ podcast_file = "USP_E000.mp3"
 
 ## Get in contact {#get-in-contact}
 
--   security@ubuntu.com
--   \#ubuntu-hardended on freenode
--   @ubuntu\_sec on twitter
+-   [security@ubuntu.com](mailto:security@ubuntu.com)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

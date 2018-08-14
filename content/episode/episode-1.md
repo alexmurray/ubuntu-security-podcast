@@ -1,8 +1,8 @@
 +++
 title = "Episode 1"
 description = "The upcoming episode.."
-lastmod = 2018-08-14T12:34:34+09:30
-draft = true
+lastmod = 2018-08-14T15:45:55+09:30
+draft = false
 weight = 1001
 author = "Alex Murray"
 explicit = "no"
