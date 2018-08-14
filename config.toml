@@ -6,16 +6,16 @@ theme = "castanet"
 [params]
 site_theme = "orange"
 site_layout = "row"
-copyright_notice = "Copyright 2018 [Alex Murray](https://launchpad.net/~alexmurray)"
+copyright_notice = "Copyright 2018 [Canonical](https://ubuntu.com/)"
 description = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team."
 media_prefix = "https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/"
 
 [params.feed]
-copyright = "Copyright 2018 Alex Murray"
+copyright = "Copyright 2018 Canonical"
 itunes_author = "Ubuntu Security Team"
 itunes_summary = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team."
 itunes_owner_name = "Alex Murray"
-itunes_owner_email = "security@ubuntu.com"
+itunes_owner_email = "alex.murray@canonical.com"
 itunes_image = "https://ubuntusecuritypodcast.org/img/logo_1400.png"
 itunes_top_category = "Technology"
 
