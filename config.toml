@@ -1,4 +1,4 @@
-baseURL = "http://ubuntusecuritypodcast.org/"
+baseURL = "https://ubuntusecuritypodcast.org/"
 languageCode = "en-us"
 title = "Ubuntu Security Podcast"
 theme = "castanet"
