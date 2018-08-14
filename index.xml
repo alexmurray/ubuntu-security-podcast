@@ -6,15 +6,24 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Aug 2018 11:53:18 +0930</lastBuildDate>
+    <lastBuildDate>Tue, 14 Aug 2018 12:56:29 +0930</lastBuildDate>
     
 	<atom:link href="http://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Episode 1</title>
+      <link>http://ubuntusecuritypodcast.org/episode/episode-1/</link>
+      <pubDate>Tue, 14 Aug 2018 12:56:29 +0930</pubDate>
+      
+      <guid>http://ubuntusecuritypodcast.org/episode/episode-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://ubuntusecuritypodcast.org/about/</link>
-      <pubDate>Tue, 14 Aug 2018 11:53:18 +0930</pubDate>
+      <pubDate>Tue, 14 Aug 2018 12:33:35 +0930</pubDate>
       
       <guid>http://ubuntusecuritypodcast.org/about/</guid>
       <description>TODO - fixme</description>
@@ -23,7 +32,7 @@
     <item>
       <title>Contact</title>
       <link>http://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Tue, 14 Aug 2018 11:53:19 +0930</pubDate>
+      <pubDate>Tue, 14 Aug 2018 12:33:35 +0930</pubDate>
       
       <guid>http://ubuntusecuritypodcast.org/contact/</guid>
       <description>TODO - fixme</description>
