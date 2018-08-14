@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu Security Podcast</title>
+    <link>http://ubuntusecuritypodcast.org/</link>
+    <description>Recent content on Ubuntu Security Podcast</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Aug 2018 11:53:18 +0930</lastBuildDate>
+    
+	<atom:link href="http://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Tue, 14 Aug 2018 11:53:18 +0930</pubDate>
+      
+      <guid>http://ubuntusecuritypodcast.org/about/</guid>
+      <description>TODO - fixme</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://ubuntusecuritypodcast.org/contact/</link>
+      <pubDate>Tue, 14 Aug 2018 11:53:19 +0930</pubDate>
+      
+      <guid>http://ubuntusecuritypodcast.org/contact/</guid>
+      <description>TODO - fixme</description>
+    </item>
+    
+    <item>
+      <title>Episode 0</title>
+      <link>http://ubuntusecuritypodcast.org/episode/episode-0/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0930</pubDate>
+      
+      <guid>http://ubuntusecuritypodcast.org/episode/episode-0/</guid>
+      <description>Introduction What will be covered  Overview of latest security updates for Ubuntu In depth discussion of trending CVEs Other things the team has been up to  This week in Ubuntu Security Updates SegmentSmack (CVE-2018-5390) (USN-3732-1)  DoS via expensive algorithmic computation in TCP stream reassembly Requires attacker to have an existing TCP session Affecting kernel &amp;gt;= 4.9 Fixed in Bionic and Xenial for HWE No known exploits in the wild  linux kernel (LSN-0041-1)  brief description of livepatch Several issues (5 CVEs)  stack overflow in SCSI / cdrom layers DoS / crash via specially crafted ext4 filesystem files can be created with group permissions which the original owner did not have within sgid directories  Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu  DoS / crash via specially crafted xfs filesystem SegmentSmack fix  generic &amp;amp; lowlatency kernels for Trusty, Xenial and Bionic  gnupg (CVE-2017-7526) (USN-3733-1)  Cache side-channel attack on RSA implementation When CVE was created, only assigned to libgcrypt gnupg quietly announced 1.</description>
+    </item>
+    
+  </channel>
+</rss>
