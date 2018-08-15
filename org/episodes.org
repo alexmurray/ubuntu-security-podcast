@@ -9,19 +9,11 @@
 #+HUGO_CUSTOM_FRONT_MATTER: :explicit no
 #+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png
 
-* Episode 1
-:PROPERTIES:
-:EXPORT_FILE_NAME: episode-1
-:END:
-#+begin_description
-The upcoming episode..
-#+end_description
 * Episode 0
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-0
 :EXPORT_DATE: 2018-08-14
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :podcast_file "USP_E000.mp3"
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :podcast_duration "12:42"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :podcast_file "USP_E000.mp3" :podcast_duration "12:42"
 :END:
 #+begin_description
 The first ever episode of the Ubuntu Security Podcast!
@@ -126,3 +118,10 @@ Security community.
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
 - [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+* Episode -1
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode--1
+:END:
+#+begin_description
+Nothing to see here...
+#+end_description
