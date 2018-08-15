@@ -5,7 +5,7 @@ theme = "castanet"
 googleAnalytics = "UA-123895434-1"
 
 [params]
-site_theme = "orange"
+site_theme = "ubuntu"
 site_layout = "row"
 enable_jumbo = "false"
 about_logo = "/img/logo_250.png"
