@@ -11,12 +11,13 @@
 * About
 :PROPERTIES:
 :EXPORT_FILE_NAME: about
-:EXPORT_HUGO_MENU: :menu "main"
 :END:
-TODO - fixme
+Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.
+
 * Contact
 :PROPERTIES:
 :EXPORT_FILE_NAME: contact
-:EXPORT_HUGO_MENU: :menu "main"
 :END:
-TODO - fixme
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
