@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</description>
-    <lastBuildDate>Tue, 14 Aug 2018 15:45:55 &#43;0930</lastBuildDate>
+    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -43,7 +43,7 @@
     <generator>Hugo -- gohugo.io</generator>
         <item>
           <title>Episode 0</title>
-          <link>https://ubuntusecuritypodcast.org/episode/episode-0/</link>
+          <link>https://ubuntusecuritypodcast.org/episode-0/</link>
           <pubDate>Tue, 14 Aug 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3</guid>
@@ -251,5 +251,6 @@ Security community.
 <li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
-]]></content:encoded><enclosure url="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3"  type="audio/mpeg" /></item></channel>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3"  type="audio/mpeg" /><itunes:duration>12:42</itunes:duration></item></channel>
 </rss>
