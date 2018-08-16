@@ -39,6 +39,7 @@ twitter = "alex_murray"
 [permalinks]
         page = "/:filename/"
         about = "/:filename/"
+        contact = "/:filename/"
         episode = "/:filename/"
 
 [[Menu.Main]]
