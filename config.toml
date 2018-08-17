@@ -23,6 +23,7 @@ itunes_owner_name = "Alex Murray"
 itunes_owner_email = "alex.murray@canonical.com"
 itunes_image = "https://ubuntusecuritypodcast.org/img/logo_1400.png"
 itunes_top_category = "Technology"
+explicit = "no"
 
 [params.social]
 twitter = "ubuntu_sec"
