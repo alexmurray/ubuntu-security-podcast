@@ -5,15 +5,13 @@
 # ensure only a single author is listed, not an array otherwise breaks castinet theme?
 # https://github.com/kaushalmodi/ox-hugo/issues/180
 #+AUTHOR:
-#+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray"
-#+HUGO_CUSTOM_FRONT_MATTER: :explicit no
-#+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png
+#+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/episode/default.png
 
 * Episode 0
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-0
 :EXPORT_DATE: 2018-08-14
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :podcast_file "USP_E000.mp3" :podcast_duration "12:42"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file "USP_E000.mp3" :podcast_duration "12:42" :podcast_bytes "12202029"
 :END:
 #+begin_description
 The first ever episode of the Ubuntu Security Podcast!
@@ -121,6 +119,7 @@ Security community.
 * Episode -1
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode--1
+:EXPORT_DATE: 2018-08-14
 :END:
 #+begin_description
 Nothing to see here...
