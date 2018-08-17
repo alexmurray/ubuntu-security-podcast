@@ -39,8 +39,8 @@
       <link>https://ubuntusecuritypodcast.org/</link>
     </image>
     <itunes:category text="Technology">
-      </itunes:category>
-    <generator>Hugo -- gohugo.io</generator>
+      </itunes:category><itunes:explicit>no</itunes:explicit>
+    <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
           <title>Episode 0</title>
           <link>https://ubuntusecuritypodcast.org/episode-0/</link>
