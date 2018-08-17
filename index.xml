@@ -31,21 +31,21 @@ Introduction What will be covered  Overview of latest security updates for Ubunt
     </item>
     
     <item>
-      <title>Episode -1</title>
-      <link>https://ubuntusecuritypodcast.org/episode--1/</link>
-      <pubDate>Wed, 15 Aug 2018 15:15:46 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/episode--1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Contact</title>
       <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/contact/</guid>
       <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
+    </item>
+    
+    <item>
+      <title>Episode -1</title>
+      <link>https://ubuntusecuritypodcast.org/episode--1/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode--1/</guid>
+      <description></description>
     </item>
     
   </channel>

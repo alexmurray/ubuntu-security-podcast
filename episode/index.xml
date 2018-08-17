@@ -252,5 +252,6 @@ Security community.
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3"  type="audio/mpeg" /><itunes:duration>12:42</itunes:duration></item></channel>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E000.mp3" length="12202029" type="audio/mpeg" /><itunes:duration>12:42</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item></channel>
 </rss>
