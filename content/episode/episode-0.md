@@ -2,22 +2,15 @@
 title = "Episode 0"
 description = "The first ever episode of the Ubuntu Security Podcast!"
 date = 2018-08-14
-lastmod = 2018-08-17T10:27:34+09:30
+lastmod = 2018-08-20T15:12:29+09:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E000.mp3"
 podcast_duration = "12:42"
 podcast_bytes = 12202029
 +++
-
-<summary>
-Includes a summary of the security vulnerabilities and fixes from the last
-week as well as a discussion on some of the goings on in the wider Ubuntu
-Security community.
-</summary>
-
 
 ## Introduction {#introduction}
 
