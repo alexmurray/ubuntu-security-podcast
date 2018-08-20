@@ -26,7 +26,7 @@
                      ("U" (format "[[https://usn.ubuntu.com/%s/][%s]]" usn-n usn))
                      ("L" usn))))
         (with-current-buffer usp-buffer
-          (insert (format "** %s (%s)\n" subject link)))))))
+          (insert (format "*** %s (%s)\n" subject link)))))))
 
 (defun usp-insert-usn-summary-2 ()
   "Second half of `usp-insert-usn-summary'."
@@ -43,15 +43,15 @@
                                  (format "date:%s..%s" start end) " "
                                  "not flag:trashed"))))
 
-(defun usp-insert-episode-template (episode publish-date start end description summary)
+(defun usp-insert-episode-template (episode publish-date start end summary description)
   "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION and SUMMARY."
   (interactive
    (list (read-number "Episode: ")
          (org-read-date nil nil nil "Publish Date: ")
          (org-read-date nil nil nil "Start Date: ")
          (org-read-date nil nil nil "End Date: ")
-         (read-string "Description: ")
-         (read-string "Summary: " "Includes a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.")))
+         (read-string "Summary: ")
+         (read-string "Description: " "Includes a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.")))
   (unless (eq major-mode 'org-mode)
     (error "Current buffer should be an org-mode buffer"))
   (unwind-protect
