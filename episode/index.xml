@@ -14,8 +14,8 @@
     <title>Ubuntu Security Podcast</title>
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
-    <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</description>
-    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 &#43;0930</lastBuildDate>
+    <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
+    <lastBuildDate>Mon, 20 Aug 2018 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -25,8 +25,8 @@
     <itunes:type>episodic</itunes:type>
     <googleplay:author>Ubuntu Security Team</googleplay:author>
     <googleplay:email>alex.murray@canonical.com</googleplay:email>
-    <itunes:summary>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</itunes:summary>
-    <googleplay:description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.</googleplay:description>
+    <itunes:summary>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</itunes:summary>
+    <googleplay:description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</googleplay:description>
     <itunes:owner>
       <itunes:name>Alex Murray</itunes:name>
       <itunes:email>alex.murray@canonical.com</itunes:email>
@@ -42,6 +42,210 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>Episode 1</title>
+          <link>https://ubuntusecuritypodcast.org/episode-1/</link>
+          <pubDate>Mon, 20 Aug 2018 00:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E001.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>Another week, another speculative execution vulnerablity... and more!</itunes:summary>
+        <description>Another week, another speculative execution vulnerablity... and more!</description>
+        <googleplay:description>Another week, another speculative execution vulnerablity... and more!</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<ul>
+<li>Security fixes for 39 CVEs this week including L1TF and FragmentSmack</li>
+</ul>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<h3 id="gdm--usn-3737-1----cve-2018-14424">GDM (<a href="https://usn.ubuntu.com/3737-1/">USN-3737-1</a>) (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14424">CVE-2018-14424</a>)</h3>
+
+<ul>
+<li>Found by Ubuntu Security Team member Chris Coulson during audit of gdm3 source code</li>
+<li>Local user can exploit via DBus to crash GDM via use-after-free (create a transient display which is automatically cleaned up, then try to query info for the previously created display)</li>
+<li>Bionic only so far</li>
+</ul>
+
+<h3 id="libarchive--usn-3736-1">libarchive (<a href="https://usn.ubuntu.com/3736-1/">USN-3736-1</a>)</h3>
+
+<ul>
+<li>6 CVEs addressed across Bionic, Xenial and Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10209">CVE-2016-10209</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10349">CVE-2016-10349</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10350">CVE-2016-10350</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14166">CVE-2017-14166</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14501">CVE-2017-14501</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14503">CVE-2017-14503</a></li>
+</ul></li>
+<li>All local crashes / DoS / unspecified impact via specially crafted archives in various formats</li>
+</ul>
+
+<h3 id="samba--usn-3738-1">Samba (<a href="https://usn.ubuntu.com/3738-1/">USN-3738-1</a>)</h3>
+
+<ul>
+<li>4 CVEs addressed across Bionic, Xenial and Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10858">CVE-2018-10858</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10918">CVE-2018-10918</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10919">CVE-2018-10919</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1139">CVE-2018-1139</a></li>
+</ul></li>
+<li>Includes vulnerabilities in both the samba client and server
+
+<ul>
+<li>Likely to affect most Ubuntu users</li>
+</ul></li>
+</ul>
+
+<h3 id="libxml2--usn-3739-1----usn-3739-2">libxml2 (<a href="https://usn.ubuntu.com/3739-1/">USN-3739-1</a>) (<a href="https://usn.ubuntu.com/3739-2/">USN-3739-2</a>)</h3>
+
+<ul>
+<li>XML parsing library used across lots of different software packages</li>
+<li>5 CVEs fixed across releases for Bionic, Xenial and Trusty
+
+<ul>
+<li>2 CVEs fixed for Precise ESM</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9318">CVE-2016-9318</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16932">CVE-2017-16932</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18258">CVE-2017-18258</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14404">CVE-2018-14404</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14567">CVE-2018-14567</a></li>
+</ul></li>
+<li>Includes information disclosure and DoS</li>
+</ul>
+
+<h3 id="l1tf-and-fragmentsmack-vulnerabilities-in-linux-kernel--usn-3740-1----usn-3740-2----usn-3741-1----usn-3741-2----usn-3742-1----usn-3742-2">L1TF and FragmentSmack vulnerabilities in Linux Kernel (<a href="https://usn.ubuntu.com/3740-1/">USN-3740-1</a>) (<a href="https://usn.ubuntu.com/3740-2/">USN-3740-2</a>) (<a href="https://usn.ubuntu.com/3741-1/">USN-3741-1</a>) (<a href="https://usn.ubuntu.com/3741-2/">USN-3741-2</a>) (<a href="https://usn.ubuntu.com/3742-1/">USN-3742-1</a>) (<a href="https://usn.ubuntu.com/3742-2/">USN-3742-2</a>)</h3>
+
+<h4 id="l1tf--cve-2018-3620----cve-2018-3646">L1TF (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3620">CVE-2018-3620</a>) (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3646">CVE-2018-3646</a>)</h4>
+
+<ul>
+<li>Latest speculative execution cache side channel attack affecting Intel processors</li>
+<li>Allows to access contents from L1 Data Cache via speculative execution,  can then be read by cache side channel</li>
+<li>3 variants, SGX, SMM and VMM but only 2 affect Ubuntu</li>
+<li>Processors access virtual addresses which need to be translated to physical addresses</li>
+<li>Page Table Entries map from one to the other (contains metadata of page including offset and present bit)</li>
+<li>Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address</li>
+<li>But Intel processor will use offset value from PTE even on non-present pages <strong>speculatively</strong></li>
+<li>For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value</li>
+<li>SGX doesn&rsquo;t affect Ubuntu since not used</li>
+<li>SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&rsquo;t be used for this</li>
+<li>VMM is trickier
+
+<ul>
+<li>VMs maintain their own PTEs so also need to ensure they are doing the right thing</li>
+<li>OR if running untrusted VMs need to do a full L1D flush on switching from host to VM</li>
+</ul></li>
+<li>Made more trickier by Hyper Threading since sibling hyper-threads share the L1D cache</li>
+<li>So if have different trust domains on sibling hyper-threads may have to disable HT in certain circumstances</li>
+</ul>
+
+<h4 id="fragmentsmack--cve-2018-5391">FragmentSmack (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5391">CVE-2018-5391</a>)</h4>
+
+<ul>
+<li>Last week was SegmentSmack in TCP fragment reassembly, this week is FragmentSmack</li>
+<li>Similar but for IP fragmentation reassembly
+
+<ul>
+<li>Exploiting high algorithmic complexity of IP fragment reassembly code paths to cause DoS</li>
+</ul></li>
+</ul>
+
+<h3 id="gnupg--usn-3733-2----cve-2017-7526">GnuPG (<a href="https://usn.ubuntu.com/3733-2/">USN-3733-2</a>) (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526">CVE-2017-7526</a>)</h3>
+
+<ul>
+<li>Last week GnuPG was fixed for Xenial and Trusty for RSA cache side-channel issue</li>
+<li>This is corresponding fix for Precise ESM</li>
+</ul>
+
+<h3 id="webkitgtk-vulnerabilities--usn-3743-1">WebKitGTK+ vulnerabilities (<a href="https://usn.ubuntu.com/3743-1/">USN-3743-1</a>)</h3>
+
+<ul>
+<li>14 CVEs fixed in web content renderer used in many desktop apps
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12911">CVE-2018-12911</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4246">CVE-2018-4246</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4261">CVE-2018-4261</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4262">CVE-2018-4262</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4263">CVE-2018-4263</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4264">CVE-2018-4264</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4265">CVE-2018-4265</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4266">CVE-2018-4266</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4267">CVE-2018-4267</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4270">CVE-2018-4270</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4272">CVE-2018-4272</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4273">CVE-2018-4273</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4278">CVE-2018-4278</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4284">CVE-2018-4284</a></li>
+</ul></li>
+<li>Fixes for Bionic and Xenial</li>
+</ul>
+
+<h3 id="postgresql--usn-3744-1----cve-2018-10915----cve-2018-10925">PostgreSQL (<a href="https://usn.ubuntu.com/3744-1/">USN-3744-1</a>) (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10915">CVE-2018-10915</a>) (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10925">CVE-2018-10925</a>)</h3>
+
+<ul>
+<li>2 CVEs fixed in popular relational database across Bionic, Xenial and Trusty</li>
+</ul>
+
+<h3 id="procps-ng--usn-3658-3">procps-ng (<a href="https://usn.ubuntu.com/3658-3/">USN-3658-3</a>)</h3>
+
+<ul>
+<li>3 CVEs fixed in Precise ESM procps-ng package
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1122">CVE-2018-1122</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1123">CVE-2018-1123</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1125">CVE-2018-1125</a></li>
+</ul></li>
+</ul>
+
+<h3 id="linux-kernel-livepatch--lsn-0042-1">Linux kernel livepatch (LSN-0042-1)</h3>
+
+<ul>
+<li>No Livepatch possible for L1TF so a LSN to advise to do an update and reboot</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-manger">Ubuntu Security Manger</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1278287">https://boards.greenhouse.io/canonical/jobs/1278287</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+<h2 id="special-thanks">Special thanks</h2>
+
+<ul>
+<li>Thanks to Emily Ratliff - a great manager of the team (and a good friend too)</li>
+<li>We will miss you :)</li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E001.mp3" length="10133967" type="audio/mpeg" /><itunes:duration>10:33</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Episode 0</title>
           <link>https://ubuntusecuritypodcast.org/episode-0/</link>
           <pubDate>Tue, 14 Aug 2018 00:00:00 +0930 </pubDate>
@@ -53,12 +257,6 @@
         <description>The first ever episode of the Ubuntu Security Podcast!</description>
         <googleplay:description>The first ever episode of the Ubuntu Security Podcast!</googleplay:description>
         <content:encoded><![CDATA[
-
-<p><summary>
-Includes a summary of the security vulnerabilities and fixes from the last
-week as well as a discussion on some of the goings on in the wider Ubuntu
-Security community.
-</summary></p>
 
 <h2 id="introduction">Introduction</h2>
 

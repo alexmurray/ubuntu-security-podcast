@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ubuntusecuritypodcast.org/about/</loc>
-    <lastmod>2018-08-15T12:26:17+09:30</lastmod>
+    <loc>https://ubuntusecuritypodcast.org/episode-1/</loc>
+    <lastmod>2018-08-20T15:12:29+09:30</lastmod>
   </url>
   
   <url>
-    <loc>https://ubuntusecuritypodcast.org/episode-0/</loc>
-    <lastmod>2018-08-17T10:27:34+09:30</lastmod>
+    <loc>https://ubuntusecuritypodcast.org/about/</loc>
+    <lastmod>2018-08-15T12:26:17+09:30</lastmod>
   </url>
   
   <url>
@@ -18,8 +18,13 @@
   </url>
   
   <url>
+    <loc>https://ubuntusecuritypodcast.org/episode-0/</loc>
+    <lastmod>2018-08-20T15:12:29+09:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ubuntusecuritypodcast.org/episode--1/</loc>
-    <lastmod>2018-08-17T10:27:35+09:30</lastmod>
+    <lastmod>2018-08-20T15:12:29+09:30</lastmod>
   </url>
   
   <url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode/</loc>
-    <lastmod>2018-08-17T10:27:34+09:30</lastmod>
+    <lastmod>2018-08-20T15:12:29+09:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,7 +45,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/</loc>
-    <lastmod>2018-08-15T12:26:17+09:30</lastmod>
+    <lastmod>2018-08-20T15:12:29+09:30</lastmod>
     <priority>0</priority>
   </url>
   
