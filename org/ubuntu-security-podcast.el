@@ -3,6 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
+(require 'cl)
 (require 'mu4e)
 (require 'org)
 
@@ -14,39 +15,68 @@
   (when (string-match ".*\\([LU]SN-[0-9-]+\\).*" subject)
     (match-string 1 subject)))
 
+(defun usp-generate-usn-link (usn)
+  "Generate an 'org-mode' link for USN."
+  (let ((usn-n (substring usn (string-match "[0-9]" usn))))
+    (pcase (substring usn 0 1)
+      ("U" (format "[[https://usn.ubuntu.com/%s/][%s]]" usn-n usn))
+      (_ usn))))
+
+(defun usp-generate-cve-link (cve)
+  "Generate an 'org-mode' link for CVE."
+  (format "[[https://people.canonical.com/~ubuntu-security/cve/%s][%s]]" cve cve))
+
 (defun usp-insert-usn-summary-for-message (msg)
   "Insert a summary for MSG in current buffer."
   (let* ((subject (mu4e-message-field msg :subject))
-         (id (plist-get msg :message-id))
+         (path (mu4e-message-field msg :path))
          (usn (usp-extract-usn-from-subject subject)))
     (unless usp-buffer (error "Error: `usp-buffer` is nil"))
     (when usn
-      (let* ((usn-n (substring usn (string-match "[0-9]" usn)))
-             (link (pcase (substring usn 0 1)
-                     ("U" (format "[[https://usn.ubuntu.com/%s/][%s]]" usn-n usn))
-                     ("L" usn))))
+      (let ((link (usp-generate-usn-link usn))
+            (cves nil))
+        (with-temp-buffer
+          (insert-file-contents-literally path)
+          (goto-char (point-min))
+          (while (re-search-forward "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" nil t)
+            (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=)))
         (with-current-buffer usp-buffer
-          (insert (format "*** %s (%s)\n" subject link)))))))
-
-(defun usp-insert-usn-summary-2 ()
-  "Second half of `usp-insert-usn-summary'."
-  (unless usp-buffer (error "Error: `usp-buffer` is nil"))
-  (mu4e-headers-for-each #'usp-insert-usn-summary-for-message))
+          (save-excursion
+            (insert (format "*** %s\n" (replace-regexp-in-string usn link subject t)))
+            (when (> (length cves) 0)
+              (insert (format "- %d CVEs addressed across TODO\n" (length cves)))
+              (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
+              (insert "\n"))))))))
 
 (defun usp-insert-usn-summary (start end)
   "Insert a summary from USNs from mu4e from dates START to END in current buffer."
-  ;; searching happens async so make sure we get called by hooking manually
+  ;; searching happens async so make sure we get called by hooking manually -
+  ;; we can't let bind either since this is async...
   (unless usp-buffer (error "Error: `usp-buffer` is nil"))
-  (let ((mu4e-headers-mode-hook '(usp-insert-usn-summary-2))
-        (mu4e-headers-include-related nil))
-    (mu4e-headers-search (concat "list:ubuntu-security-announce.lists.ubuntu.com "
-                                 (format "date:%s..%s" start end) " "
-                                 "not flag:trashed"))))
+  (let ((result-buffer (get-buffer-create "*usn-results*")))
+    (shell-command (concat "mu find --format=sexp "
+                           "list:ubuntu-security-announce.lists.ubuntu.com "
+                           (format "date:%s..%s" start end) " "
+                           "not flag:trashed") result-buffer)
+    (with-current-buffer result-buffer
+      (goto-char (point-min))
+      (while (let ((msg (read (current-buffer))))
+               (when msg
+                 (usp-insert-usn-summary-for-message msg))
+               msg))
+      (kill-buffer result-buffer))))
+
+(defun usp-get-next-episode-number ()
+  "Find the current highest numbered episode and return it +1."
+  (save-excursion
+    (goto-char (point-min))
+    (when (re-search-forward "^* Episode \\([0-9]+\\)")
+      (1+ (string-to-number (match-string 1))))))
 
 (defun usp-insert-episode-template (episode publish-date start end summary description)
   "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION and SUMMARY."
   (interactive
-   (list (read-number "Episode: ")
+   (list (read-number "Episode: " (usp-get-next-episode-number))
          (org-read-date nil nil nil "Publish Date: ")
          (org-read-date nil nil nil "Start Date: ")
          (org-read-date nil nil nil "End Date: ")
@@ -78,16 +108,15 @@
                           "** This week in Ubuntu Security Updates\n"))
           (usp-insert-usn-summary start end)
           ;; ensure we switch back
-          (switch-to-buffer usp-buffer)
-          (insert (concat "** Goings on in Ubuntu Security Community\n"
-                          "*** Hiring\n"
-                          "**** Ubuntu Security Engineer\n"
-                          "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
-                          "** Get in contact\n"
-                          "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
-                          "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
-                          "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))
-    (setq usp-buffer nil)))
+          (with-current-buffer usp-buffer
+            (insert (concat "** Goings on in Ubuntu Security Community\n"
+                            "*** Hiring\n"
+                            "**** Ubuntu Security Engineer\n"
+                            "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
+                            "** Get in contact\n"
+                            "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
+                            "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
+                            "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n")))))))
 
 (provide 'ubuntu-security-podcast)
 ;;; ubuntu-security-podcast.el ends here
