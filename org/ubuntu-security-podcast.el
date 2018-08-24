@@ -3,7 +3,8 @@
 ;;; Commentary:
 
 ;;; Code:
-(require 'cl)
+(eval-and-compile
+  (require 'cl))
 (require 'mu4e)
 (require 'org)
 
@@ -26,45 +27,82 @@
   "Generate an 'org-mode' link for CVE."
   (format "[[https://people.canonical.com/~ubuntu-security/cve/%s][%s]]" cve cve))
 
+(defvar usp-ubuntu-releases
+  '(("12.04" "Precise ESM")
+    ("14.04" "Trusty")
+    ("16.04" "Xenial")
+    ("18.04" "Bionic")
+    ("18.10" "Cosmic")))
+
+(defun usp-get-release-codename (release)
+  "Get codename for RELEASE."
+  (let ((codename release))
+    (dolist (pair usp-ubuntu-releases)
+      (when (string= release (car pair))
+        (setq codename (cadr pair))))
+    codename))
+
 (defun usp-insert-usn-summary-for-message (msg)
-  "Insert a summary for MSG in current buffer."
+  "Insert an 'org-mode' summary for MSG, returning the list of CVEs referenced."
   (let* ((subject (mu4e-message-field msg :subject))
          (path (mu4e-message-field msg :path))
          (usn (usp-extract-usn-from-subject subject)))
     (unless usp-buffer (error "Error: `usp-buffer` is nil"))
     (when usn
       (let ((link (usp-generate-usn-link usn))
-            (cves nil))
+            (cves nil)
+            (releases nil))
         (with-temp-buffer
           (insert-file-contents-literally path)
+          ;; look for CVEs
           (goto-char (point-min))
           (while (re-search-forward "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" nil t)
-            (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=)))
+            (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=))
+          ;; find which releases are affected
+          (goto-char (point-min))
+          (while (re-search-forward "^- Ubuntu \\([0-9.]+\\).*$" nil t)
+            (cl-pushnew (substring-no-properties (match-string 1)) releases :test #'string=)))
         (with-current-buffer usp-buffer
-          (save-excursion
-            (insert (format "*** %s\n" (replace-regexp-in-string usn link subject t)))
+          (insert (format "*** %s\n" (replace-regexp-in-string usn link subject t)))
             (when (> (length cves) 0)
-              (insert (format "- %d CVEs addressed across TODO\n" (length cves)))
+              (insert (format "- %d CVEs addressed in %s\n" (length cves)
+                              (mapconcat #'(lambda (rel) (usp-get-release-codename rel)) releases ", ")))
               (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
-              (insert "\n"))))))))
+              (insert "\n")))
+        cves))))
 
 (defun usp-insert-usn-summary (start end)
   "Insert a summary from USNs from mu4e from dates START to END in current buffer."
   ;; searching happens async so make sure we get called by hooking manually -
   ;; we can't let bind either since this is async...
   (unless usp-buffer (error "Error: `usp-buffer` is nil"))
-  (let ((result-buffer (get-buffer-create "*usn-results*")))
-    (shell-command (concat "mu find --format=sexp "
-                           "list:ubuntu-security-announce.lists.ubuntu.com "
-                           (format "date:%s..%s" start end) " "
-                           "not flag:trashed") result-buffer)
-    (with-current-buffer result-buffer
-      (goto-char (point-min))
-      (while (let ((msg (read (current-buffer))))
-               (when msg
-                 (usp-insert-usn-summary-for-message msg))
-               msg))
-      (kill-buffer result-buffer))))
+  (let ((placeholder "usp-num-unique-cves-placeholder")
+        (cves nil))
+    (with-current-buffer usp-buffer
+      (insert "** This week in Ubuntu Security Updates\n")
+      (insert (concat placeholder " unique CVEs addressed\n")))
+    (let ((result-buffer (get-buffer-create "*usn-results*")))
+      (shell-command (concat "mu find --format=sexp "
+                             "list:ubuntu-security-announce.lists.ubuntu.com "
+                             (format "date:%s..%s" start end) " "
+                             "not flag:trashed") result-buffer)
+      (with-current-buffer result-buffer
+        (goto-char (point-min))
+        ;; ignore errors reading so we don't get error on end of buffer
+        (while (let ((msg (ignore-errors (read (current-buffer))))
+                     (cves- nil))
+                 (when msg
+                   ;; collect unique list of cves
+                   (setq cves- (usp-insert-usn-summary-for-message msg))
+                   (dolist (cve cves-)
+                     (cl-pushnew cve cves :test #'string=)))
+                 msg)))
+      (kill-buffer result-buffer)
+      (with-current-buffer usp-buffer
+        (save-excursion
+          (goto-char (point-min))
+          (search-forward placeholder nil t)
+          (replace-match (format "%s" (length cves)) nil t))))))
 
 (defun usp-get-next-episode-number ()
   "Find the current highest numbered episode and return it +1."
@@ -104,19 +142,16 @@
                           "#+end_summary\n"
 
                           "** Overview\n"
-                          "TODO\n"
-                          "** This week in Ubuntu Security Updates\n"))
+                          "TODO\n"))
           (usp-insert-usn-summary start end)
-          ;; ensure we switch back
-          (with-current-buffer usp-buffer
-            (insert (concat "** Goings on in Ubuntu Security Community\n"
-                            "*** Hiring\n"
-                            "**** Ubuntu Security Engineer\n"
-                            "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
-                            "** Get in contact\n"
-                            "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
-                            "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
-                            "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n")))))))
+          (insert (concat "** Goings on in Ubuntu Security Community\n"
+                          "*** Hiring\n"
+                          "**** Ubuntu Security Engineer\n"
+                          "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
+                          "** Get in contact\n"
+                          "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
+                          "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
+                          "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
 (provide 'ubuntu-security-podcast)
 ;;; ubuntu-security-podcast.el ends here
