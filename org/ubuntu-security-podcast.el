@@ -42,6 +42,24 @@
         (setq codename (cadr pair))))
     codename))
 
+(defun usp-parse-usn-email-cves (&optional buffer)
+  "Parse email which is in BUFFER returning a list of the CVEs."
+  (with-current-buffer (or buffer (current-buffer))
+    (let ((cves nil))
+      (goto-char (point-min))
+      (while (re-search-forward "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" nil t)
+        (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=))
+      cves)))
+
+(defun usp-parse-usn-email-releases (&optional buffer)
+  "Parse email which is in BUFFER returning a list of the releases."
+  (with-current-buffer (or buffer (current-buffer))
+    (let ((releases nil))
+      (goto-char (point-min))
+      (while (re-search-forward "^- Ubuntu \\([0-9.]+\\).*$" nil t)
+        (cl-pushnew (substring-no-properties (match-string 1)) releases :test #'string=))
+      releases)))
+
 (defun usp-insert-usn-summary-for-message (msg)
   "Insert an 'org-mode' summary for MSG, returning the list of CVEs referenced."
   (let* ((subject (mu4e-message-field msg :subject))
@@ -54,14 +72,8 @@
             (releases nil))
         (with-temp-buffer
           (insert-file-contents-literally path)
-          ;; look for CVEs
-          (goto-char (point-min))
-          (while (re-search-forward "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" nil t)
-            (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=))
-          ;; find which releases are affected
-          (goto-char (point-min))
-          (while (re-search-forward "^- Ubuntu \\([0-9.]+\\).*$" nil t)
-            (cl-pushnew (substring-no-properties (match-string 1)) releases :test #'string=)))
+          (setq cves (usp-parse-usn-email-cves))
+          (setq releases (usp-parse-usn-email-releases)))
         (with-current-buffer usp-buffer
           (insert (format "*** %s\n" (replace-regexp-in-string usn link subject t)))
             (when (> (length cves) 0)
@@ -146,6 +158,8 @@
           (usp-insert-usn-summary start end)
           (insert (concat "** Goings on in Ubuntu Security Community\n"
                           "*** Hiring\n"
+                          "**** Ubuntu Security Manager\n"
+                          "- https://boards.greenhouse.io/canonical/jobs/1278287\n"
                           "**** Ubuntu Security Engineer\n"
                           "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
                           "** Get in contact\n"
