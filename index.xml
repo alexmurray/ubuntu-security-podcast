@@ -6,19 +6,20 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 03 Sep 2018 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Episode 2</title>
-      <link>https://ubuntusecuritypodcast.org/episode-2/</link>
-      <pubDate>Tue, 28 Aug 2018 00:00:00 +0930</pubDate>
+      <title>Episode 3</title>
+      <link>https://ubuntusecuritypodcast.org/episode-3/</link>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-2/</guid>
-      <description>Overview 83 unique CVEs addressed across the supported Ubuntu releases.
-This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regressions  Security team issues USNs for package updates caused by regressions in previous security updates Fix for regressions caused by the original kernel update for L1TF Could cause Java applications to fail to start and possible kernel panics on boot for some hardware configurations  [USN-3745-1] wpa_supplicant and hostapd vulnerability  1 CVEs addressed in Bionic  CVE-2018-14526  Researchers analysed WPA2 4-way handshake via symbolic execution to find weaknesses  Found a number of issues including a decryption oracle In this case, the would decrypt but not authenticate frame and then could allow recovery of the group key via a timing side-channel In theory, allows an unauthenticated attacker to recover WPA2 group key via frame manipulation when used with TKIP  NOTE: is not advised to use TKIP in practice anyway (should use WPA2/CCMP) and so should have limited applicability  In practice, due to large number of attempts needed to recover the full key, this is impractical (especially given that the group key is changed periodically)  https://w1.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-3/</guid>
+      <description>Overview This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.
+This week in Ubuntu Security Updates 29 unique CVEs addressed
+[USN-3756-1] Intel Microcode vulnerabilities  3 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-3640 CVE-2018-3639 CVE-2018-3646  Intel microcode updates to address L1TF, Spectre Variant 4 and Rogue System Register Read (RSRE) Intel initially released this with a brand new license which included terms around disallowing benchmarking and possibly preventing redistribution via the Ubuntu mirrors  As a result, we couldn&amp;rsquo;t provide updated microcode packages to full address L1TF etc Intel have now reverted back to the license used on previous microcode packages and so this can now finally be released  https://perens.</description>
     </item>
     
     <item>
@@ -31,12 +32,13 @@ This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regr
     </item>
     
     <item>
-      <title>Episode 1</title>
-      <link>https://ubuntusecuritypodcast.org/episode-1/</link>
-      <pubDate>Mon, 20 Aug 2018 00:00:00 +0930</pubDate>
+      <title>Episode 2</title>
+      <link>https://ubuntusecuritypodcast.org/episode-2/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-1/</guid>
-      <description>Overview  Security fixes for 39 CVEs this week including L1TF and FragmentSmack  This week in Ubuntu Security Updates GDM (USN-3737-1) (CVE-2018-14424)  Found by Ubuntu Security Team member Chris Coulson during audit of gdm3 source code Local user can exploit via DBus to crash GDM via use-after-free (create a transient display which is automatically cleaned up, then try to query info for the previously created display) Bionic only so far  libarchive (USN-3736-1)  6 CVEs addressed across Bionic, Xenial and Trusty  CVE-2016-10209 CVE-2016-10349 CVE-2016-10350 CVE-2017-14166 CVE-2017-14501 CVE-2017-14503  All local crashes / DoS / unspecified impact via specially crafted archives in various formats  Samba (USN-3738-1)  4 CVEs addressed across Bionic, Xenial and Trusty  CVE-2018-10858 CVE-2018-10918 CVE-2018-10919 CVE-2018-1139  Includes vulnerabilities in both the samba client and server  Likely to affect most Ubuntu users   libxml2 (USN-3739-1) (USN-3739-2)  XML parsing library used across lots of different software packages 5 CVEs fixed across releases for Bionic, Xenial and Trusty  2 CVEs fixed for Precise ESM CVE-2016-9318 CVE-2017-16932 CVE-2017-18258 CVE-2018-14404 CVE-2018-14567  Includes information disclosure and DoS  L1TF and FragmentSmack vulnerabilities in Linux Kernel (USN-3740-1) (USN-3740-2) (USN-3741-1) (USN-3741-2) (USN-3742-1) (USN-3742-2) L1TF (CVE-2018-3620) (CVE-2018-3646)  Latest speculative execution cache side channel attack affecting Intel processors Allows to access contents from L1 Data Cache via speculative execution, can then be read by cache side channel 3 variants, SGX, SMM and VMM but only 2 affect Ubuntu Processors access virtual addresses which need to be translated to physical addresses Page Table Entries map from one to the other (contains metadata of page including offset and present bit) Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address But Intel processor will use offset value from PTE even on non-present pages speculatively For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value SGX doesn&amp;rsquo;t affect Ubuntu since not used SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&amp;rsquo;t be used for this VMM is trickier  VMs maintain their own PTEs so also need to ensure they are doing the right thing OR if running untrusted VMs need to do a full L1D flush on switching from host to VM  Made more trickier by Hyper Threading since sibling hyper-threads share the L1D cache So if have different trust domains on sibling hyper-threads may have to disable HT in certain circumstances  FragmentSmack (CVE-2018-5391)  Last week was SegmentSmack in TCP fragment reassembly, this week is FragmentSmack Similar but for IP fragmentation reassembly  Exploiting high algorithmic complexity of IP fragment reassembly code paths to cause DoS   GnuPG (USN-3733-2) (CVE-2017-7526)  Last week GnuPG was fixed for Xenial and Trusty for RSA cache side-channel issue This is corresponding fix for Precise ESM  WebKitGTK+ vulnerabilities (USN-3743-1)  14 CVEs fixed in web content renderer used in many desktop apps  CVE-2018-12911 CVE-2018-4246 CVE-2018-4261 CVE-2018-4262 CVE-2018-4263 CVE-2018-4264 CVE-2018-4265 CVE-2018-4266 CVE-2018-4267 CVE-2018-4270 CVE-2018-4272 CVE-2018-4273 CVE-2018-4278 CVE-2018-4284  Fixes for Bionic and Xenial  PostgreSQL (USN-3744-1) (CVE-2018-10915) (CVE-2018-10925)  2 CVEs fixed in popular relational database across Bionic, Xenial and Trusty  procps-ng (USN-3658-3)  3 CVEs fixed in Precise ESM procps-ng package  CVE-2018-1122 CVE-2018-1123 CVE-2018-1125   Linux kernel livepatch (LSN-0042-1)  No Livepatch possible for L1TF so a LSN to advise to do an update and reboot  Goings on in Ubuntu Security Community Hiring Ubuntu Security Manger  https://boards.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-2/</guid>
+      <description>Overview 83 unique CVEs addressed across the supported Ubuntu releases.
+This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regressions  Security team issues USNs for package updates caused by regressions in previous security updates Fix for regressions caused by the original kernel update for L1TF Could cause Java applications to fail to start and possible kernel panics on boot for some hardware configurations  [USN-3745-1] wpa_supplicant and hostapd vulnerability  1 CVEs addressed in Bionic  CVE-2018-14526  Researchers analysed WPA2 4-way handshake via symbolic execution to find weaknesses  Found a number of issues including a decryption oracle In this case, the would decrypt but not authenticate frame and then could allow recovery of the group key via a timing side-channel In theory, allows an unauthenticated attacker to recover WPA2 group key via frame manipulation when used with TKIP  NOTE: is not advised to use TKIP in practice anyway (should use WPA2/CCMP) and so should have limited applicability  In practice, due to large number of attempts needed to recover the full key, this is impractical (especially given that the group key is changed periodically)  https://w1.</description>
     </item>
     
     <item>
@@ -49,21 +51,21 @@ This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regr
     </item>
     
     <item>
+      <title>Episode 1</title>
+      <link>https://ubuntusecuritypodcast.org/episode-1/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-1/</guid>
+      <description>Overview  Security fixes for 39 CVEs this week including L1TF and FragmentSmack  This week in Ubuntu Security Updates GDM (USN-3737-1) (CVE-2018-14424)  Found by Ubuntu Security Team member Chris Coulson during audit of gdm3 source code Local user can exploit via DBus to crash GDM via use-after-free (create a transient display which is automatically cleaned up, then try to query info for the previously created display) Bionic only so far  libarchive (USN-3736-1)  6 CVEs addressed across Bionic, Xenial and Trusty  CVE-2016-10209 CVE-2016-10349 CVE-2016-10350 CVE-2017-14166 CVE-2017-14501 CVE-2017-14503  All local crashes / DoS / unspecified impact via specially crafted archives in various formats  Samba (USN-3738-1)  4 CVEs addressed across Bionic, Xenial and Trusty  CVE-2018-10858 CVE-2018-10918 CVE-2018-10919 CVE-2018-1139  Includes vulnerabilities in both the samba client and server  Likely to affect most Ubuntu users   libxml2 (USN-3739-1) (USN-3739-2)  XML parsing library used across lots of different software packages 5 CVEs fixed across releases for Bionic, Xenial and Trusty  2 CVEs fixed for Precise ESM CVE-2016-9318 CVE-2017-16932 CVE-2017-18258 CVE-2018-14404 CVE-2018-14567  Includes information disclosure and DoS  L1TF and FragmentSmack vulnerabilities in Linux Kernel (USN-3740-1) (USN-3740-2) (USN-3741-1) (USN-3741-2) (USN-3742-1) (USN-3742-2) L1TF (CVE-2018-3620) (CVE-2018-3646)  Latest speculative execution cache side channel attack affecting Intel processors Allows to access contents from L1 Data Cache via speculative execution, can then be read by cache side channel 3 variants, SGX, SMM and VMM but only 2 affect Ubuntu Processors access virtual addresses which need to be translated to physical addresses Page Table Entries map from one to the other (contains metadata of page including offset and present bit) Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address But Intel processor will use offset value from PTE even on non-present pages speculatively For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value SGX doesn&amp;rsquo;t affect Ubuntu since not used SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&amp;rsquo;t be used for this VMM is trickier  VMs maintain their own PTEs so also need to ensure they are doing the right thing OR if running untrusted VMs need to do a full L1D flush on switching from host to VM  Made more trickier by Hyper Threading since sibling hyper-threads share the L1D cache So if have different trust domains on sibling hyper-threads may have to disable HT in certain circumstances  FragmentSmack (CVE-2018-5391)  Last week was SegmentSmack in TCP fragment reassembly, this week is FragmentSmack Similar but for IP fragmentation reassembly  Exploiting high algorithmic complexity of IP fragment reassembly code paths to cause DoS   GnuPG (USN-3733-2) (CVE-2017-7526)  Last week GnuPG was fixed for Xenial and Trusty for RSA cache side-channel issue This is corresponding fix for Precise ESM  WebKitGTK+ vulnerabilities (USN-3743-1)  14 CVEs fixed in web content renderer used in many desktop apps  CVE-2018-12911 CVE-2018-4246 CVE-2018-4261 CVE-2018-4262 CVE-2018-4263 CVE-2018-4264 CVE-2018-4265 CVE-2018-4266 CVE-2018-4267 CVE-2018-4270 CVE-2018-4272 CVE-2018-4273 CVE-2018-4278 CVE-2018-4284  Fixes for Bionic and Xenial  PostgreSQL (USN-3744-1) (CVE-2018-10915) (CVE-2018-10925)  2 CVEs fixed in popular relational database across Bionic, Xenial and Trusty  procps-ng (USN-3658-3)  3 CVEs fixed in Precise ESM procps-ng package  CVE-2018-1122 CVE-2018-1123 CVE-2018-1125   Linux kernel livepatch (LSN-0042-1)  No Livepatch possible for L1TF so a LSN to advise to do an update and reboot  Goings on in Ubuntu Security Community Hiring Ubuntu Security Manger  https://boards.</description>
+    </item>
+    
+    <item>
       <title>Episode 0</title>
       <link>https://ubuntusecuritypodcast.org/episode-0/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0930</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-0/</guid>
       <description>Introduction What will be covered  Overview of latest security updates for Ubuntu In depth discussion of trending CVEs Other things the team has been up to  This week in Ubuntu Security Updates SegmentSmack (CVE-2018-5390) (USN-3732-1)  DoS via expensive algorithmic computation in TCP stream reassembly Requires attacker to have an existing TCP session Affecting kernel &amp;gt;= 4.9 Fixed in Bionic and Xenial for HWE No known exploits in the wild  linux kernel (LSN-0041-1)  brief description of livepatch Several issues (5 CVEs)  stack overflow in SCSI / cdrom layers (CVE-2018-11506) DoS / crash via specially crafted ext4 filesystem (CVE-2018-1094) files can be created with group permissions which the original owner did not have within sgid directories (CVE-2018-13405)  Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu  DoS / crash via specially crafted xfs filesystem (CVE-2018-13094) SegmentSmack fix (CVE-2018-5390)  generic &amp;amp; lowlatency kernels for Trusty, Xenial and Bionic  gnupg (CVE-2017-7526) (USN-3733-1)  Cache side-channel attack on RSA implementation When CVE was created, only assigned to libgcrypt gnupg quietly announced 1.</description>
-    </item>
-    
-    <item>
-      <title>Episode -1</title>
-      <link>https://ubuntusecuritypodcast.org/episode--1/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/episode--1/</guid>
-      <description></description>
     </item>
     
   </channel>

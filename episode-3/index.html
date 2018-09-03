@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 3" />
+<meta property="og:description" content="This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-3/" />
+
+
+
+<meta property="og:updated_time" content="2018-09-03 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-09-03 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2018-09-03 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 3">
+<meta itemprop="description" content="This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="687">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 3"/>
+<meta name="twitter:description" content="This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 3 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-3/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 3</h1>
+      <small>Posted on Monday, Sep 3, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E003.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E003.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>29 unique CVEs addressed</p>
+
+<h3 id="usn-3756-1-intel-microcode-vulnerabilities">[<a href="https://usn.ubuntu.com/3756-1/">USN-3756-1</a>] Intel Microcode vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3640">CVE-2018-3640</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3639">CVE-2018-3639</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3646">CVE-2018-3646</a></li>
+</ul></li>
+<li>Intel microcode updates to address L1TF, Spectre Variant 4 and Rogue System Register Read (RSRE)</li>
+<li>Intel initially released this with a brand new license which included terms around disallowing benchmarking and possibly preventing redistribution via the Ubuntu mirrors
+
+<ul>
+<li>As a result, we couldn&rsquo;t provide updated microcode packages to full address L1TF etc</li>
+<li>Intel have now reverted back to the license used on previous microcode packages and so this can now finally be released</li>
+</ul></li>
+<li><a href="https://perens.com/2018/08/22/new-intel-microcode-license-restriction-is-not-acceptable/">https://perens.com/2018/08/22/new-intel-microcode-license-restriction-is-not-acceptable/</a></li>
+</ul>
+
+<h3 id="usn-3755-1-gd-vulnerabilities">[<a href="https://usn.ubuntu.com/3755-1/">USN-3755-1</a>] GD vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5711">CVE-2018-5711</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000222">CVE-2018-1000222</a></li>
+</ul></li>
+<li>Popular image manipulation and creating library used by PHP and therefore in many PHP web applications</li>
+<li>Issue in handling of signed integers in GIF decoder allows an attacker to enter an infinite loop and cause DoS via a specially crafted GIF file</li>
+<li>Double free in JPEG decoder could allow a user to possibly execute arbitrary code via specially crafted JPEG file</li>
+</ul>
+
+<h3 id="usn-3757-1-poppler-vulnerability">[<a href="https://usn.ubuntu.com/3757-1/">USN-3757-1</a>] poppler vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13988">CVE-2018-13988</a></li>
+</ul></li>
+<li>Fixed a crash (hence DoS) due to out-of-bounds read in PDF decoding</li>
+</ul>
+
+<h3 id="usn-3758-1-libx11-vulnerabilities">[<a href="https://usn.ubuntu.com/3758-1/">USN-3758-1</a>] libx11 vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14600">CVE-2018-14600</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14599">CVE-2018-14599</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14598">CVE-2018-14598</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7943">CVE-2016-7943</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7942">CVE-2016-7942</a></li>
+</ul></li>
+<li>Bundles some fixes for some low priority old CVEs with some new medium priority CVE fixes</li>
+<li>Updates are usually done in this manner, where low priority fixes wait to get fixed along with higher priority fixes for a package</li>
+<li>Fixes issues around handling of data from untrusted servers and image decoding
+
+<ul>
+<li>Usual failure to validate inputs, off-by-one, integer signedness confusion and incorrect freeing of dynamically allocated memory style issues</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3758-2-libx11-vulnerabilities">[<a href="https://usn.ubuntu.com/3758-2/">USN-3758-2</a>] libx11 vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14600">CVE-2018-14600</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14599">CVE-2018-14599</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14598">CVE-2018-14598</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7943">CVE-2016-7943</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7942">CVE-2016-7942</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3752-3-linux-kernel--azure-gcp-oem--vulnerabilities">[<a href="https://usn.ubuntu.com/3752-3/">USN-3752-3</a>] Linux kernel (Azure, GCP, OEM) vulnerabilities</h3>
+
+<ul>
+<li>18 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000204">CVE-2018-1000204</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9415">CVE-2018-9415</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5814">CVE-2018-5814</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13406">CVE-2018-13406</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405">CVE-2018-13405</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094">CVE-2018-13094</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12904">CVE-2018-12904</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12233">CVE-2018-12233</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12232">CVE-2018-12232</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11506">CVE-2018-11506</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11412">CVE-2018-11412</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1120">CVE-2018-1120</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1108">CVE-2018-1108</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1093">CVE-2018-1093</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10881">CVE-2018-10881</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10840">CVE-2018-10840</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10323">CVE-2018-10323</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000200">CVE-2018-1000200</a></li>
+</ul></li>
+<li>Kernel updates for various hardware platforms etc corresponding to the same updates from last week</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="mir-process-and-bubblewrap">MIR Process and bubblewrap</h3>
+
+<ul>
+<li>Security team is responsible for doing security audits of packages which are proposed to be included in the main section of the Ubuntu package repository
+
+<ul>
+<li>Packages in main are officially maintained, supported and recommended so deserve a high level of scrutiny before promotion into main</li>
+<li>Security team historically only provides security updates to packages in main as well</li>
+<li>So we have to be confident we can maintain and support a given package</li>
+</ul></li>
+<li>To perform the security review we look at a number of things:
+
+<ul>
+<li>The code is evaluated to determine how easy or not it would be to maintain</li>
+<li>The package itself is evaluated to look for potential issues</li>
+<li>Code is then evaluated to look for potential existing security vulnerabilities</li>
+</ul></li>
+<li>This can be a time consuming process, especially to do well</li>
+<li>Recently this was in the news, when Hanno Böck (infosec journalist and
+researcher) and Tavis Ormandy (GPZ) raised the issue of lack of bubblewrap
+support for gnome desktop thumbnailers
+
+<ul>
+<li>bubblewrap provides support for sandboxing processes via namespaces and the
+use of it to sandbox desktop thumbnailers was introduced in the GNOME 3.26
+release</li>
+<li>It was planned to be supported for Ubuntu 18.04, but to do this the package
+had to be moved from universe into main, hence a MIR</li>
+<li>Due to shifting priorities, the security team was not able to get this done
+in time and hence the feature had to be disabled</li>
+<li>This MIR is being proritised now so this security hardening feature should be available in an upcoming release</li>
+<li>Security team is also looking at how to strengthen the hardening via AppArmor MAC profiles in addition</li>
+<li>Thanks to Hanno and Tavis for giving this greater visibility</li>
+</ul></li>
+<li><a href="https://wiki.ubuntu.com/MainInclusionProcess">https://wiki.ubuntu.com/MainInclusionProcess</a></li>
+<li><a href="https://www.bleepingcomputer.com/news/security/ubuntu-is-undoing-a-gnome-security-feature/">https://www.bleepingcomputer.com/news/security/ubuntu-is-undoing-a-gnome-security-feature/</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-manager">Ubuntu Security Manager</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1278287">https://boards.greenhouse.io/canonical/jobs/1278287</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-2/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.ubuntu.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 3"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
