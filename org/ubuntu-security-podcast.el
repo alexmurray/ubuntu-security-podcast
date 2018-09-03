@@ -123,15 +123,14 @@
     (when (re-search-forward "^* Episode \\([0-9]+\\)")
       (1+ (string-to-number (match-string 1))))))
 
-(defun usp-insert-episode-template (episode publish-date start end summary description)
-  "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION and SUMMARY."
+(defun usp-insert-episode-template (episode publish-date start end description)
+  "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION."
   (interactive
    (list (read-number "Episode: " (usp-get-next-episode-number))
          (org-read-date nil nil nil "Publish Date: ")
          (org-read-date nil nil nil "Start Date: ")
          (org-read-date nil nil nil "End Date: ")
-         (read-string "Summary: ")
-         (read-string "Description: " "Includes a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.")))
+         (read-string "Description: " "This week we look at some details of the XX unique CVEs addressed across the supported Ubuntu releases and more.")))
   (unless (eq major-mode 'org-mode)
     (error "Current buffer should be an org-mode buffer"))
   (unwind-protect
@@ -149,12 +148,9 @@
                           "#+begin_description\n"
                           description "\n"
                           "#+end_description\n"
-                          "#+begin_summary\n"
-                          summary "\n"
-                          "#+end_summary\n"
 
                           "** Overview\n"
-                          "TODO\n"))
+                          description "\n"))
           (usp-insert-usn-summary start end)
           (insert (concat "** Goings on in Ubuntu Security Community\n"
                           "*** Hiring\n"
