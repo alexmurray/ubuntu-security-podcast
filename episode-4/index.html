@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  A quieter week in package updates - this week we look at some details of the 9
+  unique CVEs addressed across the supported Ubuntu releases and talk about
+  various hardening guides for Ubuntu.
+  ">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 4" />
+<meta property="og:description" content="  A quieter week in package updates - this week we look at some details of the 9
+  unique CVEs addressed across the supported Ubuntu releases and talk about
+  various hardening guides for Ubuntu.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-4/" />
+
+
+
+<meta property="og:updated_time" content="2018-09-10 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-09-10 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2018-09-10 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 4">
+<meta itemprop="description" content="  A quieter week in package updates - this week we look at some details of the 9
+  unique CVEs addressed across the supported Ubuntu releases and talk about
+  various hardening guides for Ubuntu.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="462">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 4"/>
+<meta name="twitter:description" content="  A quieter week in package updates - this week we look at some details of the 9
+  unique CVEs addressed across the supported Ubuntu releases and talk about
+  various hardening guides for Ubuntu.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 4 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-4/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 4</h1>
+      <small>Posted on Monday, Sep 10, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            A quieter week in package updates - this week we look at some details of the 9
+  unique CVEs addressed across the supported Ubuntu releases and talk about
+  various hardening guides for Ubuntu.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E004.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E004.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>A quieter week in package updates - this week we look at some details of the 9
+unique CVEs addressed across the supported Ubuntu releases and talk about
+various hardening guides for Ubuntu.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>9 unique CVEs addressed</p>
+
+<h3 id="usn-3759-1-libtirpc-vulnerabilities">[<a href="https://usn.ubuntu.com/3759-1/">USN-3759-1</a>] libtirpc vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-8779">CVE-2017-8779</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14622">CVE-2018-14622</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-4429">CVE-2016-4429</a></li>
+</ul></li>
+<li>Transport Independent RPC Library, used by NFS</li>
+<li>1 medium priority issue:
+
+<ul>
+<li>Crash from NULL pointer dereference when run out of file descriptions (failure to check return value) - a remote attacker could cause crash by flooding with new connections</li>
+</ul></li>
+<li>2 low priority issues:
+
+<ul>
+<li>&ldquo;rpcbomb&rdquo; - allows an unauthenticated attacker to DoS via memory exhaustion</li>
+<li>Stack based buffer overflow could cause a crash when flooded by ICMP and UDP packets in the sunrpc implementation - fixed by replacing stack based memory allocation with heap-based allocation instead</li>
+<li>Common pattern to fix this type of issue - similar work in Linux kernel recently by KSPP to replace VLAs</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3759-2-libtirpc-vulnerabilities">[<a href="https://usn.ubuntu.com/3759-2/">USN-3759-2</a>] libtirpc vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-8779">CVE-2017-8779</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14622">CVE-2018-14622</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-4429">CVE-2016-4429</a></li>
+</ul></li>
+<li>Same as above for the Precise Extended Security Maintenence release</li>
+</ul>
+
+<h3 id="usn-3760-1-transfig-vulnerability">[<a href="https://usn.ubuntu.com/3760-1/">USN-3760-1</a>] transfig vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16140">CVE-2018-16140</a></li>
+</ul></li>
+<li>transfig / fig2dev - utilities for converting XFig files</li>
+<li>Fixes an error which allows memory corruption when handling specially crafted files</li>
+</ul>
+
+<h3 id="usn-3761-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3761-1/">USN-3761-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12383">CVE-2018-12383</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12378">CVE-2018-12378</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12377">CVE-2018-12377</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12376">CVE-2018-12376</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12375">CVE-2018-12375</a></li>
+</ul></li>
+<li>Latest firefox release (62) fixing a number of issues including DoS and RCE</li>
+<li>One interesting one is CVE-2018-12383 - in Firefox 58 the password storage
+format was changed (was sqlite, then was changed to json). When user sets a
+master password, this is used to encrypt all stored passwords. However, this
+was only done for the copy stored with the new format - the old copy would
+still be stored unencrypted since it never had a master password set on
+it. This is now fixed to simply delete the old copy of the password DB.</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="discussions-around-hardening-guides-for-ubuntu">Discussions around hardening guides for Ubuntu</h3>
+
+<ul>
+<li>A number of &lsquo;best practices&rsquo; guides exist for hardening Ubuntu installations from reputable organisations
+
+<ul>
+<li><a href="https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts">NCSC</a></li>
+<li><a href="https://www.cisecurity.org/benchmark/ubuntu%5Flinux/">CIS Benchmarks</a></li>
+<li>many others</li>
+</ul></li>
+<li>In general these have similar recommendations:
+
+<ul>
+<li>Use UEFI Secure Boot</li>
+<li>Disable unnecesary services</li>
+<li>Use a known and fixed networking configuration (disable DHCP / use VPN etc)</li>
+<li>Enable Mandatory Access Control frameworks (ie. AppArmor)</li>
+<li>Use a specific password policy</li>
+<li>Enable auditing</li>
+</ul></li>
+<li>Differ in level of detail and technical knowledge needed to deploy</li>
+<li>Typically aimed at computer and network administrators (not end-users)</li>
+<li>Ubuntu already includes a number of these recommendations out of the box:
+
+<ul>
+<li><a href="https://wiki.ubuntu.com/Security/Features">https://wiki.ubuntu.com/Security/Features</a></li>
+</ul></li>
+<li>Ubuntu strives to strike a balance between security and usability out-of-the-box</li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-manager">Ubuntu Security Manager</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1278287">https://boards.greenhouse.io/canonical/jobs/1278287</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-3/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.ubuntu.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 4"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

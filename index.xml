@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Sep 2018 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 4</title>
+      <link>https://ubuntusecuritypodcast.org/episode-4/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-4/</guid>
+      <description>Overview A quieter week in package updates - this week we look at some details of the 9 unique CVEs addressed across the supported Ubuntu releases and talk about various hardening guides for Ubuntu.
+This week in Ubuntu Security Updates 9 unique CVEs addressed
+[USN-3759-1] libtirpc vulnerabilities  3 CVEs addressed in Trusty, Xenial, Bionic  CVE-2017-8779 CVE-2018-14622 CVE-2016-4429  Transport Independent RPC Library, used by NFS 1 medium priority issue:  Crash from NULL pointer dereference when run out of file descriptions (failure to check return value) - a remote attacker could cause crash by flooding with new connections  2 low priority issues:  &amp;ldquo;rpcbomb&amp;rdquo; - allows an unauthenticated attacker to DoS via memory exhaustion Stack based buffer overflow could cause a crash when flooded by ICMP and UDP packets in the sunrpc implementation - fixed by replacing stack based memory allocation with heap-based allocation instead Common pattern to fix this type of issue - similar work in Linux kernel recently by KSPP to replace VLAs   [USN-3759-2] libtirpc vulnerabilities  3 CVEs addressed in Precise ESM  CVE-2017-8779 CVE-2018-14622 CVE-2016-4429  Same as above for the Precise Extended Security Maintenence release  [USN-3760-1] transfig vulnerability  1 CVEs addressed in Trusty, Xenial  CVE-2018-16140  transfig / fig2dev - utilities for converting XFig files Fixes an error which allows memory corruption when handling specially crafted files  [USN-3761-1] Firefox vulnerabilities  5 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-12383 CVE-2018-12378 CVE-2018-12377 CVE-2018-12376 CVE-2018-12375  Latest firefox release (62) fixing a number of issues including DoS and RCE One interesting one is CVE-2018-12383 - in Firefox 58 the password storage format was changed (was sqlite, then was changed to json).</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 3</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -39,15 +59,6 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-2/</guid>
       <description>Overview 83 unique CVEs addressed across the supported Ubuntu releases.
 This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regressions  Security team issues USNs for package updates caused by regressions in previous security updates Fix for regressions caused by the original kernel update for L1TF Could cause Java applications to fail to start and possible kernel panics on boot for some hardware configurations  [USN-3745-1] wpa_supplicant and hostapd vulnerability  1 CVEs addressed in Bionic  CVE-2018-14526  Researchers analysed WPA2 4-way handshake via symbolic execution to find weaknesses  Found a number of issues including a decryption oracle In this case, the would decrypt but not authenticate frame and then could allow recovery of the group key via a timing side-channel In theory, allows an unauthenticated attacker to recover WPA2 group key via frame manipulation when used with TKIP  NOTE: is not advised to use TKIP in practice anyway (should use WPA2/CCMP) and so should have limited applicability  In practice, due to large number of attempts needed to recover the full key, this is impractical (especially given that the group key is changed periodically)  https://w1.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
