@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at some details of the 43 unique CVEs addressed across the
+  supported Ubuntu releases and talk about the recently announced Extended
+  Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
+  ">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 5" />
+<meta property="og:description" content="  This week we look at some details of the 43 unique CVEs addressed across the
+  supported Ubuntu releases and talk about the recently announced Extended
+  Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-5/" />
+
+
+
+<meta property="og:updated_time" content="2018-09-24 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-09-24 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2018-09-24 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 5">
+<meta itemprop="description" content="  This week we look at some details of the 43 unique CVEs addressed across the
+  supported Ubuntu releases and talk about the recently announced Extended
+  Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="670">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 5"/>
+<meta name="twitter:description" content="  This week we look at some details of the 43 unique CVEs addressed across the
+  supported Ubuntu releases and talk about the recently announced Extended
+  Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 5 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-5/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 5</h1>
+      <small>Posted on Monday, Sep 24, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at some details of the 43 unique CVEs addressed across the
+  supported Ubuntu releases and talk about the recently announced Extended
+  Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E005.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/USP_E005.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 43 unique CVEs addressed across the
+supported Ubuntu releases and talk about the recently announced Extended
+Security Maintenance support for Ubuntu 14.04 Trusty Tahr.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>43 unique CVEs addressed across the various supported releases of Ubuntu
+(Bionic, Xenial, Trusty and Precise ESM)</p>
+
+<h3 id="usn-3762-1-usn-3762-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3762-1/">USN-3762-1</a>, USN-3762-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic and corresponding HWE kernel for Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13695">CVE-2017-13695</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1118">CVE-2018-1118</a></li>
+</ul></li>
+<li>Both information disclosure vulnerabilities which could allow exposure of kernel addresses
+
+<ul>
+<li>Not directly an issue but could be used to defeat ASLR when combined with another vulnerability</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3763-1-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/3763-1/">USN-3763-1</a>] Linux kernel vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390">CVE-2018-5390</a></li>
+</ul></li>
+<li>SegmentSmack (see episode 0)</li>
+</ul>
+
+<h3 id="lsn-0043-1-linux-kernel-vulnerability">[LSN-0043-1] Linux kernel vulnerability</h3>
+
+<ul>
+<li>Livepatch to fix multiple vulnerabilities fixed in previous kernel package updates</li>
+</ul>
+
+<h3 id="usn-3764-1-zsh-vulnerabilities">[<a href="https://usn.ubuntu.com/3764-1/">USN-3764-1</a>] Zsh vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1100">CVE-2018-1100</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13259">CVE-2018-13259</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0502">CVE-2018-0502</a></li>
+</ul></li>
+<li>2 issues in shebang / hashbang handling
+
+<ul>
+<li>shebang lines longer than 64 bytes truncated - could execute wrong interpreter</li>
+<li>mishandling of some particular formatted shebang lines which could execute
+interpreter from second line of file</li>
+</ul></li>
+<li>Stack based buffer-overflow allowing code execution in the context of a different user</li>
+</ul>
+
+<h3 id="usn-3747-2-openjdk-10-regression">[<a href="https://usn.ubuntu.com/3747-2/">USN-3747-2</a>] OpenJDK 10 regression</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2972">CVE-2018-2972</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952">CVE-2018-2952</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2826">CVE-2018-2826</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2825">CVE-2018-2825</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3761-2-usn-3761-3-firefox-regressions">[<a href="https://usn.ubuntu.com/3761-2/">USN-3761-2</a>, USN-3761-3] Firefox regressions</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12383">CVE-2018-12383</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12378">CVE-2018-12378</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12377">CVE-2018-12377</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12376">CVE-2018-12376</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12375">CVE-2018-12375</a></li>
+</ul></li>
+<li>Previous update to latest firefox resulted in issues due to language packs
+missing (and hence missing spellcheck dictionaries) and use of wrong search
+provider</li>
+</ul>
+
+<h3 id="usn-3765-1-usn-3765-2-curl-vulnerability">[<a href="https://usn.ubuntu.com/3765-1/">USN-3765-1</a>, <a href="https://usn.ubuntu.com/3765-2/">USN-3765-2</a>] curl vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic and Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14618">CVE-2018-14618</a></li>
+</ul></li>
+<li>Similar to previous CVE-2017-8816 - integer overflow in calculations during
+NTLM authentication could allow heap buffer overflow and hence RCE</li>
+<li>Uses the password length in this calculation (which is supplied by the attacker) so relatively easy to trigger</li>
+</ul>
+
+<h3 id="usn-3722-5-clamav-regression">[<a href="https://usn.ubuntu.com/3722-5/">USN-3722-5</a>] ClamAV regression</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0361">CVE-2018-0361</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0360">CVE-2018-0360</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3766-1-usn-3766-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3766-1/">USN-3766-1</a>, USN-3766-2] PHP vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic and Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14883">CVE-2018-14883</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14851">CVE-2018-14851</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253">CVE-2015-9253</a></li>
+</ul></li>
+<li>Integer overflows in JPEG and EXIF handlers leading to out-of-bounds reads and hence crash - DoS</li>
+<li>php-fpm (FastCGI process manager) - alternative FastCGI implementation for
+PHP - could cause DoS since didn&rsquo;t restart child processes correctly - then
+consume CPU and disk space (via logging) - only fixed in Bionic for now</li>
+</ul>
+
+<h3 id="usn-3722-6-clamav-vulnerabilities">[<a href="https://usn.ubuntu.com/3722-6/">USN-3722-6</a>] ClamAV vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0361">CVE-2018-0361</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0360">CVE-2018-0360</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3767-1-usn-3767-2-glib-vulnerabilities">[<a href="https://usn.ubuntu.com/3767-1/">USN-3767-1</a>, <a href="https://usn.ubuntu.com/3767-2/">USN-3767-2</a>] GLib vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic and Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16429">CVE-2018-16429</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16428">CVE-2018-16428</a></li>
+</ul></li>
+<li>Issues with markup parsing</li>
+</ul>
+
+<h3 id="usn-3768-1-ghostscript-vulnerabilities">[<a href="https://usn.ubuntu.com/3768-1/">USN-3768-1</a>] Ghostscript vulnerabilities</h3>
+
+<ul>
+<li>16 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16802">CVE-2018-16802</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16585">CVE-2018-16585</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16543">CVE-2018-16543</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16542">CVE-2018-16542</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16541">CVE-2018-16541</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16540">CVE-2018-16540</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16539">CVE-2018-16539</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16513">CVE-2018-16513</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16511">CVE-2018-16511</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16510">CVE-2018-16510</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16509">CVE-2018-16509</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15911">CVE-2018-15911</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15910">CVE-2018-15910</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15909">CVE-2018-15909</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15908">CVE-2018-15908</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11645">CVE-2018-11645</a></li>
+</ul></li>
+<li>Ghostscript is used to process Postscript (and other formats) - PS is Turing
+Complete so in general is unsafe</li>
+<li>Hence Ghostscript includes a sandbox (-dSAFER) to try and prevent issues with
+handling of untrusted files</li>
+<li>Tavis Ormandy previously found a number of issues in the SAFER sandbox which
+allowed escape from it and execution of commands (ie. CVE-2016-7977 etc.)</li>
+<li>Recently discovered more - including ability to execute arbitrary code.</li>
+</ul>
+
+<h3 id="usn-3769-1-bind-vulnerability">[<a href="https://usn.ubuntu.com/3769-1/">USN-3769-1</a>] Bind vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5740">CVE-2018-5740</a></li>
+</ul></li>
+<li>Trigger assertion failure from specific input from remote server to cause crash and hence DoS
+
+<ul>
+<li>In deny-answer-aliases feature which is not enabled by default so not so high impact</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3770-1-usn-3770-2-little-cms-vulnerabilities">[<a href="https://usn.ubuntu.com/3770-1/">USN-3770-1</a>, USN-3770-2] Little CMS vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic and Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16435">CVE-2018-16435</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10165">CVE-2016-10165</a></li>
+</ul></li>
+<li>1 CVEs addressed in Precise ESM only
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2013-4276">CVE-2013-4276</a></li>
+</ul></li>
+<li>Multiple issues in handling of ICC colour profiles (integer overflow leading
+to stack and heap buffer overflows on reads an writes)</li>
+<li>Little CMS often used in webapps which do image processing - in this case
+allows remote DoS or possibly remote code execution</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="ubuntu-14-dot-04-esm-announced">Ubuntu 14.04 ESM Announced</h3>
+
+<ul>
+<li>Extended Security Maintenance for Trusty 14.04 past the official EOL</li>
+<li>Security updates for the kernel and the most widely used packages in main</li>
+<li><a href="https://blog.ubuntu.com/2018/09/19/extended-security-maintenance-ubuntu-14-04-trusty-tahr">https://blog.ubuntu.com/2018/09/19/extended-security-maintenance-ubuntu-14-04-trusty-tahr</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-manager">Ubuntu Security Manager</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1278287">https://boards.greenhouse.io/canonical/jobs/1278287</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-4/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.ubuntu.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 5"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
