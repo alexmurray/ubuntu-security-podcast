@@ -16,7 +16,7 @@ android_subscribe = "https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZW
 #android_subscribe = "https://subscribeonandroid.com/ubuntusecuritypodcast.org/episode/index.xml"
 pocketcasts_subscribe = "https://pca.st/O9Df"
 description = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team."
-media_prefix = "https://s3-ap-southeast-2.amazonaws.com/ubuntusecuritypodcast/"
+media_prefix = "https://people.canonical.com/~amurray/USP/"
 
 
 [params.feed]
