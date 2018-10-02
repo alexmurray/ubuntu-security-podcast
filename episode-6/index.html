@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 6" />
+<meta property="og:description" content="This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-6/" />
+
+
+
+<meta property="og:updated_time" content="2018-10-02 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-10-02 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2018-10-02 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 6">
+<meta itemprop="description" content="This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="383">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 6"/>
+<meta name="twitter:description" content="This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 6 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-6/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 6</h1>
+      <small>Posted on Tuesday, Oct 2, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E006.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E006.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>17 unique CVEs addressed</p>
+
+<h3 id="usn-3771-1-strongswan-vulnerabilities">[<a href="https://usn.ubuntu.com/3771-1/">USN-3771-1</a>] strongSwan vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5388">CVE-2018-5388</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16152">CVE-2018-16152</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16151">CVE-2018-16151</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10811">CVE-2018-10811</a></li>
+</ul></li>
+<li>2 CVEs: flaws in RSA implementation allow Bleichenbacher-style attacks in parsing of the ASN.1 encoded digestInfo</li>
+<li>strongSwan implementation was too lenient and would allow arbitrary random data to be contained following various elements in the ASN.1</li>
+<li>Also would not check the correct amount of padding had been used</li>
+<li>Allows attackers to potentially forge low-exponent signature forgery and hence authentication during IKE authentication</li>
+<li>2 CVEs for DoS due to missing length check and missing variable initialization</li>
+</ul>
+
+<h3 id="usn-3772-1-udisks-vulnerability">[<a href="https://usn.ubuntu.com/3772-1/">USN-3772-1</a>] UDisks vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17336">CVE-2018-17336</a></li>
+</ul></li>
+<li>Format string vulnerability which could be exploited via specially crafted disk label</li>
+<li>udisks prints volume label via printf() passing the label as part of the format string
+
+<ul>
+<li>Simple fix to replace the label with a %s directive and then pass the label to that</li>
+<li>ie. don&rsquo;t interpret label as printf() directives directly</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3719-3-mutt-vulnerabilities">[<a href="https://usn.ubuntu.com/3719-3/">USN-3719-3</a>] Mutt vulnerabilities</h3>
+
+<ul>
+<li>12 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14349">CVE-2018-14349</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14362">CVE-2018-14362</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14351">CVE-2018-14351</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14356">CVE-2018-14356</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14355">CVE-2018-14355</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14357">CVE-2018-14357</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14353">CVE-2018-14353</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14358">CVE-2018-14358</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14359">CVE-2018-14359</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14354">CVE-2018-14354</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14352">CVE-2018-14352</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14350">CVE-2018-14350</a></li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="lsm-stacking-upstreaming">LSM Stacking upstreaming</h3>
+
+<ul>
+<li>Casey Schaufler (Intel, SMACK maintainer) primary developer along with John Johansen and Kees Cook (Google) to upstream support for LSM stacking</li>
+<li>Currently upstream allows use of one &lsquo;major&rsquo; module (SELinux / AppArmor / Tomoyo) with a minor module (Yama etc)</li>
+<li>Goal of stacking is to allow multiple major modules to be used in conjunction (AppArmor with SELinux)
+
+<ul>
+<li>Primary use-case is containers</li>
+</ul></li>
+<li>Current stacking patches allow to stack Tomoyo with either SELinux / AppArmor
+
+<ul>
+<li>Eventually should be able to stack SELinux with AppArmor but still WIP</li>
+<li>Ubuntu already carries these patches in Bionic etc</li>
+</ul></li>
+<li>Likely to be merged in the near future</li>
+</ul>
+
+<h3 id="evince-apparmor-hardening-lp-1788929">Evince AppArmor hardening <a href="https://bugs.launchpad.net/ubuntu/+source/evince/+bug/1788929">LP #1788929</a></h3>
+
+<ul>
+<li>Jann Horn (GPZ) reported gaps in evince AppArmor profile</li>
+<li>Clever use of GNOME thumbnailer infrastructure to specify a new &lsquo;evil&rsquo; thumbnailer and the use of systemd via DBus to escape AppArmor confinement</li>
+<li>Policy fixed in Cosmic, in process of updating for Bionic etc</li>
+</ul>
+
+<h3 id="new-ubuntu-security-manager">New Ubuntu Security Manager</h3>
+
+<ul>
+<li>Joe McManus</li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-5/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.ubuntu.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 6"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
