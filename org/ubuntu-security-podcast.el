@@ -154,8 +154,6 @@
           (usp-insert-usn-summary start end)
           (insert (concat "** Goings on in Ubuntu Security Community\n"
                           "*** Hiring\n"
-                          "**** Ubuntu Security Manager\n"
-                          "- https://boards.greenhouse.io/canonical/jobs/1278287\n"
                           "**** Ubuntu Security Engineer\n"
                           "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
                           "** Get in contact\n"
