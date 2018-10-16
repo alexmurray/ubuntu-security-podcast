@@ -3,7 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
-(eval-and-compile
+(eval-when-compile
   (require 'cl))
 (require 'mu4e)
 (require 'org)
@@ -13,19 +13,24 @@
 (defun usp-extract-usn-from-subject (subject)
   "Extract USN from SUBJECT."
   ;; do both LSN and USNs
-  (when (string-match ".*\\([LU]SN-[0-9-]+\\).*" subject)
+  (when (and subject (string-match ".*\\([LU]SN-[0-9-]+\\).*" subject))
     (match-string 1 subject)))
 
 (defun usp-generate-usn-link (usn)
   "Generate an 'org-mode' link for USN."
-  (let ((usn-n (substring usn (string-match "[0-9]" usn))))
-    (pcase (substring usn 0 1)
-      ("U" (format "[[https://usn.ubuntu.com/%s/][%s]]" usn-n usn))
-      (_ usn))))
+  (when usn
+    (let ((usn-n (substring usn (string-match "[0-9]" usn))))
+      (pcase (substring usn 0 1)
+        ("U" (format "[[https://usn.ubuntu.com/%s/][%s]]" usn-n usn))
+        (_ usn)))))
 
 (defun usp-generate-cve-link (cve)
   "Generate an 'org-mode' link for CVE."
   (format "[[https://people.canonical.com/~ubuntu-security/cve/%s][%s]]" cve cve))
+
+(defun usp-generate-bug-link (bug)
+  "Generate an 'org-mode' link for LP BUG."
+  (format "[[https://launchpad.net/bugs/%s][%s]]" bug bug))
 
 (defvar usp-ubuntu-releases
   '(("12.04" "Precise ESM")
@@ -42,86 +47,114 @@
         (setq codename (cadr pair))))
     codename))
 
+(defun usp-parse-usn-email-regex (regex group &optional buffer)
+  "Parse email which is in BUFFER returning a list of match GROUP using REGEX."
+  (with-current-buffer (or buffer (current-buffer))
+    (goto-char (point-min))
+    (let ((matches nil))
+      (while (re-search-forward regex nil t)
+        (cl-pushnew (substring-no-properties (match-string group)) matches :test #'string=))
+      matches)))
+
 (defun usp-parse-usn-email-cves (&optional buffer)
   "Parse email which is in BUFFER returning a list of the CVEs."
-  (with-current-buffer (or buffer (current-buffer))
-    (let ((cves nil))
-      (goto-char (point-min))
-      (while (re-search-forward "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" nil t)
-        (cl-pushnew (substring-no-properties (match-string 1)) cves :test #'string=))
-      cves)))
+  (usp-parse-usn-email-regex "\\(CVE-[0-9]\\{4\\}-[0-9]+\\)" 1 buffer))
+
+(defun usp-parse-usn-email-bugs (&optional buffer)
+  "Parse email which is in BUFFER returning a list of the Launchpad bugs."
+  (usp-parse-usn-email-regex "LP: \\([0-9]+\\)" 1 buffer))
 
 (defun usp-parse-usn-email-releases (&optional buffer)
   "Parse email which is in BUFFER returning a list of the releases."
-  (with-current-buffer (or buffer (current-buffer))
-    (let ((releases nil))
-      (goto-char (point-min))
-      (while (re-search-forward "^- Ubuntu \\([0-9.]+\\).*$" nil t)
-        (cl-pushnew (substring-no-properties (match-string 1)) releases :test #'string=))
-      releases)))
+  (usp-parse-usn-email-regex "^- Ubuntu \\([0-9.]+\\).*$" 1 buffer))
 
-(defun usp-insert-usn-summary-for-message (msg)
-  "Insert an 'org-mode' summary for MSG, returning the list of CVEs referenced."
-  (let* ((subject (mu4e-message-field msg :subject))
-         (path (mu4e-message-field msg :path))
-         (usn (usp-extract-usn-from-subject subject)))
-    (unless usp-buffer (error "Error: `usp-buffer` is nil"))
+(defun usp-parse-usn-email-with-path (path)
+  "Parse a USN email located at PATH returing the salient details."
+  (with-temp-buffer
+    (insert-file-contents-literally path)
+    `((cves . ,(usp-parse-usn-email-cves))
+      (bugs . ,(usp-parse-usn-email-bugs))
+      (releases . ,(usp-parse-usn-email-releases)))))
+
+(defun usp-parse-usn-message (msg)
+  "Parse a USN MSG returing the salient details."
+  (let* ((subject (and msg (mu4e-message-field msg :subject)))
+         (usn (usp-extract-usn-from-subject subject))
+         (link (usp-generate-usn-link usn))
+         (details nil))
     (when usn
-      (let ((link (usp-generate-usn-link usn))
-            (cves nil)
-            (releases nil))
-        (with-temp-buffer
-          (insert-file-contents-literally path)
-          (setq cves (usp-parse-usn-email-cves))
-          (setq releases (usp-parse-usn-email-releases)))
-        (with-current-buffer usp-buffer
-          (insert (format "*** %s\n" (replace-regexp-in-string usn link subject t)))
-            (when (> (length cves) 0)
-              (insert (format "- %d CVEs addressed in %s\n" (length cves)
-                              (mapconcat #'(lambda (rel) (usp-get-release-codename rel)) releases ", ")))
-              (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
-              (insert "\n")))
-        cves))))
+      (setq details (usp-parse-usn-email-with-path (mu4e-message-field msg :path)))
+      (push `(usn . ,usn) details)
+      (push `(subject . ,subject) details)
+      (push `(link . ,link) details))
+    details))
 
-(defun usp-insert-usn-summary (start end)
-  "Insert a summary from USNs from mu4e from dates START to END in current buffer."
-  ;; searching happens async so make sure we get called by hooking manually -
-  ;; we can't let bind either since this is async...
-  (unless usp-buffer (error "Error: `usp-buffer` is nil"))
-  (let ((placeholder "usp-num-unique-cves-placeholder")
-        (cves nil))
-    (with-current-buffer usp-buffer
-      (insert "** This week in Ubuntu Security Updates\n")
-      (insert (concat placeholder " unique CVEs addressed\n")))
-    (let ((result-buffer (get-buffer-create "*usn-results*")))
+(defun usp-generate-usn-summary (details)
+  "Generate a 'org-mode' summary for DETAILS."
+  (with-temp-buffer
+    (insert (format "*** %s\n"
+                    (replace-regexp-in-string
+                     (alist-get 'usn details)
+                     (alist-get 'link details)
+                     (alist-get 'subject details)
+                     t)))
+    (let ((cves (alist-get 'cves details))
+          (bugs (alist-get 'bugs details))
+          (releases (alist-get 'releases details)))
+      (when (> (length cves) 0)
+        (insert (format "- %d CVEs addressed in %s\n" (length cves)
+                        (mapconcat #'(lambda (rel) (usp-get-release-codename rel)) releases ", ")))
+        (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
+        (insert "\n"))
+      (when (> (length bugs) 0)
+        (insert (mapconcat #'(lambda (bug) (concat "  - " (usp-generate-bug-link bug))) bugs "\n"))))
+    (buffer-string)))
+
+(defun usp-generate-summary-details (start end)
+  "Generate summary details for USNs from mu4e from dates START to END."
+  (let ((result-buffer (get-buffer-create "*usn-results*"))
+        (all-details nil))
       (shell-command (concat "mu find --format=sexp "
                              "list:ubuntu-security-announce.lists.ubuntu.com "
                              (format "date:%s..%s" start end) " "
                              "not flag:trashed") result-buffer)
       (with-current-buffer result-buffer
         (goto-char (point-min))
-        ;; ignore errors reading so we don't get error on end of buffer
-        (while (let ((msg (ignore-errors (read (current-buffer))))
-                     (cves- nil))
-                 (when msg
-                   ;; collect unique list of cves
-                   (setq cves- (usp-insert-usn-summary-for-message msg))
-                   (dolist (cve cves-)
-                     (cl-pushnew cve cves :test #'string=)))
-                 msg)))
+        (while (not (eobp))
+          (let ((details (usp-parse-usn-message
+                          ;; ignore errors reading so we don't get error
+                          ;; on end of buffer
+                          (ignore-errors (read (current-buffer))))))
+            (when details
+              ;; collect unique list of cves
+              (push details all-details)))))
       (kill-buffer result-buffer)
-      (with-current-buffer usp-buffer
-        (save-excursion
-          (goto-char (point-min))
-          (search-forward placeholder nil t)
-          (replace-match (format "%s" (length cves)) nil t))))))
+      all-details))
+
+(defun usp-get-unique-cves (details)
+  "Get the unique CVEs from all DETAILS."
+  (let ((unique-cves nil))
+    (dolist (det details)
+      (mapc #'(lambda (cve)
+                (cl-pushnew cve unique-cves :test #'string=))
+            (alist-get 'cves det)))
+    unique-cves))
+
+(defun usp-generate-usn-summaries (details)
+  "Insert a summary from USNs described by DETAILS in usp-buffer."
+  (with-temp-buffer
+    (insert "** This week in Ubuntu Security Updates\n")
+    (insert (format "%d unique CVEs addressed\n" (length (usp-get-unique-cves details))))
+    (insert (mapconcat #'usp-generate-usn-summary (reverse details) "\n"))
+    (buffer-string)))
 
 (defun usp-get-next-episode-number ()
   "Find the current highest numbered episode and return it +1."
   (save-excursion
     (goto-char (point-min))
-    (when (re-search-forward "^* Episode \\([0-9]+\\)")
-      (1+ (string-to-number (match-string 1))))))
+    (if (re-search-forward "^* Episode \\([0-9]+\\)" nil t)
+        (1+ (string-to-number (match-string 1)))
+      1)))
 
 (defun usp-insert-episode-template (episode publish-date start end description)
   "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION."
@@ -130,7 +163,7 @@
          (org-read-date nil nil nil "Publish Date: ")
          (org-read-date nil nil nil "Start Date: ")
          (org-read-date nil nil nil "End Date: ")
-         (read-string "Description: " "This week we look at some details of the XX unique CVEs addressed across the supported Ubuntu releases and more.")))
+         (read-string "Description: " "This week we look at some details of the NUM-CVES unique CVEs addressed across the supported Ubuntu releases and more.")))
   (unless (eq major-mode 'org-mode)
     (error "Current buffer should be an org-mode buffer"))
   (unwind-protect
@@ -138,7 +171,13 @@
         (setq usp-buffer (current-buffer))
         (let ((title (format "Episode %d" episode))
               (export-file-name (format "episode-%d" episode))
-              (audio-file-name (format "USP_E%03d.mp3" episode)))
+              (audio-file-name (format "USP_E%03d.mp3" episode))
+              (details (usp-generate-summary-details start end)))
+          (setq description
+                (replace-regexp-in-string "NUM-CVES"
+                                          (number-to-string
+                                           (length (usp-get-unique-cves details)))
+                                          description))
           (insert (concat "* " title "\n"
                           ":PROPERTIES:\n"
                           ":EXPORT_FILE_NAME: " export-file-name "\n"
@@ -151,7 +190,7 @@
 
                           "** Overview\n"
                           description "\n"))
-          (usp-insert-usn-summary start end)
+          (insert (usp-generate-usn-summaries details))
           (insert (concat "** Goings on in Ubuntu Security Community\n"
                           "*** Hiring\n"
                           "**** Ubuntu Security Engineer\n"
