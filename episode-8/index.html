@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 8" />
+<meta property="og:description" content="This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-8/" />
+
+
+
+<meta property="og:updated_time" content="2018-10-22 00:00:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-10-22 00:00:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2018-10-22 00:00:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 8">
+<meta itemprop="description" content="This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="486">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 8"/>
+<meta name="twitter:description" content="This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 8 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-8/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 8</h1>
+      <small>Posted on Monday, Oct 22, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E008.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E008.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>15 unique CVEs addressed</p>
+
+<h3 id="usn-3790-1-requests-vulnerability">[<a href="https://usn.ubuntu.com/3790-1/">USN-3790-1</a>] Requests vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18074">CVE-2018-18074</a></li>
+</ul></li>
+<li>Requests library could end up sending credentials in clear text if server is configured with a https -&gt; http redirect</li>
+</ul>
+
+<h3 id="usn-3792-1-usn-3792-2-net-snmp-vulnerability">[<a href="https://usn.ubuntu.com/3792-1/">USN-3792-1</a>, <a href="https://usn.ubuntu.com/3792-2/">USN-3792-2</a>] Net-SNMP vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic &amp; Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18065">CVE-2018-18065</a></li>
+</ul></li>
+<li>Remote DoS via a NULL pointer dereference from an <strong>authenticated</strong> attacker</li>
+</ul>
+
+<h3 id="usn-3793-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/3793-1/">USN-3793-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12385">CVE-2018-12385</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12383">CVE-2018-12383</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12378">CVE-2018-12378</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12377">CVE-2018-12377</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12376">CVE-2018-12376</a></li>
+</ul></li>
+<li>New Thunderbird version (60) containing 5 fixes</li>
+<li>Interestingly <strong>all</strong> of these were also vulnerabilities in Firefox - in
+particular CVE-2018-12383 was discussed in Episode 4 for Firefox</li>
+</ul>
+
+<h3 id="usn-3794-1-moinmoin-vulnerability">[<a href="https://usn.ubuntu.com/3794-1/">USN-3794-1</a>] MoinMoin vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5934">CVE-2017-5934</a></li>
+</ul></li>
+<li>XSS in link editor dialog allow injection of arbitrary web content (HTML, scripts etc)</li>
+</ul>
+
+<h3 id="usn-3789-2-clamav-vulnerabilities">[<a href="https://usn.ubuntu.com/3789-2/">USN-3789-2</a>] ClamAV vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15378">CVE-2018-15378</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14682">CVE-2018-14682</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14681">CVE-2018-14681</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14680">CVE-2018-14680</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14679">CVE-2018-14679</a></li>
+</ul></li>
+<li>Corresponding fix for Precise ESM from ClamAV which we discussed in Episode 7</li>
+<li>Also rolls in fixes for 4 other vulnerabilities in the embedded mspack library
+
+<ul>
+<li>In trusty and precise we used the embedded libmspack, newer releases use
+the system package so weren&rsquo;t affected</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3795-1-libssh-vulnerability">[<a href="https://usn.ubuntu.com/3795-1/">USN-3795-1</a>] libssh vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10933">CVE-2018-10933</a></li>
+</ul></li>
+<li>Embedded SSH server and client implementation</li>
+<li>Allows bypass of authentication by remote attackers if they send a SSH2_MSG_USERAUTH_SUCCESS message instead of the SSH2_MSG_USERAUTH_REQUEST message to initiate the authentication process</li>
+<li>This message is meant to be sent from the server to the client but in this case are sending it <strong>to the server</strong></li>
+<li>State machine on server-side then jumps straight to &lsquo;Authenticated&rsquo;</li>
+<li>Only affects applications which use libssh as a server</li>
+</ul>
+
+<h3 id="usn-3796-1-usn-3796-2-paramiko-vulnerability">[<a href="https://usn.ubuntu.com/3796-1/">USN-3796-1</a>, USN-3796-2] Paramiko vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic &amp; Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000805">CVE-2018-1000805</a></li>
+</ul></li>
+<li>Python SSH library for both servers and clients</li>
+<li>Very similar to CVE-2018-10933 for libssh - remote authentication bypass by presenting SSH2_MSG_USERAUTH_SUCCESS in place of SSH2_MSG_USERAUTH_REQUEST</li>
+<li>Due to code-reuse between client and server implementations</li>
+<li>On server side, runs the normal client side code to be used when receiving this authentication success from the server, and flips the &lsquo;authenticated&rsquo; flag - which is shared by both the server and client code</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="ubuntu-18-dot-10-cosmic-cuttlefish-released">Ubuntu 18.10 Cosmic Cuttlefish Released</h3>
+
+<ul>
+<li>Includes OpenSSL 1.1.1 for TLS 1.3 support</li>
+<li>Support for using fingerprint readers to unlock screen etc
+
+<ul>
+<li>Ubuntu Security Team consider fingerprints to be akin to usernames only - so we don&rsquo;t enable fingerprint authentication by default - need to opt-in</li>
+<li>libfprint and fprintd promoted to main to allow this</li>
+</ul></li>
+</ul>
+
+<h3 id="ubuntu-cve-tracker-facelift">Ubuntu CVE Tracker facelift</h3>
+
+<ul>
+<li>Refreshed look and feel via bootstrap</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/">https://people.canonical.com/~ubuntu-security/cve/</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-7/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.ubuntu.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 8"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

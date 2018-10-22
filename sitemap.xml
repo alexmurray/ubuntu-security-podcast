@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ubuntusecuritypodcast.org/episode-7/</loc>
-    <lastmod>2018-10-16T14:50:48+10:30</lastmod>
+    <loc>https://ubuntusecuritypodcast.org/episode-8/</loc>
+    <lastmod>2018-10-22T14:43:30+10:30</lastmod>
   </url>
   
   <url>
@@ -13,8 +13,8 @@
   </url>
   
   <url>
-    <loc>https://ubuntusecuritypodcast.org/episode-6/</loc>
-    <lastmod>2018-10-16T14:50:48+10:30</lastmod>
+    <loc>https://ubuntusecuritypodcast.org/episode-7/</loc>
+    <lastmod>2018-10-22T14:41:01+10:30</lastmod>
   </url>
   
   <url>
@@ -23,33 +23,38 @@
   </url>
   
   <url>
+    <loc>https://ubuntusecuritypodcast.org/episode-6/</loc>
+    <lastmod>2018-10-22T14:41:01+10:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ubuntusecuritypodcast.org/episode-5/</loc>
-    <lastmod>2018-10-16T14:50:49+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:01+10:30</lastmod>
   </url>
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode-4/</loc>
-    <lastmod>2018-10-16T14:50:49+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:01+10:30</lastmod>
   </url>
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode-3/</loc>
-    <lastmod>2018-10-16T14:50:49+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:01+10:30</lastmod>
   </url>
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode-2/</loc>
-    <lastmod>2018-10-16T14:50:49+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:02+10:30</lastmod>
   </url>
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode-1/</loc>
-    <lastmod>2018-10-16T14:50:50+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:02+10:30</lastmod>
   </url>
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode-0/</loc>
-    <lastmod>2018-10-16T14:50:50+10:30</lastmod>
+    <lastmod>2018-10-22T14:41:02+10:30</lastmod>
   </url>
   
   <url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode/</loc>
-    <lastmod>2018-10-16T14:50:48+10:30</lastmod>
+    <lastmod>2018-10-22T14:43:30+10:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +75,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/</loc>
-    <lastmod>2018-10-16T14:50:48+10:30</lastmod>
+    <lastmod>2018-10-22T14:43:30+10:30</lastmod>
     <priority>0</priority>
   </url>
   
