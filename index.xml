@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Tue, 30 Oct 2018 00:00:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 9</title>
+      <link>https://ubuntusecuritypodcast.org/episode-9/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-9/</guid>
+      <description>Overview This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability (CVE-2018-14665), plus Cosmic is now officially supported by the Security Team.
+This week in Ubuntu Security Updates 61 unique CVEs addressed
+[USN-3790-2] Requests vulnerability  1 CVEs addressed in Cosmic  CVE-2018-18074  Cosmic is now officially released and so is officially supported by the Security Team This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic  [USN-3795-2] libssh vulnerability  1 CVEs addressed in Cosmic  CVE-2018-10933  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic  [USN-3792-3] Net-SNMP vulnerability  1 CVEs addressed in Cosmic  CVE-2018-18065  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3796-3] Paramiko vulnerability  1 CVEs addressed in Cosmic  CVE-2018-1000805  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3788-2] Tex Live-bin vulnerability  1 CVEs addressed in Cosmic  CVE-2018-17407  This is the same vulnerability which we covered in Episode 7 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3797-1, USN-3797-2] Linux kernel vulnerabilities  4 CVEs addressed in Xenial and Trusty for the Xenial HWE kernel for Trusty  CVE-2018-10938 CVE-2018-9363 CVE-2018-16658 CVE-2018-14734  Includes:  UAF in Infiniband -&amp;gt; DoS via crash Integer overflow in CDROM -&amp;gt; info disclosure of kernel memory Integer overflow in bluetooth HID -&amp;gt; buffer overflow -&amp;gt; DoS / possible arbitrary code execution Remotely triggerable infinite loop in labelled network handler (CIPSO)  CIPSO used by SELinux / SMACK not AppArmor so unlikely Ubuntu users affected    [USN-3798-1] Linux kernel vulnerabilities  8 CVEs addressed in Trusty and Precise ESM (for the Trusty HWE kernel for Precise ESM)  CVE-2018-9518 CVE-2018-7566 CVE-2018-1000004 CVE-2017-18216 CVE-2017-15299 CVE-2017-0794 CVE-2016-7913 CVE-2015-8539  Includes:  Local DoS / code exec via insertion of an already existing key into kernel keyring UAF in XCeive driver, local DoS / code exec (crash) Race condition in generic SCSI -&amp;gt; Local DoS (crash) / code exec NULL ptr dereference in ocfs2 -&amp;gt; Local DoS (crash) Race condition in ALSA handling of ioctls -&amp;gt; Local DoS via deadlock Race condition in ALSA -&amp;gt; UAF / out of bounds read -&amp;gt; Local DoS (crash) / code exec Buffer overflow in NFC LLCP impl -&amp;gt; remote DoS / code exec   [USN-3777-3] Linux kernel (Azure) vulnerabilities  8 CVEs addressed in Xenial, Bionic  CVE-2018-6555 CVE-2018-6554 CVE-2018-3639 CVE-2018-14633 CVE-2017-5715 CVE-2018-15572 CVE-2018-15594 CVE-2018-17182  Corresponding fixes for Azure Cloud specific kernel as covered in Episode 7 for standard Bionic kernel  [USN-3799-1] MySQL vulnerabilities  21 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-3284 CVE-2018-3283 CVE-2018-3282 CVE-2018-3278 CVE-2018-3277 CVE-2018-3276 CVE-2018-3251 CVE-2018-3247 CVE-2018-3200 CVE-2018-3187 CVE-2018-3185 CVE-2018-3174 CVE-2018-3173 CVE-2018-3171 CVE-2018-3162 CVE-2018-3161 CVE-2018-3156 CVE-2018-3155 CVE-2018-3144 CVE-2018-3143 CVE-2018-3133  New upstream versions of MySQL for all supported releases to fix multiple vulnerabilities, add features and possible incompatible changes Trusty: 5.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 8</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 15 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 15 unique CVEs addressed
       <description>Overview This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.
 This week in Ubuntu Security Updates 78 unique CVEs addressed
 [USN-3773-1] Ghostscript vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-17183 CVE-2018-16510  Similar to [USN-3768-1] from Episode 5  [USN-3769-2] Bind vulnerability  1 CVEs addressed in Precise ESM  CVE-2018-5740  Extended Security Maintenance version of [USN-3769-1]  [USN-3774-1] strongSwan vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-17540  [USN-3771-1] incorporated fixes for multiple CVEs - but these fixes themselves introduced this new vulnerability Heap buffer overflow found by Google&amp;rsquo;s OSS-Fuzz leading to DoS for gmp plugin  [USN-3775-1, USN-3775-2, USN-3776-1, USN-3776-2, USN-3777-1, USN-3777-2] Linux kernel vulnerabilities  11 CVEs addressed across Precise ESM, Trusty, Xenial and Bionic including HWE kernels  CVE-2018-6555 CVE-2018-6554 CVE-2018-14633 CVE-2018-14634 CVE-2018-15572 CVE-2018-15594 CVE-2018-16276 CVE-2018-10902 CVE-2018-10853 CVE-2017-18216 CVE-2018-17182  Not all CVEs affect all releases Includes:  UAF and memory leak -&amp;gt; DoS in IRDA Stack buffer overwrite in iSCSI - low chance of privilege escalation Integer overflow leading to possible privilege escalation but only on machines with &amp;gt;32GB RAM Insufficiencies discovered in various Spectre variant mitigations previously deployed Incorrect bounds checking in yurex USB driver from userspace -&amp;gt; crash / privilege escalation for local user Race condition in midi driver - double free -&amp;gt; privilege escalation KVM hypervisor instruction emulation fail to check privileges - privilege escalation inside guest OCFS2 file-system driver NULL pointer dereference -&amp;gt; BUG (mutex logic bug) Memory management sequence number overflow leading to UAF -&amp;gt; possible privilege escalation - Jann Horn (GPZ)   [USN-3780-1] HAProxy vulnerability  1 CVEs addressed in Bionic  CVE-2018-14645  Out of bounds read leading to remote crash -&amp;gt; DoS  [USN-3781-1] WebKitGTK+ vulnerabilities  24 CVEs addressed in Bionic  CVE-2018-4361 CVE-2018-4359 CVE-2018-4358 CVE-2018-4328 CVE-2018-4323 CVE-2018-4319 CVE-2018-4318 CVE-2018-4317 CVE-2018-4316 CVE-2018-4315 CVE-2018-4314 CVE-2018-4312 CVE-2018-4311 CVE-2018-4309 CVE-2018-4306 CVE-2018-4299 CVE-2018-4213 CVE-2018-4212 CVE-2018-4210 CVE-2018-4209 CVE-2018-4208 CVE-2018-4207 CVE-2018-4197 CVE-2018-4191  Used by many GNOME applications to render web content (Epiphany, Evolution, Boxes, GThumb, Buidler, Empathy, etc) Many issues fixed in this release including, XSS, DoS, RCE etc  [USN-3782-1] Liblouis vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-17294 CVE-2018-12085   [USN-3778-1] Firefox vulnerabilities  3 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-12387 CVE-2018-12386 CVE-2018-12385  Firefox 62 release - includes fixes for RCE, local cache poisoning and information disclosures  [USN-3783-1] Apache HTTP Server vulnerabilities  3 CVEs addressed in Bionic  CVE-2018-11763 CVE-2018-1333 CVE-2018-1302  DoS (crash) via incorrect stream destruction and DoS (resources) from incorrect frame handling  [USN-3785-1] ImageMagick vulnerabilities  14 CVEs addressed in Trusty, Xenial, Bionic  CVE-2017-13144 CVE-2018-16749 CVE-2018-16645 CVE-2018-16644 CVE-2018-16643 CVE-2018-16642 CVE-2018-16323 CVE-2018-14551 CVE-2018-16750 CVE-2018-16640 CVE-2018-14437 CVE-2018-14436 CVE-2018-14435 CVE-2018-14434  Disables support for using PS and PDF from Ghostscript in ImageMagick due to large number of GS vulns (see Episode 5) Also multiple fixes for ImageMagick itself, including memory leaks (DoS), information disclosure, RCE etc  [USN-3784-1] AppArmor update  Hardening of various AppArmor profiles (mentioned in Episode 5)  [LSN-0044-1] Linux kernel vulnerability  Livepatch incorporating L1TF, Spectrev2 and other fixes as well  [USN-3786-1] libxkbcommon vulnerabilities  11 CVEs addressed in Trusty, Xenial  CVE-2018-15864 CVE-2018-15863 CVE-2018-15862 CVE-2018-15861 CVE-2018-15859 CVE-2018-15858 CVE-2018-15857 CVE-2018-15856 CVE-2018-15855 CVE-2018-15854 CVE-2018-15853  Loads keyboard descriptions from disk - multiple vulnerabilities in file format handling leading to DoS etc  [USN-3787-1] Tomcat vulnerability  1 CVEs addressed in Trusty, Xenial  CVE-2018-11784  Redirect handling allowed attacker to redirect to any URI of their choice Can be avoided if had manually enabled both mapperDirectoryRedirectEnabled and mapperContextRootRedirectEnabled  [USN-3789-1] ClamAV vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-15378  Crash in handling of unpacked MEW executable files  [USN-3788-1] Tex Live vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-17407 CVE-2015-5700  File overwrite via insecure symlink handling Code execution via buffer overflow in Type1 font handler  [USN-3791-1] Git vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-17456  RCE when cloning a malicious repository - due to insufficient validation of git submodule URLs and paths.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
