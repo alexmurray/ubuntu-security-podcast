@@ -1,9 +1,9 @@
 # Ubuntu Security Podcast
 
-Ubuntu Security Podcast is a weekly podcast by the Ubuntu Security Team,
-focussing on the latest updates from the team with a discussion of some of the
-more interesting vulnerabilities fixed in the last week, as well as other news
-and details from the community.
+[Ubuntu Security Podcast](https://ubuntusecuritypodcast.org) is a weekly
+podcast by the Ubuntu Security Team, focusing on the latest updates from the
+team with a discussion of some of the more interesting vulnerabilities fixed in
+the last week, as well as other news and details from the community.
 
 ## Website
 
