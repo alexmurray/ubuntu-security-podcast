@@ -7,6 +7,93 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/episode/default.png
 
+* Episode 10
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-10
+:EXPORT_DATE: 2018-11-05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E010.mp3 :podcast_duration "09:25" :podcast_bytes "9041423"
+:END:
+#+begin_description
+This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.
+#+end_description
+** Overview
+This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.
+** This week in Ubuntu Security Updates
+17 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/3799-2/][USN-3799-2]]] MySQL vulnerabilities
+- 3 CVEs addressed in Precise ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3282][CVE-2018-3282]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3174][CVE-2018-3174]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3133][CVE-2018-3133]]
+- Ubuntu 12.04 Precise ESM update for 3 CVEs fixed in usual supported releases (covered in Episode 9)
+
+*** [[[https://usn.ubuntu.com/3803-1/][USN-3803-1]]] Ghostscript vulnerabilities
+- 3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18284][CVE-2018-18284]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18073][CVE-2018-18073]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17961][CVE-2018-17961]]
+- More ghostscript vulnerabilities! (others recent ones covered in Episodes 5 and 7)
+- 2 brand new sandbox (-dSAFER) bypasses by Tavis Ormandy
+- Third one is due to an incomplete fix for [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17183][CVE-2018-17183]]
+
+*** [[[https://usn.ubuntu.com/3804-1/][USN-3804-1]]] OpenJDK vulnerabilities
+- 8 CVEs addressed in Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3214][CVE-2018-3214]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3183][CVE-2018-3183]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3180][CVE-2018-3180]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3169][CVE-2018-3169]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3150][CVE-2018-3150]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3149][CVE-2018-3149]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3139][CVE-2018-3139]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3136][CVE-2018-3136]]
+- New OpenJDK release covering multiple vulnerabilities including:
+  - Insufficient checking of signatures in manifest elements could allow untrusted Java application to escape sandbox
+  - Insufficient checking of all JAR attributes could allow untrusted Java application to escape sandbox
+  - Failure to clear HTTP header elements could result in exposure of sensitive info when follow redirect to another host
+  - Possible arbitrary code execution due to failure to enforce system security properties
+
+*** [[[https://usn.ubuntu.com/3805-1/][USN-3805-1]], USN-3805-2] curl vulnerabilities
+- 3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16842][CVE-2018-16842]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16840][CVE-2018-16840]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16839][CVE-2018-16839]]
+- 1 CVE addressed in Precise ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16839][CVE-2018-16839]]
+- Buffer overflow in SASL authentication (very similar to [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14618][CVE-2018-14618]] from Episode 5)
+- UAF when closing handle (DoS / crash)
+- Out-of-bounds read when using curl to print show error messages via command-line
+  - This is fixed for Precise ESM too
+
+** Goings on in Ubuntu Security Community
+*** Linux Security Summit Europe (LSS-EU)
+- 2 presentations by Canonical engineers
+- https://events.linuxfoundation.org/events/linux-security-summit-europe-2018/
+**** Overview and Recent Developments: Namespaces and Capabilities
+- Christian Brauner (Kernel engineer focussing on lxd at Canonical)
+- Namespaces and Capabilities are building blocks for containers
+- Summarises recent enhancements to various namespaces etc
+- Future highlights: seccomp trap to userspace, LSM stacking, CAP_SYS_ADMIN split?
+- Slides: https://events.linuxfoundation.org/wp-content/uploads/2017/12/2018-LSS-Europe-Edinburgh-Namespaces-and-Capabilities_Christian-Brauner.pdf
+- Video: https://www.youtube.com/watch?v=-PZNF8XDNn8&list=PLbzoR-pLrL6oa4x78bHssxmGAw_ns1Tm2&index=8
+
+**** Overview and Recent Developments: AppArmor
+- John Johansen (Ubuntu Security team, AppArmor (kernel) maintainer)
+- Summarises some of the history, use of and the latest developments in AppArmor
+- Future highlights: Allow user / apps to load policy, delegation, pam_apparmor
+- Slides: https://events.linuxfoundation.org/wp-content/uploads/2017/12/lss-eu-apparmor-overview-2018.pdf
+- Video: https://www.youtube.com/watch?v=3MkU_Z-fClE&list=PLbzoR-pLrL6oa4x78bHssxmGAw_ns1Tm2&index=15
+
+*** Blog posts
+**** A guide to snap permissions and interfaces
+- https://blog.ubuntu.com/2018/11/01/a-guide-to-snap-permissions-and-interfaces
+*** Hiring
+**** Ubuntu Security Engineer
+- https://boards.greenhouse.io/canonical/jobs/1158266
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 9
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-9
