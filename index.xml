@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Oct 2018 00:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 10</title>
+      <link>https://ubuntusecuritypodcast.org/episode-10/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-10/</guid>
+      <description>Overview This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.
+This week in Ubuntu Security Updates 17 unique CVEs addressed
+[USN-3799-2] MySQL vulnerabilities  3 CVEs addressed in Precise ESM  CVE-2018-3282 CVE-2018-3174 CVE-2018-3133  Ubuntu 12.04 Precise ESM update for 3 CVEs fixed in usual supported releases (covered in Episode 9)  [USN-3803-1] Ghostscript vulnerabilities  3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-18284 CVE-2018-18073 CVE-2018-17961  More ghostscript vulnerabilities!</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 9</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 61 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 61 unique CVEs addressed
       <description>Overview This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.
 This week in Ubuntu Security Updates 15 unique CVEs addressed
 [USN-3790-1] Requests vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-18074  Requests library could end up sending credentials in clear text if server is configured with a https -&amp;gt; http redirect  [USN-3792-1, USN-3792-2] Net-SNMP vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic &amp;amp; Precise ESM  CVE-2018-18065  Remote DoS via a NULL pointer dereference from an authenticated attacker  [USN-3793-1] Thunderbird vulnerabilities  5 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-12385 CVE-2018-12383 CVE-2018-12378 CVE-2018-12377 CVE-2018-12376  New Thunderbird version (60) containing 5 fixes Interestingly all of these were also vulnerabilities in Firefox - in particular CVE-2018-12383 was discussed in Episode 4 for Firefox  [USN-3794-1] MoinMoin vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2017-5934  XSS in link editor dialog allow injection of arbitrary web content (HTML, scripts etc)  [USN-3789-2] ClamAV vulnerabilities  5 CVEs addressed in Precise ESM  CVE-2018-15378 CVE-2018-14682 CVE-2018-14681 CVE-2018-14680 CVE-2018-14679  Corresponding fix for Precise ESM from ClamAV which we discussed in Episode 7 Also rolls in fixes for 4 other vulnerabilities in the embedded mspack library  In trusty and precise we used the embedded libmspack, newer releases use the system package so weren&amp;rsquo;t affected   [USN-3795-1] libssh vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-10933  Embedded SSH server and client implementation Allows bypass of authentication by remote attackers if they send a SSH2_MSG_USERAUTH_SUCCESS message instead of the SSH2_MSG_USERAUTH_REQUEST message to initiate the authentication process This message is meant to be sent from the server to the client but in this case are sending it to the server State machine on server-side then jumps straight to &amp;lsquo;Authenticated&amp;rsquo; Only affects applications which use libssh as a server  [USN-3796-1, USN-3796-2] Paramiko vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic &amp;amp; Precise ESM  CVE-2018-1000805  Python SSH library for both servers and clients Very similar to CVE-2018-10933 for libssh - remote authentication bypass by presenting SSH2_MSG_USERAUTH_SUCCESS in place of SSH2_MSG_USERAUTH_REQUEST Due to code-reuse between client and server implementations On server side, runs the normal client side code to be used when receiving this authentication success from the server, and flips the &amp;lsquo;authenticated&amp;rsquo; flag - which is shared by both the server and client code  Goings on in Ubuntu Security Community Ubuntu 18.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
