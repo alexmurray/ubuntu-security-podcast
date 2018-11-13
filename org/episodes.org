@@ -7,6 +7,127 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/episode/default.png
 
+* Episode 11
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-11
+:EXPORT_DATE: 2018-11-12
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E011.mp3 :podcast_duration "13:03" :podcast_bytes "12529292"
+:END:
+#+begin_description
+This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.
+#+end_description
+** Overview
+This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.
+** This week in Ubuntu Security Updates
+23 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/3806-1/][USN-3806-1]]] systemd vulnerability
+- 1 CVEs addressed in Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15688][CVE-2018-15688]]
+- Reported by Felix Wilhelm from Google Security Team to Ubuntu in [[https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1795921][LP #1795921]]
+- systemd contains DHCPv6 client written from scratch
+- Heap buffer overflow in DHCPv6 option handling (say via server id of >=493 bytes)
+- Coordinated with systemd upstream and Red Hat to resolve this
+*** [[[https://usn.ubuntu.com/3807-1/][USN-3807-1]]] NetworkManager vulnerability
+- 1 CVEs addressed in Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15688][CVE-2018-15688]]
+- NetworkManager contains the same code taken from systemd-networkd so is also vulnerable
+
+*** [[[https://usn.ubuntu.com/3808-1/][USN-3808-1]]] Ruby vulnerabilities
+- 2 CVEs addressed in Trusty, Xenial, Bionic and Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16395][CVE-2018-16395]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16396][CVE-2018-16396]]
+- Misuses return value when comparing names in X509 certificates
+  - If returned 1 on comparing name would assume are identical but are in fact not
+  - Could allow to impersonate a certificate
+- Taint flags not propagated when unpacking arrays into strings, or packing strings into arrays
+  - Could allow untrusted data to be treated as trusted
+
+*** [[[https://usn.ubuntu.com/3809-1/][USN-3809-1]]] OpenSSH vulnerabilities
+- 2 CVEs addressed in Trusty, Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15473][CVE-2018-15473]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10708][CVE-2016-10708]]
+- User enumeration due to fail to bail out early on invalid user authentication
+  - Would take longer to process a packet with a valid username than an invalid one
+  - Can determine account names as a result via brute-force timing attack
+- Possible to crash the per-connection process on NULL pointer dereference
+  - Low priority since doesn't crash the main daemon so not really a DoS
+
+*** [[[https://usn.ubuntu.com/3786-2/][USN-3786-2]]] libxkbcommon vulnerabilities
+- 11 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15856][CVE-2018-15856]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15864][CVE-2018-15864]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15863][CVE-2018-15863]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15862][CVE-2018-15862]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15861][CVE-2018-15861]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15859][CVE-2018-15859]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15858][CVE-2018-15858]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15857][CVE-2018-15857]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15855][CVE-2018-15855]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15854][CVE-2018-15854]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15853][CVE-2018-15853]]
+- Episode 7 for Trusty and Xenial
+- Some common CVEs, some new ones specific to Bionic version
+
+*** [[[https://usn.ubuntu.com/3810-1/][USN-3810-1]]] ppp vulnerability
+- 1 CVEs addressed in Trusty, Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11574][CVE-2018-11574]]
+- Ubuntu specific change to pppd to add support for EAP-TLS authentication
+  - Could be triggered on both peer or server side
+  - Lack of input validation coupled with an integer overflow lead to crash and possible authentication bypass
+  - Leads to memcpy() with a negative length value (and hence very large unsigned value)
+  - Theoretically possible to overwrite other data structures related to server state and therefore bypass authentication
+
+*** [[[https://usn.ubuntu.com/3811-1/][USN-3811-1]]] SpamAssassin vulnerabilities
+- 3 CVEs addressed in Trusty, Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11781][CVE-2018-11781]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11780][CVE-2018-11780]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15705][CVE-2017-15705]]
+- Updated to latest stable version of spamassassin (3.4.2)
+  - So all supported Ubuntu releases now have 3.4.2
+- Local user code injection via meta rule syntax
+- RCE via PDFInfo plugin
+- Failure to handle unclosed HTML tags in emails leading to DoS
+
+*** [[[https://usn.ubuntu.com/3812-1/][USN-3812-1]]] nginx vulnerabilities
+- 3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16845][CVE-2018-16845]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16844][CVE-2018-16844]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16843][CVE-2018-16843]]
+- DoS due to memory usage in HTTP/2 handling
+- DoS due to excessive CPU usage in HTTP/2 handling
+- When processing a specially crafted mp4 file, could lead to infinite loop
+  - This module is in the nginx-extras package
+
+*** [[[https://usn.ubuntu.com/3813-1/][USN-3813-1]]] pyOpenSSL vulnerabilities
+- 2 CVEs addressed in Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000808][CVE-2018-1000808]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000807][CVE-2018-1000807]]
+- DoS via crash in handling of X509 certificates
+- UAF in handling of X509 certificates
+
+** Goings on in Ubuntu Security Community
+*** [[https://eprint.iacr.org/2018/1060][PortSmash]] - New Intel side-channel vulnerability or expected behaviour for SMT?
+- [[https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-5407.html][CVE-2018-5407]] assigned to OpenSSL but described as a side-channel in Intel SMT / Hyper-Threading
+  - https://www.openwall.com/lists/oss-security/2018/11/01/4
+  - Affects OpenSSL <= 1.1.0h
+- [[https://www.openwall.com/lists/oss-security/2015/08/12/8][Originally suggested as a possible side-channel in 2015]]
+- Due to sharing of execution engines in SMT
+  - Two processes across shared hyper-threads, contend for execution units across same ports
+  - Meaure port contention delay -> side channel to recover ECDSA private key of server running in other process
+- So crypto code needs not only to be constant-time, but also secret-independent execution-flow
+  - ie. execute same instruction sequence regardless of secret
+  - all code and data addresses are assumed public
+- Or disable HT / learn to schedule trust domains across different hyper-threads (gang-scheduling)
+*** Hiring
+**** Ubuntu Security Engineer
+- https://boards.greenhouse.io/canonical/jobs/1158266
+** Preview of Next Episode
+*** Upcoming fixes
+- libmspack, systemd, gettext
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 10
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-10
