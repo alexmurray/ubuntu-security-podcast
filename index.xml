@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 11</title>
+      <link>https://ubuntusecuritypodcast.org/episode-11/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-11/</guid>
+      <description>Overview This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.
+This week in Ubuntu Security Updates 23 unique CVEs addressed
+[USN-3806-1] systemd vulnerability  1 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2018-15688  Reported by Felix Wilhelm from Google Security Team to Ubuntu in LP #1795921 systemd contains DHCPv6 client written from scratch Heap buffer overflow in DHCPv6 option handling (say via server id of &amp;gt;=493 bytes) Coordinated with systemd upstream and Red Hat to resolve this  [USN-3807-1] NetworkManager vulnerability  1 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2018-15688  NetworkManager contains the same code taken from systemd-networkd so is also vulnerable  [USN-3808-1] Ruby vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic and Cosmic  CVE-2018-16395 CVE-2018-16396  Misuses return value when comparing names in X509 certificates  If returned 1 on comparing name would assume are identical but are in fact not Could allow to impersonate a certificate  Taint flags not propagated when unpacking arrays into strings, or packing strings into arrays  Could allow untrusted data to be treated as trusted   [USN-3809-1] OpenSSH vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-15473 CVE-2016-10708  User enumeration due to fail to bail out early on invalid user authentication  Would take longer to process a packet with a valid username than an invalid one Can determine account names as a result via brute-force timing attack  Possible to crash the per-connection process on NULL pointer dereference  Low priority since doesn&amp;rsquo;t crash the main daemon so not really a DoS   [USN-3786-2] libxkbcommon vulnerabilities  11 CVEs addressed in Bionic  CVE-2018-15856 CVE-2018-15864 CVE-2018-15863 CVE-2018-15862 CVE-2018-15861 CVE-2018-15859 CVE-2018-15858 CVE-2018-15857 CVE-2018-15855 CVE-2018-15854 CVE-2018-15853  Episode 7 for Trusty and Xenial Some common CVEs, some new ones specific to Bionic version  [USN-3810-1] ppp vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-11574  Ubuntu specific change to pppd to add support for EAP-TLS authentication  Could be triggered on both peer or server side Lack of input validation coupled with an integer overflow lead to crash and possible authentication bypass Leads to memcpy() with a negative length value (and hence very large unsigned value) Theoretically possible to overwrite other data structures related to server state and therefore bypass authentication   [USN-3811-1] SpamAssassin vulnerabilities  3 CVEs addressed in Trusty, Xenial, Bionic  CVE-2018-11781 CVE-2018-11780 CVE-2017-15705  Updated to latest stable version of spamassassin (3.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 10</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
       <description>Overview This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability (CVE-2018-14665), plus Cosmic is now officially supported by the Security Team.
 This week in Ubuntu Security Updates 61 unique CVEs addressed
 [USN-3790-2] Requests vulnerability  1 CVEs addressed in Cosmic  CVE-2018-18074  Cosmic is now officially released and so is officially supported by the Security Team This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic  [USN-3795-2] libssh vulnerability  1 CVEs addressed in Cosmic  CVE-2018-10933  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic  [USN-3792-3] Net-SNMP vulnerability  1 CVEs addressed in Cosmic  CVE-2018-18065  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3796-3] Paramiko vulnerability  1 CVEs addressed in Cosmic  CVE-2018-1000805  This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3788-2] Tex Live-bin vulnerability  1 CVEs addressed in Cosmic  CVE-2018-17407  This is the same vulnerability which we covered in Episode 7 for Trusty, Xenial &amp;amp; Bionic now fixed for Cosmic  [USN-3797-1, USN-3797-2] Linux kernel vulnerabilities  4 CVEs addressed in Xenial and Trusty for the Xenial HWE kernel for Trusty  CVE-2018-10938 CVE-2018-9363 CVE-2018-16658 CVE-2018-14734  Includes:  UAF in Infiniband -&amp;gt; DoS via crash Integer overflow in CDROM -&amp;gt; info disclosure of kernel memory Integer overflow in bluetooth HID -&amp;gt; buffer overflow -&amp;gt; DoS / possible arbitrary code execution Remotely triggerable infinite loop in labelled network handler (CIPSO)  CIPSO used by SELinux / SMACK not AppArmor so unlikely Ubuntu users affected    [USN-3798-1] Linux kernel vulnerabilities  8 CVEs addressed in Trusty and Precise ESM (for the Trusty HWE kernel for Precise ESM)  CVE-2018-9518 CVE-2018-7566 CVE-2018-1000004 CVE-2017-18216 CVE-2017-15299 CVE-2017-0794 CVE-2016-7913 CVE-2015-8539  Includes:  Local DoS / code exec via insertion of an already existing key into kernel keyring UAF in XCeive driver, local DoS / code exec (crash) Race condition in generic SCSI -&amp;gt; Local DoS (crash) / code exec NULL ptr dereference in ocfs2 -&amp;gt; Local DoS (crash) Race condition in ALSA handling of ioctls -&amp;gt; Local DoS via deadlock Race condition in ALSA -&amp;gt; UAF / out of bounds read -&amp;gt; Local DoS (crash) / code exec Buffer overflow in NFC LLCP impl -&amp;gt; remote DoS / code exec   [USN-3777-3] Linux kernel (Azure) vulnerabilities  8 CVEs addressed in Xenial, Bionic  CVE-2018-6555 CVE-2018-6554 CVE-2018-3639 CVE-2018-14633 CVE-2017-5715 CVE-2018-15572 CVE-2018-15594 CVE-2018-17182  Corresponding fixes for Azure Cloud specific kernel as covered in Episode 7 for standard Bionic kernel  [USN-3799-1] MySQL vulnerabilities  21 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-3284 CVE-2018-3283 CVE-2018-3282 CVE-2018-3278 CVE-2018-3277 CVE-2018-3276 CVE-2018-3251 CVE-2018-3247 CVE-2018-3200 CVE-2018-3187 CVE-2018-3185 CVE-2018-3174 CVE-2018-3173 CVE-2018-3171 CVE-2018-3162 CVE-2018-3161 CVE-2018-3156 CVE-2018-3155 CVE-2018-3144 CVE-2018-3143 CVE-2018-3133  New upstream versions of MySQL for all supported releases to fix multiple vulnerabilities, add features and possible incompatible changes Trusty: 5.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>

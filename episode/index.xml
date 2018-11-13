@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 5 Nov 2018 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,241 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 11</title>
+          <link>https://ubuntusecuritypodcast.org/episode-11/</link>
+          <pubDate>Mon, 12 Nov 2018 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E011.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</itunes:summary>
+        <description>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</description>
+        <googleplay:description>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>23 unique CVEs addressed</p>
+
+<h3 id="usn-3806-1-systemd-vulnerability">[<a href="https://usn.ubuntu.com/3806-1/">USN-3806-1</a>] systemd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15688">CVE-2018-15688</a></li>
+</ul></li>
+<li>Reported by Felix Wilhelm from Google Security Team to Ubuntu in <a href="https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1795921">LP #1795921</a></li>
+<li>systemd contains DHCPv6 client written from scratch</li>
+<li>Heap buffer overflow in DHCPv6 option handling (say via server id of &gt;=493 bytes)</li>
+<li>Coordinated with systemd upstream and Red Hat to resolve this</li>
+</ul>
+
+<h3 id="usn-3807-1-networkmanager-vulnerability">[<a href="https://usn.ubuntu.com/3807-1/">USN-3807-1</a>] NetworkManager vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15688">CVE-2018-15688</a></li>
+</ul></li>
+<li>NetworkManager contains the same code taken from systemd-networkd so is also vulnerable</li>
+</ul>
+
+<h3 id="usn-3808-1-ruby-vulnerabilities">[<a href="https://usn.ubuntu.com/3808-1/">USN-3808-1</a>] Ruby vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic and Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16395">CVE-2018-16395</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16396">CVE-2018-16396</a></li>
+</ul></li>
+<li>Misuses return value when comparing names in X509 certificates
+
+<ul>
+<li>If returned 1 on comparing name would assume are identical but are in fact not</li>
+<li>Could allow to impersonate a certificate</li>
+</ul></li>
+<li>Taint flags not propagated when unpacking arrays into strings, or packing strings into arrays
+
+<ul>
+<li>Could allow untrusted data to be treated as trusted</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3809-1-openssh-vulnerabilities">[<a href="https://usn.ubuntu.com/3809-1/">USN-3809-1</a>] OpenSSH vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15473">CVE-2018-15473</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10708">CVE-2016-10708</a></li>
+</ul></li>
+<li>User enumeration due to fail to bail out early on invalid user authentication
+
+<ul>
+<li>Would take longer to process a packet with a valid username than an invalid one</li>
+<li>Can determine account names as a result via brute-force timing attack</li>
+</ul></li>
+<li>Possible to crash the per-connection process on NULL pointer dereference
+
+<ul>
+<li>Low priority since doesn&rsquo;t crash the main daemon so not really a DoS</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3786-2-libxkbcommon-vulnerabilities">[<a href="https://usn.ubuntu.com/3786-2/">USN-3786-2</a>] libxkbcommon vulnerabilities</h3>
+
+<ul>
+<li>11 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15856">CVE-2018-15856</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15864">CVE-2018-15864</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15863">CVE-2018-15863</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15862">CVE-2018-15862</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15861">CVE-2018-15861</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15859">CVE-2018-15859</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15858">CVE-2018-15858</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15857">CVE-2018-15857</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15855">CVE-2018-15855</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15854">CVE-2018-15854</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15853">CVE-2018-15853</a></li>
+</ul></li>
+<li>Episode 7 for Trusty and Xenial</li>
+<li>Some common CVEs, some new ones specific to Bionic version</li>
+</ul>
+
+<h3 id="usn-3810-1-ppp-vulnerability">[<a href="https://usn.ubuntu.com/3810-1/">USN-3810-1</a>] ppp vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11574">CVE-2018-11574</a></li>
+</ul></li>
+<li>Ubuntu specific change to pppd to add support for EAP-TLS authentication
+
+<ul>
+<li>Could be triggered on both peer or server side</li>
+<li>Lack of input validation coupled with an integer overflow lead to crash and possible authentication bypass</li>
+<li>Leads to memcpy() with a negative length value (and hence very large unsigned value)</li>
+<li>Theoretically possible to overwrite other data structures related to server state and therefore bypass authentication</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3811-1-spamassassin-vulnerabilities">[<a href="https://usn.ubuntu.com/3811-1/">USN-3811-1</a>] SpamAssassin vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11781">CVE-2018-11781</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11780">CVE-2018-11780</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15705">CVE-2017-15705</a></li>
+</ul></li>
+<li>Updated to latest stable version of spamassassin (3.4.2)
+
+<ul>
+<li>So all supported Ubuntu releases now have 3.4.2</li>
+</ul></li>
+<li>Local user code injection via meta rule syntax</li>
+<li>RCE via PDFInfo plugin</li>
+<li>Failure to handle unclosed HTML tags in emails leading to DoS</li>
+</ul>
+
+<h3 id="usn-3812-1-nginx-vulnerabilities">[<a href="https://usn.ubuntu.com/3812-1/">USN-3812-1</a>] nginx vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16845">CVE-2018-16845</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16844">CVE-2018-16844</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16843">CVE-2018-16843</a></li>
+</ul></li>
+<li>DoS due to memory usage in HTTP/2 handling</li>
+<li>DoS due to excessive CPU usage in HTTP/2 handling</li>
+<li>When processing a specially crafted mp4 file, could lead to infinite loop
+
+<ul>
+<li>This module is in the nginx-extras package</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3813-1-pyopenssl-vulnerabilities">[<a href="https://usn.ubuntu.com/3813-1/">USN-3813-1</a>] pyOpenSSL vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000808">CVE-2018-1000808</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000807">CVE-2018-1000807</a></li>
+</ul></li>
+<li>DoS via crash in handling of X509 certificates</li>
+<li>UAF in handling of X509 certificates</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="portsmash-new-intel-side-channel-vulnerability-or-expected-behaviour-for-smt"><a href="https://eprint.iacr.org/2018/1060">PortSmash</a> - New Intel side-channel vulnerability or expected behaviour for SMT?</h3>
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-5407.html">CVE-2018-5407</a> assigned to OpenSSL but described as a side-channel in Intel SMT / Hyper-Threading
+
+<ul>
+<li><a href="https://www.openwall.com/lists/oss-security/2018/11/01/4">https://www.openwall.com/lists/oss-security/2018/11/01/4</a></li>
+<li>Affects OpenSSL &lt;= 1.1.0h</li>
+</ul></li>
+<li><a href="https://www.openwall.com/lists/oss-security/2015/08/12/8">Originally suggested as a possible side-channel in 2015</a></li>
+<li>Due to sharing of execution engines in SMT
+
+<ul>
+<li>Two processes across shared hyper-threads, contend for execution units across same ports</li>
+<li>Meaure port contention delay -&gt; side channel to recover ECDSA private key of server running in other process</li>
+</ul></li>
+<li>So crypto code needs not only to be constant-time, but also secret-independent execution-flow
+
+<ul>
+<li>ie. execute same instruction sequence regardless of secret</li>
+<li>all code and data addresses are assumed public</li>
+</ul></li>
+<li>Or disable HT / learn to schedule trust domains across different hyper-threads (gang-scheduling)</li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
+</ul>
+
+<h2 id="preview-of-next-episode">Preview of Next Episode</h2>
+
+<h3 id="upcoming-fixes">Upcoming fixes</h3>
+
+<ul>
+<li>libmspack, systemd, gettext</li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E011.mp3" length="12529292" type="audio/mpeg" /><itunes:duration>13:03</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 10</title>
           <link>https://ubuntusecuritypodcast.org/episode-10/</link>
