@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 13" />
+<meta property="og:description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-13/" />
+
+
+
+<meta property="og:updated_time" content="2018-11-26 00:00:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-11-26 00:00:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2018-11-26 00:00:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 13">
+<meta itemprop="description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="383">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 13"/>
+<meta name="twitter:description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 13 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-13/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 13</h1>
+      <small>Posted on Monday, Nov 26, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E013.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E013.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>16 unique CVEs addressed</p>
+
+<h3 id="usn-3816-2-systemd-vulnerability">[<a href="https://usn.ubuntu.com/3816-2/">USN-3816-2</a>] systemd vulnerability</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15687">CVE-2018-15687</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15686">CVE-2018-15686</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6954">CVE-2018-6954</a></li>
+</ul></li>
+<li>Episode 12 - original fix for CVE-2018-6954 was incomplete - this includes the complete fix</li>
+<li>Also includes an update to avoid a possible hang on shutdown in unattended-upgrades - <a href="https://bugs.launchpad.net/bugs/1803391">LP #1803391</a>
+
+<ul>
+<li>During shutdown, systemd is already in the process of shutting down</li>
+<li>Then unattended-upgrades runs and it goes and tries to update systemd - which then tries to reexec it - which blocks waiting for it to finish shutting down</li>
+<li>Creates a deadlock since systemd is waiting on unattended-upgrades to finish but u-u is waiting on systemd reexec</li>
+<li>Fix is to not do reexec if systemd is already in the process of stopping</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3825-1-usn-3825-2-mod-perl-vulnerability">[<a href="https://usn.ubuntu.com/3825-1/">USN-3825-1</a>, USN-3825-2] mod_perl vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2011-2767">CVE-2011-2767</a></li>
+</ul></li>
+<li>Old CVE - reported to Debian in 2011, who assigned a CVE internally but didn&rsquo;t go any further with it</li>
+<li>Recently the original reporter of the vulnerability submitted a patch to Debian to fix it - so vuln was reported to Mitre</li>
+<li>Now fixed in Ubuntu as well</li>
+</ul>
+
+<h3 id="usn-3801-2-firefox-regressions">[<a href="https://usn.ubuntu.com/3801-2/">USN-3801-2</a>] Firefox regressions</h3>
+
+<ul>
+<li>12 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12397">CVE-2018-12397</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12396">CVE-2018-12396</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12395">CVE-2018-12395</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12403">CVE-2018-12403</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12402">CVE-2018-12402</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12401">CVE-2018-12401</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12399">CVE-2018-12399</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12398">CVE-2018-12398</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12393">CVE-2018-12393</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12392">CVE-2018-12392</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12390">CVE-2018-12390</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12388">CVE-2018-12388</a></li>
+</ul></li>
+<li>Firefox update (v63) (Episode 9) had some minor regressions
+
+<ul>
+<li>These were present in the upstream firefox release itself</li>
+</ul></li>
+<li>This provides <a href="https://www.mozilla.org/en-US/firefox/63.0.3/releasenotes/">63.0.3</a> which contains these fixes from upstream to address the regressions
+
+<ul>
+<li>WebGL hangs, slow page loading if using specific proxy settings etc.</li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="linux-cryptocoin-malware">Linux Cryptocoin Malware</h3>
+
+<ul>
+<li><a href="https://www.zdnet.com/article/new-linux-crypto-miner-steals-your-root-password-and-disables-your-antivirus/">https://www.zdnet.com/article/new-linux-crypto-miner-steals-your-root-password-and-disables-your-antivirus/</a></li>
+<li>Apparently reports of users affected</li>
+<li>Requires SSH to login - bruteforce passwords
+
+<ul>
+<li>Use strong passwords / public key auth</li>
+</ul></li>
+<li>Elevates privileges via two very old CVEs
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5195">CVE-2016-5195</a> - Dirty Cow - fixed for Ubuntu in October 2016</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2013-2094">CVE-2013-2094</a> - perf root privilege escalation - fixed for Ubuntu in May 2013</li>
+</ul></li>
+<li>All Ubuntu users are fine unless you are running a old release AND have not been applying security patches</li>
+<li>Please use strong passwords if enabling openssh server</li>
+</ul>
+
+<h3 id="preview-of-next-episode">Preview of next episode</h3>
+
+<h4 id="upcoming-fixes">Upcoming fixes</h4>
+
+<ul>
+<li>qemu, webkitgtk</li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-12/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 13"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

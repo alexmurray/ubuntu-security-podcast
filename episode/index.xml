@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Mon, 26 Nov 2018 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,132 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 13</title>
+          <link>https://ubuntusecuritypodcast.org/episode-13/</link>
+          <pubDate>Mon, 26 Nov 2018 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E013.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</itunes:summary>
+        <description>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</description>
+        <googleplay:description>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>16 unique CVEs addressed</p>
+
+<h3 id="usn-3816-2-systemd-vulnerability">[<a href="https://usn.ubuntu.com/3816-2/">USN-3816-2</a>] systemd vulnerability</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15687">CVE-2018-15687</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15686">CVE-2018-15686</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6954">CVE-2018-6954</a></li>
+</ul></li>
+<li>Episode 12 - original fix for CVE-2018-6954 was incomplete - this includes the complete fix</li>
+<li>Also includes an update to avoid a possible hang on shutdown in unattended-upgrades - <a href="https://bugs.launchpad.net/bugs/1803391">LP #1803391</a>
+
+<ul>
+<li>During shutdown, systemd is already in the process of shutting down</li>
+<li>Then unattended-upgrades runs and it goes and tries to update systemd - which then tries to reexec it - which blocks waiting for it to finish shutting down</li>
+<li>Creates a deadlock since systemd is waiting on unattended-upgrades to finish but u-u is waiting on systemd reexec</li>
+<li>Fix is to not do reexec if systemd is already in the process of stopping</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3825-1-usn-3825-2-mod-perl-vulnerability">[<a href="https://usn.ubuntu.com/3825-1/">USN-3825-1</a>, USN-3825-2] mod_perl vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2011-2767">CVE-2011-2767</a></li>
+</ul></li>
+<li>Old CVE - reported to Debian in 2011, who assigned a CVE internally but didn&rsquo;t go any further with it</li>
+<li>Recently the original reporter of the vulnerability submitted a patch to Debian to fix it - so vuln was reported to Mitre</li>
+<li>Now fixed in Ubuntu as well</li>
+</ul>
+
+<h3 id="usn-3801-2-firefox-regressions">[<a href="https://usn.ubuntu.com/3801-2/">USN-3801-2</a>] Firefox regressions</h3>
+
+<ul>
+<li>12 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12397">CVE-2018-12397</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12396">CVE-2018-12396</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12395">CVE-2018-12395</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12403">CVE-2018-12403</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12402">CVE-2018-12402</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12401">CVE-2018-12401</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12399">CVE-2018-12399</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12398">CVE-2018-12398</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12393">CVE-2018-12393</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12392">CVE-2018-12392</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12390">CVE-2018-12390</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12388">CVE-2018-12388</a></li>
+</ul></li>
+<li>Firefox update (v63) (Episode 9) had some minor regressions
+
+<ul>
+<li>These were present in the upstream firefox release itself</li>
+</ul></li>
+<li>This provides <a href="https://www.mozilla.org/en-US/firefox/63.0.3/releasenotes/">63.0.3</a> which contains these fixes from upstream to address the regressions
+
+<ul>
+<li>WebGL hangs, slow page loading if using specific proxy settings etc.</li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="linux-cryptocoin-malware">Linux Cryptocoin Malware</h3>
+
+<ul>
+<li><a href="https://www.zdnet.com/article/new-linux-crypto-miner-steals-your-root-password-and-disables-your-antivirus/">https://www.zdnet.com/article/new-linux-crypto-miner-steals-your-root-password-and-disables-your-antivirus/</a></li>
+<li>Apparently reports of users affected</li>
+<li>Requires SSH to login - bruteforce passwords
+
+<ul>
+<li>Use strong passwords / public key auth</li>
+</ul></li>
+<li>Elevates privileges via two very old CVEs
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5195">CVE-2016-5195</a> - Dirty Cow - fixed for Ubuntu in October 2016</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2013-2094">CVE-2013-2094</a> - perf root privilege escalation - fixed for Ubuntu in May 2013</li>
+</ul></li>
+<li>All Ubuntu users are fine unless you are running a old release AND have not been applying security patches</li>
+<li>Please use strong passwords if enabling openssh server</li>
+</ul>
+
+<h3 id="preview-of-next-episode">Preview of next episode</h3>
+
+<h4 id="upcoming-fixes">Upcoming fixes</h4>
+
+<ul>
+<li>qemu, webkitgtk</li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E013.mp3" length="8162872" type="audio/mpeg" /><itunes:duration>08:30</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 12</title>
           <link>https://ubuntusecuritypodcast.org/episode-12/</link>
