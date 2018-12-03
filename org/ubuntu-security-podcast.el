@@ -192,9 +192,6 @@
                           description "\n"))
           (insert (usp-generate-usn-summaries details))
           (insert (concat "** Goings on in Ubuntu Security Community\n"
-                          "*** Hiring\n"
-                          "**** Ubuntu Security Engineer\n"
-                          "- https://boards.greenhouse.io/canonical/jobs/1158266\n"
                           "** Get in contact\n"
                           "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
                           "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
