@@ -30,4 +30,5 @@ mentioned in the episode.
 
 Some manual rework is needed to reduce the overall length of the generated show
 notes to collate package updates for packages which cover the same CVEs and to
-then add details of each of the CVEs.
+then add details of each of the CVEs plus add details on whatever other topics
+were discussed.
