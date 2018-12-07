@@ -117,14 +117,13 @@
 
 (defun usp-generate-summary-details (start end)
   "Generate summary details for USNs from mu4e from dates START to END."
-  (let ((result-buffer (get-buffer-create "*usn-results*"))
-        (all-details nil))
+  (let ((all-details nil))
+    (with-temp-buffer
       (shell-command (concat "mu find --format=sexp "
                              "list:ubuntu-security-announce.lists.ubuntu.com "
                              (format "date:%s..%s" start end) " "
-                             "not flag:trashed") result-buffer)
-      (with-current-buffer result-buffer
-        (goto-char (point-min))
+                             "not flag:trashed") (current-buffer))
+      (goto-char (point-min))
         (while (not (eobp))
           (let ((details (usp-parse-usn-message
                           ;; ignore errors reading so we don't get error
@@ -133,7 +132,6 @@
             (when details
               ;; collect unique list of cves
               (push details all-details)))))
-      (kill-buffer result-buffer)
       all-details))
 
 (defun usp-get-unique-cves (details)
