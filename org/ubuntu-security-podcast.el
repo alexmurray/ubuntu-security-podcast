@@ -128,15 +128,15 @@
                              (format "date:%s..%s" start end) " "
                              "not flag:trashed") (current-buffer))
       (goto-char (point-min))
-        (while (not (eobp))
-          (let ((details (usp-parse-usn-message
-                          ;; ignore errors reading so we don't get error
-                          ;; on end of buffer
-                          (ignore-errors (read (current-buffer))))))
-            (when details
-              ;; collect unique list of cves
-              (push details all-details)))))
-      all-details))
+      (while (not (eobp))
+        (let ((details (usp-parse-usn-message
+                        ;; ignore errors reading so we don't get error
+                        ;; on end of buffer
+                        (ignore-errors (read (current-buffer))))))
+          (when details
+            ;; collect details but ensure we don't get the same one twice
+            (cl-pushnew details all-details :test #'equal)))))
+    all-details))
 
 (defun usp-get-unique-cves (details)
   "Get the unique CVEs from all DETAILS."
