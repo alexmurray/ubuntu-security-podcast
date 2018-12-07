@@ -68,13 +68,18 @@
   "Parse email which is in BUFFER returning a list of the releases."
   (usp-parse-usn-email-regex "^- Ubuntu \\([0-9.]+\\).*$" 1 buffer))
 
+(defun usp-parse-usn-email-buffer (&optional buffer)
+  "Parse email which is in BUFFER returning the salient details."
+  `((cves . ,(usp-parse-usn-email-cves buffer))
+    (bugs . ,(usp-parse-usn-email-bugs buffer))
+    (releases . ,(usp-parse-usn-email-releases buffer))))
+
 (defun usp-parse-usn-email-with-path (path)
   "Parse a USN email located at PATH returing the salient details."
   (with-temp-buffer
-    (insert-file-contents-literally path)
-    `((cves . ,(usp-parse-usn-email-cves))
-      (bugs . ,(usp-parse-usn-email-bugs))
-      (releases . ,(usp-parse-usn-email-releases)))))
+    ;; view via mu since might be base64 encoded or other
+    (shell-command (format "mu view \"%s\"" path) (current-buffer))
+    (usp-parse-usn-email-buffer)))
 
 (defun usp-parse-usn-message (msg)
   "Parse a USN MSG returing the salient details."
