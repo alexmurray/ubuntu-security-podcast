@@ -106,7 +106,11 @@
     (let ((cves (alist-get 'cves details))
           (bugs (alist-get 'bugs details))
           (releases (alist-get 'releases details)))
-      (when (> (length cves) 0)
+      ;; might still have releases but no CVEs if is a regression update
+      (if (= (length cves) 0)
+          (insert (format "- Affecting %s\n" (mapconcat #'(lambda (rel)
+                                                            (usp-get-release-codename rel))
+                                                        releases ", ")))
         (insert (format "- %d CVEs addressed in %s\n" (length cves)
                         (mapconcat #'(lambda (rel) (usp-get-release-codename rel)) releases ", ")))
         (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
