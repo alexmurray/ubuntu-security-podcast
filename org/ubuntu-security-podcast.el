@@ -13,7 +13,7 @@
 (defun usp-extract-usn-from-subject (subject)
   "Extract USN from SUBJECT."
   ;; do both LSN and USNs
-  (when (and subject (string-match ".*\\([LU]SN-[0-9-]+\\).*" subject))
+  (when (and subject (string-match ".*\\([LU]SN-[0-9][0-9-]+\\).*" subject))
     (match-string 1 subject)))
 
 (defun usp-generate-usn-link (usn)
