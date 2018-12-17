@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Mon, 17 Dec 2018 00:00:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 16</title>
+      <link>https://ubuntusecuritypodcast.org/episode-16/</link>
+      <pubDate>Mon, 17 Dec 2018 00:00:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-16/</guid>
+      <description>Overview Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp;amp; more, plus we discuss the security of home routers as evaluated by C-ITL.
+This week in Ubuntu Security Updates 21 unique CVEs addressed
+[USN-3841-1, USN-3841-2] lxml vulnerability  1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic  CVE-2018-19787  Popular XML/HTML parser for Python Tries to remove clean input document and remove links (to say embedded javascript code) - but doesn&amp;rsquo;t account for links containing escaped characters - so link could persist Similar to CVE-2014-3146  In this case tried to account for whitespace in links but didn&amp;rsquo;t include all possible whitespace characters   [USN-3842-1] CUPS vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-4700  Session cookies used for authentication to CUPS web interface used only the current time in seconds as a seed for the relatively predictable PRNG  Easy to bruteforce / guess Fix ensures to use current time value including microseconds Still using relatively predictable PRNG - should use /dev/urandom etc   [USN-3837-2] poppler regression  2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-19149 CVE-2018-16646  Previous poppler update (Episode 15) - fix missed a previous commit and so regressed (crash on opening certain PDF files)  [USN-3843-1, USN-3843-2] pixman vulnerability  1 CVEs addressed in Precise ESM, Trusty  CVE-2015-5297  Low level library for pixel manipulation (used by X, Wayland, Qemu etc) Pointer overflow leading to stack-based buffer overflow in computing bounds of pixel buffers  Did include a check to see if was inside bounds, BUT didn&amp;rsquo;t account for possible overflow in arithmetic before the check Need to check for possible overflow before doing arithmetic and comparison   [USN-3844-1] Firefox vulnerabilities  10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-18497 CVE-2018-18495 CVE-2018-18498 CVE-2018-18494 CVE-2018-18493 CVE-2018-18492 CVE-2018-17466 CVE-2018-12407 CVE-2018-12406 CVE-2018-12405  Firefox 64 - multiple security vulnerabilities fixed  Buffer overflows, UAFs, same-origin-policy violation, webextensions able to violate restrictions, various memory safety / corruption bugs https://www.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 15</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
       <description>Overview This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.
 This week in Ubuntu Security Updates 32 unique CVEs addressed
 [USN-3826-1] QEMU vulnerabilities  10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2018-19364 CVE-2018-18954 CVE-2018-18849 CVE-2018-17963 CVE-2018-17962 CVE-2018-17958 CVE-2018-16847 CVE-2018-12617 CVE-2018-11806 CVE-2018-10839  7 medium, 3 low priority  Integer overflow in virtual network interface driver, able to be triggered by user process in guest -&amp;gt; crash -&amp;gt; DoS Heap based buffer overflow in SLiRP, user-based networking stack (default) during reassembly of fragmented datagrams Integer overflow when reading large blocks from files - nice PoC on github NVMe emulator missing checks on read / write parameters - OOB heap buffer r/w - guest user/process could trigger -&amp;gt; DoS (crash) or possible arbitrary code execution on host as qemu process Integer type mismatch in rtl8139 and pcnet drivers - (from size_t to int) - unsigned to signed - INT_MAX -&amp;gt; -ve -&amp;gt; OOB read - crash / DoS  Copy-pasta?</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>

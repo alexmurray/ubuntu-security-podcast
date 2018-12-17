@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 16" />
+<meta property="og:description" content="Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-16/" />
+
+
+
+<meta property="og:updated_time" content="2018-12-17 00:00:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2018-12-17 00:00:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2018-12-17 00:00:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 16">
+<meta itemprop="description" content="Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="517">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 16"/>
+<meta name="twitter:description" content="Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 16 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-16/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 16</h1>
+      <small>Posted on Monday, Dec 17, 2018</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E016.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E016.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>21 unique CVEs addressed</p>
+
+<h3 id="usn-3841-1-usn-3841-2-lxml-vulnerability">[<a href="https://usn.ubuntu.com/3841-1/">USN-3841-1</a>, <a href="https://usn.ubuntu.com/3841-2/">USN-3841-2</a>] lxml vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19787">CVE-2018-19787</a></li>
+</ul></li>
+<li>Popular XML/HTML parser for Python</li>
+<li>Tries to remove clean input document and remove links (to say embedded
+javascript code) - but doesn&rsquo;t account for links containing escaped
+characters - so link could persist</li>
+<li>Similar to CVE-2014-3146
+
+<ul>
+<li>In this case tried to account for whitespace in links but didn&rsquo;t include
+all possible whitespace characters</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3842-1-cups-vulnerability">[<a href="https://usn.ubuntu.com/3842-1/">USN-3842-1</a>] CUPS vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4700">CVE-2018-4700</a></li>
+</ul></li>
+<li>Session cookies used for authentication to CUPS web interface used only the
+current time <strong>in seconds</strong> as a seed for the relatively predictable PRNG
+
+<ul>
+<li>Easy to bruteforce / guess</li>
+<li>Fix ensures to use current time value including microseconds</li>
+<li>Still using relatively predictable PRNG - should use /dev/urandom etc</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3837-2-poppler-regression">[<a href="https://usn.ubuntu.com/3837-2/">USN-3837-2</a>] poppler regression</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19149">CVE-2018-19149</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16646">CVE-2018-16646</a></li>
+</ul></li>
+<li>Previous poppler update (Episode 15) - fix missed a previous commit and so
+regressed (crash on opening certain PDF files)</li>
+</ul>
+
+<h3 id="usn-3843-1-usn-3843-2-pixman-vulnerability">[<a href="https://usn.ubuntu.com/3843-1/">USN-3843-1</a>, <a href="https://usn.ubuntu.com/3843-2/">USN-3843-2</a>] pixman vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-5297">CVE-2015-5297</a></li>
+</ul></li>
+<li>Low level library for pixel manipulation (used by X, Wayland, Qemu etc)</li>
+<li>Pointer overflow leading to stack-based buffer overflow in computing bounds of pixel buffers
+
+<ul>
+<li>Did include a check to see if was inside bounds, BUT didn&rsquo;t account for
+possible overflow in arithmetic before the check</li>
+<li>Need to check for possible overflow before doing arithmetic and comparison</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3844-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3844-1/">USN-3844-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18497">CVE-2018-18497</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18495">CVE-2018-18495</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18498">CVE-2018-18498</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18494">CVE-2018-18494</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18493">CVE-2018-18493</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18492">CVE-2018-18492</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17466">CVE-2018-17466</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12407">CVE-2018-12407</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12406">CVE-2018-12406</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12405">CVE-2018-12405</a></li>
+</ul></li>
+<li>Firefox 64 - multiple security vulnerabilities fixed
+
+<ul>
+<li>Buffer overflows, UAFs, same-origin-policy violation, webextensions able to
+violate restrictions, various memory safety / corruption bugs</li>
+<li><a href="https://www.mozilla.org/en-US/security/advisories/mfsa2018-29/">https://www.mozilla.org/en-US/security/advisories/mfsa2018-29/</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3845-1-freerdp-vulnerabilities">[<a href="https://usn.ubuntu.com/3845-1/">USN-3845-1</a>] FreeRDP vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8789">CVE-2018-8789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8788">CVE-2018-8788</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8787">CVE-2018-8787</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8786">CVE-2018-8786</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8785">CVE-2018-8785</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8784">CVE-2018-8784</a></li>
+</ul></li>
+<li>Eyal Itkin discovered multiple vulnerabilities in FreeRDP - not all affect all releases (some too old to contain affected code)</li>
+<li>Various heap-based buffer overflows (crash -&gt; DoS / RCE?)</li>
+<li>Out-of-bounds read (crash -&gt; DoS)</li>
+</ul>
+
+<h2 id="goings-on-in-linux-security-community">Goings on in Linux Security Community</h2>
+
+<h3 id="linux-on-mips-and-home-routers">Linux on MIPS and home routers</h3>
+
+<ul>
+<li>Cyber-ITL (Independent Testing Lab) analysed a number of home routers for basic security hardening features
+
+<ul>
+<li>ASLR, DEP (non-executable stack), RELRO</li>
+<li>Mix of MIPS and ARM devices</li>
+<li>Compared against Ubuntu 16.04 LTS x86_64 (general hardening)</li>
+<li>Most found to have minimal hardening features enabled</li>
+<li><a href="https://cyber-itl.org/assets/papers/2018/build%5Fsafety%5Fof%5Fsoftware%5Fin%5F28%5Fpopular%5Fhome%5Frouters.pdf">https://cyber-itl.org/assets/papers/2018/build%5Fsafety%5Fof%5Fsoftware%5Fin%5F28%5Fpopular%5Fhome%5Frouters.pdf</a></li>
+<li>Also found Linux kernel on MIPS either has executable stack (until 2016)
+due to FP emulation code, or since then has no executable stack but has a
+RWX segment at a fixed location, which can be used to bypass DEP / ASLR
+
+<ul>
+<li>Ubuntu does not support MIPS</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="final-episode-for-2018">Final episode for 2018</h3>
+
+<ul>
+<li>This is the last episode for 2018, on leave for the next 3 weeks</li>
+<li>Next episode will be from Cape Town in 2019 during week of 14th January with some special guests&hellip; :)</li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-15/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 16"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
