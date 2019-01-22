@@ -14,10 +14,10 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E017.mp3 :podcast_duration "21:45" :podcast_bytes "20887640"
 :END:
 #+begin_description
-First episode of 2019! This week we look "System Down" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the `mincore()` system call.
+First episode of 2019! This week we look "System Down" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.
 #+end_description
 ** Overview
-First episode of 2019! This week we look "System Down" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the `mincore()` system call.
+First episode of 2019! This week we look "System Down" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.
 
 ** This week in Ubuntu Security Updates
 51 unique CVEs addressed across the supported Ubuntu releases.
