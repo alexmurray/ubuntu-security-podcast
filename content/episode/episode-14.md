@@ -2,9 +2,9 @@
 title = "Episode 14"
 description = "This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise."
 date = 2018-12-03
-lastmod = 2018-12-17T20:36:00+10:30
+lastmod = 2019-01-22T20:59:31+10:30
 draft = false
-weight = 1003
+weight = 1004
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E014.mp3"
