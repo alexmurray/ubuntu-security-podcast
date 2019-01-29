@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 18" />
+<meta property="og:description" content="This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-18/" />
+
+
+
+<meta property="og:updated_time" content="2019-01-29 00:00:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-01-29 00:00:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2019-01-29 00:00:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 18">
+<meta itemprop="description" content="This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="794">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 18"/>
+<meta name="twitter:description" content="This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 18 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-18/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 18</h1>
+      <small>Posted on Tuesday, Jan 29, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E018.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E018.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>46 unique CVEs addressed</p>
+
+<h3 id="usn-3863-1-usn-3863-2-apt-vulnerability">[<a href="https://usn.ubuntu.com/3863-1/">USN-3863-1</a>, <a href="https://usn.ubuntu.com/3863-2/">USN-3863-2</a>] APT vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3462">CVE-2019-3462</a></li>
+</ul></li>
+<li>MITM allowing RCE as root in the context of apt</li>
+<li>Due to mishandling of HTTP redirect which would allow malicious mirror / MITM to inject content and then could allow arbitrary command execution</li>
+<li>Fixed by simply disallowing control characters in HTTP redirect responses
+
+<ul>
+<li>See detailed discussion later in show</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3864-1-libtiff-vulnerabilities">[<a href="https://usn.ubuntu.com/3864-1/">USN-3864-1</a>] LibTIFF vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8905">CVE-2018-8905</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7456">CVE-2018-7456</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18661">CVE-2018-18661</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18557">CVE-2018-18557</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17101">CVE-2018-17101</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17100">CVE-2018-17100</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10963">CVE-2018-10963</a></li>
+</ul></li>
+<li>Multiple NULL pointer dereferences and assertion failures (crash -&gt; DoS)</li>
+<li>Multiple heap-based buffer overflows and an integer overflow (crash -&gt; DoS / possible RCE)</li>
+</ul>
+
+<h3 id="usn-3865-1-poppler-vulnerabilities">[<a href="https://usn.ubuntu.com/3865-1/">USN-3865-1</a>] poppler vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20650">CVE-2018-20650</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20481">CVE-2018-20481</a></li>
+</ul></li>
+<li>Assertion failure and NULL pointer dereference triggered by crafted PDFs (crash -&gt; DoS)</li>
+</ul>
+
+<h3 id="usn-3707-2-ntp-vulnerabilities">[<a href="https://usn.ubuntu.com/3707-2/">USN-3707-2</a>] NTP vulnerabilities</h3>
+
+<ul>
+<li>9 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7185">CVE-2018-7185</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7183">CVE-2018-7183</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6463">CVE-2017-6463</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6462">CVE-2017-6462</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9311">CVE-2016-9311</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9310">CVE-2016-9310</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7428">CVE-2016-7428</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7427">CVE-2016-7427</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7426">CVE-2016-7426</a></li>
+</ul></li>
+<li>NTP updated for Bionic, Artful, Xenial and Trusty in July 2018 - this is the corresponding update for Precise ESM</li>
+<li>Multiple issues including: RCE in ntpq from a crafted response from
+the server, various DoS at both protocol level between client and
+server (disrupt a client talking to server) and at application level
+(to crash the application)</li>
+</ul>
+
+<h3 id="usn-3866-1-ghostscript-vulnerability">[<a href="https://usn.ubuntu.com/3866-1/">USN-3866-1</a>] Ghostscript vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6116">CVE-2019-6116</a></li>
+</ul></li>
+<li>Another week, another Ghostscript vulnerability courtesy of Tavis Ormandy (GPZ) (after a random look at the latest GS release 9.26)
+
+<ul>
+<li>See Episodes 5, 7, 10, 14 for more</li>
+</ul></li>
+<li>Code execution via subroutine operators
+
+<ul>
+<li>Patches to fix quite invasive</li>
+</ul></li>
+<li>Ghostscript is included in evince, ImageMagick, nautilus, GIMP, even less so able to target various commands to exploit</li>
+</ul>
+
+<h3 id="usn-3867-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/3867-1/">USN-3867-1</a>] MySQL vulnerabilities</h3>
+
+<ul>
+<li>15 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2537">CVE-2019-2537</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2534">CVE-2019-2534</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2532">CVE-2019-2532</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2531">CVE-2019-2531</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2529">CVE-2019-2529</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2528">CVE-2019-2528</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2510">CVE-2019-2510</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2507">CVE-2019-2507</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2503">CVE-2019-2503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2486">CVE-2019-2486</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2482">CVE-2019-2482</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2481">CVE-2019-2481</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2455">CVE-2019-2455</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2434">CVE-2019-2434</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2420">CVE-2019-2420</a></li>
+</ul></li>
+<li>Updated to latest MySQL version (5.7.25) in all releases to fix numerous issues including:
+
+<ul>
+<li>Multiple DoS via low privileged attacker, multiple unauthorized access to complete MySQL server data etc</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3869-1-subversion-vulnerability">[<a href="https://usn.ubuntu.com/3869-1/">USN-3869-1</a>] Subversion vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11803">CVE-2018-11803</a></li>
+</ul></li>
+<li>DoS against Subversion server (mod_dav_svn) (only affects 1.10.0+ -&gt; Cosmic)</li>
+<li>Triggered by listing remote recursive directory contents BUT not
+providing the path to list - NULL pointer dereference -&gt; crash</li>
+</ul>
+
+<h3 id="usn-3868-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/3868-1/">USN-3868-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18498">CVE-2018-18498</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18494">CVE-2018-18494</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18493">CVE-2018-18493</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18492">CVE-2018-18492</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17466">CVE-2018-17466</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12405">CVE-2018-12405</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12393">CVE-2018-12393</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12392">CVE-2018-12392</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12390">CVE-2018-12390</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12389">CVE-2018-12389</a></li>
+</ul></li>
+<li>Latest Thunderbird release (60.4) to resolve multiple issues</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h2 id="apt-apt-get-rce--cve-2019-3462">apt / apt-get RCE (CVE-2019-3462)</h2>
+
+<ul>
+<li>Discovered by Max Justicz (<a href="//justi.cz/security/2019/01/22/apt-rce.html">provides a detailed write-up on his blog</a>)</li>
+<li>apt uses worker processes which communicate back to the main process when fetching content
+
+<ul>
+<li>workers get told what to download and where to put it and communicate back with parent via stdin/stdout</li>
+<li>protocol is like HTTP, human readable text</li>
+<li>can include directives from workers regarding redirects, completion (DONE) etc</li>
+<li>when handling a HTTP Redirect from the server, apt http worker would append this contents in message sent back to parent
+
+<ul>
+<li>expect just a URI as the redirect content but could be anything - so could contain directives in the apt worker protocol which then get interpreted by the main apt process</li>
+<li>so could signal DONE to parent <strong>as well</strong> as follow-up directives such as reporting false hashes for debs or even falsifying the location of the deb on the filesystem</li>
+<li>So could use the Releases.gpg file as the location of the package on the filesystem - and actually inject our malicious package into the start of Releases.gpg - with trusted Releases.gpg content afterwards</li>
+<li>Releases.gpg will still validate (since it ignores junk at the start) AND apt will still use the package since it will ignore the signature at the end</li>
+<li>So can get malicious package installed - which due to debian packaging can run scripts on install etc and hence get RCE as root :(</li>
+</ul></li>
+</ul></li>
+<li>Fixed by simply disallowing control characters in HTTP redirect responses</li>
+<li>If we assume the mirrors are trusted, could have been mitigated via HTTPS
+
+<ul>
+<li>Since HTTPS would stop MITM attacks</li>
+<li>Some Ubuntu mirrors offer HTTPS but this is not enabled by default since not <strong>all</strong> mirrors offer HTTPS</li>
+<li>Official mirrors do not currently offer HTTPS - this is being reevaluated but is difficult for a number of reasons</li>
+<li>Users can still easily enable HTTPS themselves by choosing an appropriate mirror with a HTTPS URI</li>
+</ul></li>
+<li>If assume mirrors are untrusted then they could still have exploited this
+
+<ul>
+<li>So whilst HTTPS could help in this case is not a panacea</li>
+</ul></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-17/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 18"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
