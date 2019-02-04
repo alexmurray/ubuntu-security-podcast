@@ -17,7 +17,7 @@
       <pubDate>Mon, 04 Feb 2019 00:00:00 +1030</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-19/</guid>
-      <description>Overview This week we look at some details of the 40 unique CVEs addressed across the supported Ubuntu releases and more.
+      <description>Overview This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in Episode 17.
 This week in Ubuntu Security Updates 40 unique CVEs addressed
 [USN-3870-1] Spice vulnerability  1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2019-3813  Out-of-bounds read - off-by-one - likely crash on segmentation violation but possible code-execution  [USN-3871-1] Linux kernel vulnerabilities  13 CVEs addressed in Bionic  CVE-2018-9516 CVE-2018-19407 CVE-2018-18281 CVE-2018-17972 CVE-2018-16882 CVE-2018-14625 CVE-2018-10883 CVE-2018-10880 CVE-2018-10882 CVE-2018-10878 CVE-2018-10877 CVE-2018-10879 CVE-2018-10876  NULL pointer dereference in KVM able to be triggered by a local user (crash -&amp;gt; DoS) mremap() TLB flush leaving stale entries in page cache - covered previously in Episode 15 Episode 15 covered CVE-2018-17972 (procfs kernel stack disclosure) UAF in KVM when using nested virtualisation (not enabled by default for Ubuntu kernels) able to be trigered by gust VM to crash host (DoS) or possibly elevate privileges etc.</description>
     </item>
