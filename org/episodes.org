@@ -1,3 +1,4 @@
+# -*- load-file: "./ubuntu-security-podcast.el" -*-
 #+HUGO_SECTION: episode
 #+HUGO_BASE_DIR: ../
 #+HUGO_WEIGHT: auto
