@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Mon, 4 Feb 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,219 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 19</title>
+          <link>https://ubuntusecuritypodcast.org/episode-19/</link>
+          <pubDate>Mon, 04 Feb 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E019.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at some details of the 40 unique CVEs addressed across the supported Ubuntu releases and more.</itunes:summary>
+        <description>This week we look at some details of the 40 unique CVEs addressed across the supported Ubuntu releases and more.</description>
+        <googleplay:description>This week we look at some details of the 40 unique CVEs addressed across the supported Ubuntu releases and more.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at some details of the 40 unique CVEs addressed across the supported Ubuntu releases and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>40 unique CVEs addressed</p>
+
+<h3 id="usn-3870-1-spice-vulnerability">[<a href="https://usn.ubuntu.com/3870-1/">USN-3870-1</a>] Spice vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3813">CVE-2019-3813</a></li>
+</ul></li>
+<li>Out-of-bounds read - off-by-one - likely crash on segmentation violation but possible code-execution</li>
+</ul>
+
+<h3 id="usn-3871-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3871-1/">USN-3871-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>13 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9516">CVE-2018-9516</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19407">CVE-2018-19407</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18281">CVE-2018-18281</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972">CVE-2018-17972</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16882">CVE-2018-16882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14625">CVE-2018-14625</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10883">CVE-2018-10883</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10880">CVE-2018-10880</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10882">CVE-2018-10882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10878">CVE-2018-10878</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10877">CVE-2018-10877</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10879">CVE-2018-10879</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10876">CVE-2018-10876</a></li>
+</ul></li>
+<li>NULL pointer dereference in KVM able to be triggered by a local user (crash -&gt; DoS)</li>
+<li>mremap() TLB flush leaving stale entries in page cache - covered previously in <a href="https://ubuntusecuritypodcast.org/episode-15/">Episode 15</a></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-15/">Episode 15</a> covered CVE-2018-17972 (procfs kernel stack disclosure)</li>
+<li>UAF in KVM when using nested virtualisation (not enabled by default for Ubuntu kernels) able to be trigered by gust VM to crash host (DoS) or possibly elevate privileges etc.</li>
+<li>Race condition between connect() and close() in AF_VSOCK (used for communication between guest and host machines) could allow to read 4 bytes of memory (UAF) from host kernel or possibly corrupt other AF_VSOCK messages to other guests - information leak</li>
+<li>7 ext4 issues discovered by Wen Xu (fuzzing ext4 with KASAN enabled):
+
+<ul>
+<li>OOB write during update of journal metadata when mounting specially crafted ext4 image - crash -&gt; DoS (privilege esc?)</li>
+<li>OOB write to stack when processing xattrs of specially crafted ext4 image - crash -&gt; DoS</li>
+<li>OOB write when mounting</li>
+<li>OOB write unmounting specially crafted ext4 image</li>
+<li>OOB read when mounting</li>
+<li>UAF when processing xattrs of renamed file in specially crafted image</li>
+<li>General UAF when mouting a specially crafted image</li>
+<li>Reproducers provided in upstream kernel bug reports</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3872-1-linux-kernel--hwe--vulnerabilities">[<a href="https://usn.ubuntu.com/3872-1/">USN-3872-1</a>] Linux kernel (HWE) vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19854">CVE-2018-19854</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19407">CVE-2018-19407</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16882">CVE-2018-16882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14625">CVE-2018-14625</a></li>
+</ul></li>
+<li>Info leak from crypto subsystem - regression of CVE-2013-2547 - fail to fully initialise structure members copied to userspace - unlike CVE-2013-2547, able to be exploited by a standard user without any capabilities</li>
+<li>Failure to ensure ioapics were initialised - possible NULL pointer dereference -&gt; crash -&gt; DoS</li>
+<li>KVM UAF w/ nested virtualisation and AF_VSOCK race condition UAF</li>
+</ul>
+
+<h3 id="usn-3873-1-open-vswitch-vulnerabilities">[<a href="https://usn.ubuntu.com/3873-1/">USN-3873-1</a>] Open vSwitch vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17206">CVE-2018-17206</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17205">CVE-2018-17205</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17204">CVE-2018-17204</a></li>
+</ul></li>
+<li>Remotely triggerable OOB read and 2 different assertion failures -&gt; crash -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-3874-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3874-1/">USN-3874-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18506">CVE-2018-18506</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18505">CVE-2018-18505</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18504">CVE-2018-18504</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18503">CVE-2018-18503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18502">CVE-2018-18502</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18501">CVE-2018-18501</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18500">CVE-2018-18500</a></li>
+</ul></li>
+<li>Firefox 65 for all supported platforms
+
+<ul>
+<li>Proxy autoconfig file (PAC) could allow proxy requests to localhost to go via remote proxy - <strong>if</strong> enabled proxy-autodetection - then possible for remote attacker to conduct attacks against local services etc</li>
+<li>Various memory safety issues - crash -&gt; DoS, UAF, code execution</li>
+<li>Sandbox escape via IPC channels due to failure to properly apply authentication to IPC channels in some situations
+
+<ul>
+<li>IPC channels used in new multiprocess architecture etc</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3875-1-openjdk-vulnerability">[<a href="https://usn.ubuntu.com/3875-1/">USN-3875-1</a>] OpenJDK vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2422">CVE-2019-2422</a></li>
+</ul></li>
+<li>Info leak from Java SE VM in OpenJDK library subsystem able to be triggered by a remote attacker - possible sandbox bypass as well</li>
+</ul>
+
+<h3 id="usn-3876-1-usn-3876-2-avahi-vulnerabilities">[<a href="https://usn.ubuntu.com/3876-1/">USN-3876-1</a>, USN-3876-2] Avahi vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000845">CVE-2018-1000845</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6519">CVE-2017-6519</a></li>
+</ul></li>
+<li>Both the same vulnerability - duplicate CVE</li>
+<li>Traffic reflection and amplification - possible to leverage for DDoS attack since avahi-daemon would inadvertently respond to unicast IPv6 queries to source addresses which were not on the local link</li>
+</ul>
+
+<h3 id="usn-3877-1-libvncserver-vulnerabilities">[<a href="https://usn.ubuntu.com/3877-1/">USN-3877-1</a>] LibVNCServer vulnerabilities</h3>
+
+<ul>
+<li>12 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6307">CVE-2018-6307</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20750">CVE-2018-20750</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20749">CVE-2018-20749</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20748">CVE-2018-20748</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20024">CVE-2018-20024</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20023">CVE-2018-20023</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20022">CVE-2018-20022</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20021">CVE-2018-20021</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20020">CVE-2018-20020</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20019">CVE-2018-20019</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15127">CVE-2018-15127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15126">CVE-2018-15126</a></li>
+</ul></li>
+<li>Various memory management issues:
+
+<ul>
+<li>Heap UAF -&gt; crash -&gt; DoS, possible RCE in server from malicious client</li>
+<li>Heap OOB write (incomplete fix for previous CVE-2018-15127) - crash -&gt; DoS, possible RCE</li>
+<li>Multiple heap OOB writes in client (incomplete fix for previous CVE-2018-20019)</li>
+<li>NULL pointer dereferences in client -&gt; crash -&gt; DoS</li>
+<li>Failure to properly initialise structures on stack -&gt; info leak, possible ASLR bypass (disclose stack memory layout)</li>
+<li>Infinite loop in client -&gt; DoS</li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="an-update-on-mincore">An update on mincore()</h3>
+
+<ul>
+<li>In <a href="https://ubuntusecuritypodcast.org/episode-17/">Episode 17</a> discussed changes to mincore() mitigate page cache side-channel attack</li>
+<li>Linus Torvalds committed a change to change the behaviour of mincore() to mitigate the vulnerability</li>
+<li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=30bac164aca750892b93eef350439a0562a68647">Recently reverted that change</a> citing too much breakage to existing users:
+
+<ul>
+<li>In particular Netflix have a use-case where they dump page cache across processes to aid in migration of Cassandra workloads across machines</li>
+</ul></li>
+<li>Instead an alternate approach to limit cache residency reporting only to processes which have write access to the particular file in question
+
+<ul>
+<li>ie. so if a process has write access to a file which it has open for writing it will be able to read back from mincore() which pages are mapped in the cache and which are not - so will still work for the Netflix and others case of databases wanting to know which pages are mapped or not from disk</li>
+<li>will stop the case of being able to know which pages of shared system libraries etc are mapped and hence stop the original side-channel attack</li>
+<li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/jikos/jikos.git/log/?h=pagecache-sidechannel-v2">patches not yet submitted for mm tree or others but should be soon</a></li>
+</ul></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E019.mp3" length="14236655" type="audio/mpeg" /><itunes:duration>14:49</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 18</title>
           <link>https://ubuntusecuritypodcast.org/episode-18/</link>
