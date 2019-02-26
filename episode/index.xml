@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 21 Feb 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,208 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 21</title>
+          <link>https://ubuntusecuritypodcast.org/episode-21/</link>
+          <pubDate>Thu, 21 Feb 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E021.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</itunes:summary>
+        <description>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</description>
+        <googleplay:description>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>15 unique CVEs addressed</p>
+
+<h3 id="usn-3886-1-poppler-vulnerabilities">[<a href="https://usn.ubuntu.com/3886-1/">USN-3886-1</a>] poppler vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7310">CVE-2019-7310</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20551">CVE-2018-20551</a></li>
+</ul></li>
+<li>Two DoS:
+
+<ul>
+<li>Out-of-bounds heap buffer read due to missing check for a negative index -&gt; crash -&gt; DoS</li>
+<li>Crash due to hitting an assertion -&gt; DoS</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3888-1-gvfs-vulnerability">[<a href="https://usn.ubuntu.com/3888-1/">USN-3888-1</a>] GVfs vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3827">CVE-2019-3827</a></li>
+</ul></li>
+<li>Possible to allow a local user with admin privileges (eg. sudo group) to read arbitrary files without prompting for authorisation IF no policykit agents running
+
+<ul>
+<li>Policykit agents run by default so would require user to be running a difffent DE or to have uninstalled / disabled them</li>
+<li>Also low impact since user has authority anyway</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3889-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3889-1/">USN-3889-1</a>] WebKitGTK+ vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6215">CVE-2019-6215</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6212">CVE-2019-6212</a></li>
+</ul></li>
+<li>Memory corruption and type confusion errors - leading to possible remote code execution</li>
+</ul>
+
+<h3 id="usn-3890-1-django-vulnerability">[<a href="https://usn.ubuntu.com/3890-1/">USN-3890-1</a>] Django vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6975">CVE-2019-6975</a></li>
+</ul></li>
+<li>Could cause Django to consume a large amount of memory when formatting a decimal number with a large number of digits or with a large exponent since it would simply print every single provided character</li>
+<li>Possible DoS although would need a very large number to be input</li>
+<li>Fix is to format numbers with more than 200 characters in scientific notation</li>
+</ul>
+
+<h3 id="usn-3887-1-snapd-vulnerability">[<a href="https://usn.ubuntu.com/3887-1/">USN-3887-1</a>] snapd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7304">CVE-2019-7304</a></li>
+</ul></li>
+<li><a href="https://shenaniganslabs.io/2019/02/13/Dirty-Sock.html">&lsquo;DirtySock&rsquo; - discovered by Chris Moberly</a></li>
+<li>Failed to correctly parse and validate the remote socket address</li>
+<li>Code had undergone refactoring and introduced this bug</li>
+<li>Allows to impersonate privileged user and therefore call privileged APIs via the snapd socket</li>
+</ul>
+
+<h3 id="usn-3850-2-nss-vulnerabilities">[<a href="https://usn.ubuntu.com/3850-2/">USN-3850-2</a>] NSS vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12404">CVE-2018-12404</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12384">CVE-2018-12384</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0495">CVE-2018-0495</a></li>
+</ul></li>
+<li>Covered back in <a href="https://ubuntusecuritypodcast.org/episode-17/">Episode 17</a></li>
+</ul>
+
+<h3 id="usn-3891-1-systemd-vulnerability">[<a href="https://usn.ubuntu.com/3891-1/">USN-3891-1</a>] systemd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6454">CVE-2019-6454</a></li>
+</ul></li>
+<li><a href="https://www.openwall.com/lists/oss-security/2019/02/18/3">Discovered by Ubuntu Security team member Chris Coulson</a></li>
+<li>Stack buffer overflow of DBus path field - declared as VLA, but sender could use a value larger than the stack size and therefore jump the entire stack and the guard pages</li>
+<li>Segmentation violation -&gt; crash -&gt; DoS
+
+<ul>
+<li>systemd does not automatically restart so brings down entire system - reboot</li>
+</ul></li>
+<li>Possible code execution but unlikely</li>
+<li>DBus and systemd need to agree on what the maximum size of various elements are - DBus spec says path could be unlimited - but in practice is less than 32MB! (dbus-daemon limits messages to this size) - systemd now limits path to 64KB AND ensures it keeps running after receiving an invalid sized path</li>
+</ul>
+
+<h3 id="usn-3892-1-gdm-vulnerability">[<a href="https://usn.ubuntu.com/3892-1/">USN-3892-1</a>] GDM vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3825">CVE-2019-3825</a></li>
+</ul></li>
+<li>Logic error in handing of timed logins (not enabled by default)</li>
+<li>If screen already locked, select to log in as different user - then select a user which has timed login enabled - after timeout will unlock screen of original user</li>
+<li>Need administrator privileges to enabled timed login for a given user so low impact</li>
+</ul>
+
+<h3 id="usn-3866-2-ghostscript-regression">[<a href="https://usn.ubuntu.com/3866-2/">USN-3866-2</a>] Ghostscript regression</h3>
+
+<ul>
+<li>Affecting Trusty, Xenial, Bionic, Cosmic</li>
+<li>Previous update for Ghostscript (<a href="https://usn.ubuntu.com/3866-1/">USN-3866-1</a> - <a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a>) caused a regression in printing 4&rdquo;x6&rdquo; (v9.26 - upstream bug)</li>
+</ul>
+
+<h3 id="usn-3893-1-bind-vulnerabilities">[<a href="https://usn.ubuntu.com/3893-1/">USN-3893-1</a>] Bind vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6465">CVE-2019-6465</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5745">CVE-2018-5745</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5744">CVE-2018-5744</a></li>
+</ul></li>
+<li>Fail to properly apply controls to zone transfers - could allow clients to request and receive a zone transfer to a dynamically loadable zone contrary to the allow-transfer ACL</li>
+<li>Assertion failure if a trust anchor&rsquo;s keys are replaced with keys using an unsupported algorithm during a key rollover when using the managed-keys feature for DNSSEC validation</li>
+<li>Remotely triggerable memory leak when processing particular packets - DoS</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="snapd-systemd-and-handling-of-embargoed-issues">snapd, systemd and handling of embargoed issues</h3>
+
+<ul>
+<li>2 updates involving close communication between Ubuntu Security Team and external stakeholders - embargoed</li>
+<li>Responsible Disclosure - allows to coordinate a fix in a timely manner and then release update once all parties are ready in a coordinated manner</li>
+<li>Set CRD with stakeholders (reporter, upstream, other distros etc)</li>
+<li>Coordinate fix with upstream and other distros</li>
+<li>Plan coordinated updates to be released with other distros / upstream at CRD</li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="security-automation-engineer">Security Automation Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548632">https://boards.greenhouse.io/canonical/jobs/1548632</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E021.mp3" length="16856841" type="audio/mpeg" /><itunes:duration>17:33</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 20</title>
           <link>https://ubuntusecuritypodcast.org/episode-20/</link>
