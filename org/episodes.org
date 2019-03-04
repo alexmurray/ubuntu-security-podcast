@@ -8,6 +8,123 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/episode/default.png
 
+* Episode 22
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-22
+:EXPORT_DATE: 2019-03-04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E022.mp3 :podcast_duration "15:57" :podcast_bytes "15316244"
+:END:
+#+begin_description
+This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.
+#+end_description
+** Overview
+This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.
+** This week in Ubuntu Security Updates
+16 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/3893-2/][USN-3893-2]]] Bind vulnerabilities
+- 2 CVEs addressed in Precise ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6465][CVE-2019-6465]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5745][CVE-2018-5745]]
+- Covered last week in [[https://ubuntusecuritypodcast.org/episode-21/][Episode 21]] for regular Ubuntu releases
+
+*** [[[https://usn.ubuntu.com/3866-3/][USN-3866-3]]] Ghostscript regression
+- Affecting Trusty, Xenial, Bionic, Cosmic
+- Mentioned last week briefly
+- Previous update to Ghostscript introduced a regression (blue background)
+  - See later for information
+
+*** [[[https://usn.ubuntu.com/3894-1/][USN-3894-1]]] GNOME Keyring vulnerability
+- 1 CVEs addressed in Trusty, Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20781][CVE-2018-20781]]
+- Already fixed upstream (hence doesn't apply to Bionic / Cosmic etc)
+- User's login password kept in memory of child process after pam session is opened
+- Could be dumped by root user or captured in crash dump etc and possibly exposed
+  - Other tools exist to try and extract from memory as well ([[https://github.com/huntergregal/mimipenguin][minipenguin]] etc)
+- Fix is to simply reset this after pam session is opened
+
+*** [[[https://usn.ubuntu.com/3895-1/][USN-3895-1]]] LDB vulnerability
+- 1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3824][CVE-2019-3824]]
+- LDAP-like embedded database (used by Samba and others)
+- Authenticated user can cause OOB read when searching LDAP backend of AD DC with a search string containing multiple wildcards - crash -> DoS
+
+*** [[[https://usn.ubuntu.com/3896-1/][USN-3896-1]]] Firefox vulnerabilities
+- 3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5785][CVE-2019-5785]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18511][CVE-2018-18511]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18356][CVE-2018-18356]]
+- Firefox 65
+- Use-after-free and integer overflow in Skia library (vector graphics library, similar to cairo)
+- Cross-origin image theft - able to read from canvas element in violation of same-origin policy using transferFromImageBitmap() method
+
+*** [[[https://usn.ubuntu.com/3897-1/][USN-3897-1]]] Thunderbird vulnerabilities
+- 7 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18509][CVE-2018-18509]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18505][CVE-2018-18505]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18501][CVE-2018-18501]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5785][CVE-2019-5785]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18500][CVE-2018-18500]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18356][CVE-2018-18356]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5824][CVE-2016-5824]]
+- Thunderbird 60.5.1
+- Use-after-free and integer overflow in Skia library (vector graphics library, similar to cairo)
+- Show messages with an invalid (reused) S/MIME signature as being verified
+- UAF parsing HTML5 stream with custom HTML elements
+- UAF in embedded libical via a crafted ICS file
+
+*** [[[https://usn.ubuntu.com/3898-1/][USN-3898-1]], USN-3898-2] NSS vulnerability
+- 1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18508][CVE-2018-18508]]
+- Several NULL pointer dereferences -> crash -> DoS
+
+*** [[[https://usn.ubuntu.com/3899-1/][USN-3899-1]]] OpenSSL vulnerability
+- 1 CVEs addressed in Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1559][CVE-2019-1559]]
+- Possible padding oracle (an application which uses OpenSSL could behave differently based on whether a record contained valid padding or not)
+  - Attacker can learn plaintext by modifying ciphertext and observing different behaviour
+
+*** [[[https://usn.ubuntu.com/3900-1/][USN-3900-1]]] GD vulnerabilities
+- 2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6978][CVE-2019-6978]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6977][CVE-2019-6977]]
+- Double free if failed to properly extract image file - crash -> DoS
+- Heap-based buffer overflow in color matching (able to be triggered by a specially crafted image) - crash -> DoS, possible code execution
+
+** Goings on in Ubuntu Security Community
+*** Comparison of Linux Hardening across distributions
+- https://capsule8.com/blog/millions-of-binaries-later-a-look-into-linux-hardening-in-the-wild/
+- Analyses binaries from various Linux distributions looking for hardening features (OpenSUSE, Debian, CentOS, RHEL & Ubuntu)
+- Compare kernel configuration vs KSPP recommendations
+- Ubuntu 18.04 ranks highest, due to proactive hardening features baked into toolchain and newer kernel taking advantage of KSPP upstream features
+  - gcc is patched so anyone building on Ubuntu gets these features
+  - build.snapcraft.io too
+  - however is missing stack clash mitigation
+- Plan to add more hardening features for 19.10 (stack clash and control-flow integrity support via gcc) and review kernel options cf. KSPP
+
+*** Q&A
+**** Does numerous bugs and regressions in Ghostscript indicate it is reaching it's EOL?
+- [[https://twitter.com/docEbrown1/status/1101452172196163585][doc-E-brown via twitter]]
+- Lots of recent focus -> finds bugs
+- ghostscript codebase is old and gnarly and some fixes have been quite invasive
+- Any new code could introduce new bugs - particularly complicated fixes -> creates more bugs (regressions)
+  - (as doc-E-brown suggests, regressions indicate old code-base)
+- Tavis (and others) seem to be looking elsewhere but likely still more bugs to be found
+- Would be great if GS could either be made safer or a safer alternative but no-one is stepping up
+- Sadly No good viable alternative currently
+
+*** Hiring
+**** Ubuntu Security Generalist
+- https://boards.greenhouse.io/canonical/jobs/1548812
+**** Robotics Security Engineer
+- https://boards.greenhouse.io/canonical/jobs/1550997
+**** Security Automation Engineer
+- https://boards.greenhouse.io/canonical/jobs/1548632
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 21
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-21
@@ -2781,3 +2898,4 @@ The first ever episode of the Ubuntu Security Podcast!
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
 - [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
