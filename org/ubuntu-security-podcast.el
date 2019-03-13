@@ -163,6 +163,25 @@
         (1+ (string-to-number (match-string 1)))
       1)))
 
+(defun usp-update-episode-metadata ()
+  "Update the duration and bytes for the current episode."
+  (interactive)
+  (re-search-backward "^\\* Episode \\([0-9]+\\)$")
+  (let* ((episode (string-to-number (match-string-no-properties 1)))
+         (audio-file-name (expand-file-name (format "USP_E%03d.mp3" episode)
+                                            "~/Ubuntu Security Podcast/"))
+         (num-bytes (file-attribute-size (file-attributes audio-file-name)))
+         (output (shell-command-to-string (format "ffmpeg -i \"%s\"" audio-file-name))))
+    (message "%s" output)
+    (if (null (string-match "Duration: [0-9]\\{2\\}:\\([0-9]\\{2\\}\\):\\([0-9]\\{2\\}\\).[0-9]\\{2\\}"
+                            output))
+        (error "Unable to get Duration of %s via ffmpeg" audio-file-name)
+      (let ((mins (match-string 1 output))
+            (secs (match-string 2 output)))
+        (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\"$")
+        (replace-match (concat mins ":" secs) t t nil 1)
+        (replace-match (format "%d" num-bytes) t t nil 2)))))
+
 (defun usp-insert-episode-template (episode publish-date start end description)
   "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION."
   (interactive
