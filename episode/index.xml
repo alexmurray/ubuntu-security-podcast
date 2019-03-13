@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 4 Mar 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,162 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 23</title>
+          <link>https://ubuntusecuritypodcast.org/episode-23/</link>
+          <pubDate>Tue, 12 Mar 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E023.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</itunes:summary>
+        <description>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</description>
+        <googleplay:description>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>10 unique CVEs addressed</p>
+
+<h3 id="usn-3885-2-openssh-vulnerability">[<a href="https://usn.ubuntu.com/3885-2/">USN-3885-2</a>] OpenSSH vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6111">CVE-2019-6111</a></li>
+</ul></li>
+<li>Originally covered in <a href="https://ubuntusecuritypodcast.org/episode-20">Episode 20</a> (malicious server could overwrite local client files)</li>
+<li>Previous fix was incomplete - missing a patch</li>
+</ul>
+
+<h3 id="usn-3901-1-usn-3901-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3901-1/">USN-3901-1</a>, <a href="https://usn.ubuntu.com/3901-2/">USN-3901-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Bionic, Trusty &amp; Xenial (Bionic HWE kernel)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19854">CVE-2018-19854</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18397">CVE-2018-18397</a></li>
+</ul></li>
+
+<li><p>2 out of 3 from Jann Horn</p>
+
+<ul>
+<li>PolicyKit provides ability to authorise an application to perform privileged actions</li>
+<li>Pops up dialog for use to authorise via password - PolicyKit then caches that authorisation (5mins)</li>
+<li>To identify same process in future, would look at both the PID and process start time to guard against PID reuse etc</li>
+<li>However, fork() system call is not atomic, so attacked could call sys_clone() at same time as real process so it has the same start time. Can then cause kernel to block on returning back to the attacker process, effectively racing against the real process waiting for it to end, in the meantime blocking PID allocation until it has cycled around and end up with the same (reused) PID as the original authorised process (and with same start time) - so can effectively fool PolicyKit into impersonating the real process</li>
+<li>Fix kernel to make fork() atomic rather than try fix PolicyKit since can&rsquo;t effectively do this at the process level</li>
+
+<li><p>Kernel fixed to record process start time later in procedure so is much closer to when the process is visible to userspace and after userspace has a chance to delay it to mitigate this</p></li>
+
+<li><p>Jann also discovered that userfaultfd does not properly handle access control for certain ioctl() - which allowed local users to write data into holes in a tmpfs file, even if the user only had read-only access to the file</p></li>
+</ul></li>
+
+<li><p>crypto subsystem would leak uninitialized stack memory to userspace</p>
+
+<ul>
+<li>Occurred from a recent change to convert strncpy() to strlcpy() used to copy strings into various crypto buffers</li>
+<li>strncpy() does not guarantee NULL termination so strlcpy() was used which does - HOWEVER, strncpy() would NULL pad out remaining bytes if buffer was longer than string - whereas strlcpy() would only NULL the first one - and so would have uninitialised bytes remaining</li>
+<li>Fixed by changing back to strncpy()</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3903-1-usn-3903-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3903-1/">USN-3903-1</a>, USN-3903-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Cosmic &amp; Bionic (Cosmic HWE kernel)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18397">CVE-2018-18397</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16880">CVE-2018-16880</a></li>
+</ul></li>
+<li>fork() start time and userfaultfd issues described earlier for the Bionic kernel update</li>
+<li>Out of bounds write in vhost_net driver used by virtualized guests - allows guest to corrupt host kernel memory -&gt; host crash -&gt; DoS, or possible arbitrary code execution in host kernel</li>
+</ul>
+
+<h3 id="usn-3902-1-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3902-1/">USN-3902-1</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9023">CVE-2019-9023</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9022">CVE-2019-9022</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9021">CVE-2019-9021</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9024">CVE-2019-9024</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9020">CVE-2019-9020</a></li>
+</ul></li>
+<li>All allow a remote attacker to crash PHP -&gt; DoS</li>
+<li>2 in XML-RPC module - remote procedure call via XML - used for various wiki backends etc - heap OOB read / UAF</li>
+<li>1 in PHAR (PHP Archive) module - incorrect handling of filenames - crash via upload of crafted PHAR archive due to a heap based buffer over-read</li>
+<li>1 in DNS handling (only affects PHP in Xenial) - remote attacker who can control returned DNS response could crash PHP due to buffer over-read on memcpy()</li>
+<li>1 in mbstring regular expression - multiple heap based buffer over-reads in handling of multibyte sequences in regular expressions</li>
+</ul>
+
+<h3 id="usn-3904-1-nvidia-graphics-drivers-vulnerability">[<a href="https://usn.ubuntu.com/3904-1/">USN-3904-1</a>] NVIDIA graphics drivers vulnerability</h3>
+
+<ul>
+<li>1 CVE addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6260">CVE-2018-6260</a></li>
+</ul></li>
+<li>Recent research into GPU side-channel attacks
+
+<ul>
+<li><a href="https://www.cs.ucr.edu/~zhiyunq/pub/ccs18%5Fgpu%5Fside%5Fchannel.pdf">Rendered Insecure: GPU Side Channel A!acks are Practical</a></li>
+</ul></li>
+<li>Local users could access GPU performance counters without special privileges</li>
+<li>Allows to characterise the GPU workload to fingerprint websites etc being rendered</li>
+<li>Now requires administrator privileges to access so unable to be done from a regular user</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="ubuntu-hardening-guide">Ubuntu Hardening Guide</h3>
+
+<ul>
+<li>Ubuntu tries to offer a usable, hardened approach out of the box
+
+<ul>
+<li>No open ports, various kernel and compiler hardening options etc</li>
+</ul></li>
+<li>Thinking about publishing a hardening guide that goes beyond the defaults</li>
+<li>Welcome suggestions from the community</li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E023.mp3" length="12641723" type="audio/mpeg" /><itunes:duration>13:10</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 22</title>
           <link>https://ubuntusecuritypodcast.org/episode-22/</link>
