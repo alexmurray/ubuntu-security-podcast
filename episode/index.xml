@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,215 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 24</title>
+          <link>https://ubuntusecuritypodcast.org/episode-24/</link>
+          <pubDate>Tue, 19 Mar 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E024.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
+  Linux kernel and more. We also talk about some listener feedback on
+  Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
+  </itunes:summary>
+        <description>  A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
+  Linux kernel and more. We also talk about some listener feedback on
+  Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
+  </description>
+        <googleplay:description>  A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
+  Linux kernel and more. We also talk about some listener feedback on
+  Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
+Linux kernel and more. We also talk about some listener feedback on
+Ubuntu hardening and the launch of Ubuntu 14.04 ESM.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>18 unique CVEs addressed</p>
+
+<h3 id="usn-3905-1-poppler-vulnerability">[<a href="https://usn.ubuntu.com/3905-1/">USN-3905-1</a>] poppler vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9200">CVE-2019-9200</a></li>
+</ul></li>
+<li>Heap-based buffer underwrite (index into array using negative index) -
+write into heap memory which preceeds the intended buffer - heap
+corruption - crash -&gt; DoS, possible code execution</li>
+<li>Found by fuzzing and AddressSanitizer in clang</li>
+</ul>
+
+<h3 id="usn-3906-1-libtiff-vulnerabilities">[<a href="https://usn.ubuntu.com/3906-1/">USN-3906-1</a>] LibTIFF vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7663">CVE-2019-7663</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6128">CVE-2019-6128</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19210">CVE-2018-19210</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17000">CVE-2018-17000</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12900">CVE-2018-12900</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10779">CVE-2018-10779</a></li>
+</ul></li>
+<li>All DoS, one possible code-execution:
+
+<ul>
+<li>Dereference of an invalid address (read from invalid memory location)</li>
+<li>Heap buffer overread</li>
+<li>2x NULL pointer dereferences</li>
+<li>Memory leak</li>
+<li>Heap buffer overflow - possible code execution</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3907-1-walinuxagent-vulnerability">[<a href="https://usn.ubuntu.com/3907-1/">USN-3907-1</a>] WALinuxAgent vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0804">CVE-2019-0804</a></li>
+</ul></li>
+<li>WALinuxAgent used to manage instances of Ubuntu (and other Linux
+distributions) running on Azure</li>
+<li>Can be used to configure swap space for a given image
+
+<ul>
+<li>would then create a swap file (/mnt/swapfile) BUT would make it world-readable</li>
+<li>so any local user could read it - if keys or other sensitive items
+were in memory that got swapped to disk could be read by all</li>
+</ul></li>
+<li>Fixed to make this readable only by root and to also correct the
+permissions on any existing swapfile as well</li>
+</ul>
+
+<h3 id="usn-3902-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3902-2/">USN-3902-2</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9023">CVE-2019-9023</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9021">CVE-2019-9021</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9024">CVE-2019-9024</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9020">CVE-2019-9020</a></li>
+</ul></li>
+<li>See last week&rsquo;s <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Xenial and Trusty - fixed
+now for Precise ESM as well</li>
+</ul>
+
+<h3 id="usn-3910-1-usn-3910-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3910-1/">USN-3910-1</a>, <a href="https://usn.ubuntu.com/3910-2/">USN-3910-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial and Trusty (Xenial HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7740">CVE-2018-7740</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985">CVE-2018-19985</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1120">CVE-2018-1120</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18241">CVE-2017-18241</a></li>
+</ul></li>
+<li>2 of these discussed in previous episodes <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> (PolicyKit start
+time, DoS via mmaping a FUSE-backed file into processes memory
+containing command-line args)</li>
+<li>Trigger of BUG_ON() in kernel (like assert() for kernel code) due to
+integer overflow from large pgoff parameter to remap_file_pages() when
+used in conjuction with an existing mmap() -&gt; crash -&gt; DoS</li>
+<li>OOB read in USB driver for Option High Speed mobile devices - would
+read a descriptor from the USB device as a u8 and then index into an
+array with this without checking whether it fell within the array</li>
+<li>NULL pointer dereference in f2fs driver via use of noflush_merge mount
+option</li>
+</ul>
+
+<h3 id="usn-3908-1-usn-3908-2-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/3908-1/">USN-3908-1</a>, <a href="https://usn.ubuntu.com/3908-2/">USN-3908-2</a>] Linux kernel vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty and Precise ESM (Trusty HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
+</ul></li>
+<li>See last week&rsquo;s <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Bionic kernel - now for
+Trusty kernel (and the Trusty HWE kernel backported to Precise ESM)
+
+<ul>
+<li>PolicyKit start time issue, fixed in kernel</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3909-1-libvirt-vulnerability">[<a href="https://usn.ubuntu.com/3909-1/">USN-3909-1</a>] libvirt vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3840">CVE-2019-3840</a></li>
+</ul></li>
+<li>NULL pointer dereference in libvirt if agent does not reply in time
+(say guest is being shutdown) - crash host libvirt -&gt; DoS</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="ubuntu-hardening-response">Ubuntu Hardening Response</h3>
+
+<ul>
+<li>Alexander Popov
+
+<ul>
+<li><a href="https://lwn.net/Articles/764325/">Responsible for getting STACKLEAK into the mainline kernel</a></li>
+<li>Pointed out his <a href="https://github.com/a13xp0p0v/linux-kernel-defence-map">Linux Kernel Defence Map</a> and <a href="https://github.com/a13xp0p0v/kconfig-hardened-check">kconfig hardened check</a></li>
+<li>We use kconfig hardened check internall and tyhicks has contributed
+<a href="https://github.com/a13xp0p0v/kconfig-hardened-check/pull/9">various</a> <a href="https://github.com/a13xp0p0v/kconfig-hardened-check/pull/10">improvements</a> which allow this to be used to check the
+various Ubuntu kernel configurations</li>
+</ul></li>
+</ul>
+
+<h3 id="extended-security-maintenance-for-ubuntu-14-dot-04--trusty-tahr--begins-april-25-2019">Extended Security Maintenance for Ubuntu 14.04 (Trusty Tahr) begins April 25 2019</h3>
+
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-March/004800.html">https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-March/004800.html</a></li>
+<li>Ubuntu 14.04 LTS will transition to Extended Security Maintenance on Tuesday 25th April</li>
+<li>Encourage users to upgrade to Xenial (and then Bionic)</li>
+<li><a href="https://blog.ubuntu.com/2019/02/05/ubuntu-14-04-trusty-tahr">ESM for 14.04 provided to customers via Ubuntu Advantage</a></li>
+<li><a href="https://www.ubuntu.com/esm">Further details regarding ESM</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%2523ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E024.mp3" length="12816012" type="audio/mpeg" /><itunes:duration>13:20</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 23</title>
           <link>https://ubuntusecuritypodcast.org/episode-23/</link>
