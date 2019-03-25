@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 25" />
+<meta property="og:description" content="Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-25/" />
+
+
+
+<meta property="og:updated_time" content="2019-03-25 00:00:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-03-25 00:00:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2019-03-25 00:00:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 25">
+<meta itemprop="description" content="Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="803">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 25"/>
+<meta name="twitter:description" content="Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 25 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-25/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 25</h1>
+      <small>Posted on Monday, Mar 25, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E025.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E025.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>39 unique CVEs addressed</p>
+
+<h3 id="usn-3911-1-file-vulnerabilities">[<a href="https://usn.ubuntu.com/3911-1/">USN-3911-1</a>] file vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8907">CVE-2019-8907</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8906">CVE-2019-8906</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8905">CVE-2019-8905</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8904">CVE-2019-8904</a></li>
+</ul></li>
+<li>4 DoS (crash) found via fuzzing:
+
+<ul>
+<li>Stack overflow in readelf</li>
+<li>2 different OOB read due to failure to NULL terminate a string before processing it</li>
+<li>Read past end of stack due to failing to properly keep track of buffer sizes</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3906-2-libtiff-vulnerabilities">[<a href="https://usn.ubuntu.com/3906-2/">USN-3906-2</a>] LibTIFF vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7663">CVE-2019-7663</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6128">CVE-2019-6128</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18557">CVE-2018-18557</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17101">CVE-2018-17101</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17100">CVE-2018-17100</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1710">CVE-2018-1710</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12900">CVE-2018-12900</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10779">CVE-2018-10779</a></li>
+</ul></li>
+<li>Covered in <a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a> and <a href="https://ubuntusecuritypodcast.org/episode-24/">Episode 24</a> for standard Ubuntu releases (not
+all CVEs covered in those updates applicable to Precise ESM)</li>
+</ul>
+
+<h3 id="usn-3912-1-gdk-pixbuf-vulnerability">[<a href="https://usn.ubuntu.com/3912-1/">USN-3912-1</a>] GDK-PixBuf vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12447">CVE-2017-12447</a></li>
+</ul></li>
+<li>Failure to properly validate BMP image palette parameters - leading to
+OOB when decoding colormap later on</li>
+</ul>
+
+<h3 id="usn-3914-1-ntfs-3g-vulnerability">[<a href="https://usn.ubuntu.com/3914-1/">USN-3914-1</a>] NTFS-3G vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9755">CVE-2019-9755</a></li>
+</ul></li>
+<li>Discovered recently by Chris Coulson during code-audit of ntfs-3g -
+actually had been fixed upstream late last year but no CVE assigned</li>
+<li>Heap buffer overflow able to be triggered when mounting a filesystem
+onto a mount point with path name greater than PATH_MAX, and from a
+current working directory which has a path name also greater than
+PATH_MAX</li>
+<li>Contents of buffers is attacker controlled so heap can be overflown
+with attacker controlled input - likely to leverage into arbitrary
+code execution</li>
+<li>Contrived example BUT in Debian and Ubuntu ntfs-3g is setuid root -
+which then leads to root privilege escalation with arbitrary code
+execution</li>
+<li>Update was released within hours of the bug being made public to fix
+the heap buffer overflow</li>
+<li>Currently testing ntfs-3g as not-setuid root to release in a future
+update to avoid any other possible privilege escalation bugs in the
+future</li>
+</ul>
+
+<h3 id="usn-3915-1-ghostscript-vulnerabilities">[<a href="https://usn.ubuntu.com/3915-1/">USN-3915-1</a>] Ghostscript vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3838">CVE-2019-3838</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3835">CVE-2019-3835</a></li>
+</ul></li>
+<li>Similar to previous CVE, forceput operator could be extracted from the
+DefineResource method to allow access to the file-system outside of
+the -dSAFER sandbox</li>
+<li>superexec operator was available in the internal dictionary - also
+able to be extracted and hence used to access files outside the
+sandbox</li>
+</ul>
+
+<h3 id="usn-3913-1-p7zip-vulnerabilities">[<a href="https://usn.ubuntu.com/3913-1/">USN-3913-1</a>] P7ZIP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17969">CVE-2017-17969</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-2335">CVE-2016-2335</a></li>
+</ul></li>
+<li>Heap based OOB write when decompressing a crafted ZIP file (crash -&gt; DoS, possible code execution)</li>
+<li>Heap based OOB read when decompressing a UDF file (universal disk format - used for DVD images) - crash, DoS</li>
+</ul>
+
+<h3 id="usn-3918-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3918-1/">USN-3918-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>17 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803">CVE-2019-9803</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793">CVE-2019-9793</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809">CVE-2019-9809</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808">CVE-2019-9808</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807">CVE-2019-9807</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806">CVE-2019-9806</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805">CVE-2019-9805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802">CVE-2019-9802</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799">CVE-2019-9799</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797">CVE-2019-9797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796">CVE-2019-9796</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795">CVE-2019-9795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792">CVE-2019-9792</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791">CVE-2019-9791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790">CVE-2019-9790</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789">CVE-2019-9789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788">CVE-2019-9788</a></li>
+</ul></li>
+<li>Almost latest Firefox release (this is 66, 66.0.1 was released Friday after Pwn2Own
+last week so expect another Firefox update today or tomorrow)
+
+<ul>
+<li>Multiple memory safety issues fixed, possible code execution as a result</li>
+<li>3 issues in FTP modal dialogs allow to either DoS user via
+successive dialogs, or conduct social engineering attacks against
+the user</li>
+<li>Possible information leak from parent to child process via IPC channels</li>
+<li>Various UAFs, type-confusion etc -&gt; memory corruption -&gt; possible code execution</li>
+<li>Incorrect bounds checking on JS objects IF Spectre mitigations
+disabled (these are enabled by default so user would have to
+explicitly disable them)</li>
+<li>and more&hellip;</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3917-1-snapd-vulnerability">[<a href="https://usn.ubuntu.com/3917-1/">USN-3917-1</a>] snapd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7303">CVE-2019-7303</a></li>
+</ul></li>
+<li>Jann Horn reported the seccomp blacklist for TIOCSTI can be bypassed</li>
+<li>snapd creates a seccomp filter for each snap which is designed to
+block TIOCSTI (as this can be used to fake input to other processes
+outside of the sandbox)</li>
+<li>This is a 32-bit value to the ioctl system call, but on 64-bit
+architectures the kernel does this comparison as a 64-bit integer - so
+can be circumvented by using a 64-bit value to ioctl systemcall which
+has other bits set in the upper 32 bits - since when seccomp does
+comparison it uses the full 64 bits - so it won&rsquo;t match the 32-bit
+value of TIOCSTI and so will be allowed - but then when used as the
+ioctl() argument it will correctly be truncated to 32-bits and the
+ioctl will proceed</li>
+<li>Fixed in snapd to add a second seccomp filter to disallow anything in
+the upper 32-bits</li>
+<li>Initially seemed like a kernel or libseccomp issue but both currently
+document this as a limitation already so treated in the end as a
+vulnerability in snapd</li>
+</ul>
+
+<h3 id="usn-3916-1-libsolv-vulnerabilities">[<a href="https://usn.ubuntu.com/3916-1/">USN-3916-1</a>] libsolv vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20534">CVE-2018-20534</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20533">CVE-2018-20533</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20532">CVE-2018-20532</a></li>
+</ul></li>
+<li>Dependency solver used by packaging systems to resolve dependencies
+between packages etc</li>
+<li>2 NULL pointer dereferences and 1 invalid memory read due to
+mishandling of variable length function arguments - all crash -&gt; DoS</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-24/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "",
+        text: "Episode 25"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
