@@ -223,5 +223,11 @@
                           "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
                           "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
+(defun usp-insert-episode-link (&optional episode)
+  "Insert an org-mode link to the show-notes for EPISODE."
+  (interactive "nEpisode: ")
+  (insert (format "[[https://ubuntusecuritypodcast.org/episode-%d/][Episode %d]]"
+                  episode episode)))
+
 (provide 'ubuntu-security-podcast)
 ;;; ubuntu-security-podcast.el ends here
