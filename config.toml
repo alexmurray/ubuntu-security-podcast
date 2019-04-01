@@ -41,6 +41,12 @@ thumbnail = "https://avatars3.githubusercontent.com/u/56540?s=100&v=4"
 bio = "Ubuntu Security Tech Lead at Canonical"
 github = "alexmurray"
 twitter = "alex_murray"
+[params.authors.Joe]
+name = "Joe McManus"
+thumbnail = "https://avatars1.githubusercontent.com/u/8714436?s=100&v=4"
+bio = "Ubuntu Security Manager at Canonical"
+github = "joemcmanus"
+twitter = "joeubuntu"
 
 [permalinks]
         page = "/:filename/"
