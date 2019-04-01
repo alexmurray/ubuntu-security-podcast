@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ubuntusecuritypodcast.org/episode-26/</loc>
+    <lastmod>2019-04-01T21:01:12+10:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ubuntusecuritypodcast.org/episode-25/</loc>
     <lastmod>2019-03-25T14:36:09+10:30</lastmod>
   </url>
@@ -149,7 +154,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/episode/</loc>
-    <lastmod>2019-03-25T14:36:09+10:30</lastmod>
+    <lastmod>2019-04-01T21:01:12+10:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -160,7 +165,7 @@
   
   <url>
     <loc>https://ubuntusecuritypodcast.org/</loc>
-    <lastmod>2019-03-25T14:36:09+10:30</lastmod>
+    <lastmod>2019-04-01T21:01:12+10:30</lastmod>
     <priority>0</priority>
   </url>
   

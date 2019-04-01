@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Mon, 1 Apr 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,340 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 26</title>
+          <link>https://ubuntusecuritypodcast.org/episode-26/</link>
+          <pubDate>Mon, 01 Apr 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E026.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  This week we look security updates for a heap of packages including
+  Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&#39;s recent
+  password storage incident as well as some listener hardening tips and
+  more.
+  </itunes:summary>
+        <description>  This week we look security updates for a heap of packages including
+  Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&#39;s recent
+  password storage incident as well as some listener hardening tips and
+  more.
+  </description>
+        <googleplay:description>  This week we look security updates for a heap of packages including
+  Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&#39;s recent
+  password storage incident as well as some listener hardening tips and
+  more.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look security updates for a heap of packages including
+Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&rsquo;s recent
+password storage incident as well as some listener hardening tips and
+more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>48 unique CVEs addressed</p>
+
+<h3 id="usn-3919-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3919-1/">USN-3919-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9813">CVE-2019-9813</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9810">CVE-2019-9810</a></li>
+</ul></li>
+<li>Firefox 66.0.1 (mentioned briefly last week) - fixes two vulnerabilities discovered during Pwn2Own</li>
+<li>Both in the IonMonkey JIT compiler
+
+<ul>
+<li>Incorrect alias information for the Array.prototype.slice method
+leads to missing bounds check and a buffer overflow - code execution
+as a result</li>
+<li>Type confusion in handling of ,__proto__ mutations - ,__proto__ is
+used to modify the Prototype of an object to be mutated - used for
+object inheritance in JavaScript - allows arbitrary memory
+read/write and therefore code execution as a result</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3918-2-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3918-2/">USN-3918-2</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>17 CVEs addressed in Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803">CVE-2019-9803</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793">CVE-2019-9793</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809">CVE-2019-9809</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808">CVE-2019-9808</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807">CVE-2019-9807</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806">CVE-2019-9806</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805">CVE-2019-9805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802">CVE-2019-9802</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799">CVE-2019-9799</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797">CVE-2019-9797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796">CVE-2019-9796</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795">CVE-2019-9795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792">CVE-2019-9792</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791">CVE-2019-9791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790">CVE-2019-9790</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789">CVE-2019-9789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788">CVE-2019-9788</a></li>
+</ul></li>
+<li>Firefox 66 &amp; 66.0.1 - <a href="https://ubuntusecuritypodcast.org/episode-25/">Episode 25</a> covered for Xenial, Bionic and Cosmic</li>
+</ul>
+
+<h3 id="usn-3918-3-firefox-regression">[<a href="https://usn.ubuntu.com/3918-3/">USN-3918-3</a>] Firefox regression</h3>
+
+<ul>
+<li>17 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803">CVE-2019-9803</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793">CVE-2019-9793</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809">CVE-2019-9809</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808">CVE-2019-9808</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807">CVE-2019-9807</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806">CVE-2019-9806</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805">CVE-2019-9805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802">CVE-2019-9802</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799">CVE-2019-9799</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797">CVE-2019-9797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796">CVE-2019-9796</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795">CVE-2019-9795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792">CVE-2019-9792</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791">CVE-2019-9791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790">CVE-2019-9790</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789">CVE-2019-9789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788">CVE-2019-9788</a></li>
+</ul></li>
+<li>Firefox 66 &amp; 66.0.1 contained a regression - so upstream released 66.0.2</li>
+<li>Broke keyboard handling in Office 365, iCloud and IBM WebMail -
+Firefox 66 changed the way keycode handling works so these websites
+and others which use older, deprecated methods to get the keycode have
+been added to an internal fallback list to use the old method</li>
+</ul>
+
+<h3 id="usn-3927-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/3927-1/">USN-3927-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793">CVE-2019-9793</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9813">CVE-2019-9813</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9810">CVE-2019-9810</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796">CVE-2019-9796</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795">CVE-2019-9795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792">CVE-2019-9792</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791">CVE-2019-9791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790">CVE-2019-9790</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788">CVE-2019-9788</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18506">CVE-2018-18506</a></li>
+</ul></li>
+<li>Thunderbird 60.6.1</li>
+<li>Rolls in security fixes covered previous for Firefox (66.0, 66.0.1)
+
+<ul>
+<li>Both the Pwn2Own and previous fixes</li>
+</ul></li>
+<li>As for Firefox, listen back to <a href="https://ubuntusecuritypodcast.org/episode-25/">Episode 25</a> for details of 66.0 fixes</li>
+</ul>
+
+<h3 id="usn-3921-1-xmltooling-vulnerability">[<a href="https://usn.ubuntu.com/3921-1/">USN-3921-1</a>] XMLTooling vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9628">CVE-2019-9628</a></li>
+</ul></li>
+<li>Crash due to uncaught DOMException able to be triggered by a malformed
+XML document - DoS</li>
+<li>Thanks to Etienne Dysli Metref who provided debdiff&rsquo;s as well as
+testing for this update</li>
+</ul>
+
+<h3 id="usn-3922-1-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3922-1/">USN-3922-1</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9641">CVE-2019-9641</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9640">CVE-2019-9640</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9639">CVE-2019-9639</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9638">CVE-2019-9638</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9637">CVE-2019-9637</a></li>
+</ul></li>
+<li>Integer overflow on 32-bit archs when processing malformed EXIF image
+data - crash, DoS</li>
+<li>Failure to check available data length when processing image
+thumbnails - OOB read -&gt; crash -&gt; DoS</li>
+<li>OOB read of 1 byte when handling EXIF image data - crash -&gt; DoS</li>
+<li>During file rename, if file is moved across file-systems, the new file
+briefly is world readable allowing anyone to read it - fixed by
+ensuring umask is used correctly so that the new file always has
+restrictive permissions from the outset</li>
+</ul>
+
+<h3 id="usn-3923-1-qemu-vulnerabilities">[<a href="https://usn.ubuntu.com/3923-1/">USN-3923-1</a>] QEMU vulnerabilities</h3>
+
+<ul>
+<li>11 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6778">CVE-2019-6778</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3812">CVE-2019-3812</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20216">CVE-2018-20216</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20191">CVE-2018-20191</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20126">CVE-2018-20126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20125">CVE-2018-20125</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20124">CVE-2018-20124</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20123">CVE-2018-20123</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19489">CVE-2018-19489</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16872">CVE-2018-16872</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16867">CVE-2018-16867</a></li>
+</ul></li>
+<li>Heap-based buffer overflow in TCP emulation</li>
+<li>OOB read in i2c handling allowing a local attacker within a guest who
+has permission to execute i2c commands could read qemu host process
+stack memory</li>
+<li>Plan9 FS host-directory sharing race-condition on file rename -&gt; crash
+-&gt; DoS</li>
+<li>2 issues in USB MTP handling:
+
+<ul>
+<li>time-of-check to time-of-use error allows attacker with write access
+to the shared host filesystem can use this to navigate host FS in
+context of QEMU host process and read any therefore read any file
+which QEMU can on the host</li>
+<li>Path traversal flaw due to improper filename sanitisation - allow to
+read-write arbitrary host files -&gt; Dos or code execution on the host</li>
+</ul></li>
+<li>Updates for Paravirtualised RDMA subsystem:
+
+<ul>
+<li>DoS due to infinite loop</li>
+<li>NULL pointer dereference due to missing read method</li>
+<li>Fix various memory leaks</li>
+<li>Various other NULL pointer dereferences plus a failure to check
+parameters leading to possible extreme memory allocation</li>
+<li>Fix OOB read triggerable by guest</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3924-1-mod-auth-mellon-vulnerabilities">[<a href="https://usn.ubuntu.com/3924-1/">USN-3924-1</a>] mod_auth_mellon vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3878">CVE-2019-3878</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3877">CVE-2019-3877</a></li>
+</ul></li>
+<li>Apache module to provide authentication and authorisation via SAML 2.0 IdP</li>
+<li>Possible to bypass authorisation checks when also using mod_proxy</li>
+<li>Fix an open-redirect via the logout endpoint - could encode an
+absolute URL using backward-slashes (\) in place of forward-slashes
+(/) and this would be propagated by the endpoint to the client where
+the browser would convert these and follow the redirect - due to
+mismatch in how browsers will convert these but apache&rsquo;s own internal
+URI parsing does not</li>
+</ul>
+
+<h3 id="usn-3925-1-freeimage-vulnerability">[<a href="https://usn.ubuntu.com/3925-1/">USN-3925-1</a>] FreeImage vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5684">CVE-2016-5684</a></li>
+</ul></li>
+<li>OOB write in XMP image handling - code execution</li>
+</ul>
+
+<h3 id="usn-3926-1-gpac-vulnerabilities">[<a href="https://usn.ubuntu.com/3926-1/">USN-3926-1</a>] GPAC vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7752">CVE-2018-7752</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20763">CVE-2018-20763</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20762">CVE-2018-20762</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20761">CVE-2018-20761</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20760">CVE-2018-20760</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13006">CVE-2018-13006</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13005">CVE-2018-13005</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000100">CVE-2018-1000100</a></li>
+</ul></li>
+<li>Various memory safety issues, including OOB buffer reads and writes
+due to missing bounds checks (was using strcpy without checking
+lengths&hellip;)</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="joe-mcmanus-on-facebook-insecure-password-storage">Joe McManus on Facebook insecure password storage</h3>
+
+<ul>
+<li><a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/</a></li>
+<li><a href="https://newsroom.fb.com/news/2019/03/keeping-passwords-secure/">https://newsroom.fb.com/news/2019/03/keeping-passwords-secure/</a></li>
+</ul>
+
+<h3 id="ubuntu-hardening-tips">Ubuntu Hardening Tips</h3>
+
+<ul>
+<li>Paul Waring got in touch to mention his tips for hardening new Ubuntu installations:
+
+<ul>
+<li>Install and configure unattended-upgrades</li>
+<li>Install UFW and block all incoming connections except specific services
+
+<ul>
+<li>Can be done easily via ansible from just a few lines of YAML</li>
+</ul></li>
+<li>For servers:
+
+<ul>
+<li>Install SSHGuard to ban IP addresses with too many failed login attempts</li>
+<li>Require TLS for all services via LetsEncrypt + certbot</li>
+<li>Configure SSH to permit only key-based authentication</li>
+<li>For wordpress installations - install wp-cli to auto-update themes
+and plugins</li>
+</ul></li>
+<li>Automate as much of this as possible for automatic hardening</li>
+</ul></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E026.mp3" length="19433142" type="audio/mpeg" /><itunes:duration>20:14</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 25</title>
           <link>https://ubuntusecuritypodcast.org/episode-25/</link>
