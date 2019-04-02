@@ -2,14 +2,15 @@
 title = "Episode 12"
 description = "This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more."
 date = 2018-11-19
-lastmod = 2019-02-11T22:06:15+10:30
+lastmod = 2019-04-02T17:15:46+10:30
 draft = false
-weight = 1009
+weight = 1015
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E012.mp3"
 podcast_duration = "20:08"
 podcast_bytes = 19337429
+permalink = "https://ubuntusecuritypodcast.org/episode-12/"
 +++
 
 ## Overview {#overview}
@@ -217,5 +218,5 @@ more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

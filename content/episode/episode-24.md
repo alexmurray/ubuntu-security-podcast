@@ -6,14 +6,15 @@ description = """
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
   """
 date = 2019-03-19
-lastmod = 2019-03-19T15:01:32+10:30
+lastmod = 2019-04-02T17:15:38+10:30
 draft = false
-weight = 1001
+weight = 1003
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E024.mp3"
 podcast_duration = "13:20"
 podcast_bytes = 12816012
+permalink = "https://ubuntusecuritypodcast.org/episode-24/"
 +++
 
 ## Overview {#overview}
@@ -156,5 +157,5 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

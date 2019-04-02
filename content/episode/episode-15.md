@@ -6,14 +6,15 @@ description = """
   sure you always have the latest security updates by using unattended-upgrades.
   """
 date = 2018-12-10
-lastmod = 2019-02-11T22:06:14+10:30
+lastmod = 2019-04-02T17:15:44+10:30
 draft = false
-weight = 1006
+weight = 1012
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E015.mp3"
 podcast_duration = "17:08"
 podcast_bytes = 16451003
+permalink = "https://ubuntusecuritypodcast.org/episode-15/"
 +++
 
 ## Overview {#overview}
@@ -177,5 +178,5 @@ sure you always have the latest security updates by using unattended-upgrades.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

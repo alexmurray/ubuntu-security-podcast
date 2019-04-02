@@ -6,14 +6,15 @@ description = """
   Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
   """
 date = 2018-09-24
-lastmod = 2019-02-11T22:06:18+10:30
+lastmod = 2019-04-02T17:15:51+10:30
 draft = false
-weight = 1016
+weight = 1022
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E005.mp3"
 podcast_duration = "15:45"
 podcast_bytes = 15121056
+permalink = "https://ubuntusecuritypodcast.org/episode-5/"
 +++
 
 ## Overview {#overview}
@@ -203,5 +204,5 @@ Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

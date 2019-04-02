@@ -2,14 +2,15 @@
 title = "Episode 8"
 description = "This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more."
 date = 2018-10-22
-lastmod = 2019-02-11T22:06:17+10:30
+lastmod = 2019-04-02T17:15:49+10:30
 draft = false
-weight = 1013
+weight = 1019
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E008.mp3"
 podcast_duration = "9:10"
 podcast_bytes = 8806111
+permalink = "https://ubuntusecuritypodcast.org/episode-8/"
 +++
 
 ## Overview {#overview}
@@ -119,5 +120,5 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

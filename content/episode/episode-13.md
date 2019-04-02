@@ -2,14 +2,15 @@
 title = "Episode 13"
 description = "This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more."
 date = 2018-11-26
-lastmod = 2019-02-11T22:06:15+10:30
+lastmod = 2019-04-02T17:15:45+10:30
 draft = false
-weight = 1008
+weight = 1014
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E013.mp3"
 podcast_duration = "08:30"
 podcast_bytes = 8162872
+permalink = "https://ubuntusecuritypodcast.org/episode-13/"
 +++
 
 ## Overview {#overview}
@@ -93,5 +94,5 @@ This week we look at some details of the 16 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

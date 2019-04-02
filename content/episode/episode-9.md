@@ -2,14 +2,15 @@
 title = "Episode 9"
 description = "This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([CVE-2018-14665](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665)), plus Cosmic is now officially supported by the Security Team."
 date = 2018-10-30
-lastmod = 2019-02-11T22:06:16+10:30
+lastmod = 2019-04-02T17:15:48+10:30
 draft = false
-weight = 1012
+weight = 1018
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E009.mp3"
 podcast_duration = "11:59"
 podcast_bytes = 11511142
+permalink = "https://ubuntusecuritypodcast.org/episode-9/"
 +++
 
 ## Overview {#overview}
@@ -196,5 +197,5 @@ This week we look at some details of the 61 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

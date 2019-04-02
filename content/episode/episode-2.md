@@ -2,14 +2,15 @@
 title = "Episode 2"
 description = "L1TF kernel regressions, WPA2 key recovery, mirror fail and more!"
 date = 2018-08-28
-lastmod = 2019-02-11T22:06:19+10:30
+lastmod = 2019-04-02T17:15:52+10:30
 draft = false
-weight = 1019
+weight = 1025
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E002.mp3"
 podcast_duration = "08:15"
 podcast_bytes = 7935502
+permalink = "https://ubuntusecuritypodcast.org/episode-2/"
 +++
 
 ## Overview {#overview}
@@ -252,5 +253,5 @@ podcast_bytes = 7935502
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

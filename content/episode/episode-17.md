@@ -2,14 +2,15 @@
 title = "Episode 17"
 description = "First episode of 2019! This week we look \"System Down\" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call."
 date = 2019-01-22
-lastmod = 2019-02-11T22:06:13+10:30
+lastmod = 2019-04-02T17:15:43+10:30
 draft = false
-weight = 1004
+weight = 1010
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E017.mp3"
 podcast_duration = "21:45"
 podcast_bytes = 20887640
+permalink = "https://ubuntusecuritypodcast.org/episode-17/"
 +++
 
 ## Overview {#overview}
@@ -227,5 +228,5 @@ First episode of 2019! This week we look "System Down" in systemd, as well as up
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

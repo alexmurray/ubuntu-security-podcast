@@ -7,7 +7,7 @@ description = """
   more.
   """
 date = 2019-04-01
-lastmod = 2019-04-01T21:01:12+10:30
+lastmod = 2019-04-02T17:15:37+10:30
 draft = false
 weight = 1001
 episode_image = "img/episode/default.png"
@@ -15,6 +15,7 @@ explicit = "no"
 podcast_file = "USP_E026.mp3"
 podcast_duration = "20:14"
 podcast_bytes = 19433142
+permalink = "https://ubuntusecuritypodcast.org/episode-26/"
 +++
 
 ## Overview {#overview}

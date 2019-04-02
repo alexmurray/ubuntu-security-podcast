@@ -2,14 +2,15 @@
 title = "Episode 1"
 description = "Another week, another speculative execution vulnerablity... and more!"
 date = 2018-08-20
-lastmod = 2019-02-11T22:06:20+10:30
+lastmod = 2019-04-02T17:15:53+10:30
 draft = false
-weight = 1020
+weight = 1026
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E001.mp3"
 podcast_duration = "10:33"
 podcast_bytes = 10133967
+permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 +++
 
 ## Overview {#overview}
@@ -155,7 +156,7 @@ podcast_bytes = 10133967
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
 
 

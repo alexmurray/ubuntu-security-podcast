@@ -6,14 +6,15 @@ description = """
   various hardening guides for Ubuntu.
   """
 date = 2018-09-10
-lastmod = 2019-02-11T22:06:19+10:30
+lastmod = 2019-04-02T17:15:51+10:30
 draft = false
-weight = 1017
+weight = 1023
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E004.mp3"
 podcast_duration = "10:36"
 podcast_bytes = 10189138
+permalink = "https://ubuntusecuritypodcast.org/episode-4/"
 +++
 
 ## Overview {#overview}
@@ -116,5 +117,5 @@ various hardening guides for Ubuntu.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
