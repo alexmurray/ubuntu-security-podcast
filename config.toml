@@ -10,7 +10,7 @@ site_layout = "row"
 enable_jumbo = "true"
 about_logo = "/img/logo_250.png"
 favicon = "/img/logo_32.png"
-copyright_notice = "Copyright 2018 [Canonical](https://www.canonical.com/)"
+copyright_notice = "Copyright 2019 [Canonical](https://www.canonical.com/)"
 itunes_subscribe = "https://itunes.apple.com/au/podcast/ubuntu-security-podcast/id1429360004"
 android_subscribe = "https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZWN1cml0eXBvZGNhc3Qub3JnL2VwaXNvZGUvaW5kZXgueG1s"
 #android_subscribe = "https://subscribeonandroid.com/ubuntusecuritypodcast.org/episode/index.xml"
@@ -21,7 +21,7 @@ media_prefix = "https://people.canonical.com/~amurray/USP/"
 
 
 [params.feed]
-copyright = "Copyright 2018 Canonical"
+copyright = "Copyright 2019 Canonical"
 itunes_author = "Ubuntu Security Team"
 itunes_summary = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community."
 itunes_owner_name = "Alex Murray"
