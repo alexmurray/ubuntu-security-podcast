@@ -8,4 +8,4 @@ explicit = "no"
 episode_image = "img/episode/default.png"
 +++
 
-Ubuntu Security Podcast is a weekly\* podcast discussing the latest updates and developments from the Ubuntu Security Team.
+Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.
