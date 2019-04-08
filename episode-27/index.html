@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 27" />
+<meta property="og:description" content="Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-27/" />
+
+
+
+<meta property="og:updated_time" content="2019-04-08 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-04-08 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-04-08 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 27">
+<meta itemprop="description" content="Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="1107">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 27"/>
+<meta name="twitter:description" content="Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 27 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-27/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 27</h1>
+      <small>Posted on Monday, Apr 8, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E027.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E027.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>52 unique CVEs addressed</p>
+
+<h3 id="usn-3928-1-dovecot-vulnerability">[<a href="https://usn.ubuntu.com/3928-1/">USN-3928-1</a>] Dovecot vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7524">CVE-2019-7524</a></li>
+</ul></li>
+<li>Local user root privilege escalation
+
+<ul>
+<li>Stack buffer overflow - indexer-worker processes missing bounds check when copying from the index</li>
+<li>If local user can modify the dovecot index then could leverage this
+for code-execution in the indexer process context</li>
+<li>Mitigated by usual hardening techniques (ASLR, stack-protector,
+read-only GOT (via RELRO &amp; BIND_NOW))</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3929-1-firebird-vulnerabilities">[<a href="https://usn.ubuntu.com/3929-1/">USN-3929-1</a>] Firebird vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6369">CVE-2017-6369</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-9323">CVE-2014-9323</a></li>
+</ul></li>
+<li>Remote authenticated users execute code</li>
+<li>Remote un-authenticated user DoS via op_response action with a non-empty status</li>
+</ul>
+
+<h3 id="usn-3934-1-policykit-vulnerability">[<a href="https://usn.ubuntu.com/3934-1/">USN-3934-1</a>] PolicyKit vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - fixed kernel to make process start_time via fork() more atomic</li>
+<li>Updated policykit to also check UIDs match (so now checks start_time,
+PID and UID so can&rsquo;t use another user&rsquo;s authorisations)</li>
+</ul>
+
+<h3 id="usn-3935-1-busybox-vulnerabilities">[<a href="https://usn.ubuntu.com/3935-1/">USN-3935-1</a>] BusyBox vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5747">CVE-2019-5747</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20679">CVE-2018-20679</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000517">CVE-2018-1000517</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16544">CVE-2017-16544</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15873">CVE-2017-15873</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-2148">CVE-2016-2148</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-2147">CVE-2016-2147</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9261">CVE-2015-9261</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-9645">CVE-2014-9645</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2011-5325">CVE-2011-5325</a></li>
+</ul></li>
+<li>Mix of issues across various components in BusyBox
+
+<ul>
+<li>udhcpc:
+
+<ul>
+<li>Information disclosure of stack memory in dhcp client / server
+(shared component) due to failure to check DHCP options are correct
+size - original fix was incomplete so this got 2 CVEs</li>
+<li>Heap buffer overflow via DHCP option parsing of OPTION_6RD (IPv6
+rapid deployment on IPv4 infra)</li>
+<li>Integer overflow -&gt; heap-based OOB write -&gt; crash -&gt; DoS / code
+execution</li>
+</ul></li>
+<li>wget:
+
+<ul>
+<li>Heap buffer overflow in wget</li>
+</ul></li>
+<li>shell:
+
+<ul>
+<li>Failure to sanitize filenames during tab completion - could allow
+code execution etc as user who is running the shell</li>
+</ul></li>
+<li>archive handling
+
+<ul>
+<li>Integer overflow in bzip2 decompression - OOB write - crash -&gt; DoS
+/ code execution?</li>
+<li>Pointer misuse in zip decompression - OOB read - crash -&gt; DoS</li>
+<li>directory traversal due to symlinks which point outside the
+current working directory when decompressing tar archives
+(tyhicks)</li>
+</ul></li>
+<li>module loading
+
+<ul>
+<li>allows users to load modules which are otherwise restricted -
+assumes modules could specify the path so uses basename() on the
+module name - so just need to include a / in the module name to
+circumvent other checks</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3937-1-apache-http-server-vulnerabilities">[<a href="https://usn.ubuntu.com/3937-1/">USN-3937-1</a>] Apache HTTP Server vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0220">CVE-2019-0220</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0217">CVE-2019-0217</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0196">CVE-2019-0196</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17199">CVE-2018-17199</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17189">CVE-2018-17189</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0211">CVE-2019-0211</a></li>
+</ul></li>
+<li>&ldquo;Carpe Diem&rdquo; and others
+
+<ul>
+<li>Local root privilege escalation due to an OOB array access resulting
+in arbitrary function call when apache gracefully restarts - done
+daily via logrotate at 6:25am
+
+<ul>
+<li>affects mod_prefork, mod_worker and mod_event</li>
+<li>main server (running as root) shares a memory segment (the
+scoreboard) with low-privileged worker processes</li>
+<li>PID, last request handled etc - maintained by the worker</li>
+<li>worker stores an index into global buckets array in the privileged parent</li>
+<li>this gets used on restart to restart the worker but no check is done to ensure this is valid</li>
+<li>so since is in shm child can change this index to ensure it points back into the shm segment where it has write access</li>
+<li>the bucket contains a function pointer to restart worker - so
+since this is now indexed from the shm segment can make this point
+to any function of choice - AND this gets executed as root by the
+parent</li>
+<li>Requires some other bug to turn this into a remote exploit since
+need to get R/W access remotely on a worker process</li>
+</ul></li>
+<li>Failure to normalize URLs in a consistent manner - LocationMatch and
+RewriteRule might not get applied correctly</li>
+<li>Race condition in mod_auth_digest could allow user with valid
+credentials to impersonate another and bypass access controls</li>
+<li>read after free on string comparison in mod_http2 - crash, DoS</li>
+<li>failure to respect session expiry time in mod_session_cookie</li>
+<li>DoS via slow-loris type attack to occupy server threads</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3936-1-advancecomp-vulnerability">[<a href="https://usn.ubuntu.com/3936-1/">USN-3936-1</a>] AdvanceCOMP vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9210">CVE-2019-9210</a></li>
+</ul></li>
+<li>Integer overflow when decompressing invalid PNG images - OOB write and
+heap OOB read</li>
+</ul>
+
+<h3 id="usn-3930-1--usn-dot-ubuntu-dot-com-3930-1--usn-3930-2-linux-kernel-vulnerabilities">[<a href="//usn.ubuntu.com/3930-1/">USN-3930-1</a>, USN-3930-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>13 CVEs addressed in Cosmic and Bionic (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9213">CVE-2019-9213</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9162">CVE-2019-9162</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9003">CVE-2019-9003</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8980">CVE-2019-8980</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8956">CVE-2019-8956</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8912">CVE-2019-8912</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7308">CVE-2019-7308</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7222">CVE-2019-7222</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7221">CVE-2019-7221</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6974">CVE-2019-6974</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3460">CVE-2019-3460</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3459">CVE-2019-3459</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19824">CVE-2018-19824</a></li>
+</ul></li>
+<li>Jann Horn (GPZ):
+
+<ul>
+<li>mmap minimum address bypass - could allow to turn a kernel NULL
+pointer dereference into code execution</li>
+<li>ASN.1 decoding for SNMP NAT missing length checks - OOB R/W possible</li>
+<li>side-channel attack due to speculation on pointer arithmetic in eBPF
+programs (Spectre V1)
+
+<ul>
+<li>mitigated when secure boot due to lockdown patches blocking BPF
+program loading</li>
+</ul></li>
+<li>Reference counting race-condition in KVM -&gt; UAF -&gt; guest VM crash</li>
+</ul></li>
+<li>UAF + OOPS in IPMI due to race-condition on restart</li>
+<li>Memory leak on error path of vfs read operations -&gt; DoS</li>
+<li>UAF in SCTP sendmsg - crash / code execution</li>
+<li>UAF in AF_ALG due to failure to NULL structure members
+
+<ul>
+<li>Originally misclassified by NVD as remotely exploitable, confusion
+over socket() use by crypto API?</li>
+</ul></li>
+<li>Info leak and a UAF in KVM when using nested virtualisation - not
+enabled by default in Ubuntu kernels unless if install QEMU - this is
+enabled automatically</li>
+<li>2 different information leak of heap memory in bluetooth subsystem
+triggerable by unauthenticated remote attacker</li>
+<li>UAF in ALSA USB sound device handling mentioned in <a href="https://ubuntusecuritypodcast.org/episode-20/">Episode 20</a></li>
+</ul>
+
+<h3 id="usn-3931-1-usn-3931-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3931-1/">USN-3931-1</a>, USN-3931-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>12 CVEs addressed in Bionic, Trusty (HWE) and Xenial (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9213">CVE-2019-9213</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8980">CVE-2019-8980</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8912">CVE-2019-8912</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7308">CVE-2019-7308</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7222">CVE-2019-7222</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7221">CVE-2019-7221</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6974">CVE-2019-6974</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3460">CVE-2019-3460</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3459">CVE-2019-3459</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19824">CVE-2018-19824</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18021">CVE-2018-18021</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14678">CVE-2018-14678</a></li>
+</ul></li>
+<li>10 from above, 2 unique:
+
+<ul>
+<li>Potential host system crash / code execution from malicious guest
+for KVM on ARM64 as mentioned previously in <a href="https://ubuntusecuritypodcast.org/episode-12/">Episode 12</a></li>
+<li>Failure to properly initialise all elements of error handler
+callback in Xen - guest VM crash triggerable by an unprivileged
+attacker in the guest VM</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3932-1-usn-3932-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3932-1/">USN-3932-1</a>, USN-3932-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>20 CVEs addressed in Xenial and Trusty (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3819">CVE-2019-3819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3701">CVE-2019-3701</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9517">CVE-2018-9517</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16884">CVE-2018-16884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14613">CVE-2018-14613</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14612">CVE-2018-14612</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14611">CVE-2018-14611</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14610">CVE-2018-14610</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14616">CVE-2018-14616</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14614">CVE-2018-14614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13100">CVE-2018-13100</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13099">CVE-2018-13099</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13097">CVE-2018-13097</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18249">CVE-2017-18249</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9213">CVE-2019-9213</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7222">CVE-2019-7222</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7221">CVE-2019-7221</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6974">CVE-2019-6974</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3460">CVE-2019-3460</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3459">CVE-2019-3459</a></li>
+</ul></li>
+<li>2 DoS triggerable by root (low priority issue)</li>
+<li>UAF in PPP over L2TP</li>
+<li>UAF in NFS41+ when using multiple network namespaces</li>
+<li>4 different NULL pointer dereferences in btrfs via malicious image</li>
+<li>Race condition and various reads of invalid memory areas when mounting
+malicious f2fs images</li>
+<li>mmap min address bypass and others mentioned previously plus
+(bluetooth, kvm etc)</li>
+</ul>
+
+<h3 id="usn-3933-1-usn-3933-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3933-1/">USN-3933-1</a>, USN-3933-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Trusty and Precise ESM (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9213">CVE-2019-9213</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7222">CVE-2019-7222</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6974">CVE-2019-6974</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3460">CVE-2019-3460</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3459">CVE-2019-3459</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19824">CVE-2018-19824</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18360">CVE-2017-18360</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-1000410">CVE-2017-1000410</a></li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="supply-chain-attacks-and-ubuntu">Supply chain attacks and Ubuntu</h3>
+
+<ul>
+<li>Alex and Joe discuss recent Asus ShadowHammer supply chain attack and how this relates to Ubuntu
+
+<ul>
+<li><a href="https://securelist.com/operation-shadowhammer/89992/">https://securelist.com/operation-shadowhammer/89992/</a></li>
+<li><a href="https://www.forbes.com/sites/jasonevangelho/2019/03/29/shadowhammer-asus-1-million-reasons-switch-from-windows-to-linux/">https://www.forbes.com/sites/jasonevangelho/2019/03/29/shadowhammer-asus-1-million-reasons-switch-from-windows-to-linux/</a></li>
+<li><a href="https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/2018-ossra.pdf">https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/2018-ossra.pdf</a></li>
+<li><a href="http://go.coverity.com/rs/157-LQW-289/images/2014-Coverity-Scan-Report.pdf">http://go.coverity.com/rs/157-LQW-289/images/2014-Coverity-Scan-Report.pdf</a></li>
+</ul></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-26/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-27\/",
+        text: "Episode 27"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
