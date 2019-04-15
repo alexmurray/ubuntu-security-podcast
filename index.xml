@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 28</title>
+      <link>https://ubuntusecuritypodcast.org/episode-28/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-28/</guid>
+      <description>Overview This week we look at updates for vulnerabilities in wpa_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).
+This week in Ubuntu Security Updates 27 unique CVEs addressed
+[USN-3939-1, USN-3939-2] Samba vulnerability  1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic  CVE-2019-3880  Symlink path traversal vulnerability in the Windows Registry service emulation RPC API end-point Allows a local user to create a new registry file anywhere they have Unix permissions to do so within the Samba share  Bypasses share restrictions such as read-only and share ACLs Also allows to create the file outside the share itself if there is already a symlink pointing outside the shared areas  Fixed by removing the ability to save or restore registry keys at all via this RPC API end-point  [USN-3940-1, USN-3940-2] ClamAV vulnerabilities  3 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic  CVE-2019-1789 CVE-2019-1788 CVE-2019-1787  3 file-handling issues  2 OOB heap read when handling PE (Windows EXE and DLL) and PDF files -&amp;gt; crash -&amp;gt; DoS OOB heap write when scanning OLE2 files (old format Microsoft Office documents), crash -&amp;gt; DoS or possible code execution   [USN-3941-1] Lua vulnerability  1 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2019-6706  UAF if calling debug.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 27</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 52 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 52 unique CVEs addressed
       <description>Overview This week we look security updates for a heap of packages including Firefox &amp;amp; Thunderbird, PHP &amp;amp; QEMU, plus we discuss Facebook&amp;rsquo;s recent password storage incident as well as some listener hardening tips and more.
 This week in Ubuntu Security Updates 48 unique CVEs addressed
 [USN-3919-1] Firefox vulnerabilities  2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic  CVE-2019-9813 CVE-2019-9810  Firefox 66.0.1 (mentioned briefly last week) - fixes two vulnerabilities discovered during Pwn2Own Both in the IonMonkey JIT compiler  Incorrect alias information for the Array.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>

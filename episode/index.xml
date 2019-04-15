@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 8 Apr 2019 00:00:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,280 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 28</title>
+          <link>https://ubuntusecuritypodcast.org/episode-28/</link>
+          <pubDate>Mon, 15 Apr 2019 00:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E028.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</itunes:summary>
+        <description>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</description>
+        <googleplay:description>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at updates for vulnerabilities in wpa_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>27 unique CVEs addressed</p>
+
+<h3 id="usn-3939-1-usn-3939-2-samba-vulnerability">[<a href="https://usn.ubuntu.com/3939-1/">USN-3939-1</a>, <a href="https://usn.ubuntu.com/3939-2/">USN-3939-2</a>] Samba vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3880">CVE-2019-3880</a></li>
+</ul></li>
+<li>Symlink path traversal vulnerability in the Windows Registry service emulation RPC API end-point</li>
+<li>Allows a local user to create a new registry file anywhere they have Unix
+permissions to do so within the Samba share
+
+<ul>
+<li>Bypasses share restrictions such as read-only and share ACLs</li>
+<li>Also allows to create the file outside the share itself if there is
+already a symlink pointing outside the shared areas</li>
+</ul></li>
+<li>Fixed by removing the ability to save or restore registry keys at all via
+this RPC API end-point</li>
+</ul>
+
+<h3 id="usn-3940-1-usn-3940-2-clamav-vulnerabilities">[<a href="https://usn.ubuntu.com/3940-1/">USN-3940-1</a>, <a href="https://usn.ubuntu.com/3940-2/">USN-3940-2</a>] ClamAV vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1789">CVE-2019-1789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1788">CVE-2019-1788</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1787">CVE-2019-1787</a></li>
+</ul></li>
+<li>3 file-handling issues
+
+<ul>
+<li>2 OOB heap read when handling PE (Windows EXE and DLL) and PDF files -&gt;
+crash -&gt; DoS</li>
+<li>OOB heap write when scanning OLE2 files (old format Microsoft Office
+documents), crash -&gt; DoS or possible code execution</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3941-1-lua-vulnerability">[<a href="https://usn.ubuntu.com/3941-1/">USN-3941-1</a>] Lua vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6706">CVE-2019-6706</a></li>
+</ul></li>
+<li>UAF if calling debug.upvaluejoin() with the same function for both function parameters</li>
+</ul>
+
+<h3 id="usn-3938-1-systemd-vulnerability">[<a href="https://usn.ubuntu.com/3938-1/">USN-3938-1</a>] systemd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3842">CVE-2019-3842</a></li>
+</ul></li>
+<li>Failure to properly sanitize environment before using XDG_SEAT</li>
+<li>Attacker could set XDG_SEAT such that they can have actions checked
+against the wrong PolicyKit policy</li>
+<li>Allows a remotely logged in attacker (SSH) to run commands which should
+be restricted to only physically present users</li>
+<li>Fixed by using secure_getenv() rather than just getenv() - so that if
+running via su the existing value is effectively scrubbed from the
+environment and ignored</li>
+</ul>
+
+<h3 id="usn-3942-1-openjdk-7-vulnerability">[<a href="https://usn.ubuntu.com/3942-1/">USN-3942-1</a>] OpenJDK 7 vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2422">CVE-2019-2422</a></li>
+</ul></li>
+<li>Information leak allows a remote attacker to possibly leverage this to
+bypass the Java sandbox</li>
+</ul>
+
+<h3 id="usn-3943-1-usn-3943-2-wget-vulnerabilities">[<a href="https://usn.ubuntu.com/3943-1/">USN-3943-1</a>, <a href="https://usn.ubuntu.com/3943-2/">USN-3943-2</a>] Wget vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic (1 in Precise ESM)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5953">CVE-2019-5953</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20483">CVE-2018-20483</a></li>
+</ul></li>
+<li>Heap buffer overflow due to improper memory management - crash -&gt; DoS or possible code execution</li>
+<li>By default wget would store the origin URL in an extended attribute on the downloaded file
+
+<ul>
+<li>Could include username / password</li>
+<li>getfattr -d to dump</li>
+<li>changed to NOT store extended attributes by default AND to strip out
+any credentials when doing so</li>
+<li>doesn&rsquo;t effect Precise ESM</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3937-2-apache-vulnerabilities">[<a href="https://usn.ubuntu.com/3937-2/">USN-3937-2</a>] Apache vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1312">CVE-2018-1312</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1301">CVE-2018-1301</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15710">CVE-2017-15710</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0217">CVE-2019-0217</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-27/">Episode 27</a> covered mod_auth_digest bypass for other supported releases</li>
+<li>Also includes 3 other issues:
+
+<ul>
+<li>Nonce generated to prevent reply attacks for HTTP digest authentication
+challenenge wasn&rsquo;t sufficiently random
+
+<ul>
+<li>Could allow and attacker to reply across a cluster of servers with
+the same common digest authentication configuration</li>
+<li>changed to actually use a proper random source</li>
+</ul></li>
+<li>Possible OOB read -&gt; crash -&gt; DoS</li>
+<li>Possible one-byte memory corruption if specify a character encoding of
+only 1 byte (since assumes is at least 2 bytes and so writes a NULL at
+index +2 which could be past the end of the header) - crash, DoS</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3944-1-wpa-supplicant-and-hostapd-vulnerabilities">[<a href="https://usn.ubuntu.com/3944-1/">USN-3944-1</a>] wpa_supplicant and hostapd vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10743">CVE-2016-10743</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9499">CVE-2019-9499</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9498">CVE-2019-9498</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9497">CVE-2019-9497</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9495">CVE-2019-9495</a></li>
+</ul></li>
+<li>Fix fallback to low-quality PRNG if failed to get an actual random value for a WPS pin</li>
+<li>Multiple vulnerabilities discovered in the implementation of WPA3 in
+hostapd and wpa_supplicant (aka Dragonblood)
+
+<ul>
+<li>2 apply to SAE (Simultaneous Authentication of Equals , also known as
+Dragonfly Key Exchange) not relevant since we don&rsquo;t enable SAE support
+in our builds (this is used for initial key exchange instead of PSK)</li>
+<li>4 apply to the use of EAP-PWD - Extensible Authentication Protocol
+Password
+
+<ul>
+<li>cache side channel attack</li>
+<li>reflection attack
+
+<ul>
+<li>may allow an attacker to authenticate without the password but
+likely not derive session key or complete the key exchange so no
+loss of confidentiality</li>
+</ul></li>
+<li>2 failure to validate crypto components
+
+<ul>
+<li>could allow attacker to authenticate AND gain access to session key
+and get network access</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3945-1-ruby-vulnerabilities">[<a href="https://usn.ubuntu.com/3945-1/">USN-3945-1</a>] Ruby vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8325">CVE-2019-8325</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8324">CVE-2019-8324</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8323">CVE-2019-8323</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8322">CVE-2019-8322</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8321">CVE-2019-8321</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8320">CVE-2019-8320</a></li>
+</ul></li>
+<li>Symlink directory traversal issue - gem would delete the target
+destination before creating any new directories or files when extracting
+a Gem - as this is often run via sudo could allow to delete anything on
+target system
+
+<ul>
+<li>Fixed to check target paths are symlinks</li>
+</ul></li>
+<li>5 different code-injection attacks:
+
+<ul>
+<li>4 via injection of terminal escape sequences in debug code paths to stdout</li>
+<li>one via eval() of the stub line in a gemspec file</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3946-1-rssh-vulnerabilities">[<a href="https://usn.ubuntu.com/3946-1/">USN-3946-1</a>] rssh vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3464">CVE-2019-3464</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3463">CVE-2019-3463</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1000018">CVE-2019-1000018</a></li>
+</ul></li>
+<li>Possible to execute arbitrary shell commands since failed to properly
+sanitize environment variables and command-line arguments when executing
+rsync or scp</li>
+<li>Removed from archive in disco since dead upstream</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="iot-security-discussion-with-joe-mcmanus">IoT Security discussion with Joe McManus</h3>
+
+<ul>
+<li><a href="https://arstechnica.com/information-technology/2019/04/new-variants-of-mirai-botnet-detected-targeting-more-iot-devices/">https://arstechnica.com/information-technology/2019/04/new-variants-of-mirai-botnet-detected-targeting-more-iot-devices/</a></li>
+<li><a href="https://www.ubuntu.com/core">https://www.ubuntu.com/core</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E028.mp3" length="20878863" type="audio/mpeg" /><itunes:duration>21:44</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 27</title>
           <link>https://ubuntusecuritypodcast.org/episode-27/</link>
