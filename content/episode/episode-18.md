@@ -2,9 +2,9 @@
 title = "Episode 18"
 description = "This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug."
 date = 2019-01-29
-lastmod = 2019-04-08T22:24:39+09:30
+lastmod = 2019-04-15T17:17:02+09:30
 draft = false
-weight = 1010
+weight = 1011
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E018.mp3"

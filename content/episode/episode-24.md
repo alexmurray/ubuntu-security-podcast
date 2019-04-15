@@ -6,9 +6,9 @@ description = """
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
   """
 date = 2019-03-19
-lastmod = 2019-04-08T22:24:38+09:30
+lastmod = 2019-04-15T17:16:59+09:30
 draft = false
-weight = 1004
+weight = 1005
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E024.mp3"
