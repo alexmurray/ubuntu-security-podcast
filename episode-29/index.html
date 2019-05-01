@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+  Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+  discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+  release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+  Trusty Tahr to Extended Security Maintenance.
+  ">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 29" />
+<meta property="og:description" content="  This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+  Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+  discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+  release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+  Trusty Tahr to Extended Security Maintenance.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-29/" />
+
+
+
+<meta property="og:updated_time" content="2019-04-30 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-04-30 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-04-30 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 29">
+<meta itemprop="description" content="  This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+  Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+  discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+  release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+  Trusty Tahr to Extended Security Maintenance.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="800">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 29"/>
+<meta name="twitter:description" content="  This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+  Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+  discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+  release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+  Trusty Tahr to Extended Security Maintenance.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 29 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-29/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 29</h1>
+      <small>Posted on Tuesday, Apr 30, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+  Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+  discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+  release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+  Trusty Tahr to Extended Security Maintenance.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E029.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E029.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at fixes from the past two weeks including BIND, NTFS-3G,
+Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
+discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
+release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04
+Trusty Tahr to Extended Security Maintenance.</p>
+
+<h2 id="these-past-two-weeks-in-ubuntu-security-updates">These past two weeks in Ubuntu Security Updates</h2>
+
+<p>53 unique CVEs addressed</p>
+
+<h3 id="usn-3947-1-usn-3947-2-libxslt-vulnerability">[<a href="https://usn.ubuntu.com/3947-1/">USN-3947-1</a>, USN-3947-2] Libxslt vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11068">CVE-2019-11068</a></li>
+</ul></li>
+<li>Library to transform XML via XML definitions</li>
+<li>Includes a security framework since XSLT can define operations to
+fetch/read/write files and resources etc</li>
+<li>Various functions would return 0 if an operation is not allowed by the
+framework which was checked for and correctly disallowed - BUT they could
+also return -1 on error (say from a potentially bad URL) which would not
+be caught and so then would proceed and would fetch from the URL in
+question thereby violating the security policy</li>
+<li>Fixed to also check for error codes on handle the same as an explicit
+policy violation</li>
+</ul>
+
+<h3 id="usn-3948-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3948-1/">USN-3948-1</a>] WebKitGTK+ vulnerabilities</h3>
+
+<ul>
+<li>14 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8563">CVE-2019-8563</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8559">CVE-2019-8559</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8558">CVE-2019-8558</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8551">CVE-2019-8551</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8544">CVE-2019-8544</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8536">CVE-2019-8536</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8535">CVE-2019-8535</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8524">CVE-2019-8524</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8523">CVE-2019-8523</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8518">CVE-2019-8518</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8506">CVE-2019-8506</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8375">CVE-2019-8375</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6251">CVE-2019-6251</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11070">CVE-2019-11070</a></li>
+</ul></li>
+<li>Wide mix of issues fixed including XSS and DoS attacks or possible
+arbitrary code execution if visiting a malicious website</li>
+</ul>
+
+<h3 id="usn-3949-1-openjdk-11-vulnerability">[<a href="https://usn.ubuntu.com/3949-1/">USN-3949-1</a>] OpenJDK 11 vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2422">CVE-2019-2422</a></li>
+</ul></li>
+<li>Backport of openjdk-11 from Disco to Bionic, includes a minor security
+fix to memory disclosure vulnerablity which could enable an attacker to
+bypass sandbox</li>
+</ul>
+
+<h3 id="usn-3918-4-firefox-regressions">[<a href="https://usn.ubuntu.com/3918-4/">USN-3918-4</a>] Firefox regressions</h3>
+
+<ul>
+<li>17 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803">CVE-2019-9803</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793">CVE-2019-9793</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809">CVE-2019-9809</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808">CVE-2019-9808</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807">CVE-2019-9807</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806">CVE-2019-9806</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805">CVE-2019-9805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802">CVE-2019-9802</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799">CVE-2019-9799</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797">CVE-2019-9797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796">CVE-2019-9796</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795">CVE-2019-9795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792">CVE-2019-9792</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791">CVE-2019-9791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790">CVE-2019-9790</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789">CVE-2019-9789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788">CVE-2019-9788</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-26/">Episode 26</a> covered 66.0.2 regression - this is now 66.0.3 to fix further
+regressions in keyboard handling as discussed previously</li>
+</ul>
+
+<h3 id="usn-3914-2-ntfs-3g-update">[<a href="https://usn.ubuntu.com/3914-2/">USN-3914-2</a>] NTFS-3G update</h3>
+
+<ul>
+<li>Affecting Xenial, Bionic, Cosmic</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-25/">Episode 25</a> covered ntfs-3g update for possible heap buffer overflow
+
+<ul>
+<li>As was setuid root this could possibly be used for root privilege
+escalation</li>
+</ul></li>
+<li>This update removes setuid root to additionally harden ntfs-3g so that
+any future vulnerablilites can&rsquo;t be used for privilege escalation</li>
+</ul>
+
+<h3 id="usn-3950-1-znc-vulnerability">[<a href="https://usn.ubuntu.com/3950-1/">USN-3950-1</a>] ZNC vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9917">CVE-2019-9917</a></li>
+</ul></li>
+<li>crash -&gt; DoS due to improper handling of character encoding - if a remote
+user specified an invalid encoding it could cause znc to crash</li>
+<li>Fixed to fallback to utf-8 if unknown encoding specified</li>
+</ul>
+
+<h3 id="usn-3951-1-dovecot-vulnerability">[<a href="https://usn.ubuntu.com/3951-1/">USN-3951-1</a>] Dovecot vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10691">CVE-2019-10691</a></li>
+</ul></li>
+<li>Only affects Dovecot 2.3 and hence only Cosmic, Disco, Eoan etc</li>
+<li>Improper handling of invalid utf-8 username in JSON encoding could cause
+the authentication service to crash</li>
+</ul>
+
+<h3 id="usn-3952-1-pacemaker-vulnerabilities">[<a href="https://usn.ubuntu.com/3952-1/">USN-3952-1</a>] Pacemaker vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3885">CVE-2019-3885</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16878">CVE-2018-16878</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16877">CVE-2018-16877</a></li>
+</ul></li>
+<li>Cluster resource manager - high availability and load balancing for OpenStack</li>
+<li>All discovered by Jan Pokorný - local attacker could possibly escalate
+privileges or cause a denial of service or to cause sensitive information
+to be leaked to system logs</li>
+</ul>
+
+<h3 id="usn-3953-1-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3953-1/">USN-3953-1</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11035">CVE-2019-11035</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11034">CVE-2019-11034</a></li>
+</ul></li>
+<li>php7.2 and php7.0</li>
+<li>Buffer over-read when processing certain EXIF tags - possible information
+disclosure or crash -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-3922-2-usn-3922-3-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3922-2/">USN-3922-2</a>, USN-3922-3] PHP vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Precise ESM, Trusty
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9641">CVE-2019-9641</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9640">CVE-2019-9640</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9639">CVE-2019-9639</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9638">CVE-2019-9638</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9637">CVE-2019-9637</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9675">CVE-2019-9675</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9022">CVE-2019-9022</a></li>
+</ul></li>
+<li>Most covered back in <a href="https://ubuntusecuritypodcast.org/episode-26/">Episode 26</a></li>
+</ul>
+
+<h3 id="usn-3936-2-advancecomp-vulnerability">[<a href="https://usn.ubuntu.com/3936-2/">USN-3936-2</a>] AdvanceCOMP vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9210">CVE-2019-9210</a></li>
+</ul></li>
+<li>Corresponding update for Disco - covered in <a href="https://ubuntusecuritypodcast.org/episode-27/">Episode 27</a></li>
+</ul>
+
+<h3 id="usn-3954-1-freeradius-vulnerabilities">[<a href="https://usn.ubuntu.com/3954-1/">USN-3954-1</a>] FreeRADIUS vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11235">CVE-2019-11235</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11234">CVE-2019-11234</a></li>
+</ul></li>
+<li>2 possible &ldquo;Dragonblood&rdquo; authentication bypass issues - mentioned back in
+<a href="https://ubuntusecuritypodcast.org/episode-28/">Episode 28</a> in the context of wpa_supplicant and hostapd - similar issue
+for FreeRADIUS</li>
+</ul>
+
+<h3 id="usn-3955-1-tcpflow-vulnerabilities">[<a href="https://usn.ubuntu.com/3955-1/">USN-3955-1</a>] tcpflow vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18409">CVE-2018-18409</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14938">CVE-2018-14938</a></li>
+</ul></li>
+<li>Stack based buffer overflow and an integer overflow -&gt; usual effects
+(crash -&gt; DoS / information disclosure)</li>
+</ul>
+
+<h3 id="usn-3956-1-bind-vulnerability">[<a href="https://usn.ubuntu.com/3956-1/">USN-3956-1</a>] Bind vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5743">CVE-2018-5743</a></li>
+</ul></li>
+<li>DoS - possible to bypass bind&rsquo;s limits on simultaneous TCP clients and so
+cause a DoS via excessive resource usage</li>
+</ul>
+
+<h2 id="iot-security-follow-up-with-joe-mcmanus">IoT Security follow-up with Joe McManus</h2>
+
+<ul>
+<li>Alex and Joe follow up on last episode&rsquo;s conversation about IoT and in
+particular talk about Ubuntu Core and how this has been engineered to
+address many of these common IoT security design and implementation flaws</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="ubuntu-19-dot-04-disco-dingo-released">Ubuntu 19.04 Disco Dingo Released</h3>
+
+<ul>
+<li>Released on Thursday 18th April</li>
+<li>Officially supported by Canonical for 9 months - with security fixes for
+packages in main by the security team</li>
+</ul>
+
+<h3 id="ubuntu-14-dot-04-trusty-tahr-transitions-to-extended-security-maintenance">Ubuntu 14.04 Trusty Tahr transitions to Extended Security Maintenance</h3>
+
+<ul>
+<li>Standard support period concluded on Thursday 25th April</li>
+<li>Users are encouraged to upgrade to our latest LTS release 18.04 via 16.04</li>
+<li>Extended security maintenance is now available via Ubuntu Advantage</li>
+<li><a href="https://blog.ubuntu.com/2019/02/05/ubuntu-14-04-trusty-tahr">https://blog.ubuntu.com/2019/02/05/ubuntu-14-04-trusty-tahr</a></li>
+<li><a href="https://www.ubuntu.com/esm">https://www.ubuntu.com/esm</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
+</ul>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-28/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-29\/",
+        text: "Episode 29"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
