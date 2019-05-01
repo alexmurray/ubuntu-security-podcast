@@ -34,10 +34,11 @@
 
 (defvar usp-ubuntu-releases
   '(("12.04" "Precise ESM")
-    ("14.04" "Trusty")
+    ("14.04" "Trusty ESM")
     ("16.04" "Xenial")
     ("18.04" "Bionic")
-    ("18.10" "Cosmic")))
+    ("18.10" "Cosmic")
+    ("19.04" "Disco")))
 
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
