@@ -2,9 +2,9 @@
 title = "Episode 23"
 description = "This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more."
 date = 2019-03-12
-lastmod = 2019-04-15T17:17:00+09:30
+lastmod = 2019-05-01T16:45:32+09:30
 draft = false
-weight = 1006
+weight = 1007
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E023.mp3"
