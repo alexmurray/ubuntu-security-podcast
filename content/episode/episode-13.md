@@ -2,9 +2,9 @@
 title = "Episode 13"
 description = "This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more."
 date = 2018-11-26
-lastmod = 2019-05-01T16:45:38+09:30
+lastmod = 2019-05-06T12:21:04+09:30
 draft = false
-weight = 1017
+weight = 1018
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E013.mp3"
