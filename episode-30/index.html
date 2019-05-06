@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 30" />
+<meta property="og:description" content="Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-30/" />
+
+
+
+<meta property="og:updated_time" content="2019-05-06 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-05-06 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-05-06 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 30">
+<meta itemprop="description" content="Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="687">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 30"/>
+<meta name="twitter:description" content="Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 30 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-30/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 30</h1>
+      <small>Posted on Monday, May 6, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&rsquo;s credentials database and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E030.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E030.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&rsquo;s credentials database and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>19 unique CVEs addressed</p>
+
+<h3 id="usn-3957-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/3957-1/">USN-3957-1</a>] MySQL vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2683">CVE-2019-2683</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2632">CVE-2019-2632</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2628">CVE-2019-2628</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627">CVE-2019-2627</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614">CVE-2019-2614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2592">CVE-2019-2592</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2581">CVE-2019-2581</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2566">CVE-2019-2566</a></li>
+</ul></li>
+<li>Latest upstream version 5.7.26 includes fixes for 8 different issues including:
+
+<ul>
+<li>Unauthenticated remote attacker could gain complete access to all MySQL server data</li>
+<li>Multiple versions of privileged attacker could hang / crash MySQL server</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3958-1-gstreamer-base-plugins-vulnerability">[<a href="https://usn.ubuntu.com/3958-1/">USN-3958-1</a>] GStreamer Base Plugins vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9928">CVE-2019-9928</a></li>
+</ul></li>
+<li>Heap based buffer overflow in RTSP connection parser - could allow a
+malicious server to gain remote code execution on the client - session id
+can contain attributes separated by semi-colons - would assume when
+encountering a semi-colon that this delimits the maximum size of the
+session id - however the session id has a maximum size of 512 bytes -
+would overflow by using the user-supplied session id length rather than
+sticking to the maximum structure length - changed to only parse up to
+the maximum size of the structure to ensure we then don&rsquo;t overflow when
+copying</li>
+</ul>
+
+<h3 id="usn-3959-1-evince-vulnerability">[<a href="https://usn.ubuntu.com/3959-1/">USN-3959-1</a>] Evince vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11459">CVE-2019-11459</a></li>
+</ul></li>
+<li>Failed to check return values when calling functions for libTIFF - these
+return the pixel data from an embedded TIFF image - on failure would end
+up rendering uninitialised memory rather than the TIFF image - fixed to
+check return values and bail out on error</li>
+</ul>
+
+<h3 id="usn-3960-1-wavpack-vulnerability">[<a href="https://usn.ubuntu.com/3960-1/">USN-3960-1</a>] WavPack vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11498">CVE-2019-11498</a></li>
+</ul></li>
+<li>Fuzzing via valgrind - found if no sample rate was specified then a stack
+declared but uninitialized value would be used - could cause a crash etc
+since could be anything - fixed to initialise it to 0 and to check if
+still zero before proceeding to process</li>
+</ul>
+
+<h3 id="usn-3961-1-dovecot-vulnerabilities">[<a href="https://usn.ubuntu.com/3961-1/">USN-3961-1</a>] Dovecot vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11499">CVE-2019-11499</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11494">CVE-2019-11494</a></li>
+</ul></li>
+<li>Two issues related to authentication in recent versions of dovecot - if
+client aborts authentication the serer could crash due to a NULL pointer
+dereference, and if using TLS but send an invalid authentication message
+could crash as well</li>
+</ul>
+
+<h3 id="usn-3962-1-libpng-vulnerability">[<a href="https://usn.ubuntu.com/3962-1/">USN-3962-1</a>] libpng vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+</ul></li>
+<li>Use after free in png image cleanup - originally was called under
+png_safe_execute() - this is an internal function which itself calls
+png_image_free() - so after freeing the image would free it a second time
+in certain conditions - changed to just call the free function directly
+rather than via png_safe_execute()</li>
+</ul>
+
+<h3 id="usn-3963-1-memcached-vulnerability">[<a href="https://usn.ubuntu.com/3963-1/">USN-3963-1</a>] Memcached vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11596">CVE-2019-11596</a></li>
+</ul></li>
+<li>Possible NULL pointer dereference via local command interface due to
+insufficient checks when parsing input - commands require 4 input tokens
+but only checked for 3 (off-by-one) - could allow an attacker with access
+to the command interface to crash memcached</li>
+</ul>
+
+<h3 id="usn-3953-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3953-2/">USN-3953-2</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11035">CVE-2019-11035</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11034">CVE-2019-11034</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-29/">Episode 29</a> covered these for standard supported releases - this update is
+for the ESM releases - two bugs in EXIF tag handling</li>
+</ul>
+
+<h3 id="usn-3964-1-python-gnupg-vulnerabilities">[<a href="https://usn.ubuntu.com/3964-1/">USN-3964-1</a>] python-gnupg vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6690">CVE-2019-6690</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12020">CVE-2018-12020</a></li>
+</ul></li>
+<li>Possible to trick gnupg to decrypt ciphertext other than the intended one
+when an attacker can control the passphrase to gnupg and the ciphertext
+is assumed trusted - this uses the command-interface of gnupg and passes
+the passphrase directly to it - along with the ciphertext - so if
+attacker includes newlines in the supplied passphrase can then inject
+their own ciphertext (or plaintext in the context of encryption) - fixed
+to check passphrase does not contain line-feed or carriage return
+characters</li>
+<li>Possible to trick by including what looks like the return response from
+gnupg directly in the filename to be decrypted when using verbose output
+mode - fixed by sanitising this filename first</li>
+</ul>
+
+<h2 id="discussion-with-joe-mcmanus-about-another-iot-compromise-and-dockerhub">Discussion with Joe McManus about another IoT compromise and DockerHub</h2>
+
+<ul>
+<li><a href="https://krebsonsecurity.com/2019/04/p2p-weakness-exposes-millions-of-iot-devices/">https://krebsonsecurity.com/2019/04/p2p-weakness-exposes-millions-of-iot-devices/</a></li>
+<li><a href="https://www.zdnet.com/article/over-two-million-iot-devices-vulnerable-because-of-p2p-component-flaws/">https://www.zdnet.com/article/over-two-million-iot-devices-vulnerable-because-of-p2p-component-flaws/</a></li>
+<li><a href="https://www.zdnet.com/article/docker-hub-hack-exposed-data-of-190000-users/">https://www.zdnet.com/article/docker-hub-hack-exposed-data-of-190000-users/</a></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-29/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-30\/",
+        text: "Episode 30"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
