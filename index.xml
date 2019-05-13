@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 31</title>
+      <link>https://ubuntusecuritypodcast.org/episode-31/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-31/</guid>
+      <description>Overview This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.
+This week in Ubuntu Security Updates 14 unique CVEs addressed
+[USN-3966-1] GNOME Shell vulnerability  1 CVEs addressed in Bionic, Cosmic  CVE-2019-3820  Local user could potentially bypass various restrictions of the lock screen - menu items can be activated by keyboard combinations - these could then be used to take screenshots (and fill up disk space), close windows behind the lock screen or start the screen reader which could read out the contents of windows behind the lock screen.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 30</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 19 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -39,15 +59,6 @@ This week in Ubuntu Security Updates 19 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-29/</guid>
       <description>Overview This week we look at fixes from the past two weeks including BIND, NTFS-3G, Dovecot, Pacemaker and more, plus we follow up last episodes IoT security discussion with Joe McManus talking about Ubuntu Core. Finally we cover the release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04 Trusty Tahr to Extended Security Maintenance.
 These past two weeks in Ubuntu Security Updates 53 unique CVEs addressed</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
