@@ -2,9 +2,9 @@
 title = "Episode 0"
 description = "The first ever episode of the Ubuntu Security Podcast!"
 date = 2018-08-14
-lastmod = 2019-05-13T13:09:22+09:30
+lastmod = 2019-05-20T20:34:48+09:30
 draft = false
-weight = 1032
+weight = 1033
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E000.mp3"
