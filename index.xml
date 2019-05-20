@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 May 2019 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 32</title>
+      <link>https://ubuntusecuritypodcast.org/episode-32/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-32/</guid>
+      <description>Overview This week we look at updates to cover the latest Intel CPU vulnerabilities (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review code audits.
+This week in Ubuntu Security Updates 37 unique CVEs addressed
+[USN-3972-1] PostgreSQL vulnerabilities  2 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2019-10130 CVE-2019-10129  Stores statistics for columns by sampling values from that column  Security policy allows to restrict users from viewing particular rows But sampling would not take into account security policy User could craft a leaky operator which would return the sampled data and effectively bypass the security policy Fixed to only allow non-leakproof operators to use sampled data when no relevant row security policies in place  Arbitrary server memory able to be read by executing a crafted INSERT statement on a partitioned table (only affects PostgreSQL 11 so only Disco)  [USN-3973-1] DHCP vulnerability  1 CVEs addressed in Bionic, Cosmic  CVE-2019-6470  DHCP server could crash due to mismatch in BIND internal memory management and DHCP server code BIND in Bionic + Cosmic contained a change which zeroed out an internal index to indicate it was unused - however 0 is still a valid index in the DHCP server codebase - and so this could cause a use-after free (since would be free&amp;rsquo;d, index set to 0 by BIND lib but then still used later since 0 is valid).</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 31</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
       <description>Overview Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&amp;rsquo;s credentials database and more.
 This week in Ubuntu Security Updates 19 unique CVEs addressed
 [USN-3957-1] MySQL vulnerabilities  8 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2019-2683 CVE-2019-2632 CVE-2019-2628 CVE-2019-2627 CVE-2019-2614 CVE-2019-2592 CVE-2019-2581 CVE-2019-2566  Latest upstream version 5.7.26 includes fixes for 8 different issues including:  Unauthenticated remote attacker could gain complete access to all MySQL server data Multiple versions of privileged attacker could hang / crash MySQL server   [USN-3958-1] GStreamer Base Plugins vulnerability  1 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2019-9928  Heap based buffer overflow in RTSP connection parser - could allow a malicious server to gain remote code execution on the client - session id can contain attributes separated by semi-colons - would assume when encountering a semi-colon that this delimits the maximum size of the session id - however the session id has a maximum size of 512 bytes - would overflow by using the user-supplied session id length rather than sticking to the maximum structure length - changed to only parse up to the maximum size of the structure to ensure we then don&amp;rsquo;t overflow when copying  [USN-3959-1] Evince vulnerability  1 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2019-11459  Failed to check return values when calling functions for libTIFF - these return the pixel data from an embedded TIFF image - on failure would end up rendering uninitialised memory rather than the TIFF image - fixed to check return values and bail out on error  [USN-3960-1] WavPack vulnerability  1 CVEs addressed in Bionic, Cosmic, Disco  CVE-2019-11498  Fuzzing via valgrind - found if no sample rate was specified then a stack declared but uninitialized value would be used - could cause a crash etc since could be anything - fixed to initialise it to 0 and to check if still zero before proceeding to process  [USN-3961-1] Dovecot vulnerabilities  2 CVEs addressed in Cosmic, Disco  CVE-2019-11499 CVE-2019-11494  Two issues related to authentication in recent versions of dovecot - if client aborts authentication the serer could crash due to a NULL pointer dereference, and if using TLS but send an invalid authentication message could crash as well  [USN-3962-1] libpng vulnerability  1 CVEs addressed in Bionic, Cosmic  CVE-2019-7317  Use after free in png image cleanup - originally was called under png_safe_execute() - this is an internal function which itself calls png_image_free() - so after freeing the image would free it a second time in certain conditions - changed to just call the free function directly rather than via png_safe_execute()  [USN-3963-1] Memcached vulnerability  1 CVEs addressed in Bionic, Cosmic, Disco  CVE-2019-11596  Possible NULL pointer dereference via local command interface due to insufficient checks when parsing input - commands require 4 input tokens but only checked for 3 (off-by-one) - could allow an attacker with access to the command interface to crash memcached  [USN-3953-2] PHP vulnerabilities  2 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-11035 CVE-2019-11034  Episode 29 covered these for standard supported releases - this update is for the ESM releases - two bugs in EXIF tag handling  [USN-3964-1] python-gnupg vulnerabilities  2 CVEs addressed in Bionic, Cosmic, Disco  CVE-2019-6690 CVE-2018-12020  Possible to trick gnupg to decrypt ciphertext other than the intended one when an attacker can control the passphrase to gnupg and the ciphertext is assumed trusted - this uses the command-interface of gnupg and passes the passphrase directly to it - along with the ciphertext - so if attacker includes newlines in the supplied passphrase can then inject their own ciphertext (or plaintext in the context of encryption) - fixed to check passphrase does not contain line-feed or carriage return characters Possible to trick by including what looks like the return response from gnupg directly in the filename to be decrypted when using verbose output mode - fixed by sanitising this filename first  Discussion with Joe McManus about another IoT compromise and DockerHub  https://krebsonsecurity.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardended on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>

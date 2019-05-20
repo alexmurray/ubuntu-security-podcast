@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at updates to cover the latest Intel CPU vulnerabilities
+  (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+  PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+  Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+  code audits.
+  ">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 32" />
+<meta property="og:description" content="  This week we look at updates to cover the latest Intel CPU vulnerabilities
+  (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+  PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+  Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+  code audits.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-32/" />
+
+
+
+<meta property="og:updated_time" content="2019-05-20 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-05-20 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-05-20 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 32">
+<meta itemprop="description" content="  This week we look at updates to cover the latest Intel CPU vulnerabilities
+  (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+  PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+  Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+  code audits.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="1070">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 32"/>
+<meta name="twitter:description" content="  This week we look at updates to cover the latest Intel CPU vulnerabilities
+  (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+  PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+  Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+  code audits.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 32 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-32/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 32</h1>
+      <small>Posted on Monday, May 20, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/episode/default.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at updates to cover the latest Intel CPU vulnerabilities
+  (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+  PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+  Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+  code audits.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E032.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E032.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at updates to cover the latest Intel CPU vulnerabilities
+(MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
+PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
+Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review
+code audits.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>37 unique CVEs addressed</p>
+
+<h3 id="usn-3972-1-postgresql-vulnerabilities">[<a href="https://usn.ubuntu.com/3972-1/">USN-3972-1</a>] PostgreSQL vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10130">CVE-2019-10130</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10129">CVE-2019-10129</a></li>
+</ul></li>
+<li>Stores statistics for columns by sampling values from that column
+
+<ul>
+<li>Security policy allows to restrict users from viewing particular rows</li>
+<li>But sampling would not take into account security policy</li>
+<li>User could craft a leaky operator which would return the sampled data
+and effectively bypass the security policy</li>
+<li>Fixed to only allow non-leakproof operators to use sampled data when no
+relevant row security policies in place</li>
+</ul></li>
+<li>Arbitrary server memory able to be read by executing a crafted INSERT
+statement on a partitioned table (only affects PostgreSQL 11 so only
+Disco)</li>
+</ul>
+
+<h3 id="usn-3973-1-dhcp-vulnerability">[<a href="https://usn.ubuntu.com/3973-1/">USN-3973-1</a>] DHCP vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6470">CVE-2019-6470</a></li>
+</ul></li>
+<li>DHCP server could crash due to mismatch in BIND internal memory
+management and DHCP server code</li>
+<li>BIND in Bionic + Cosmic contained a change which zeroed out an internal
+index to indicate it was unused - however 0 is still a valid index in the
+DHCP server codebase - and so this could cause a use-after free (since
+would be free&rsquo;d, index set to 0 by BIND lib but then still used later
+since 0 is valid). Instead changed to track indexes correctly to account
+for this behaviour.</li>
+</ul>
+
+<h3 id="usn-3974-1-vcftools-vulnerabilities">[<a href="https://usn.ubuntu.com/3974-1/">USN-3974-1</a>] VCFtools vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11130">CVE-2018-11130</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11129">CVE-2018-11129</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11099">CVE-2018-11099</a></li>
+</ul></li>
+<li>Tools for working with VCF files (1000 Genomes Project)</li>
+<li>Fuzzed in conjunction with AddressSanitizer in clang using crafted VCF files
+
+<ul>
+<li>Read-based heap buffer overflow - crash, DoS</li>
+<li>2 * use after free -&gt; crash, DoS / code execution</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3975-1-openjdk-vulnerabilities">[<a href="https://usn.ubuntu.com/3975-1/">USN-3975-1</a>] OpenJDK vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2698">CVE-2019-2698</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2697">CVE-2019-2697</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2684">CVE-2019-2684</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2602">CVE-2019-2602</a></li>
+</ul></li>
+<li>2 affecting both openjdk-11 and openjdk-8
+
+<ul>
+<li>CPU DoS via BigDecimal implementation operating on particular values</li>
+<li>Sandbox escape due to incorrect skeleton class selection in the RMI registry</li>
+</ul></li>
+<li>2 sandbox escapes affecting only openjdk-8 via the 2D graphics component</li>
+</ul>
+
+<h3 id="usn-3976-1-usn-3976-2-samba-vulnerability">[<a href="https://usn.ubuntu.com/3976-1/">USN-3976-1</a>, <a href="https://usn.ubuntu.com/3976-2/">USN-3976-2</a>] Samba vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16860">CVE-2018-16860</a></li>
+</ul></li>
+<li>Kerberos (as used in AD) contains an extension to allow a service to
+request a Kerberos ticket to itself on behalf of a non-Kerberos
+authenticated user (allows to use Kerberos for all internal code-paths)</li>
+<li>Can be proxied over the network so that a privileged server can proxy on
+behalf of the non-Kerberos authenticated user</li>
+<li>This proxied request contains a checksum (which can be keyed to prevent
+spoofing) - BUT this is not enforced - so an attacker can intercept the
+proxied request and rewrite the user name to any other one in the KDC AND
+replace the checksum with a simple CRC32 - as this can be computed
+without any prior knowledge</li>
+</ul>
+
+<h3 id="usn-3986-1-wireshark-vulnerabilities">[<a href="https://usn.ubuntu.com/3986-1/">USN-3986-1</a>] Wireshark vulnerabilities</h3>
+
+<ul>
+<li>9 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9214">CVE-2019-9214</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9209">CVE-2019-9209</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9208">CVE-2019-9208</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10903">CVE-2019-10903</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10901">CVE-2019-10901</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10899">CVE-2019-10899</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10896">CVE-2019-10896</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10895">CVE-2019-10895</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10894">CVE-2019-10894</a></li>
+</ul></li>
+<li>Updated to latest 2.6.8 release to fix many issues in various packet
+dissectors that would cause wireshark to crash</li>
+</ul>
+
+<h3 id="usn-3988-1-mediainfo-vulnerabilities">[<a href="https://usn.ubuntu.com/3988-1/">USN-3988-1</a>] MediaInfo vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11373">CVE-2019-11373</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11372">CVE-2019-11372</a></li>
+</ul></li>
+<li>CLI tool for reading metadata from various audio/video files</li>
+<li>2* OOB read -&gt; crash, DoS</li>
+</ul>
+
+<h3 id="lsn-0051-1-linux-kernel-vulnerability">[LSN-0051-1] Linux kernel vulnerability</h3>
+
+<ul>
+<li>4 CVEs for Microarchitectural Data Sampling (MDS) vulnerabilities
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+</ul></li>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/MDS">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/MDS</a></li>
+<li><a href="https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it">https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it</a></li>
+<li><a href="https://www.redhat.com/en/blog/deeper-look-mds-vulnerability">https://www.redhat.com/en/blog/deeper-look-mds-vulnerability</a></li>
+<li>Too invasive to be addressed by Livepatch - requires updates to the
+kernel and new microcode to fix</li>
+<li>Intel CPUs contain various microarchitectural elements - store buffers,
+load ports, fill buffers - which get used to complete architectural
+operations (read from an address etc)
+
+<ul>
+<li>4 CVEs due to the different use of these different buffers in the
+various techniques</li>
+<li>RIDL (Rogue in-flight data load) - fill buffers and load ports</li>
+<li>Fallout - store buffers</li>
+<li>ZombieLoad - independent discovery of fill-buffer variant of RIDL</li>
+</ul></li>
+<li>These get reused across operations, and in particular get reused across
+hyperthreads executing on the same CPU core</li>
+<li>A malicious process can use speculative execution sampling techniques to
+infer the contents of one of these microarchitectural buffers - so could
+see data from a process that had previously been executing on the same
+CPU core OR in the case of HT can see data from a process executing
+concurrently on the same core</li>
+<li>In the case of a single core can be fixed by first adding new behaviour
+to the unused VERW instruction to clear these buffers as a microcode
+update</li>
+<li>Then updating the Linux kernel to call this new VERW instruction when
+switching tasks, VMs etc</li>
+<li>However, does not mitigate in the case of SMT</li>
+<li>So only way to properly mitigate is to disable SMT as well</li>
+<li>In the case of virtualisation, the guest does the task switching so it
+needs to clear these buffers - update to QEMU + libvirt to expose this
+new CPU capability to the guest so that it can perform the flushing
+itself</li>
+<li>Kernel + QEMU updates also contain fixes for other CVEs</li>
+<li>Kernels updated for all supported releases including the HWE kernels</li>
+</ul>
+
+<h3 id="usn-3977-1-intel-microcode-update">[<a href="https://usn.ubuntu.com/3977-1/">USN-3977-1</a>] Intel Microcode update</h3>
+
+<ul>
+<li>4 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3978-1-qemu-update">[<a href="https://usn.ubuntu.com/3978-1/">USN-3978-1</a>] QEMU update</h3>
+
+<ul>
+<li>7 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9824">CVE-2019-9824</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5008">CVE-2019-5008</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20815">CVE-2018-20815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3979-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3979-1/">USN-3979-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>11 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9503">CVE-2019-9503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9500">CVE-2019-9500</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3887">CVE-2019-3887</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3882">CVE-2019-3882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3874">CVE-2019-3874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1999">CVE-2019-1999</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11683">CVE-2019-11683</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3980-1-usn-3980-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3980-1/">USN-3980-1</a>, <a href="https://usn.ubuntu.com/3980-2/">USN-3980-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Bionic (HWE), Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9503">CVE-2019-9503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9500">CVE-2019-9500</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3887">CVE-2019-3887</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3882">CVE-2019-3882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3874">CVE-2019-3874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16884">CVE-2018-16884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3981-1-usn-3981-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3981-1/">USN-3981-1</a>, USN-3981-2] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>9 CVEs addressed in Trusty ESM (HWE), Xenial (HWE), Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9503">CVE-2019-9503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9500">CVE-2019-9500</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3882">CVE-2019-3882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3874">CVE-2019-3874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16884">CVE-2018-16884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3982-1-usn-3982-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3982-1/">USN-3982-1</a>, <a href="https://usn.ubuntu.com/3982-2/">USN-3982-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Trusty ESM (Xenial HWE), Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3882">CVE-2019-3882</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3874">CVE-2019-3874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3983-1-usn-3983-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3983-1/">USN-3983-1</a>, <a href="https://usn.ubuntu.com/3983-2/">USN-3983-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Precise ESM (Trusty HWE), Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3984-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3984-1/">USN-3984-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3985-1-usn-3985-2-libvirt-update">[<a href="https://usn.ubuntu.com/3985-1/">USN-3985-1</a>, <a href="https://usn.ubuntu.com/3985-2/">USN-3985-2</a>] libvirt update</h3>
+
+<ul>
+<li>4 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="main-inclusion-review-security-code-audits-discussion-with-seth-arnold">Main inclusion review security code audits discussion with Seth Arnold</h3>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="security-certifications-engineer">Security Certifications Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1660658">https://boards.greenhouse.io/canonical/jobs/1660658</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-31/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-32\/",
+        text: "Episode 32"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
