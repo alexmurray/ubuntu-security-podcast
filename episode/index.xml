@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 20 May 2019 00:00:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,276 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 33</title>
+          <link>https://ubuntusecuritypodcast.org/episode-33/</link>
+          <pubDate>Mon, 27 May 2019 00:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E033.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  Updated Intel microcode for Cherry &#43; Bay Trial CPUs, fixes for
+  vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk
+  configuration of virtualised guests to mitigate speculative execution
+  vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
+  </itunes:summary>
+        <description>  Updated Intel microcode for Cherry &#43; Bay Trial CPUs, fixes for
+  vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk
+  configuration of virtualised guests to mitigate speculative execution
+  vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
+  </description>
+        <googleplay:description>  Updated Intel microcode for Cherry &#43; Bay Trial CPUs, fixes for
+  vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk
+  configuration of virtualised guests to mitigate speculative execution
+  vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>Updated Intel microcode for Cherry + Bay Trial CPUs, fixes for
+vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk
+configuration of virtualised guests to mitigate speculative execution
+vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>43 unique CVEs addressed</p>
+
+<h3 id="usn-3977-2-intel-microcode-update">[<a href="https://usn.ubuntu.com/3977-2/">USN-3977-2</a>] Intel Microcode update</h3>
+
+<ul>
+<li>4 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+<li>Corresponding Intel microcode updates for Cherry Trail and Bay Trail CPU families</li>
+</ul>
+
+<h3 id="usn-3989-1-libraw-vulnerabilities">[<a href="https://usn.ubuntu.com/3989-1/">USN-3989-1</a>] LibRaw vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5819">CVE-2018-5819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5818">CVE-2018-5818</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5817">CVE-2018-5817</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20365">CVE-2018-20365</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20364">CVE-2018-20364</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20363">CVE-2018-20363</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20337">CVE-2018-20337</a></li>
+</ul></li>
+<li>Multiple issues fixed:
+
+<ul>
+<li>2*NULL pointer dereference</li>
+<li>Heap-based buffer overflow</li>
+<li>Stack-based buffer overflow</li>
+<li>3 different cases of possible infinite loop - CPU DoS</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3990-1-urllib3-vulnerabilities">[<a href="https://usn.ubuntu.com/3990-1/">USN-3990-1</a>] urllib3 vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11324">CVE-2019-11324</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11236">CVE-2019-11236</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20060">CVE-2018-20060</a></li>
+</ul></li>
+<li>When validating certs for HTTPS, could specify a set of certs to validate
+against - however it would always include the system CA certs as well -
+so could validate successfully even if cert is not in chain of explicitly
+desired set - fixed to NOT include system certs in this case</li>
+<li>Possible CRLF injection</li>
+<li>Would possibly expose HTTP authorization credentials across different
+origin hosts as after authenticating, if being redirected to a different
+origin host, would still include the Authorization header from the old
+host to the new host - fixed by ensuring this defaults to being off</li>
+</ul>
+
+<h3 id="usn-3991-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3991-1/">USN-3991-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>17 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816">CVE-2019-9816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698">CVE-2019-11698</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11697">CVE-2019-11697</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9821">CVE-2019-9821</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820">CVE-2019-9820</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819">CVE-2019-9819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817">CVE-2019-9817</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9814">CVE-2019-9814</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800">CVE-2019-9800</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11701">CVE-2019-11701</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11699">CVE-2019-11699</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11696">CVE-2019-11696</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11695">CVE-2019-11695</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693">CVE-2019-11693</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692">CVE-2019-11692</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691">CVE-2019-11691</a></li>
+</ul></li>
+<li>Latest upstream Firefox release (67.0)</li>
+<li>Includes fixes for various issues including:
+
+<ul>
+<li>DoS, spoofing of browser UI, tricking users into launching local
+executables, XSS and RCE</li>
+<li>Tricking users into installing a malicious add-on by disabling the UI prompt</li>
+<li>History exposure via bookmark handling</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3566-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3566-2/">USN-3566-2</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10712">CVE-2016-10712</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11362">CVE-2017-11362</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12933">CVE-2017-12933</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11036">CVE-2019-11036</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20783">CVE-2018-20783</a></li>
+</ul></li>
+<li>In February 2018, and March 2018, released updates for PHP5 in Trusty
+fixing multiple CVEs - this update is a corresponding update which fixes
+some new CVEs in both Precise ESM and Trusty ESM and some of the same
+older CVEs in Precise ESM.</li>
+</ul>
+
+<h3 id="usn-3992-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3992-1/">USN-3992-1</a>] WebKitGTK+ vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8615">CVE-2019-8615</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8607">CVE-2019-8607</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8595">CVE-2019-8595</a></li>
+</ul></li>
+<li>New upstream release (2.24.2) - like most WebKitGTK+ updates, contains
+little information on the new vulnerabilities - so assume the worst -
+DoS, XSS, RCE</li>
+<li>Used by GNOME Shell for captive portal handling etc</li>
+</ul>
+
+<h3 id="usn-3993-1-usn-3993-2-curl-vulnerabilities">[<a href="https://usn.ubuntu.com/3993-1/">USN-3993-1</a>, <a href="https://usn.ubuntu.com/3993-2/">USN-3993-2</a>] curl vulnerabilities</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic and Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5436">CVE-2019-5436</a></li>
+</ul></li>
+<li>TFTP receive heap-based buffer overflow</li>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5435">CVE-2019-5435</a></li>
+</ul></li>
+<li>Integer overflow for 32-bit arches when handling a very large URL (&gt;2GB)
+via the libcurl API (curl_url_set())</li>
+</ul>
+
+<h3 id="usn-3957-2-mariadb-vulnerabilities">[<a href="https://usn.ubuntu.com/3957-2/">USN-3957-2</a>] MariaDB vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627">CVE-2019-2627</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614">CVE-2019-2614</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-30/">Episode 30</a> mentioned an update for MariaDB for the standard support
+releases fixing 8 CVEs - 2 of those applied to MariaDB in Trusty ESM -
+both where a privileged attacker can crash server</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="clarifications-to-documentation-regarding-latest-intel-mds-vulnerabilities">Clarifications to documentation regarding latest Intel MDS vulnerabilities</h3>
+
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown/TechFAQ">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown/TechFAQ</a></li>
+<li>Updated to describe situation when doing virtualisation:
+
+<ul>
+<li>To enable guest to mitigate various speculative execution
+vulnerabilities, need to ensure the guest CPU emulates the various CPU
+features (such as pcid, ssbd etc).</li>
+<li>Depends on workloads - if running untrusted code in guests or not etc.</li>
+<li>Previously QEMU would define various CPU models such as Broadwell-IBRS
+which would include support for this emulation. However, most of the
+newer features ssbd, md_clear etc are not included in these CPU models.</li>
+<li>So instead need to explicitly enable them - this can be done in a few ways:
+
+<ul>
+<li>Can just passthrough host CPU features directly - recommended
+approach if NOT going to migrating guests across hosts (since if has
+different features will cease to work)</li>
+<li>Otherwise manually enable features directly as a subset of the
+supported features from all the various hosts in your datacenter -
+depending on whether using QEMU on the command-line or libvirt to
+configure has different ways to specify this but same idea for both</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h4 id="security-team-plans-for-19-dot-10-development-cycle">Security Team plans for 19.10 development cycle</h4>
+
+<ul>
+<li>19.10 cycle roadmap meeting was held in Lyon a 2 weeks ago - each Ubuntu
+team presented on the progress etc from the 19.04 cycle as well as their
+plans for the 19.10 cycle</li>
+<li>Security team highlights for 19.10:
+
+<ul>
+<li>Automate more parts of our processes around triage of code reviews,
+reactive package updates etc</li>
+<li>Review and incorporate KSPP recommendations for kernel hardening</li>
+<li>GCC -fstack-clash-protection and -fcf-protection as default</li>
+<li>Various snapd enhancements (daemon user, OpenGL support, audio
+migration)</li>
+<li>AppArmor features - prompting, more groundwork for fine-grained network
+mediation</li>
+</ul></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="security-certifications-engineer">Security Certifications Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1660658">https://boards.greenhouse.io/canonical/jobs/1660658</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/episode/default.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E033.mp3" length="13391530" type="audio/mpeg" /><itunes:duration>13:56</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 32</title>
           <link>https://ubuntusecuritypodcast.org/episode-32/</link>
@@ -883,7 +1153,7 @@ question thereby violating the security policy</li>
 policy violation</li>
 </ul>
 
-<h3 id="usn-3948-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3948-1/">USN-3948-1</a>] WebKitGTK+ vulnerabilities</h3>
+<h3 id="usn-3948-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3948-1/">USN-3948-1</a>] WebKitGTK+ vulnerabilities</h3>
 
 <ul>
 <li>14 CVEs addressed in Bionic, Cosmic
@@ -2981,7 +3251,7 @@ various Ubuntu kernel configurations</li>
 </ul></li>
 </ul>
 
-<h3 id="usn-3889-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3889-1/">USN-3889-1</a>] WebKitGTK+ vulnerabilities</h3>
+<h3 id="usn-3889-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3889-1/">USN-3889-1</a>] WebKitGTK+ vulnerabilities</h3>
 
 <ul>
 <li>2 CVEs addressed in Bionic, Cosmic
@@ -3937,7 +4207,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 <li>Thunderbird will automatically use WKD via GnuPG to lookup missing keys so allows easy exploitation</li>
 </ul>
 
-<h3 id="usn-3854-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3854-1/">USN-3854-1</a>] WebKitGTK+ vulnerabilities</h3>
+<h3 id="usn-3854-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3854-1/">USN-3854-1</a>] WebKitGTK+ vulnerabilities</h3>
 
 <ul>
 <li>1 CVEs addressed in Bionic, Cosmic
@@ -4643,7 +4913,7 @@ to signed - INT_MAX -&gt; -ve -&gt; OOB read - crash / DoS
 <li>Null pointer dereference when reading more than 256MB of LDAP entries - DoS crash</li>
 </ul>
 
-<h3 id="usn-3828-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3828-1/">USN-3828-1</a>] WebKitGTK+ vulnerabilities</h3>
+<h3 id="usn-3828-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3828-1/">USN-3828-1</a>] WebKitGTK+ vulnerabilities</h3>
 
 <ul>
 <li>3 CVEs addressed in Bionic, Cosmic
@@ -6181,7 +6451,7 @@ the system package so weren&rsquo;t affected</li>
 <li>Out of bounds read leading to remote crash -&gt; DoS</li>
 </ul>
 
-<h3 id="usn-3781-1-webkitgtk-vulnerabilities">[<a href="https://usn.ubuntu.com/3781-1/">USN-3781-1</a>] WebKitGTK+ vulnerabilities</h3>
+<h3 id="usn-3781-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3781-1/">USN-3781-1</a>] WebKitGTK+ vulnerabilities</h3>
 
 <ul>
 <li>24 CVEs addressed in Bionic
@@ -7586,7 +7856,7 @@ boot for some hardware configurations</li>
 <li>This is corresponding fix for Precise ESM</li>
 </ul>
 
-<h3 id="webkitgtk-vulnerabilities--usn-3743-1">WebKitGTK+ vulnerabilities (<a href="https://usn.ubuntu.com/3743-1/">USN-3743-1</a>)</h3>
+<h3 id="webkitgtk-plus-vulnerabilities--usn-3743-1">WebKitGTK+ vulnerabilities (<a href="https://usn.ubuntu.com/3743-1/">USN-3743-1</a>)</h3>
 
 <ul>
 <li>14 CVEs fixed in web content renderer used in many desktop apps
