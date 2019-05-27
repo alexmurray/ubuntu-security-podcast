@@ -6,9 +6,9 @@ description = """
   Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
   """
 date = 2018-09-24
-lastmod = 2019-05-20T20:34:41+09:30
+lastmod = 2019-05-27T20:03:03+09:30
 draft = false
-weight = 1028
+weight = 1029
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E005.mp3"

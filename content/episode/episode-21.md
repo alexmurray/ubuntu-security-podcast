@@ -2,9 +2,9 @@
 title = "Episode 21"
 description = "Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team."
 date = 2019-02-21
-lastmod = 2019-05-20T20:34:17+09:30
+lastmod = 2019-05-27T20:02:39+09:30
 draft = false
-weight = 1012
+weight = 1013
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E021.mp3"
@@ -42,7 +42,7 @@ Double episode covering the security updates from the last 2 weeks, including sn
     -   Also low impact since user has authority anyway
 
 
-### [[USN-3889-1](https://usn.ubuntu.com/3889-1/)] WebKitGTK+ vulnerabilities {#usn-3889-1-webkitgtk-vulnerabilities}
+### [[USN-3889-1](https://usn.ubuntu.com/3889-1/)] WebKitGTK+ vulnerabilities {#usn-3889-1-webkitgtk-plus-vulnerabilities}
 
 -   2 CVEs addressed in Bionic, Cosmic
     -   [CVE-2019-6215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6215)

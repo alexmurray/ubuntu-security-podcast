@@ -2,9 +2,9 @@
 title = "Episode 1"
 description = "Another week, another speculative execution vulnerablity... and more!"
 date = 2018-08-20
-lastmod = 2019-05-20T20:34:47+09:30
+lastmod = 2019-05-27T20:03:08+09:30
 draft = false
-weight = 1032
+weight = 1033
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E001.mp3"
@@ -99,7 +99,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 -   This is corresponding fix for Precise ESM
 
 
-### WebKitGTK+ vulnerabilities ([USN-3743-1](https://usn.ubuntu.com/3743-1/)) {#webkitgtk-vulnerabilities--usn-3743-1}
+### WebKitGTK+ vulnerabilities ([USN-3743-1](https://usn.ubuntu.com/3743-1/)) {#webkitgtk-plus-vulnerabilities--usn-3743-1}
 
 -   14 CVEs fixed in web content renderer used in many desktop apps
     -   [CVE-2018-12911](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12911)

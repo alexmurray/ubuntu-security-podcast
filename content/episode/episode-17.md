@@ -2,9 +2,9 @@
 title = "Episode 17"
 description = "First episode of 2019! This week we look \"System Down\" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call."
 date = 2019-01-22
-lastmod = 2019-05-20T20:34:24+09:30
+lastmod = 2019-05-27T20:02:46+09:30
 draft = false
-weight = 1016
+weight = 1017
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E017.mp3"
@@ -108,7 +108,7 @@ First episode of 2019! This week we look "System Down" in systemd, as well as up
 -   Thunderbird will automatically use WKD via GnuPG to lookup missing keys so allows easy exploitation
 
 
-### [[USN-3854-1](https://usn.ubuntu.com/3854-1/)] WebKitGTK+ vulnerabilities {#usn-3854-1-webkitgtk-vulnerabilities}
+### [[USN-3854-1](https://usn.ubuntu.com/3854-1/)] WebKitGTK+ vulnerabilities {#usn-3854-1-webkitgtk-plus-vulnerabilities}
 
 -   1 CVEs addressed in Bionic, Cosmic
     -   [CVE-2018-4437](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4437)

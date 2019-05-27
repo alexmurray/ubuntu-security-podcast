@@ -2,9 +2,9 @@
 title = "Episode 14"
 description = "This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise."
 date = 2018-12-03
-lastmod = 2019-05-20T20:34:28+09:30
+lastmod = 2019-05-27T20:02:50+09:30
 draft = false
-weight = 1019
+weight = 1020
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E014.mp3"
@@ -65,7 +65,7 @@ This week we look at some details of the 32 unique CVEs addressed across the sup
 -   Null pointer dereference when reading more than 256MB of LDAP entries - DoS crash
 
 
-### [[USN-3828-1](https://usn.ubuntu.com/3828-1/)] WebKitGTK+ vulnerabilities {#usn-3828-1-webkitgtk-vulnerabilities}
+### [[USN-3828-1](https://usn.ubuntu.com/3828-1/)] WebKitGTK+ vulnerabilities {#usn-3828-1-webkitgtk-plus-vulnerabilities}
 
 -   3 CVEs addressed in Bionic, Cosmic
     -   [CVE-2018-4386](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4386)

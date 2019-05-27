@@ -8,9 +8,9 @@ description = """
   Trusty Tahr to Extended Security Maintenance.
   """
 date = 2019-04-30
-lastmod = 2019-05-20T20:34:05+09:30
+lastmod = 2019-05-27T20:02:27+09:30
 draft = false
-weight = 1004
+weight = 1005
 episode_image = "img/episode/default.png"
 explicit = "no"
 podcast_file = "USP_E029.mp3"
@@ -49,7 +49,7 @@ Trusty Tahr to Extended Security Maintenance.
     policy violation
 
 
-### [[USN-3948-1](https://usn.ubuntu.com/3948-1/)] WebKitGTK+ vulnerabilities {#usn-3948-1-webkitgtk-vulnerabilities}
+### [[USN-3948-1](https://usn.ubuntu.com/3948-1/)] WebKitGTK+ vulnerabilities {#usn-3948-1-webkitgtk-plus-vulnerabilities}
 
 -   14 CVEs addressed in Bionic, Cosmic
     -   [CVE-2019-8563](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8563)
