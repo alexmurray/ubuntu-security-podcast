@@ -7,7 +7,7 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray"
 #+HUGO_CUSTOM_FRONT_MATTER: :explicit no
-#+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png
+#+HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png
 * About
 :PROPERTIES:
 :EXPORT_FILE_NAME: about

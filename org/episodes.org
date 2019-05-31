@@ -6,13 +6,13 @@
 # ensure only a single author is listed, not an array otherwise breaks castinet theme?
 # https://github.com/kaushalmodi/ox-hugo/issues/180
 #+AUTHOR:
-#+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/episode/default.png
+#+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
 * Episode 33
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-33
 :EXPORT_DATE: 2019-05-27
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E033.mp3 :podcast_duration "13:56" :podcast_bytes "13391530" :permalink "https://ubuntusecuritypodcast.org/episode-33/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E033.mp3 :podcast_duration "13:56" :podcast_bytes "13391530" :permalink "https://ubuntusecuritypodcast.org/episode-33/"
 :END:
 #+begin_description
 Updated Intel microcode for Cherry + Bay Trial CPUs, fixes for
@@ -178,7 +178,7 @@ vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-32
 :EXPORT_DATE: 2019-05-20
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E032.mp3 :podcast_duration "23:58" :podcast_bytes "23243580" :permalink "https://ubuntusecuritypodcast.org/episode-32/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E032.mp3 :podcast_duration "23:58" :podcast_bytes "23243580" :permalink "https://ubuntusecuritypodcast.org/episode-32/"
 :END:
 #+begin_description
 This week we look at updates to cover the latest Intel CPU vulnerabilities
@@ -421,7 +421,7 @@ code audits.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-31
 :EXPORT_DATE: 2019-05-13
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E031.mp3 :podcast_duration "22:14" :podcast_bytes "21345723" :permalink "https://ubuntusecuritypodcast.org/episode-31/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E031.mp3 :podcast_duration "22:14" :podcast_bytes "21345723" :permalink "https://ubuntusecuritypodcast.org/episode-31/"
 :END:
 #+begin_description
 This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.
@@ -533,7 +533,7 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-30
 :EXPORT_DATE: 2019-05-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E030.mp3 :podcast_duration "20:48" :podcast_bytes "19971473" :permalink "https://ubuntusecuritypodcast.org/episode-30/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E030.mp3 :podcast_duration "20:48" :podcast_bytes "19971473" :permalink "https://ubuntusecuritypodcast.org/episode-30/"
 :END:
 #+begin_description
 Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub's credentials database and more.
@@ -652,7 +652,7 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-29
 :EXPORT_DATE: 2019-04-30
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E029.mp3 :podcast_duration "21:03" :podcast_bytes "20214308" :permalink "https://ubuntusecuritypodcast.org/episode-29/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E029.mp3 :podcast_duration "21:03" :podcast_bytes "20214308" :permalink "https://ubuntusecuritypodcast.org/episode-29/"
 :END:
 #+begin_description
 This week we look at fixes from the past two weeks including BIND, NTFS-3G,
@@ -839,7 +839,7 @@ Trusty Tahr to Extended Security Maintenance.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-28
 :EXPORT_DATE: 2019-04-15
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E028.mp3 :podcast_duration "21:44" :podcast_bytes "20878863" :permalink "https://ubuntusecuritypodcast.org/episode-28/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E028.mp3 :podcast_duration "21:44" :podcast_bytes "20878863" :permalink "https://ubuntusecuritypodcast.org/episode-28/"
 :END:
 #+begin_description
 This week we look at updates for vulnerabilities in wpa_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).
@@ -996,7 +996,7 @@ This week we look at updates for vulnerabilities in wpa_supplicant, Samba, syste
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-27
 :EXPORT_DATE: 2019-04-08
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E027.mp3 :podcast_duration "29:53" :podcast_bytes "28697625" :permalink "https://ubuntusecuritypodcast.org/episode-27/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E027.mp3 :podcast_duration "29:53" :podcast_bytes "28697625" :permalink "https://ubuntusecuritypodcast.org/episode-27/"
 :END:
 #+begin_description
 Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.
@@ -1231,7 +1231,7 @@ Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the L
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-26
 :EXPORT_DATE: 2019-04-01
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E026.mp3 :podcast_duration "20:14" :podcast_bytes "19433142" :permalink "https://ubuntusecuritypodcast.org/episode-26/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E026.mp3 :podcast_duration "20:14" :podcast_bytes "19433142" :permalink "https://ubuntusecuritypodcast.org/episode-26/"
 :END:
 #+begin_description
 This week we look security updates for a heap of packages including
@@ -1448,7 +1448,7 @@ more.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-25
 :EXPORT_DATE: 2019-03-25
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E025.mp3 :podcast_duration "14:44" :podcast_bytes "14157243" :permalink "https://ubuntusecuritypodcast.org/episode-25/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E025.mp3 :podcast_duration "14:44" :podcast_bytes "14157243" :permalink "https://ubuntusecuritypodcast.org/episode-25/"
 :END:
 #+begin_description
 Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.
@@ -1605,7 +1605,7 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-24
 :EXPORT_DATE: 2019-03-19
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E024.mp3 :podcast_duration "13:20" :podcast_bytes "12816012" :permalink "https://ubuntusecuritypodcast.org/episode-24/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E024.mp3 :podcast_duration "13:20" :podcast_bytes "12816012" :permalink "https://ubuntusecuritypodcast.org/episode-24/"
 :END:
 #+begin_description
 A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
@@ -1724,7 +1724,7 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-23
 :EXPORT_DATE: 2019-03-12
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E023.mp3 :podcast_duration "13:10" :podcast_bytes "12641723" :permalink "https://ubuntusecuritypodcast.org/episode-23/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E023.mp3 :podcast_duration "13:10" :podcast_bytes "12641723" :permalink "https://ubuntusecuritypodcast.org/episode-23/"
 :END:
 #+begin_description
 This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.
@@ -1811,7 +1811,7 @@ This week we look at security updates for the Linux kernel, PHP and NVIDIA drive
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-22
 :EXPORT_DATE: 2019-03-04
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E022.mp3 :podcast_duration "15:57" :podcast_bytes "15316244" :permalink "https://ubuntusecuritypodcast.org/episode-22/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E022.mp3 :podcast_duration "15:57" :podcast_bytes "15316244" :permalink "https://ubuntusecuritypodcast.org/episode-22/"
 :END:
 #+begin_description
 This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.
@@ -1928,7 +1928,7 @@ This week we cover security updates including Firefox, Thunderbird, OpenSSL and 
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-21
 :EXPORT_DATE: 2019-02-21
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E021.mp3 :podcast_duration "17:33" :podcast_bytes "16856841" :permalink "https://ubuntusecuritypodcast.org/episode-21/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E021.mp3 :podcast_duration "17:33" :podcast_bytes "16856841" :permalink "https://ubuntusecuritypodcast.org/episode-21/"
 :END:
 #+begin_description
 Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.
@@ -2035,7 +2035,7 @@ Double episode covering the security updates from the last 2 weeks, including sn
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-20
 :EXPORT_DATE: 2019-02-11
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E020.mp3 :podcast_duration "16:55" :podcast_bytes "16242441" :permalink "https://ubuntusecuritypodcast.org/episode-20/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E020.mp3 :podcast_duration "16:55" :podcast_bytes "16242441" :permalink "https://ubuntusecuritypodcast.org/episode-20/"
 :END:
 #+begin_description
 This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.
@@ -2176,7 +2176,7 @@ This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, cu
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-19
 :EXPORT_DATE: 2019-02-04
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E019.mp3 :podcast_duration "14:49" :podcast_bytes "14236655" :permalink "https://ubuntusecuritypodcast.org/episode-19/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E019.mp3 :podcast_duration "14:49" :podcast_bytes "14236655" :permalink "https://ubuntusecuritypodcast.org/episode-19/"
 :END:
 #+begin_description
 This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in [[https://ubuntusecuritypodcast.org/episode-17/][Episode 17]].
@@ -2305,7 +2305,7 @@ This week we look at updates to the Linux kernel in preparation for the 18.04.2 
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-18
 :EXPORT_DATE: 2019-01-29
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E018.mp3 :podcast_duration "14:27" :podcast_bytes "13886823" :permalink "https://ubuntusecuritypodcast.org/episode-18/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E018.mp3 :podcast_duration "14:27" :podcast_bytes "13886823" :permalink "https://ubuntusecuritypodcast.org/episode-18/"
 :END:
 #+begin_description
 This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.
@@ -2437,7 +2437,7 @@ This week we look at some details of the 46 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-17
 :EXPORT_DATE: 2019-01-22
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E017.mp3 :podcast_duration "21:45" :podcast_bytes "20887640" :permalink "https://ubuntusecuritypodcast.org/episode-17/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E017.mp3 :podcast_duration "21:45" :podcast_bytes "20887640" :permalink "https://ubuntusecuritypodcast.org/episode-17/"
 :END:
 #+begin_description
 First episode of 2019! This week we look "System Down" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.
@@ -2624,7 +2624,7 @@ First episode of 2019! This week we look "System Down" in systemd, as well as up
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-16
 :EXPORT_DATE: 2018-12-17
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E016.mp3 :podcast_duration "10:41" :podcast_bytes "10257266" :permalink "https://ubuntusecuritypodcast.org/episode-16/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E016.mp3 :podcast_duration "10:41" :podcast_bytes "10257266" :permalink "https://ubuntusecuritypodcast.org/episode-16/"
 :END:
 #+begin_description
 Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP & more, plus we discuss the security of home routers as evaluated by C-ITL.
@@ -2725,7 +2725,7 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-15
 :EXPORT_DATE: 2018-12-10
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E015.mp3 :podcast_duration "17:08" :podcast_bytes "16451003" :permalink "https://ubuntusecuritypodcast.org/episode-15/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E015.mp3 :podcast_duration "17:08" :podcast_bytes "16451003" :permalink "https://ubuntusecuritypodcast.org/episode-15/"
 :END:
 #+begin_description
 Security updates for 29 CVEs including Perl, the kernel, OpenSSL (PortSmash)
@@ -2871,7 +2871,7 @@ sure you always have the latest security updates by using unattended-upgrades.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-14
 :EXPORT_DATE: 2018-12-03
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E014.mp3 :podcast_duration "21:53" :podcast_bytes "21013028" :permalink "https://ubuntusecuritypodcast.org/episode-14/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E014.mp3 :podcast_duration "21:53" :podcast_bytes "21013028" :permalink "https://ubuntusecuritypodcast.org/episode-14/"
 :END:
 #+begin_description
 This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.
@@ -3025,7 +3025,7 @@ This week we look at some details of the 32 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-13
 :EXPORT_DATE: 2018-11-26
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E013.mp3 :podcast_duration "08:30" :podcast_bytes "8162872" :permalink "https://ubuntusecuritypodcast.org/episode-13/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E013.mp3 :podcast_duration "08:30" :podcast_bytes "8162872" :permalink "https://ubuntusecuritypodcast.org/episode-13/"
 :END:
 #+begin_description
 This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.
@@ -3096,7 +3096,7 @@ This week we look at some details of the 16 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-12
 :EXPORT_DATE: 2018-11-19
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E012.mp3 :podcast_duration "20:08" :podcast_bytes "19337429" :permalink "https://ubuntusecuritypodcast.org/episode-12/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E012.mp3 :podcast_duration "20:08" :podcast_bytes "19337429" :permalink "https://ubuntusecuritypodcast.org/episode-12/"
 :END:
 #+begin_description
 This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.
@@ -3266,7 +3266,7 @@ more.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-11
 :EXPORT_DATE: 2018-11-12
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E011.mp3 :podcast_duration "13:03" :podcast_bytes "12529292" :permalink "https://ubuntusecuritypodcast.org/episode-11/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E011.mp3 :podcast_duration "13:03" :podcast_bytes "12529292" :permalink "https://ubuntusecuritypodcast.org/episode-11/"
 :END:
 #+begin_description
 This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.
@@ -3387,7 +3387,7 @@ This week we look at some details of the 23 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-10
 :EXPORT_DATE: 2018-11-05
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E010.mp3 :podcast_duration "09:25" :podcast_bytes "9041423" :permalink "https://ubuntusecuritypodcast.org/episode-10/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E010.mp3 :podcast_duration "09:25" :podcast_bytes "9041423" :permalink "https://ubuntusecuritypodcast.org/episode-10/"
 :END:
 #+begin_description
 This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.
@@ -3474,7 +3474,7 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-9
 :EXPORT_DATE: 2018-10-30
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E009.mp3 :podcast_duration "11:59" :podcast_bytes "11511142" :permalink "https://ubuntusecuritypodcast.org/episode-9/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E009.mp3 :podcast_duration "11:59" :podcast_bytes "11511142" :permalink "https://ubuntusecuritypodcast.org/episode-9/"
 :END:
 #+begin_description
 This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665][CVE-2018-14665]]), plus Cosmic is now officially supported by the Security Team.
@@ -3633,7 +3633,7 @@ This week we look at some details of the 61 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-8
 :EXPORT_DATE: 2018-10-22
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E008.mp3 :podcast_duration "9:10" :podcast_bytes "8806111" :permalink "https://ubuntusecuritypodcast.org/episode-8/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E008.mp3 :podcast_duration "9:10" :podcast_bytes "8806111" :permalink "https://ubuntusecuritypodcast.org/episode-8/"
 :END:
 #+begin_description
 This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.
@@ -3718,7 +3718,7 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-7
 :EXPORT_DATE: 2018-10-16
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E007.mp3 :podcast_duration "11:15" :podcast_bytes "10803956" :permalink "https://ubuntusecuritypodcast.org/episode-7/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E007.mp3 :podcast_duration "11:15" :podcast_bytes "10803956" :permalink "https://ubuntusecuritypodcast.org/episode-7/"
 :END:
 #+begin_description
 This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.
@@ -3900,7 +3900,7 @@ This week we look at some details of the 78 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-6
 :EXPORT_DATE: 2018-10-02
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E006.mp3 :podcast_duration "11:56" :podcast_bytes "11472272" :permalink "https://ubuntusecuritypodcast.org/episode-6/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E006.mp3 :podcast_duration "11:56" :podcast_bytes "11472272" :permalink "https://ubuntusecuritypodcast.org/episode-6/"
 :END:
 #+begin_description
 This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.
@@ -3969,7 +3969,7 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-5
 :EXPORT_DATE: 2018-09-24
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E005.mp3 :podcast_duration "15:45" :podcast_bytes "15121056" :permalink "https://ubuntusecuritypodcast.org/episode-5/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E005.mp3 :podcast_duration "15:45" :podcast_bytes "15121056" :permalink "https://ubuntusecuritypodcast.org/episode-5/"
 :END:
 #+begin_description
 This week we look at some details of the 43 unique CVEs addressed across the
@@ -4107,7 +4107,7 @@ Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-4
 :EXPORT_DATE: 2018-09-10
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E004.mp3 :podcast_duration "10:36" :podcast_bytes "10189138" :permalink "https://ubuntusecuritypodcast.org/episode-4/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E004.mp3 :podcast_duration "10:36" :podcast_bytes "10189138" :permalink "https://ubuntusecuritypodcast.org/episode-4/"
 :END:
 #+begin_description
 A quieter week in package updates - this week we look at some details of the 9
@@ -4188,7 +4188,7 @@ various hardening guides for Ubuntu.
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-3
 :EXPORT_DATE: 2018-09-03
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E003.mp3 :podcast_duration "10:02" :podcast_bytes "9633252" :permalink "https://ubuntusecuritypodcast.org/episode-3/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E003.mp3 :podcast_duration "10:02" :podcast_bytes "9633252" :permalink "https://ubuntusecuritypodcast.org/episode-3/"
 :END:
 #+begin_description
 This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.
@@ -4296,7 +4296,7 @@ This week we look at 29 unique CVEs addressed across the supported Ubuntu releas
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-2
 :EXPORT_DATE: 2018-08-28
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E002.mp3 :podcast_duration "08:15" :podcast_bytes "7935502" :permalink "https://ubuntusecuritypodcast.org/episode-2/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E002.mp3 :podcast_duration "08:15" :podcast_bytes "7935502" :permalink "https://ubuntusecuritypodcast.org/episode-2/"
 :END:
 #+begin_description
 L1TF kernel regressions, WPA2 key recovery, mirror fail and more!
@@ -4490,7 +4490,7 @@ L1TF kernel regressions, WPA2 key recovery, mirror fail and more!
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-1
 :EXPORT_DATE: 2018-08-20
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file USP_E001.mp3 :podcast_duration "10:33" :podcast_bytes "10133967" :permalink "https://ubuntusecuritypodcast.org/episode-1/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E001.mp3 :podcast_duration "10:33" :podcast_bytes "10133967" :permalink "https://ubuntusecuritypodcast.org/episode-1/"
 :END:
 #+begin_description
 Another week, another speculative execution vulnerablity... and more!
@@ -4597,7 +4597,7 @@ Another week, another speculative execution vulnerablity... and more!
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-0
 :EXPORT_DATE: 2018-08-14
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/episode/default.png :explicit no :podcast_file "USP_E000.mp3" :podcast_duration "12:42" :podcast_bytes "12202029" :permalink "https://ubuntusecuritypodcast.org/episode-0/"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file "USP_E000.mp3" :podcast_duration "12:42" :podcast_bytes "12202029" :permalink "https://ubuntusecuritypodcast.org/episode-0/"
 :END:
 #+begin_description
 The first ever episode of the Ubuntu Security Podcast!

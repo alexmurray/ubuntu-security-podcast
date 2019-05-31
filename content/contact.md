@@ -5,7 +5,7 @@ draft = false
 weight = 1002
 author = "Alex Murray"
 explicit = "no"
-episode_image = "img/episode/default.png"
+episode_image = "img/usp_logo_500.png"
 +++
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
