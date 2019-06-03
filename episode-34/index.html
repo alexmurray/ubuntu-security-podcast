@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 34" />
+<meta property="og:description" content="This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-34/" />
+
+
+
+<meta property="og:updated_time" content="2019-06-03 00:00:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-06-03 00:00:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-06-03 00:00:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 34">
+<meta itemprop="description" content="This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="747">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 34"/>
+<meta name="twitter:description" content="This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus."/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 34 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-34/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 34</h1>
+      <small>Posted on Monday, Jun 3, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E034.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E034.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>32 unique CVEs addressed</p>
+
+<h3 id="usn-3976-3-usn-3976-4-samba-regression">[<a href="https://usn.ubuntu.com/3976-3/">USN-3976-3</a>, <a href="https://usn.ubuntu.com/3976-4/">USN-3976-4</a>] Samba regression</h3>
+
+<ul>
+<li>Affecting Trusty ESM, Xenial, Bionic</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-32/">Episode 32</a> - discussed privilege escalation vuln and fix for Samba</li>
+<li>Original update caused a regression where Samba might crash - fixed</li>
+</ul>
+
+<h3 id="usn-3994-1-gnome-desktop-vulnerability">[<a href="https://usn.ubuntu.com/3994-1/">USN-3994-1</a>] gnome-desktop vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11460">CVE-2019-11460</a></li>
+</ul></li>
+<li>Thumbnailers could possibly escape bubblewrap sandbox by using TIOCSTI
+ioctl to send characters to the controlling terminals input buffer and
+hence escape the sandbox
+
+<ul>
+<li>Requires to compromise a thumbnailer in the first place so less impact</li>
+<li>Similar to <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10063">CVE-2019-10063</a> for flatpak and <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7303">CVE-2019-7303</a> for snapd</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3995-1-usn-3995-2-keepalived-vulnerability">[<a href="https://usn.ubuntu.com/3995-1/">USN-3995-1</a>, <a href="https://usn.ubuntu.com/3995-2/">USN-3995-2</a>] Keepalived vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19115">CVE-2018-19115</a></li>
+</ul></li>
+<li>Heap based buffer overflow when parsing HTTP response code - would
+potentially write an unlimited amount of attacker controlled data to the
+heap for a 10-byte long buffer</li>
+<li>Crash -&gt; DoS, RCE</li>
+<li>Fixed to properly parse and expect at most a 3 digit long response code</li>
+</ul>
+
+<h3 id="usn-3845-2-freerdp-vulnerabilities">[<a href="https://usn.ubuntu.com/3845-2/">USN-3845-2</a>] FreeRDP vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8789">CVE-2018-8789</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8788">CVE-2018-8788</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8787">CVE-2018-8787</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8786">CVE-2018-8786</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8785">CVE-2018-8785</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8784">CVE-2018-8784</a></li>
+</ul></li>
+<li>Back in December published update for FreeRDP (USN-3845-1 - <a href="https://ubuntusecuritypodcast.org/episode-16/">Episode 16</a>)
+
+<ul>
+<li>In Bionic and Cosmic freerdp2 is in main, so that update was for freerdp2</li>
+<li>This update is for freerdp (v1), which is in universe in bionic + cosmic</li>
+<li>Corresponding update</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3997-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/3997-1/">USN-3997-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>14 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18511">CVE-2018-18511</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698">CVE-2019-11698</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816">CVE-2019-9816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5798">CVE-2019-5798</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820">CVE-2019-9820</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819">CVE-2019-9819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817">CVE-2019-9817</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800">CVE-2019-9800</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797">CVE-2019-9797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693">CVE-2019-11693</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692">CVE-2019-11692</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691">CVE-2019-11691</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18511">CVE-2019-18511</a></li>
+</ul></li>
+<li>Thunderbird 60.7.0 - latest upstream release includes a heap of security fixes</li>
+<li>Most all come from Firefox (DoS, bypass same-origin restrictions or RCE)</li>
+</ul>
+
+<h3 id="usn-3996-1-gnu-screen-vulnerability">[<a href="https://usn.ubuntu.com/3996-1/">USN-3996-1</a>] GNU Screen vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-6806">CVE-2015-6806</a></li>
+</ul></li>
+<li>Old low priority issue fixed for ESM releases (fixed back in 2015
+upstream so screen in Xenial, Bionic etc not affected)</li>
+<li>Attacker could cause a crash due to stack overrun via recursion due to
+large number of repeated ANSI escape sequences in output</li>
+</ul>
+
+<h3 id="usn-3968-2-sudo-vulnerability">[<a href="https://usn.ubuntu.com/3968-2/">USN-3968-2</a>] Sudo vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-1000368">CVE-2017-1000368</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-31/">Episode 31</a> - updated sudo in xenial - corresponding update for Trusty ESM</li>
+</ul>
+
+<h3 id="usn-3998-1-evolution-data-server-vulnerability">[<a href="https://usn.ubuntu.com/3998-1/">USN-3998-1</a>] Evolution Data Server vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15587">CVE-2018-15587</a></li>
+</ul></li>
+<li>Research from Marcus Brinkmann showed it was possible to create an
+encrypted email with a zero-length encrypted section along with
+unencrypted contents which Evolution (and other email clients) would show
+as being encrypted.</li>
+<li>Mail clients call out to gpg (gnupg) to decrypt the email but are lax in
+parsing GPGs output and so confuse the whole email as being encrypted</li>
+<li>Due to SW arch of evolution, part of this fix is done in Evolution itself
+(to better highlight to the user that the email contains unencrypted
+portions) and part is done in the backend (Evolution Data Server) to
+properly parse output of gnupg</li>
+</ul>
+
+<h3 id="usn-3999-1-gnutls-vulnerabilities">[<a href="https://usn.ubuntu.com/3999-1/">USN-3999-1</a>] GnuTLS vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3836">CVE-2019-3836</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3829">CVE-2019-3829</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10846">CVE-2018-10846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10845">CVE-2018-10845</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10844">CVE-2018-10844</a></li>
+</ul></li>
+<li>3 CVEs related to &ldquo;Lucky Thirteen&rdquo; attack (originally published in 2013)
+
+<ul>
+<li>Timing attack against TLS implementations that use CBC</li>
+<li>One countermeasure was to use &ldquo;psuedo constant time&rdquo;</li>
+<li>New research showed this is not sufficient (incidentally one of the
+researchers was Adi Shamir, co-inventor of the RSA algorithm - the &ldquo;S&rdquo;
+in RSA)</li>
+</ul></li>
+<li>1 CVE from Tavis Ormandy (double-free when handling X.509 certificates) -
+crash -&gt; DoS, code execution</li>
+<li>Last CVE - uninitialized pointer could be dereferenced when handling
+certain post-handshake messages - likely crash -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-4000-1-corosync-vulnerability">[<a href="https://usn.ubuntu.com/4000-1/">USN-4000-1</a>] Corosync vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1084">CVE-2018-1084</a></li>
+</ul></li>
+<li>Integer overflow leading to a buffer overflow (read), able to be
+triggered by an unauthenticated user - crash -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-4001-1-usn-4001-2-libseccomp-vulnerability">[<a href="https://usn.ubuntu.com/4001-1/">USN-4001-1</a>, <a href="https://usn.ubuntu.com/4001-2/">USN-4001-2</a>] libseccomp vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9893">CVE-2019-9893</a></li>
+</ul></li>
+<li>Seccomp allows to write policies to act on system calls arguments via
+BPF - includes comparison operators like less than (LT) etc - Jann Horn
+discovered that on 64-bit platforms it did not generate correct BPF to
+perform comparisons correctly</li>
+<li>In this case, the updates from upstream relied on other upstream changes
+so we chose to upgrade seccomp entirely rather than try and backport the
+fixes as they were too involved and so less risk overall in upgrading the
+version than in backporting</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-about-insider-threats">Alex and Joe talk about insider threats</h3>
+
+<ul>
+<li><a href="https://threatpost.com/snapchat-privacy-blunder-piques-concerns-about-insider-threats/145074/">https://threatpost.com/snapchat-privacy-blunder-piques-concerns-about-insider-threats/145074/</a></li>
+<li><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=484738">https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=484738</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="security-certifications-engineer">Security Certifications Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1660658">https://boards.greenhouse.io/canonical/jobs/1660658</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardended on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-33/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-34\/",
+        text: "Episode 34"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
