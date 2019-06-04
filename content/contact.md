@@ -9,5 +9,5 @@ episode_image = "img/usp_logo_500.png"
 +++
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
