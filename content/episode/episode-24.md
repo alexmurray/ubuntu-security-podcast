@@ -6,7 +6,7 @@ description = """
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
   """
 date = 2019-03-19
-lastmod = 2019-06-03T16:37:47+09:30
+lastmod = 2019-06-04T09:55:03+09:30
 draft = false
 weight = 1011
 episode_image = "img/usp_logo_500.png"
@@ -157,5 +157,5 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

@@ -2,7 +2,7 @@
 title = "Episode 23"
 description = "This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more."
 date = 2019-03-12
-lastmod = 2019-06-03T16:37:49+09:30
+lastmod = 2019-06-04T09:55:04+09:30
 draft = false
 weight = 1012
 episode_image = "img/usp_logo_500.png"
@@ -115,5 +115,5 @@ This week we look at security updates for the Linux kernel, PHP and NVIDIA drive
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

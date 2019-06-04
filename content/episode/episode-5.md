@@ -6,7 +6,7 @@ description = """
   Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
   """
 date = 2018-09-24
-lastmod = 2019-06-03T16:38:17+09:30
+lastmod = 2019-06-04T09:55:20+09:30
 draft = false
 weight = 1030
 episode_image = "img/usp_logo_500.png"
@@ -204,5 +204,5 @@ Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

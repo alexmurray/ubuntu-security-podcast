@@ -7,7 +7,7 @@ description = """
   more.
   """
 date = 2019-04-01
-lastmod = 2019-06-03T16:37:44+09:30
+lastmod = 2019-06-04T09:55:01+09:30
 draft = false
 weight = 1009
 episode_image = "img/usp_logo_500.png"
@@ -259,5 +259,5 @@ more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

@@ -2,7 +2,7 @@
 title = "Episode 30"
 description = "Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub's credentials database and more."
 date = 2019-05-06
-lastmod = 2019-06-03T16:37:38+09:30
+lastmod = 2019-06-04T09:54:57+09:30
 draft = false
 weight = 1005
 episode_image = "img/usp_logo_500.png"
@@ -154,5 +154,5 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

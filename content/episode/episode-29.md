@@ -8,7 +8,7 @@ description = """
   Trusty Tahr to Extended Security Maintenance.
   """
 date = 2019-04-30
-lastmod = 2019-06-03T16:37:39+09:30
+lastmod = 2019-06-04T09:54:58+09:30
 draft = false
 weight = 1006
 episode_image = "img/usp_logo_500.png"
@@ -242,5 +242,5 @@ Trusty Tahr to Extended Security Maintenance.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

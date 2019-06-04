@@ -152,7 +152,7 @@ This week we look at security updates for Keepalived, Corosync, GnuTLS, libsecco
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 
@@ -319,7 +319,7 @@ vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 32
@@ -562,7 +562,7 @@ code audits.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 31
@@ -674,7 +674,7 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 30
@@ -794,7 +794,7 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 29
 :PROPERTIES:
@@ -980,7 +980,7 @@ Trusty Tahr to Extended Security Maintenance.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 28
@@ -1137,7 +1137,7 @@ This week we look at updates for vulnerabilities in wpa_supplicant, Samba, syste
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 27
@@ -1373,7 +1373,7 @@ Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the L
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 26
 :PROPERTIES:
@@ -1589,7 +1589,7 @@ more.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 25
@@ -1746,7 +1746,7 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 24
@@ -1866,7 +1866,7 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 23
 :PROPERTIES:
@@ -1952,7 +1952,7 @@ This week we look at security updates for the Linux kernel, PHP and NVIDIA drive
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 22
@@ -2069,7 +2069,7 @@ This week we cover security updates including Firefox, Thunderbird, OpenSSL and 
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 21
@@ -2177,7 +2177,7 @@ Double episode covering the security updates from the last 2 weeks, including sn
 ** Get in contact
 # Feel free to send us questions and we will answer in future episodes
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 20
 :PROPERTIES:
@@ -2318,7 +2318,7 @@ This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, cu
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 19
 :PROPERTIES:
@@ -2447,7 +2447,7 @@ This week we look at updates to the Linux kernel in preparation for the 18.04.2 
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 18
 :PROPERTIES:
@@ -2578,7 +2578,7 @@ This week we look at some details of the 46 unique CVEs addressed across the sup
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 17
@@ -2765,7 +2765,7 @@ First episode of 2019! This week we look "System Down" in systemd, as well as up
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 16
@@ -2866,7 +2866,7 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 15
@@ -3013,7 +3013,7 @@ sure you always have the latest security updates by using unattended-upgrades.
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 14
 :PROPERTIES:
@@ -3166,7 +3166,7 @@ This week we look at some details of the 32 unique CVEs addressed across the sup
 
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 13
@@ -3237,7 +3237,7 @@ This week we look at some details of the 16 unique CVEs addressed across the sup
 - qemu, webkitgtk
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 12
@@ -3408,7 +3408,7 @@ more.
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 11
 :PROPERTIES:
@@ -3529,7 +3529,7 @@ This week we look at some details of the 23 unique CVEs addressed across the sup
 - libmspack, systemd, gettext
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 10
 :PROPERTIES:
@@ -3615,7 +3615,7 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 9
@@ -3773,7 +3773,7 @@ This week we look at some details of the 61 unique CVEs addressed across the sup
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 # keep calm and enable automated upgrades :)
 
@@ -3860,7 +3860,7 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 7
 :PROPERTIES:
@@ -4041,7 +4041,7 @@ This week we look at some details of the 78 unique CVEs addressed across the sup
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 6
@@ -4110,7 +4110,7 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 5
@@ -4249,7 +4249,7 @@ Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 4
 :PROPERTIES:
@@ -4330,7 +4330,7 @@ various hardening guides for Ubuntu.
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 3
 :PROPERTIES:
@@ -4438,7 +4438,7 @@ This week we look at 29 unique CVEs addressed across the supported Ubuntu releas
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 2
 :PROPERTIES:
@@ -4632,7 +4632,7 @@ L1TF kernel regressions, WPA2 key recovery, mirror fail and more!
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 1
 :PROPERTIES:
@@ -4736,7 +4736,7 @@ Another week, another speculative execution vulnerablity... and more!
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 ** Special thanks
 - Thanks to Emily Ratliff - a great manager of the team (and a good friend too)
@@ -4843,6 +4843,6 @@ The first ever episode of the Ubuntu Security Podcast!
 - https://boards.greenhouse.io/canonical/jobs/1158266
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 

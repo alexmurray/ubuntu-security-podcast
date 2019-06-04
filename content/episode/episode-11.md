@@ -2,7 +2,7 @@
 title = "Episode 11"
 description = "This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more."
 date = 2018-11-12
-lastmod = 2019-06-03T16:38:08+09:30
+lastmod = 2019-06-04T09:55:14+09:30
 draft = false
 weight = 1024
 episode_image = "img/usp_logo_500.png"
@@ -164,5 +164,5 @@ This week we look at some details of the 23 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

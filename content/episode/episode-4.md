@@ -6,7 +6,7 @@ description = """
   various hardening guides for Ubuntu.
   """
 date = 2018-09-10
-lastmod = 2019-06-03T16:38:19+09:30
+lastmod = 2019-06-04T09:55:21+09:30
 draft = false
 weight = 1031
 episode_image = "img/usp_logo_500.png"
@@ -117,5 +117,5 @@ various hardening guides for Ubuntu.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

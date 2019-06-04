@@ -2,7 +2,7 @@
 title = "Episode 0"
 description = "The first ever episode of the Ubuntu Security Podcast!"
 date = 2018-08-14
-lastmod = 2019-06-03T16:38:25+09:30
+lastmod = 2019-06-04T09:55:24+09:30
 draft = false
 weight = 1035
 episode_image = "img/usp_logo_500.png"
@@ -150,5 +150,5 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

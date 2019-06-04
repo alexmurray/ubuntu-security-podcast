@@ -2,7 +2,7 @@
 title = "Episode 31"
 description = "This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more."
 date = 2019-05-13
-lastmod = 2019-06-03T16:37:36+09:30
+lastmod = 2019-06-04T09:54:56+09:30
 draft = false
 weight = 1004
 episode_image = "img/usp_logo_500.png"
@@ -145,5 +145,5 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

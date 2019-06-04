@@ -7,7 +7,7 @@ description = """
   vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
   """
 date = 2019-05-27
-lastmod = 2019-06-03T16:37:33+09:30
+lastmod = 2019-06-04T09:54:55+09:30
 draft = false
 weight = 1002
 episode_image = "img/usp_logo_500.png"
@@ -206,5 +206,5 @@ vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

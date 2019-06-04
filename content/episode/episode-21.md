@@ -2,7 +2,7 @@
 title = "Episode 21"
 description = "Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team."
 date = 2019-02-21
-lastmod = 2019-06-03T16:37:52+09:30
+lastmod = 2019-06-04T09:55:05+09:30
 draft = false
 weight = 1014
 episode_image = "img/usp_logo_500.png"
@@ -149,5 +149,5 @@ Double episode covering the security updates from the last 2 weeks, including sn
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

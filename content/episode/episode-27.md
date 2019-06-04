@@ -2,7 +2,7 @@
 title = "Episode 27"
 description = "Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more."
 date = 2019-04-08
-lastmod = 2019-06-03T16:37:42+09:30
+lastmod = 2019-06-04T09:55:00+09:30
 draft = false
 weight = 1008
 episode_image = "img/usp_logo_500.png"
@@ -273,5 +273,5 @@ Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the L
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

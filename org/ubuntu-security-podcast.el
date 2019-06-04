@@ -220,7 +220,7 @@
           (insert (concat "** Goings on in Ubuntu Security Community\n"
                           "** Get in contact\n"
                           "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
-                          "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]\n"
+                          "- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]\n"
                           "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
 (defun usp-insert-episode-link (&optional episode)

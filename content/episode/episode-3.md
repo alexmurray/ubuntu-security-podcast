@@ -2,7 +2,7 @@
 title = "Episode 3"
 description = "This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team."
 date = 2018-09-03
-lastmod = 2019-06-03T16:38:20+09:30
+lastmod = 2019-06-04T09:55:21+09:30
 draft = false
 weight = 1032
 episode_image = "img/usp_logo_500.png"
@@ -148,5 +148,5 @@ This week we look at 29 unique CVEs addressed across the supported Ubuntu releas
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

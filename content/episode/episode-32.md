@@ -8,7 +8,7 @@ description = """
   code audits.
   """
 date = 2019-05-20
-lastmod = 2019-06-03T16:37:35+09:30
+lastmod = 2019-06-04T09:54:55+09:30
 draft = false
 weight = 1003
 episode_image = "img/usp_logo_500.png"
@@ -298,5 +298,5 @@ code audits.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardended on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
