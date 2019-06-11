@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 3 Jun 2019 00:00:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,291 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 35</title>
+          <link>https://ubuntusecuritypodcast.org/episode-35/</link>
+          <pubDate>Tue, 11 Jun 2019 00:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E035.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</itunes:summary>
+        <description>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</description>
+        <googleplay:description>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>34 unique CVEs addressed</p>
+
+<h3 id="usn-4002-1-doxygen-vulnerability">[<a href="https://usn.ubuntu.com/4002-1/">USN-4002-1</a>] Doxygen vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10245">CVE-2016-10245</a></li>
+</ul></li>
+<li>Generates HTML code documentation from code comments</li>
+<li>Includes a field to search across the documentation</li>
+<li>Doesn&rsquo;t treat this as untrusted input and blindly displays the input in resulting pages
+
+<ul>
+<li>Allows possible XSS or iframe injection</li>
+</ul></li>
+<li>Fix is simple - whitelist allowed characters to avoid injection etc</li>
+</ul>
+
+<h3 id="usn-4003-1-qt-vulnerabilities">[<a href="https://usn.ubuntu.com/4003-1/">USN-4003-1</a>] Qt vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19873">CVE-2018-19873</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19870">CVE-2018-19870</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15518">CVE-2018-15518</a></li>
+</ul></li>
+<li>3 likely DoS issues:
+
+<ul>
+<li>Buffer overflow when handling invalid BMP images - didn&rsquo;t check for valid
+/ sensible width or height parameters</li>
+<li>NULL pointer dereference on malformed GIF images</li>
+<li>Double free when parsing a specially crafted (illegal format) XML
+document</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4004-1-usn-4004-2-berkeley-db-vulnerability">[<a href="https://usn.ubuntu.com/4004-1/">USN-4004-1</a>, <a href="https://usn.ubuntu.com/4004-2/">USN-4004-2</a>] Berkeley DB vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8457">CVE-2019-8457</a></li>
+</ul></li>
+<li>Contains an embedded copy of sqlite which was vulnerable to a heap-based
+out-of-bounds read when handling invalid rtree tables</li>
+</ul>
+
+<h3 id="usn-4005-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4005-1/">USN-4005-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815">CVE-2019-11815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810">CVE-2019-11810</a></li>
+</ul></li>
+<li>Reliable Datagram Sockets (RDS) module was vulnerable to a race-condition
+during network namespace cleanup that could lead to a UAF.
+
+<ul>
+<li>RDS is blacklisted by default in Ubuntu AND this is only able to be
+exploited by a local attacker</li>
+</ul></li>
+<li>NULL pointer dereference in LSI Logic MegaRAID driver</li>
+</ul>
+
+<h3 id="usn-4006-1-usn-4006-2-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4006-1/">USN-4006-1</a>, <a href="https://usn.ubuntu.com/4006-2/">USN-4006-2</a>] Linux kernel vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Cosmic &amp; Bionic HWE
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191">CVE-2019-11191</a></li>
+</ul></li>
+<li>Old a.out binary format for 32-bit platforms - so only affects i386
+kernel users, and only affects setuid a.out binaries (none in archive)</li>
+<li>Kernel would not setup permissions early enough and so could allow ASLR
+to be bypassed, weakening system protections to then more easily exploit
+some other existing vulnerablity in the given setuid a.out binary</li>
+<li>Have also disabled a.out support in general going forward as this is a
+relic of the past</li>
+</ul>
+
+<h3 id="usn-4007-1-usn-4007-2-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4007-1/">USN-4007-1</a>, <a href="https://usn.ubuntu.com/4007-2/">USN-4007-2</a>] Linux kernel vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic &amp; Xenial HWE
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191">CVE-2019-11191</a></li>
+</ul></li>
+<li>Same a.out issue</li>
+</ul>
+
+<h3 id="usn-4008-1-usn-4008-3-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4008-1/">USN-4008-1</a>, <a href="https://usn.ubuntu.com/4008-3/">USN-4008-3</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Trusty ESM (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191">CVE-2019-11191</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815">CVE-2019-11815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810">CVE-2019-11810</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11190">CVE-2019-11190</a></li>
+</ul></li>
+<li>a.out issue, plus RDS and MegaRAID NULL ptr dereference</li>
+<li>Similar to a.out issue, in general ASLR could be bypassed on setuid
+binaries due to a similar race-condition</li>
+<li>This fix also requires some AppArmor profile changes</li>
+</ul>
+
+<h3 id="usn-4008-2-apparmor-update">[<a href="https://usn.ubuntu.com/4008-2/">USN-4008-2</a>] AppArmor update</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191">CVE-2019-11191</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815">CVE-2019-11815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810">CVE-2019-11810</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11190">CVE-2019-11190</a></li>
+</ul></li>
+<li>Updated AppArmor profiles to handle new kernel behavoiur as a result of
+the fix for CVE-2019-11190 (ASLR bypass on setuid executables).</li>
+<li>When executing a binary, will then appear to require mmap privileges of
+the resulting binary, so ensure all current profiles are updated to add
+this permission on the appropriate rules</li>
+</ul>
+
+<h3 id="usn-4009-1-usn-4009-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/4009-1/">USN-4009-1</a>, <a href="https://usn.ubuntu.com/4009-2/">USN-4009-2</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM</li>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11040">CVE-2019-11040</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11039">CVE-2019-11039</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11036">CVE-2019-11036</a></li>
+</ul></li>
+<li>Heap buffer overflow in handling crafted JPEG files</li>
+<li>Integer overflow, leading to possible OOB read when handling crafted mime
+encoded data</li>
+<li>(Xenial, Bionic, Cosmic and Disco only) - OOB read when handling crafted
+EXIF data -&gt; crash, DoS or possible information disclosure form other
+memory</li>
+</ul>
+
+<h3 id="usn-4010-1-exim-vulnerability">[<a href="https://usn.ubuntu.com/4010-1/">USN-4010-1</a>] Exim vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10149">CVE-2019-10149</a></li>
+</ul></li>
+<li>Possible remote exploit of popular MTA</li>
+<li>Embargo broke early - was expected to be public 11th June - as a
+consequence, we released our update once the details were publicly known
+
+<ul>
+<li>It was possible to include shell directives in the recipients email
+address which would be evaluated by the exim process (and hence as
+root) - but would require the attacker to keep a connection open to the
+server for 7 days by transmitting 1 byte every few minutes.</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-3957-3-mariadb-vulnerabilities">[<a href="https://usn.ubuntu.com/3957-3/">USN-3957-3</a>] MariaDB vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627">CVE-2019-2627</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614">CVE-2019-2614</a></li>
+</ul></li>
+<li>Corresponding fixes for flaws originally reported in MySQL - fixed in
+MariaDB (community maintained fork of MySQL) - <a href="https://ubuntusecuritypodcast.org/episode-30/">Episode 30</a></li>
+</ul>
+
+<h3 id="usn-4011-1-usn-4011-2-jinja2-vulnerabilities">[<a href="https://usn.ubuntu.com/4011-1/">USN-4011-1</a>, <a href="https://usn.ubuntu.com/4011-2/">USN-4011-2</a>] Jinja2 vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10906">CVE-2019-10906</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10745">CVE-2016-10745</a></li>
+</ul></li>
+<li>Sandbox is used when rendering user-provided templates (ie untrusted)</li>
+<li>Possible to escape the sandbox by reading arbitrary python objects via
+Python&rsquo;s internal string format method (by referencing the <span class="underline"><span class="underline">globals</span></span>
+array)</li>
+<li>Was originally fixed in 2016 for the str.format method - but at the time
+missed the similar str.format_map method - so both fixed in this update</li>
+</ul>
+
+<h3 id="usn-3991-2-firefox-regression">[<a href="https://usn.ubuntu.com/3991-2/">USN-3991-2</a>] Firefox regression</h3>
+
+<ul>
+<li>17 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816">CVE-2019-9816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698">CVE-2019-11698</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11697">CVE-2019-11697</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9821">CVE-2019-9821</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820">CVE-2019-9820</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819">CVE-2019-9819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817">CVE-2019-9817</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9814">CVE-2019-9814</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800">CVE-2019-9800</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11701">CVE-2019-11701</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11699">CVE-2019-11699</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11696">CVE-2019-11696</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11695">CVE-2019-11695</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693">CVE-2019-11693</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692">CVE-2019-11692</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691">CVE-2019-11691</a></li>
+</ul></li>
+<li>Previous FF 67.0 had broken code for checking versions on upgrades, and
+could potentially think you had downgraded the browser when it was in
+fact upgraded and therefore think the old profile data was invalid</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-about-recent-malware-campaigns">Alex and Joe talk about recent malware campaigns</h3>
+
+<ul>
+<li><a href="https://www.intezer.com/blog-hiddenwasp-malware-targeting-linux-systems/">https://www.intezer.com/blog-hiddenwasp-malware-targeting-linux-systems/</a></li>
+<li><a href="https://thehackernews.com/2019/05/hacking-mysql-phpmyadmin.html">https://thehackernews.com/2019/05/hacking-mysql-phpmyadmin.html</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="security-certifications-engineer">Security Certifications Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1660658">https://boards.greenhouse.io/canonical/jobs/1660658</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E035.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 34</title>
           <link>https://ubuntusecuritypodcast.org/episode-34/</link>
