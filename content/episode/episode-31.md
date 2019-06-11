@@ -2,9 +2,9 @@
 title = "Episode 31"
 description = "This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more."
 date = 2019-05-13
-lastmod = 2019-06-04T09:54:56+09:30
+lastmod = 2019-06-11T21:50:52+09:30
 draft = false
-weight = 1004
+weight = 1005
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E031.mp3"
