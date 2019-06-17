@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,245 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 36</title>
+          <link>https://ubuntusecuritypodcast.org/episode-36/</link>
+          <pubDate>Mon, 17 Jun 2019 00:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E036.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</itunes:summary>
+        <description>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</description>
+        <googleplay:description>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>43 unique CVEs addressed</p>
+
+<h3 id="usn-4012-1-elfutils-vulnerabilities">[<a href="https://usn.ubuntu.com/4012-1/">USN-4012-1</a>] elfutils vulnerabilities</h3>
+
+<ul>
+<li>9 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7665">CVE-2019-7665</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7150">CVE-2019-7150</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7149">CVE-2019-7149</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18521">CVE-2018-18521</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18520">CVE-2018-18520</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18310">CVE-2018-18310</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16403">CVE-2018-16403</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16402">CVE-2018-16402</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16062">CVE-2018-16062</a></li>
+</ul></li>
+<li>Mix of issues found via fuzzing with ASAN - all resulting in crash -&gt; DoS
+from crafted input files
+
+<ul>
+<li>multiple heap-based buffer over-reads in various libraries (libelf,
+libdw) on crafted ELF input</li>
+<li>divide-by-zero on crafted ELF input in arlib (used by ar, ranlib and
+other tools to process .a archive files)</li>
+<li>multiple invalid pointer dereferences</li>
+<li>double-free in libelf on crafted ELF input</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4013-1-libsndfile-vulnerabilities">[<a href="https://usn.ubuntu.com/4013-1/">USN-4013-1</a>] libsndfile vulnerabilities</h3>
+
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3832">CVE-2019-3832</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19758">CVE-2018-19758</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19662">CVE-2018-19662</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19661">CVE-2018-19661</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19432">CVE-2018-19432</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13139">CVE-2018-13139</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6892">CVE-2017-6892</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17457">CVE-2017-17457</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17456">CVE-2017-17456</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16942">CVE-2017-16942</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14634">CVE-2017-14634</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14246">CVE-2017-14246</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14245">CVE-2017-14245</a></li>
+</ul></li>
+<li>Range of issues from crashes (DoS) to possible RCE again found via fuzzing with ASAN
+
+<ul>
+<li>Multiple heap-based buffer over-reads on crafted audio files (WAV, ALAW, AIFF) files</li>
+<li>NULL pointer dereference</li>
+<li>Stack-based buffer overflow - crash -&gt; DoS or possible RCE on crafted</li>
+<li>Divide by zeros</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4014-1-usn-4014-2-glib-vulnerability">[<a href="https://usn.ubuntu.com/4014-1/">USN-4014-1</a>, <a href="https://usn.ubuntu.com/4014-2/">USN-4014-2</a>] GLib vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12450">CVE-2019-12450</a></li>
+</ul></li>
+<li>GLib contains GIO which is library to abstract file-IO operations</li>
+<li>During file copying, would create the new file with default permissions
+and then once copy was done would then set the correct permissions (based
+on the original files permissions)</li>
+<li>Could allow other users to read the file during the copy process</li>
+<li>Instead fix to create new file with restrictive permissions (only
+accessible by the current user) to avoid this</li>
+</ul>
+
+<h3 id="usn-4015-1-usn-4015-2-dbus-vulnerability">[<a href="https://usn.ubuntu.com/4015-1/">USN-4015-1</a>, <a href="https://usn.ubuntu.com/4015-2/">USN-4015-2</a>] DBus vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12749">CVE-2019-12749</a></li>
+</ul></li>
+<li>DBus includes multiple authentication mechanisms - usually would just use
+credentials passed via UNIX sockets (is secure as is enforced by the
+kernel), but this is not supported on all platforms (Windows etc)</li>
+<li>So includes another authentication mechanism - DBUS_COOKIE_SHA1
+
+<ul>
+<li>In this case, the authenticating user has to prove they are who they
+say by being able to read and provide a magic value from a keyring file
+which dbus drops in the user&rsquo;s home directory</li>
+<li>By abusing symlinks, it would be possible to point the local users
+keyring at some other file and cause DBus to read / write to some other
+file which was not intended</li>
+<li>This could further be abused to point your local dbus keyring to root&rsquo;s
+and cause DBus to eventually confuse the local user&rsquo;s authentication to
+the bus as that of the root user and so allow an unprivileged user to
+authenticate as root and so then perform operations as root via DBus</li>
+</ul></li>
+<li>Fixed by simply only allowing DBUS_COOKIE_SHA1 to authenticate as the
+same user as the DBus server owner - ie. if running DBus as root you can
+only authenticate as root, not as your local user (since this use-case is
+not actually used in practice)</li>
+</ul>
+
+<h3 id="usn-4016-1-vim-vulnerabilities">[<a href="https://usn.ubuntu.com/4016-1/">USN-4016-1</a>] Vim vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12735">CVE-2019-12735</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953">CVE-2017-5953</a></li>
+</ul></li>
+<li>Most over-hyped bug of the week
+
+<ul>
+<li><a href="https://threatpost.com/linux-command-line-editors-high-severity-bug/145569/">https://threatpost.com/linux-command-line-editors-high-severity-bug/145569/</a></li>
+<li><a href="https://www.reddit.com/r/netsec/comments/bwrjrx/vimneovim%5Farbitrary%5Fcode%5Fexecution%5Fvia%5Fmodelines/">https://www.reddit.com/r/netsec/comments/bwrjrx/vimneovim%5Farbitrary%5Fcode%5Fexecution%5Fvia%5Fmodelines/</a></li>
+</ul></li>
+<li>Will discuss with Joe later in the episode, but briefly:
+
+<ul>
+<li>Vim includes support for &lsquo;modelines&rsquo;
+
+<ul>
+<li>This allows files to include custom settings such as indentation, file
+type etc so that editing is consistent</li>
+<li>Only a subset of vim commands can be permitted - ie. set - and then not
+everything can be set by modelines - and is meant to be side-effect
+free</li>
+<li>However, the source! command is still allowed - this reads extra
+commands from a file as though typed by the user and is done so outside
+the sandbox</li>
+<li>So is possible to bypass the sandbox and execute arbitrary commands via
+the modeline (since vim supports running external commands from the
+editor itself)</li>
+<li>PoC included running a reverse shell by just opening a crafted file</li>
+</ul></li>
+<li>However, modelines are disabled by default in Debian (and hence Ubuntu)
+so unless a user had specifically enabled it in their own vimrc they are
+safe</li>
+<li>Patched to disable sourcing a file from the modeline or from within the
+sandbox at all</li>
+</ul></li>
+<li>One extra low priority issue when vim could be made to crash via a
+crafted spell file (this is used to store locally spelling additions etc)</li>
+</ul>
+
+<h3 id="usn-4016-2-neovim-vulnerability">[<a href="https://usn.ubuntu.com/4016-2/">USN-4016-2</a>] Neovim vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12735">CVE-2019-12735</a></li>
+</ul></li>
+<li>See above from vim :)</li>
+</ul>
+
+<h3 id="usn-3991-3-firefox-regression">[<a href="https://usn.ubuntu.com/3991-3/">USN-3991-3</a>] Firefox regression</h3>
+
+<ul>
+<li>17 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816">CVE-2019-9816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698">CVE-2019-11698</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11697">CVE-2019-11697</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9821">CVE-2019-9821</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820">CVE-2019-9820</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819">CVE-2019-9819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817">CVE-2019-9817</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9814">CVE-2019-9814</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800">CVE-2019-9800</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11701">CVE-2019-11701</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11699">CVE-2019-11699</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11696">CVE-2019-11696</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11695">CVE-2019-11695</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693">CVE-2019-11693</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692">CVE-2019-11692</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691">CVE-2019-11691</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-33/">Episode 33</a> - Firefox update to version 67.0 - contained a regression so
+updated to 67.0.1 (<a href="https://ubuntusecuritypodcast.org/episode-35/">Episode 35</a>) - this also contained another regression
+where Firefox would fail to load correctly if run in safe-mode. So
+upstream released 67.0.2 which is this new update.</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-about-another-npm-package-hijack-attack-and-the-vim-issue">Alex and Joe talk about another npm package hijack attack and the vim issue</h3>
+
+<ul>
+<li><a href="https://blog.npmjs.org/post/185397814280/plot-to-steal-cryptocurrency-foiled-by-the-npm">https://blog.npmjs.org/post/185397814280/plot-to-steal-cryptocurrency-foiled-by-the-npm</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E036.mp3" length="21614877" type="audio/mpeg" /><itunes:duration>22:30</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 35</title>
           <link>https://ubuntusecuritypodcast.org/episode-35/</link>

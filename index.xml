@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 36</title>
+      <link>https://ubuntusecuritypodcast.org/episode-36/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-36/</guid>
+      <description>Overview Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.
+This week in Ubuntu Security Updates 43 unique CVEs addressed
+[USN-4012-1] elfutils vulnerabilities  9 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2019-7665 CVE-2019-7150 CVE-2019-7149 CVE-2018-18521 CVE-2018-18520 CVE-2018-18310 CVE-2018-16403 CVE-2018-16402 CVE-2018-16062  Mix of issues found via fuzzing with ASAN - all resulting in crash -&amp;gt; DoS from crafted input files  multiple heap-based buffer over-reads in various libraries (libelf, libdw) on crafted ELF input divide-by-zero on crafted ELF input in arlib (used by ar, ranlib and other tools to process .</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 35</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 34 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 34 unique CVEs addressed
       <description>Overview This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.
 This week in Ubuntu Security Updates 32 unique CVEs addressed
 [USN-3976-3, USN-3976-4] Samba regression  Affecting Trusty ESM, Xenial, Bionic Episode 32 - discussed privilege escalation vuln and fix for Samba Original update caused a regression where Samba might crash - fixed  [USN-3994-1] gnome-desktop vulnerability  1 CVEs addressed in Bionic, Cosmic, Disco  CVE-2019-11460  Thumbnailers could possibly escape bubblewrap sandbox by using TIOCSTI ioctl to send characters to the controlling terminals input buffer and hence escape the sandbox  Requires to compromise a thumbnailer in the first place so less impact Similar to CVE-2019-10063 for flatpak and CVE-2019-7303 for snapd   [USN-3995-1, USN-3995-2] Keepalived vulnerability  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic  CVE-2018-19115  Heap based buffer overflow when parsing HTTP response code - would potentially write an unlimited amount of attacker controlled data to the heap for a 10-byte long buffer Crash -&amp;gt; DoS, RCE Fixed to properly parse and expect at most a 3 digit long response code  [USN-3845-2] FreeRDP vulnerabilities  6 CVEs addressed in Bionic, Cosmic  CVE-2018-8789 CVE-2018-8788 CVE-2018-8787 CVE-2018-8786 CVE-2018-8785 CVE-2018-8784  Back in December published update for FreeRDP (USN-3845-1 - Episode 16)  In Bionic and Cosmic freerdp2 is in main, so that update was for freerdp2 This update is for freerdp (v1), which is in universe in bionic + cosmic Corresponding update   [USN-3997-1] Thunderbird vulnerabilities  14 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2018-18511 CVE-2019-11698 CVE-2019-9816 CVE-2019-7317 CVE-2019-5798 CVE-2019-9820 CVE-2019-9819 CVE-2019-9817 CVE-2019-9800 CVE-2019-9797 CVE-2019-11693 CVE-2019-11692 CVE-2019-11691 CVE-2019-18511  Thunderbird 60.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
