@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 37" />
+<meta property="og:description" content="The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-37/" />
+
+
+
+<meta property="og:updated_time" content="2019-06-24 00:00:00 &#43;0100 BST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-06-24 00:00:00 &#43;0100 BST" />
+  
+
+<meta property="article:modified_time" content="2019-06-24 00:00:00 &#43;0100 BST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 37">
+<meta itemprop="description" content="The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="808">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 37"/>
+<meta name="twitter:description" content="The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!"/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 37 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-37/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 37</h1>
+      <small>Posted on Monday, Jun 24, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E037.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E037.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>36 unique CVEs addressed</p>
+
+<h3 id="usn-4017-1-usn-4017-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4017-1/">USN-4017-1</a>, <a href="https://usn.ubuntu.com/4017-2/">USN-4017-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11477">CVE-2019-11477</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11478">CVE-2019-11478</a></li>
+</ul></li>
+<li>SACK Panic - will be discussed in more detail with Joe later in the show</li>
+<li>Livepatch (LSN-0052-1) also available for Xenial and Bionic</li>
+</ul>
+
+<h3 id="usn-4018-1-samba-vulnerabilities">[<a href="https://usn.ubuntu.com/4018-1/">USN-4018-1</a>] Samba vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12436">CVE-2019-12436</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12435">CVE-2019-12435</a></li>
+</ul></li>
+<li>Two DoS issues (both NULL ptr dereferences) only affecting most recent Samba versions
+
+<ul>
+<li>One in AD DC DNS mgmt server RPC process
+
+<ul>
+<li>Only an authenticated user could trigger this</li>
+</ul></li>
+<li>Other in LDAP server - user with read access to the directory could
+trigger NULL ptr dereference via the paged search control</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4019-1-usn-4019-2-sqlite-vulnerabilities">[<a href="https://usn.ubuntu.com/4019-1/">USN-4019-1</a>, <a href="https://usn.ubuntu.com/4019-2/">USN-4019-2</a>] SQLite vulnerabilities</h3>
+
+<ul>
+<li>12 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2519">CVE-2017-2519</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13685">CVE-2017-13685</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10989">CVE-2017-10989</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6153">CVE-2016-6153</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9937">CVE-2019-9937</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9936">CVE-2019-9936</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8457">CVE-2019-8457</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20506">CVE-2018-20506</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20346">CVE-2018-20346</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20505">CVE-2018-20505</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2520">CVE-2017-2520</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2518">CVE-2017-2518</a></li>
+</ul></li>
+<li>7 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13685">CVE-2017-13685</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10989">CVE-2017-10989</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6153">CVE-2016-6153</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8457">CVE-2019-8457</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20506">CVE-2018-20506</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20346">CVE-2018-20346</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2518">CVE-2017-2518</a></li>
+</ul></li>
+<li>Mix of various issues, most involving various memory corruption problems
+
+<ul>
+<li>UAFs, DoS (crash), heap-based buffer over-reads (crash -&gt; DoS or
+possible information disclosure), incorrect use of temporary
+directories, race-condition leading to NULL pointer dereference,
+integer overflow -&gt; buffer overflow -&gt; crash / code execution</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4021-1-libvirt-vulnerabilities">[<a href="https://usn.ubuntu.com/4021-1/">USN-4021-1</a>] libvirt vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3886">CVE-2019-3886</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10132">CVE-2019-10132</a></li>
+</ul></li>
+<li>DoS where some APIs in the guest agents could be accessed by read-only
+users - this would cause libvirt to block and cause a DoS</li>
+<li>Privilege escalation due to insecure permissions on the virt-lockd and
+virt-logd UNIX domain sockets - these are created by systemd unit files
+but were created as world writable - and the daemons don&rsquo;t try and
+authenticate the user - so anyone could use these sockets to potentially
+elevate privileges - so fixed by ensuring the systemd socket definitions
+specify the right mode.</li>
+</ul>
+
+<h3 id="usn-4020-1-firefox-vulnerability">[<a href="https://usn.ubuntu.com/4020-1/">USN-4020-1</a>] Firefox vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11707">CVE-2019-11707</a></li>
+</ul></li>
+<li>Firefox 67.0.3 which fixes a remotely exploitable crash or possible code
+execution problem due to type confusion in the Javascript engine -
+reports this was used to target various cryptocurrency exchanges by
+delivering Windows and Mac malware to them</li>
+</ul>
+
+<h3 id="usn-4024-1-evince-update">[<a href="https://usn.ubuntu.com/4024-1/">USN-4024-1</a>] Evince update</h3>
+
+<ul>
+<li>Affecting Xenial, Bionic</li>
+<li>Updated the AppArmor profile for evince to ensure it restricts access to
+various private file directories, and to address various issues raised by
+Jann Horn of GPZ - in particular limiting access to various DBus services</li>
+</ul>
+
+<h3 id="usn-4026-1-bind-vulnerability">[<a href="https://usn.ubuntu.com/4026-1/">USN-4026-1</a>] Bind vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6471">CVE-2019-6471</a></li>
+</ul></li>
+<li>DoS (crash due to assertion failure) caused by a race condition when
+handling malformed packets</li>
+</ul>
+
+<h3 id="usn-4028-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/4028-1/">USN-4028-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11706">CVE-2019-11706</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11705">CVE-2019-11705</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11704">CVE-2019-11704</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11703">CVE-2019-11703</a></li>
+</ul></li>
+<li>Various issues in handling of iCal data - all remotely triggerable by crafted emails:
+
+<ul>
+<li>Crash due to type-confusion</li>
+<li>Both a stack and 2 separate heap buffer overflows - either could
+potentially be exploitable to execute arbitrary code</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4027-1-postgresql-vulnerability">[<a href="https://usn.ubuntu.com/4027-1/">USN-4027-1</a>] PostgreSQL vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10164">CVE-2019-10164</a></li>
+</ul></li>
+<li>&ldquo;Stack buffer overflow by setting a password&rdquo; - authenticated user could
+set their password to a specially constructed value which when processed
+by PostgreSQL would cause it to crash, or possible execute arbitrary code
+in the context of the PostgreSQL server</li>
+</ul>
+
+<h3 id="usn-4023-1-mosquitto-vulnerabilities">[<a href="https://usn.ubuntu.com/4023-1/">USN-4023-1</a>] Mosquitto vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7654">CVE-2017-7654</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7653">CVE-2017-7653</a></li>
+</ul></li>
+<li>Remotely triggerable memory leak (by unauthenticated users) could be used
+to crash the Mosquitto Broker -&gt; DoS</li>
+<li>Different DoS where one client could cause others to be disconnected by
+sending invalid an UTF-8 topic string - which would cause other clients
+which do reject invalid UTF-8 to disconnect themselves</li>
+</ul>
+
+<h3 id="usn-3977-3-intel-microcode-update">[<a href="https://usn.ubuntu.com/3977-3/">USN-3977-3</a>] Intel Microcode update</h3>
+
+<ul>
+<li>4 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11091">CVE-2019-11091</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12126">CVE-2018-12126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12127">CVE-2018-12127</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12130">CVE-2018-12130</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-32/">Episode 32</a> covered most recent Intel CPU vulnerabilities (MDS) -
+mitigated by a combination of microcode and kernel updates - this
+provides microcode updates for the Sandy Bridge family of Intel
+processors</li>
+</ul>
+
+<h3 id="usn-4030-1-web2py-vulnerabilities">[<a href="https://usn.ubuntu.com/4030-1/">USN-4030-1</a>] web2py vulnerabilities</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3957">CVE-2016-3957</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3954">CVE-2016-3954</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3953">CVE-2016-3953</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3952">CVE-2016-3952</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10321">CVE-2016-10321</a></li>
+</ul></li>
+<li>Various issues including:
+
+<ul>
+<li>Possible RCE (was serializing encryption key info into a session
+cookie) which could then be read by an attacker since it also made
+session cookie accessible via an API endpoint</li>
+<li>Sample web application used a hard-coded encryption key which could
+also allow attackers to do RCE as they could easily interpose on the
+session</li>
+<li>Environment variables were exposed by an example API endpoint which
+exposed host info and so remote attackers could then possibly gain
+admin access</li>
+<li>Lacked brute-force password protection as wouldn&rsquo;t reject already
+denied hosts from repeatedly trying</li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-about-the-sack-panic-issues-discovered-by-netflix">Alex and Joe talk about the SACK Panic issues discovered by Netflix</h3>
+
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SACKPanic">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SACKPanic</a></li>
+<li><a href="https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-001.md">https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-001.md</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1723997">https://boards.greenhouse.io/canonical/jobs/1723997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-36/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-37\/",
+        text: "Episode 37"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

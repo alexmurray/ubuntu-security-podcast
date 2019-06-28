@@ -6,20 +6,20 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Episode 36</title>
-      <link>https://ubuntusecuritypodcast.org/episode-36/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0930</pubDate>
+      <title>Episode 37</title>
+      <link>https://ubuntusecuritypodcast.org/episode-37/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-36/</guid>
-      <description>Overview Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.
-This week in Ubuntu Security Updates 43 unique CVEs addressed
-[USN-4012-1] elfutils vulnerabilities  9 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2019-7665 CVE-2019-7150 CVE-2019-7149 CVE-2018-18521 CVE-2018-18520 CVE-2018-18310 CVE-2018-16403 CVE-2018-16402 CVE-2018-16062  Mix of issues found via fuzzing with ASAN - all resulting in crash -&amp;gt; DoS from crafted input files  multiple heap-based buffer over-reads in various libraries (libelf, libdw) on crafted ELF input divide-by-zero on crafted ELF input in arlib (used by ar, ranlib and other tools to process .</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-37/</guid>
+      <description>Overview The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!
+This week in Ubuntu Security Updates 36 unique CVEs addressed
+[USN-4017-1, USN-4017-2] Linux kernel vulnerabilities  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco  CVE-2019-11477 CVE-2019-11478  SACK Panic - will be discussed in more detail with Joe later in the show Livepatch (LSN-0052-1) also available for Xenial and Bionic  [USN-4018-1] Samba vulnerabilities  2 CVEs addressed in Disco  CVE-2019-12436 CVE-2019-12435  Two DoS issues (both NULL ptr dereferences) only affecting most recent Samba versions  One in AD DC DNS mgmt server RPC process  Only an authenticated user could trigger this  Other in LDAP server - user with read access to the directory could trigger NULL ptr dereference via the paged search control   [USN-4019-1, USN-4019-2] SQLite vulnerabilities  12 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2017-2519 CVE-2017-13685 CVE-2017-10989 CVE-2016-6153 CVE-2019-9937 CVE-2019-9936 CVE-2019-8457 CVE-2018-20506 CVE-2018-20346 CVE-2018-20505 CVE-2017-2520 CVE-2017-2518  7 CVEs addressed in Precise ESM, Trusty ESM  CVE-2017-13685 CVE-2017-10989 CVE-2016-6153 CVE-2019-8457 CVE-2018-20506 CVE-2018-20346 CVE-2017-2518  Mix of various issues, most involving various memory corruption problems  UAFs, DoS (crash), heap-based buffer over-reads (crash -&amp;gt; DoS or possible information disclosure), incorrect use of temporary directories, race-condition leading to NULL pointer dereference, integer overflow -&amp;gt; buffer overflow -&amp;gt; crash / code execution   [USN-4021-1] libvirt vulnerabilities  2 CVEs addressed in Cosmic, Disco  CVE-2019-3886 CVE-2019-10132  DoS where some APIs in the guest agents could be accessed by read-only users - this would cause libvirt to block and cause a DoS Privilege escalation due to insecure permissions on the virt-lockd and virt-logd UNIX domain sockets - these are created by systemd unit files but were created as world writable - and the daemons don&amp;rsquo;t try and authenticate the user - so anyone could use these sockets to potentially elevate privileges - so fixed by ensuring the systemd socket definitions specify the right mode.</description>
     </item>
     
     <item>
@@ -32,14 +32,14 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed
     </item>
     
     <item>
-      <title>Episode 35</title>
-      <link>https://ubuntusecuritypodcast.org/episode-35/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0930</pubDate>
+      <title>Episode 36</title>
+      <link>https://ubuntusecuritypodcast.org/episode-36/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-35/</guid>
-      <description>Overview We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.
-This week in Ubuntu Security Updates 34 unique CVEs addressed
-[USN-4002-1] Doxygen vulnerability  1 CVEs addressed in Xenial  CVE-2016-10245  Generates HTML code documentation from code comments Includes a field to search across the documentation Doesn&amp;rsquo;t treat this as untrusted input and blindly displays the input in resulting pages  Allows possible XSS or iframe injection  Fix is simple - whitelist allowed characters to avoid injection etc  [USN-4003-1] Qt vulnerabilities  3 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2018-19873 CVE-2018-19870 CVE-2018-15518  3 likely DoS issues:  Buffer overflow when handling invalid BMP images - didn&amp;rsquo;t check for valid / sensible width or height parameters NULL pointer dereference on malformed GIF images Double free when parsing a specially crafted (illegal format) XML document   [USN-4004-1, USN-4004-2] Berkeley DB vulnerability  1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco  CVE-2019-8457  Contains an embedded copy of sqlite which was vulnerable to a heap-based out-of-bounds read when handling invalid rtree tables  [USN-4005-1] Linux kernel vulnerabilities  2 CVEs addressed in Disco  CVE-2019-11815 CVE-2019-11810  Reliable Datagram Sockets (RDS) module was vulnerable to a race-condition during network namespace cleanup that could lead to a UAF.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-36/</guid>
+      <description>Overview Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.
+This week in Ubuntu Security Updates 43 unique CVEs addressed
+[USN-4012-1] elfutils vulnerabilities  9 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2019-7665 CVE-2019-7150 CVE-2019-7149 CVE-2018-18521 CVE-2018-18520 CVE-2018-18310 CVE-2018-16403 CVE-2018-16402 CVE-2018-16062  Mix of issues found via fuzzing with ASAN - all resulting in crash -&amp;gt; DoS from crafted input files  multiple heap-based buffer over-reads in various libraries (libelf, libdw) on crafted ELF input divide-by-zero on crafted ELF input in arlib (used by ar, ranlib and other tools to process .</description>
     </item>
     
     <item>
@@ -52,9 +52,20 @@ This week in Ubuntu Security Updates 34 unique CVEs addressed
     </item>
     
     <item>
+      <title>Episode 35</title>
+      <link>https://ubuntusecuritypodcast.org/episode-35/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-35/</guid>
+      <description>Overview We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.
+This week in Ubuntu Security Updates 34 unique CVEs addressed
+[USN-4002-1] Doxygen vulnerability  1 CVEs addressed in Xenial  CVE-2016-10245  Generates HTML code documentation from code comments Includes a field to search across the documentation Doesn&amp;rsquo;t treat this as untrusted input and blindly displays the input in resulting pages  Allows possible XSS or iframe injection  Fix is simple - whitelist allowed characters to avoid injection etc  [USN-4003-1] Qt vulnerabilities  3 CVEs addressed in Xenial, Bionic, Cosmic  CVE-2018-19873 CVE-2018-19870 CVE-2018-15518  3 likely DoS issues:  Buffer overflow when handling invalid BMP images - didn&amp;rsquo;t check for valid / sensible width or height parameters NULL pointer dereference on malformed GIF images Double free when parsing a specially crafted (illegal format) XML document   [USN-4004-1, USN-4004-2] Berkeley DB vulnerability  1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco  CVE-2019-8457  Contains an embedded copy of sqlite which was vulnerable to a heap-based out-of-bounds read when handling invalid rtree tables  [USN-4005-1] Linux kernel vulnerabilities  2 CVEs addressed in Disco  CVE-2019-11815 CVE-2019-11810  Reliable Datagram Sockets (RDS) module was vulnerable to a race-condition during network namespace cleanup that could lead to a UAF.</description>
+    </item>
+    
+    <item>
       <title>Episode 34</title>
       <link>https://ubuntusecuritypodcast.org/episode-34/</link>
-      <pubDate>Mon, 03 Jun 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-34/</guid>
       <description>Overview This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.
@@ -65,7 +76,7 @@ This week in Ubuntu Security Updates 32 unique CVEs addressed
     <item>
       <title>Episode 33</title>
       <link>https://ubuntusecuritypodcast.org/episode-33/</link>
-      <pubDate>Mon, 27 May 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-33/</guid>
       <description>Overview Updated Intel microcode for Cherry + Bay Trial CPUs, fixes for vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk configuration of virtualised guests to mitigate speculative execution vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
@@ -76,7 +87,7 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed
     <item>
       <title>Episode 32</title>
       <link>https://ubuntusecuritypodcast.org/episode-32/</link>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-32/</guid>
       <description>Overview This week we look at updates to cover the latest Intel CPU vulnerabilities (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is Seth Arnold from the Ubuntu Security Team to talk Main Inclusion Review code audits.
@@ -87,7 +98,7 @@ This week in Ubuntu Security Updates 37 unique CVEs addressed
     <item>
       <title>Episode 31</title>
       <link>https://ubuntusecuritypodcast.org/episode-31/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-31/</guid>
       <description>Overview This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.
@@ -98,7 +109,7 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
     <item>
       <title>Episode 30</title>
       <link>https://ubuntusecuritypodcast.org/episode-30/</link>
-      <pubDate>Mon, 06 May 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-30/</guid>
       <description>Overview Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&amp;rsquo;s credentials database and more.
@@ -109,7 +120,7 @@ This week in Ubuntu Security Updates 19 unique CVEs addressed
     <item>
       <title>Episode 29</title>
       <link>https://ubuntusecuritypodcast.org/episode-29/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0930</pubDate>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-29/</guid>
       <description>Overview This week we look at fixes from the past two weeks including BIND, NTFS-3G, Dovecot, Pacemaker and more, plus we follow up last episodes IoT security discussion with Joe McManus talking about Ubuntu Core. Finally we cover the release of Ubuntu 19.04 Disco Dingo and the transition of Ubuntu 14.04 Trusty Tahr to Extended Security Maintenance.
@@ -119,7 +130,7 @@ These past two weeks in Ubuntu Security Updates 53 unique CVEs addressed</descri
     <item>
       <title>Episode 28</title>
       <link>https://ubuntusecuritypodcast.org/episode-28/</link>
-      <pubDate>Mon, 15 Apr 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-28/</guid>
       <description>Overview This week we look at updates for vulnerabilities in wpa_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).
@@ -130,7 +141,7 @@ This week in Ubuntu Security Updates 27 unique CVEs addressed
     <item>
       <title>Episode 27</title>
       <link>https://ubuntusecuritypodcast.org/episode-27/</link>
-      <pubDate>Mon, 08 Apr 2019 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-27/</guid>
       <description>Overview Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.
@@ -141,7 +152,7 @@ This week in Ubuntu Security Updates 52 unique CVEs addressed
     <item>
       <title>Episode 26</title>
       <link>https://ubuntusecuritypodcast.org/episode-26/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-26/</guid>
       <description>Overview This week we look security updates for a heap of packages including Firefox &amp;amp; Thunderbird, PHP &amp;amp; QEMU, plus we discuss Facebook&amp;rsquo;s recent password storage incident as well as some listener hardening tips and more.
@@ -152,7 +163,7 @@ This week in Ubuntu Security Updates 48 unique CVEs addressed
     <item>
       <title>Episode 25</title>
       <link>https://ubuntusecuritypodcast.org/episode-25/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-25/</guid>
       <description>Overview Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.
@@ -163,7 +174,7 @@ This week in Ubuntu Security Updates 39 unique CVEs addressed
     <item>
       <title>Episode 24</title>
       <link>https://ubuntusecuritypodcast.org/episode-24/</link>
-      <pubDate>Tue, 19 Mar 2019 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 19 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-24/</guid>
       <description>Overview A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the Linux kernel and more. We also talk about some listener feedback on Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
@@ -174,7 +185,7 @@ This week in Ubuntu Security Updates 18 unique CVEs addressed
     <item>
       <title>Episode 23</title>
       <link>https://ubuntusecuritypodcast.org/episode-23/</link>
-      <pubDate>Tue, 12 Mar 2019 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-23/</guid>
       <description>Overview This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.
@@ -185,7 +196,7 @@ This week in Ubuntu Security Updates 10 unique CVEs addressed
     <item>
       <title>Episode 22</title>
       <link>https://ubuntusecuritypodcast.org/episode-22/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-22/</guid>
       <description>Overview This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.
@@ -196,7 +207,7 @@ This week in Ubuntu Security Updates 16 unique CVEs addressed
     <item>
       <title>Episode 21</title>
       <link>https://ubuntusecuritypodcast.org/episode-21/</link>
-      <pubDate>Thu, 21 Feb 2019 00:00:00 +1030</pubDate>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-21/</guid>
       <description>Overview Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.
@@ -207,7 +218,7 @@ This week in Ubuntu Security Updates 15 unique CVEs addressed
     <item>
       <title>Episode 20</title>
       <link>https://ubuntusecuritypodcast.org/episode-20/</link>
-      <pubDate>Mon, 11 Feb 2019 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-20/</guid>
       <description>Overview This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.
@@ -218,7 +229,7 @@ This week in Ubuntu Security Updates 33 unique CVEs addressed
     <item>
       <title>Episode 19</title>
       <link>https://ubuntusecuritypodcast.org/episode-19/</link>
-      <pubDate>Mon, 04 Feb 2019 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-19/</guid>
       <description>Overview This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in Episode 17.
@@ -229,7 +240,7 @@ This week in Ubuntu Security Updates 40 unique CVEs addressed
     <item>
       <title>Episode 18</title>
       <link>https://ubuntusecuritypodcast.org/episode-18/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-18/</guid>
       <description>Overview This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.
@@ -240,7 +251,7 @@ This week in Ubuntu Security Updates 46 unique CVEs addressed
     <item>
       <title>Episode 17</title>
       <link>https://ubuntusecuritypodcast.org/episode-17/</link>
-      <pubDate>Tue, 22 Jan 2019 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-17/</guid>
       <description>Overview First episode of 2019! This week we look &amp;ldquo;System Down&amp;rdquo; in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.
@@ -251,7 +262,7 @@ This week in Ubuntu Security Updates 51 unique CVEs addressed across the support
     <item>
       <title>Episode 16</title>
       <link>https://ubuntusecuritypodcast.org/episode-16/</link>
-      <pubDate>Mon, 17 Dec 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-16/</guid>
       <description>Overview Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp;amp; more, plus we discuss the security of home routers as evaluated by C-ITL.
@@ -262,7 +273,7 @@ This week in Ubuntu Security Updates 21 unique CVEs addressed
     <item>
       <title>Episode 15</title>
       <link>https://ubuntusecuritypodcast.org/episode-15/</link>
-      <pubDate>Mon, 10 Dec 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-15/</guid>
       <description>Overview Security updates for 29 CVEs including Perl, the kernel, OpenSSL (PortSmash) and more, plus in response to some listener questions, we discuss how to make sure you always have the latest security updates by using unattended-upgrades.
@@ -273,7 +284,7 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
     <item>
       <title>Episode 14</title>
       <link>https://ubuntusecuritypodcast.org/episode-14/</link>
-      <pubDate>Mon, 03 Dec 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-14/</guid>
       <description>Overview This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.
@@ -284,7 +295,7 @@ This week in Ubuntu Security Updates 32 unique CVEs addressed
     <item>
       <title>Episode 13</title>
       <link>https://ubuntusecuritypodcast.org/episode-13/</link>
-      <pubDate>Mon, 26 Nov 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-13/</guid>
       <description>Overview This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.
@@ -295,7 +306,7 @@ This week in Ubuntu Security Updates 16 unique CVEs addressed
     <item>
       <title>Episode 12</title>
       <link>https://ubuntusecuritypodcast.org/episode-12/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-12/</guid>
       <description>Overview This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.
@@ -306,7 +317,7 @@ This week in Ubuntu Security Updates 33 unique CVEs addressed
     <item>
       <title>Episode 11</title>
       <link>https://ubuntusecuritypodcast.org/episode-11/</link>
-      <pubDate>Mon, 12 Nov 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-11/</guid>
       <description>Overview This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.
@@ -317,7 +328,7 @@ This week in Ubuntu Security Updates 23 unique CVEs addressed
     <item>
       <title>Episode 10</title>
       <link>https://ubuntusecuritypodcast.org/episode-10/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-10/</guid>
       <description>Overview This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.
@@ -328,7 +339,7 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
     <item>
       <title>Episode 9</title>
       <link>https://ubuntusecuritypodcast.org/episode-9/</link>
-      <pubDate>Tue, 30 Oct 2018 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-9/</guid>
       <description>Overview This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability (CVE-2018-14665), plus Cosmic is now officially supported by the Security Team.
@@ -339,7 +350,7 @@ This week in Ubuntu Security Updates 61 unique CVEs addressed
     <item>
       <title>Episode 8</title>
       <link>https://ubuntusecuritypodcast.org/episode-8/</link>
-      <pubDate>Mon, 22 Oct 2018 00:00:00 +1030</pubDate>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-8/</guid>
       <description>Overview This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.
@@ -350,7 +361,7 @@ This week in Ubuntu Security Updates 15 unique CVEs addressed
     <item>
       <title>Episode 7</title>
       <link>https://ubuntusecuritypodcast.org/episode-7/</link>
-      <pubDate>Tue, 16 Oct 2018 00:00:00 +1030</pubDate>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-7/</guid>
       <description>Overview This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.
@@ -361,7 +372,7 @@ This week in Ubuntu Security Updates 78 unique CVEs addressed
     <item>
       <title>Episode 6</title>
       <link>https://ubuntusecuritypodcast.org/episode-6/</link>
-      <pubDate>Tue, 02 Oct 2018 00:00:00 +0930</pubDate>
+      <pubDate>Tue, 02 Oct 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-6/</guid>
       <description>Overview This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.
@@ -372,7 +383,7 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
     <item>
       <title>Episode 5</title>
       <link>https://ubuntusecuritypodcast.org/episode-5/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-5/</guid>
       <description>Overview This week we look at some details of the 43 unique CVEs addressed across the supported Ubuntu releases and talk about the recently announced Extended Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
@@ -383,7 +394,7 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed across the various
     <item>
       <title>Episode 4</title>
       <link>https://ubuntusecuritypodcast.org/episode-4/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-4/</guid>
       <description>Overview A quieter week in package updates - this week we look at some details of the 9 unique CVEs addressed across the supported Ubuntu releases and talk about various hardening guides for Ubuntu.
@@ -394,7 +405,7 @@ This week in Ubuntu Security Updates 9 unique CVEs addressed
     <item>
       <title>Episode 3</title>
       <link>https://ubuntusecuritypodcast.org/episode-3/</link>
-      <pubDate>Mon, 03 Sep 2018 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-3/</guid>
       <description>Overview This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.
@@ -405,7 +416,7 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
     <item>
       <title>Episode 2</title>
       <link>https://ubuntusecuritypodcast.org/episode-2/</link>
-      <pubDate>Tue, 28 Aug 2018 00:00:00 +0930</pubDate>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-2/</guid>
       <description>Overview 83 unique CVEs addressed across the supported Ubuntu releases.
@@ -415,7 +426,7 @@ This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regr
     <item>
       <title>Episode 1</title>
       <link>https://ubuntusecuritypodcast.org/episode-1/</link>
-      <pubDate>Mon, 20 Aug 2018 00:00:00 +0930</pubDate>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-1/</guid>
       <description>Overview  Security fixes for 39 CVEs this week including L1TF and FragmentSmack  This week in Ubuntu Security Updates GDM (USN-3737-1) (CVE-2018-14424)  Found by Ubuntu Security Team member Chris Coulson during audit of gdm3 source code Local user can exploit via DBus to crash GDM via use-after-free (create a transient display which is automatically cleaned up, then try to query info for the previously created display) Bionic only so far  libarchive (USN-3736-1)  6 CVEs addressed across Bionic, Xenial and Trusty  CVE-2016-10209 CVE-2016-10349 CVE-2016-10350 CVE-2017-14166 CVE-2017-14501 CVE-2017-14503  All local crashes / DoS / unspecified impact via specially crafted archives in various formats  Samba (USN-3738-1)  4 CVEs addressed across Bionic, Xenial and Trusty  CVE-2018-10858 CVE-2018-10918 CVE-2018-10919 CVE-2018-1139  Includes vulnerabilities in both the samba client and server  Likely to affect most Ubuntu users   libxml2 (USN-3739-1) (USN-3739-2)  XML parsing library used across lots of different software packages 5 CVEs fixed across releases for Bionic, Xenial and Trusty  2 CVEs fixed for Precise ESM CVE-2016-9318 CVE-2017-16932 CVE-2017-18258 CVE-2018-14404 CVE-2018-14567  Includes information disclosure and DoS  L1TF and FragmentSmack vulnerabilities in Linux Kernel (USN-3740-1) (USN-3740-2) (USN-3741-1) (USN-3741-2) (USN-3742-1) (USN-3742-2) L1TF (CVE-2018-3620) (CVE-2018-3646)  Latest speculative execution cache side channel attack affecting Intel processors Allows to access contents from L1 Data Cache via speculative execution, can then be read by cache side channel 3 variants, SGX, SMM and VMM but only 2 affect Ubuntu Processors access virtual addresses which need to be translated to physical addresses Page Table Entries map from one to the other (contains metadata of page including offset and present bit) Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address But Intel processor will use offset value from PTE even on non-present pages speculatively For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value SGX doesn&amp;rsquo;t affect Ubuntu since not used SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&amp;rsquo;t be used for this VMM is trickier  VMs maintain their own PTEs so also need to ensure they are doing the right thing OR if running untrusted VMs need to do a full L1D flush on switching from host to VM  Made more trickier by Hyper Threading since sibling hyper-threads share the L1D cache So if have different trust domains on sibling hyper-threads may have to disable HT in certain circumstances  FragmentSmack (CVE-2018-5391)  Last week was SegmentSmack in TCP fragment reassembly, this week is FragmentSmack Similar but for IP fragmentation reassembly  Exploiting high algorithmic complexity of IP fragment reassembly code paths to cause DoS   GnuPG (USN-3733-2) (CVE-2017-7526)  Last week GnuPG was fixed for Xenial and Trusty for RSA cache side-channel issue This is corresponding fix for Precise ESM  WebKitGTK+ vulnerabilities (USN-3743-1)  14 CVEs fixed in web content renderer used in many desktop apps  CVE-2018-12911 CVE-2018-4246 CVE-2018-4261 CVE-2018-4262 CVE-2018-4263 CVE-2018-4264 CVE-2018-4265 CVE-2018-4266 CVE-2018-4267 CVE-2018-4270 CVE-2018-4272 CVE-2018-4273 CVE-2018-4278 CVE-2018-4284  Fixes for Bionic and Xenial  PostgreSQL (USN-3744-1) (CVE-2018-10915) (CVE-2018-10925)  2 CVEs fixed in popular relational database across Bionic, Xenial and Trusty  procps-ng (USN-3658-3)  3 CVEs fixed in Precise ESM procps-ng package  CVE-2018-1122 CVE-2018-1123 CVE-2018-1125   Linux kernel livepatch (LSN-0042-1)  No Livepatch possible for L1TF so a LSN to advise to do an update and reboot  Goings on in Ubuntu Security Community Hiring Ubuntu Security Manger  https://boards.</description>
@@ -424,7 +435,7 @@ This week in Ubuntu Security Updates [USN-3742-3] Linux kernel (Trusty HWE) regr
     <item>
       <title>Episode 0</title>
       <link>https://ubuntusecuritypodcast.org/episode-0/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0930</pubDate>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0100</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-0/</guid>
       <description>Introduction What will be covered  Overview of latest security updates for Ubuntu In depth discussion of trending CVEs Other things the team has been up to  This week in Ubuntu Security Updates SegmentSmack (CVE-2018-5390) (USN-3732-1)  DoS via expensive algorithmic computation in TCP stream reassembly Requires attacker to have an existing TCP session Affecting kernel &amp;gt;= 4.9 Fixed in Bionic and Xenial for HWE No known exploits in the wild  linux kernel (LSN-0041-1)  brief description of livepatch Several issues (5 CVEs)  stack overflow in SCSI / cdrom layers (CVE-2018-11506) DoS / crash via specially crafted ext4 filesystem (CVE-2018-1094) files can be created with group permissions which the original owner did not have within sgid directories (CVE-2018-13405)  Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu  DoS / crash via specially crafted xfs filesystem (CVE-2018-13094) SegmentSmack fix (CVE-2018-5390)  generic &amp;amp; lowlatency kernels for Trusty, Xenial and Bionic  gnupg (CVE-2017-7526) (USN-3733-1)  Cache side-channel attack on RSA implementation When CVE was created, only assigned to libgcrypt gnupg quietly announced 1.</description>
