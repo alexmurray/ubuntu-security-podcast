@@ -11,7 +11,7 @@
 * Episode 37
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-37
-:EXPORT_DATE: 2019-06-24
+:EXPORT_DATE: 2019-06-28
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E037.mp3 :podcast_duration "19:50" :podcast_bytes "19049025" :permalink "https://ubuntusecuritypodcast.org/episode-37/"
 :END:
 #+begin_description

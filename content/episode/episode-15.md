@@ -6,7 +6,7 @@ description = """
   sure you always have the latest security updates by using unattended-upgrades.
   """
 date = 2018-12-10
-lastmod = 2019-06-28T11:44:36+01:00
+lastmod = 2019-06-28T12:05:53+01:00
 draft = false
 weight = 1023
 episode_image = "img/usp_logo_500.png"

@@ -2,7 +2,7 @@
 title = "Episode 34"
 description = "This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus."
 date = 2019-06-03
-lastmod = 2019-06-28T11:44:15+01:00
+lastmod = 2019-06-28T12:05:35+01:00
 draft = false
 weight = 1004
 episode_image = "img/usp_logo_500.png"

@@ -6,7 +6,7 @@ description = """
   Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
   """
 date = 2018-09-24
-lastmod = 2019-06-28T11:44:46+01:00
+lastmod = 2019-06-28T12:06:02+01:00
 draft = false
 weight = 1033
 episode_image = "img/usp_logo_500.png"

@@ -2,7 +2,7 @@
 title = "Episode 8"
 description = "This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more."
 date = 2018-10-22
-lastmod = 2019-06-28T11:44:43+01:00
+lastmod = 2019-06-28T12:05:59+01:00
 draft = false
 weight = 1030
 episode_image = "img/usp_logo_500.png"
