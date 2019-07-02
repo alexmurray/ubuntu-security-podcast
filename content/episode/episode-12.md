@@ -2,9 +2,9 @@
 title = "Episode 12"
 description = "This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more."
 date = 2018-11-19
-lastmod = 2019-06-28T12:05:56+01:00
+lastmod = 2019-07-02T17:12:42+09:30
 draft = false
-weight = 1026
+weight = 1027
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E012.mp3"
