@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 &#43;0100</lastBuildDate>
+    <lastBuildDate>Tue, 2 Jul 2019 17:00:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -42,9 +42,347 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>Episode 38</title>
+          <link>https://ubuntusecuritypodcast.org/episode-38/</link>
+          <pubDate>Tue, 02 Jul 2019 17:00:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E038.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</itunes:summary>
+        <description>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</description>
+        <googleplay:description>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>55 unique CVEs addressed</p>
+
+<h3 id="usn-4031-1-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4031-1/">USN-4031-1</a>] Linux kernel vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12817">CVE-2019-12817</a></li>
+</ul></li>
+<li>64-bit PowerPC (ppc64el) memory management issue - introduced in the 4.17
+kernel - so only affects Cosmic/Disco or Bionic when using the HWE kernel</li>
+<li>Different processes might be able to read / write to each others virtual
+memory
+
+<ul>
+<li>Requirements:
+
+<ul>
+<li>Must be using the hash page table MMU - eg. PowerPC 970 (G5), PA6T,
+Power5/6/7/8/9
+
+<ul>
+<li>By default Power9 bare-metal use the Radix MMU so are not affected
+unless have explicitly disabled this via the kernel command-line</li>
+<li>KVM guests would also be affected in this case or if also
+explicitly configured to use the HPT MMU</li>
+<li>Logical partitions (LPARs) under PowerVM on Power9 would be
+affected as they always use HPT MMU</li>
+</ul></li>
+<li>Need to allocate memory above 512TB - only possible via mmap()</li>
+<li>Any child process (fork()) receives same context-id for the memory
+mapping so can just read/write to the mappings above 512TB</li>
+<li>If child exits, a 3rd process could be reallocated the same
+context-id and so could then read/write also</li>
+</ul></li>
+</ul></li>
+<li>Only a subset of PowerPC systems will be affected by this and would need
+to be running applications which allocate above 512TB so whilst is high
+impact, low probability of being at risk</li>
+</ul>
+
+<h3 id="usn-4032-1-firefox-vulnerability">[<a href="https://usn.ubuntu.com/4032-1/">USN-4032-1</a>] Firefox vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708">CVE-2019-11708</a></li>
+</ul></li>
+<li>Firefox 67.0.4 - latest upstream release</li>
+<li>Possible for a sandboxed child process to escape the sandbox by using IPC
+to send a Prompt:Open message to the parent which would then process
+web-content on behalf of the child</li>
+<li>Since parent is not sandboxed, it could be then exploited (say by
+leveraging another vulnerability such as the one discussed last week for
+Firefox) for arbitrary code execution</li>
+</ul>
+
+<h3 id="usn-4033-1-libmysofa-vulnerability">[<a href="https://usn.ubuntu.com/4033-1/">USN-4033-1</a>] libmysofa vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10672">CVE-2019-10672</a></li>
+</ul></li>
+<li>C library to read SOFA (Spatially Oriented Format for Acoustics) files
+
+<ul>
+<li>Used by lots of different applications that handle audio, like
+gstreamer, ffmpeg, smplayer, blender etc</li>
+</ul></li>
+<li>Integer overflow leading to buffer overflow - crash -&gt; DoS or possible
+code-execution</li>
+</ul>
+
+<h3 id="usn-4034-1-imagemagick-vulnerabilities">[<a href="https://usn.ubuntu.com/4034-1/">USN-4034-1</a>] ImageMagick vulnerabilities</h3>
+
+<ul>
+<li>30 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9956">CVE-2019-9956</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7398">CVE-2019-7398</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7397">CVE-2019-7397</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7396">CVE-2019-7396</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7395">CVE-2019-7395</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7175">CVE-2019-7175</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11598">CVE-2019-11598</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11597">CVE-2019-11597</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11472">CVE-2019-11472</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11470">CVE-2019-11470</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10650">CVE-2019-10650</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10649">CVE-2019-10649</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10131">CVE-2019-10131</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20467">CVE-2018-20467</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18544">CVE-2018-18544</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18025">CVE-2018-18025</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18024">CVE-2018-18024</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18023">CVE-2018-18023</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18016">CVE-2018-18016</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17966">CVE-2018-17966</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17965">CVE-2018-17965</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16645">CVE-2018-16645</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16644">CVE-2018-16644</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16413">CVE-2018-16413</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16412">CVE-2018-16412</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16323">CVE-2018-16323</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15607">CVE-2018-15607</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14434">CVE-2018-14434</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12806">CVE-2017-12806</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12805">CVE-2017-12805</a></li>
+</ul></li>
+<li>Used by many automated systems for image processing etc</li>
+<li>Many memory corruption issues fixed - most able to cause at least a crash
+(DoS) but might be possible to also get RCE</li>
+<li>Also updated the default policy to disable support for PostScript and PDF
+formats (since these are handle by GhostScript which has a long history
+of security issues itself) - Cosmic + Disco
+
+<ul>
+<li>This is already the case on Bionic (<a href="https://usn.ubuntu.com/3785-1/">USN-3785-1</a> - <a href="https://ubuntusecuritypodcast.org/episode-7/">Episode 7</a>)</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4035-1-ceph-vulnerabilities">[<a href="https://usn.ubuntu.com/4035-1/">USN-4035-1</a>] Ceph vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3821">CVE-2019-3821</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16889">CVE-2018-16889</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16846">CVE-2018-16846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14662">CVE-2018-14662</a></li>
+</ul></li>
+<li>2 CVEs affect ceph in Xenial
+
+<ul>
+<li>dm-crypt disk encryption keys were able to be read by users with
+read-only permissions - fixed to ensure need an explicit permission to
+read keys</li>
+<li>DoS from authenticated RGW users</li>
+</ul></li>
+<li>2 Cosmic+Disco
+
+<ul>
+<li>Does not properly sanitize encryption keys when outputting debug log
+information for v4 auth -so encryption keys would be output in
+plaintext to debug logs
+
+<ul>
+<li>fixed to sanitize before output</li>
+<li>won&rsquo;t be fixed for Xenial since upstream hasn&rsquo;t backported this and
+there are many instances of other sensitive info being logged there
+as well</li>
+</ul></li>
+<li>DoS by unauthenticated remote users via the civetweb frontend - as they
+could create connections to a RADOS gateway to exhaust file descriptors
+for the gateway service causing it to run out and fail to create new
+connections
+
+<ul>
+<li>Close fd on error path</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4036-1-openstack-neutron-vulnerability">[<a href="https://usn.ubuntu.com/4036-1/">USN-4036-1</a>] OpenStack Neutron vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9735">CVE-2019-9735</a></li>
+</ul></li>
+<li>Networking abstraction layer of OpenStack</li>
+<li>Allows to define security groups with rules which then get executed by a
+driver using a particular underlying technology</li>
+<li>Rules can specify protocols and source / destination ports</li>
+<li>iptables driver would execute rules but if encountered an error (such as
+a protocol was specified along with a port but the protocol doesn&rsquo;t
+support ports - like VRRP) then it would error out and not apply further
+rules from the security group
+
+<ul>
+<li>So could block other rules from being applied</li>
+</ul></li>
+<li>Fixed to ensure port arguments are only applied to protocols which
+support them</li>
+</ul>
+
+<h3 id="usn-4037-1-policykit-desktop-privileges-update">[<a href="https://usn.ubuntu.com/4037-1/">USN-4037-1</a>] policykit-desktop-privileges update</h3>
+
+<ul>
+<li>Affecting Xenial, Bionic, Cosmic, Disco</li>
+<li>PolicyKit policy update for USB Creator
+
+<ul>
+<li>Previously would allow a user with admin privileges (ie. in the
+admin/sudo group) to overwrite disks (ie create bootable USB images)
+without prompting for authentication</li>
+<li>Now updated to require the user to also authenticate as well</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4038-1-usn-4038-2-bzip2-vulnerabilities">[<a href="https://usn.ubuntu.com/4038-1/">USN-4038-1</a>, <a href="https://usn.ubuntu.com/4038-2/">USN-4038-2</a>] bzip2 vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900">CVE-2019-12900</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3189">CVE-2016-3189</a></li>
+</ul></li>
+<li>UAF via crafted bzip2 file - crash, DoS</li>
+<li>OOB write from crafted bzip2 which contains too many selectors - possible
+RCE
+
+<ul>
+<li>Turns out this breaks decompression of some bzip2 files created by the
+lbzip2 utility since it would use an invalid number of selectors -
+<a href="https://gitlab.com/federicomenaquintero/bzip2/issues/24">upstream still pondering how to fix this</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4040-1-usn-4040-2-expat-vulnerability">[<a href="https://usn.ubuntu.com/4040-1/">USN-4040-1</a>, <a href="https://usn.ubuntu.com/4040-2/">USN-4040-2</a>] Expat vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20843">CVE-2018-20843</a></li>
+</ul></li>
+<li>CPU DoS if XML names contained large number of colons (used to specify
+namespace prefix)</li>
+</ul>
+
+<h3 id="usn-4042-1-poppler-vulnerabilities">[<a href="https://usn.ubuntu.com/4042-1/">USN-4042-1</a>] poppler vulnerabilities</h3>
+
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9903">CVE-2019-9903</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9631">CVE-2019-9631</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9200">CVE-2019-9200</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12293">CVE-2019-12293</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10873">CVE-2019-10873</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10872">CVE-2019-10872</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10023">CVE-2019-10023</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10021">CVE-2019-10021</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10019">CVE-2019-10019</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10018">CVE-2019-10018</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20662">CVE-2018-20662</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18897">CVE-2018-18897</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9865">CVE-2017-9865</a></li>
+</ul></li>
+<li>Usual mix of issues
+
+<ul>
+<li>Memory leak</li>
+<li>Stack exhaustion -&gt; crash, DoS</li>
+<li>3*Heap-based buffer over-reads</li>
+<li>NULL pointer dereference</li>
+<li>Various floating point exception issues</li>
+<li>Assertion failure</li>
+<li>Heap-based buffer under-write - so write at a negative index of a heap
+allocated buffer - crash, DoS or possible RCE via heap metadata or
+object corruption</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4041-1-usn-4041-2-linux-kernel-update">[<a href="https://usn.ubuntu.com/4041-1/">USN-4041-1</a>, <a href="https://usn.ubuntu.com/4041-2/">USN-4041-2</a>] Linux kernel update</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM (HWE), Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11479">CVE-2019-11479</a></li>
+</ul></li>
+<li>Final SACK Panic issue (<a href="https://ubuntusecuritypodcast.org/episode-37/">Episode 37</a>) - added sysctl to easily set MSS (is
+usually hard-coded to 48) - so can be increased to avoid this DoS issue</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="apparmor-interview-with-john-johansen">AppArmor interview with John Johansen</h3>
+
+<ul>
+<li><a href="https://gitlab.com/apparmor/apparmor">https://gitlab.com/apparmor/apparmor</a></li>
+<li><a href="https://wiki.ubuntu.com/AppArmor">https://wiki.ubuntu.com/AppArmor</a></li>
+</ul>
+
+<h3 id="hiring">Hiring</h3>
+
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
+</ul>
+
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+
+<ul>
+<li><a href="https://boards.greenhouse.io/canonical/jobs/1723997">https://boards.greenhouse.io/canonical/jobs/1723997</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E038.mp3" length="26458606" type="audio/mpeg" /><itunes:duration>27:33</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Episode 37</title>
           <link>https://ubuntusecuritypodcast.org/episode-37/</link>
-          <pubDate>Fri, 28 Jun 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Fri, 28 Jun 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E037.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -323,7 +661,7 @@ denied hosts from repeatedly trying</li>
         <item>
           <title>Episode 36</title>
           <link>https://ubuntusecuritypodcast.org/episode-36/</link>
-          <pubDate>Mon, 17 Jun 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 17 Jun 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E036.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -562,7 +900,7 @@ upstream released 67.0.2 which is this new update.</li>
         <item>
           <title>Episode 35</title>
           <link>https://ubuntusecuritypodcast.org/episode-35/</link>
-          <pubDate>Tue, 11 Jun 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 11 Jun 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E035.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -847,7 +1185,7 @@ fact upgraded and therefore think the old profile data was invalid</li>
         <item>
           <title>Episode 34</title>
           <link>https://ubuntusecuritypodcast.org/episode-34/</link>
-          <pubDate>Mon, 03 Jun 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 03 Jun 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E034.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -1091,7 +1429,7 @@ version than in backporting</li>
         <item>
           <title>Episode 33</title>
           <link>https://ubuntusecuritypodcast.org/episode-33/</link>
-          <pubDate>Mon, 27 May 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 27 May 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E033.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -1361,7 +1699,7 @@ mediation</li>
         <item>
           <title>Episode 32</title>
           <link>https://ubuntusecuritypodcast.org/episode-32/</link>
-          <pubDate>Mon, 20 May 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 20 May 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E032.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -1752,7 +2090,7 @@ itself</li>
         <item>
           <title>Episode 31</title>
           <link>https://ubuntusecuritypodcast.org/episode-31/</link>
-          <pubDate>Mon, 13 May 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 13 May 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E031.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -1945,7 +2283,7 @@ escaping this data</li>
         <item>
           <title>Episode 30</title>
           <link>https://ubuntusecuritypodcast.org/episode-30/</link>
-          <pubDate>Mon, 06 May 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 06 May 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E030.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -2143,7 +2481,7 @@ mode - fixed by sanitising this filename first</li>
         <item>
           <title>Episode 29</title>
           <link>https://ubuntusecuritypodcast.org/episode-29/</link>
-          <pubDate>Tue, 30 Apr 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 30 Apr 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E029.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -2458,7 +2796,7 @@ packages in main by the security team</li>
         <item>
           <title>Episode 28</title>
           <link>https://ubuntusecuritypodcast.org/episode-28/</link>
-          <pubDate>Mon, 15 Apr 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 15 Apr 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E028.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -2732,7 +3070,7 @@ rsync or scp</li>
         <item>
           <title>Episode 27</title>
           <link>https://ubuntusecuritypodcast.org/episode-27/</link>
-          <pubDate>Mon, 08 Apr 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 08 Apr 2019 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E027.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -3093,7 +3431,7 @@ malicious f2fs images</li>
         <item>
           <title>Episode 26</title>
           <link>https://ubuntusecuritypodcast.org/episode-26/</link>
-          <pubDate>Mon, 01 Apr 2019 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 01 Apr 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E026.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -3427,7 +3765,7 @@ and plugins</li>
         <item>
           <title>Episode 25</title>
           <link>https://ubuntusecuritypodcast.org/episode-25/</link>
-          <pubDate>Mon, 25 Mar 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 25 Mar 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E025.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -3666,7 +4004,7 @@ mishandling of variable length function arguments - all crash -&gt; DoS</li>
         <item>
           <title>Episode 24</title>
           <link>https://ubuntusecuritypodcast.org/episode-24/</link>
-          <pubDate>Tue, 19 Mar 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Tue, 19 Mar 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E024.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -3875,7 +4213,7 @@ various Ubuntu kernel configurations</li>
         <item>
           <title>Episode 23</title>
           <link>https://ubuntusecuritypodcast.org/episode-23/</link>
-          <pubDate>Tue, 12 Mar 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Tue, 12 Mar 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E023.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -4031,7 +4369,7 @@ various Ubuntu kernel configurations</li>
         <item>
           <title>Episode 22</title>
           <link>https://ubuntusecuritypodcast.org/episode-22/</link>
-          <pubDate>Mon, 04 Mar 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 04 Mar 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E022.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -4247,7 +4585,7 @@ various Ubuntu kernel configurations</li>
         <item>
           <title>Episode 21</title>
           <link>https://ubuntusecuritypodcast.org/episode-21/</link>
-          <pubDate>Thu, 21 Feb 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Thu, 21 Feb 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E021.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -4449,7 +4787,7 @@ various Ubuntu kernel configurations</li>
         <item>
           <title>Episode 20</title>
           <link>https://ubuntusecuritypodcast.org/episode-20/</link>
-          <pubDate>Mon, 11 Feb 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 11 Feb 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E020.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -4689,7 +5027,7 @@ pass to it to run</li>
         <item>
           <title>Episode 19</title>
           <link>https://ubuntusecuritypodcast.org/episode-19/</link>
-          <pubDate>Mon, 04 Feb 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 04 Feb 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E019.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -4902,7 +5240,7 @@ pass to it to run</li>
         <item>
           <title>Episode 18</title>
           <link>https://ubuntusecuritypodcast.org/episode-18/</link>
-          <pubDate>Tue, 29 Jan 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Tue, 29 Jan 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E018.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -5124,7 +5462,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
         <item>
           <title>Episode 17</title>
           <link>https://ubuntusecuritypodcast.org/episode-17/</link>
-          <pubDate>Tue, 22 Jan 2019 00:00:00 +0000 </pubDate>
+          <pubDate>Tue, 22 Jan 2019 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E017.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -5438,7 +5776,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
         <item>
           <title>Episode 16</title>
           <link>https://ubuntusecuritypodcast.org/episode-16/</link>
-          <pubDate>Mon, 17 Dec 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 17 Dec 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E016.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -5612,7 +5950,7 @@ RWX segment at a fixed location, which can be used to bypass DEP / ASLR
         <item>
           <title>Episode 15</title>
           <link>https://ubuntusecuritypodcast.org/episode-15/</link>
-          <pubDate>Mon, 10 Dec 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 10 Dec 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E015.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -5880,7 +6218,7 @@ already have latest security updates</li>
         <item>
           <title>Episode 14</title>
           <link>https://ubuntusecuritypodcast.org/episode-14/</link>
-          <pubDate>Mon, 03 Dec 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 03 Dec 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E014.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -6152,7 +6490,7 @@ barrier to entry as a trusted developer</li>
         <item>
           <title>Episode 13</title>
           <link>https://ubuntusecuritypodcast.org/episode-13/</link>
-          <pubDate>Mon, 26 Nov 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 26 Nov 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E013.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -6278,7 +6616,7 @@ barrier to entry as a trusted developer</li>
         <item>
           <title>Episode 12</title>
           <link>https://ubuntusecuritypodcast.org/episode-12/</link>
-          <pubDate>Mon, 19 Nov 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 19 Nov 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E012.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -6590,7 +6928,7 @@ is empty)</li>
         <item>
           <title>Episode 11</title>
           <link>https://ubuntusecuritypodcast.org/episode-11/</link>
-          <pubDate>Mon, 12 Nov 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 12 Nov 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E011.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -6825,7 +7163,7 @@ is empty)</li>
         <item>
           <title>Episode 10</title>
           <link>https://ubuntusecuritypodcast.org/episode-10/</link>
-          <pubDate>Mon, 05 Nov 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Mon, 05 Nov 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E010.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -6979,7 +7317,7 @@ is empty)</li>
         <item>
           <title>Episode 9</title>
           <link>https://ubuntusecuritypodcast.org/episode-9/</link>
-          <pubDate>Tue, 30 Oct 2018 00:00:00 +0000 </pubDate>
+          <pubDate>Tue, 30 Oct 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E009.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -7240,7 +7578,7 @@ malicious extension - then could privilege escalation or local code execution</l
         <item>
           <title>Episode 8</title>
           <link>https://ubuntusecuritypodcast.org/episode-8/</link>
-          <pubDate>Mon, 22 Oct 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 22 Oct 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E008.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -7400,7 +7738,7 @@ the system package so weren&rsquo;t affected</li>
         <item>
           <title>Episode 7</title>
           <link>https://ubuntusecuritypodcast.org/episode-7/</link>
-          <pubDate>Tue, 16 Oct 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 16 Oct 2018 00:00:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E007.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -7700,7 +8038,7 @@ format handling leading to DoS etc</li>
         <item>
           <title>Episode 6</title>
           <link>https://ubuntusecuritypodcast.org/episode-6/</link>
-          <pubDate>Tue, 02 Oct 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 02 Oct 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E006.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -7830,7 +8168,7 @@ format handling leading to DoS etc</li>
         <item>
           <title>Episode 5</title>
           <link>https://ubuntusecuritypodcast.org/episode-5/</link>
-          <pubDate>Mon, 24 Sep 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 24 Sep 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E005.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -8110,7 +8448,7 @@ allows remote DoS or possibly remote code execution</li>
         <item>
           <title>Episode 4</title>
           <link>https://ubuntusecuritypodcast.org/episode-4/</link>
-          <pubDate>Mon, 10 Sep 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 10 Sep 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E004.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -8269,7 +8607,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
         <item>
           <title>Episode 3</title>
           <link>https://ubuntusecuritypodcast.org/episode-3/</link>
-          <pubDate>Mon, 03 Sep 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 03 Sep 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E003.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -8462,7 +8800,7 @@ in time and hence the feature had to be disabled</li>
         <item>
           <title>Episode 2</title>
           <link>https://ubuntusecuritypodcast.org/episode-2/</link>
-          <pubDate>Tue, 28 Aug 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 28 Aug 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E002.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -8783,7 +9121,7 @@ boot for some hardware configurations</li>
         <item>
           <title>Episode 1</title>
           <link>https://ubuntusecuritypodcast.org/episode-1/</link>
-          <pubDate>Mon, 20 Aug 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Mon, 20 Aug 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E001.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -8987,7 +9325,7 @@ boot for some hardware configurations</li>
         <item>
           <title>Episode 0</title>
           <link>https://ubuntusecuritypodcast.org/episode-0/</link>
-          <pubDate>Tue, 14 Aug 2018 00:00:00 +0100 </pubDate>
+          <pubDate>Tue, 14 Aug 2018 00:00:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://people.canonical.com/~amurray/USP/USP_E000.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
