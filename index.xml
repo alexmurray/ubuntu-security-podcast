@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jul 2019 17:00:00 +0930</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 14:52:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 39</title>
+      <link>https://ubuntusecuritypodcast.org/episode-39/</link>
+      <pubDate>Tue, 09 Jul 2019 14:52:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-39/</guid>
+      <description>Overview A look at security updates for Django, Thunderbird, ZNC, Irssi and more, plus news on the CanonicalLtd GitHub account credentials compromise, SKS PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
+This week in Ubuntu Security Updates 7 unique CVEs addressed
+[USN-4043-1] Django vulnerabilities  2 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2019-12781 CVE-2019-12308  If using django via a reverse proxy, which itself would connect to django over HTTPS, if accessing HTTP resources they would not be redirected to HTTPS even if configured to do so on the django server.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 38</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 55 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 55 unique CVEs addressed
       <description>Overview The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!
 This week in Ubuntu Security Updates 36 unique CVEs addressed
 [USN-4017-1, USN-4017-2] Linux kernel vulnerabilities  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco  CVE-2019-11477 CVE-2019-11478  SACK Panic - will be discussed in more detail with Joe later in the show Livepatch (LSN-0052-1) also available for Xenial and Bionic  [USN-4018-1] Samba vulnerabilities  2 CVEs addressed in Disco  CVE-2019-12436 CVE-2019-12435  Two DoS issues (both NULL ptr dereferences) only affecting most recent Samba versions  One in AD DC DNS mgmt server RPC process  Only an authenticated user could trigger this  Other in LDAP server - user with read access to the directory could trigger NULL ptr dereference via the paged search control   [USN-4019-1, USN-4019-2] SQLite vulnerabilities  12 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2017-2519 CVE-2017-13685 CVE-2017-10989 CVE-2016-6153 CVE-2019-9937 CVE-2019-9936 CVE-2019-8457 CVE-2018-20506 CVE-2018-20346 CVE-2018-20505 CVE-2017-2520 CVE-2017-2518  7 CVEs addressed in Precise ESM, Trusty ESM  CVE-2017-13685 CVE-2017-10989 CVE-2016-6153 CVE-2019-8457 CVE-2018-20506 CVE-2018-20346 CVE-2017-2518  Mix of various issues, most involving various memory corruption problems  UAFs, DoS (crash), heap-based buffer over-reads (crash -&amp;gt; DoS or possible information disclosure), incorrect use of temporary directories, race-condition leading to NULL pointer dereference, integer overflow -&amp;gt; buffer overflow -&amp;gt; crash / code execution   [USN-4021-1] libvirt vulnerabilities  2 CVEs addressed in Cosmic, Disco  CVE-2019-3886 CVE-2019-10132  DoS where some APIs in the guest agents could be accessed by read-only users - this would cause libvirt to block and cause a DoS Privilege escalation due to insecure permissions on the virt-lockd and virt-logd UNIX domain sockets - these are created by systemd unit files but were created as world writable - and the daemons don&amp;rsquo;t try and authenticate the user - so anyone could use these sockets to potentially elevate privileges - so fixed by ensuring the systemd socket definitions specify the right mode.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
