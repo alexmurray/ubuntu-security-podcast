@@ -8,6 +8,118 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 39
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-39
+:EXPORT_DATE: 2019-07-09 14:52
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E039.mp3 :podcast_duration "12:12" :podcast_bytes "11713006" :permalink "https://ubuntusecuritypodcast.org/episode-39/"
+:END:
+#+begin_description
+A look at security updates for Django, Thunderbird, ZNC, Irssi and more,
+plus news on the CanonicalLtd GitHub account credentials compromise, SKS
+PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
+#+end_description
+** Overview
+A look at security updates for Django, Thunderbird, ZNC, Irssi and more,
+plus news on the CanonicalLtd GitHub account credentials compromise, SKS
+PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
+** This week in Ubuntu Security Updates
+7 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4043-1/][USN-4043-1]]] Django vulnerabilities
+- 2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12781][CVE-2019-12781]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12308][CVE-2019-12308]]
+- If using django via a reverse proxy, which itself would connect to django
+  over HTTPS, if accessing HTTP resources they would not be redirected to
+  HTTPS even if configured to do so on the django server.
+- XSS via the 'Current URL' link as this was not validated as a safe URL
+  before display - so possible to inject javascript etc via a URL query
+  payload parameter etc - such that when the user clicks the link it would
+  be executed (RCE bug with user interaction)
+
+*** [[[https://usn.ubuntu.com/4045-1/][USN-4045-1]]] Thunderbird vulnerabilities
+- 2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708][CVE-2019-11708]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11707][CVE-2019-11707]]
+- Latest upstream 60.7.2 release
+- Mentioned in the context of Firefox in [[https://ubuntusecuritypodcast.org/episode-37/][Episode 37]] and [[https://ubuntusecuritypodcast.org/episode-38/][Episode 38]] (sandbox
+  escape and RCE)
+- By default scripting is disabled in TB so not as high an impact
+
+*** [[[https://usn.ubuntu.com/4044-1/][USN-4044-1]]] ZNC vulnerability
+- 1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12816][CVE-2019-12816]]
+- ZNC provides support for plugin modules
+- These can be loaded by autenticated, non-admin users
+i  - The name of this is checked in various places to ensure control
+    characters and other means of code execution are blocked, but not on
+    all code-paths using modules
+- Would allow to execute code as the ZNC server via an authenticated user
+- Fixed to validate module name on all code paths which use it
+
+*** [[[https://usn.ubuntu.com/4038-3/][USN-4038-3]], USN-4038-4] bzip2 regression
+- Affecting Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
+- [[https://ubuntusecuritypodcast.org/episode-38/][Episode 38]] mentioned bzip2 update - we also mentioned this breaks
+  decompression of some archives built by lbzip2 etc - this regression
+  fixes that by introducing a new patch proposed by upstream to accept as
+  many selectors as specified by to then discard them later
+
+*** [[[https://usn.ubuntu.com/4046-1/][USN-4046-1]]] Irssi vulnerabilities
+- 2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13045][CVE-2019-13045]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7054][CVE-2018-7054]]
+- 2 different UAF's due to mismanagement of data structures:
+  - One on SASL code-paths - so only affected if using SASL
+    authentication - would reuse provided username and password
+    fields after they had been freed
+  - Another in code to handle netsplits (used to handle when servers get
+    disconnected from the wider network)
+    - This was due to an incomplete fix for previous CVE-2017-7191
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu 18.10 (Cosmic Cuttlefish) reaches End of Life on July 18 2019
+- Released October 18, 2018 - non-LTS so 9 months of support
+- Past 9 months - no new updates/ security fixes and hence no USNs
+- Upgrade to Disco (19.04)
+- https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-July/004996.html
+
+*** CanonicalLtd GitHub organisation account compromise
+- A single account which was part of the CanonicalLtd GitHub organisation
+  was compromised 6th July
+- Used to create proof-of-concept repositories and issues to demonstrate
+  the hack was possible
+- Investigation is still on-going but at this stage it only appears to be
+  these actions, not malicious but attention seeking in nature
+  - No code has been altered or PII accessed (nor is any PII stored there)
+- Account has been removed from the CanonicaLtd organisation, investigation
+  is still on-going, we will release more details as they become available
+- https://twitter.com/ubuntu_sec/status/1147675201632473088
+
+*** SKS keyserver certificate spamming
+- https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f
+- WoT aspect of PGP allows users to sign one-anothers public keys
+  (certificates) and upload these signatures to the keyservers
+- SKS keyservers were designed to never delete anything and instead to append
+- So when downloading a key (certificate) you get it plus all the signatures
+- SKS supports up to 150k sigs - GnuPG is logarithmic in order of signatures
+- So can DoS local GnuPG once have downloaded someones key (cert)
+- Re Ubuntu:
+  - We use GPG for signing the hashes of packages in the repo
+  - This public key is distributed directly inside Ubuntu on install media
+    and in the archive and does not depend on the SKS keyserver network
+  - Keys for PPAs are fetched from Launchpad, not SKS as well in general
+  - So only exposure for Ubuntu users is if manually fetching keys from SKS
+    keyservers or if using Enigmail in ThunderBird or other software which
+    automatically fetches certs from SKS
+- Mitigation
+  - if using Enigmail, [[https://www.enigmail.net/index.php/en/user-manual/handbook-faq][disable auto-fetching / refreshing of public keys]]
+  - if using GnuPG directly, don't use SKS keyservers, instead use [[https://keys.openpgp.org][new
+    resistant keyserver]]
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 38
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-38

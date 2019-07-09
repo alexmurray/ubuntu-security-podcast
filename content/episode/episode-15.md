@@ -6,9 +6,9 @@ description = """
   sure you always have the latest security updates by using unattended-upgrades.
   """
 date = 2018-12-10
-lastmod = 2019-07-02T17:12:38+09:30
+lastmod = 2019-07-09T14:54:13+09:30
 draft = false
-weight = 1024
+weight = 1025
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E015.mp3"
