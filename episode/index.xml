@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Tue, 9 Jul 2019 14:52:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 09:27:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,437 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 40</title>
+          <link>https://ubuntusecuritypodcast.org/episode-40/</link>
+          <pubDate>Wed, 24 Jul 2019 09:27:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://people.canonical.com/~amurray/USP/USP_E040.mp3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  Big roundup of security updates from the past 2 weeks including Docker,
+  ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
+  recent big fines for companies breaching their GDPR responsibilities and
+  it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
+  </itunes:summary>
+        <description>  Big roundup of security updates from the past 2 weeks including Docker,
+  ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
+  recent big fines for companies breaching their GDPR responsibilities and
+  it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
+  </description>
+        <googleplay:description>  Big roundup of security updates from the past 2 weeks including Docker,
+  ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
+  recent big fines for companies breaching their GDPR responsibilities and
+  it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>Big roundup of security updates from the past 2 weeks including Docker,
+ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
+recent big fines for companies breaching their GDPR responsibilities and
+it&rsquo;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>62 unique CVEs addressed</p>
+
+<h3 id="usn-4047-1-libvirt-vulnerabilities">[<a href="https://usn.ubuntu.com/4047-1/">USN-4047-1</a>] libvirt vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10168">CVE-2019-10168</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10167">CVE-2019-10167</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10166">CVE-2019-10166</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10161">CVE-2019-10161</a></li>
+</ul></li>
+<li>All related - in each case various libvirt APIs were accessible to users
+with read-only permissions and allowed them to perform operations which
+they should not have access to - in one case providing an ability to
+escalate privileges to root on the host - since would allow to execute
+arbitrary binaries with elevated permissions.</li>
+<li>By default, libvirt is constrained by AppArmor in Ubuntu which provides
+some isolation to help in these cases</li>
+</ul>
+
+<h3 id="usn-4048-1-docker-vulnerabilities">[<a href="https://usn.ubuntu.com/4048-1/">USN-4048-1</a>] Docker vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5736">CVE-2019-5736</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15664">CVE-2018-15664</a></li>
+</ul></li>
+<li>Directory traversal via crafted symlink exchange (TOCTOU) via docker cp
+command - docker cp can be used to copy files between host and
+container - to do this safely, need to resolve paths as though were in
+the container - so tries to check a path by resolving symlinks, and then
+later use it if validates - but race exists where can then modify a
+component in the path via symlink <strong>after</strong> the check but <strong>before</strong> the
+copy, so can then overwrite arbitrary files on the host -&gt; privilege
+escalation</li>
+<li>runc component in docker could allow a container to overwrite the runc
+binary on the host -&gt; privilege escalation (and container escape) to the
+runc context on the host
+
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/runC">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/runC</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4049-1-usn-4049-2-glib-vulnerability">[<a href="https://usn.ubuntu.com/4049-1/">USN-4049-1</a>, <a href="https://usn.ubuntu.com/4049-2/">USN-4049-2</a>] GLib vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13012">CVE-2019-13012</a></li>
+</ul></li>
+<li>Similar to <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12450">CVE-2019-12450</a> (<a href="https://ubuntusecuritypodcast.org/episode-36/">Episode 36</a>) - in this case, directories and
+files would get created with default permisssions, not restrictive
+permissions, when using the keyfile gsettings backend - could expose
+settings or allow other users to modify settings etc.</li>
+</ul>
+
+<h3 id="usn-4050-1-zeromq-vulnerability">[<a href="https://usn.ubuntu.com/4050-1/">USN-4050-1</a>] ZeroMQ vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13132">CVE-2019-13132</a></li>
+</ul></li>
+<li>Stack buffer overflow when using CURVE encryption/authentication -&gt; RCE</li>
+</ul>
+
+<h3 id="usn-4051-1-usn-4051-2-apport-vulnerability">[<a href="https://usn.ubuntu.com/4051-1/">USN-4051-1</a>, USN-4051-2] Apport vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7307">CVE-2019-7307</a></li>
+</ul></li>
+<li>Reported by Kevin Backhouse of Semmle Security Research Team</li>
+<li>TOCTOU when processing a users own ignore configuration file</li>
+<li>Apport runs as root, but would check permission to file via access()
+system call - which uses the real processes&rsquo; UID / GID - so is safe as a
+permission check - BUT would then go and open the file - so in the
+meantime this could be replaced by a symlink to say a root owned file
+which could then get included in the resulting crash report</li>
+<li>Fix is to seteuid() as the desired user to set effective UID to then
+actually open the file before restoring euid to root - so this does both
+the equivalent of the access and open in 1 call avoiding to TOCTOU</li>
+</ul>
+
+<h3 id="usn-4052-1-whoopsie-vulnerability">[<a href="https://usn.ubuntu.com/4052-1/">USN-4052-1</a>] Whoopsie vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11476">CVE-2019-11476</a></li>
+</ul></li>
+<li>Reported by Kevin Backhouse of Semmle Security Research Team</li>
+<li>Integer overflow when processing crash dump - when parsing the crash
+dump, if it contained an artificially large value in the dump file, would
+overflow length calculation, then would result in a heap-buffer OOB write
+-&gt; crash, DoS OR code-execution as whoopsie process.</li>
+<li>When coupled with previous Apport bug could allow an arbitrary user to
+read any file on the system by first embedding it in a crash dump via
+Apport and then triggering Whoopsie to process it and expose the via
+arbitrary code execution</li>
+</ul>
+
+<h3 id="usn-4053-1-gvfs-vulnerabilities">[<a href="https://usn.ubuntu.com/4053-1/">USN-4053-1</a>] GVfs vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12795">CVE-2019-12795</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12449">CVE-2019-12449</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12448">CVE-2019-12448</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12447">CVE-2019-12447</a></li>
+</ul></li>
+<li>gvfs private server socket did not configure any authorisation - so any
+user could possible connect to it and issue API calls -&gt; possible code
+exection as another user</li>
+<li>files created / moved by admin backend could end up with wrong file
+ownership - admin backend allows to access root files as normal user (via
+admin authorisation) - so can copy files as a user to root&rsquo;s home which
+then are still owned by the original user</li>
+</ul>
+
+<h3 id="usn-4054-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/4054-1/">USN-4054-1</a>] Firefox vulnerabilities</h3>
+
+<ul>
+<li>21 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11730">CVE-2019-11730</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11729">CVE-2019-11729</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11728">CVE-2019-11728</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11727">CVE-2019-11727</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11725">CVE-2019-11725</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11724">CVE-2019-11724</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11723">CVE-2019-11723</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11721">CVE-2019-11721</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11720">CVE-2019-11720</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11719">CVE-2019-11719</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11718">CVE-2019-11718</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11717">CVE-2019-11717</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11716">CVE-2019-11716</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11715">CVE-2019-11715</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11714">CVE-2019-11714</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11713">CVE-2019-11713</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11712">CVE-2019-11712</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11711">CVE-2019-11711</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11710">CVE-2019-11710</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11709">CVE-2019-11709</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9811">CVE-2019-9811</a></li>
+</ul></li>
+<li>Upstream release 68.0</li>
+</ul>
+
+<h3 id="usn-4064-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/4064-1/">USN-4064-1</a>] Thunderbird vulnerabilities</h3>
+
+<ul>
+<li>10 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11730">CVE-2019-11730</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11729">CVE-2019-11729</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11719">CVE-2019-11719</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11717">CVE-2019-11717</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11715">CVE-2019-11715</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11713">CVE-2019-11713</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11712">CVE-2019-11712</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11711">CVE-2019-11711</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11709">CVE-2019-11709</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9811">CVE-2019-9811</a></li>
+</ul></li>
+<li>Upstream release 60.8</li>
+</ul>
+
+<h3 id="usn-4055-1-flightcrew-vulnerabilities">[<a href="https://usn.ubuntu.com/4055-1/">USN-4055-1</a>] flightcrew vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13453">CVE-2019-13453</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13241">CVE-2019-13241</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13032">CVE-2019-13032</a></li>
+</ul></li>
+<li>Mike Salvatore discovered and coordinated with upstream on fixing these issues</li>
+<li>Found 2 through fuzzing, 1 though code-analysis whilst analysing first two vulnerabilites</li>
+<li>2 fuzzing bugs
+
+<ul>
+<li>1 NULL pointer dereference (crash, DoS)</li>
+<li>1 infinite loop (CPU DoS)</li>
+</ul></li>
+<li>1 zip slip - write files outside of working directory when handling zip files (EPUB is a ZIP file)</li>
+<li>Great write-up on his blog:
+
+<ul>
+<li><a href="https://salvatoresecurity.com/fun-with-fuzzers-or-how-i-discovered-three-vulnerabilities-part-1-of-3/">https://salvatoresecurity.com/fun-with-fuzzers-or-how-i-discovered-three-vulnerabilities-part-1-of-3/</a></li>
+<li><a href="https://salvatoresecurity.com/fun-with-fuzzers-how-i-discovered-three-vulnerabilities-part-2-of-3/">https://salvatoresecurity.com/fun-with-fuzzers-how-i-discovered-three-vulnerabilities-part-2-of-3/</a></li>
+<li><a href="https://salvatoresecurity.com/fun-with-fuzzers-how-i-discovered-three-vulnerabilities-part-3-of-3/">https://salvatoresecurity.com/fun-with-fuzzers-how-i-discovered-three-vulnerabilities-part-3-of-3/</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4056-1-exiv2-vulnerabilities">[<a href="https://usn.ubuntu.com/4056-1/">USN-4056-1</a>] Exiv2 vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13114">CVE-2019-13114</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13113">CVE-2019-13113</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13110">CVE-2019-13110</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13112">CVE-2019-13112</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19535">CVE-2018-19535</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19108">CVE-2018-19108</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19107">CVE-2018-19107</a></li>
+</ul></li>
+<li>Library and CLI toolks to manage image metadata</li>
+<li>All DoS - assertion failure / NULL pointer dereference / OOB read /
+uncontrolled memory allocation / infinite loop</li>
+</ul>
+
+<h3 id="usn-4057-1-zipios-vulnerability">[<a href="https://usn.ubuntu.com/4057-1/">USN-4057-1</a>] Zipios vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13453">CVE-2019-13453</a></li>
+</ul></li>
+<li>Same as the flightcrew infinite loop issue since flightcrew contains an
+embedded copy of zipios</li>
+</ul>
+
+<h3 id="usn-4058-1-bash-vulnerability">[<a href="https://usn.ubuntu.com/4058-1/">USN-4058-1</a>] Bash vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9924">CVE-2019-9924</a></li>
+</ul></li>
+<li>rbash did not prevent modifying BASH_CMDS so user could execute any
+commands as the shell, defeating the purpose of rbash</li>
+</ul>
+
+<h3 id="usn-4059-1-usn-4059-2-squid-vulnerabilities">[<a href="https://usn.ubuntu.com/4059-1/">USN-4059-1</a>, <a href="https://usn.ubuntu.com/4059-2/">USN-4059-2</a>] Squid vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13345">CVE-2019-13345</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19132">CVE-2018-19132</a></li>
+</ul></li>
+<li>XSS in cachemgr CGI web module, and memory leak in SNMP module</li>
+</ul>
+
+<h3 id="usn-4060-1-usn-4060-2-nss-vulnerabilities">[<a href="https://usn.ubuntu.com/4060-1/">USN-4060-1</a>, <a href="https://usn.ubuntu.com/4060-2/">USN-4060-2</a>] NSS vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11729">CVE-2019-11729</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11727">CVE-2019-11727</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11719">CVE-2019-11719</a></li>
+</ul></li>
+<li>3 of the CVEs from the Firefox update (since Firefox contains libnss)
+
+<ul>
+<li>Empty public keys could trigger a segfault</li>
+<li>Possible to force to sign with wrong signature type with TLS 1.3</li>
+<li>OOB read when importing a private key with leading NUL bytes -&gt; info
+disclosure / crash</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4061-1-redis-vulnerabilities">[<a href="https://usn.ubuntu.com/4061-1/">USN-4061-1</a>] Redis vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10193">CVE-2019-10193</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10192">CVE-2019-10192</a></li>
+</ul></li>
+<li>1 stack, and 1 heap based buffer overflows when handling purposely
+corrupted hyperloglog data structure</li>
+</ul>
+
+<h3 id="usn-4062-1-wavpack-vulnerabilities">[<a href="https://usn.ubuntu.com/4062-1/">USN-4062-1</a>] WavPack vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010319">CVE-2019-1010319</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010318">CVE-2019-1010318</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010317">CVE-2019-1010317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010315">CVE-2019-1010315</a></li>
+</ul></li>
+<li>3 different DoS issues (1 CVE was found to be the same as the other)
+
+<ul>
+<li>2 * use of uninitialised variable</li>
+<li>Divide by zero</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4063-1-libreoffice-vulnerabilities">[<a href="https://usn.ubuntu.com/4063-1/">USN-4063-1</a>] LibreOffice vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9849">CVE-2019-9849</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9848">CVE-2019-9848</a></li>
+</ul></li>
+<li>RCE via a malicious document - docs can contain python - and this can be
+used with the built-in LibreLogo turtle graphics script to execute
+bundled python code - so can get RCE via a mouse-over event using
+LibreLogo and embedded python</li>
+<li>Stealth mode - documents can only fetch resources from &lsquo;trusted&rsquo;
+locations
+
+<ul>
+<li>Allows to disable the normal remote resource handling in documents to
+be a more private mode</li>
+<li>BUT bullet graphics not included - so could specify a remote bullet
+graphic from a non-trusted location and would still be fetched</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4065-1-squid-vulnerabilities">[<a href="https://usn.ubuntu.com/4065-1/">USN-4065-1</a>] Squid vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12529">CVE-2019-12529</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12527">CVE-2019-12527</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12525">CVE-2019-12525</a></li>
+</ul></li>
+<li>3 different possible crash bugs via memory corruption -&gt; DoS, but also
+maybe RCE&hellip;
+
+<ul>
+<li>1 when using digest auth and 2 for basic auth</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4066-1-libmspack-vulnerability">[<a href="https://usn.ubuntu.com/4066-1/">USN-4066-1</a>] libmspack vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010305">CVE-2019-1010305</a></li>
+</ul></li>
+<li>Buffer over-read with malicious chm file -&gt; crash, DoS</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="discussion-with-joe-mcmanus-on-recent-large-gdpr-fines-for-marriot-and-british-airways">Discussion with Joe McManus on recent large GDPR fines for Marriot and British Airways</h3>
+
+<ul>
+<li><a href="https://thehackernews.com/2019/07/british-airways-breach-gdpr-fine.html">https://thehackernews.com/2019/07/british-airways-breach-gdpr-fine.html</a></li>
+<li><a href="https://threatpost.com/marriott-123m-fine-data-breach/146320/">https://threatpost.com/marriott-123m-fine-data-breach/146320/</a></li>
+</ul>
+
+<h3 id="ubuntu-18-dot-10--cosmic-cuttlefish--end-of-life">Ubuntu 18.10 (Cosmic Cuttlefish) End-of-Life</h3>
+
+<ul>
+<li>Ubuntu 18.10 Cosmic Cuttlefish EOL was on 18th July, 2019</li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-July/005021.html">https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-July/005021.html</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E040.mp3" length="25992581" type="audio/mpeg" /><itunes:duration>27:04</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 39</title>
           <link>https://ubuntusecuritypodcast.org/episode-39/</link>

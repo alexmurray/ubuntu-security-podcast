@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jul 2019 14:52:00 +0930</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 09:27:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 40</title>
+      <link>https://ubuntusecuritypodcast.org/episode-40/</link>
+      <pubDate>Wed, 24 Jul 2019 09:27:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-40/</guid>
+      <description>Overview Big roundup of security updates from the past 2 weeks including Docker, ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some recent big fines for companies breaching their GDPR responsibilities and it&amp;rsquo;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
+This week in Ubuntu Security Updates 62 unique CVEs addressed
+[USN-4047-1] libvirt vulnerabilities  4 CVEs addressed in Xenial, Bionic, Cosmic, Disco  CVE-2019-10168 CVE-2019-10167 CVE-2019-10166 CVE-2019-10161  All related - in each case various libvirt APIs were accessible to users with read-only permissions and allowed them to perform operations which they should not have access to - in one case providing an ability to escalate privileges to root on the host - since would allow to execute arbitrary binaries with elevated permissions.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 39</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
       <description>Overview This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.
 This week in Ubuntu Security Updates 55 unique CVEs addressed
 [USN-4031-1] Linux kernel vulnerability  1 CVEs addressed in Bionic, Cosmic, Disco  CVE-2019-12817  64-bit PowerPC (ppc64el) memory management issue - introduced in the 4.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
