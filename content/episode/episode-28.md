@@ -2,9 +2,9 @@
 title = "Episode 28"
 description = "This week we look at updates for vulnerabilities in wpa\\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof)."
 date = 2019-04-15
-lastmod = 2019-07-09T14:54:01+09:30
+lastmod = 2019-07-24T09:27:47+09:30
 draft = false
-weight = 1012
+weight = 1013
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E028.mp3"

@@ -2,9 +2,9 @@
 title = "Episode 22"
 description = "This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions."
 date = 2019-03-04
-lastmod = 2019-07-09T14:54:07+09:30
+lastmod = 2019-07-24T09:27:52+09:30
 draft = false
-weight = 1018
+weight = 1019
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E022.mp3"
