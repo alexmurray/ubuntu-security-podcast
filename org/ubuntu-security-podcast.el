@@ -212,7 +212,7 @@
                           ":PROPERTIES:\n"
                           ":EXPORT_FILE_NAME: " export-file-name "\n"
                           ":EXPORT_DATE: " publish-date "\n"
-                          ":EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file " audio-file-name " :podcast_duration \"MM:SS\" :podcast_bytes \"NUM_BYTES\" :permalink \"https://ubuntusecuritypodcast.org/" export-file-name "/\"\n"
+                          ":EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file " audio-file-name " :podcast_duration \"MM:SS\" :podcast_bytes \"NUM_BYTES\" :permalink \"https://ubuntusecuritypodcast.org/" export-file-name "/\" :guid " (secure-hash 'sha512 audio-file-name) "\n"
                           ":END:\n"
                           "#+begin_description\n"
                           description "\n"
