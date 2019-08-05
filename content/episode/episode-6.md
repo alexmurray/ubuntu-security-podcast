@@ -2,7 +2,7 @@
 title = "Episode 6"
 description = "This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more."
 date = 2018-10-02
-lastmod = 2019-07-24T09:28:06+09:30
+lastmod = 2019-08-05T20:27:27+09:30
 draft = false
 weight = 1035
 episode_image = "img/usp_logo_500.png"

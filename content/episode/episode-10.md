@@ -2,7 +2,7 @@
 title = "Episode 10"
 description = "This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more."
 date = 2018-11-05
-lastmod = 2019-07-24T09:28:03+09:30
+lastmod = 2019-08-05T20:27:22+09:30
 draft = false
 weight = 1031
 episode_image = "img/usp_logo_500.png"

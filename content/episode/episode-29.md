@@ -8,7 +8,7 @@ description = """
   Trusty Tahr to Extended Security Maintenance.
   """
 date = 2019-04-30
-lastmod = 2019-07-24T09:27:46+09:30
+lastmod = 2019-08-05T20:27:00+09:30
 draft = false
 weight = 1012
 episode_image = "img/usp_logo_500.png"

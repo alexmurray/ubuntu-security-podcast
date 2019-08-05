@@ -2,7 +2,7 @@
 title = "Episode 38"
 description = "This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features."
 date = 2019-07-02T17:00:00+09:30
-lastmod = 2019-07-24T09:27:37+09:30
+lastmod = 2019-08-05T20:26:49+09:30
 draft = false
 weight = 1003
 episode_image = "img/usp_logo_500.png"

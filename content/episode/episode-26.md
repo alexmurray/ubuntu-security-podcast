@@ -7,7 +7,7 @@ description = """
   more.
   """
 date = 2019-04-01
-lastmod = 2019-07-24T09:27:49+09:30
+lastmod = 2019-08-05T20:27:03+09:30
 draft = false
 weight = 1015
 episode_image = "img/usp_logo_500.png"

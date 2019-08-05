@@ -6,7 +6,7 @@ description = """
   various hardening guides for Ubuntu.
   """
 date = 2018-09-10
-lastmod = 2019-07-24T09:28:08+09:30
+lastmod = 2019-08-05T20:27:29+09:30
 draft = false
 weight = 1037
 episode_image = "img/usp_logo_500.png"

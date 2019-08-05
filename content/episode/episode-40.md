@@ -7,7 +7,7 @@ description = """
   it's EOL for Ubuntu 18.10 Cosmic Cuttlefish.
   """
 date = 2019-07-24T09:27:00+09:30
-lastmod = 2019-07-24T09:27:35+09:30
+lastmod = 2019-08-05T20:26:47+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
