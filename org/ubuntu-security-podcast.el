@@ -182,7 +182,7 @@
           (error "Unable to get Duration of %s via ffmpeg" audio-file-name)
         (let ((mins (match-string 1 output))
               (secs (match-string 2 output)))
-          (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\"$")
+          (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\" :guid [a-z0-9]+$")
           (replace-match (concat mins ":" secs) t t nil 1)
           (replace-match (format "%d" num-bytes) t t nil 2))))))
 
