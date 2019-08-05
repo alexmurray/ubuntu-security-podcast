@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Wed, 24 Jul 2019 09:27:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Mon, 5 Aug 2019 20:15:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,480 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 41</title>
+          <link>https://ubuntusecuritypodcast.org/episode-41/</link>
+          <pubDate>Mon, 05 Aug 2019 20:15:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>93da5c5539f3f81eac1a3b8ed45073abf86bc2e0b571557bbe3f86ba69d0444b12c536661c741547f3bfd212c198e83734b002caea5ee420146fbde697398a9a</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</itunes:summary>
+        <description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</description>
+        <googleplay:description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&rsquo;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>90 unique CVEs addressed</p>
+
+<h3 id="usn-4066-2-clamav-vulnerability">[<a href="https://usn.ubuntu.com/4066-2/">USN-4066-2</a>] ClamAV vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010305">CVE-2019-1010305</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> - libmspack buffer overflow - ClamAV contains own copy of
+libmspack in older releases so is affected</li>
+</ul>
+
+<h3 id="usn-4065-2-squid-vulnerabilities">[<a href="https://usn.ubuntu.com/4065-2/">USN-4065-2</a>] Squid vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12529">CVE-2019-12529</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12525">CVE-2019-12525</a></li>
+</ul></li>
+</ul>
+
+<p><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> (memory corruption issues)</p>
+
+<h3 id="usn-4067-1-evince-vulnerability">[<a href="https://usn.ubuntu.com/4067-1/">USN-4067-1</a>] Evince vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010006">CVE-2019-1010006</a></li>
+</ul></li>
+<li>Integer overflow -&gt; buffer overflow when handling embedded tiff content in PDF documents</li>
+<li>DoS -&gt; possible RCE</li>
+</ul>
+
+<h3 id="usn-4068-1-usn-4068-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4068-1/">USN-4068-1</a>, <a href="https://usn.ubuntu.com/4068-2/">USN-4068-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic and Xenial (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884">CVE-2019-11884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815">CVE-2019-11815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11085">CVE-2019-11085</a></li>
+</ul></li>
+<li>2 information disclosure vulnerabilities:
+
+<ul>
+<li>Exposes kernel memory to user-space which could expose sensitive
+information (keys, pointers to help defeat ASLR etc)</li>
+<li>Bluetooth Human Interface Device Protocol (HIDP) socket ioctl() failed
+to NUL terminate the name field</li>
+<li>Ext4 file-system did not zero out unused regions in extents tree blocks
+which are returned to user-space</li>
+</ul></li>
+<li>Use-after-free due to a race-condition in the reliable datagram socket
+(RDS) protocol module -&gt; crash / code exec
+
+<ul>
+<li>Blacklisted by default in Ubuntu and contrary to the original CVE
+description, this is not likely to be remotely exploitable since the
+use-after-free only occurs on namespace cleanup</li>
+</ul></li>
+<li>Intel i915 graphics driver failed to validate ranges for mmap() in some places
+
+<ul>
+<li>Local attacker who already has access to the device could use this to
+crash / code execution -&gt; privilege escalation</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4076-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4076-1/">USN-4076-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>6 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10142">CVE-2019-10142</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9503">CVE-2019-9503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2054">CVE-2019-2054</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884">CVE-2019-11884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20836">CVE-2018-20836</a></li>
+</ul></li>
+<li>Freescale Hypervisor Manager (HVM) for PowerPC - used invalid size
+parameter from ioctl() for page size calculations - local attacker could
+use this to cause various memory corruption issues possibly resulting in
+privilege escalation or code execution (only enabled in Xenial 4.4
+kernel)</li>
+<li>Broadcom wifi driver would possibly pass through firmware events received
+on-the-air to the local USB wifi device - allows a remote attacker to
+send firmware events to the device having unspecified impact</li>
+<li>Possible seccomp bypass for policies that use ptrace on ARM - a tracing
+process could modify a syscall parameter after the seccomp decision for
+that syscall had been made - so could violate the policy</li>
+<li>Bluetooth HIDP + Ext4 extents information disclosure vulns covered earlier</li>
+<li>Race condition in Serial Attached SCSI (SAS) could possibly result in a
+UAF -&gt; crash, or code execution</li>
+</ul>
+
+<h3 id="lsn-0053-1-linux-kernel-vulnerability">[LSN-0053-1] Linux kernel vulnerability</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884">CVE-2019-11884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815">CVE-2019-11815</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2054">CVE-2019-2054</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2011-1079">CVE-2011-1079</a></li>
+</ul></li>
+<li>RDS UAF, Bluetooth HIDP + Ext4 extents information disclosure vulns covered earlier</li>
+<li>Seccomp bypass on ARM</li>
+<li>Separate bluetooth info disclosure via ioctl() for a similar non-NUL
+terminated string</li>
+</ul>
+
+<h3 id="usn-4069-1-usn-4069-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4069-1/">USN-4069-1</a>, <a href="https://usn.ubuntu.com/4069-2/">USN-4069-2</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Disco and Bionic (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884">CVE-2019-11884</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599">CVE-2019-11599</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487">CVE-2019-11487</a></li>
+</ul></li>
+<li>2 information disclosure issues mentioned for the Bionic/Xenial HWE above
+(4.15 kernel) - Bluetooth HIDP + Ext4 extents information disclosure
+vulns covered earlier</li>
+<li>Race condition in coredump generation - local user can trigger coredump
+for a process which can race with other memory managment handling and so
+could result in access to invalid memory regions - crash -&gt; DoS or
+information disclosure</li>
+<li>Integer overflow for page reference counts -&gt; UAF
+
+<ul>
+<li>Requires at least 140GB of RAM to be affected</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4070-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/4070-1/">USN-4070-1</a>] MySQL vulnerabilities</h3>
+
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2819">CVE-2019-2819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2805">CVE-2019-2805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2797">CVE-2019-2797</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2791">CVE-2019-2791</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2778">CVE-2019-2778</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2774">CVE-2019-2774</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2758">CVE-2019-2758</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2757">CVE-2019-2757</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2741">CVE-2019-2741</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2740">CVE-2019-2740</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2739">CVE-2019-2739</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2738">CVE-2019-2738</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2737">CVE-2019-2737</a></li>
+</ul></li>
+<li>Latest upstream version 5.7.27 - various vulnerabilities including:
+
+<ul>
+<li>Multiple variants of low privileged remote attacker could gain complete
+access to all MySQL server data (modify / access etc)</li>
+<li>Multiple versions of privileged AND unprivileged attacker could hang /
+crash MySQL server</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4071-1-usn-4071-2-patch-vulnerabilities">[<a href="https://usn.ubuntu.com/4071-1/">USN-4071-1</a>, <a href="https://usn.ubuntu.com/4071-2/">USN-4071-2</a>] Patch vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13638">CVE-2019-13638</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13636">CVE-2019-13636</a></li>
+</ul></li>
+<li>OS shell command injection via a crafted patch file - uses shell meta
+characters to take control of patch</li>
+<li>Mishandles symlinks which allows a crafted patch file to overwrite
+arbitrary files</li>
+</ul>
+
+<h3 id="usn-4072-1-ansible-vulnerabilities">[<a href="https://usn.ubuntu.com/4072-1/">USN-4072-1</a>] Ansible vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3828">CVE-2019-3828</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10875">CVE-2018-10875</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10874">CVE-2018-10874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10156">CVE-2019-10156</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16876">CVE-2018-16876</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16837">CVE-2018-16837</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10855">CVE-2018-10855</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7481">CVE-2017-7481</a></li>
+</ul></li>
+<li>Path traversal vulnerability in fetch module - allows an attacker to
+overwrite files outside of the specified destination</li>
+<li>Configuration or inventory variables read from CWD - local attacker could
+point to an arbitrary module / plugin under their control and so gain
+code-execution as the ansible daemon</li>
+<li>Various issues with variable substitution which could result in any
+variable being substituted and thus an information disclosure</li>
+</ul>
+
+<h3 id="usn-4073-1-libebml-vulnerability">[<a href="https://usn.ubuntu.com/4073-1/">USN-4073-1</a>] libEBML vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13615">CVE-2019-13615</a></li>
+</ul></li>
+<li>VLC related issue - lots of media attention - &ldquo;uninstall VLC now&rdquo; etc - overblown</li>
+<li>Heap-based buffer over-read in the Matroska decoder - crash -&gt; DoS - not
+code-execution</li>
+<li>However, VLC itself had a number of outstanding vulnerabilities</li>
+</ul>
+
+<h3 id="usn-4074-1-vlc-vulnerabilities">[<a href="https://usn.ubuntu.com/4074-1/">USN-4074-1</a>] VLC vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5439">CVE-2019-5439</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13602">CVE-2019-13602</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12874">CVE-2019-12874</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19857">CVE-2018-19857</a></li>
+</ul></li>
+<li>2 different heap-based buffer overflow - possible RCE but likely mitigated with ASLR (according to upstream)</li>
+<li>Double free -&gt; crash -&gt; DoS (glibc heap-protector ensures can&rsquo;t cause heap corruption -&gt; abort)</li>
+<li>Invalid pointer dereference (uninitialized) -&gt; crash or infoleak</li>
+</ul>
+
+<h3 id="usn-4075-1-exim-vulnerability">[<a href="https://usn.ubuntu.com/4075-1/">USN-4075-1</a>] Exim vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13917">CVE-2019-13917</a></li>
+</ul></li>
+<li>Possible RCE as root if configuration used the ${sort } expansion on
+items that can be controlled by an attacker - ie. $domain etc</li>
+</ul>
+
+<h3 id="usn-4054-2-firefox-regressions">[<a href="https://usn.ubuntu.com/4054-2/">USN-4054-2</a>] Firefox regressions</h3>
+
+<ul>
+<li>21 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11730">CVE-2019-11730</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11729">CVE-2019-11729</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11728">CVE-2019-11728</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11727">CVE-2019-11727</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11725">CVE-2019-11725</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11724">CVE-2019-11724</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11723">CVE-2019-11723</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11721">CVE-2019-11721</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11720">CVE-2019-11720</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11719">CVE-2019-11719</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11718">CVE-2019-11718</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11717">CVE-2019-11717</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11716">CVE-2019-11716</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11715">CVE-2019-11715</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11714">CVE-2019-11714</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11713">CVE-2019-11713</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11712">CVE-2019-11712</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11711">CVE-2019-11711</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11710">CVE-2019-11710</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11709">CVE-2019-11709</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9811">CVE-2019-9811</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> - Firefox update for 68.0 contained some minor regressions</li>
+<li>Upstream released 68.0.1 to fix these</li>
+</ul>
+
+<h3 id="usn-3990-2-urllib3-vulnerability">[<a href="https://usn.ubuntu.com/3990-2/">USN-3990-2</a>] urllib3 vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11236">CVE-2019-11236</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-33/">Episode 33</a> covered for standard support releases</li>
+</ul>
+
+<h3 id="usn-4077-1-tmpreaper-vulnerability">[<a href="https://usn.ubuntu.com/4077-1/">USN-4077-1</a>] tmpreaper vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3461">CVE-2019-3461</a></li>
+</ul></li>
+<li>Race condition when performing a bind-mount via rename() - local
+privilege escalation since can result in a file being placed elsewhere on
+the fs hierarchy - so could drop a file in <em>etc/cron.d</em> for example to
+get root code execution</li>
+</ul>
+
+<h3 id="usn-4078-1-openldap-vulnerabilities">[<a href="https://usn.ubuntu.com/4078-1/">USN-4078-1</a>] OpenLDAP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13565">CVE-2019-13565</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13057">CVE-2019-13057</a></li>
+</ul></li>
+<li>Would confuse authorisation for one user with another - so other user
+could then perform operations which they were not entitled to - in SASL
+authentication code paths</li>
+</ul>
+
+<h3 id="usn-4079-1-usn-4079-2-sox-vulnerabilities">[<a href="https://usn.ubuntu.com/4079-1/">USN-4079-1</a>, <a href="https://usn.ubuntu.com/4079-2/">USN-4079-2</a>] SoX vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic and Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8357">CVE-2019-8357</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8356">CVE-2019-8356</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8355">CVE-2019-8355</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8354">CVE-2019-8354</a></li>
+</ul></li>
+<li>CLI audio converter etc - usual sorts of issues for a C based application handling complex input file formats:
+
+<ul>
+<li>NULL ptr dereference</li>
+<li>Stack-based buffer overflow</li>
+<li>2 separate integer overflows -&gt; heap overflow</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4080-1-openjdk-8-vulnerabilities">[<a href="https://usn.ubuntu.com/4080-1/">USN-4080-1</a>] OpenJDK 8 vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2842">CVE-2019-2842</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2816">CVE-2019-2816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2786">CVE-2019-2786</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2769">CVE-2019-2769</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2762">CVE-2019-2762</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2745">CVE-2019-2745</a></li>
+</ul></li>
+<li>New upstream Java release 8u2222-b10</li>
+</ul>
+
+<h3 id="usn-4083-1-openjdk-11-vulnerabilities">[<a href="https://usn.ubuntu.com/4083-1/">USN-4083-1</a>] OpenJDK 11 vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317">CVE-2019-7317</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2821">CVE-2019-2821</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2818">CVE-2019-2818</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2816">CVE-2019-2816</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2786">CVE-2019-2786</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2769">CVE-2019-2769</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2762">CVE-2019-2762</a></li>
+</ul></li>
+<li>New upstream Java release 11.0.4</li>
+</ul>
+
+<h3 id="usn-4081-1-pango-vulnerability">[<a href="https://usn.ubuntu.com/4081-1/">USN-4081-1</a>] Pango vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1010238">CVE-2019-1010238</a></li>
+</ul></li>
+<li>Heap-based buffer overflow -&gt; code execution for applications which pass
+invalid utf8 to Pango APIs like pango_itemize()</li>
+</ul>
+
+<h3 id="usn-4082-1-subversion-vulnerabilities">[<a href="https://usn.ubuntu.com/4082-1/">USN-4082-1</a>] Subversion vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0203">CVE-2019-0203</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11782">CVE-2018-11782</a></li>
+</ul></li>
+<li>2 remote DoS issues against svnserve</li>
+</ul>
+
+<h3 id="usn-4084-1-django-vulnerabilities">[<a href="https://usn.ubuntu.com/4084-1/">USN-4084-1</a>] Django vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14235">CVE-2019-14235</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14234">CVE-2019-14234</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14233">CVE-2019-14233</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14232">CVE-2019-14232</a></li>
+</ul></li>
+<li>DoS via memory exhaustion when encoding an attacker controlled URI</li>
+<li>SQL injection in key and index lookups in JSON handling</li>
+<li>2 different CPU based DoS - 1 in strip_tags() function if input contained
+large sequence of nested, incomplete HTML entities, other in truncating
+due to use of regex with backtracking</li>
+</ul>
+
+<h3 id="usn-4085-1-sigil-vulnerability">[<a href="https://usn.ubuntu.com/4085-1/">USN-4085-1</a>] Sigil vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14452">CVE-2019-14452</a></li>
+</ul></li>
+<li>Zip slip vulnerability discovered by Mike Salvatore (<a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a>)</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-discuss-the-recent-citrix-password-spraying-attack">Alex and Joe discuss the recent Citrix password spraying attack</h3>
+
+<ul>
+<li><a href="https://threatpost.com/citrix-confirms-password-spraying-heist/146641/">https://threatpost.com/citrix-confirms-password-spraying-heist/146641/</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net?channels=%23ubuntu-hardened&amp;uio=d4">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E041.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 40</title>
           <link>https://ubuntusecuritypodcast.org/episode-40/</link>
