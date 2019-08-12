@@ -8,6 +8,55 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 42
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-42
+:EXPORT_DATE: 2019-08-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E042.mp3 :podcast_duration "MM:SS" :podcast_bytes "NUM_BYTES" :permalink "https://ubuntusecuritypodcast.org/episode-42/" :guid 8d026811c700eb17a35225aad802fabfb76a5f89e860868d40a8e1148b55954acdd5ed0768b1b7d855d7e4be63edf5b0c20c051adcd335e36c12f67eaa7181a8
+:END:
+#+begin_description
+This week we look at some details of the 7 unique CVEs addressed across the supported Ubuntu releases and more.
+#+end_description
+** Overview
+This week we look at some details of the 7 unique CVEs addressed across the supported Ubuntu releases and more.
+** This week in Ubuntu Security Updates
+7 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4058-2/][USN-4058-2]]] Bash vulnerability
+- 1 CVEs addressed in Precise ESM, Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9924][CVE-2019-9924]]
+
+*** [[[https://usn.ubuntu.com/4049-3/][USN-4049-3]]] GLib regression
+- Affecting Xenial
+
+*** [[[https://usn.ubuntu.com/4049-4/][USN-4049-4]]] GLib regression
+- Affecting Precise ESM, Trusty ESM
+
+*** [[[https://usn.ubuntu.com/4086-1/][USN-4086-1]]] Mercurial vulnerability
+- 1 CVEs addressed in Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3902][CVE-2019-3902]]
+
+*** [[[https://usn.ubuntu.com/4087-1/][USN-4087-1]]] BWA vulnerability
+- 1 CVEs addressed in Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10269][CVE-2019-10269]]
+
+*** [[[https://usn.ubuntu.com/4088-1/][USN-4088-1]]] PHP vulnerability
+- 1 CVEs addressed in Precise ESM, Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13224][CVE-2019-13224]]
+
+*** [[[https://usn.ubuntu.com/4089-1/][USN-4089-1]]] Rack vulnerability
+- 1 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16471][CVE-2018-16471]]
+
+*** [[[https://usn.ubuntu.com/4090-1/][USN-4090-1]]] PostgreSQL vulnerabilities
+- 2 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10209][CVE-2019-10209]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10208][CVE-2019-10208]]
+** Goings on in Ubuntu Security Community
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 41
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-41
