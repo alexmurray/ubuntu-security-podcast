@@ -8,8 +8,8 @@ weight = 1001
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E041.mp3"
-podcast_duration = "MM:SS"
-podcast_bytes = "NUM_BYTES"
+podcast_duration = "26:23"
+podcast_bytes = 25334296
 permalink = "https://ubuntusecuritypodcast.org/episode-41/"
 guid = "93da5c5539f3f81eac1a3b8ed45073abf86bc2e0b571557bbe3f86ba69d0444b12c536661c741547f3bfd212c198e83734b002caea5ee420146fbde697398a9a"
 +++
