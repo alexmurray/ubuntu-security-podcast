@@ -2,7 +2,7 @@
 title = "Episode 16"
 description = "Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP & more, plus we discuss the security of home routers as evaluated by C-ITL."
 date = 2018-12-17
-lastmod = 2019-08-14T21:22:08+09:30
+lastmod = 2019-08-14T21:43:22+09:30
 draft = false
 weight = 1027
 episode_image = "img/usp_logo_500.png"
@@ -126,5 +126,5 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

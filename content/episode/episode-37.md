@@ -2,7 +2,7 @@
 title = "Episode 37"
 description = "The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!"
 date = 2019-06-28
-lastmod = 2019-08-14T21:21:40+09:30
+lastmod = 2019-08-14T21:42:57+09:30
 draft = false
 weight = 1006
 episode_image = "img/usp_logo_500.png"
@@ -210,5 +210,5 @@ The big new this week is SackPANIC! updates for the Linux kernel, plus we look a
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

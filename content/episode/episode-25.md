@@ -2,7 +2,7 @@
 title = "Episode 25"
 description = "Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more."
 date = 2019-03-25
-lastmod = 2019-08-14T21:21:56+09:30
+lastmod = 2019-08-14T21:43:11+09:30
 draft = false
 weight = 1018
 episode_image = "img/usp_logo_500.png"
@@ -192,5 +192,5 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

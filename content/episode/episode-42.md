@@ -6,7 +6,7 @@ description = """
   system, as well as the usual roundup of security fixes from the past week.
   """
 date = 2019-08-14T21:13:00+09:30
-lastmod = 2019-08-14T21:27:29+09:30
+lastmod = 2019-08-14T21:42:50+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -111,5 +111,5 @@ system, as well as the usual roundup of security fixes from the past week.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

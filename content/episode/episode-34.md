@@ -2,7 +2,7 @@
 title = "Episode 34"
 description = "This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus."
 date = 2019-06-03
-lastmod = 2019-08-14T21:21:44+09:30
+lastmod = 2019-08-14T21:43:00+09:30
 draft = false
 weight = 1009
 episode_image = "img/usp_logo_500.png"
@@ -188,5 +188,5 @@ This week we look at security updates for Keepalived, Corosync, GnuTLS, libsecco
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

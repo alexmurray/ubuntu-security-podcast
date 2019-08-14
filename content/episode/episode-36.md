@@ -2,7 +2,7 @@
 title = "Episode 36"
 description = "Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week."
 date = 2019-06-17
-lastmod = 2019-08-14T21:21:41+09:30
+lastmod = 2019-08-14T21:42:58+09:30
 draft = false
 weight = 1007
 episode_image = "img/usp_logo_500.png"
@@ -188,5 +188,5 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

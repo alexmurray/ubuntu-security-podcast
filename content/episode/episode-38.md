@@ -2,7 +2,7 @@
 title = "Episode 38"
 description = "This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features."
 date = 2019-07-02T17:00:00+09:30
-lastmod = 2019-08-14T21:21:39+09:30
+lastmod = 2019-08-14T21:42:55+09:30
 draft = false
 weight = 1005
 episode_image = "img/usp_logo_500.png"
@@ -252,5 +252,5 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
