@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we have a special interview with Ubuntu Security Team member
+  Jamie Strandboge, talking about security aspects of the Snap packaging
+  system, as well as the usual roundup of security fixes from the past week.
+  ">
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<meta property="og:title" content="Episode 42" />
+<meta property="og:description" content="  This week we have a special interview with Ubuntu Security Team member
+  Jamie Strandboge, talking about security aspects of the Snap packaging
+  system, as well as the usual roundup of security fixes from the past week.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-42/" />
+
+
+
+<meta property="og:updated_time" content="2019-08-14 21:13:00 &#43;0930 ACST"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-08-14 21:13:00 &#43;0930 ACST" />
+  
+
+<meta property="article:modified_time" content="2019-08-14 21:13:00 &#43;0930 ACST" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 42">
+<meta itemprop="description" content="  This week we have a special interview with Ubuntu Security Team member
+  Jamie Strandboge, talking about security aspects of the Snap packaging
+  system, as well as the usual roundup of security fixes from the past week.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="403">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 42"/>
+<meta name="twitter:description" content="  This week we have a special interview with Ubuntu Security Team member
+  Jamie Strandboge, talking about security aspects of the Snap packaging
+  system, as well as the usual roundup of security fixes from the past week.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 42 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-42/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 42</h1>
+      <small>Posted on Wednesday, Aug 14, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we have a special interview with Ubuntu Security Team member
+  Jamie Strandboge, talking about security aspects of the Snap packaging
+  system, as well as the usual roundup of security fixes from the past week.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E042.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E042.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we have a special interview with Ubuntu Security Team member
+Jamie Strandboge, talking about security aspects of the Snap packaging
+system, as well as the usual roundup of security fixes from the past week.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>7 unique CVEs addressed</p>
+
+<h3 id="usn-4058-2-bash-vulnerability">[<a href="https://usn.ubuntu.com/4058-2/">USN-4058-2</a>] Bash vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9924">CVE-2019-9924</a></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> (rbash, BASH_CMDS)</li>
+</ul>
+
+<h3 id="usn-4049-3-usn-4049-4-glib-regression">[<a href="https://usn.ubuntu.com/4049-3/">USN-4049-3</a>, <a href="https://usn.ubuntu.com/4049-4/">USN-4049-4</a>] GLib regression</h3>
+
+<ul>
+<li>Affecting Precise ESM, Trusty ESM, Xenial</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> - previous update introduced a memory leak due to backport
+using different API which didn&rsquo;t just return a const string but allocated
+it and returned it but was not freed
+
+<ul>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/glib2.0/+bug/1838890">https://bugs.launchpad.net/ubuntu/+source/glib2.0/+bug/1838890</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4086-1-mercurial-vulnerability">[<a href="https://usn.ubuntu.com/4086-1/">USN-4086-1</a>] Mercurial vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3902">CVE-2019-3902</a></li>
+</ul></li>
+<li>Able to write to files outside of the repository by using a combination of symlinks and subrepositories
+
+<ul>
+<li>Can be mitigated either by disabling support for subrepositories in
+your local configuration or by ensuring any cloned repos don&rsquo;t contain
+malicious symlinks &hellip;</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4087-1-bwa-vulnerability">[<a href="https://usn.ubuntu.com/4087-1/">USN-4087-1</a>] BWA vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10269">CVE-2019-10269</a></li>
+</ul></li>
+<li>Genome sequencing - maps DNA sequences against large reference genome (aka human genome mapping)</li>
+<li>Takes input from .alt file - contains a name for the DNS sequence - which
+is read into a fixed sized buffer - stack buffer overflow if name too
+long (code even had a note - <a href="https://github.com/lh3/bwa/commit/20d0a13092aa4cb73230492b05f9697d5ef0b88e#diff-4b41da18d8e305ac5b0bea6db815bc20L200">FIXME segfault here</a>)</li>
+</ul>
+
+<h3 id="usn-4088-1-php-vulnerability">[<a href="https://usn.ubuntu.com/4088-1/">USN-4088-1</a>] PHP vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13224">CVE-2019-13224</a></li>
+</ul></li>
+<li>Use-after-free in the embedded oniguruma regular expression library if
+regular expression was multi-byte but input string was not (or
+vice-versa) - fix to disallow processing if either is not the same as the
+other</li>
+</ul>
+
+<h3 id="usn-4089-1-rack-vulnerability">[<a href="https://usn.ubuntu.com/4089-1/">USN-4089-1</a>] Rack vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16471">CVE-2018-16471</a></li>
+</ul></li>
+<li>XSS in Ruby webserver interface (used as middleware for writing Ruby web
+application)</li>
+</ul>
+
+<h3 id="usn-4090-1-postgresql-vulnerabilities">[<a href="https://usn.ubuntu.com/4090-1/">USN-4090-1</a>] PostgreSQL vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10209">CVE-2019-10209</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10208">CVE-2019-10208</a></li>
+</ul></li>
+<li>Disco only - if a database contained super-user defined hash-equality
+operators, could allow attacker to read arbitrary server memory</li>
+<li>If a function was declared as &ldquo;SECURITY DEFINER&rdquo; an attacker could
+execute arbitrary SQL as the identity of the function owner - needs
+EXECUTE permission on the function and then requires the function itself
+to have inexact argument type matching otherwise will be disallowed.</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="discussion-with-joe-mcmanus-on-capital-one-breach-and-special-guest-jamie-strandboge-on-snaps-and-security">Discussion with Joe McManus on Capital One breach and special guest Jamie Strandboge on snaps and security</h3>
+
+<ul>
+<li><a href="https://www.zdnet.com/article/100-million-americans-and-6-million-canadians-caught-up-in-capital-one-breach/">https://www.zdnet.com/article/100-million-americans-and-6-million-canadians-caught-up-in-capital-one-breach/</a></li>
+<li><a href="https://snapcraft.io">https://snapcraft.io</a></li>
+<li><a href="https://forum.snapcraft.io/t/security-policy-and-sandboxing/554">https://forum.snapcraft.io/t/security-policy-and-sandboxing/554</a></li>
+<li><a href="https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf">https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf</a></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-41/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-42\/",
+        text: "Episode 42"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123895434-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
