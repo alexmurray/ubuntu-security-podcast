@@ -2,9 +2,9 @@
 title = "Episode 18"
 description = "This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug."
 date = 2019-01-29
-lastmod = 2019-08-05T20:27:12+09:30
+lastmod = 2019-08-14T21:22:05+09:30
 draft = false
-weight = 1023
+weight = 1025
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E018.mp3"
@@ -161,5 +161,5 @@ This week we look at some details of the 46 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

@@ -2,9 +2,9 @@
 title = "Episode 41"
 description = "With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight's security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack."
 date = 2019-08-05T20:15:00+09:30
-lastmod = 2019-08-05T20:19:01+09:30
+lastmod = 2019-08-14T21:21:35+09:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E041.mp3"
@@ -356,5 +356,5 @@ With Alex and Joe having been away at a Canonical sprint last week, we look back
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

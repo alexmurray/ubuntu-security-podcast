@@ -11,47 +11,82 @@
 * Episode 42
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-42
-:EXPORT_DATE: 2019-08-13
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E042.mp3 :podcast_duration "MM:SS" :podcast_bytes "NUM_BYTES" :permalink "https://ubuntusecuritypodcast.org/episode-42/" :guid 8d026811c700eb17a35225aad802fabfb76a5f89e860868d40a8e1148b55954acdd5ed0768b1b7d855d7e4be63edf5b0c20c051adcd335e36c12f67eaa7181a8
+:EXPORT_DATE: 2019-08-14 21:13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E042.mp3 :podcast_duration "21:17" :podcast_bytes "20441247" :permalink "https://ubuntusecuritypodcast.org/episode-42/" :guid 8d026811c700eb17a35225aad802fabfb76a5f89e860868d40a8e1148b55954acdd5ed0768b1b7d855d7e4be63edf5b0c20c051adcd335e36c12f67eaa7181a8
 :END:
 #+begin_description
-This week we look at some details of the 7 unique CVEs addressed across the supported Ubuntu releases and more.
+This week we have a special interview with Ubuntu Security Team member
+Jamie Strandboge, talking about security aspects of the Snap packaging
+system, as well as the usual roundup of security fixes from the past week.
 #+end_description
 ** Overview
-This week we look at some details of the 7 unique CVEs addressed across the supported Ubuntu releases and more.
+This week we have a special interview with Ubuntu Security Team member
+Jamie Strandboge, talking about security aspects of the Snap packaging
+system, as well as the usual roundup of security fixes from the past week.
 ** This week in Ubuntu Security Updates
 7 unique CVEs addressed
 *** [[[https://usn.ubuntu.com/4058-2/][USN-4058-2]]] Bash vulnerability
 - 1 CVEs addressed in Precise ESM, Trusty ESM
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9924][CVE-2019-9924]]
+- [[https://ubuntusecuritypodcast.org/episode-40/][Episode 40]] (rbash, BASH_CMDS)
 
-*** [[[https://usn.ubuntu.com/4049-3/][USN-4049-3]]] GLib regression
-- Affecting Xenial
-
-*** [[[https://usn.ubuntu.com/4049-4/][USN-4049-4]]] GLib regression
-- Affecting Precise ESM, Trusty ESM
+*** [[[https://usn.ubuntu.com/4049-3/][USN-4049-3]], [[https://usn.ubuntu.com/4049-4/][USN-4049-4]]] GLib regression
+- Affecting Precise ESM, Trusty ESM, Xenial
+- [[https://ubuntusecuritypodcast.org/episode-40/][Episode 40]] - previous update introduced a memory leak due to backport
+  using different API which didn't just return a const string but allocated
+  it and returned it but was not freed
+  - https://bugs.launchpad.net/ubuntu/+source/glib2.0/+bug/1838890
 
 *** [[[https://usn.ubuntu.com/4086-1/][USN-4086-1]]] Mercurial vulnerability
 - 1 CVEs addressed in Disco
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3902][CVE-2019-3902]]
+- Able to write to files outside of the repository by using a combination of symlinks and subrepositories
+  - Can be mitigated either by disabling support for subrepositories in
+    your local configuration or by ensuring any cloned repos don't contain
+    malicious symlinks ...
 
 *** [[[https://usn.ubuntu.com/4087-1/][USN-4087-1]]] BWA vulnerability
 - 1 CVEs addressed in Bionic, Disco
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10269][CVE-2019-10269]]
+- Genome sequencing - maps DNA sequences against large reference genome (aka human genome mapping)
+- Takes input from .alt file - contains a name for the DNS sequence - which
+  is read into a fixed sized buffer - stack buffer overflow if name too
+  long (code even had a note - [[https://github.com/lh3/bwa/commit/20d0a13092aa4cb73230492b05f9697d5ef0b88e#diff-4b41da18d8e305ac5b0bea6db815bc20L200][FIXME segfault here]])
 
 *** [[[https://usn.ubuntu.com/4088-1/][USN-4088-1]]] PHP vulnerability
 - 1 CVEs addressed in Precise ESM, Trusty ESM
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13224][CVE-2019-13224]]
+- Use-after-free in the embedded oniguruma regular expression library if
+  regular expression was multi-byte but input string was not (or
+  vice-versa) - fix to disallow processing if either is not the same as the
+  other
 
 *** [[[https://usn.ubuntu.com/4089-1/][USN-4089-1]]] Rack vulnerability
 - 1 CVEs addressed in Xenial, Bionic
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16471][CVE-2018-16471]]
+- XSS in Ruby webserver interface (used as middleware for writing Ruby web
+  application)
 
 *** [[[https://usn.ubuntu.com/4090-1/][USN-4090-1]]] PostgreSQL vulnerabilities
 - 2 CVEs addressed in Xenial, Bionic, Disco
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10209][CVE-2019-10209]]
   - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10208][CVE-2019-10208]]
+- Disco only - if a database contained super-user defined hash-equality
+  operators, could allow attacker to read arbitrary server memory
+- If a function was declared as "SECURITY DEFINER" an attacker could
+  execute arbitrary SQL as the identity of the function owner - needs
+  EXECUTE permission on the function and then requires the function itself
+  to have inexact argument type matching otherwise will be disallowed.
+
 ** Goings on in Ubuntu Security Community
+*** Discussion with Joe McManus on Capital One breach and special guest Jamie Strandboge on snaps and security
+# Apologies for noisy audio - was recorded in large echoing conference room
+# during recent Canonical product roadmap sprint in Toronto
+- https://www.zdnet.com/article/100-million-americans-and-6-million-canadians-caught-up-in-capital-one-breach/
+- https://snapcraft.io
+- https://forum.snapcraft.io/t/security-policy-and-sandboxing/554
+- https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf
+
 ** Get in contact
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
 - [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardened on the Freenode IRC network]]

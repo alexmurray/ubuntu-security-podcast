@@ -2,9 +2,9 @@
 title = "Episode 28"
 description = "This week we look at updates for vulnerabilities in wpa\\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof)."
 date = 2019-04-15
-lastmod = 2019-08-05T20:27:01+09:30
+lastmod = 2019-08-14T21:21:52+09:30
 draft = false
-weight = 1013
+weight = 1015
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E028.mp3"
@@ -195,5 +195,5 @@ This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, syst
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)

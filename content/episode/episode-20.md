@@ -2,9 +2,9 @@
 title = "Episode 20"
 description = "This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs."
 date = 2019-02-11
-lastmod = 2019-08-05T20:27:10+09:30
+lastmod = 2019-08-14T21:22:02+09:30
 draft = false
-weight = 1021
+weight = 1023
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E020.mp3"
@@ -180,5 +180,5 @@ This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, cu
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=%23ubuntu-hardened&uio=d4)
+-   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net?channels=#ubuntu-hardened&uio=d4)
 -   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
