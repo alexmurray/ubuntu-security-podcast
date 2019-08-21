@@ -2,9 +2,9 @@
 title = "Episode 11"
 description = "This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more."
 date = 2018-11-12
-lastmod = 2019-08-14T21:43:28+09:30
+lastmod = 2019-08-21T21:00:11+09:30
 draft = false
-weight = 1032
+weight = 1033
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E011.mp3"
