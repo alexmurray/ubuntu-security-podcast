@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Aug 2019 21:13:00 +0930</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 20:58:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 43</title>
+      <link>https://ubuntusecuritypodcast.org/episode-43/</link>
+      <pubDate>Wed, 21 Aug 2019 20:58:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-43/</guid>
+      <description>Overview This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.
+This week in Ubuntu Security Updates 53 unique CVEs addressed
+[USN-4091-1] poppler vulnerability  1 CVEs addressed in Bionic, Disco  CVE-2019-14494  Divide by zero when texture surface specified with 0 length or width - found via fuzzing - handled by checking first for zero-length and returning an error -&amp;gt; DoS  [USN-4092-1] Ghostscript vulnerability  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-10216  Yet another Ghostscript -dSAFER sandbox bypass - Episode 31, Episode 25, Episode 18, Episode 14, Episode 10, Episode 7, Episode 5 Allows to escape the sandbox and use the various Ghostscript APIs for arbitrary file access / modification etc.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 42</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
       <description>Overview With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&amp;rsquo;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.
 This week in Ubuntu Security Updates 90 unique CVEs addressed
 [USN-4066-2] ClamAV vulnerability  1 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-1010305  Episode 40 - libmspack buffer overflow - ClamAV contains own copy of libmspack in older releases so is affected  [USN-4065-2] Squid vulnerabilities  2 CVEs addressed in Precise ESM  CVE-2019-12529 CVE-2019-12525   Episode 40 (memory corruption issues)</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>

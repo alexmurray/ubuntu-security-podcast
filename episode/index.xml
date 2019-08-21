@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Wed, 14 Aug 2019 21:13:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 20:58:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,307 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 43</title>
+          <link>https://ubuntusecuritypodcast.org/episode-43/</link>
+          <pubDate>Wed, 21 Aug 2019 20:58:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>1415efd498db59ba97e4860b7a2eda77924ceaaed942127fa960ff48a6a5417668327be0327d27ec5271511fc63006be01000b872c0035213a4a09d03232622f</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</itunes:summary>
+        <description>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</description>
+        <googleplay:description>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>53 unique CVEs addressed</p>
+
+<h3 id="usn-4091-1-poppler-vulnerability">[<a href="https://usn.ubuntu.com/4091-1/">USN-4091-1</a>] poppler vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14494">CVE-2019-14494</a></li>
+</ul></li>
+<li>Divide by zero when texture surface specified with 0 length or width -
+found via fuzzing - handled by checking first for zero-length and
+returning an error -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-4092-1-ghostscript-vulnerability">[<a href="https://usn.ubuntu.com/4092-1/">USN-4092-1</a>] Ghostscript vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10216">CVE-2019-10216</a></li>
+</ul></li>
+<li>Yet another Ghostscript -dSAFER sandbox bypass - <a href="https://ubuntusecuritypodcast.org/episode-31/">Episode 31</a>, <a href="https://ubuntusecuritypodcast.org/episode-25/">Episode 25</a>,
+<a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a>, <a href="https://ubuntusecuritypodcast.org/episode-14/">Episode 14</a>, <a href="https://ubuntusecuritypodcast.org/episode-10/">Episode 10</a>, <a href="https://ubuntusecuritypodcast.org/episode-7/">Episode 7</a>, <a href="https://ubuntusecuritypodcast.org/episode-5/">Episode 5</a></li>
+<li>Allows to escape the sandbox and use the various Ghostscript APIs for
+arbitrary file access / modification etc.
+
+<ul>
+<li>Related: ImageMagick policy update <a href="https://ubuntusecuritypodcast.org/episode-38/">Episode 38</a></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4070-2-usn-4070-3-mariadb-vulnerabilities">[<a href="https://usn.ubuntu.com/4070-2/">USN-4070-2</a>, <a href="https://usn.ubuntu.com/4070-3/">USN-4070-3</a>] MariaDB vulnerabilities</h3>
+
+<ul>
+<li>4 CVEs addressed in Bionic and Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2805">CVE-2019-2805</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2740">CVE-2019-2740</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2739">CVE-2019-2739</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2737">CVE-2019-2737</a></li>
+</ul></li>
+<li>4 CVEs addressed in Disco only
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614">CVE-2019-2614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627">CVE-2019-2627</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2628">CVE-2019-2628</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2758">CVE-2019-2758</a></li>
+</ul></li>
+<li>Covered some for MySQL in <a href="https://ubuntusecuritypodcast.org/episode-41/">Episode 41</a></li>
+</ul>
+
+<h3 id="usn-4093-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4093-1/">USN-4093-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Bionic (HWE), Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846">CVE-2019-3846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272">CVE-2019-13272</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233">CVE-2019-13233</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984">CVE-2019-12984</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614">CVE-2019-12614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1125">CVE-2019-1125</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126">CVE-2019-10126</a></li>
+</ul></li>
+<li>Latest speculative execution side-channel attack - SWAPGS
+
+<ul>
+<li><a href="https://www.bitdefender.com/business/swapgs-attack.html">https://www.bitdefender.com/business/swapgs-attack.html</a></li>
+<li>Userspace can speculatively execute SWAPGS, allowing it to potentially
+read kernel memory by speculatively swapping out userspace for kernel
+memory - requires an appropriate gadget in the kernel</li>
+<li>Linux not believed to be affected, since no appropriate gadget is
+available, however we have proactively included the upstream fix which
+is to add LFENCE calls around SWAPGS to ensure SWAPGS occurs before any
+subsequent memory reads to / from userspace</li>
+</ul></li>
+<li>2 different memory corruption issues in the Marvell Wifi driver -
+wouldn&rsquo;t do bounds checking on structures passed to it from user-space -
+could allow DoS via crash or RCE</li>
+<li>NULL ptr dereferences:
+
+<ul>
+<li>NFC subsystem, able to be triggered from userspace (using netlink)</li>
+<li>PowerPC specific - could occur on memory allocation failures (failed to
+check NULL return value)</li>
+</ul></li>
+<li>2 by Jann Horn:
+
+<ul>
+<li>ptrace would record process credentials incorrectly, so that a local user
+can escalate to root in scenarios where a parent process drops privileges
+and then calls execve of an attacker controlled application</li>
+<li>UAF in handling of local descriptor table entries</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4094-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4094-1/">USN-4094-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>32 CVEs addressed in Xenial (HWE), Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20511">CVE-2018-20511</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846">CVE-2019-3846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2101">CVE-2019-2101</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2024">CVE-2019-2024</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272">CVE-2019-13272</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233">CVE-2019-13233</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984">CVE-2019-12984</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12819">CVE-2019-12819</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12818">CVE-2019-12818</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614">CVE-2019-12614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1125">CVE-2019-1125</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126">CVE-2019-10126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383">CVE-2018-5383</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856">CVE-2018-20856</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20169">CVE-2018-20169</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16862">CVE-2018-16862</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14617">CVE-2018-14617</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14609">CVE-2018-14609</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14613">CVE-2018-14613</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14612">CVE-2018-14612</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14611">CVE-2018-14611</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14610">CVE-2018-14610</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14615">CVE-2018-14615</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13098">CVE-2018-13098</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13096">CVE-2018-13096</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14616">CVE-2018-14616</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14614">CVE-2018-14614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13100">CVE-2018-13100</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13099">CVE-2018-13099</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13097">CVE-2018-13097</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13093">CVE-2018-13093</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13053">CVE-2018-13053</a></li>
+</ul></li>
+<li>Includes all from above, plus a heap of others - most interesting ones:
+
+<ul>
+<li>Heaps of DoS via NULL dereference / divide by zero / invalid read when dealing with
+crafted file-system images (XFS, Ext4, F2FS, etc)</li>
+<li>Bluetooth crypto may not validate ECC parameters, allowing an attacker
+to force a weak key and snoop on communications as a result</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4095-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4095-1/">USN-4095-1</a>] Linux kernel vulnerabilities</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9503">CVE-2019-9503</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846">CVE-2019-3846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272">CVE-2019-13272</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614">CVE-2019-12614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599">CVE-2019-11599</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1125">CVE-2019-1125</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126">CVE-2019-10126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383">CVE-2018-5383</a></li>
+</ul></li>
+<li>Marvell Wifi, ptrace, PowerPC, SWAPGS and Bluetooth ECC parameter
+validation mentioned above</li>
+<li>Core dump race-condition (<a href="https://ubuntusecuritypodcast.org/episode-41/">Episode 41</a>)</li>
+</ul>
+
+<h3 id="usn-4095-2-linux-kernel--xenial-hwe--vulnerabilities">[<a href="https://usn.ubuntu.com/4095-2/">USN-4095-2</a>] Linux kernel (Xenial HWE) vulnerabilities</h3>
+
+<ul>
+<li>7 CVEs addressed in Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846">CVE-2019-3846</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2054">CVE-2019-2054</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614">CVE-2019-12614</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1125">CVE-2019-1125</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126">CVE-2019-10126</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383">CVE-2018-5383</a></li>
+</ul></li>
+<li>Marvell, PowerPC, SWAPGS, Bluetooth</li>
+<li>seccomp race, ext4 extents (<a href="https://ubuntusecuritypodcast.org/episode-41/">Episode 41</a>)</li>
+</ul>
+
+<h3 id="usn-4096-1-linux-kernel--aws--vulnerability">[<a href="https://usn.ubuntu.com/4096-1/">USN-4096-1</a>] Linux kernel (AWS) vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1125">CVE-2019-1125</a></li>
+</ul></li>
+<li>SWAPGS</li>
+</ul>
+
+<h3 id="usn-4097-1-usn-4097-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/4097-1/">USN-4097-1</a>, <a href="https://usn.ubuntu.com/4097-2/">USN-4097-2</a>] PHP vulnerabilities</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11042">CVE-2019-11042</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11041">CVE-2019-11041</a></li>
+</ul></li>
+<li>PHP EXIF parser would read past enf of supplied data - OOB read - crash -&gt; DoS</li>
+</ul>
+
+<h3 id="usn-4098-1-wpa-supplicant-and-hostapd-vulnerability">[<a href="https://usn.ubuntu.com/4098-1/">USN-4098-1</a>] wpa_supplicant and hostapd vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13377">CVE-2019-13377</a></li>
+</ul></li>
+<li>Side-channel attack when using brainpool curves for ECC in WPA3 - observe
+timing differences between various operations over long enough time to
+infer the resulting encryption key - hard to achieve same level of
+side-channel robustness as other ECC groups - recommended to disable
+Brainpool curves in the context of SAE and EAP-pwd -
+<a href="https://w1.fi/security/2019-6/sae-eap-pwd-side-channel-attack-update.txt">https://w1.fi/security/2019-6/sae-eap-pwd-side-channel-attack-update.txt</a></li>
+</ul>
+
+<h3 id="usn-4099-1-nginx-vulnerabilities">[<a href="https://usn.ubuntu.com/4099-1/">USN-4099-1</a>] nginx vulnerabilities</h3>
+
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9516">CVE-2019-9516</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9513">CVE-2019-9513</a></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9511">CVE-2019-9511</a></li>
+</ul></li>
+<li>HTTP/2 DoS attacks
+
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/http2">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/http2</a></li>
+<li>8 different vulnerabilities affecting a variety of HTTP/2
+implementations - disovered mainly by Netflix:
+<a href="https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md">https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md</a></li>
+<li>3 affect nginx
+
+<ul>
+<li>0 length header</li>
+<li>resource loop</li>
+<li>data dribble</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4101-1-firefox-vulnerability">[<a href="https://usn.ubuntu.com/4101-1/">USN-4101-1</a>] Firefox vulnerability</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11733">CVE-2019-11733</a></li>
+</ul></li>
+<li>Upstream 68.0.2 release</li>
+<li>Able to copy passwords from the Saved Logins dialog without entering
+Master Password - allows a local user with physical access to obtain
+passwords etc</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="history-of-ubuntu-security-with-jamie-strandboge-and-joe-mcmanus">History of Ubuntu Security with Jamie Strandboge and Joe McManus</h3>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E043.mp3" length="25284558" type="audio/mpeg" /><itunes:duration>26:20</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 42</title>
           <link>https://ubuntusecuritypodcast.org/episode-42/</link>
