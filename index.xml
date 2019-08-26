@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2019 20:58:00 +0930</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 20:35:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 44</title>
+      <link>https://ubuntusecuritypodcast.org/episode-44/</link>
+      <pubDate>Mon, 26 Aug 2019 20:35:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-44/</guid>
+      <description>Overview This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.
+This week in Ubuntu Security Updates 21 unique CVEs addressed
+[USN-4100-1] KConfig and KDE libraries vulnerabilities [00:46]  2 CVEs addressed in Xenial, Bionic, Disco  CVE-2016-6232 CVE-2019-14744  Directory traversal in KArchive via ../ RCE via malicious .</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 43</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 53 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 53 unique CVEs addressed
       <description>Overview This week we have a special interview with Ubuntu Security Team member Jamie Strandboge, talking about security aspects of the Snap packaging system, as well as the usual roundup of security fixes from the past week.
 This week in Ubuntu Security Updates 7 unique CVEs addressed
 [USN-4058-2] Bash vulnerability  1 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-9924  Episode 40 (rbash, BASH_CMDS)  [USN-4049-3, USN-4049-4] GLib regression  Affecting Precise ESM, Trusty ESM, Xenial Episode 40 - previous update introduced a memory leak due to backport using different API which didn&amp;rsquo;t just return a const string but allocated it and returned it but was not freed  https://bugs.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
