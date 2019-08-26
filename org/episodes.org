@@ -8,6 +8,133 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 44
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-44
+:EXPORT_DATE: 2019-08-26 20:35
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E044.mp3 :podcast_duration "22:27" :podcast_bytes "21558870" :permalink "https://ubuntusecuritypodcast.org/episode-44/" :guid b063c8dc343daa4078e95f9f481e32335d9acfce6b4aa70e39b53c044e987477a3e4e9e7a7a70b704240207adb256105eab6f6cd98339f76d818885c695cf7e0
+:END:
+#+begin_description
+This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.
+#+end_description
+** Overview
+This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.
+** This week in Ubuntu Security Updates
+21 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4100-1/][USN-4100-1]]] KConfig and KDE libraries vulnerabilities [00:46]
+- 2 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6232][CVE-2016-6232]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14744][CVE-2019-14744]]
+- Directory traversal in KArchive via ../
+- RCE via malicious .desktop file - contianed extra functionality outside
+  of XDG spec, where could contain shell commands that would get expanded -
+  so if you view a .desktop file in Dolphin, and the Icon property
+  contained shell commands, this would get evaluated - so wouldn't need to
+  interact at all - upstream now removed this 'feature'
+
+*** [[[https://usn.ubuntu.com/4102-1/][USN-4102-1]]] LibreOffice vulnerabilities [02:45]
+- 3 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9852][CVE-2019-9852]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9851][CVE-2019-9851]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9850][CVE-2019-9850]]
+- Docs can have macros & scripts on action - document-open, mouse-over
+  - Should only be for scripts shipped in libreoffice itself
+  - Path bypass in CVE-2018-16858 - so added more protections
+  - Could be bypassed again with URL encoding - so fix again
+- Second LibreLogo issue ([[https://ubuntusecuritypodcast.org/episode-40/][Episode 40]]) - could bypass previous protections
+  again - was fixed upstream but found to still be inadequate - hence 2
+  CVEs for this (incomplete fix the first time around)
+
+*** [[[https://usn.ubuntu.com/4078-2/][USN-4078-2]]] OpenLDAP vulnerabilities [04:26]
+- 2 CVEs addressed in Precise ESM, Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13565][CVE-2019-13565]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13057][CVE-2019-13057]]
+- [[https://ubuntusecuritypodcast.org/episode-41/][Episode 41]] for regular releases - now ESM as well
+
+*** [[[https://usn.ubuntu.com/4103-1/][USN-4103-1]], [[https://usn.ubuntu.com/4103-2/][USN-4103-2]]] docker-credential-helpers and Docker vulnerabilities [04:52]
+- 1 CVEs addressed in Disco (docker-credential-helpers)
+- 1 CVEs addressed in Xenial, Bionic, Disco (docker)
+  - [[HTTPS://people.canonical.com/~ubuntu-security/cve/CVE-2019-1020014][CVE-2019-1020014]]
+- golang-docker-credentials package had a double-free which could be
+  triggered via a local user -> crash, DoS
+- Bundled with docker.io package so update both
+
+*** [[[https://usn.ubuntu.com/4104-1/][USN-4104-1]]] Nova vulnerability [05:28]
+- 1 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14433][CVE-2019-14433]]
+- API requests which end in fault conditions from authenticated users could
+  result in keys or other details being leaked / returned in responses to
+  further API requests (not just any error / fault but say if tried to
+  hard-reboot and this fails) - fixed to sanitize any possible details out
+  of faults
+
+*** [[[https://usn.ubuntu.com/4105-1/][USN-4105-1]]] CUPS vulnerabilities [06:30]
+- 2 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8675][CVE-2019-8675]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8696][CVE-2019-8696]]
+- SNMP backend - parses ASN.1 encoded data - can be used to automatically
+  get status from printers etc - would not do bounds checking on actual
+  encoded ASN.1 data vs the description of it - so could easily get a stack
+  buffer overflow - fixed to add bounds checking
+- Also includes some other upstream fixes for potential security issues
+  (without CVEs), including a CPU based DoS if a cups client unexpectedly
+  disconnected
+
+*** [[[https://usn.ubuntu.com/4106-1/][USN-4106-1]]] NLTK vulnerability [07:37]
+- 1 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14751][CVE-2019-14751]]
+- Python Natural Language Toolkit - downloads datasets as ZIP compressed
+- Mike Salvatore - ZipSlip
+- https://salvatoresecurity.com/zip-slip-in-nltk-cve-2019-14751/
+- Fixed to use inbuilt python zipfile handling to unzip rather than custom
+  implementation
+
+*** [[[https://usn.ubuntu.com/4107-1/][USN-4107-1]]] GIFLIB vulnerabilities [08:35]
+- 3 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15133][CVE-2019-15133]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11490][CVE-2018-11490]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3977][CVE-2016-3977]]
+- Common library used for handling GIF images (openjdk, ffmpeg, gstreamer, kde)
+- Divide-by-zero
+- 2 different heap based buffer overflows - one was originally fixed in
+  Debian but the patch for it got dropped in a later release - so we have
+  repatched that
+
+*** [[[https://usn.ubuntu.com/4108-1/][USN-4108-1]]] Zstandard vulnerability [09:20]
+- 1 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11922][CVE-2019-11922]]
+- Common library (maintained by Facebook) for handling the zstd compression algorithm
+- Race condition when using single-pass compression, might allow attacker
+  to get OOB write IF the caller had provided a smaller output buffer than
+  the recommended size
+- So likely won't affect all packages which use zstd (there are many) -
+  should always follow best practice
+
+*** [[[https://usn.ubuntu.com/4109-1/][USN-4109-1]]] OpenJPEG vulnerabilities [10:11]
+- 5 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6616][CVE-2018-6616]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5785][CVE-2018-5785]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18088][CVE-2018-18088]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14423][CVE-2018-14423]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17480][CVE-2017-17480]]
+- 4 different DoS issues:
+  - 2 in BMP handling:
+    - CPU based DoS due to inefficient algorithm implementation
+    - Integer overflow -> OOB read -> DoS
+  - NULL pointer dereference when converting to PNM
+  - Divide by zero
+- Stack based buffer overflow when handling JP3D encoded data - OOB write -
+  DoS / RCE
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss webmin backdoor [11:21]
+- http://www.webmin.com/exploit.html
+
+** Get in contact [21:45]
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 43
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-43
