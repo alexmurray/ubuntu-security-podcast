@@ -2,9 +2,9 @@
 title = "Episode 27"
 description = "Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more."
 date = 2019-04-08
-lastmod = 2019-08-26T20:38:45+09:30
+lastmod = 2019-09-04T21:26:17+09:30
 draft = false
-weight = 1018
+weight = 1019
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E027.mp3"

@@ -189,10 +189,11 @@
             (replace-match (concat mins ":" secs) t t nil 1)
             (replace-match (format "%d" num-bytes) t t nil 2))))
       (save-excursion
-        ;; now update timestamps for each heading
+        ;; now update timestamps for each heading when available
         (let ((labels))
           (with-temp-buffer
-            (insert-file-contents labels-file-name)
+            (ignore-errors
+              (insert-file-contents labels-file-name))
             (goto-char (point-min))
             (while (re-search-forward "\\([0-9\\.]+\\)\\s-+\\([0-9\\.]+\\)\\s-+\\(.*\\)" nil t)
               (let ((time (round (string-to-number (match-string 1))))
