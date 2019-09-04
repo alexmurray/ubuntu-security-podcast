@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Aug 2019 20:35:00 +0930</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 21:25:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 45</title>
+      <link>https://ubuntusecuritypodcast.org/episode-45/</link>
+      <pubDate>Wed, 04 Sep 2019 21:25:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-45/</guid>
+      <description>Overview This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.
+This week in Ubuntu Security Updates 22 unique CVEs addressed
+[USN-4110-1, USN-4110-2] Dovecot vulnerability [00:52]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-11500  IMAP and ManageSieve protocol parsers would not check for embedded NUL bytes in strings  When parsing these strings, would return indexes outside the normal string bounds as the first character which needed unescaping Would then go and try to unescape the string from this index, which rewrites the string on the fly, and so would then go and rewrite outside the bounds of the string Fixed to disallow embedded NUL bytes AND to not try and skip up to first unescaped character but instead loop over the whole string in unescaping   [USN-4110-3, USN-4110-4] Dovecot regression [02:08]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-11500  Original patch used pre-release version of the fix from upstream which contained an error such that the checking of NUL bytes was skipped - re-released with correct final upstream fix  [LSN-0054-1] Linux kernel vulnerability [02:38]  9 CVEs addressed in Xenial, Bionic  CVE-2018-1129 CVE-2019-13272 CVE-2019-12984 CVE-2019-12819 CVE-2019-12818 CVE-2019-12614 CVE-2019-10126 CVE-2019-3846 CVE-2019-2101  Livepatch for CVEs addressed in regular kernel updates (Episode 43)  ptrace credentials race, Marvell Wifi heap-buffer overflows, NULL pointer dereferences   [USN-4111-1] Ghostscript vulnerabilities [03:20]  4 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-14817 CVE-2019-14813 CVE-2019-14812 CVE-2019-14811  Four more -dSAFER sandbox bypasses (see Episode 43 for the last one) All variations on the theme of using the .</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 44</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 21 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 21 unique CVEs addressed
       <description>Overview This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.
 This week in Ubuntu Security Updates 53 unique CVEs addressed
 [USN-4091-1] poppler vulnerability  1 CVEs addressed in Bionic, Disco  CVE-2019-14494  Divide by zero when texture surface specified with 0 length or width - found via fuzzing - handled by checking first for zero-length and returning an error -&amp;gt; DoS  [USN-4092-1] Ghostscript vulnerability  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-10216  Yet another Ghostscript -dSAFER sandbox bypass - Episode 31, Episode 25, Episode 18, Episode 14, Episode 10, Episode 7, Episode 5 Allows to escape the sandbox and use the various Ghostscript APIs for arbitrary file access / modification etc.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
