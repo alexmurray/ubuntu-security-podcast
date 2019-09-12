@@ -6,10 +6,21 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Sep 2019 21:25:00 +0930</lastBuildDate>
+    <lastBuildDate>Thu, 12 Sep 2019 23:02:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 46</title>
+      <link>https://ubuntusecuritypodcast.org/episode-46/</link>
+      <pubDate>Thu, 12 Sep 2019 23:02:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-46/</guid>
+      <description>Overview A massive 85 CVEs addressed this week, including updates for Exim, the Linux Kernel, Samba, systemd and more, plus we discuss hacking BMCs via remote USB devices and password stashes.
+This week in Ubuntu Security Updates 85 unique CVEs addressed
+[USN-4124-1] Exim vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15846 # high  When doing TLS negotiation, parses the Server Name Indication headers - would try and handle escape sequences in this string.</description>
+    </item>
     
     <item>
       <title>Episode 45</title>
