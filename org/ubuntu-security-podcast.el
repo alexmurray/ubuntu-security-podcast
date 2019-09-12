@@ -7,6 +7,7 @@
   (require 'cl))
 (require 'mu4e)
 (require 'org)
+(require 'uct nil t)
 
 (defvar usp-buffer nil)
 
@@ -114,7 +115,11 @@
                                                         releases ", ")))
         (insert (format "- %d CVEs addressed in %s\n" (length cves)
                         (mapconcat #'(lambda (rel) (usp-get-release-codename rel)) releases ", ")))
-        (insert (mapconcat #'(lambda (cve) (concat "  - " (usp-generate-cve-link cve))) cves "\n"))
+        (insert (mapconcat #'(lambda (cve) (concat "  - "
+                                              (usp-generate-cve-link cve)
+                                              " # "
+                                              (when (fboundp 'uct-cve-priority)
+                                                (uct-cve-priority cve)))) cves "\n"))
         (insert "\n"))
       (when (> (length bugs) 0)
         (insert (mapconcat #'(lambda (bug) (concat "  - " (usp-generate-bug-link bug))) bugs "\n"))))
