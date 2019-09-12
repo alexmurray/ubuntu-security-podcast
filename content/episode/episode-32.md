@@ -8,7 +8,7 @@ description = """
   code audits.
   """
 date = 2019-05-20
-lastmod = 2019-09-04T21:26:06+09:30
+lastmod = 2019-09-12T23:00:26+09:30
 draft = false
 weight = 1014
 episode_image = "img/usp_logo_500.png"
