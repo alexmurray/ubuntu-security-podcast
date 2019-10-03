@@ -27,7 +27,7 @@ remote USB devices and password stashes.
 85 unique CVEs addressed
 *** [[[https://usn.ubuntu.com/4124-1/][USN-4124-1]]] Exim vulnerability [00:49]
 - 1 CVEs addressed in Xenial, Bionic, Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15846][CVE-2019-15846]] # high
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15846][CVE-2019-15846]] <!--- high --->
     - When doing TLS negotiation, parses the Server Name Indication
       headers - would try and handle escape sequences in this string.
     - Does so by looking at the character after a backslash to determine
@@ -54,17 +54,17 @@ remote USB devices and password stashes.
 
 *** [[[https://usn.ubuntu.com/4114-1/][USN-4114-1]]] Linux kernel vulnerabilities [03:49]
 - 5 CVEs addressed in Bionic (HWE), Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] <!--- medium --->
     - Infinite loop in virtio network driver - guest VM cause host DoS by stalling vhost_net kernel thread
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] <!--- medium --->
     - Divide by zero in floppy driver ioctl() handler (created by default by qemu)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] <!--- medium --->
     - Integer overflow and OOB read in floppy driver
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] <!--- medium --->
     - DoS for PowerPC if user calls sigreturn() with crafted signal stack
       frame - exception and system crash (requires transactional memory to
       be disabled)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] <!--- medium --->
     - Kernel tries to randomise IP ID values (used for de-fragmentation of
       IP packets) for connection-less protocols to avoid tracking
     - Is meant to be random across source + dest address + protocol
@@ -79,172 +79,172 @@ remote USB devices and password stashes.
 - 28 CVEs addressed in Xenial (HWE), Bionic
 - 5 negligible (not enabled by default), 11 low (very unlikely to trigger -
   module unload after proc initialization failure etc), 12 medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3819][CVE-2019-3819]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3701][CVE-2019-3701]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221][CVE-2019-15221]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218][CVE-2019-15218]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15216][CVE-2019-15216]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506][CVE-2019-9506]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3819][CVE-2019-3819]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3701][CVE-2019-3701]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221][CVE-2019-15221]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218][CVE-2019-15218]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15216][CVE-2019-15216]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506][CVE-2019-9506]] <!--- medium --->
     - Bluetooth KNOB attack
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] <!--- medium --->
     - Infinite loop in virtio net driver (guest VM cause host DoS)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15292][CVE-2019-15292]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220][CVE-2019-15220]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215][CVE-2019-15215]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15214][CVE-2019-15214]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212][CVE-2019-15212]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211][CVE-2019-15211]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090][CVE-2019-15090]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15292][CVE-2019-15292]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220][CVE-2019-15220]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215][CVE-2019-15215]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15214][CVE-2019-15214]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212][CVE-2019-15212]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211][CVE-2019-15211]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090][CVE-2019-15090]] <!--- medium --->
     - OOB read in debug functions of QLogic QEDI iSCSI Initiator Driver
       (allows to read kernel memory - KASLR defeat?)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14763][CVE-2019-14763]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14763][CVE-2019-14763]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] <!--- medium --->
     - See above (Divide by zero in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] <!--- medium --->
     - See above (Integer overflow and OOB read in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] <!--- medium --->
     - See above (PowerPC DoS on sigreturn())
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631][CVE-2019-13631]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810][CVE-2019-11810]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599][CVE-2019-11599]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631][CVE-2019-13631]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810][CVE-2019-11810]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599][CVE-2019-11599]] <!--- medium --->
     - Core dump race ([[https://ubuntusecuritypodcast.org/episode-41/][Episode 41]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487][CVE-2019-11487]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10639][CVE-2019-10639]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487][CVE-2019-11487]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10639][CVE-2019-10639]] <!--- medium --->
     - Related to CVE-2019-10638 - since used base address of kernel
       structure in memory as hash base, could allow attacker to infer this
       address and so defeat KASLR
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] <!--- medium --->
     - See above (IP ID randomisation)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207][CVE-2019-10207]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207][CVE-2019-10207]] <!--- medium --->
     - NULL pointer address execution (call function pointer which is NULL
       since is not initializated) - Ubuntu defaults to a non-zero
       mmap_min_addr value which means can't map a page at 0 address so this
       is just a NULL pointer dereference in default config (otherwise is
       arbitrary kernel code execution)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136][CVE-2019-0136]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136][CVE-2019-0136]] <!--- medium --->
     - Intel Wifi Driver Tunneled Direct Link Setup (allows devices to
       communicate directly with one-another on the same network without
       going via AP) - flaw allows a peer to cause wifi disconnection (DoS)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784][CVE-2018-20784]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784][CVE-2018-20784]] <!--- medium --->
     - Infinite loop in CFS schedular - DoS
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985][CVE-2018-19985]] # low
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985][CVE-2018-19985]] <!--- low --->
 
 *** [[[https://usn.ubuntu.com/4116-1/][USN-4116-1]]] Linux kernel vulnerabilities [09:12]
 - 6 CVEs addressed in Xenial
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] <!--- medium --->
     - Infinite loop in virtio net driver (guest VM cause host DoS)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] <!--- medium --->
     - See above (Divide by zero in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] <!--- medium --->
     - See above (Integer overflow and OOB read in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13648][CVE-2019-13648]] <!--- medium --->
     - See above (PowerPC DoS on sigreturn())
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] <!--- medium --->
     - See above (IP ID randomisation)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856][CVE-2018-20856]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856][CVE-2018-20856]] <!--- medium --->
     - UAF in block-layer under particular failure conditions
 
 *** [[[https://usn.ubuntu.com/4117-1/][USN-4117-1]]] Linux kernel (AWS) vulnerabilities [09:43]
 - 9 CVEs addressed in Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] <!--- medium --->
     - Infinite loop in virtio net driver (guest VM cause host DoS)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846][CVE-2019-3846]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846][CVE-2019-3846]] <!--- medium --->
     - Marvell Wifi OOB write ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126][CVE-2019-10126]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126][CVE-2019-10126]] <!--- medium --->
     - Marvell Wifi OOB write ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] <!--- medium --->
     - See above (Divide by zero in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] <!--- medium --->
     - See above (Integer overflow and OOB read in floppy driver)
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272][CVE-2019-13272]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272][CVE-2019-13272]] <!--- medium --->
     - ptrace race ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233][CVE-2019-13233]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233][CVE-2019-13233]] <!--- medium --->
     - UAF in handling of x86 LDT entries ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984][CVE-2019-12984]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984][CVE-2019-12984]] <!--- medium --->
     - NULL ptr dereference in NFC subsystem ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] <!--- medium --->
     - See above (IP ID randomisation)
 
 *** [[[https://usn.ubuntu.com/4118-1/][USN-4118-1]]] Linux kernel (AWS) vulnerabilities [10:17]
 - 61 CVEs addressed in Xenial, Bionic
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3819][CVE-2019-3819]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3701][CVE-2019-3701]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221][CVE-2019-15221]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218][CVE-2019-15218]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15216][CVE-2019-15216]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20511][CVE-2018-20511]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506][CVE-2019-9506]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846][CVE-2019-3846]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2101][CVE-2019-2101]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2024][CVE-2019-2024]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15292][CVE-2019-15292]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220][CVE-2019-15220]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215][CVE-2019-15215]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15214][CVE-2019-15214]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212][CVE-2019-15212]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211][CVE-2019-15211]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090][CVE-2019-15090]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14763][CVE-2019-14763]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631][CVE-2019-13631]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272][CVE-2019-13272]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233][CVE-2019-13233]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984][CVE-2019-12984]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12819][CVE-2019-12819]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12818][CVE-2019-12818]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884][CVE-2019-11884]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833][CVE-2019-11833]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815][CVE-2019-11815]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810][CVE-2019-11810]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599][CVE-2019-11599]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487][CVE-2019-11487]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11085][CVE-2019-11085]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10639][CVE-2019-10639]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207][CVE-2019-10207]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126][CVE-2019-10126]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136][CVE-2019-0136]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383][CVE-2018-5383]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856][CVE-2018-20856]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784][CVE-2018-20784]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20169][CVE-2018-20169]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985][CVE-2018-19985]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16862][CVE-2018-16862]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14617][CVE-2018-14617]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14613][CVE-2018-14613]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14612][CVE-2018-14612]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14611][CVE-2018-14611]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14610][CVE-2018-14610]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14609][CVE-2018-14609]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14616][CVE-2018-14616]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14615][CVE-2018-14615]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14614][CVE-2018-14614]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13100][CVE-2018-13100]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13099][CVE-2018-13099]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13098][CVE-2018-13098]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13097][CVE-2018-13097]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13096][CVE-2018-13096]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13093][CVE-2018-13093]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13053][CVE-2018-13053]] # low
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3819][CVE-2019-3819]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3701][CVE-2019-3701]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221][CVE-2019-15221]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218][CVE-2019-15218]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15216][CVE-2019-15216]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20511][CVE-2018-20511]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506][CVE-2019-9506]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3900][CVE-2019-3900]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846][CVE-2019-3846]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2101][CVE-2019-2101]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2024][CVE-2019-2024]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15292][CVE-2019-15292]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220][CVE-2019-15220]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215][CVE-2019-15215]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15214][CVE-2019-15214]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212][CVE-2019-15212]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211][CVE-2019-15211]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090][CVE-2019-15090]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14763][CVE-2019-14763]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284][CVE-2019-14284]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283][CVE-2019-14283]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631][CVE-2019-13631]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272][CVE-2019-13272]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13233][CVE-2019-13233]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984][CVE-2019-12984]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12819][CVE-2019-12819]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12818][CVE-2019-12818]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11884][CVE-2019-11884]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833][CVE-2019-11833]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815][CVE-2019-11815]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810][CVE-2019-11810]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11599][CVE-2019-11599]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487][CVE-2019-11487]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11085][CVE-2019-11085]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10639][CVE-2019-10639]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10638][CVE-2019-10638]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207][CVE-2019-10207]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126][CVE-2019-10126]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136][CVE-2019-0136]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383][CVE-2018-5383]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856][CVE-2018-20856]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784][CVE-2018-20784]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20169][CVE-2018-20169]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985][CVE-2018-19985]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16862][CVE-2018-16862]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14617][CVE-2018-14617]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14613][CVE-2018-14613]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14612][CVE-2018-14612]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14611][CVE-2018-14611]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14610][CVE-2018-14610]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14609][CVE-2018-14609]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14616][CVE-2018-14616]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14615][CVE-2018-14615]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14614][CVE-2018-14614]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13100][CVE-2018-13100]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13099][CVE-2018-13099]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13098][CVE-2018-13098]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13097][CVE-2018-13097]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13096][CVE-2018-13096]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13093][CVE-2018-13093]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13053][CVE-2018-13053]] <!--- low --->
 
 *** [[[https://usn.ubuntu.com/3934-2/][USN-3934-2]]] PolicyKit vulnerability [10:36]
 - 1 CVEs addressed in Precise ESM
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133][CVE-2019-6133]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133][CVE-2019-6133]] <!--- medium --->
 - [[https://ubuntusecuritypodcast.org/episode-27/][Episode 27]] - PolicyKit could get confused via PID reuse - fix was 2
   parts - 1 kernel to ensure can't race kernel on PID assignment, and
   second was in PolicyKit itself to check on PID, UID and start time.
 
 *** [[[https://usn.ubuntu.com/4119-1/][USN-4119-1]]] Irssi vulnerability [11:23]
 - 1 CVEs addressed in Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15717][CVE-2019-15717]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15717][CVE-2019-15717]] <!--- medium --->
     - UAF if server sends two CAP commands (used by client and server to negotiate
       capabilities - ie sasl support etc)
 
 *** [[[https://usn.ubuntu.com/4121-1/][USN-4121-1]]] Samba vulnerability [11:52]
 - 1 CVEs addressed in Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10197][CVE-2019-10197]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10197][CVE-2019-10197]] <!--- medium --->
     - Possible directory share escape by unauthenticated users - allows
       attackers to gain access to the host filesystem outside the share
       root (limited as per underlying file-system permissions)
@@ -254,7 +254,7 @@ remote USB devices and password stashes.
 
 *** [[[https://usn.ubuntu.com/4120-1/][USN-4120-1]]] systemd vulnerability [12:40]
 - 1 CVEs addressed in Bionic, Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15718][CVE-2019-15718]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15718][CVE-2019-15718]] <!--- medium --->
     - systemd-resolved failed to properly setup access controls on its DBus
       server socket, whic allows unprivileged users to execute DBus methods
       that should only be executable by privileged users - such as changing
@@ -262,29 +262,29 @@ remote USB devices and password stashes.
 
 *** [[[https://usn.ubuntu.com/4122-1/][USN-4122-1]]] Firefox vulnerabilities [13:10]
 - 17 CVEs addressed in Xenial, Bionic, Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11747][CVE-2019-11747]] # negligible
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11741][CVE-2019-11741]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9812][CVE-2019-9812]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11752][CVE-2019-11752]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11750][CVE-2019-11750]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11749][CVE-2019-11749]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11748][CVE-2019-11748]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11746][CVE-2019-11746]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11744][CVE-2019-11744]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11743][CVE-2019-11743]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11742][CVE-2019-11742]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11740][CVE-2019-11740]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11738][CVE-2019-11738]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11737][CVE-2019-11737]] # low
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11735][CVE-2019-11735]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11734][CVE-2019-11734]] # medium
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5849][CVE-2019-5849]] # medium
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11747][CVE-2019-11747]] <!--- negligible --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11741][CVE-2019-11741]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9812][CVE-2019-9812]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11752][CVE-2019-11752]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11750][CVE-2019-11750]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11749][CVE-2019-11749]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11748][CVE-2019-11748]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11746][CVE-2019-11746]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11744][CVE-2019-11744]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11743][CVE-2019-11743]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11742][CVE-2019-11742]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11740][CVE-2019-11740]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11738][CVE-2019-11738]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11737][CVE-2019-11737]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11735][CVE-2019-11735]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11734][CVE-2019-11734]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5849][CVE-2019-5849]] <!--- medium --->
 - Upstream Firefox 69.0 release
   - https://www.mozilla.org/en-US/security/advisories/mfsa2019-25/
 
 *** [[[https://usn.ubuntu.com/4123-1/][USN-4123-1]]] npm/fstream vulnerability [13:29]
 - 1 CVEs addressed in Bionic, Disco
-  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13173][CVE-2019-13173]] # low
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13173][CVE-2019-13173]] <!--- low --->
 
 ** Goings on in Ubuntu Security Community
 *** Joe and Alex discuss hacking BMCs via a remote USN attack [13:53]
