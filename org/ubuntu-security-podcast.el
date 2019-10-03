@@ -249,6 +249,8 @@
                           "** Get in contact\n"
                           "- [[mailto:security@ubuntu.com][security@ubuntu.com]]\n"
                           "- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]\n"
+                          "- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]\n"
+                          "- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]\n"
                           "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
 (defun usp-insert-episode-link (&optional episode)
