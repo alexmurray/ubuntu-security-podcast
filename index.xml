@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Sep 2019 23:02:00 +0930</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 20:22:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 47</title>
+      <link>https://ubuntusecuritypodcast.org/episode-47/</link>
+      <pubDate>Thu, 03 Oct 2019 20:22:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-47/</guid>
+      <description>Overview We catch up on details of the past few weeks of security updates, including Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin Magazine.
+This week in Ubuntu Security Updates 93 unique CVEs addressed
+[USN-4125-1] Memcached vulnerability [00:42]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15026   Possible stack buffer over-read when using UNIX sockets (copies address of UNIX socket using strncpy() which could possibly read past the end of the src buffer) - possible crash -&amp;gt; DoS - fixed to explicitly limit length to smallest of src/dst buffers rather than just size of dest buffer  [USN-4126-1] FreeType vulnerability [01:49]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial  CVE-2015-9383   2 CVEs addressed in Precise ESM, Trusty ESM only  CVE-2015-9382  CVE-2015-9381   All various heap based buffer over-reads - crash -&amp;gt; DoS  [USN-4127-1, USN-4127-2] Python vulnerabilities [02:13]  8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-9948  CVE-2019-9947  CVE-2019-9740  CVE-2019-5010  CVE-2019-10160  CVE-2019-9636  CVE-2018-20852  CVE-2018-20406   4 issues in urllib:  would allow to easily open files from local file-system 2 different CRLF injection issues specially crafted URL could cause urllib to send cookies / auth data for wrong host  Fixed incorrectly upstream so had a two CVEs assigned   http cookiejar wouldn&amp;rsquo;t validate URL correctly so could also send cookies for another domain Possible NULL ptr deref when parsing X509 certs if had an empty CRL distpoint / URI Possible integer overflow when serializing a tens of hundreds of gigabytes of data via the pickle format - could cause memory exhaustion  [USN-4128-1, USN-4128-2] Tomcat vulnerabilities [03:35]  3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)  CVE-2019-10072  CVE-2019-0199  CVE-2019-0221   HTTP/2 server would accept streams with an excessive number of SETTINGS frames and would permit clients to keep streams open without reading / writing anything - could lead to DoS by causing server-side threads to block  Original fix was incomplete - so got a second CVE  Possible XSS injection if using SSI printenv command as would echo user provided data without escaping - intended only for debugging so shouldn&amp;rsquo;t be used in a production website anyway  [USN-4120-2] systemd regression [04:45]  Affecting Bionic, Disco Episode 46 - systemd-resolved dbus access control - the update was prepared using a pending SRU update - but this contained a regression in networking - re-released the security fix but without this SRU update included.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 46</title>
@@ -19,7 +39,16 @@
       <guid>https://ubuntusecuritypodcast.org/episode-46/</guid>
       <description>Overview A massive 85 CVEs addressed this week, including updates for Exim, the Linux Kernel, Samba, systemd and more, plus we discuss hacking BMCs via remote USB devices and password stashes.
 This week in Ubuntu Security Updates 85 unique CVEs addressed
-[USN-4124-1] Exim vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15846 # high  When doing TLS negotiation, parses the Server Name Indication headers - would try and handle escape sequences in this string.</description>
+[USN-4124-1] Exim vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15846  When doing TLS negotiation, parses the Server Name Indication headers - would try and handle escape sequences in this string.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -34,15 +63,6 @@ This week in Ubuntu Security Updates 22 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
-    </item>
-    
-    <item>
       <title>Episode 44</title>
       <link>https://ubuntusecuritypodcast.org/episode-44/</link>
       <pubDate>Mon, 26 Aug 2019 20:35:00 +0930</pubDate>
@@ -51,15 +71,6 @@ This week in Ubuntu Security Updates 22 unique CVEs addressed
       <description>Overview This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.
 This week in Ubuntu Security Updates 21 unique CVEs addressed
 [USN-4100-1] KConfig and KDE libraries vulnerabilities [00:46]  2 CVEs addressed in Xenial, Bionic, Disco  CVE-2016-6232 CVE-2019-14744  Directory traversal in KArchive via ../ RCE via malicious .</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
