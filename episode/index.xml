@@ -15,7 +15,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 3 Oct 2019 20:22:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Wed, 9 Oct 2019 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,197 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 48</title>
+          <link>https://ubuntusecuritypodcast.org/episode-48/</link>
+          <pubDate>Wed, 09 Oct 2019 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>0efb781981d33bf253bba826020da4b973ac05001f4b599cfa817150fd2b4cfe4a44d6c8790e9885a37d043561ecdba098aeda75e53b56f00f858b38473eef01</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  This week we look at security updates for the Linux kernel, SDL 2, ClamAV
+  and more, plus Alex and Joe talk security and performance trade-offs, snaps
+  and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
+  some recent concerns about the security of the Snap Store.
+  </itunes:summary>
+        <description>  This week we look at security updates for the Linux kernel, SDL 2, ClamAV
+  and more, plus Alex and Joe talk security and performance trade-offs, snaps
+  and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
+  some recent concerns about the security of the Snap Store.
+  </description>
+        <googleplay:description>  This week we look at security updates for the Linux kernel, SDL 2, ClamAV
+  and more, plus Alex and Joe talk security and performance trade-offs, snaps
+  and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
+  some recent concerns about the security of the Snap Store.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at security updates for the Linux kernel, SDL 2, ClamAV
+and more, plus Alex and Joe talk security and performance trade-offs, snaps
+and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
+some recent concerns about the security of the Snap Store.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>31 unique CVEs addressed</p>
+
+<h3 id="usn-4142-1-usn-4142-2-e2fsprogs-vulnerability-00-37">[<a href="https://usn.ubuntu.com/4142-1/">USN-4142-1</a>, <a href="https://usn.ubuntu.com/4142-2/">USN-4142-2</a>] e2fsprogs vulnerability [00:37]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5094">CVE-2019-5094</a> <!--- medium ---></li>
+</ul></li>
+<li>Cisco TALOS - possible code execution via OOB write to the heap for code
+which handles quota support in ext4 - so possible to trigger via a
+specially crafted ext4 partition - could be triggered during an fsck on
+the partition etc.</li>
+</ul>
+
+<h3 id="usn-4143-1-sdl-2-dot-0-vulnerabilities-01-37">[<a href="https://usn.ubuntu.com/4143-1/">USN-4143-1</a>] SDL 2.0 vulnerabilities [01:37]</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638">CVE-2019-7638</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637">CVE-2019-7637</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636">CVE-2019-7636</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635">CVE-2019-7635</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2888">CVE-2017-2888</a> <!--- medium ---></li>
+</ul></li>
+<li>3 different heap based buffer over-reads -&gt; crash, DoS</li>
+<li>Heap based buffer over-write -&gt; possible code execution or at least crash -&gt; DoS</li>
+<li>Integer overflow -&gt; small alloc -&gt; heap based buffer overflow -&gt; possible
+code execution</li>
+</ul>
+
+<h3 id="usn-4147-1-linux-kernel-vulnerabilities-02-23">[<a href="https://usn.ubuntu.com/4147-1/">USN-4147-1</a>] Linux kernel vulnerabilities [02:23]</h3>
+
+<ul>
+<li>18 CVEs addressed in Bionic (HWE), Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15223">CVE-2019-15223</a> <!--- negligible ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221">CVE-2019-15221</a> <!--- negligible ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218">CVE-2019-15218</a> <!--- negligible ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217">CVE-2019-15217</a> <!--- negligible ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506">CVE-2019-9506</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926">CVE-2019-15926</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15925">CVE-2019-15925</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538">CVE-2019-15538</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220">CVE-2019-15220</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215">CVE-2019-15215</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212">CVE-2019-15212</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211">CVE-2019-15211</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15118">CVE-2019-15118</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15117">CVE-2019-15117</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090">CVE-2019-15090</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631">CVE-2019-13631</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207">CVE-2019-10207</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136">CVE-2019-0136</a> <!--- medium ---></li>
+</ul></li>
+<li>OOB read in ath6kl driver - possible to trigger remotely from the network - crash, DoS</li>
+<li>Bluetooth KNOB attack</li>
+<li>Crashes from malicious USB audio devices:
+
+<ul>
+<li>Infinite recursion when parsing device descriptors (if
+had multiple identical device descriptors could be triggered)</li>
+<li>OOB read if specified an invalid input pin</li>
+</ul></li>
+<li>OOB read in QLogic QEDI iSCSI driver</li>
+<li>2 covered in <a href="https://ubuntusecuritypodcast.org/episode-46/">Episode 46</a>
+
+<ul>
+<li>Possible code execution via a NULL pointer dereference in bluetooth UART
+driver - so if an attacker can map executable code at address zero can
+achieve code execution - in Ubuntu we have mmap_min_addr set to a
+non-zero value so this is mitigated by default</li>
+<li>DoS in Intel wifi driver - allows a malicious client to knock a peer of
+the network</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4144-1-linux-kernel-vulnerabilities-05-02">[<a href="https://usn.ubuntu.com/4144-1/">USN-4144-1</a>] Linux kernel vulnerabilities [05:02]</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial (HWE), Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538">CVE-2019-15538</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976">CVE-2018-20976</a> <!--- medium ---></li>
+</ul></li>
+<li>2 different XFS issues
+
+<ul>
+<li>UAF triggered from a malicious XFS image -&gt; code exection? -&gt; crash, DoS</li>
+<li>CPU based DoS if can trigger a chgrp() error due to out-of-quota</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4145-1-linux-kernel-vulnerabilities-05-46">[<a href="https://usn.ubuntu.com/4145-1/">USN-4145-1</a>] Linux kernel vulnerabilities [05:46]</h3>
+
+<ul>
+<li>11 CVEs addressed in Xenial
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926">CVE-2019-15926</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215">CVE-2019-15215</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211">CVE-2019-15211</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631">CVE-2019-13631</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487">CVE-2019-11487</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207">CVE-2019-10207</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136">CVE-2019-0136</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976">CVE-2018-20976</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20961">CVE-2018-20961</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18509">CVE-2017-18509</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10905">CVE-2016-10905</a> <!--- medium ---></li>
+</ul></li>
+<li>Most covered above</li>
+</ul>
+
+<h3 id="usn-4146-1-usn-4146-2-clamav-vulnerabilities-06-00">[<a href="https://usn.ubuntu.com/4146-1/">USN-4146-1</a>, <a href="https://usn.ubuntu.com/4146-2/">USN-4146-2</a>] ClamAV vulnerabilities [06:00]</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900">CVE-2019-12900</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12625">CVE-2019-12625</a> <!--- medium ---></li>
+</ul></li>
+<li>Update to latest upstream version (0.101.4)</li>
+<li>OOB read when handling crafted BZIP2 and ZIP files - was covered for
+bzip2 itself in Ubuntu in <a href="https://ubuntusecuritypodcast.org/episode-38/">Episode 38</a> - vendored in clamav</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-security-and-performance-trade-offs-snaps-and-owasp-top-10-cloud-security-recommendations-07-01">Alex and Joe talk security and performance trade-offs, snaps and OWASP Top 10 Cloud Security recommendations [07:01]</h3>
+
+<ul>
+<li><a href="https://snapcraft.io/teamtime">https://snapcraft.io/teamtime</a></li>
+<li><a href="https://threatpost.com/intimate-details-healthcare-workers-exposed-cloud-security/149007/">https://threatpost.com/intimate-details-healthcare-workers-exposed-cloud-security/149007/</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP%5FCloud%5F%E2%80%90%5F10%5FProject">https://www.owasp.org/index.php/Category:OWASP%5FCloud%5F%E2%80%90%5F10%5FProject</a></li>
+</ul>
+
+<h3 id="alex-addresses-some-concerns-with-the-perceived-security-of-the-snap-store-20-44">Alex addresses some concerns with the perceived security of the Snap Store [20:44]</h3>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E048.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 47</title>
           <link>https://ubuntusecuritypodcast.org/episode-47/</link>
