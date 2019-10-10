@@ -2,9 +2,9 @@
 title = "Episode 35"
 description = "We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too."
 date = 2019-06-11
-lastmod = 2019-10-03T20:36:45+09:30
+lastmod = 2019-10-10T20:26:30+10:30
 draft = false
-weight = 1013
+weight = 1014
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E035.mp3"
