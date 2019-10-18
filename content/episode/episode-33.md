@@ -7,9 +7,9 @@ description = """
   vulnerabilities as well as plans for the Ubuntu 19.10 development cycle.
   """
 date = 2019-05-27
-lastmod = 2019-10-10T20:26:33+10:30
+lastmod = 2019-10-18T14:19:22+10:30
 draft = false
-weight = 1016
+weight = 1017
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E033.mp3"

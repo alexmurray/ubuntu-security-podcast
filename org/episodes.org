@@ -8,6 +8,124 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 49
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-49
+:EXPORT_DATE: 2019-10-18 14:18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E049.mp3 :podcast_duration "22:45" :podcast_bytes "29867695" :permalink "https://ubuntusecuritypodcast.org/episode-49/" :guid 4a49a1057918c7b343e9a3d3a318c0bab7d8d3997f2168bcece3a17c461358362c51850bc3414e7c3dfc0575bda71abd59b121437efaffcf9c5b74341e50219d
+:END:
+#+begin_description
+This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+plus we discuss a recent CVE for Python which resulted in erroneous
+scientific research results, and we go over some of your feedback from
+Episode 48.
+#+end_description
+** Overview
+This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+plus we discuss a recent CVE for Python which resulted in erroneous
+scientific research results, and we go over some of your feedback from
+Episode 48.
+** This week in Ubuntu Security Updates
+27 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4148-1/][USN-4148-1]]] OpenEXR vulnerabilities [00:45]
+- 8 CVEs addressed in Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18444][CVE-2018-18444]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9115][CVE-2017-9115]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9113][CVE-2017-9113]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9111][CVE-2017-9111]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9116][CVE-2017-9116]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9112][CVE-2017-9112]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9110][CVE-2017-9110]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12596][CVE-2017-12596]] <!--- low --->
+- Image format developed by ILM with a high definition range for computer
+  imaging applications
+- Range of issues (c++ codebase)
+  - OOB writes (usually only of a few bytes past the end of a buffer) -
+    assertion failure or memory corruption -> crash / code execution
+  - OOB reads (same) - crash
+
+*** [[[https://usn.ubuntu.com/4149-1/][USN-4149-1]]] Unbound vulnerability [02:06]
+- 1 CVEs addressed in Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16866][CVE-2019-16866]] <!--- medium --->
+- Validating, recursive DNS resolver
+- OOB read due to a remotely crafted NOTIFY query (source IP needs to match
+  an ACL) -> crash
+
+*** [[[https://usn.ubuntu.com/4151-1/][USN-4151-1]], [[https://usn.ubuntu.com/4151-2/][USN-4151-2]]] Python vulnerabilities [02:40]
+- 2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16935][CVE-2019-16935]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16056][CVE-2019-16056]] <!--- medium --->
+- XML-RPC server module could end up serving arbitrary JS if set via the
+  set_server_title() method as did not escape content
+- Python email module tries to parse email address into sender + domain -
+  if domain contains multiple @ chars could get confused and return wrong
+  output - so applications which rely on this for validating email
+  addresses could accept an email address which is actually invalid
+
+*** [[[https://usn.ubuntu.com/4152-1/][USN-4152-1]]] libsoup vulnerability [03:53]
+- 1 CVEs addressed in Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17266][CVE-2019-17266]] <!--- medium --->
+- Heap buffer OOB read - fails to check the specified length of message
+  against the actual received message - could then memcpy past the end of
+  the input message -> crash
+
+*** [[[https://usn.ubuntu.com/4153-1/][USN-4153-1]]] Octavia vulnerability [04:33]
+- 1 CVEs addressed in Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17134][CVE-2019-17134]] <!--- medium --->
+- Amphora Images in OpenStack Octavia - fails to properly validate client
+  certificates for management network clients -> could allow anyone with
+  management network access to retrieve information / issue config commands
+
+*** [[[https://usn.ubuntu.com/4154-1/][USN-4154-1]]] Sudo vulnerability [05:06]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14287][CVE-2019-14287]] <!--- medium --->
+- Lots of press around a seemingly high priority privilege escalation
+  vulnerability - BUT requires an admin to have configured sudo with a
+  particular configuration (ie specifying a user can run a command as any
+  other user via the ALL keyword in a Runas rule). In this case if the rule
+  had also been configured to explicitly deny running the command as root,
+  this could be bypassed by the user specifying a UID of -1. So would only
+  affect a very small number of installations.
+
+*** [[[https://usn.ubuntu.com/4155-1/][USN-4155-1]]] Aspell vulnerability [07:26]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17544][CVE-2019-17544]] <!--- medium --->
+- Stack buffer over-read - found by Google's oss-fuzz
+
+*** [[[https://usn.ubuntu.com/4156-1/][USN-4156-1]]] SDL vulnerabilities [08:03]
+- 12 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638][CVE-2019-7638]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637][CVE-2019-7637]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636][CVE-2019-7636]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635][CVE-2019-7635]] <!--- medium --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7578][CVE-2019-7578]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7577][CVE-2019-7577]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7576][CVE-2019-7576]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7575][CVE-2019-7575]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7574][CVE-2019-7574]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7573][CVE-2019-7573]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7572][CVE-2019-7572]] <!--- low --->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13616][CVE-2019-13616]] <!--- low --->
+- Covered all the higher priority ones in [[https://ubuntusecuritypodcast.org/episode-48/][Episode 48]] for SDL 2.0 - fixed
+  now for SDL1.2 as well, plus rolled in a bunch of fixes for lower
+  priority issues (buffer over-reads in WAV handling etc)
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe talk CVEs for bad documentation and resulting scientific research? [09:20]
+- https://nvd.nist.gov/vuln/detail/CVE-2019-17514
+
+*** Feedback on desired features for 20.04 [18:53]
+- [[https://discourse.ubuntu.com/t/ubuntu-security-podcast-ep-48-feedback/12922][cafzo on discourse.ubuntu.com]] <!-- bring up this link during recording to talk about it directly -->
+  - encrypted home directories
+  - guest-accounts
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 48
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-48

@@ -6,15 +6,15 @@ description = """
   and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
   some recent concerns about the security of the Snap Store.
   """
-date = 2019-10-09
-lastmod = 2019-10-10T20:26:12+10:30
+date = 2019-10-10T20:37:00+10:30
+lastmod = 2019-10-18T14:19:01+10:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E048.mp3"
-podcast_duration = "MM:SS"
-podcast_bytes = "NUM_BYTES"
+podcast_duration = "24:39"
+podcast_bytes = 31349229
 permalink = "https://ubuntusecuritypodcast.org/episode-48/"
 guid = "0efb781981d33bf253bba826020da4b973ac05001f4b599cfa817150fd2b4cfe4a44d6c8790e9885a37d043561ecdba098aeda75e53b56f00f858b38473eef01"
 +++
