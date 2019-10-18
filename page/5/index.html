@@ -10,7 +10,7 @@
   <meta name="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.">
   
 
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <meta property="og:title" content="Ubuntu Security Podcast" />
@@ -20,7 +20,7 @@
 
 
 
-<meta property="og:updated_time" content="2019-04-08 00:00:00 &#43;0930 ACST"/>
+<meta property="og:updated_time" content="2019-10-18 14:18:00 &#43;1030 ACDT"/>
 
 
 
@@ -34,7 +34,7 @@
 
 <meta property="article:publisher" content="https://www.facebook.com/" />
 
-<meta property="article:modified_time" content="2019-04-08 00:00:00 &#43;0930 ACST" />
+<meta property="article:modified_time" content="2019-10-18 14:18:00 &#43;1030 ACDT" />
 <meta property="article:section" content="" />
 
 
@@ -215,26 +215,39 @@
   
     <div class = "row homepage_episode_row">
       <div class = "col-md-12">
-        <a href="https://ubuntusecuritypodcast.org/episode-48/" class = "row_latest_episode_title"><h2>Episode 48</h2></a>
-        <small>Posted on Wednesday, Oct 9, 2019</small>
+        <a href="https://ubuntusecuritypodcast.org/episode-49/" class = "row_latest_episode_title"><h2>Episode 49</h2></a>
+        <small>Posted on Friday, Oct 18, 2019</small>
       </div>
     </div><div class = "row homepage_episode_row">
         <div class = "col-md-3">
-          <a href="https://ubuntusecuritypodcast.org/episode-48/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
+          <a href="https://ubuntusecuritypodcast.org/episode-49/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
         </div>
-        <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at security updates for the Linux kernel, SDL 2, ClamAV
-  and more, plus Alex and Joe talk security and performance trade-offs, snaps
-  and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
-  some recent concerns about the security of the Snap Store.</p></div>
+        <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.</p></div>
       </div><div class = "row">
       <div class = "col-md-12">
-      <audio src="https://people.canonical.com/~amurray/USP/USP_E048.mp3" preload="auto" />
+      <audio src="https://people.canonical.com/~amurray/USP/USP_E049.mp3" preload="auto" />
       </div>
     </div></div>
 </div>
 
 <section class="episode-list">
 <div class="row main_container"><div class = "col"><div class = "row homepage_episode_row">
+        <div class = "col-md-12">
+          <a href="https://ubuntusecuritypodcast.org/episode-28/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 28</h3></a>
+          <small>Posted on Monday, Apr 15, 2019</small>
+        </div>
+      </div>
+      <div class = "row homepage_episode_row"><div class = "col-md-4">
+            <a href="https://ubuntusecuritypodcast.org/episode-28/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
+          </div>
+          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at updates for vulnerabilities in wpa_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</p></div></div><div class = "row homepage_episode_row">
+          <div class = "col-md-12 player_row">
+            <audio src="https://people.canonical.com/~amurray/USP/USP_E028.mp3" preload="auto" />
+          </div>
+        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
           <a href="https://ubuntusecuritypodcast.org/episode-27/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 27</h3></a>
           <small>Posted on Monday, Apr 8, 2019</small>
@@ -290,19 +303,6 @@
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.</p></div></div><div class = "row homepage_episode_row">
           <div class = "col-md-12 player_row">
             <audio src="https://people.canonical.com/~amurray/USP/USP_E024.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
-        <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-23/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 23</h3></a>
-          <small>Posted on Tuesday, Mar 12, 2019</small>
-        </div>
-      </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
-            <a href="https://ubuntusecuritypodcast.org/episode-23/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
-          </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E023.mp3" preload="auto" />
           </div>
         </div></div></div>
 <div class="row">
@@ -437,12 +437,16 @@ audiojs.events.ready(function() {
  });
 </script>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-123895434-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

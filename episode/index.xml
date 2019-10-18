@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0"
      xmlns:content="http://purl.org/rss/1.0/modules/content/"
      xmlns:wfw="http://wellformedweb.org/CommentAPI/"
@@ -15,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Wed, 9 Oct 2019 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 14:18:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -42,9 +41,210 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>Episode 49</title>
+          <link>https://ubuntusecuritypodcast.org/episode-49/</link>
+          <pubDate>Fri, 18 Oct 2019 14:18:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>4a49a1057918c7b343e9a3d3a318c0bab7d8d3997f2168bcece3a17c461358362c51850bc3414e7c3dfc0575bda71abd59b121437efaffcf9c5b74341e50219d</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  </itunes:summary>
+        <description>  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  </description>
+        <googleplay:description>  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+plus we discuss a recent CVE for Python which resulted in erroneous
+scientific research results, and we go over some of your feedback from
+Episode 48.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>27 unique CVEs addressed</p>
+
+<h3 id="usn-4148-1-openexr-vulnerabilities-00-45">[<a href="https://usn.ubuntu.com/4148-1/">USN-4148-1</a>] OpenEXR vulnerabilities [00:45]</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18444">CVE-2018-18444</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9115">CVE-2017-9115</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9113">CVE-2017-9113</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9111">CVE-2017-9111</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9116">CVE-2017-9116</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9112">CVE-2017-9112</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9110">CVE-2017-9110</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12596">CVE-2017-12596</a> <!--- low ---></li>
+</ul></li>
+<li>Image format developed by ILM with a high definition range for computer
+imaging applications</li>
+<li>Range of issues (c++ codebase)
+
+<ul>
+<li>OOB writes (usually only of a few bytes past the end of a buffer) -
+assertion failure or memory corruption -&gt; crash / code execution</li>
+<li>OOB reads (same) - crash</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4149-1-unbound-vulnerability-02-06">[<a href="https://usn.ubuntu.com/4149-1/">USN-4149-1</a>] Unbound vulnerability [02:06]</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16866">CVE-2019-16866</a> <!--- medium ---></li>
+</ul></li>
+<li>Validating, recursive DNS resolver</li>
+<li>OOB read due to a remotely crafted NOTIFY query (source IP needs to match
+an ACL) -&gt; crash</li>
+</ul>
+
+<h3 id="usn-4151-1-usn-4151-2-python-vulnerabilities-02-40">[<a href="https://usn.ubuntu.com/4151-1/">USN-4151-1</a>, <a href="https://usn.ubuntu.com/4151-2/">USN-4151-2</a>] Python vulnerabilities [02:40]</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16935">CVE-2019-16935</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16056">CVE-2019-16056</a> <!--- medium ---></li>
+</ul></li>
+<li>XML-RPC server module could end up serving arbitrary JS if set via the
+set_server_title() method as did not escape content</li>
+<li>Python email module tries to parse email address into sender + domain -
+if domain contains multiple @ chars could get confused and return wrong
+output - so applications which rely on this for validating email
+addresses could accept an email address which is actually invalid</li>
+</ul>
+
+<h3 id="usn-4152-1-libsoup-vulnerability-03-53">[<a href="https://usn.ubuntu.com/4152-1/">USN-4152-1</a>] libsoup vulnerability [03:53]</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17266">CVE-2019-17266</a> <!--- medium ---></li>
+</ul></li>
+<li>Heap buffer OOB read - fails to check the specified length of message
+against the actual received message - could then memcpy past the end of
+the input message -&gt; crash</li>
+</ul>
+
+<h3 id="usn-4153-1-octavia-vulnerability-04-33">[<a href="https://usn.ubuntu.com/4153-1/">USN-4153-1</a>] Octavia vulnerability [04:33]</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17134">CVE-2019-17134</a> <!--- medium ---></li>
+</ul></li>
+<li>Amphora Images in OpenStack Octavia - fails to properly validate client
+certificates for management network clients -&gt; could allow anyone with
+management network access to retrieve information / issue config commands</li>
+</ul>
+
+<h3 id="usn-4154-1-sudo-vulnerability-05-06">[<a href="https://usn.ubuntu.com/4154-1/">USN-4154-1</a>] Sudo vulnerability [05:06]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14287">CVE-2019-14287</a> <!--- medium ---></li>
+</ul></li>
+<li>Lots of press around a seemingly high priority privilege escalation
+vulnerability - BUT requires an admin to have configured sudo with a
+particular configuration (ie specifying a user can run a command as any
+other user via the ALL keyword in a Runas rule). In this case if the rule
+had also been configured to explicitly deny running the command as root,
+this could be bypassed by the user specifying a UID of -1. So would only
+affect a very small number of installations.</li>
+</ul>
+
+<h3 id="usn-4155-1-aspell-vulnerability-07-26">[<a href="https://usn.ubuntu.com/4155-1/">USN-4155-1</a>] Aspell vulnerability [07:26]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17544">CVE-2019-17544</a> <!--- medium ---></li>
+</ul></li>
+<li>Stack buffer over-read - found by Google&rsquo;s oss-fuzz</li>
+</ul>
+
+<h3 id="usn-4156-1-sdl-vulnerabilities-08-03">[<a href="https://usn.ubuntu.com/4156-1/">USN-4156-1</a>] SDL vulnerabilities [08:03]</h3>
+
+<ul>
+<li>12 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638">CVE-2019-7638</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637">CVE-2019-7637</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636">CVE-2019-7636</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635">CVE-2019-7635</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7578">CVE-2019-7578</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7577">CVE-2019-7577</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7576">CVE-2019-7576</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7575">CVE-2019-7575</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7574">CVE-2019-7574</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7573">CVE-2019-7573</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7572">CVE-2019-7572</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13616">CVE-2019-13616</a> <!--- low ---></li>
+</ul></li>
+<li>Covered all the higher priority ones in <a href="https://ubuntusecuritypodcast.org/episode-48/">Episode 48</a> for SDL 2.0 - fixed
+now for SDL1.2 as well, plus rolled in a bunch of fixes for lower
+priority issues (buffer over-reads in WAV handling etc)</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-cves-for-bad-documentation-and-resulting-scientific-research-09-20">Alex and Joe talk CVEs for bad documentation and resulting scientific research? [09:20]</h3>
+
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2019-17514">https://nvd.nist.gov/vuln/detail/CVE-2019-17514</a></li>
+</ul>
+
+<h3 id="feedback-on-desired-features-for-20-dot-04-18-53">Feedback on desired features for 20.04 [18:53]</h3>
+
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/ubuntu-security-podcast-ep-48-feedback/12922">cafzo on discourse.ubuntu.com</a> <!-- bring up this link during recording to talk about it directly -->
+
+<ul>
+<li>encrypted home directories</li>
+<li>guest-accounts</li>
+</ul></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E049.mp3" length="29867695" type="audio/mpeg" /><itunes:duration>22:45</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Episode 48</title>
           <link>https://ubuntusecuritypodcast.org/episode-48/</link>
-          <pubDate>Wed, 09 Oct 2019 00:00:00 +1030 </pubDate>
+          <pubDate>Thu, 10 Oct 2019 20:37:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>0efb781981d33bf253bba826020da4b973ac05001f4b599cfa817150fd2b4cfe4a44d6c8790e9885a37d043561ecdba098aeda75e53b56f00f858b38473eef01</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -230,7 +430,7 @@ bzip2 itself in Ubuntu in <a href="https://ubuntusecuritypodcast.org/episode-38/
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E048.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E048.mp3" length="31349229" type="audio/mpeg" /><itunes:duration>24:39</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 47</title>

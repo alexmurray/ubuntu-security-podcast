@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  ">
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+<meta property="og:title" content="Episode 49" />
+<meta property="og:description" content="  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-49/" />
+
+
+
+<meta property="og:updated_time" content="2019-10-18 14:18:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2019-10-18 14:18:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2019-10-18 14:18:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 49">
+<meta itemprop="description" content="  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="553">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 49"/>
+<meta name="twitter:description" content="  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 49 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-49/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+              
+              <span>About</span>
+          </a>
+        </li>
+      
+    
+      
+          <li class= "nav-item ">
+          <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+              
+              <span>Contact</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 49</h1>
+      <small>Posted on Friday, Oct 18, 2019</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+  plus we discuss a recent CVE for Python which resulted in erroneous
+  scientific research results, and we go over some of your feedback from
+  Episode 48.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E049.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E049.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      
+
+<h2 id="overview">Overview</h2>
+
+<p>This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+plus we discuss a recent CVE for Python which resulted in erroneous
+scientific research results, and we go over some of your feedback from
+Episode 48.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>27 unique CVEs addressed</p>
+
+<h3 id="usn-4148-1-openexr-vulnerabilities-00-45">[<a href="https://usn.ubuntu.com/4148-1/">USN-4148-1</a>] OpenEXR vulnerabilities [00:45]</h3>
+
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18444">CVE-2018-18444</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9115">CVE-2017-9115</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9113">CVE-2017-9113</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9111">CVE-2017-9111</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9116">CVE-2017-9116</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9112">CVE-2017-9112</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9110">CVE-2017-9110</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12596">CVE-2017-12596</a> <!--- low ---></li>
+</ul></li>
+<li>Image format developed by ILM with a high definition range for computer
+imaging applications</li>
+<li>Range of issues (c++ codebase)
+
+<ul>
+<li>OOB writes (usually only of a few bytes past the end of a buffer) -
+assertion failure or memory corruption -&gt; crash / code execution</li>
+<li>OOB reads (same) - crash</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4149-1-unbound-vulnerability-02-06">[<a href="https://usn.ubuntu.com/4149-1/">USN-4149-1</a>] Unbound vulnerability [02:06]</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16866">CVE-2019-16866</a> <!--- medium ---></li>
+</ul></li>
+<li>Validating, recursive DNS resolver</li>
+<li>OOB read due to a remotely crafted NOTIFY query (source IP needs to match
+an ACL) -&gt; crash</li>
+</ul>
+
+<h3 id="usn-4151-1-usn-4151-2-python-vulnerabilities-02-40">[<a href="https://usn.ubuntu.com/4151-1/">USN-4151-1</a>, <a href="https://usn.ubuntu.com/4151-2/">USN-4151-2</a>] Python vulnerabilities [02:40]</h3>
+
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16935">CVE-2019-16935</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16056">CVE-2019-16056</a> <!--- medium ---></li>
+</ul></li>
+<li>XML-RPC server module could end up serving arbitrary JS if set via the
+set_server_title() method as did not escape content</li>
+<li>Python email module tries to parse email address into sender + domain -
+if domain contains multiple @ chars could get confused and return wrong
+output - so applications which rely on this for validating email
+addresses could accept an email address which is actually invalid</li>
+</ul>
+
+<h3 id="usn-4152-1-libsoup-vulnerability-03-53">[<a href="https://usn.ubuntu.com/4152-1/">USN-4152-1</a>] libsoup vulnerability [03:53]</h3>
+
+<ul>
+<li>1 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17266">CVE-2019-17266</a> <!--- medium ---></li>
+</ul></li>
+<li>Heap buffer OOB read - fails to check the specified length of message
+against the actual received message - could then memcpy past the end of
+the input message -&gt; crash</li>
+</ul>
+
+<h3 id="usn-4153-1-octavia-vulnerability-04-33">[<a href="https://usn.ubuntu.com/4153-1/">USN-4153-1</a>] Octavia vulnerability [04:33]</h3>
+
+<ul>
+<li>1 CVEs addressed in Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17134">CVE-2019-17134</a> <!--- medium ---></li>
+</ul></li>
+<li>Amphora Images in OpenStack Octavia - fails to properly validate client
+certificates for management network clients -&gt; could allow anyone with
+management network access to retrieve information / issue config commands</li>
+</ul>
+
+<h3 id="usn-4154-1-sudo-vulnerability-05-06">[<a href="https://usn.ubuntu.com/4154-1/">USN-4154-1</a>] Sudo vulnerability [05:06]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14287">CVE-2019-14287</a> <!--- medium ---></li>
+</ul></li>
+<li>Lots of press around a seemingly high priority privilege escalation
+vulnerability - BUT requires an admin to have configured sudo with a
+particular configuration (ie specifying a user can run a command as any
+other user via the ALL keyword in a Runas rule). In this case if the rule
+had also been configured to explicitly deny running the command as root,
+this could be bypassed by the user specifying a UID of -1. So would only
+affect a very small number of installations.</li>
+</ul>
+
+<h3 id="usn-4155-1-aspell-vulnerability-07-26">[<a href="https://usn.ubuntu.com/4155-1/">USN-4155-1</a>] Aspell vulnerability [07:26]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17544">CVE-2019-17544</a> <!--- medium ---></li>
+</ul></li>
+<li>Stack buffer over-read - found by Google&rsquo;s oss-fuzz</li>
+</ul>
+
+<h3 id="usn-4156-1-sdl-vulnerabilities-08-03">[<a href="https://usn.ubuntu.com/4156-1/">USN-4156-1</a>] SDL vulnerabilities [08:03]</h3>
+
+<ul>
+<li>12 CVEs addressed in Xenial, Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638">CVE-2019-7638</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637">CVE-2019-7637</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636">CVE-2019-7636</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635">CVE-2019-7635</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7578">CVE-2019-7578</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7577">CVE-2019-7577</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7576">CVE-2019-7576</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7575">CVE-2019-7575</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7574">CVE-2019-7574</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7573">CVE-2019-7573</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7572">CVE-2019-7572</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13616">CVE-2019-13616</a> <!--- low ---></li>
+</ul></li>
+<li>Covered all the higher priority ones in <a href="https://ubuntusecuritypodcast.org/episode-48/">Episode 48</a> for SDL 2.0 - fixed
+now for SDL1.2 as well, plus rolled in a bunch of fixes for lower
+priority issues (buffer over-reads in WAV handling etc)</li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="alex-and-joe-talk-cves-for-bad-documentation-and-resulting-scientific-research-09-20">Alex and Joe talk CVEs for bad documentation and resulting scientific research? [09:20]</h3>
+
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2019-17514">https://nvd.nist.gov/vuln/detail/CVE-2019-17514</a></li>
+</ul>
+
+<h3 id="feedback-on-desired-features-for-20-dot-04-18-53">Feedback on desired features for 20.04 [18:53]</h3>
+
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/ubuntu-security-podcast-ep-48-feedback/12922">cafzo on discourse.ubuntu.com</a> <!-- bring up this link during recording to talk about it directly -->
+
+<ul>
+<li>encrypted home directories</li>
+<li>guest-accounts</li>
+</ul></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-48/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-49\/",
+        text: "Episode 49"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

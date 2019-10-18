@@ -6,20 +6,20 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2019 00:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 14:18:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Episode 48</title>
-      <link>https://ubuntusecuritypodcast.org/episode-48/</link>
-      <pubDate>Wed, 09 Oct 2019 00:00:00 +1030</pubDate>
+      <title>Episode 49</title>
+      <link>https://ubuntusecuritypodcast.org/episode-49/</link>
+      <pubDate>Fri, 18 Oct 2019 14:18:00 +1030</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-48/</guid>
-      <description>Overview This week we look at security updates for the Linux kernel, SDL 2, ClamAV and more, plus Alex and Joe talk security and performance trade-offs, snaps and OWASP Top 10 Cloud Security recommendations, and finally Alex covers some recent concerns about the security of the Snap Store.
-This week in Ubuntu Security Updates 31 unique CVEs addressed
-[USN-4142-1, USN-4142-2] e2fsprogs vulnerability [00:37]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-5094   Cisco TALOS - possible code execution via OOB write to the heap for code which handles quota support in ext4 - so possible to trigger via a specially crafted ext4 partition - could be triggered during an fsck on the partition etc.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-49/</guid>
+      <description>Overview This week we look at updates for Sudo, Python, OpenStack Octavia and more, plus we discuss a recent CVE for Python which resulted in erroneous scientific research results, and we go over some of your feedback from Episode 48.
+This week in Ubuntu Security Updates 27 unique CVEs addressed
+[USN-4148-1] OpenEXR vulnerabilities [00:45]  8 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-18444  CVE-2017-9115  CVE-2017-9113  CVE-2017-9111  CVE-2017-9116  CVE-2017-9112  CVE-2017-9110  CVE-2017-12596   Image format developed by ILM with a high definition range for computer imaging applications Range of issues (c++ codebase)  OOB writes (usually only of a few bytes past the end of a buffer) - assertion failure or memory corruption -&amp;gt; crash / code execution OOB reads (same) - crash   [USN-4149-1] Unbound vulnerability [02:06]  1 CVEs addressed in Disco  CVE-2019-16866   Validating, recursive DNS resolver OOB read due to a remotely crafted NOTIFY query (source IP needs to match an ACL) -&amp;gt; crash  [USN-4151-1, USN-4151-2] Python vulnerabilities [02:40]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-16935  CVE-2019-16056   XML-RPC server module could end up serving arbitrary JS if set via the set_server_title() method as did not escape content Python email module tries to parse email address into sender + domain - if domain contains multiple @ chars could get confused and return wrong output - so applications which rely on this for validating email addresses could accept an email address which is actually invalid  [USN-4152-1] libsoup vulnerability [03:53]  1 CVEs addressed in Bionic, Disco  CVE-2019-17266   Heap buffer OOB read - fails to check the specified length of message against the actual received message - could then memcpy past the end of the input message -&amp;gt; crash  [USN-4153-1] Octavia vulnerability [04:33]  1 CVEs addressed in Disco  CVE-2019-17134   Amphora Images in OpenStack Octavia - fails to properly validate client certificates for management network clients -&amp;gt; could allow anyone with management network access to retrieve information / issue config commands  [USN-4154-1] Sudo vulnerability [05:06]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-14287   Lots of press around a seemingly high priority privilege escalation vulnerability - BUT requires an admin to have configured sudo with a particular configuration (ie specifying a user can run a command as any other user via the ALL keyword in a Runas rule).</description>
     </item>
     
     <item>
@@ -32,14 +32,14 @@ This week in Ubuntu Security Updates 31 unique CVEs addressed
     </item>
     
     <item>
-      <title>Episode 47</title>
-      <link>https://ubuntusecuritypodcast.org/episode-47/</link>
-      <pubDate>Thu, 03 Oct 2019 20:22:00 +0930</pubDate>
+      <title>Episode 48</title>
+      <link>https://ubuntusecuritypodcast.org/episode-48/</link>
+      <pubDate>Thu, 10 Oct 2019 20:37:00 +1030</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-47/</guid>
-      <description>Overview We catch up on details of the past few weeks of security updates, including Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin Magazine.
-This week in Ubuntu Security Updates 93 unique CVEs addressed
-[USN-4125-1] Memcached vulnerability [00:42]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15026   Possible stack buffer over-read when using UNIX sockets (copies address of UNIX socket using strncpy() which could possibly read past the end of the src buffer) - possible crash -&amp;gt; DoS - fixed to explicitly limit length to smallest of src/dst buffers rather than just size of dest buffer  [USN-4126-1] FreeType vulnerability [01:49]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial  CVE-2015-9383   2 CVEs addressed in Precise ESM, Trusty ESM only  CVE-2015-9382  CVE-2015-9381   All various heap based buffer over-reads - crash -&amp;gt; DoS  [USN-4127-1, USN-4127-2] Python vulnerabilities [02:13]  8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-9948  CVE-2019-9947  CVE-2019-9740  CVE-2019-5010  CVE-2019-10160  CVE-2019-9636  CVE-2018-20852  CVE-2018-20406   4 issues in urllib:  would allow to easily open files from local file-system 2 different CRLF injection issues specially crafted URL could cause urllib to send cookies / auth data for wrong host  Fixed incorrectly upstream so had a two CVEs assigned   http cookiejar wouldn&amp;rsquo;t validate URL correctly so could also send cookies for another domain Possible NULL ptr deref when parsing X509 certs if had an empty CRL distpoint / URI Possible integer overflow when serializing a tens of hundreds of gigabytes of data via the pickle format - could cause memory exhaustion  [USN-4128-1, USN-4128-2] Tomcat vulnerabilities [03:35]  3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)  CVE-2019-10072  CVE-2019-0199  CVE-2019-0221   HTTP/2 server would accept streams with an excessive number of SETTINGS frames and would permit clients to keep streams open without reading / writing anything - could lead to DoS by causing server-side threads to block  Original fix was incomplete - so got a second CVE  Possible XSS injection if using SSI printenv command as would echo user provided data without escaping - intended only for debugging so shouldn&amp;rsquo;t be used in a production website anyway  [USN-4120-2] systemd regression [04:45]  Affecting Bionic, Disco Episode 46 - systemd-resolved dbus access control - the update was prepared using a pending SRU update - but this contained a regression in networking - re-released the security fix but without this SRU update included.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-48/</guid>
+      <description>Overview This week we look at security updates for the Linux kernel, SDL 2, ClamAV and more, plus Alex and Joe talk security and performance trade-offs, snaps and OWASP Top 10 Cloud Security recommendations, and finally Alex covers some recent concerns about the security of the Snap Store.
+This week in Ubuntu Security Updates 31 unique CVEs addressed
+[USN-4142-1, USN-4142-2] e2fsprogs vulnerability [00:37]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-5094   Cisco TALOS - possible code execution via OOB write to the heap for code which handles quota support in ext4 - so possible to trigger via a specially crafted ext4 partition - could be triggered during an fsck on the partition etc.</description>
     </item>
     
     <item>
@@ -49,6 +49,17 @@ This week in Ubuntu Security Updates 93 unique CVEs addressed
       
       <guid>https://ubuntusecuritypodcast.org/contact/</guid>
       <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
+    </item>
+    
+    <item>
+      <title>Episode 47</title>
+      <link>https://ubuntusecuritypodcast.org/episode-47/</link>
+      <pubDate>Thu, 03 Oct 2019 20:22:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-47/</guid>
+      <description>Overview We catch up on details of the past few weeks of security updates, including Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin Magazine.
+This week in Ubuntu Security Updates 93 unique CVEs addressed
+[USN-4125-1] Memcached vulnerability [00:42]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15026   Possible stack buffer over-read when using UNIX sockets (copies address of UNIX socket using strncpy() which could possibly read past the end of the src buffer) - possible crash -&amp;gt; DoS - fixed to explicitly limit length to smallest of src/dst buffers rather than just size of dest buffer  [USN-4126-1] FreeType vulnerability [01:49]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial  CVE-2015-9383   2 CVEs addressed in Precise ESM, Trusty ESM only  CVE-2015-9382  CVE-2015-9381   All various heap based buffer over-reads - crash -&amp;gt; DoS  [USN-4127-1, USN-4127-2] Python vulnerabilities [02:13]  8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-9948  CVE-2019-9947  CVE-2019-9740  CVE-2019-5010  CVE-2019-10160  CVE-2019-9636  CVE-2018-20852  CVE-2018-20406   4 issues in urllib:  would allow to easily open files from local file-system 2 different CRLF injection issues specially crafted URL could cause urllib to send cookies / auth data for wrong host  Fixed incorrectly upstream so had a two CVEs assigned   http cookiejar wouldn&amp;rsquo;t validate URL correctly so could also send cookies for another domain Possible NULL ptr deref when parsing X509 certs if had an empty CRL distpoint / URI Possible integer overflow when serializing a tens of hundreds of gigabytes of data via the pickle format - could cause memory exhaustion  [USN-4128-1, USN-4128-2] Tomcat vulnerabilities [03:35]  3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)  CVE-2019-10072  CVE-2019-0199  CVE-2019-0221   HTTP/2 server would accept streams with an excessive number of SETTINGS frames and would permit clients to keep streams open without reading / writing anything - could lead to DoS by causing server-side threads to block  Original fix was incomplete - so got a second CVE  Possible XSS injection if using SSI printenv command as would echo user provided data without escaping - intended only for debugging so shouldn&amp;rsquo;t be used in a production website anyway  [USN-4120-2] systemd regression [04:45]  Affecting Bionic, Disco Episode 46 - systemd-resolved dbus access control - the update was prepared using a pending SRU update - but this contained a regression in networking - re-released the security fix but without this SRU update included.</description>
     </item>
     
     <item>
