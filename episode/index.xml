@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 18 Oct 2019 14:18:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2019 15:28:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,299 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 50</title>
+          <link>https://ubuntusecuritypodcast.org/episode-50/</link>
+          <pubDate>Thu, 24 Oct 2019 15:28:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>1ac5b387f58f50b867a6d837f8d9a835c345e155c44b99ff9b2908d433b078520fce6a6a2591e83251e878e95e4937992d25f4f2092f884cdb47c1a102297bad</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  Alex and Joe discuss the big news of this week - the release of Ubuntu
+  19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
+  UW IMAP and more.
+  </itunes:summary>
+        <description>  Alex and Joe discuss the big news of this week - the release of Ubuntu
+  19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
+  UW IMAP and more.
+  </description>
+        <googleplay:description>  Alex and Joe discuss the big news of this week - the release of Ubuntu
+  19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
+  UW IMAP and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>Alex and Joe discuss the big news of this week - the release of Ubuntu
+19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
+UW IMAP and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>51 unique CVEs addressed</p>
+
+<h3 id="usn-4156-2-sdl-vulnerabilities-00-37">[<a href="https://usn.ubuntu.com/4156-2/">USN-4156-2</a>] SDL vulnerabilities [00:37]</h3>
+
+<ul>
+<li>11 CVEs addressed in Precise ESM, Trusty ESM
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637">CVE-2019-7637</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636">CVE-2019-7636</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635">CVE-2019-7635</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7578">CVE-2019-7578</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7577">CVE-2019-7577</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7576">CVE-2019-7576</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7575">CVE-2019-7575</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7574">CVE-2019-7574</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7573">CVE-2019-7573</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7572">CVE-2019-7572</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13616">CVE-2019-13616</a> <!--- low ---></li>
+</ul></li>
+<li>Covered in <a href="https://ubuntusecuritypodcast.org/episode-49/">Episode 49</a> and <a href="https://ubuntusecuritypodcast.org/episode-48/">Episode 48</a></li>
+</ul>
+
+<h3 id="usn-4160-1-uw-imap-vulnerability-01-04">[<a href="https://usn.ubuntu.com/4160-1/">USN-4160-1</a>] UW IMAP vulnerability [01:04]</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19518">CVE-2018-19518</a> <!--- medium ---></li>
+</ul></li>
+<li>University of Washington IMAP toolkit (used by PHP for it&rsquo;s IMAP implementation)</li>
+<li>Used rsh to implement various operations - wouldn&rsquo;t try and sanitize the
+provided hostname - so if attacker could provide a hostname/mailbox to
+php&rsquo;s IMAP without any validation could execute arbitrary commands on the
+host
+
+<ul>
+<li>Fixed by turning off the rsh based functionality by default in PHP - if
+you still want this you can set imap.enable_insecure_rsh but this is
+not advised&hellip;</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4158-1-libtiff-vulnerabilities-02-17">[<a href="https://usn.ubuntu.com/4158-1/">USN-4158-1</a>] LibTIFF vulnerabilities [02:17]</h3>
+
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17546">CVE-2019-17546</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14973">CVE-2019-14973</a> <!--- low ---></li>
+</ul></li>
+<li>Integer overflow -&gt; heap based buffer overflow -&gt; crash, DoS or code
+execution</li>
+<li>(Low) Integer overflow due to undefined behaviour in existing overflow
+checking code when multiplying various elements -&gt; no known way to
+exploit</li>
+</ul>
+
+<h3 id="usn-4155-2-aspell-vulnerability-03-13">[<a href="https://usn.ubuntu.com/4155-2/">USN-4155-2</a>] Aspell vulnerability [03:13]</h3>
+
+<ul>
+<li>1 CVEs addressed in Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17544">CVE-2019-17544</a> <!--- medium ---></li>
+</ul></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-49/">Episode 49</a> covered for older releases - Eoan is now out so updated there too</li>
+</ul>
+
+<h3 id="usn-4159-1-exiv2-vulnerability-03-31">[<a href="https://usn.ubuntu.com/4159-1/">USN-4159-1</a>] Exiv2 vulnerability [03:31]</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17402">CVE-2019-17402</a> <!--- medium ---></li>
+</ul></li>
+<li>OOB read -&gt; crash, DoS</li>
+</ul>
+
+<h3 id="usn-4164-1-libxslt-vulnerabilities-03-44">[<a href="https://usn.ubuntu.com/4164-1/">USN-4164-1</a>] Libxslt vulnerabilities [03:44]</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18197">CVE-2019-18197</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13118">CVE-2019-13118</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13117">CVE-2019-13117</a> <!--- low ---></li>
+</ul></li>
+<li>OSS-Fuzz found 3 issues
+
+<ul>
+<li>possible heap buffer overflow as a result of a dangling pointer - so
+same memory area could be reused for future memory operations -&gt; fixed
+to reset the pointer when done</li>
+<li>2 low priority issues - both stack memory info disclosures</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4157-1-usn-4157-2-linux-kernel-vulnerabilities-04-59">[<a href="https://usn.ubuntu.com/4157-1/">USN-4157-1</a>, <a href="https://usn.ubuntu.com/4157-2/">USN-4157-2</a>] Linux kernel vulnerabilities [04:59]</h3>
+
+<ul>
+<li>9 CVEs addressed in Bionic (HWE) and Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2181">CVE-2019-2181</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16714">CVE-2019-16714</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15902">CVE-2019-15902</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15505">CVE-2019-15505</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15504">CVE-2019-15504</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14821">CVE-2019-14821</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14816">CVE-2019-14816</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14815">CVE-2019-14815</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14814">CVE-2019-14814</a> <!--- medium ---></li>
+</ul></li>
+<li>Integer overflow -&gt; buffer overflow -&gt; root privesc in binder</li>
+<li>Reintroduction of Spectre v1 vulnerability in ptrace subsystem - Brad
+Spengler - fixed properly in Linus&rsquo; tree but not when it got backported
+to the stable tree - two lines of code got reordered - so load of
+possible speculative value occurred _after_it had been used - so the
+speculative load barrier had no effect - Ubuntu regularly backports fixes
+from the latest stable tree so we ended up affected as well
+
+<ul>
+<li><a href="https://grsecurity.net/teardown%5Fof%5Fa%5Ffailed%5Flinux%5Flts%5Fspectre%5Ffix.php">https://grsecurity.net/teardown%5Fof%5Fa%5Ffailed%5Flinux%5Flts%5Fspectre%5Ffix.php</a></li>
+</ul></li>
+<li>Possible DoS (kernel crash) if users can write to /dev/kvm - by default
+on Ubuntu users don&rsquo;t have this privilege so generally not affected</li>
+<li>2 different heap based buffer overflows in Marvell Wifi driver -&gt;
+occurred when setting parameters for the driver so could be triggered by
+a local users -&gt; crash, DoS or
+possible code execution</li>
+</ul>
+
+<h3 id="usn-4161-1-linux-kernel-vulnerability-07-40">[<a href="https://usn.ubuntu.com/4161-1/">USN-4161-1</a>] Linux kernel vulnerability [07:40]</h3>
+
+<ul>
+<li>1 CVEs addressed in Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18198">CVE-2019-18198</a> <!--- high ---></li>
+</ul></li>
+<li>Eoan kernel &ldquo;0-day&rdquo; - will discuss with Joe later</li>
+</ul>
+
+<h3 id="usn-4162-1-linux-kernel-vulnerabilities-07-58">[<a href="https://usn.ubuntu.com/4162-1/">USN-4162-1</a>] Linux kernel vulnerabilities [07:58]</h3>
+
+<ul>
+<li>10 CVEs addressed in Trusty ESM (Azure), Xenial (HWE), Bionic
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15918">CVE-2019-15918</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15902">CVE-2019-15902</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15505">CVE-2019-15505</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15118">CVE-2019-15118</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15117">CVE-2019-15117</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14821">CVE-2019-14821</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14816">CVE-2019-14816</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14815">CVE-2019-14815</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14814">CVE-2019-14814</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-21008">CVE-2018-21008</a> <!--- medium ---></li>
+</ul></li>
+<li>SMB based buffer overread if try mounting a share with version specified
+as 3.0 but the share itself is version 2.10 -&gt; parameter size mismatch -&gt;
+read of too much memory -&gt; info disclosure</li>
+<li>UAF in RSI 91x Wi-Fi driver -&gt; able to be triggered by a remote network
+peer -&gt; crash, DoS or possible RCE</li>
+<li>ptrace spectrev1 reissue, KVM crash, Marvell Wifi Driver issues from above</li>
+<li>USB audio issues from <a href="https://ubuntusecuritypodcast.org/episode-48/">Episode 48</a> (Disco kernel -&gt; now fixed in Bionic
+kernel as well)</li>
+</ul>
+
+<h3 id="usn-4163-1-usn-4163-2-linux-kernel-vulnerabilities-09-29">[<a href="https://usn.ubuntu.com/4163-1/">USN-4163-1</a>, <a href="https://usn.ubuntu.com/4163-2/">USN-4163-2</a>] Linux kernel vulnerabilities [09:29]</h3>
+
+<ul>
+<li>10 CVEs addressed in Xenial and Trusty ESM (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15902">CVE-2019-15902</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15505">CVE-2019-15505</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15118">CVE-2019-15118</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15117">CVE-2019-15117</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14821">CVE-2019-14821</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14816">CVE-2019-14816</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14814">CVE-2019-14814</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-21008">CVE-2018-21008</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18232">CVE-2017-18232</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10906">CVE-2016-10906</a> <!--- low ---></li>
+</ul></li>
+<li>Spectrev1 reissue, USB Audio, KVM crash, Marvell and RSI 91x WiFi Driver
+issues all covered earlier</li>
+<li>Serial attached SCSI implementation mishandled error condition leading to
+deadlock -&gt; local user could possibly trigger this leading to a DoS</li>
+</ul>
+
+<h3 id="lsn-0058-1-linux-kernel-vulnerability-10-09">[<a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-October/005162.html">LSN-0058-1</a>] Linux kernel vulnerability [10:09]</h3>
+
+<ul>
+<li>22 CVEs addressed in Bionic and Xenial + Xenial (HWE)
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14835">CVE-2019-14835</a> <!--- high ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14821">CVE-2019-14821</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14816">CVE-2019-14816</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14815">CVE-2019-14815</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14814">CVE-2019-14814</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14284">CVE-2019-14284</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14283">CVE-2019-14283</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614">CVE-2019-12614</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11833">CVE-2019-11833</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11478">CVE-2019-11478</a> <!--- high ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11477">CVE-2019-11477</a> <!--- high ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207">CVE-2019-10207</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126">CVE-2019-10126</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846">CVE-2019-3846</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2181">CVE-2019-2181</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2054">CVE-2019-2054</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136">CVE-2019-0136</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-21008">CVE-2018-21008</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976">CVE-2018-20976</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20961">CVE-2018-20961</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20856">CVE-2018-20856</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10905">CVE-2016-10905</a> <!--- medium ---></li>
+</ul></li>
+<li>Most all covered in previous episodes or previously in this episode</li>
+<li>2 high priority issues
+
+<ul>
+<li>vhost_net issue from <a href="https://ubuntusecuritypodcast.org/episode-47/">Episode 47</a></li>
+<li>SACKPanic from <a href="https://ubuntusecuritypodcast.org/episode-37/">Episode 37</a></li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="joe-and-alex-on-ubuntu-19-dot-10--eoan-ermine--released-but-with-possible-local-user-kernel-dos-bug-11-02">Joe and Alex on Ubuntu 19.10 (Eoan Ermine) released but with possible local user kernel DoS bug [11:02]</h3>
+
+<ul>
+<li><a href="https://twitter.com/sylvia%5Fritter">https://twitter.com/sylvia%5Fritter</a></li>
+<li><a href="https://www.phoronix.com/scan.php?page=news%5Fitem&amp;px=Ubuntu-19.10-Kernel-Bug">https://www.phoronix.com/scan.php?page=news%5Fitem&amp;px=Ubuntu-19.10-Kernel-Bug</a>
+
+<ul>
+<li>Mitigate by installing the latest eoan kernel update or by disabling
+user namspaces:
+sysctl user.max_user_namespaces=0</li>
+</ul></li>
+</ul>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E050.mp3" length="31288105" type="audio/mpeg" /><itunes:duration>23:48</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 49</title>
           <link>https://ubuntusecuritypodcast.org/episode-49/</link>
