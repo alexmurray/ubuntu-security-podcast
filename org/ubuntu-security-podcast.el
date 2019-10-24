@@ -39,7 +39,8 @@
     ("16.04" "Xenial")
     ("18.04" "Bionic")
     ("18.10" "Cosmic")
-    ("19.04" "Disco")))
+    ("19.04" "Disco")
+    ("19.10" "Eoan")))
 
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
