@@ -8,9 +8,9 @@ description = """
   code audits.
   """
 date = 2019-05-20
-lastmod = 2019-10-24T15:20:26+10:30
+lastmod = 2019-10-31T17:07:19+10:30
 draft = false
-weight = 1019
+weight = 1020
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E032.mp3"
