@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 24 Oct 2019 15:28:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 17:06:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,226 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 51</title>
+          <link>https://ubuntusecuritypodcast.org/episode-51/</link>
+          <pubDate>Thu, 31 Oct 2019 17:06:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>b4b70514b6fc0095396ed3af2215ac25ed8c1c5f3aeec38a2e93b800831fc26e997456bb3bee80dd083570aed5b4bc12cc1e96fbd11999a6621945f7b6130794</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  In this Halloween Special, Joe and Alex talk about what scares them in
+  security, plus we look at security updates for Firefox, PHP, Samba,
+  Whoopsie, Apport and more.
+  </itunes:summary>
+        <description>  In this Halloween Special, Joe and Alex talk about what scares them in
+  security, plus we look at security updates for Firefox, PHP, Samba,
+  Whoopsie, Apport and more.
+  </description>
+        <googleplay:description>  In this Halloween Special, Joe and Alex talk about what scares them in
+  security, plus we look at security updates for Firefox, PHP, Samba,
+  Whoopsie, Apport and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[
+
+<h2 id="overview">Overview</h2>
+
+<p>In this Halloween Special, Joe and Alex talk about what scares them in
+security, plus we look at security updates for Firefox, PHP, Samba,
+Whoopsie, Apport and more.</p>
+
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+
+<p>26 unique CVEs addressed</p>
+
+<h3 id="usn-4165-1-firefox-vulnerabilities-00-46">[<a href="https://usn.ubuntu.com/4165-1/">USN-4165-1</a>] Firefox vulnerabilities [00:46]</h3>
+
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17002">CVE-2019-17002</a> <!--- low ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17001">CVE-2019-17001</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17000">CVE-2019-17000</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903">CVE-2019-15903</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11765">CVE-2019-11765</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764">CVE-2019-11764</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763">CVE-2019-11763</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762">CVE-2019-11762</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761">CVE-2019-11761</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760">CVE-2019-11760</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759">CVE-2019-11759</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757">CVE-2019-11757</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6156">CVE-2018-6156</a> <!--- high ---></li>
+</ul></li>
+<li>1 high priority, 11 medium and 1 low
+
+<ul>
+<li>Heap buffer overflow via a crafted WebRTC video - originally for
+Chromium and was fixed for that last year - Firefox suffered similarly
+but disables the feature by default - has finally been fixed for
+Firefox as well by integrating the original fix from Chromium</li>
+<li>Usual suspects of stack-based buffer overflows, UAFs, a heap buffer
+overflow in bundled expat (<a href="https://ubuntusecuritypodcast.org/episode-47/">Episode 47</a>),</li>
+</ul></li>
+</ul>
+
+<h3 id="usn-4166-1-usn-4166-2-php-vulnerability-02-10">[<a href="https://usn.ubuntu.com/4166-1/">USN-4166-1</a>, <a href="https://usn.ubuntu.com/4166-2/">USN-4166-2</a>] PHP vulnerability [02:10]</h3>
+
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11043">CVE-2019-11043</a> <!--- medium ---></li>
+</ul></li>
+<li>RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM
+module to write past allocated buffers - and so ends up also writing into the FCGI
+protocol data buffers - which can then create a chance for RCE</li>
+<li>Exploit on github targetting vulnerable PHP-FPM servers which use nginx
+in a particular configuration</li>
+</ul>
+
+<h3 id="usn-4167-1-usn-4167-2-samba-vulnerabilities-03-11">[<a href="https://usn.ubuntu.com/4167-1/">USN-4167-1</a>, <a href="https://usn.ubuntu.com/4167-2/">USN-4167-2</a>] Samba vulnerabilities [03:11]</h3>
+
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14847">CVE-2019-14847</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14833">CVE-2019-14833</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10218">CVE-2019-10218</a> <!--- medium ---></li>
+</ul></li>
+<li>DoS from a user with &ldquo;get changes&rdquo; permissions - could crash an AD DC
+LDAP server due to a NULL pointer deref when using dirsync with ranged results</li>
+<li>Can configure AD DC to call out to a custom command to verify password
+complexity - is handed a copy of the cleartext password - but if this
+contained any multi-byte characters, would not get the full password -
+since it would pass the password as bytes but only copy the number of
+characters - and since multi-byte characters take more than 1 byte would
+miss the last few bytes of the password - so could circumvent password
+complexity requirements</li>
+<li>Malicious server could craft filenames which contain relative path
+characters (../ etc) which would then cause an SMB client to access local
+files for reading / writing rather than remote files - so a remote server
+could cause a client to create files outside the working directory on the
+local machine</li>
+</ul>
+
+<h3 id="usn-4168-1-libidn2-vulnerabilities-05-15">[<a href="https://usn.ubuntu.com/4168-1/">USN-4168-1</a>] Libidn2 vulnerabilities [05:15]</h3>
+
+<ul>
+<li>2 CVEs addressed in Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18224">CVE-2019-18224</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12290">CVE-2019-12290</a> <!--- medium ---></li>
+</ul></li>
+<li>Library for handling internationalised domain names</li>
+<li>Heap based buffer overflow via a too-long domain name (greater than 63
+characters - in library, caller passes a buffer that is specified to be a
+minimum of 64 bytes - but libidn strcpy()&rsquo;s into it so could easily overflow.</li>
+<li>Possible domain name impersonation since doesn&rsquo;t bother to check unicode
+conversions - so could use punycode (ascii representation of certain
+unicode characters) to impersonate a unicode domain</li>
+</ul>
+
+<h3 id="usn-4169-1-libarchive-vulnerability-06-32">[<a href="https://usn.ubuntu.com/4169-1/">USN-4169-1</a>] libarchive vulnerability [06:32]</h3>
+
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18408">CVE-2019-18408</a> <!--- medium ---></li>
+</ul></li>
+<li>UAF in certain failure conditions when handling RAR archives</li>
+</ul>
+
+<h3 id="usn-4170-1-whoopsie-vulnerability-06-52">[<a href="https://usn.ubuntu.com/4170-1/">USN-4170-1</a>] Whoopsie vulnerability [06:52]</h3>
+
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11484">CVE-2019-11484</a> <!--- medium ---></li>
+</ul></li>
+<li>Kevin Backhouse from Semmle Security Research Team - integer oveflow -&gt;
+heap based buffer overflow -&gt; code executions a whoopsie user</li>
+</ul>
+
+<h3 id="usn-4171-1-apport-vulnerabilities-07-51">[<a href="https://usn.ubuntu.com/4171-1/">USN-4171-1</a>] Apport vulnerabilities [07:51]</h3>
+
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic, Disco, Eoan
+
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790">CVE-2019-15790</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485">CVE-2019-11485</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483">CVE-2019-11483</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482">CVE-2019-11482</a> <!--- medium ---></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481">CVE-2019-11481</a> <!--- low ---></li>
+</ul></li>
+
+<li><p>Kevin Backhouse from Semmle Security Research Team</p>
+
+<ul>
+<li>reads /proc/PID files as root - so if can race on process ID reuse
+could cause Apport to generate a crash dump of a privileged process
+that is readable by a normal user (so starts dumping an unprivileged
+process, then PID race, new PID as privileged user -&gt; this crashes -&gt;
+Apport starts writing out the crash report for the first process but
+using the details of the new privileged process - since this was
+originally an unprivileged process, the crash dump is then unprivileged
+too). Fixed by making sure Apport drops privileges to the original
+unprivileged user before reading /proc/PID info so if this happens to
+then be a different user&rsquo;s process will not be able to generate the
+crash dump</li>
+<li>Apport would read a per-user configuration file - but would do so as
+root - and so this could be a symlink to a root owned file and Apport
+would happily read it (but might error out if it looked invalid) - so
+drop privileges to read it so it doesn&rsquo;t include anything which it
+shouldn&rsquo;t in the final crash report</li>
+</ul></li>
+
+<li><p>Sander Bos</p>
+
+<ul>
+<li>Apport had a lock file in a world-writable directory - so anyone could
+create it to either stop Apport running or to control the execution of
+Apport over time - fixed to place in a non-world writable location
+instead</li>
+<li>When using containers, Apport uses a socket file to allow it to forward
+crash dumps that it captured on the host to an Apport instance running
+within a container containers - it finds the socket file from the host
+using the /proc/PID/root magic link - but this could allow an
+unprivileged user who (using unprivileged usernamespaces) is root in a
+container to chroot() for a process in a container to a different
+location so it can then intercept the crash dump of a privileged
+process within the container - so could run a setuid process in the
+container, and when it crashes be able to read it&rsquo;s crash dump</li>
+<li>TOCCTOU race on PID (like above) but this is in a different code path -
+reads the cwd of the crashed process to write out the core dump to this
+location - but on process ID reuse this could then be in a different
+location - so if a user can race against a privileged process dumping
+the crash dump could end up in a location of their choosing</li>
+</ul></li>
+</ul>
+
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+
+<h3 id="joe-and-alex-discuss-what-scares-them-for-halloween-12-38">Joe and Alex discuss what scares them for Halloween [12:38]</h3>
+
+<h2 id="get-in-contact">Get in contact</h2>
+
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E051.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 50</title>
           <link>https://ubuntusecuritypodcast.org/episode-50/</link>

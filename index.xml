@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Oct 2019 15:28:00 +1030</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 17:06:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 51</title>
+      <link>https://ubuntusecuritypodcast.org/episode-51/</link>
+      <pubDate>Thu, 31 Oct 2019 17:06:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-51/</guid>
+      <description>Overview In this Halloween Special, Joe and Alex talk about what scares them in security, plus we look at security updates for Firefox, PHP, Samba, Whoopsie, Apport and more.
+This week in Ubuntu Security Updates 26 unique CVEs addressed
+[USN-4165-1] Firefox vulnerabilities [00:46]  13 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-17002  CVE-2019-17001  CVE-2019-17000  CVE-2019-15903  CVE-2019-11765  CVE-2019-11764  CVE-2019-11763  CVE-2019-11762  CVE-2019-11761  CVE-2019-11760  CVE-2019-11759  CVE-2019-11757  CVE-2018-6156   1 high priority, 11 medium and 1 low  Heap buffer overflow via a crafted WebRTC video - originally for Chromium and was fixed for that last year - Firefox suffered similarly but disables the feature by default - has finally been fixed for Firefox as well by integrating the original fix from Chromium Usual suspects of stack-based buffer overflows, UAFs, a heap buffer overflow in bundled expat (Episode 47),   [USN-4166-1, USN-4166-2] PHP vulnerability [02:10]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11043   RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM module to write past allocated buffers - and so ends up also writing into the FCGI protocol data buffers - which can then create a chance for RCE Exploit on github targetting vulnerable PHP-FPM servers which use nginx in a particular configuration  [USN-4167-1, USN-4167-2] Samba vulnerabilities [03:11]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14847  CVE-2019-14833  CVE-2019-10218   DoS from a user with &amp;ldquo;get changes&amp;rdquo; permissions - could crash an AD DC LDAP server due to a NULL pointer deref when using dirsync with ranged results Can configure AD DC to call out to a custom command to verify password complexity - is handed a copy of the cleartext password - but if this contained any multi-byte characters, would not get the full password - since it would pass the password as bytes but only copy the number of characters - and since multi-byte characters take more than 1 byte would miss the last few bytes of the password - so could circumvent password complexity requirements Malicious server could craft filenames which contain relative path characters (.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 50</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 51 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 51 unique CVEs addressed
       <description>Overview This week we look at updates for Sudo, Python, OpenStack Octavia and more, plus we discuss a recent CVE for Python which resulted in erroneous scientific research results, and we go over some of your feedback from Episode 48.
 This week in Ubuntu Security Updates 27 unique CVEs addressed
 [USN-4148-1] OpenEXR vulnerabilities [00:45]  8 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-18444  CVE-2017-9115  CVE-2017-9113  CVE-2017-9111  CVE-2017-9116  CVE-2017-9112  CVE-2017-9110  CVE-2017-12596   Image format developed by ILM with a high definition range for computer imaging applications Range of issues (c++ codebase)  OOB writes (usually only of a few bytes past the end of a buffer) - assertion failure or memory corruption -&amp;gt; crash / code execution OOB reads (same) - crash   [USN-4149-1] Unbound vulnerability [02:06]  1 CVEs addressed in Disco  CVE-2019-16866   Validating, recursive DNS resolver OOB read due to a remotely crafted NOTIFY query (source IP needs to match an ACL) -&amp;gt; crash  [USN-4151-1, USN-4151-2] Python vulnerabilities [02:40]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-16935  CVE-2019-16056   XML-RPC server module could end up serving arbitrary JS if set via the set_server_title() method as did not escape content Python email module tries to parse email address into sender + domain - if domain contains multiple @ chars could get confused and return wrong output - so applications which rely on this for validating email addresses could accept an email address which is actually invalid  [USN-4152-1] libsoup vulnerability [03:53]  1 CVEs addressed in Bionic, Disco  CVE-2019-17266   Heap buffer OOB read - fails to check the specified length of message against the actual received message - could then memcpy past the end of the input message -&amp;gt; crash  [USN-4153-1] Octavia vulnerability [04:33]  1 CVEs addressed in Disco  CVE-2019-17134   Amphora Images in OpenStack Octavia - fails to properly validate client certificates for management network clients -&amp;gt; could allow anyone with management network access to retrieve information / issue config commands  [USN-4154-1] Sudo vulnerability [05:06]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-14287   Lots of press around a seemingly high priority privilege escalation vulnerability - BUT requires an admin to have configured sudo with a particular configuration (ie specifying a user can run a command as any other user via the ALL keyword in a Runas rule).</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
