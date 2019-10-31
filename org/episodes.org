@@ -11,8 +11,8 @@
 * Episode 51
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-51
-:EXPORT_DATE: 2019-10-31 17:06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E051.mp3 :podcast_duration "MM:SS" :podcast_bytes "NUM_BYTES" :permalink "https://ubuntusecuritypodcast.org/episode-51/" :guid b4b70514b6fc0095396ed3af2215ac25ed8c1c5f3aeec38a2e93b800831fc26e997456bb3bee80dd083570aed5b4bc12cc1e96fbd11999a6621945f7b6130794
+:EXPORT_DATE: 2019-10-31 18:00
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E051.mp3 :podcast_duration "29:56" :podcast_bytes "39938765" :permalink "https://ubuntusecuritypodcast.org/episode-51/" :guid b4b70514b6fc0095396ed3af2215ac25ed8c1c5f3aeec38a2e93b800831fc26e997456bb3bee80dd083570aed5b4bc12cc1e96fbd11999a6621945f7b6130794
 :END:
 #+begin_description
 In this Halloween Special, Joe and Alex talk about what scares them in

@@ -5,15 +5,15 @@ description = """
   security, plus we look at security updates for Firefox, PHP, Samba,
   Whoopsie, Apport and more.
   """
-date = 2019-10-31T17:06:00+10:30
-lastmod = 2019-10-31T17:09:04+10:30
+date = 2019-10-31T18:00:00+10:30
+lastmod = 2019-10-31T18:01:03+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E051.mp3"
-podcast_duration = "MM:SS"
-podcast_bytes = "NUM_BYTES"
+podcast_duration = "29:56"
+podcast_bytes = 39938765
 permalink = "https://ubuntusecuritypodcast.org/episode-51/"
 guid = "b4b70514b6fc0095396ed3af2215ac25ed8c1c5f3aeec38a2e93b800831fc26e997456bb3bee80dd083570aed5b4bc12cc1e96fbd11999a6621945f7b6130794"
 +++
