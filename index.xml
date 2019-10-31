@@ -6,7 +6,7 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2019 17:06:00 +1030</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 18:00:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Episode 51</title>
       <link>https://ubuntusecuritypodcast.org/episode-51/</link>
-      <pubDate>Thu, 31 Oct 2019 17:06:00 +1030</pubDate>
+      <pubDate>Thu, 31 Oct 2019 18:00:00 +1030</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-51/</guid>
       <description>Overview In this Halloween Special, Joe and Alex talk about what scares them in security, plus we look at security updates for Firefox, PHP, Samba, Whoopsie, Apport and more.
