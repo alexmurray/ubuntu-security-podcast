@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2019 18:00:00 +1030</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 21:48:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 52</title>
+      <link>https://ubuntusecuritypodcast.org/episode-52/</link>
+      <pubDate>Fri, 08 Nov 2019 21:48:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-52/</guid>
+      <description>Overview This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus some regressions in Whoopsie, Apport and Firefox, and Joe and Alex discuss the release of 14.04 ESM for personal use under the Ubuntu Advantage program.
+This week in Ubuntu Security Updates 9 unique CVEs addressed
+[USN-4171-2] Apport vulnerabilities [00:44]  5 CVEs addressed in Trusty ESM  CVE-2019-15790  CVE-2019-11485  CVE-2019-11483  CVE-2019-11482  CVE-2019-11481   Episode 51  [USN-4172-1, USN-4172-2] file vulnerability [00:58]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-18218   OSS-Fuzz using libFuzzer - heap based buffer overflow of up to 4 bytes in the CDF parser when handing vector elements - Composite Document File - used in MS Office prior to new zipped XML format - ie.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 51</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <description>Overview Alex and Joe discuss the big news of this week - the release of Ubuntu 19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt, UW IMAP and more.
 This week in Ubuntu Security Updates 51 unique CVEs addressed
 [USN-4156-2] SDL vulnerabilities [00:37]  11 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-7637  CVE-2019-7636  CVE-2019-7635  CVE-2019-7578  CVE-2019-7577  CVE-2019-7576  CVE-2019-7575  CVE-2019-7574  CVE-2019-7573  CVE-2019-7572  CVE-2019-13616   Covered in Episode 49 and Episode 48  [USN-4160-1] UW IMAP vulnerability [01:04]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-19518   University of Washington IMAP toolkit (used by PHP for it&amp;rsquo;s IMAP implementation) Used rsh to implement various operations - wouldn&amp;rsquo;t try and sanitize the provided hostname - so if attacker could provide a hostname/mailbox to php&amp;rsquo;s IMAP without any validation could execute arbitrary commands on the host  Fixed by turning off the rsh based functionality by default in PHP - if you still want this you can set imap.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
