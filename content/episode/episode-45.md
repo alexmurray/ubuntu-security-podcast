@@ -2,7 +2,7 @@
 title = "Episode 45"
 description = "This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more."
 date = 2019-09-04T21:25:00+09:30
-lastmod = 2019-11-08T21:49:39+10:30
+lastmod = 2019-11-11T14:45:11+10:30
 draft = false
 weight = 1008
 episode_image = "img/usp_logo_500.png"

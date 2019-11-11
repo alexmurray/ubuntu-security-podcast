@@ -2,7 +2,7 @@
 title = "Episode 1"
 description = "Another week, another speculative execution vulnerablity... and more!"
 date = 2018-08-20
-lastmod = 2019-11-08T21:50:39+10:30
+lastmod = 2019-11-11T14:46:16+10:30
 draft = false
 weight = 1052
 episode_image = "img/usp_logo_500.png"

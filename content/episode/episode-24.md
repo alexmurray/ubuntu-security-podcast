@@ -6,7 +6,7 @@ description = """
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
   """
 date = 2019-03-19
-lastmod = 2019-11-08T21:50:08+10:30
+lastmod = 2019-11-11T14:45:43+10:30
 draft = false
 weight = 1029
 episode_image = "img/usp_logo_500.png"

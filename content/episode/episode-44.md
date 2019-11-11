@@ -2,7 +2,7 @@
 title = "Episode 44"
 description = "This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more."
 date = 2019-08-26T20:35:00+09:30
-lastmod = 2019-11-08T21:49:40+10:30
+lastmod = 2019-11-11T14:45:12+10:30
 draft = false
 weight = 1009
 episode_image = "img/usp_logo_500.png"

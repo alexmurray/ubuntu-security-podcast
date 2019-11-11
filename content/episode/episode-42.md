@@ -6,7 +6,7 @@ description = """
   system, as well as the usual roundup of security fixes from the past week.
   """
 date = 2019-08-14T21:13:00+09:30
-lastmod = 2019-11-08T21:49:43+10:30
+lastmod = 2019-11-11T14:45:14+10:30
 draft = false
 weight = 1011
 episode_image = "img/usp_logo_500.png"

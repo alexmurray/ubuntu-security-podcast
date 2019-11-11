@@ -2,7 +2,7 @@
 title = "Episode 2"
 description = "L1TF kernel regressions, WPA2 key recovery, mirror fail and more!"
 date = 2018-08-28
-lastmod = 2019-11-08T21:50:37+10:30
+lastmod = 2019-11-11T14:46:15+10:30
 draft = false
 weight = 1051
 episode_image = "img/usp_logo_500.png"
