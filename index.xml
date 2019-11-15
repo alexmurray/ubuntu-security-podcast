@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Nov 2019 21:48:00 +1030</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 18:21:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 53</title>
+      <link>https://ubuntusecuritypodcast.org/episode-53/</link>
+      <pubDate>Fri, 15 Nov 2019 18:21:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-53/</guid>
+      <description>Overview This week we look at the details of the latest Intel hardware vulnerabilities, including security updates for the Linux kernel and Intel microcode, plus Bash, cpio, FriBidi and more.
+This week in Ubuntu Security Updates 26 unique CVEs addressed
+[USN-4176-1] GNU cpio vulnerability [01:00]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14866   cpio wouldn&amp;rsquo;t validate values written to headers of TAR archives - could use cpio to create a TAR containing another TAR with a big size and will use wrong context values (ie uses inner TAR values in header) - this could allow a TAR to be created which has files with permissions not owned by the original user - when extracted by cpio will overwrite target files - whereas if using tar to extract will avoid this - fixed to check and handle header values correctly  [USN-4177-1] Rygel vulnerability [02:18]  Affecting Eoan Added Rygel in Eoan which is off by default but needed GNOME to handle that - it would disable it dynamically - so if not running GNOME, rygel would be running and sharing your stuff on the local network - fixed to disable automatically on upgrade - and then can use the GNOME settings front-end etc to re-enable if desired  [USN-4178-1] WebKitGTK+ vulnerabilities [03:34]  4 CVEs addressed in Bionic, Disco  CVE-2019-8771  CVE-2019-8769  CVE-2019-8720  CVE-2019-8625    [USN-4181-1] WebKitGTK+ vulnerabilities [03:34]  2 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-8814  CVE-2019-8812    [USN-4179-1] FriBidi vulnerability [04:00]  1 CVEs addressed in Disco, Eoan  CVE-2019-18397   Issue reported about unicode isolated handling in Qt - turns out affected GTK applications as well - entirely different code with very similar flaw - stack buffer overflow since didn&amp;rsquo;t check bounds of a fixed array used to store details on nested unicode isolate sections - simple fix to just check bounds before trying to store next element  [USN-4180-1] Bash vulnerability [05:38]  1 CVEs addressed in Precise ESM  CVE-2012-6711   Recently announced vuln (heap-based buffer overflow) in bash affecting old versions - so most releases unaffected except Precise - can trigger by printing wide characters via echo -e  [USN-4182-1, USN-4182-2] Intel Microcode update [06:12]  2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11139  CVE-2019-11135   Voltage modulation able to be performed by a local privileged user - disabled via microcode TSX Asynchronous Abort (TAA) - https://wiki.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 52</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 9 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 9 unique CVEs addressed
       <description>Overview In this Halloween Special, Joe and Alex talk about what scares them in security, plus we look at security updates for Firefox, PHP, Samba, Whoopsie, Apport and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
 [USN-4165-1] Firefox vulnerabilities [00:46]  13 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-17002  CVE-2019-17001  CVE-2019-17000  CVE-2019-15903  CVE-2019-11765  CVE-2019-11764  CVE-2019-11763  CVE-2019-11762  CVE-2019-11761  CVE-2019-11760  CVE-2019-11759  CVE-2019-11757  CVE-2018-6156   1 high priority, 11 medium and 1 low  Heap buffer overflow via a crafted WebRTC video - originally for Chromium and was fixed for that last year - Firefox suffered similarly but disables the feature by default - has finally been fixed for Firefox as well by integrating the original fix from Chromium Usual suspects of stack-based buffer overflows, UAFs, a heap buffer overflow in bundled expat (Episode 47),   [USN-4166-1, USN-4166-2] PHP vulnerability [02:10]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11043   RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM module to write past allocated buffers - and so ends up also writing into the FCGI protocol data buffers - which can then create a chance for RCE Exploit on github targetting vulnerable PHP-FPM servers which use nginx in a particular configuration  [USN-4167-1, USN-4167-2] Samba vulnerabilities [03:11]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14847  CVE-2019-14833  CVE-2019-10218   DoS from a user with &amp;ldquo;get changes&amp;rdquo; permissions - could crash an AD DC LDAP server due to a NULL pointer deref when using dirsync with ranged results Can configure AD DC to call out to a custom command to verify password complexity - is handed a copy of the cleartext password - but if this contained any multi-byte characters, would not get the full password - since it would pass the password as bytes but only copy the number of characters - and since multi-byte characters take more than 1 byte would miss the last few bytes of the password - so could circumvent password complexity requirements Malicious server could craft filenames which contain relative path characters (.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
