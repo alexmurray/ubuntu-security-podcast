@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 18:21:00 +1030</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 10:16:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 54</title>
+      <link>https://ubuntusecuritypodcast.org/episode-54/</link>
+      <pubDate>Sun, 24 Nov 2019 10:16:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-54/</guid>
+      <description>Overview Security updates for DPDK, Linux kernel, QEMU, ImageMagick, Ghostscript and more, plus Joe and Alex talk about how to get into information security.
+This week in Ubuntu Security Updates 89 unique CVEs addressed
+[USN-4189-1] DPDK vulnerability [01:00]  1 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-14818   Data Plane Development Kit - Memory and file-descriptor leak, able to be triggered by a malicious master or a container with access to the vhost_user socket  [USN-4190-1] libjpeg-turbo vulnerabilities [01:41]  4 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-2201  CVE-2018-20330  CVE-2018-19664  CVE-2018-14498   2 x heap-buffer overflow - crash or possible RCE 2 x heap-buffer overread - crash  [USN-4183-2] Linux kernel vulnerability [02:48]  9 CVEs addressed in Eoan  CVE-2019-17666  CVE-2019-16746  CVE-2019-15793  CVE-2019-15792  CVE-2019-15791  CVE-2019-0154  CVE-2018-12207  CVE-2019-11135  CVE-2019-0155   Episode 53 - Extra update for CVE-2019-0155 (i915 blitter command streamer) - previous one was based on an in-flight patch that got changed at the last minute before the CRD - part of this fix is to whitelist certain commands to the command-streamer, and this is done via a bitmask - this used a memset() to zero it out but assumed the size of the underlying data was 32-bit - so on 64-bit platforms this becomes a 64-bit size and so half the bitmask is not zeroed out - meaning the whitelist may be able to be bypassed - this fix includes the final upstream fix  [USN-4184-2] Linux kernel vulnerability and regression [04:37]  14 CVEs addressed in Bionic (HWE), Disco  CVE-2019-17666  CVE-2019-17056  CVE-2019-17055  CVE-2019-17054  CVE-2019-17053  CVE-2019-17052  CVE-2019-15793  CVE-2019-15792  CVE-2019-15791  CVE-2019-15098  CVE-2019-0154  CVE-2018-12207  CVE-2019-11135  CVE-2019-0155   See above (i915 vuln) - but also includes a fix for a regression that was introduced in last week&amp;rsquo;s kernel - KVM guests would fail to launch if extended page tables were disabled or not supported.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 53</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <description>Overview This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus some regressions in Whoopsie, Apport and Firefox, and Joe and Alex discuss the release of 14.04 ESM for personal use under the Ubuntu Advantage program.
 This week in Ubuntu Security Updates 9 unique CVEs addressed
 [USN-4171-2] Apport vulnerabilities [00:44]  5 CVEs addressed in Trusty ESM  CVE-2019-15790  CVE-2019-11485  CVE-2019-11483  CVE-2019-11482  CVE-2019-11481   Episode 51  [USN-4172-1, USN-4172-2] file vulnerability [00:58]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-18218   OSS-Fuzz using libFuzzer - heap based buffer overflow of up to 4 bytes in the CDF parser when handing vector elements - Composite Document File - used in MS Office prior to new zipped XML format - ie.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
