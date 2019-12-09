@@ -7,9 +7,9 @@ description = """
   program.
   """
 date = 2019-11-08T21:48:00+10:30
-lastmod = 2019-11-24T10:17:03+10:30
+lastmod = 2019-12-09T13:06:09+10:30
 draft = false
-weight = 1003
+weight = 1004
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E052.mp3"

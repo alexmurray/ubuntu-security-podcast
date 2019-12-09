@@ -7,9 +7,9 @@ description = """
   Episode 48.
   """
 date = 2019-10-18T14:18:00+10:30
-lastmod = 2019-11-24T10:17:06+10:30
+lastmod = 2019-12-09T13:06:14+10:30
 draft = false
-weight = 1006
+weight = 1007
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E049.mp3"

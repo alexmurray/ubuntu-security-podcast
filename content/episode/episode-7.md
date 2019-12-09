@@ -2,9 +2,9 @@
 title = "Episode 7"
 description = "This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more."
 date = 2018-10-16
-lastmod = 2019-11-24T10:17:59+10:30
+lastmod = 2019-12-09T13:07:35+10:30
 draft = false
-weight = 1048
+weight = 1049
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E007.mp3"

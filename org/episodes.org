@@ -8,6 +8,179 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 55
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-55
+:EXPORT_DATE: 2019-12-09 13:05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E055.mp3 :podcast_duration "25:29" :podcast_bytes "32757219" :permalink "https://ubuntusecuritypodcast.org/episode-55/" :guid c0e25d7ca543be2f8864b68c4880a8bce21bdc7fafe372f1a4f9b438b97114da4a395d106471dd4ac1ad2550aa4d13a8d9bade442b08f1ffb531220b45501952
+:END:
+#+begin_description
+This week we cover security updates for NSS, SQLite, the Linux kernel and
+more, plus Joe and Alex discuss a recent FBI advisory warning about
+possible dangers of Smart TVs.
+#+end_description
+** Overview
+This week we cover security updates for NSS, SQLite, the Linux kernel and
+more, plus Joe and Alex discuss a recent FBI advisory warning about
+possible dangers of Smart TVs.
+** This week in Ubuntu Security Updates
+49 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4203-1/][USN-4203-1]], [[https://usn.ubuntu.com/4203-2/][USN-4203-2]]] NSS vulnerability [00:59]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745][CVE-2019-11745]] <!-- medium -->
+- OOB write if using an output buffer smaller than the block size (since
+  used block size instead of buffer size) when writing output for
+  NSC_EncryptUpdate()
+*** [[[https://usn.ubuntu.com/4204-1/][USN-4204-1]]] psutil vulnerability [02:05]
+- 1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18874][CVE-2019-18874]] <!-- medium -->
+- Double free due to mishandling of reference counting when handling errors
+  during conversion of system data into Python objects - could be triggered
+  when using a malicious disk partition label with an invalid character
+  that fails to decode - so triggers error than fails to cleanup properly
+  and results in a double free
+
+*** [[[https://usn.ubuntu.com/4205-1/][USN-4205-1]]] SQLite vulnerabilities [02:59]
+- 6 CVEs addressed in Precise ESM, Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5827][CVE-2019-5827]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5018][CVE-2019-5018]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19244][CVE-2019-19244]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19242][CVE-2019-19242]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16168][CVE-2019-16168]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740][CVE-2018-8740]] <!-- low -->
+- Various robustness updates for SQLite related to CVEs from other
+  applications that misuse SQLite - so this makes SQLite more tolerant if
+  it is misused in the future - plus a fix of a possible crash (DoS) under
+  certain usage scenarios.
+
+*** [[[https://usn.ubuntu.com/4208-1/][USN-4208-1]]] Linux kernel vulnerabilities [03:42]
+- 12 CVEs addressed in Bionic (gcp-edge), Eoan (5.3 kernel)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075][CVE-2019-17075]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083][CVE-2019-19083]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075][CVE-2019-19075]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19069][CVE-2019-19069]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067][CVE-2019-19067]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065][CVE-2019-19065]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19061][CVE-2019-19061]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060][CVE-2019-19060]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048][CVE-2019-19048]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18810][CVE-2019-18810]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133][CVE-2019-17133]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794][CVE-2019-15794]] <!-- medium -->
+- Buffer overflow in wifi driver stack - able to be triggered by a remote
+  user in wifi range
+- Ubuntu specific OverlayFS and ShiftFS memory mapped reference counting
+  issue - can be triggered when combined with that when combined with AUFS
+  by a local attacker.
+- Memory leak based denial of service issues in various drivers (usually
+  during error conditions so unlikely to ever be hit in real use or able to
+  be easily triggered by malicious local users):
+  - AMD Display Engine
+  - Qualcomm FastRPC
+  - Cascoda CA8210 SPI 802.15.4 wireless controller
+  - AMD Audio CoProcessor
+  - Intel OPA Gen1 Infiniband
+  - ADIS16400 IIO IMU
+  - VirtualBox guest
+  - ARM Komeda display
+
+*** [[[https://usn.ubuntu.com/4209-1/][USN-4209-1]]] Linux kernel vulnerabilities [06:07]
+- 3 CVEs addressed in Bionic (HWE), Disco (5.0 kernel)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19076][CVE-2019-19076]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746][CVE-2019-16746]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794][CVE-2019-15794]] <!-- medium -->
+- Memory leak in Netronome NFP4000/NFP6k000 driver
+- Buffer overflow via 802.11 wifi config interface - local user onlu
+- OverlayFS/ShiftFS issue above
+
+*** [[[https://usn.ubuntu.com/4210-1/][USN-4210-1]]] Linux kernel vulnerabilities [06:47]
+- 6 CVEs addressed in Xenial (HWE), Bionic (4.15)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075][CVE-2019-17075]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075][CVE-2019-19075]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065][CVE-2019-19065]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060][CVE-2019-19060]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133][CVE-2019-17133]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746][CVE-2019-16746]] <!-- medium -->
+- See above:
+  - Wifi stack buffer overflow from remote user
+  - Wifi config buffer overflow from local user
+  - Memory leaks above:
+    - Cascoda CA8210 SPI 802.15.4 wireless controller
+    - Intel OPA Gen1 Infiniband
+    - ADIS16400 IIO IMU
+
+*** [[[https://usn.ubuntu.com/4211-1/][USN-4211-1]], [[https://usn.ubuntu.com/4211-2/][USN-4211-2]]] Linux kernel vulnerabilities [07:22]
+- 3 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075][CVE-2019-17075]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133][CVE-2019-17133]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784][CVE-2018-20784]] <!-- medium -->
+- Wifi stack remote user buffer overflow
+- Infinite loop in the CFS scheduler able to be triggered by a local user
+  -> DoS
+
+*** [[[https://usn.ubuntu.com/4206-1/][USN-4206-1]]] GraphicsMagick vulnerabilities [07:55]
+- 10 CVEs addressed in Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6335][CVE-2017-6335]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14042][CVE-2017-14042]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13147][CVE-2017-13147]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11637][CVE-2017-11637]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11636][CVE-2017-11636]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11403][CVE-2017-11403]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11140][CVE-2017-11140]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11102][CVE-2017-11102]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10799][CVE-2017-10799]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10794][CVE-2017-10794]] <!-- medium -->
+- Usual sorts of memory mismanagement issues seen in large C codebases
+  (most resulting in crash -> DoS)
+  - OOB read
+  - Various memory allocation failure issues - trigger crash -> DoS
+  - NULL pointer dereference
+  - Heap buffer overflow for RGB images with multiple frames with
+    non-identical widths
+  - UAF via a crafted MNG image
+  - Resource consumption via crafted JPEG which specifies invalid scanlines
+  - Memory leaks -> memory exhaustion -> crash -> DoS
+
+*** [[[https://usn.ubuntu.com/4207-1/][USN-4207-1]]] GraphicsMagick vulnerabilities [09:18]
+- 13 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11506][CVE-2019-11506]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11505][CVE-2019-11505]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11474][CVE-2019-11474]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11473][CVE-2019-11473]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11010][CVE-2019-11010]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11009][CVE-2019-11009]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11008][CVE-2019-11008]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11007][CVE-2019-11007]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11006][CVE-2019-11006]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11005][CVE-2019-11005]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20189][CVE-2018-20189]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20185][CVE-2018-20185]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20184][CVE-2018-20184]] <!-- medium -->
+
+*** [[[https://usn.ubuntu.com/4194-2/][USN-4194-2]]] postgresql-common vulnerability [09:29]
+- 1 CVEs addressed in Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3466][CVE-2019-3466]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-54/][Episode 54]] - Debian specific package - privesc
+
+*** [[[https://usn.ubuntu.com/4182-3/][USN-4182-3]], [[https://usn.ubuntu.com/4182-4/][USN-4182-4]]] Intel Microcode regression [09:44]
+- 2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11139][CVE-2019-11139]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135][CVE-2019-11135]] <!-- high -->
+- Previous microcode update resulted in some Skylake processors hanging on
+  a warm reboot - not Ubuntu specific and is tracked upstream by Intel
+  https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/issues/21 -
+  so this update reverts the microcode only for those specific processor
+  models
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss a recent FBI Advisory concerning SmartTVs [10:50]
+- https://threatpost.com/smart-tvs-cyberthreat-living-room-feds/150713/
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 54
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-54
