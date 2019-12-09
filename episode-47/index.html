@@ -13,7 +13,7 @@
   Magazine.
   ">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 47" />
@@ -179,9 +179,9 @@
           </div>
           <div class="col-md-8">
             We catch up on details of the past few weeks of security updates, including
-  Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the
-  recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin
-  Magazine.
+Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the
+recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin
+Magazine.
           </div>
         </div>
     <div class="row">
@@ -196,111 +196,96 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>We catch up on details of the past few weeks of security updates, including
 Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the
 recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin
 Magazine.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>93 unique CVEs addressed</p>
-
 <h3 id="usn-4125-1-memcached-vulnerability-00-42">[<a href="https://usn.ubuntu.com/4125-1/">USN-4125-1</a>] Memcached vulnerability [00:42]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15026">CVE-2019-15026</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15026">CVE-2019-15026</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Possible stack buffer over-read when using UNIX sockets (copies address
 of UNIX socket using strncpy() which could possibly read past the end of
 the src buffer) - possible crash -&gt; DoS - fixed to explicitly limit
 length to smallest of src/dst buffers rather than just size of dest
 buffer</li>
 </ul>
-
 <h3 id="usn-4126-1-freetype-vulnerability-01-49">[<a href="https://usn.ubuntu.com/4126-1/">USN-4126-1</a>] FreeType vulnerability [01:49]</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9383">CVE-2015-9383</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9383">CVE-2015-9383</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>2 CVEs addressed in Precise ESM, Trusty ESM only
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9382">CVE-2015-9382</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9381">CVE-2015-9381</a> <!-- low --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9382">CVE-2015-9382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9381">CVE-2015-9381</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>All various heap based buffer over-reads - crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-4127-1-usn-4127-2-python-vulnerabilities-02-13">[<a href="https://usn.ubuntu.com/4127-1/">USN-4127-1</a>, <a href="https://usn.ubuntu.com/4127-2/">USN-4127-2</a>] Python vulnerabilities [02:13]</h3>
-
 <ul>
 <li>8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9948">CVE-2019-9948</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9947">CVE-2019-9947</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9740">CVE-2019-9740</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5010">CVE-2019-5010</a> <!-- low --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10160">CVE-2019-10160</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9636">CVE-2019-9636</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20852">CVE-2018-20852</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20406">CVE-2018-20406</a> <!-- low --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9948">CVE-2019-9948</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9947">CVE-2019-9947</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9740">CVE-2019-9740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5010">CVE-2019-5010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10160">CVE-2019-10160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9636">CVE-2019-9636</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20852">CVE-2018-20852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20406">CVE-2018-20406</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>4 issues in urllib:
-
 <ul>
 <li>would allow to easily open files from local file-system</li>
 <li>2 different CRLF injection issues</li>
 <li>specially crafted URL could cause urllib to send cookies / auth data
 for wrong host
-
 <ul>
 <li>Fixed incorrectly upstream so had a two CVEs assigned</li>
-</ul></li>
-</ul></li>
-<li>http cookiejar wouldn&rsquo;t validate URL correctly so could also send cookies
+</ul>
+</li>
+</ul>
+</li>
+<li>http cookiejar wouldn't validate URL correctly so could also send cookies
 for another domain</li>
 <li>Possible NULL ptr deref when parsing X509 certs if had an empty CRL
 distpoint / URI</li>
 <li>Possible integer overflow when serializing a tens of hundreds of
 gigabytes of data via the pickle format - could cause memory exhaustion</li>
 </ul>
-
 <h3 id="usn-4128-1-usn-4128-2-tomcat-vulnerabilities-03-35">[<a href="https://usn.ubuntu.com/4128-1/">USN-4128-1</a>, <a href="https://usn.ubuntu.com/4128-2/">USN-4128-2</a>] Tomcat vulnerabilities [03:35]</h3>
-
 <ul>
 <li>3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10072">CVE-2019-10072</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0199">CVE-2019-0199</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0221">CVE-2019-0221</a> <!-- low --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10072">CVE-2019-10072</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0199">CVE-2019-0199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0221">CVE-2019-0221</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>HTTP/2 server would accept streams with an excessive number of SETTINGS
 frames and would permit clients to keep streams open without reading /
 writing anything - could lead to DoS by causing server-side threads to
 block
-
 <ul>
 <li>Original fix was incomplete - so got a second CVE</li>
-</ul></li>
+</ul>
+</li>
 <li>Possible XSS injection if using SSI printenv command as would echo user
-provided data without escaping - intended only for debugging so shouldn&rsquo;t
+provided data without escaping - intended only for debugging so shouldn't
 be used in a production website anyway</li>
 </ul>
-
 <h3 id="usn-4120-2-systemd-regression-04-45">[<a href="https://usn.ubuntu.com/4120-2/">USN-4120-2</a>] systemd regression [04:45]</h3>
-
 <ul>
 <li>Affecting Bionic, Disco</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-46/">Episode 46</a> - systemd-resolved dbus access control - the update was
@@ -308,284 +293,241 @@ prepared using a pending SRU update - but this contained a regression in
 networking - re-released the security fix but without this SRU update
 included.</li>
 </ul>
-
 <h3 id="usn-4115-2-linux-kernel-regression-05-18">[<a href="https://usn.ubuntu.com/4115-2/">USN-4115-2</a>] Linux kernel regression [05:18]</h3>
-
 <ul>
 <li>Affecting Xenial (HWE), Bionic</li>
 <li>Recent kernel update (<a href="https://ubuntusecuritypodcast.org/episode-46/">Episode 46</a>) could possibly crash on handling
 fragmented packets</li>
 </ul>
-
 <h3 id="usn-4129-1-usn-4129-2-curl-vulnerabilities-05-42">[<a href="https://usn.ubuntu.com/4129-1/">USN-4129-1</a>, <a href="https://usn.ubuntu.com/4129-2/">USN-4129-2</a>] curl vulnerabilities [05:42]</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5482">CVE-2019-5482</a> <!-- medium -->
-
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5482">CVE-2019-5482</a> <!-- raw HTML omitted -->
 <ul>
 <li>Heap buffer overflow in TFTP protocol handler</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>1 extra CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5481">CVE-2019-5481</a> <!-- medium -->
-
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5481">CVE-2019-5481</a> <!-- raw HTML omitted -->
 <ul>
 <li>Double free in FTP-kerberos code</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="usn-4130-1-webkitgtk-plus-vulnerabilities-06-15">[<a href="https://usn.ubuntu.com/4130-1/">USN-4130-1</a>] WebKitGTK+ vulnerabilities [06:15]</h3>
-
 <ul>
 <li>16 CVEs addressed in Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8690">CVE-2019-8690</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8689">CVE-2019-8689</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8688">CVE-2019-8688</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8687">CVE-2019-8687</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8684">CVE-2019-8684</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8683">CVE-2019-8683</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8681">CVE-2019-8681</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8680">CVE-2019-8680</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8678">CVE-2019-8678</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8676">CVE-2019-8676</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8673">CVE-2019-8673</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8669">CVE-2019-8669</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8666">CVE-2019-8666</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8658">CVE-2019-8658</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8649">CVE-2019-8649</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8644">CVE-2019-8644</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8690">CVE-2019-8690</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8689">CVE-2019-8689</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8688">CVE-2019-8688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8687">CVE-2019-8687</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8684">CVE-2019-8684</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8683">CVE-2019-8683</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8681">CVE-2019-8681</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8680">CVE-2019-8680</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8678">CVE-2019-8678</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8676">CVE-2019-8676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8673">CVE-2019-8673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8669">CVE-2019-8669</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8666">CVE-2019-8666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8658">CVE-2019-8658</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8649">CVE-2019-8649</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8644">CVE-2019-8644</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Update to latest WebKitGTK upstream release (2.24.4)</li>
 </ul>
-
 <h3 id="usn-4131-1-vlc-vulnerabilities-06-38">[<a href="https://usn.ubuntu.com/4131-1/">USN-4131-1</a>] VLC vulnerabilities [06:38]</h3>
-
 <ul>
 <li>11 CVEs addressed in Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14970">CVE-2019-14970</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14778">CVE-2019-14778</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14777">CVE-2019-14777</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14776">CVE-2019-14776</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14535">CVE-2019-14535</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14534">CVE-2019-14534</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14533">CVE-2019-14533</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14498">CVE-2019-14498</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14438">CVE-2019-14438</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14437">CVE-2019-14437</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13962">CVE-2019-13962</a> <!-- low --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14970">CVE-2019-14970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14778">CVE-2019-14778</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14777">CVE-2019-14777</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14776">CVE-2019-14776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14535">CVE-2019-14535</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14534">CVE-2019-14534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14533">CVE-2019-14533</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14498">CVE-2019-14498</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14438">CVE-2019-14438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14437">CVE-2019-14437</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13962">CVE-2019-13962</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Update to latest VLC upstream release (3.0.8)</li>
 </ul>
-
 <h3 id="usn-4133-1-wireshark-vulnerabilities-06-48">[<a href="https://usn.ubuntu.com/4133-1/">USN-4133-1</a>] Wireshark vulnerabilities [06:48]</h3>
-
 <ul>
 <li>2 CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13619">CVE-2019-13619</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12295">CVE-2019-12295</a> <!-- low --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13619">CVE-2019-13619</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12295">CVE-2019-12295</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Update to latest upstream release (2.6.10-1)</li>
 </ul>
-
 <h3 id="usn-4132-1-usn-4132-2-expat-vulnerability-06-55">[<a href="https://usn.ubuntu.com/4132-1/">USN-4132-1</a>, <a href="https://usn.ubuntu.com/4132-2/">USN-4132-2</a>] Expat vulnerability [06:55]</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903">CVE-2019-15903</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903">CVE-2019-15903</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Crafted XML could fool the parser to switch to document parsing too early
 (whilst still in DTD) - could then result in a heap-based buffer
 over-read when looking up current line / column number - possible crash
 -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-4134-1-ibus-vulnerability-07-30">[<a href="https://usn.ubuntu.com/4134-1/">USN-4134-1</a>] IBus vulnerability [07:30]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822">CVE-2019-14822</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822">CVE-2019-14822</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Failed to apply access controls to D-Bus server socket - could allow
-another local user to connect to logged in local user&rsquo;s IBus daemon and
+another local user to connect to logged in local user's IBus daemon and
 snoop on keystrokes etc
-
 <ul>
 <li>Attacker needs to know IBus socket address which is randomised and not
 easily discoverable</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-4134-2-ibus-regression-08-00">[<a href="https://usn.ubuntu.com/4134-2/">USN-4134-2</a>] IBus regression [08:00]</h3>
-
 <ul>
 <li>Affecting Xenial, Bionic, Disco</li>
 <li>Regressed for Qt users - Qt seems unable to connect to IBus socket - so
 reverted</li>
 </ul>
-
 <h3 id="usn-4124-2-exim-vulnerability-08-25">[<a href="https://usn.ubuntu.com/4124-2/">USN-4124-2</a>] Exim vulnerability [08:25]</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty ESM
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15846">CVE-2019-15846</a> <!-- high --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15846">CVE-2019-15846</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-46/">Episode 46</a> - high profile possible remote root exploit</li>
 </ul>
-
 <h3 id="usn-4113-2-apache-http-server-regression-08-38">[<a href="https://usn.ubuntu.com/4113-2/">USN-4113-2</a>] Apache HTTP Server regression [08:38]</h3>
-
 <ul>
 <li>Affecting Xenial, Bionic, Disco</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-45/">Episode 45</a> - HTTP/2 DoS issues - update caused a regression when proxying
 balance manager connections - fixed by incorporating missing upstream
 patches</li>
 </ul>
-
 <h3 id="usn-4135-1-usn-4135-2-linux-kernel-vulnerabilities-09-01">[<a href="https://usn.ubuntu.com/4135-1/">USN-4135-1</a>, <a href="https://usn.ubuntu.com/4135-2/">USN-4135-2</a>] Linux kernel vulnerabilities [09:01]</h3>
-
 <ul>
 <li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15031">CVE-2019-15031</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15030">CVE-2019-15030</a> <!-- medium --></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14835">CVE-2019-14835</a> <!-- high --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15031">CVE-2019-15031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15030">CVE-2019-15030</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14835">CVE-2019-14835</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Possible host privilege escalation from a libvirt guest (guest user needs
 to be privileged)</li>
 <li>2 related info disclosures on PowerPC - local user could possibly read
 vector registers of other users&rsquo; processes either during an interrupt or
 via a facility unavailable exception</li>
 </ul>
-
 <h3 id="lsn-0056-1-linux-kernel-vulnerability-09-51">[LSN-0056-1] Linux kernel vulnerability [09:51]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14835">CVE-2019-14835</a> <!-- high --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14835">CVE-2019-14835</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Livepatch notification of above libvirt host privesc</li>
 </ul>
-
 <h3 id="usn-4136-1-usn-4136-2-wpa-supplicant-and-hostapd-vulnerability-10-06">[<a href="https://usn.ubuntu.com/4136-1/">USN-4136-1</a>, <a href="https://usn.ubuntu.com/4136-2/">USN-4136-2</a>] wpa_supplicant and hostapd vulnerability [10:06]</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16275">CVE-2019-16275</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16275">CVE-2019-16275</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Attacker in radio range could cause a station to disconnect by sending a
 specially crafted management frame (since would not properly validate the
 source address of the frame)</li>
 </ul>
-
 <h3 id="usn-4137-1-mosquitto-vulnerability-10-44">[<a href="https://usn.ubuntu.com/4137-1/">USN-4137-1</a>] Mosquitto vulnerability [10:44]</h3>
-
 <ul>
 <li>1 CVEs addressed in Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11779">CVE-2019-11779</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11779">CVE-2019-11779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Stack overflow if a malicious client sends a SUBSCRIBE with a topic of
 ~65k &lsquo;/&rsquo; characters</li>
 </ul>
-
 <h3 id="usn-4138-1-libreoffice-vulnerability-10-56">[<a href="https://usn.ubuntu.com/4138-1/">USN-4138-1</a>] LibreOffice vulnerability [10:56]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9854">CVE-2019-9854</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9854">CVE-2019-9854</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-44/">Episode 44</a> - able to bypass protections added to try and stop inclusion
 of code on local file-system in macros etc via URL encoding</li>
 </ul>
-
 <h3 id="usn-4139-1-file-roller-vulnerability-11-18">[<a href="https://usn.ubuntu.com/4139-1/">USN-4139-1</a>] File Roller vulnerability [11:18]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16680">CVE-2019-16680</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16680">CVE-2019-16680</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Path traversal outside of CWD to parent</li>
 </ul>
-
 <h3 id="usn-4140-1-firefox-vulnerability-11-33">[<a href="https://usn.ubuntu.com/4140-1/">USN-4140-1</a>] Firefox vulnerability [11:33]</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11754">CVE-2019-11754</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11754">CVE-2019-11754</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Latest upstream release (69.0.1) - pointer lock able to be enabled
 without any notification to user - could allow a malicious website to
 hijack mouse cursor and confuse user</li>
 </ul>
-
 <h3 id="usn-4141-1-exim-vulnerability-11-54">[<a href="https://usn.ubuntu.com/4141-1/">USN-4141-1</a>] Exim vulnerability [11:54]</h3>
-
 <ul>
 <li>1 CVEs addressed in Disco
-
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16928">CVE-2019-16928</a> <!-- medium --></li>
-</ul></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16928">CVE-2019-16928</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
 <li>Heap-based buffer overflow - could possibly allow remote code execution -
 was announced on Saturday 28th - thanks Marc for the quick update :)</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
-<h3 id="joe-and-alex-talk-about-the-paris-engineering-sprint-and-joe-s-recent-article-in-admin-magazine-12-42">Joe and Alex talk about the Paris Engineering Sprint and Joe&rsquo;s recent article in Admin Magazine [12:42]</h3>
-
+<h3 id="joe-and-alex-talk-about-the-paris-engineering-sprint-and-joe-s-recent-article-in-admin-magazine-12-42">Joe and Alex talk about the Paris Engineering Sprint and Joe's recent article in Admin Magazine [12:42]</h3>
 <ul>
 <li><a href="http://www.admin-magazine.com/Articles/Build-a-honeypot-with-real-world-alerts?utm%5Fsource=AMTW">http://www.admin-magazine.com/Articles/Build-a-honeypot-with-real-world-alerts?utm%5Fsource=AMTW</a></li>
 <li><a href="https://github.com/joemcmanus/honeybot">https://github.com/joemcmanus/honeybot</a></li>
 </ul>
-
 <h3 id="new-security-category-on-discourse-dot-ubuntu-dot-com-25-52">New security category on discourse.ubuntu.com [25:52]</h3>
-
 <ul>
 <li><a href="https://discourse.ubuntu.com/c/security">https://discourse.ubuntu.com/c/security</a></li>
 <li>Created to allow discussion of security relevant Ubuntu topics and issues
 in a more user-friendly and centralised location
-
 <ul>
 <li>Will be used in addition to the existing <a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a>
 and <a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened IRC channel</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>

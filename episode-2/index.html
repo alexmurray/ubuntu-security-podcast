@@ -9,7 +9,7 @@
 
   <meta name="description" content="L1TF kernel regressions, WPA2 key recovery, mirror fail and more!">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 2" />
@@ -177,139 +177,115 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>83 unique CVEs addressed across the supported Ubuntu releases.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <h3 id="usn-3742-3-linux-kernel--trusty-hwe--regressions">[<a href="https://usn.ubuntu.com/3742-3/">USN-3742-3</a>] Linux kernel (Trusty HWE) regressions</h3>
-
 <ul>
 <li>Security team issues USNs for package updates caused by regressions in previous security updates</li>
 <li>Fix for regressions caused by the original kernel update for L1TF</li>
 <li>Could cause Java applications to fail to start and possible kernel panics on
 boot for some hardware configurations</li>
 </ul>
-
 <h3 id="usn-3745-1-wpa-supplicant-and-hostapd-vulnerability">[<a href="https://usn.ubuntu.com/3745-1/">USN-3745-1</a>] wpa_supplicant and hostapd vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14526">CVE-2018-14526</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Researchers analysed WPA2 4-way handshake via symbolic execution to find weaknesses
-
 <ul>
 <li>Found a number of issues including a decryption oracle</li>
 <li>In this case, the would decrypt but not authenticate frame and then could allow recovery of the group key via a timing side-channel</li>
 <li>In theory, allows an unauthenticated attacker to recover WPA2 group key via frame manipulation when used with TKIP
-
 <ul>
 <li>NOTE: is not advised to use TKIP in practice anyway (should use WPA2/CCMP) and so should have limited applicability</li>
-</ul></li>
+</ul>
+</li>
 <li>In practice, due to large number of attempts needed to recover the full key, this is impractical (especially given that the group key is changed periodically)</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://w1.fi/security/2018-1/unauthenticated-eapol-key-decryption.txt">https://w1.fi/security/2018-1/unauthenticated-eapol-key-decryption.txt</a></li>
 <li><a href="https://papers.mathyvanhoef.com/woot2018.pdf">https://papers.mathyvanhoef.com/woot2018.pdf</a></li>
 </ul>
-
 <h3 id="usn-3746-1-apt-vulnerability">[<a href="https://usn.ubuntu.com/3746-1/">USN-3746-1</a>] APT vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0501">CVE-2018-0501</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Dubbed &ldquo;mirror fail&rdquo; by the author and even a website - <a href="https://mirror.fail/">https://mirror.fail/</a></li>
 <li>mirror protocol in apt allows to specify a list of mirrors to try rather than just a single mirror in source.list
-
 <ul>
 <li>not enabled by default</li>
-</ul></li>
+</ul>
+</li>
 <li>in APT 1.6 this was reworked and a bug introduced
-
 <ul>
 <li>on fallback from one mirror to the next, the previous mirrors InRelease file would be used without checking the one from the new mirror</li>
 <li>hence failing to authenticate the one from the new mirror</li>
 <li>could potentially allow installation of untrusted packages BUT would need at least two mirrors to be compromised AND for the user to have setup use of multiple mirrors in the first place</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3748-1-base-files-vulnerability">[<a href="https://usn.ubuntu.com/3748-1/">USN-3748-1</a>] base-files vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6557">CVE-2018-6557</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Vulnerability in the motd update script via insecure use of temporary files
-
 <ul>
 <li>Could allow DoS or privelege escalation if user has turned off kernel symlink restrictions</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3751-1-spice-vulnerability">[<a href="https://usn.ubuntu.com/3751-1/">USN-3751-1</a>] Spice vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10873">CVE-2018-10873</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Insufficient bounds checks could allow to crash a server OR client from an authenticated peer</li>
 <li>Requires authentication</li>
 </ul>
-
 <h3 id="usn-3747-1-openjdk-10-vulnerabilities">[<a href="https://usn.ubuntu.com/3747-1/">USN-3747-1</a>] OpenJDK 10 vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2972">CVE-2018-2972</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952">CVE-2018-2952</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2826">CVE-2018-2826</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2825">CVE-2018-2825</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Regular Java update to fix multiple vulnerabilities</li>
 </ul>
-
 <h3 id="usn-3749-1-spidermonkey-vulnerabilities">[<a href="https://usn.ubuntu.com/3749-1/">USN-3749-1</a>] Spidermonkey vulnerabilities</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5188">CVE-2018-5188</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Regular Spidermonkey update to fix vulnerabilities</li>
 </ul>
-
 <h3 id="usn-3750-1-pango-vulnerability">[<a href="https://usn.ubuntu.com/3750-1/">USN-3750-1</a>] Pango vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15120">CVE-2018-15120</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="kernel-packages-updated">Kernel packages updated</h3>
-
 <h4 id="usn-3752-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3752-1/">USN-3752-1</a>] Linux kernel vulnerabilities</h4>
-
 <ul>
 <li>18 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000204">CVE-2018-1000204</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9415">CVE-2018-9415</a></li>
@@ -329,14 +305,12 @@ boot for some hardware configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10840">CVE-2018-10840</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10323">CVE-2018-10323</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000200">CVE-2018-1000200</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="usn-3752-2-linux-kernel--hwe--vulnerabilities">[<a href="https://usn.ubuntu.com/3752-2/">USN-3752-2</a>] Linux kernel (HWE) vulnerabilities</h4>
-
 <ul>
 <li>18 CVEs addressed in Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000204">CVE-2018-1000204</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9415">CVE-2018-9415</a></li>
@@ -356,14 +330,12 @@ boot for some hardware configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10840">CVE-2018-10840</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10323">CVE-2018-10323</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000200">CVE-2018-1000200</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="usn-3753-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3753-1/">USN-3753-1</a>] Linux kernel vulnerabilities</h4>
-
 <ul>
 <li>11 CVEs addressed in Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13406">CVE-2018-13406</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405">CVE-2018-13405</a></li>
@@ -376,14 +348,12 @@ boot for some hardware configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10879">CVE-2018-10879</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10876">CVE-2018-10876</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13168">CVE-2017-13168</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="usn-3753-2-linux-kernel--xenial-hwe--vulnerabilities">[<a href="https://usn.ubuntu.com/3753-2/">USN-3753-2</a>] Linux kernel (Xenial HWE) vulnerabilities</h4>
-
 <ul>
 <li>11 CVEs addressed in Trusty
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13406">CVE-2018-13406</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405">CVE-2018-13405</a></li>
@@ -396,14 +366,12 @@ boot for some hardware configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10879">CVE-2018-10879</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10876">CVE-2018-10876</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13168">CVE-2017-13168</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="usn-3754-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3754-1/">USN-3754-1</a>] Linux kernel vulnerabilities</h4>
-
 <ul>
 <li>53 CVEs addressed in Trusty
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10021">CVE-2018-10021</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000204">CVE-2018-1000204</a></li>
@@ -458,29 +426,22 @@ boot for some hardware configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11473">CVE-2017-11473</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11472">CVE-2017-11472</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10208">CVE-2016-10208</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="ubuntu-security-manager">Ubuntu Security Manager</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1278287">https://boards.greenhouse.io/canonical/jobs/1278287</a></li>
 </ul>
-
 <h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

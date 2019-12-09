@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 20" />
@@ -177,21 +177,13 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>33 unique CVEs addressed</p>
-
 <h3 id="usn-3871-3-usn-3871-4-usn-3871-5-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3871-3/">USN-3871-3</a>, <a href="https://usn.ubuntu.com/3871-4/">USN-3871-4</a>, <a href="https://usn.ubuntu.com/3871-5/">USN-3871-5</a>] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>13 CVEs addressed in Bionic and Xenial (HWE - backport of Bionic kernel to Xenial)
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9516">CVE-2018-9516</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19407">CVE-2018-19407</a></li>
@@ -206,200 +198,175 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10877">CVE-2018-10877</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10879">CVE-2018-10879</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10876">CVE-2018-10876</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Last week (<a href="https://ubuntusecuritypodcast.org/episode-19/">Episode 19</a>) covered kernel update for Bionic in preparation for 18.04.2
-
 <ul>
 <li>this is the corresponding update for various platforms using the Bionic kernel</li>
 <li>(AWS, GCP, KVM, OEM, Raspberry Pi 2) (Azure)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3878-1-usn-3878-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3878-1/">USN-3878-1</a>, <a href="https://usn.ubuntu.com/3878-2/">USN-3878-2</a>] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19854">CVE-2018-19854</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19407">CVE-2018-19407</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16882">CVE-2018-16882</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14625">CVE-2018-14625</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Last week (<a href="https://ubuntusecuritypodcast.org/episode-19/">Episode 19</a>) covered kernel update for Bionic in preparation for 18.04.2
-
 <ul>
 <li>Included the Cosmic HWE kernel for Bionic as well - this is the corresponding update for Cosmic itself on all supported platforms (physical and cloud etc)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3879-1-usn-3879-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3879-1/">USN-3879-1</a>, USN-3879-2] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>5 CVEs addressed in Xenial and Trusty (Xenial HWE)
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20169">CVE-2018-20169</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19824">CVE-2018-19824</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19407">CVE-2018-19407</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16862">CVE-2018-16862</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10883">CVE-2018-10883</a></li>
-</ul></li>
+</ul>
+</li>
 <li>OOB read on reading USB device descriptor  - need local physical access to connect a malicious device - crash -&gt; DoS</li>
 <li>UAF in ALSA via a malicious USB sound device that expose zero interfaces - crash -&gt; DoS, possible code execution</li>
 <li>Uninitialised ioapics (<a href="https://ubuntusecuritypodcast.org/episode-19/">Episode 19</a>)</li>
-<li>Cleancache subsystem - after file truncation (removal), wouldn&rsquo;t properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
-
+<li>Cleancache subsystem - after file truncation (removal), wouldn't properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
 <ul>
 <li>Only affects Ubuntu kernels under Xen with tmem driver</li>
-</ul></li>
+</ul>
+</li>
 <li>ext4 - OOB write via malicious crafted image</li>
 </ul>
-
 <h3 id="usn-3880-1-usn-3880-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3880-1/">USN-3880-1</a>, USN-3880-2] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Trusty and Precise ESM (Trusty HWE)
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9568">CVE-2018-9568</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18281">CVE-2018-18281</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972">CVE-2018-17972</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1066">CVE-2018-1066</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Possible memory corruption via type confusion when cloning a socket - privilege escalation</li>
 <li>mremap() issue (covered in <a href="https://ubuntusecuritypodcast.org/episode-15/">Episode 15</a>)</li>
 <li>procfs stack unwinding to leak kernel stack from other task (covered in <a href="https://ubuntusecuritypodcast.org/episode-12/">Episode 12</a>)</li>
 <li>NULL pointer dereference in CIFS client in kernel triggered by a malicious server (crash -&gt; DoS)</li>
 </ul>
-
 <h3 id="usn-3881-1-usn-3881-2-dovecot-vulnerability">[<a href="https://usn.ubuntu.com/3881-1/">USN-3881-1</a>, <a href="https://usn.ubuntu.com/3881-2/">USN-3881-2</a>] Dovecot vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3814">CVE-2019-3814</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Interaction of username / password authentication with trusted SSL cert - can configure for user/pass but can also configure for client to present a trusted cert</li>
 <li>Can configure to take username from cert instead of from explicit username AND also to configure no password if using cert</li>
 <li>BUT if no username in cert, will use specified username - so could log in as any user</li>
 </ul>
-
 <h3 id="usn-3882-1-curl-vulnerabilities">[<a href="https://usn.ubuntu.com/3882-1/">USN-3882-1</a>] curl vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3823">CVE-2019-3823</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3822">CVE-2019-3822</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16890">CVE-2018-16890</a></li>
-</ul></li>
+</ul>
+</li>
 <li>OOB read when parsing end of response for SMTP</li>
 <li>Stack buffer overflow when creating an NTLMv2 type-3 header based on previous received data (size checks were not sufficient since they suffered from an integer overflow)</li>
 <li>OOB read for NTLM type-2 handling via an integer overflow</li>
 </ul>
-
 <h3 id="usn-3883-1-libreoffice-vulnerabilities">[<a href="https://usn.ubuntu.com/3883-1/">USN-3883-1</a>] LibreOffice vulnerabilities</h3>
-
 <ul>
 <li>5 CVEs addressed in Trusty, Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16858">CVE-2018-16858</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10583">CVE-2018-10583</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11790">CVE-2018-11790</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10120">CVE-2018-10120</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10119">CVE-2018-10119</a></li>
-</ul></li>
+</ul>
+</li>
 <li>3 CVEs for mishandling various elements in different document types - UAF, heap-based buffer overflow (write) etc) - crash -&gt; DoS, possible code execution</li>
 <li>Information disclosure (leak of NTLM hashes) via an embedded link to a remote SMB resource within a document</li>
 <li>Directory traversal flaw leading to code execution
-
 <ul>
 <li>document can links which like HTML, can have attributes such as a
 script which will get executed without prompting - so onMouseOver()
 etc</li>
 <li>and this can refer to a file on the local filesystem outside the
 document structure itself</li>
-<li>libreoffice ships with it&rsquo;s own Python interpreter that contains
+<li>libreoffice ships with it's own Python interpreter that contains
 functions which can be abused to run arbitrary commands</li>
 <li>so can specify both the path to one of these files AND arguments to
 pass to it to run</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3884-1-libarchive-vulnerabilities">[<a href="https://usn.ubuntu.com/3884-1/">USN-3884-1</a>] libarchive vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1000020">CVE-2019-1000020</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1000019">CVE-2019-1000019</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Infinite loop when parsing a specially crafted ISO9660 CD/DVD iso file -&gt; DoS</li>
 <li>OOB read when decompressing a specially crafted 7z file -&gt; crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-3885-1-openssh-vulnerabilities">[<a href="https://usn.ubuntu.com/3885-1/">USN-3885-1</a>] OpenSSH vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6111">CVE-2019-6111</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6109">CVE-2019-6109</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20685">CVE-2018-20685</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Three vulnerabilities in scp able to be triggered via a malicious server (low probability)
-
 <ul>
 <li>Fails to validate file names from the remote server match the requested ones - server can overwrite arbitrary files on local side in the target directory</li>
 <li>Fails to use proper character encoding in progress display, allows server to manipulate output of client to hide output of additional files being sent</li>
 <li>Fails to check if target filename is . or empty - allows remote server to change permissions of the client local directory</li>
-</ul></li>
+</ul>
+</li>
 <li>Together allow a server to easily overwrite local files on the client side without the client user being aware</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="faqs-about-ubuntu-security">FAQs about Ubuntu Security</h3>
-
 <h4 id="what-packages-are-supported">What packages are supported?</h4>
-
 <ul>
 <li>main only (~2.3k source packages in Bionic - cf. universe ~26k source packages)</li>
 </ul>
-
 <h4 id="what-timeframe">What timeframe?</h4>
-
 <ul>
 <li>lifetime of the release - so from official release date to EOL date</li>
 <li>LTS: 5 years, non-LTS: 9 months</li>
 <li><a href="https://www.ubuntu.com/esm">ESM provides security fixes beyond the EOL for LTS releases</a></li>
 </ul>
-
 <h4 id="why-do-we-backport-patches-instead-of-just-updating-to-the-lastest-versions">Why do we backport patches instead of just updating to the lastest versions?</h4>
-
 <ul>
 <li>Users expect high degree of stability
-
 <ul>
 <li>changes need caution and good rationale</li>
 <li>lots of previous regressions from innocent looking changes</li>
 <li>no change is completely free of risk</li>
-</ul></li>
+</ul>
+</li>
 <li>Only changes which have high impact (security fixes, severe regressions, loss of data etc)</li>
 <li>More details see <a href="https://wiki.ubuntu.com/StableReleaseUpdates#Why">SRU page on Ubuntu wiki</a></li>
 <li>So security updates must follow suit</li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

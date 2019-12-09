@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([CVE-2018-14665](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665)), plus Cosmic is now officially supported by the Security Team.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 9" />
@@ -177,102 +177,82 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665">CVE-2018-14665</a>), plus Cosmic is now officially supported by the Security Team.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>61 unique CVEs addressed</p>
-
 <h3 id="usn-3790-2-requests-vulnerability">[<a href="https://usn.ubuntu.com/3790-2/">USN-3790-2</a>] Requests vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18074">CVE-2018-18074</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Cosmic is now officially released and so is officially supported by the Security Team</li>
 <li>This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic</li>
 </ul>
-
 <h3 id="usn-3795-2-libssh-vulnerability">[<a href="https://usn.ubuntu.com/3795-2/">USN-3795-2</a>] libssh vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10933">CVE-2018-10933</a></li>
-</ul></li>
+</ul>
+</li>
 <li>This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial, Bionic now fixed for Cosmic</li>
 </ul>
-
 <h3 id="usn-3792-3-net-snmp-vulnerability">[<a href="https://usn.ubuntu.com/3792-3/">USN-3792-3</a>] Net-SNMP vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18065">CVE-2018-18065</a></li>
-</ul></li>
+</ul>
+</li>
 <li>This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp; Bionic now fixed for Cosmic</li>
 </ul>
-
 <h3 id="usn-3796-3-paramiko-vulnerability">[<a href="https://usn.ubuntu.com/3796-3/">USN-3796-3</a>] Paramiko vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000805">CVE-2018-1000805</a></li>
-</ul></li>
+</ul>
+</li>
 <li>This is the same vulnerability which we covered in Episode 8 for Trusty, Xenial &amp; Bionic now fixed for Cosmic</li>
 </ul>
-
 <h3 id="usn-3788-2-tex-live-bin-vulnerability">[<a href="https://usn.ubuntu.com/3788-2/">USN-3788-2</a>] Tex Live-bin vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17407">CVE-2018-17407</a></li>
-</ul></li>
+</ul>
+</li>
 <li>This is the same vulnerability which we covered in Episode 7 for Trusty, Xenial &amp; Bionic now fixed for Cosmic</li>
 </ul>
-
 <h3 id="usn-3797-1-usn-3797-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3797-1/">USN-3797-1</a>, USN-3797-2] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Xenial and Trusty for the Xenial HWE kernel for Trusty
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10938">CVE-2018-10938</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9363">CVE-2018-9363</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16658">CVE-2018-16658</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14734">CVE-2018-14734</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Includes:
-
 <ul>
 <li>UAF in Infiniband -&gt; DoS via crash</li>
 <li>Integer overflow in CDROM -&gt; info disclosure of kernel memory</li>
 <li>Integer overflow in bluetooth HID -&gt; buffer overflow -&gt; DoS / possible arbitrary code execution</li>
 <li>Remotely triggerable infinite loop in labelled network handler (CIPSO)
-
 <ul>
 <li>CIPSO used by SELinux / SMACK not AppArmor so unlikely Ubuntu users affected</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="usn-3798-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3798-1/">USN-3798-1</a>] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>8 CVEs addressed in Trusty and Precise ESM (for the Trusty HWE kernel for Precise ESM)
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9518">CVE-2018-9518</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7566">CVE-2018-7566</a></li>
@@ -282,9 +262,9 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-0794">CVE-2017-0794</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7913">CVE-2016-7913</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-8539">CVE-2015-8539</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Includes:
-
 <ul>
 <li>Local DoS / code exec via insertion of an already existing key into kernel keyring</li>
 <li>UAF in XCeive driver, local DoS / code exec (crash)</li>
@@ -293,14 +273,12 @@
 <li>Race condition in ALSA handling of ioctls -&gt; Local DoS via deadlock</li>
 <li>Race condition in ALSA -&gt; UAF / out of bounds read -&gt; Local DoS (crash) / code exec</li>
 <li>Buffer overflow in NFC LLCP impl -&gt; remote DoS / code exec</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3777-3-linux-kernel--azure--vulnerabilities">[<a href="https://usn.ubuntu.com/3777-3/">USN-3777-3</a>] Linux kernel (Azure) vulnerabilities</h3>
-
 <ul>
 <li>8 CVEs addressed in Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6555">CVE-2018-6555</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6554">CVE-2018-6554</a></li>
@@ -310,16 +288,14 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15572">CVE-2018-15572</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15594">CVE-2018-15594</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17182">CVE-2018-17182</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Corresponding fixes for Azure Cloud specific kernel as covered in Episode 7
 for standard Bionic kernel</li>
 </ul>
-
 <h3 id="usn-3799-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/3799-1/">USN-3799-1</a>] MySQL vulnerabilities</h3>
-
 <ul>
 <li>21 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3284">CVE-2018-3284</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3283">CVE-2018-3283</a></li>
@@ -342,30 +318,26 @@ for standard Bionic kernel</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3144">CVE-2018-3144</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3143">CVE-2018-3143</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3133">CVE-2018-3133</a></li>
-</ul></li>
+</ul>
+</li>
 <li>New upstream versions of MySQL for all supported releases to fix multiple
 vulnerabilities, add features and possible incompatible changes</li>
 <li>Trusty: 5.5.62</li>
 <li>Xenial, Bionic &amp; Cosmic: 5.7.24</li>
 </ul>
-
 <h3 id="usn-3800-1-audiofile-vulnerabilities">[<a href="https://usn.ubuntu.com/3800-1/">USN-3800-1</a>] audiofile vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17095">CVE-2018-17095</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13440">CVE-2018-13440</a></li>
-</ul></li>
+</ul>
+</li>
 <li>DoS (crash) and possible code execution via specially crafted audio files</li>
 </ul>
-
 <h3 id="usn-3801-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3801-1/">USN-3801-1</a>] Firefox vulnerabilities</h3>
-
 <ul>
 <li>12 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12397">CVE-2018-12397</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12396">CVE-2018-12396</a></li>
@@ -379,48 +351,41 @@ vulnerabilities, add features and possible incompatible changes</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12392">CVE-2018-12392</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12390">CVE-2018-12390</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12388">CVE-2018-12388</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Firefox 63</li>
 <li>Includes fixes for a range of issues, most severe is possible RCE</li>
 <li>Also fixes for WebExtensions in Firefox - to exploit need to install a
 malicious extension - then could privilege escalation or local code execution</li>
 </ul>
-
 <h3 id="usn-3802-1-x-dot-org-x-server-vulnerability">[<a href="https://usn.ubuntu.com/3802-1/">USN-3802-1</a>] X.Org X server vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665">CVE-2018-14665</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Incorrect permissions check for 2 command-line arguments (-modulepath and -logfile)</li>
 <li>On <strong>some</strong> platforms (not Ubuntu) Xorg itself is setuid</li>
 <li>Can then use these command-line options to overwrite arbitrary files etc -&gt; privilege escalation to root via say overwrite of /etc/shadow</li>
 <li>Generated a lot of press - <strong>BUT</strong> missed the distinction that Xorg is not really setuid on Ubuntu</li>
 <li>We use Xorg.wrap as setuid to first run and drop permissions if using KMS driver
-
 <ul>
 <li>This is the case for the vast majority of drivers, and for almost all free drivers</li>
 <li>So most Ubuntu users unaffected by this vulnerability</li>
-</ul></li>
+</ul>
+</li>
 <li>Special Friday release :)</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

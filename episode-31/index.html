@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 31" />
@@ -177,24 +177,17 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>14 unique CVEs addressed</p>
-
 <h3 id="usn-3966-1-gnome-shell-vulnerability">[<a href="https://usn.ubuntu.com/3966-1/">USN-3966-1</a>] GNOME Shell vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3820">CVE-2019-3820</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Local user could potentially bypass various restrictions of the lock
 screen - menu items can be activated by keyboard combinations - these
 could then be used to take screenshots (and fill up disk space), close
@@ -202,51 +195,45 @@ windows behind the lock screen or start the screen reader which could
 read out the contents of windows behind the lock screen.</li>
 <li>Fixed by disabling all menu items when the screen is locked</li>
 </ul>
-
 <h3 id="usn-3965-1-aria2-vulnerability">[<a href="https://usn.ubuntu.com/3965-1/">USN-3965-1</a>] aria2 vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3500">CVE-2019-3500</a></li>
-</ul></li>
+</ul>
+</li>
 <li>CLI download tool (akin to curl / wget but can also do bittorrent and others)</li>
 <li>When logging would store credentials in log file which could be read by other users</li>
 <li>Fixed by masking out credentials</li>
 </ul>
-
 <h3 id="usn-3967-1-ffmpeg-vulnerabilities">[<a href="https://usn.ubuntu.com/3967-1/">USN-3967-1</a>] FFmpeg vulnerabilities</h3>
-
 <ul>
 <li>5 CVEs addressed in Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9721">CVE-2019-9721</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9718">CVE-2019-9718</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11339">CVE-2019-11339</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11338">CVE-2019-11338</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15822">CVE-2018-15822</a></li>
-</ul></li>
+</ul>
+</li>
 <li>CPU DoS in Matroska and HTML subtitle decoding</li>
-<li>Various issues discovered by Google&rsquo;s oss-fuzz project:
-
+<li>Various issues discovered by Google's oss-fuzz project:
 <ul>
-<li>2 x OOB read found by Google&rsquo;s clusterfuzz / oss-fuzz project in MPEG-4 decoder</li>
+<li>2 x OOB read found by Google's clusterfuzz / oss-fuzz project in MPEG-4 decoder</li>
 <li>NULL pointer dereference and OOB read in HEVC decoder</li>
-</ul></li>
+</ul>
+</li>
 <li>Assertion failure for missing audio packet size in FLV encoder</li>
 </ul>
-
 <h3 id="usn-3968-1-sudo-vulnerabilities">[<a href="https://usn.ubuntu.com/3968-1/">USN-3968-1</a>] Sudo vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-1000368">CVE-2017-1000368</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7076">CVE-2016-7076</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Fails to properly parse /proc/PID/stat - this is used to determine the
 controlling tty - this name could contain newlines - sudo would only read
 one line of input and so would get a truncated name - when sudo is used
@@ -256,7 +243,6 @@ creating a symlink from the supposed tty to the destination file.</li>
 <li>Fixed by ensuring to parse the full name including any newlines</li>
 <li>sudo contains the ability to restrict users with sudo access to running
 further commands via the NOEXEC tag
-
 <ul>
 <li>Does this by LD_PRELOAD to replace exec() and other functions with
 versions that return an error</li>
@@ -266,48 +252,43 @@ commands and so would not be stopped by LD_PRELOAD lib - so a user can
 run a binary which does wordexp() they could bypass this restriction</li>
 <li>Fixed by adding wordexp() to the LD_PRELOAD wrapper AND by adding a
 seccomp filter to stop all execve() entirely</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3969-1-usn-3969-2-wpa-supplicant-and-hostapd-vulnerability">[<a href="https://usn.ubuntu.com/3969-1/">USN-3969-1</a>, USN-3969-2] wpa_supplicant and hostapd vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11555">CVE-2019-11555</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Possible NULL pointer dereference if an attacker could construct out of
 sequence EAP message fragments</li>
 <li>Fixed by validating and rejecting invalid fragments on both the peer and
 server side</li>
 </ul>
-
 <h3 id="usn-3970-1-ghostscript-vulnerability">[<a href="https://usn.ubuntu.com/3970-1/">USN-3970-1</a>] Ghostscript vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3839">CVE-2019-3839</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Follow up to <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6116">CVE-2019-6116</a> (<a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a>)
-
 <ul>
 <li>GS sandbox allowed access to system operators which allowed arbitrary code execution</li>
 <li>Missed some protections for pdf related operations which could also allow code execution</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3971-1-monit-vulnerabilities">[<a href="https://usn.ubuntu.com/3971-1/">USN-3971-1</a>] Monit vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11455">CVE-2019-11455</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11454">CVE-2019-11454</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Buffer over-read when decoding URLs could allow a remote authenticated
 attacker to read other memory - information disclosure but could also
 cause a crash via reading from an invalid memory location</li>
@@ -316,43 +297,32 @@ Authorization could allow an unauthenticated remote attacker to inject
 arbitrary JavaScript in the _viewlog operation - fixed by properly
 escaping this data</li>
 </ul>
-
 <h3 id="usn-3956-2-bind-vulnerability">[<a href="https://usn.ubuntu.com/3956-2/">USN-3956-2</a>] Bind vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5743">CVE-2018-5743</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-29/">Episode 29</a> covered for standard support releases - now fixed in ESM</li>
 </ul>
-
 <h2 id="discussion-with-joe-mcmanus-about-malicious-dockerhub-images-and-git-repo-takeover-ransoms">Discussion with Joe McManus about malicious DockerHub images and Git repo takeover ransoms</h2>
-
 <ul>
 <li><a href="https://threatpost.com/malicious-docker-containers-earn-crypto-miners-90000/132816/">https://threatpost.com/malicious-docker-containers-earn-crypto-miners-90000/132816/</a></li>
 <li><a href="https://www.zdnet.com/article/a-hacker-is-wiping-git-repositories-and-asking-for-a-ransom/">https://www.zdnet.com/article/a-hacker-is-wiping-git-repositories-and-asking-for-a-ransom/</a></li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
 </ul>
-
 <h4 id="security-certifications-engineer">Security Certifications Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1660658">https://boards.greenhouse.io/canonical/jobs/1660658</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

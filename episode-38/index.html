@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 38" />
@@ -177,36 +177,26 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>55 unique CVEs addressed</p>
-
 <h3 id="usn-4031-1-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4031-1/">USN-4031-1</a>] Linux kernel vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12817">CVE-2019-12817</a></li>
-</ul></li>
+</ul>
+</li>
 <li>64-bit PowerPC (ppc64el) memory management issue - introduced in the 4.17
 kernel - so only affects Cosmic/Disco or Bionic when using the HWE kernel</li>
 <li>Different processes might be able to read / write to each others virtual
 memory
-
 <ul>
 <li>Requirements:
-
 <ul>
 <li>Must be using the hash page table MMU - eg. PowerPC 970 (G5), PA6T,
 Power5/6/7/8/9
-
 <ul>
 <li>By default Power9 bare-metal use the Radix MMU so are not affected
 unless have explicitly disabled this via the kernel command-line</li>
@@ -214,27 +204,28 @@ unless have explicitly disabled this via the kernel command-line</li>
 explicitly configured to use the HPT MMU</li>
 <li>Logical partitions (LPARs) under PowerVM on Power9 would be
 affected as they always use HPT MMU</li>
-</ul></li>
+</ul>
+</li>
 <li>Need to allocate memory above 512TB - only possible via mmap()</li>
 <li>Any child process (fork()) receives same context-id for the memory
 mapping so can just read/write to the mappings above 512TB</li>
 <li>If child exits, a 3rd process could be reallocated the same
 context-id and so could then read/write also</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Only a subset of PowerPC systems will be affected by this and would need
 to be running applications which allocate above 512TB so whilst is high
 impact, low probability of being at risk</li>
 </ul>
-
 <h3 id="usn-4032-1-firefox-vulnerability">[<a href="https://usn.ubuntu.com/4032-1/">USN-4032-1</a>] Firefox vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708">CVE-2019-11708</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Firefox 67.0.4 - latest upstream release</li>
 <li>Possible for a sandboxed child process to escape the sandbox by using IPC
 to send a Prompt:Open message to the parent which would then process
@@ -243,30 +234,25 @@ web-content on behalf of the child</li>
 leveraging another vulnerability such as the one discussed last week for
 Firefox) for arbitrary code execution</li>
 </ul>
-
 <h3 id="usn-4033-1-libmysofa-vulnerability">[<a href="https://usn.ubuntu.com/4033-1/">USN-4033-1</a>] libmysofa vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10672">CVE-2019-10672</a></li>
-</ul></li>
+</ul>
+</li>
 <li>C library to read SOFA (Spatially Oriented Format for Acoustics) files
-
 <ul>
 <li>Used by lots of different applications that handle audio, like
 gstreamer, ffmpeg, smplayer, blender etc</li>
-</ul></li>
+</ul>
+</li>
 <li>Integer overflow leading to buffer overflow - crash -&gt; DoS or possible
 code-execution</li>
 </ul>
-
 <h3 id="usn-4034-1-imagemagick-vulnerabilities">[<a href="https://usn.ubuntu.com/4034-1/">USN-4034-1</a>] ImageMagick vulnerabilities</h3>
-
 <ul>
 <li>30 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9956">CVE-2019-9956</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7398">CVE-2019-7398</a></li>
@@ -298,137 +284,125 @@ code-execution</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14434">CVE-2018-14434</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12806">CVE-2017-12806</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12805">CVE-2017-12805</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Used by many automated systems for image processing etc</li>
 <li>Many memory corruption issues fixed - most able to cause at least a crash
 (DoS) but might be possible to also get RCE</li>
 <li>Also updated the default policy to disable support for PostScript and PDF
 formats (since these are handle by GhostScript which has a long history
 of security issues itself) - Cosmic + Disco
-
 <ul>
 <li>This is already the case on Bionic (<a href="https://usn.ubuntu.com/3785-1/">USN-3785-1</a> - <a href="https://ubuntusecuritypodcast.org/episode-7/">Episode 7</a>)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-4035-1-ceph-vulnerabilities">[<a href="https://usn.ubuntu.com/4035-1/">USN-4035-1</a>] Ceph vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Xenial, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3821">CVE-2019-3821</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16889">CVE-2018-16889</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16846">CVE-2018-16846</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14662">CVE-2018-14662</a></li>
-</ul></li>
+</ul>
+</li>
 <li>2 CVEs affect ceph in Xenial
-
 <ul>
 <li>dm-crypt disk encryption keys were able to be read by users with
 read-only permissions - fixed to ensure need an explicit permission to
 read keys</li>
 <li>DoS from authenticated RGW users</li>
-</ul></li>
+</ul>
+</li>
 <li>2 Cosmic+Disco
-
 <ul>
 <li>Does not properly sanitize encryption keys when outputting debug log
 information for v4 auth -so encryption keys would be output in
 plaintext to debug logs
-
 <ul>
 <li>fixed to sanitize before output</li>
-<li>won&rsquo;t be fixed for Xenial since upstream hasn&rsquo;t backported this and
+<li>won't be fixed for Xenial since upstream hasn't backported this and
 there are many instances of other sensitive info being logged there
 as well</li>
-</ul></li>
+</ul>
+</li>
 <li>DoS by unauthenticated remote users via the civetweb frontend - as they
 could create connections to a RADOS gateway to exhaust file descriptors
 for the gateway service causing it to run out and fail to create new
 connections
-
 <ul>
 <li>Close fd on error path</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="usn-4036-1-openstack-neutron-vulnerability">[<a href="https://usn.ubuntu.com/4036-1/">USN-4036-1</a>] OpenStack Neutron vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9735">CVE-2019-9735</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Networking abstraction layer of OpenStack</li>
 <li>Allows to define security groups with rules which then get executed by a
 driver using a particular underlying technology</li>
 <li>Rules can specify protocols and source / destination ports</li>
 <li>iptables driver would execute rules but if encountered an error (such as
-a protocol was specified along with a port but the protocol doesn&rsquo;t
+a protocol was specified along with a port but the protocol doesn't
 support ports - like VRRP) then it would error out and not apply further
 rules from the security group
-
 <ul>
 <li>So could block other rules from being applied</li>
-</ul></li>
+</ul>
+</li>
 <li>Fixed to ensure port arguments are only applied to protocols which
 support them</li>
 </ul>
-
 <h3 id="usn-4037-1-policykit-desktop-privileges-update">[<a href="https://usn.ubuntu.com/4037-1/">USN-4037-1</a>] policykit-desktop-privileges update</h3>
-
 <ul>
 <li>Affecting Xenial, Bionic, Cosmic, Disco</li>
 <li>PolicyKit policy update for USB Creator
-
 <ul>
 <li>Previously would allow a user with admin privileges (ie. in the
 admin/sudo group) to overwrite disks (ie create bootable USB images)
 without prompting for authentication</li>
 <li>Now updated to require the user to also authenticate as well</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-4038-1-usn-4038-2-bzip2-vulnerabilities">[<a href="https://usn.ubuntu.com/4038-1/">USN-4038-1</a>, <a href="https://usn.ubuntu.com/4038-2/">USN-4038-2</a>] bzip2 vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900">CVE-2019-12900</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3189">CVE-2016-3189</a></li>
-</ul></li>
+</ul>
+</li>
 <li>UAF via crafted bzip2 file - crash, DoS</li>
 <li>OOB write from crafted bzip2 which contains too many selectors - possible
 RCE
-
 <ul>
 <li>Turns out this breaks decompression of some bzip2 files created by the
 lbzip2 utility since it would use an invalid number of selectors -
 <a href="https://gitlab.com/federicomenaquintero/bzip2/issues/24">upstream still pondering how to fix this</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-4040-1-usn-4040-2-expat-vulnerability">[<a href="https://usn.ubuntu.com/4040-1/">USN-4040-1</a>, <a href="https://usn.ubuntu.com/4040-2/">USN-4040-2</a>] Expat vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20843">CVE-2018-20843</a></li>
-</ul></li>
+</ul>
+</li>
 <li>CPU DoS if XML names contained large number of colons (used to specify
 namespace prefix)</li>
 </ul>
-
 <h3 id="usn-4042-1-poppler-vulnerabilities">[<a href="https://usn.ubuntu.com/4042-1/">USN-4042-1</a>] poppler vulnerabilities</h3>
-
 <ul>
 <li>13 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9903">CVE-2019-9903</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9631">CVE-2019-9631</a></li>
@@ -443,9 +417,9 @@ namespace prefix)</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20662">CVE-2018-20662</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18897">CVE-2018-18897</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9865">CVE-2017-9865</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Usual mix of issues
-
 <ul>
 <li>Memory leak</li>
 <li>Stack exhaustion -&gt; crash, DoS</li>
@@ -456,48 +430,37 @@ namespace prefix)</li>
 <li>Heap-based buffer under-write - so write at a negative index of a heap
 allocated buffer - crash, DoS or possible RCE via heap metadata or
 object corruption</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-4041-1-usn-4041-2-linux-kernel-update">[<a href="https://usn.ubuntu.com/4041-1/">USN-4041-1</a>, <a href="https://usn.ubuntu.com/4041-2/">USN-4041-2</a>] Linux kernel update</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty ESM (HWE), Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11479">CVE-2019-11479</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Final SACK Panic issue (<a href="https://ubuntusecuritypodcast.org/episode-37/">Episode 37</a>) - added sysctl to easily set MSS (is
 usually hard-coded to 48) - so can be increased to avoid this DoS issue</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="apparmor-interview-with-john-johansen">AppArmor interview with John Johansen</h3>
-
 <ul>
 <li><a href="https://gitlab.com/apparmor/apparmor">https://gitlab.com/apparmor/apparmor</a></li>
 <li><a href="https://wiki.ubuntu.com/AppArmor">https://wiki.ubuntu.com/AppArmor</a></li>
 </ul>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
 </ul>
-
 <h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1723997">https://boards.greenhouse.io/canonical/jobs/1723997</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

@@ -12,7 +12,7 @@
   PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
   ">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 39" />
@@ -175,8 +175,8 @@
           </div>
           <div class="col-md-8">
             A look at security updates for Django, Thunderbird, ZNC, Irssi and more,
-  plus news on the CanonicalLtd GitHub account credentials compromise, SKS
-  PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
+plus news on the CanonicalLtd GitHub account credentials compromise, SKS
+PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
           </div>
         </div>
     <div class="row">
@@ -191,27 +191,20 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>A look at security updates for Django, Thunderbird, ZNC, Irssi and more,
 plus news on the CanonicalLtd GitHub account credentials compromise, SKS
 PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>7 unique CVEs addressed</p>
-
 <h3 id="usn-4043-1-django-vulnerabilities">[<a href="https://usn.ubuntu.com/4043-1/">USN-4043-1</a>] Django vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12781">CVE-2019-12781</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12308">CVE-2019-12308</a></li>
-</ul></li>
+</ul>
+</li>
 <li>If using django via a reverse proxy, which itself would connect to django
 over HTTPS, if accessing HTTP resources they would not be redirected to
 HTTPS even if configured to do so on the django server.</li>
@@ -220,45 +213,37 @@ before display - so possible to inject javascript etc via a URL query
 payload parameter etc - such that when the user clicks the link it would
 be executed (RCE bug with user interaction)</li>
 </ul>
-
 <h3 id="usn-4045-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/4045-1/">USN-4045-1</a>] Thunderbird vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708">CVE-2019-11708</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11707">CVE-2019-11707</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Latest upstream 60.7.2 release</li>
 <li>Mentioned in the context of Firefox in <a href="https://ubuntusecuritypodcast.org/episode-37/">Episode 37</a> and <a href="https://ubuntusecuritypodcast.org/episode-38/">Episode 38</a> (sandbox
 escape and RCE)</li>
 <li>By default scripting is disabled in TB so not as high an impact</li>
 </ul>
-
 <h3 id="usn-4044-1-znc-vulnerability">[<a href="https://usn.ubuntu.com/4044-1/">USN-4044-1</a>] ZNC vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12816">CVE-2019-12816</a></li>
-</ul></li>
+</ul>
+</li>
 <li>ZNC provides support for plugin modules</li>
 <li>These can be loaded by autenticated, non-admin users</li>
 </ul>
-
 <p>i  - The name of this is checked in various places to ensure control
-    characters and other means of code execution are blocked, but not on
-    all code-paths using modules</p>
-
+characters and other means of code execution are blocked, but not on
+all code-paths using modules</p>
 <ul>
 <li>Would allow to execute code as the ZNC server via an authenticated user</li>
 <li>Fixed to validate module name on all code paths which use it</li>
 </ul>
-
 <h3 id="usn-4038-3-usn-4038-4-bzip2-regression">[<a href="https://usn.ubuntu.com/4038-3/">USN-4038-3</a>, USN-4038-4] bzip2 regression</h3>
-
 <ul>
 <li>Affecting Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-38/">Episode 38</a> mentioned bzip2 update - we also mentioned this breaks
@@ -266,44 +251,37 @@ decompression of some archives built by lbzip2 etc - this regression
 fixes that by introducing a new patch proposed by upstream to accept as
 many selectors as specified by to then discard them later</li>
 </ul>
-
 <h3 id="usn-4046-1-irssi-vulnerabilities">[<a href="https://usn.ubuntu.com/4046-1/">USN-4046-1</a>] Irssi vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13045">CVE-2019-13045</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7054">CVE-2018-7054</a></li>
-</ul></li>
-<li>2 different UAF&rsquo;s due to mismanagement of data structures:
-
+</ul>
+</li>
+<li>2 different UAF's due to mismanagement of data structures:
 <ul>
 <li>One on SASL code-paths - so only affected if using SASL
 authentication - would reuse provided username and password
 fields after they had been freed</li>
 <li>Another in code to handle netsplits (used to handle when servers get
 disconnected from the wider network)
-
 <ul>
 <li>This was due to an incomplete fix for previous CVE-2017-7191</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="ubuntu-18-dot-10--cosmic-cuttlefish--reaches-end-of-life-on-july-18-2019">Ubuntu 18.10 (Cosmic Cuttlefish) reaches End of Life on July 18 2019</h3>
-
 <ul>
 <li>Released October 18, 2018 - non-LTS so 9 months of support</li>
 <li>Past 9 months - no new updates/ security fixes and hence no USNs</li>
 <li>Upgrade to Disco (19.04)</li>
 <li><a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-July/004996.html">https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-July/004996.html</a></li>
 </ul>
-
 <h3 id="canonicalltd-github-organisation-account-compromise">CanonicalLtd GitHub organisation account compromise</h3>
-
 <ul>
 <li>A single account which was part of the CanonicalLtd GitHub organisation
 was compromised 6th July</li>
@@ -311,17 +289,15 @@ was compromised 6th July</li>
 the hack was possible</li>
 <li>Investigation is still on-going but at this stage it only appears to be
 these actions, not malicious but attention seeking in nature
-
 <ul>
 <li>No code has been altered or PII accessed (nor is any PII stored there)</li>
-</ul></li>
+</ul>
+</li>
 <li>Account has been removed from the CanonicaLtd organisation, investigation
 is still on-going, we will release more details as they become available</li>
 <li><a href="https://twitter.com/ubuntu%5Fsec/status/1147675201632473088">https://twitter.com/ubuntu%5Fsec/status/1147675201632473088</a></li>
 </ul>
-
 <h3 id="sks-keyserver-certificate-spamming">SKS keyserver certificate spamming</h3>
-
 <ul>
 <li><a href="https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f">https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f</a></li>
 <li>WoT aspect of PGP allows users to sign one-anothers public keys
@@ -331,7 +307,6 @@ is still on-going, we will release more details as they become available</li>
 <li>SKS supports up to 150k sigs - GnuPG is logarithmic in order of signatures</li>
 <li>So can DoS local GnuPG once have downloaded someones key (cert)</li>
 <li>Re Ubuntu:
-
 <ul>
 <li>We use GPG for signing the hashes of packages in the repo</li>
 <li>This public key is distributed directly inside Ubuntu on install media
@@ -340,20 +315,19 @@ and in the archive and does not depend on the SKS keyserver network</li>
 <li>So only exposure for Ubuntu users is if manually fetching keys from SKS
 keyservers or if using Enigmail in ThunderBird or other software which
 automatically fetches certs from SKS</li>
-</ul></li>
+</ul>
+</li>
 <li>Mitigation
-
 <ul>
 <li>if using Enigmail, <a href="https://www.enigmail.net/index.php/en/user-manual/handbook-faq">disable auto-fetching / refreshing of public keys</a></li>
-<li>if using GnuPG directly, don&rsquo;t use SKS keyservers, instead use <a href="https://keys.openpgp.org">new
+<li>if using GnuPG directly, don't use SKS keyservers, instead use <a href="https://keys.openpgp.org">new
 resistant keyserver</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

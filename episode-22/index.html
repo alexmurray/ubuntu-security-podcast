@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 22" />
@@ -177,90 +177,72 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>16 unique CVEs addressed</p>
-
 <h3 id="usn-3893-2-bind-vulnerabilities">[<a href="https://usn.ubuntu.com/3893-2/">USN-3893-2</a>] Bind vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Precise ESM
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6465">CVE-2019-6465</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5745">CVE-2018-5745</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Covered last week in <a href="https://ubuntusecuritypodcast.org/episode-21/">Episode 21</a> for regular Ubuntu releases</li>
 </ul>
-
 <h3 id="usn-3866-3-ghostscript-regression">[<a href="https://usn.ubuntu.com/3866-3/">USN-3866-3</a>] Ghostscript regression</h3>
-
 <ul>
 <li>Affecting Trusty, Xenial, Bionic, Cosmic</li>
 <li>Mentioned last week briefly</li>
 <li>Previous update to Ghostscript introduced a regression (blue background)
-
 <ul>
 <li>See later for information</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3894-1-gnome-keyring-vulnerability">[<a href="https://usn.ubuntu.com/3894-1/">USN-3894-1</a>] GNOME Keyring vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20781">CVE-2018-20781</a></li>
-</ul></li>
-<li>Already fixed upstream (hence doesn&rsquo;t apply to Bionic / Cosmic etc)</li>
-<li>User&rsquo;s login password kept in memory of child process after pam session is opened</li>
+</ul>
+</li>
+<li>Already fixed upstream (hence doesn't apply to Bionic / Cosmic etc)</li>
+<li>User's login password kept in memory of child process after pam session is opened</li>
 <li>Could be dumped by root user or captured in crash dump etc and possibly exposed
-
 <ul>
 <li>Other tools exist to try and extract from memory as well (<a href="https://github.com/huntergregal/mimipenguin">minipenguin</a> etc)</li>
-</ul></li>
+</ul>
+</li>
 <li>Fix is to simply reset this after pam session is opened</li>
 </ul>
-
 <h3 id="usn-3895-1-ldb-vulnerability">[<a href="https://usn.ubuntu.com/3895-1/">USN-3895-1</a>] LDB vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3824">CVE-2019-3824</a></li>
-</ul></li>
+</ul>
+</li>
 <li>LDAP-like embedded database (used by Samba and others)</li>
 <li>Authenticated user can cause OOB read when searching LDAP backend of AD DC with a search string containing multiple wildcards - crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-3896-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3896-1/">USN-3896-1</a>] Firefox vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5785">CVE-2019-5785</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18511">CVE-2018-18511</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18356">CVE-2018-18356</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Firefox 65</li>
 <li>Use-after-free and integer overflow in Skia library (vector graphics library, similar to cairo)</li>
 <li>Cross-origin image theft - able to read from canvas element in violation of same-origin policy using transferFromImageBitmap() method</li>
 </ul>
-
 <h3 id="usn-3897-1-thunderbird-vulnerabilities">[<a href="https://usn.ubuntu.com/3897-1/">USN-3897-1</a>] Thunderbird vulnerabilities</h3>
-
 <ul>
 <li>7 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18509">CVE-2018-18509</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18505">CVE-2018-18505</a></li>
@@ -269,113 +251,93 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18500">CVE-2018-18500</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18356">CVE-2018-18356</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5824">CVE-2016-5824</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Thunderbird 60.5.1</li>
 <li>Use-after-free and integer overflow in Skia library (vector graphics library, similar to cairo)</li>
 <li>Show messages with an invalid (reused) S/MIME signature as being verified</li>
 <li>UAF parsing HTML5 stream with custom HTML elements</li>
 <li>UAF in embedded libical via a crafted ICS file</li>
 </ul>
-
 <h3 id="usn-3898-1-usn-3898-2-nss-vulnerability">[<a href="https://usn.ubuntu.com/3898-1/">USN-3898-1</a>, USN-3898-2] NSS vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18508">CVE-2018-18508</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Several NULL pointer dereferences -&gt; crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-3899-1-openssl-vulnerability">[<a href="https://usn.ubuntu.com/3899-1/">USN-3899-1</a>] OpenSSL vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1559">CVE-2019-1559</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Possible padding oracle (an application which uses OpenSSL could behave differently based on whether a record contained valid padding or not)
-
 <ul>
 <li>Attacker can learn plaintext by modifying ciphertext and observing different behaviour</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3900-1-gd-vulnerabilities">[<a href="https://usn.ubuntu.com/3900-1/">USN-3900-1</a>] GD vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6978">CVE-2019-6978</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6977">CVE-2019-6977</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Double free if failed to properly extract image file - crash -&gt; DoS</li>
 <li>Heap-based buffer overflow in color matching (able to be triggered by a specially crafted image) - crash -&gt; DoS, possible code execution</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="comparison-of-linux-hardening-across-distributions">Comparison of Linux Hardening across distributions</h3>
-
 <ul>
 <li><a href="https://capsule8.com/blog/millions-of-binaries-later-a-look-into-linux-hardening-in-the-wild/">https://capsule8.com/blog/millions-of-binaries-later-a-look-into-linux-hardening-in-the-wild/</a></li>
 <li>Analyses binaries from various Linux distributions looking for hardening features (OpenSUSE, Debian, CentOS, RHEL &amp; Ubuntu)</li>
 <li>Compare kernel configuration vs KSPP recommendations</li>
 <li>Ubuntu 18.04 ranks highest, due to proactive hardening features baked into toolchain and newer kernel taking advantage of KSPP upstream features
-
 <ul>
 <li>gcc is patched so anyone building on Ubuntu gets these features</li>
 <li>build.snapcraft.io too</li>
 <li>however is missing stack clash mitigation</li>
-</ul></li>
+</ul>
+</li>
 <li>Plan to add more hardening features for 19.10 (stack clash and control-flow integrity support via gcc) and review kernel options cf. KSPP</li>
 </ul>
-
 <h3 id="q-and-a">Q&amp;A</h3>
-
-<h4 id="does-numerous-bugs-and-regressions-in-ghostscript-indicate-it-is-reaching-it-s-eol">Does numerous bugs and regressions in Ghostscript indicate it is reaching it&rsquo;s EOL?</h4>
-
+<h4 id="does-numerous-bugs-and-regressions-in-ghostscript-indicate-it-is-reaching-it-s-eol">Does numerous bugs and regressions in Ghostscript indicate it is reaching it's EOL?</h4>
 <ul>
 <li><a href="https://twitter.com/docEbrown1/status/1101452172196163585">doc-E-brown via twitter</a></li>
 <li>Lots of recent focus -&gt; finds bugs</li>
 <li>ghostscript codebase is old and gnarly and some fixes have been quite invasive</li>
 <li>Any new code could introduce new bugs - particularly complicated fixes -&gt; creates more bugs (regressions)
-
 <ul>
 <li>(as doc-E-brown suggests, regressions indicate old code-base)</li>
-</ul></li>
+</ul>
+</li>
 <li>Tavis (and others) seem to be looking elsewhere but likely still more bugs to be found</li>
 <li>Would be great if GS could either be made safer or a safer alternative but no-one is stepping up</li>
 <li>Sadly No good viable alternative currently</li>
 </ul>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="ubuntu-security-generalist">Ubuntu Security Generalist</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1548812">https://boards.greenhouse.io/canonical/jobs/1548812</a></li>
 </ul>
-
 <h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1550997">https://boards.greenhouse.io/canonical/jobs/1550997</a></li>
 </ul>
-
 <h4 id="security-automation-engineer">Security Automation Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1548632">https://boards.greenhouse.io/canonical/jobs/1548632</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

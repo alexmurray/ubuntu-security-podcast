@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 7" />
@@ -177,56 +177,42 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>78 unique CVEs addressed</p>
-
 <h3 id="usn-3773-1-ghostscript-vulnerabilities">[<a href="https://usn.ubuntu.com/3773-1/">USN-3773-1</a>] Ghostscript vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17183">CVE-2018-17183</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16510">CVE-2018-16510</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Similar to [<a href="https://usn.ubuntu.com/3768-1/">USN-3768-1</a>] from Episode 5</li>
 </ul>
-
 <h3 id="usn-3769-2-bind-vulnerability">[<a href="https://usn.ubuntu.com/3769-2/">USN-3769-2</a>] Bind vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Precise ESM
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5740">CVE-2018-5740</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Extended Security Maintenance version of [<a href="https://usn.ubuntu.com/3769-1/">USN-3769-1</a>]</li>
 </ul>
-
 <h3 id="usn-3774-1-strongswan-vulnerability">[<a href="https://usn.ubuntu.com/3774-1/">USN-3774-1</a>] strongSwan vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17540">CVE-2018-17540</a></li>
-</ul></li>
-<li>[<a href="https://usn.ubuntu.com/3771-1/">USN-3771-1</a>] incorporated fixes for multiple CVEs - but these fixes themselves introduced this new vulnerability</li>
-<li>Heap buffer overflow found by Google&rsquo;s OSS-Fuzz leading to DoS for gmp plugin</li>
 </ul>
-
+</li>
+<li>[<a href="https://usn.ubuntu.com/3771-1/">USN-3771-1</a>] incorporated fixes for multiple CVEs - but these fixes themselves introduced this new vulnerability</li>
+<li>Heap buffer overflow found by Google's OSS-Fuzz leading to DoS for gmp plugin</li>
+</ul>
 <h3 id="usn-3775-1-usn-3775-2-usn-3776-1-usn-3776-2-usn-3777-1-usn-3777-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3775-1/">USN-3775-1</a>, <a href="https://usn.ubuntu.com/3775-2/">USN-3775-2</a>, <a href="https://usn.ubuntu.com/3776-1/">USN-3776-1</a>, <a href="https://usn.ubuntu.com/3776-2/">USN-3776-2</a>, USN-3777-1, <a href="https://usn.ubuntu.com/3777-2/">USN-3777-2</a>] Linux kernel vulnerabilities</h3>
-
 <ul>
 <li>11 CVEs addressed across Precise ESM, Trusty, Xenial and Bionic including HWE kernels
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6555">CVE-2018-6555</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6554">CVE-2018-6554</a></li>
@@ -239,10 +225,10 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10853">CVE-2018-10853</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18216">CVE-2017-18216</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17182">CVE-2018-17182</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Not all CVEs affect all releases</li>
 <li>Includes:
-
 <ul>
 <li>UAF and memory leak -&gt; DoS in IRDA</li>
 <li>Stack buffer overwrite in iSCSI - low chance of privilege escalation</li>
@@ -253,25 +239,21 @@
 <li>KVM hypervisor instruction emulation fail to check privileges - privilege escalation inside guest</li>
 <li>OCFS2 file-system driver NULL pointer dereference -&gt; BUG (mutex logic bug)</li>
 <li>Memory management sequence number overflow leading to UAF -&gt; possible privilege escalation - Jann Horn (GPZ)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3780-1-haproxy-vulnerability">[<a href="https://usn.ubuntu.com/3780-1/">USN-3780-1</a>] HAProxy vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14645">CVE-2018-14645</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Out of bounds read leading to remote crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-3781-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3781-1/">USN-3781-1</a>] WebKitGTK+ vulnerabilities</h3>
-
 <ul>
 <li>24 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4361">CVE-2018-4361</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4359">CVE-2018-4359</a></li>
@@ -297,53 +279,45 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4207">CVE-2018-4207</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4197">CVE-2018-4197</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4191">CVE-2018-4191</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Used by many GNOME applications to render web content (Epiphany, Evolution, Boxes, GThumb, Buidler, Empathy, etc)</li>
 <li>Many issues fixed in this release including, XSS, DoS, RCE etc</li>
 </ul>
-
 <h3 id="usn-3782-1-liblouis-vulnerabilities">[<a href="https://usn.ubuntu.com/3782-1/">USN-3782-1</a>] Liblouis vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17294">CVE-2018-17294</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12085">CVE-2018-12085</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3778-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/3778-1/">USN-3778-1</a>] Firefox vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12387">CVE-2018-12387</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12386">CVE-2018-12386</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12385">CVE-2018-12385</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Firefox 62 release - includes fixes for RCE, local cache poisoning and information disclosures</li>
 </ul>
-
 <h3 id="usn-3783-1-apache-http-server-vulnerabilities">[<a href="https://usn.ubuntu.com/3783-1/">USN-3783-1</a>] Apache HTTP Server vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11763">CVE-2018-11763</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1333">CVE-2018-1333</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1302">CVE-2018-1302</a></li>
-</ul></li>
+</ul>
+</li>
 <li>DoS (crash) via incorrect stream destruction and DoS (resources) from incorrect frame handling</li>
 </ul>
-
 <h3 id="usn-3785-1-imagemagick-vulnerabilities">[<a href="https://usn.ubuntu.com/3785-1/">USN-3785-1</a>] ImageMagick vulnerabilities</h3>
-
 <ul>
 <li>14 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13144">CVE-2017-13144</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16749">CVE-2018-16749</a></li>
@@ -359,29 +333,23 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14436">CVE-2018-14436</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14435">CVE-2018-14435</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14434">CVE-2018-14434</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Disables support for using PS and PDF from Ghostscript in ImageMagick due to
 large number of GS vulns (see Episode 5)</li>
 <li>Also multiple fixes for ImageMagick itself, including memory leaks (DoS), information disclosure, RCE etc</li>
 </ul>
-
 <h3 id="usn-3784-1-apparmor-update">[<a href="https://usn.ubuntu.com/3784-1/">USN-3784-1</a>] AppArmor update</h3>
-
 <ul>
 <li>Hardening of various AppArmor profiles (mentioned in Episode 5)</li>
 </ul>
-
 <h3 id="lsn-0044-1-linux-kernel-vulnerability">[LSN-0044-1] Linux kernel vulnerability</h3>
-
 <ul>
 <li>Livepatch incorporating L1TF, Spectrev2 and other fixes as well</li>
 </ul>
-
 <h3 id="usn-3786-1-libxkbcommon-vulnerabilities">[<a href="https://usn.ubuntu.com/3786-1/">USN-3786-1</a>] libxkbcommon vulnerabilities</h3>
-
 <ul>
 <li>11 CVEs addressed in Trusty, Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15864">CVE-2018-15864</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15863">CVE-2018-15863</a></li>
@@ -394,72 +362,59 @@ large number of GS vulns (see Episode 5)</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15855">CVE-2018-15855</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15854">CVE-2018-15854</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15853">CVE-2018-15853</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Loads keyboard descriptions from disk - multiple vulnerabilities in file
 format handling leading to DoS etc</li>
 </ul>
-
 <h3 id="usn-3787-1-tomcat-vulnerability">[<a href="https://usn.ubuntu.com/3787-1/">USN-3787-1</a>] Tomcat vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11784">CVE-2018-11784</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Redirect handling allowed attacker to redirect to any URI of their choice</li>
 <li>Can be avoided if had manually enabled both mapperDirectoryRedirectEnabled and mapperContextRootRedirectEnabled</li>
 </ul>
-
 <h3 id="usn-3789-1-clamav-vulnerability">[<a href="https://usn.ubuntu.com/3789-1/">USN-3789-1</a>] ClamAV vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15378">CVE-2018-15378</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Crash in handling of unpacked MEW executable files</li>
 </ul>
-
 <h3 id="usn-3788-1-tex-live-vulnerabilities">[<a href="https://usn.ubuntu.com/3788-1/">USN-3788-1</a>] Tex Live vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17407">CVE-2018-17407</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-5700">CVE-2015-5700</a></li>
-</ul></li>
+</ul>
+</li>
 <li>File overwrite via insecure symlink handling</li>
 <li>Code execution via buffer overflow in Type1 font handler</li>
 </ul>
-
 <h3 id="usn-3791-1-git-vulnerability">[<a href="https://usn.ubuntu.com/3791-1/">USN-3791-1</a>] Git vulnerability</h3>
-
 <ul>
 <li>1 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17456">CVE-2018-17456</a></li>
-</ul></li>
+</ul>
+</li>
 <li>RCE when cloning a malicious repository - due to insufficient validation of git submodule URLs and paths.</li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

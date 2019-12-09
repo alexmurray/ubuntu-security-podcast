@@ -12,7 +12,7 @@
   sure you always have the latest security updates by using unattended-upgrades.
   ">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 15" />
@@ -64,7 +64,7 @@
 <meta itemprop="keywords" content="" />
 
 
-<meta itemprop="wordCount" content="814">
+<meta itemprop="wordCount" content="813">
 
 
 
@@ -175,8 +175,8 @@
           </div>
           <div class="col-md-8">
             Security updates for 29 CVEs including Perl, the kernel, OpenSSL (PortSmash)
-  and more, plus in response to some listener questions, we discuss how to make
-  sure you always have the latest security updates by using unattended-upgrades.
+and more, plus in response to some listener questions, we discuss how to make
+sure you always have the latest security updates by using unattended-upgrades.
           </div>
         </div>
     <div class="row">
@@ -191,48 +191,39 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>Security updates for 29 CVEs including Perl, the kernel, OpenSSL (PortSmash)
 and more, plus in response to some listener questions, we discuss how to make
 sure you always have the latest security updates by using unattended-upgrades.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>29 unique CVEs addressed</p>
-
 <h3 id="usn-3834-1-usn-3834-2-perl-vulnerabilities">[<a href="https://usn.ubuntu.com/3834-1/">USN-3834-1</a>, USN-3834-2] Perl vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18314">CVE-2018-18314</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18313">CVE-2018-18313</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18312">CVE-2018-18312</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18311">CVE-2018-18311</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Perl regex engine fuzzed with valgrind to detect memory errors
-
 <ul>
 <li>2 different heap based buffer overflow in regex engine</li>
 <li>Heap-based read past end of buffer in regex engine</li>
-</ul></li>
+</ul>
+</li>
 <li>Integer overflow from environment variables
-
 <ul>
 <li>uses untrusted input from environment variables (length of values to calculate memory to allocate)</li>
 <li>heap buffer overflow</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3835-1-usn-3836-1-usn-3836-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3835-1/">USN-3835-1</a>, <a href="https://usn.ubuntu.com/3836-1/">USN-3836-1</a>, <a href="https://usn.ubuntu.com/3836-2/">USN-3836-2</a>] Linux kernel vulnerabilities</h3>
-
 <ul>
-<li><p>6 CVEs addressed in Cosmic, 2 in Bionic and Xenial</p>
-
+<li>
+<p>6 CVEs addressed in Cosmic, 2 in Bionic and Xenial</p>
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6559">CVE-2018-6559</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18955">CVE-2018-18955</a></li>
@@ -240,21 +231,22 @@ sure you always have the latest security updates by using unattended-upgrades.</
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18445">CVE-2018-18445</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18281">CVE-2018-18281</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972">CVE-2018-17972</a></li>
-</ul></li>
-
-<li><p>Episode 14 covered CVE-2018-6559 (overlayfs / user namespace directory names disclosure)</p>
-
+</ul>
+</li>
+<li>
+<p>Episode 14 covered CVE-2018-6559 (overlayfs / user namespace directory names disclosure)</p>
 <ul>
 <li>Also fixed for Bionic and Xenial</li>
-</ul></li>
-
-<li><p>Episode 12 covered CVE-2018-17972 (procfs kernel stack disclosure)</p></li>
-
-<li><p>3 CVEs discovered by Jann Horn (and one inadvertently caused by Jann too)</p>
-
+</ul>
+</li>
+<li>
+<p>Episode 12 covered CVE-2018-17972 (procfs kernel stack disclosure)</p>
+</li>
+<li>
+<p>3 CVEs discovered by Jann Horn (and one inadvertently caused by Jann too)</p>
 <ul>
 <li>mremap() system call - used to expand or shrink an existing
-memory mapping and possibly move it - doesn&rsquo;t properly flush TLB - could
+memory mapping and possibly move it - doesn't properly flush TLB - could
 leave pages in page cache for a short time which can then be raced to obtain
 access afterwards and possible DoS crash or information disclosure etc
 depending on target memory</li>
@@ -265,78 +257,72 @@ access memory out-of-bounds</li>
 processes with CAP_SYS_ADMIN within the namespace to access resources
 outside the namespace as the kernel would get confused on which UID to
 check against outside the namespace
-
 <ul>
 <li>Also fixed in Bionic and Xenial</li>
-</ul></li>
-</ul></li>
-
-<li><p>Vulnerability specific to the Ubuntu kernel used in Cosmic (18.10)</p>
-
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vulnerability specific to the Ubuntu kernel used in Cosmic (18.10)</p>
 <ul>
 <li>2 bugs discovered as a result of using the secure boot lockdown patchset
-
 <ul>
 <li>Module signatures not properly enforced for UEFI Secure Boot - we had
 enabled the option to do this via IMA but had not then included the IMA
 policy to ensure this was enforced
-
 <ul>
 <li>Fixed by turning off option to verify modules using IMA</li>
-</ul></li>
-<li>Secondary kernel keyring (ie where UEFI MOK goes from shim - used by
-DKMS) not trusted - so modules signed with it wouldn&rsquo;t work (except they
-do due to above)
-
-<ul>
-<li>Fixed to trust keys in secondary keyring for module signing
--</li>
-</ul></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+<li>Secondary kernel keyring (ie where UEFI MOK goes from shim - used by
+DKMS) not trusted - so modules signed with it wouldn't work (except they
+do due to above)
+<ul>
+<li>Fixed to trust keys in secondary keyring for module signing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
 <h3 id="usn-3837-1-poppler-vulnerabilities">[<a href="https://usn.ubuntu.com/3837-1/">USN-3837-1</a>] poppler vulnerabilities</h3>
-
 <ul>
 <li>5 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19149">CVE-2018-19149</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19060">CVE-2018-19060</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19059">CVE-2018-19059</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19058">CVE-2018-19058</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16646">CVE-2018-16646</a></li>
-</ul></li>
+</ul>
+</li>
 <li>NULL pointer dereference when PDF references an embedded file that does not actually exist (crash -&gt; DoS)</li>
 <li>Possible infinite recursion - DoS</li>
 <li>Exit on abort - DoS</li>
 <li>2 for pdfdetach - CLI util to list / extract embedded files from PDFs
-
 <ul>
 <li>Out of bounds read due to fail to validate embedded files</li>
 <li>NULL pointer dereference if embedded file names are invalid</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3811-3-spamassassin-vulnerabilities">[<a href="https://usn.ubuntu.com/3811-3/">USN-3811-3</a>] SpamAssassin vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Precise ESM
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11781">CVE-2018-11781</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11780">CVE-2018-11780</a></li>
-</ul></li>
+</ul>
+</li>
 <li>SpamAssassin was updated to latest version for Trusty, Xenial and Bionic previously (Episode 11)</li>
 <li>This is the corresponding update for Precise ESM</li>
 </ul>
-
 <h3 id="usn-3838-1-libraw-vulnerabilities">[<a href="https://usn.ubuntu.com/3838-1/">USN-3838-1</a>] LibRaw vulnerabilities</h3>
-
 <ul>
 <li>7 CVEs addressed in Trusty, Xenial, Bionic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5816">CVE-2018-5816</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5815">CVE-2018-5815</a></li>
@@ -345,94 +331,84 @@ do due to above)
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5811">CVE-2018-5811</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5810">CVE-2018-5810</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5807">CVE-2018-5807</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Few OOB read -&gt; crash -&gt; DoS</li>
 <li>NULL pointer dereference -&gt; crash -&gt; DoS</li>
 <li>Integer overflow -&gt; infinite loop -&gt; DoS</li>
 <li>Integer overflow -&gt; divide by zero -&gt; crash -&gt; DoS</li>
 <li>Heap-based buffer overflow -&gt; crash -&gt; DoS (possible code execution?)</li>
 </ul>
-
 <h3 id="usn-3839-1-wavpack-vulnerabilities">[<a href="https://usn.ubuntu.com/3839-1/">USN-3839-1</a>] WavPack vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19841">CVE-2018-19841</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19840">CVE-2018-19840</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Infinite loop if WAV file specifies a sample rate of 0 - DoS</li>
 <li>OOB read of heap allocated buffer - crash -&gt; DoS</li>
 </ul>
-
 <h3 id="usn-3840-1-openssl-vulnerabilities">[<a href="https://usn.ubuntu.com/3840-1/">USN-3840-1</a>] OpenSSL vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5407">CVE-2018-5407</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0735">CVE-2018-0735</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0734">CVE-2018-0734</a></li>
-</ul></li>
+</ul>
+</li>
 <li>PortSmash (Episode 11) - purported new Intel CPU side-channel vulnerability -
 but really more an issue in OpenSSL due to needing crypto code to be both
 constant time <strong>and</strong> execution flow independent of secret key</li>
 <li>Timing side-channels in ECDSA and DSA signature algorithms found by Samuel Weiser
-
 <ul>
 <li>Usual thing - variations in time-to-sign can be measured by attacker to recover private signing key</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3831-2-ghostscript-regression">[<a href="https://usn.ubuntu.com/3831-2/">USN-3831-2</a>] Ghostscript regression</h3>
-
 <ul>
 <li>Affecting Trusty, Xenial, Bionic, Cosmic</li>
 <li>Latest GS updates (Episode 14) -&gt; regression
-
 <ul>
 <li>when converting PDFs via ghostscript, would crash when using FirstPage and LastPage options</li>
 <li>used by imagemagick (convert) util and others</li>
 <li>backported addition fix from upstream to resolve this regression</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-
 <h3 id="feedback">Feedback</h3>
-
 <ul>
 <li>Question regarding how to ensure latest updates applied?
-
 <ul>
 <li><a href="https://help.ubuntu.com/community/AutomaticSecurityUpdates">https://help.ubuntu.com/community/AutomaticSecurityUpdates</a></li>
 <li>If regularly update system (apt upgrade / software updater etc) will
 already have latest security updates</li>
 <li>Can make this automatic with unattended-upgrades
-
 <ul>
 <li>Is automatically installed and configured for Ubuntu 18.04 Bionic and newer to install new updates daily</li>
 <li>If want to manually
-
 <ul>
 <li>sudo apt install unattended-upgrades</li>
 <li>sudo dpkg-reconfigure unattended-upgrades</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Canonical Livepatch Service
-
 <ul>
 <li><a href="https://www.ubuntu.com/livepatch">https://www.ubuntu.com/livepatch</a></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 14" />
@@ -177,21 +177,13 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="overview">Overview</h2>
-
+      <h2 id="overview">Overview</h2>
 <p>This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.</p>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <p>32 unique CVEs addressed</p>
-
 <h3 id="usn-3826-1-qemu-vulnerabilities">[<a href="https://usn.ubuntu.com/3826-1/">USN-3826-1</a>] QEMU vulnerabilities</h3>
-
 <ul>
 <li>10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19364">CVE-2018-19364</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18954">CVE-2018-18954</a></li>
@@ -203,9 +195,9 @@
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12617">CVE-2018-12617</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11806">CVE-2018-11806</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10839">CVE-2018-10839</a></li>
-</ul></li>
+</ul>
+</li>
 <li>7 medium, 3 low priority
-
 <ul>
 <li>Integer overflow in virtual network interface driver, able to be triggered
 by user process in guest -&gt; crash -&gt; DoS</li>
@@ -217,66 +209,61 @@ r/w - guest user/process could trigger -&gt; DoS (crash) or possible arbitrary
 code execution on host as qemu process</li>
 <li>Integer type mismatch in rtl8139 and pcnet drivers - (from size_t to int) - unsigned
 to signed - INT_MAX -&gt; -ve -&gt; OOB read - crash / DoS
-
 <ul>
 <li>Copy-pasta?</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="usn-3827-1-usn-3827-2-samba-vulnerabilities">[<a href="https://usn.ubuntu.com/3827-1/">USN-3827-1</a>, USN-3827-2] Samba vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16851">CVE-2018-16851</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1685">CVE-2018-1685</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16841">CVE-2018-16841</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14629">CVE-2018-14629</a></li>
-</ul></li>
+</ul>
+</li>
 <li>CNAME records could point to themselves - infinite recursion in internal AD DNS server
-
 <ul>
 <li>Users can add CNAME records -&gt; user triggerable</li>
-<li>Fix ensures CNAMEs can&rsquo;t refer to themselves</li>
-</ul></li>
+<li>Fix ensures CNAMEs can't refer to themselves</li>
+</ul>
+</li>
 <li>If using smartcard authentication for AD, double free could occur due to mismatch in certificate vs authentication request parameters
-
 <ul>
 <li>talloc - robust against heap corruption - assert() fail - exit - DoS</li>
-</ul></li>
+</ul>
+</li>
 <li>Null pointer dereference when reading more than 256MB of LDAP entries - DoS crash</li>
 </ul>
-
 <h3 id="usn-3828-1-webkitgtk-plus-vulnerabilities">[<a href="https://usn.ubuntu.com/3828-1/">USN-3828-1</a>] WebKitGTK+ vulnerabilities</h3>
-
 <ul>
 <li>3 CVEs addressed in Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4386">CVE-2018-4386</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4372">CVE-2018-4372</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4345">CVE-2018-4345</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Minimal details provided by upstream webkit regarding these advisories:
-
 <ul>
 <li>XSS due to improper URL validation</li>
 <li>Multiple memory corruption issues which could lead to arbitrary code execution</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3816-3-systemd-regression">[<a href="https://usn.ubuntu.com/3816-3/">USN-3816-3</a>] systemd regression</h3>
-
 <ul>
 <li>3 CVEs addressed in Xenial
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15687">CVE-2018-15687</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15686">CVE-2018-15686</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6954">CVE-2018-6954</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Episode 12 &amp; 13 - backport of large upstream patches to better handle symlink resolution in systemd-tmpfiles</li>
 <li>New code uses openat with O_PATH flag internally</li>
 <li>O_PATH was only introduced in Linux kernel 2.6.39</li>
@@ -284,81 +271,70 @@ to signed - INT_MAX -&gt; -ve -&gt; OOB read - crash / DoS
 <li>So if running an Ubuntu Xenial kernel on OpenVZ systemd would fail to work correctly</li>
 <li>OpenVZ have released updated kernel as well to support O_PATH</li>
 </ul>
-
 <h3 id="usn-3829-1-git-vulnerabilities">[<a href="https://usn.ubuntu.com/3829-1/">USN-3829-1</a>] Git vulnerabilities</h3>
-
 <ul>
 <li>2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19486">CVE-2018-19486</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15298">CVE-2017-15298</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Previously would execute commands from CWD, rather than from PATH
-
 <ul>
 <li>Could allow arbitrary code execution if using a malicious repository</li>
-</ul></li>
+</ul>
+</li>
 <li>DoS due to large memory usage (Git Bomb) with specially crafted repository
-
 <ul>
 <li>Small repo with only 12 unique objects inside but that which are duplicated across the repo tree</li>
 <li>Git would usually crash due to running out of memory BUT if did manage to
 survive and write to disk could consume a lot of disk space too</li>
 <li>Only Trusty and Xenial affected (fixed already in Bionic etc)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3830-1-openjdk-regression">[<a href="https://usn.ubuntu.com/3830-1/">USN-3830-1</a>] OpenJDK regression</h3>
-
 <ul>
 <li>Recent OpenJDK update (Episode 10) add stricter checking for JAR files
-
 <ul>
 <li>As a result, failed to find JAR files during build resulting in failed project builds</li>
-</ul></li>
+</ul>
+</li>
 <li>New option should have been disabled by default to give time for other packages to be updated etc to deal wth new behaviour
-
 <ul>
 <li>Is now :)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="usn-3831-1-ghostscript-vulnerabilities">[<a href="https://usn.ubuntu.com/3831-1/">USN-3831-1</a>] Ghostscript vulnerabilities</h3>
-
 <ul>
 <li>4 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19477">CVE-2018-19477</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19476">CVE-2018-19476</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19475">CVE-2018-19475</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19409">CVE-2018-19409</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Even more gs - (Episode 10, 7, 5)</li>
 </ul>
-
 <h3 id="usn-3795-3-libssh-regression">[<a href="https://usn.ubuntu.com/3795-3/">USN-3795-3</a>] libssh regression</h3>
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10933">CVE-2018-10933</a> - covered in Episode 8</li>
 <li>Upstream fix introduced a regression which broke server-side keyboard authentication</li>
 <li>Server-side, not client-side
-
 <ul>
 <li>Not a common scenario used so unlikely to affect many users as need to use
 multiple interactive keyboard-based prompts to trigger (say password and
 token)</li>
 <li>Server would be stuck</li>
-</ul></li>
+</ul>
+</li>
 <li>Backport upstream fix</li>
 </ul>
-
 <h3 id="usn-3832-1-usn-3833-1-linux-kernel--aws--vulnerabilities">[<a href="https://usn.ubuntu.com/3832-1/">USN-3832-1</a>, USN-3833-1] Linux kernel (AWS) vulnerabilities</h3>
-
 <ul>
 <li>6 CVEs addressed in Cosmic, first 2 in Bionic as well
-
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6559">CVE-2018-6559</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18955">CVE-2018-18955</a></li>
@@ -366,72 +342,69 @@ token)</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18445">CVE-2018-18445</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18281">CVE-2018-18281</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972">CVE-2018-17972</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Philipp Wendler discovered Ubuntu specific flaw in the way user namespaces interact with overlayfs</li>
 <li>Allows regular users to list contents of directories which they do not have read-access to (ie could list /root)</li>
 <li>Create a user and a mount namespace and then mount an overlay via overlayfs within it
-
 <ul>
 <li>Within the overlayed mount, if say contained &ldquo;root&rdquo; and was mounted at the
 filesystem root (/), overlayfs would get confused about which permissions
 to use when running and would not use the real underlying permissions but
 would instead use the user supplied ones from the overlayed fs</li>
-</ul></li>
+</ul>
+</li>
 <li>Relates to the fix for a previous CVE (<a href="https://people.canonical.com/~ubuntu-security/cve/2015/CVE-2015-1328.html">CVE-2015-1328</a>)
-
 <ul>
 <li>This fix got dropped during Bionic development cycle so reintroduced this similar vulnerability</li>
 <li>New test added to Ubuntu kernel test suite to ensure this does not regress again in the future</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="open-source-software-supply-chain-integrity">Open Source Software Supply Chain Integrity</h2>
-
 <ul>
 <li>NPM package (event-stream) got hijacked to inject code to target users of copay (Bitcoin wallet)</li>
 <li>Author of event-stream had lost interest, was emailed by a small contributor to take over maintenance and gave them ownership of the repo
-
 <ul>
 <li>Pushed a small change to add a new dependency to the package</li>
 <li>This then contained code to try and bundle itself with target application - copay-dash</li>
 <li>Targetted software supply chain at 2 points - event-stream repo / package AND getting into the build-system for copay-dash as a result
-
 <ul>
 <li>So would bundle bitcoin wallet stealing code into copay-dash</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>2 software supply chain attacks
-
 <ul>
 <li>Hard to fix first one since maintainers can lost interest and hand over to anyone
-
 <ul>
 <li>New owner may not have trust the old one did</li>
-<li>npm doesn&rsquo;t care - is uncurated</li>
-</ul></li>
+<li>npm doesn't care - is uncurated</li>
+</ul>
+</li>
 <li>Copay bundled and distributed dependencies so perhaps should have some responsibility to check those etc</li>
-</ul></li>
+</ul>
+</li>
 <li>Ubuntu is based on Debian and both are curated repos
-
 <ul>
 <li>Packages are maintained by trusted developers</li>
 <li>Much harder to mount a similar attach on Ubuntu / Debian archives due to
 barrier to entry as a trusted developer</li>
 <li>Smaller dependency chains as well compared to npm so harder to hide such an attack as well</li>
-</ul></li>
+</ul>
+</li>
 <li>Snap store is a different story though</li>
 <li>Bottom line - have to trust your software suppliers
-
 <ul>
 <li>Ubuntu - Canonical / trusted maintainers</li>
 <li>Snap store - individual publishers</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>

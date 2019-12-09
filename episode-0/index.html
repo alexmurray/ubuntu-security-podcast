@@ -9,7 +9,7 @@
 
   <meta name="description" content="The first ever episode of the Ubuntu Security Podcast!">
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.0" />
 
 
 <meta property="og:title" content="Episode 0" />
@@ -177,22 +177,15 @@
       </div><div class="row">
     <div class="col">
       <h2>Show Notes</h2>
-      
-
-<h2 id="introduction">Introduction</h2>
-
+      <h2 id="introduction">Introduction</h2>
 <h3 id="what-will-be-covered">What will be covered</h3>
-
 <ul>
 <li>Overview of latest security updates for Ubuntu</li>
 <li>In depth discussion of trending CVEs</li>
 <li>Other things the team has been up to</li>
 </ul>
-
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-
 <h3 id="segmentsmack--cve-2018-5390----usn-3732-1">SegmentSmack (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390">CVE-2018-5390</a>) (<a href="https://usn.ubuntu.com/3732-1/">USN-3732-1</a>)</h3>
-
 <ul>
 <li>DoS via expensive algorithmic computation in TCP stream reassembly</li>
 <li>Requires attacker to have an existing TCP session</li>
@@ -200,105 +193,87 @@
 <li>Fixed in Bionic and Xenial for HWE</li>
 <li>No known exploits in the wild</li>
 </ul>
-
 <h3 id="linux-kernel--lsn-0041-1">linux kernel (<a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2018-August/004529.html">LSN-0041-1</a>)</h3>
-
 <ul>
 <li>brief description of livepatch</li>
 <li>Several issues (5 CVEs)
-
 <ul>
 <li>stack overflow in SCSI / cdrom layers (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-11506">CVE-2018-11506</a>)</li>
 <li>DoS / crash via specially crafted ext4 filesystem (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-1094">CVE-2018-1094</a>)</li>
 <li>files can be created with group permissions which the original owner did not have within sgid directories (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13405">CVE-2018-13405</a>)
-
 <ul>
 <li>Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu</li>
-</ul></li>
+</ul>
+</li>
 <li>DoS / crash via specially crafted xfs filesystem (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094">CVE-2018-13094</a>)</li>
 <li>SegmentSmack fix (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390">CVE-2018-5390</a>)</li>
-</ul></li>
+</ul>
+</li>
 <li>generic &amp; lowlatency kernels for Trusty, Xenial and Bionic</li>
 </ul>
-
 <h3 id="gnupg--cve-2017-7526----usn-3733-1">gnupg (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526">CVE-2017-7526</a>) (<a href="https://usn.ubuntu.com/3733-1/">USN-3733-1</a>)</h3>
-
 <ul>
 <li>Cache side-channel attack on RSA implementation</li>
 <li>When CVE was created, only assigned to libgcrypt</li>
 <li>gnupg quietly announced 1.4.23 as fixing this CVE as well in June
-
 <ul>
 <li>Turns out was actually fixed in 1.4.22</li>
 <li>So Bionic etc not affected</li>
-</ul></li>
+</ul>
+</li>
 <li>Fixed in Trusty and Xenial</li>
 <li>No known exploits in the wild</li>
 </ul>
-
 <h3 id="openjdk--cve-2018-2952----usn-3734-1">openjdk (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-2952">CVE-2018-2952</a>) (<a href="https://usn.ubuntu.com/3734-1/">USN-3734-1</a>)</h3>
-
 <ul>
 <li>Denial of service via excessive memory consumption</li>
 <li>openjdk-7 in trusty and openjdk-8 in xenial</li>
 </ul>
-
 <h3 id="lxc--cve-2018-6556----usn-3730-1">lxc (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-6556">CVE-2018-6556</a>) (<a href="https://usn.ubuntu.com/3730-1/">USN-3730-1</a>)</h3>
-
 <ul>
 <li>Allows opening (but not reading) of arbitrary files
-
 <ul>
 <li>Information disclosure / DoS since could open pseudoterminals or other kernel devices and cause exhausting of resources</li>
-</ul></li>
+</ul>
+</li>
 <li>For lxc &gt;=2.0 - bionic, xenial-backports</li>
 </ul>
-
 <h3 id="libxcursor--cve-2015-9262----usn-3729-1">libxcursor (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2015-9262">CVE-2015-9262</a>) (<a href="https://usn.ubuntu.com/3729-1/">USN-3729-1</a>)</h3>
-
 <ul>
 <li>Classic off-by-one error - string allocation but forgot to allocate byte for NUL terminator
-
 <ul>
 <li>As on the heap allows heap memory corruption</li>
 <li>Possible code execution etc</li>
 <li>In handling of cursor themes so could be triggered when loading a malicious themes</li>
-</ul></li>
+</ul>
+</li>
 <li>Affects libxcursor in trusty and xenial - both fixed</li>
 </ul>
-
 <h3 id="lftp--cve-2018-10196----usn-3731-1">lftp (<a href="http://people.canonical.com/~ubuntu-security/cve/CVE-2018-10196">CVE-2018-10196</a>) (<a href="https://usn.ubuntu.com/3731-1/">USN-3731-1</a>)</h3>
-
 <ul>
 <li>Command-line FTP / HTTP / BitTorrent clients</li>
 <li>Does not properly validate filenames from server when mirroring locally
-
 <ul>
 <li>Could allow a malicious server to remove all files in PWD</li>
-</ul></li>
+</ul>
+</li>
 <li>Fixed in Bionic, Xenial, Trusty &amp; <strong>Precise ESM</strong></li>
 </ul>
-
 <h3 id="subscribe-to-ubuntu-security-announce-mailing-list">Subscribe to ubuntu-security-announce mailing list</h3>
-
 <ul>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce">https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce</a></li>
 </ul>
-
 <h2 id="goings-on-in-ubuntu-security">Goings on in Ubuntu Security</h2>
-
 <h3 id="ncsc-publish-ubuntu-18-dot-04-lts-security-guide">NCSC publish Ubuntu 18.04 LTS Security Guide</h3>
-
 <ul>
 <li>A couple weeks old now, but worth mentioning</li>
 <li>National Cyber Security Centre in UK
-
 <ul>
 <li>Provide infosec guidance to public and private sector</li>
-</ul></li>
+</ul>
+</li>
 <li>Focuses around End User Devices deployed for remote work but applies equally to home / office as well</li>
 <li>Covers guidance such as:
-
 <ul>
 <li>VPN</li>
 <li>Enforcing a given password policy</li>
@@ -306,67 +281,61 @@
 <li>Livepatch</li>
 <li>Firewall configuration</li>
 <li>Auditing</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts">https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts</a></li>
 <li><a href="https://blog.ubuntu.com/2018/07/30/national-cyber-security-centre-publish-ubuntu-18-04-lts-security-guide">https://blog.ubuntu.com/2018/07/30/national-cyber-security-centre-publish-ubuntu-18-04-lts-security-guide</a></li>
 </ul>
-
-<h3 id="seth-arnold-s-apparmor-3-dot-0-presentation-at-debconf">Seth Arnold&rsquo;s AppArmor 3.0 presentation at DebConf</h3>
-
+<h3 id="seth-arnold-s-apparmor-3-dot-0-presentation-at-debconf">Seth Arnold's AppArmor 3.0 presentation at DebConf</h3>
 <ul>
 <li>Overview of AppArmor with brief history and walkthough of main features</li>
 <li>Efforts to enable AppArmor by default in Debian Buster (10)</li>
 <li>Ongoing work to upstream the latest AppArmor changes
-
 <ul>
 <li>Course-grained network mediation (AF_INET / AF_IET6)</li>
 <li>DBus mediation
-
 <ul>
 <li>Almost all are now in Linux kernel 4.19</li>
-</ul></li>
+</ul>
+</li>
 <li>Some remain for 4.20
-
 <ul>
 <li>Unix sockets</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Future directions for AppArmor
-
 <ul>
 <li>IMA-aware policy (in 4.17, requires AppArmor 3.0 userspace)
-
 <ul>
 <li>Contributed by Google, hopefully will be available soon</li>
-</ul></li>
+</ul>
+</li>
 <li>Fine-grained networking mediation (ie. port level mediation)</li>
 <li>Shared memory mediation</li>
 <li>cgroups</li>
 <li>overlayfs</li>
 <li>user specific policy</li>
-</ul></li>
+</ul>
+</li>
 <li>Multiple namespaces support for AppArmor
-
 <ul>
 <li>LXD / libvirt / snapd / docker</li>
 <li>policy within a namespace (and policy outside the namespace too)</li>
-</ul></li>
+</ul>
+</li>
 <li>Demo of LXD with namespaced policy</li>
 <li><a href="https://debconf18.debconf.org/talks/106-apparmor-30/">https://debconf18.debconf.org/talks/106-apparmor-30/</a></li>
 </ul>
-
 <h3 id="hiring">Hiring</h3>
-
 <h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
-
 <ul>
 <li><a href="https://boards.greenhouse.io/canonical/jobs/1158266">https://boards.greenhouse.io/canonical/jobs/1158266</a></li>
 </ul>
-
 <h2 id="get-in-contact">Get in contact</h2>
-
 <ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
