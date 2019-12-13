@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 9 Dec 2019 13:05:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 20:49:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,253 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 56</title>
+          <link>https://ubuntusecuritypodcast.org/episode-56/</link>
+          <pubDate>Fri, 13 Dec 2019 20:49:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>f287302b1359224248445e7bc22ea58930f25defb4f809f390a9c6589bef6a2fd5f945c313fbf20124d5d495339fa35f77edf452e00177e07b1c3ee0555d9a40</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  In the second to last episode for 2019, we look at security updates for
+  Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp
+  hacker indictments, unsecured AWS S3 buckets and more.
+  </itunes:summary>
+        <description>  In the second to last episode for 2019, we look at security updates for
+  Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp
+  hacker indictments, unsecured AWS S3 buckets and more.
+  </description>
+        <googleplay:description>  In the second to last episode for 2019, we look at security updates for
+  Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp
+  hacker indictments, unsecured AWS S3 buckets and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>In the second to last episode for 2019, we look at security updates for
+Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp
+hacker indictments, unsecured AWS S3 buckets and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>43 unique CVEs addressed</p>
+<h3 id="usn-4212-1-haproxy-vulnerability-00-50">[<a href="https://usn.ubuntu.com/4212-1/">USN-4212-1</a>] HAProxy vulnerability [00:50]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19330">CVE-2019-19330</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to treat malformed headers as invalid - HTTP/2 allows encoding
+headers as binary and these can then contain characters which would be
+invalid when converted to HTTP/1.1 - as such these should be treated as
+invalid, otherwise allows to send on invalid headers to HTTP/1.1 servers
+and could be used to launch attacks against them - so test for and reject
+in valid chars (CR, LF and NUL)</li>
+</ul>
+<h3 id="usn-4213-1-squid-vulnerabilities-01-37">[<a href="https://usn.ubuntu.com/4213-1/">USN-4213-1</a>] Squid vulnerabilities [01:37]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18679">CVE-2019-18679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18678">CVE-2019-18678</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18677">CVE-2019-18677</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676">CVE-2019-18676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12854">CVE-2019-12854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12526">CVE-2019-12526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523">CVE-2019-12523</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 issues in URN handling (uniform resource name, globally unique
+identifier within a particular namespace - e.g. urn:ietf:rfc:2648):
+<ul>
+<li>When handling URN requests Squid makes a corresponding HTTP request but
+the various access control checks that are normally done for HTTP
+weren't done so could end up accessing restricted HTTP resources (such
+as servers that listen to localhost etc)</li>
+<li>Heap buffer overflow if response received from a server that is
+handling a URN request does not fit within the buffer</li>
+<li>Failure to NUL terminal strings - buffer overflow on read -&gt; crash in
+cachemgr cgi process - DoS to all clients using the cachemgr</li>
+</ul>
+</li>
+<li>Able to redirect traffic to origins that should be disallowed due to use
+of append_domain setting</li>
+<li>HTTP request smuggling (<a href="https://ubuntusecuritypodcast.org/episode-52/">Episode 52</a> for HAProxy)</li>
+<li>Nonces used for HTTP digest authentication were generated from a raw byte
+value of a pointer from a heap memory allocation - this allows attackers
+to deduce this pointer value and therefore help to defeat ASLR</li>
+</ul>
+<h3 id="usn-4214-1-rabbitmq-vulnerability-03-54">[<a href="https://usn.ubuntu.com/4214-1/">USN-4214-1</a>] RabbitMQ vulnerability [03:54]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18609">CVE-2019-18609</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Integer overflow if a client sent a frame of size close to UINT32_MAX - a
+resulting size is calculated that could overflow, and then memory
+allocated with this overflowed (and hence small) size, resulting in a
+heap buffer overflow when the frame is copied to that resulting buffer -
+so instead just reject frames greater than INT32_MAX</li>
+</ul>
+<h3 id="usn-4215-1-nss-vulnerability-04-38">[<a href="https://usn.ubuntu.com/4215-1/">USN-4215-1</a>] NSS vulnerability [04:38]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17007">CVE-2019-17007</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL pointer dereference -&gt; crash -&gt; DoS when handling Netscape
+Certificate Sequences (a type of encoded certificate) handled by NSS</li>
+</ul>
+<h3 id="usn-4216-1-firefox-vulnerabilities-05-07">[<a href="https://usn.ubuntu.com/4216-1/">USN-4216-1</a>] Firefox vulnerabilities [05:07]</h3>
+<ul>
+<li>9 CVEs addressed in Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17014">CVE-2019-17014</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17013">CVE-2019-17013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17012">CVE-2019-17012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17011">CVE-2019-17011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17010">CVE-2019-17010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17008">CVE-2019-17008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17005">CVE-2019-17005</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11756">CVE-2019-11756</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745">CVE-2019-11745</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream firefox release (71.0)
+<ul>
+<li>Includes fix for NSS issue discussed last week plus other sorts of issues:
+<ul>
+<li>UAFs</li>
+<li>Stack memory corruption</li>
+<li>Heap buffer overflows etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4217-1-samba-vulnerabilities-05-45">[<a href="https://usn.ubuntu.com/4217-1/">USN-4217-1</a>] Samba vulnerabilities [05:45]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14870">CVE-2019-14870</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14861">CVE-2019-14861</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Kerberos delegation allows to be configured as non-forwardable - but this
+would not be honored properly by the Samba AD DC - so could allow
+delegation to be forwarded by clients even when was disabled by config</li>
+<li>Able to read invalid memory and so crash AD DC if a DNS record was
+created that matched the name of a DNS zone due to type confusion</li>
+</ul>
+<h3 id="usn-4218-1-gnu-c-vulnerability-06-43">[<a href="https://usn.ubuntu.com/4218-1/">USN-4218-1</a>] GNU C vulnerability [06:43]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6485">CVE-2018-6485</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>eglibc was used as the standard libc in Ubuntu in older releases like
+Trusty/Precise etc - posix_memalign integer overflow - allocates memory
+of a given size aligned to a certain size - could return a smaller area
+than requested -&gt; heap overflow as a result</li>
+</ul>
+<h3 id="usn-4219-1-libssh-vulnerability-07-30">[<a href="https://usn.ubuntu.com/4219-1/">USN-4219-1</a>] libssh vulnerability [07:30]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14889">CVE-2019-14889</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>libssh ssh_scp_new() function takes a 3rd argument - if this could be
+attacker influenced then could possible inject arbitrary commands which
+will then be run on the server - so requires the API to be used in a
+particular way - but could then allow users to execute commands on the
+server even if they should only have been able to copy files</li>
+</ul>
+<h3 id="usn-4220-1-git-vulnerabilities-08-16">[<a href="https://usn.ubuntu.com/4220-1/">USN-4220-1</a>] Git vulnerabilities [08:16]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19604">CVE-2019-19604</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1387">CVE-2019-1387</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1354">CVE-2019-1354</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1353">CVE-2019-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1352">CVE-2019-1352</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1351">CVE-2019-1351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1350">CVE-2019-1350</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1349">CVE-2019-1349</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1348">CVE-2019-1348</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>RCE if clone a malicious repo with a crafted .gitmodules file (used to
+specify git submodules for the parent repo)</li>
+<li>Mishandling of CLI arguments during cloning of repos via SSH URLs allowed
+possible RCE</li>
+<li>Arbitrary path overwrite during a fast-import due to incorrect handling
+of the export-marks option</li>
+<li>WSL relevant issues:
+<ul>
+<li>On Windows would write out filenames that contained backslashes even
+though these then act as directory separators on Windows</li>
+<li>Wouldn't enforce NTFS protections in the working directory</li>
+<li>Didn't take into account NTFS Alternate Data Streams, allowing files
+inside the .git dir to be overwritten during clone (file attribute
+specific to NTFS, allowing to store data for a file alongside the
+actual file itself)</li>
+<li>Second attack via NTFS ADS via name squatting on the git~2 short-name</li>
+<li>Didn't handle Window virtual drives which can be named as not just say
+A: but a full name - git would handle these as relative paths, allowing
+writing outside the worktree during a clone</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4202-2-thunderbird-regression-10-15">[<a href="https://usn.ubuntu.com/4202-2/">USN-4202-2</a>] Thunderbird regression [10:15]</h3>
+<ul>
+<li>10 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903">CVE-2019-15903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764">CVE-2019-11764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763">CVE-2019-11763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762">CVE-2019-11762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761">CVE-2019-11761</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760">CVE-2019-11760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759">CVE-2019-11759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11758">CVE-2019-11758</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757">CVE-2019-11757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11755">CVE-2019-11755</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Upstream regression - previous update 68.2.1 could result in a new
+profile being created for some users so would appear to lose settings etc</li>
+</ul>
+<h3 id="usn-4221-1-libpcap-vulnerability-10-37">[<a href="https://usn.ubuntu.com/4221-1/">USN-4221-1</a>] libpcap vulnerability [10:37]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15165">CVE-2019-15165</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible buffer overflow when handling PHB headers - confusion upstream
+about which commit fixes which part but have included all the various
+commits from upstream - thanks Steve for taking the time to dig into this
+issue</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-evil-corp-hackers-and-unsecured-s3-buckets-11-06">Alex and Joe discuss Evil Corp hackers and unsecured S3 buckets [11:06]</h3>
+<ul>
+<li><a href="https://threatpost.com/birth-certificate-data-multiple-states/150948/">https://threatpost.com/birth-certificate-data-multiple-states/150948/</a></li>
+<li><a href="https://threatpost.com/feds-5m-reward-evil-corp-dridex-hacker/150858/">https://threatpost.com/feds-5m-reward-evil-corp-dridex-hacker/150858/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E056.mp3" length="25564185" type="audio/mpeg" /><itunes:duration>26:37</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 55</title>
           <link>https://ubuntusecuritypodcast.org/episode-55/</link>
@@ -277,7 +524,7 @@ models</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -567,7 +814,7 @@ so would cause a DoS</li>
 <h3 id="joe-and-alex-discuss-how-to-get-into-infosec-12-18">Joe and Alex discuss how to get into infosec [12:18]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -846,7 +1093,7 @@ issues</li>
 <h3 id="20-dot-04-roadmap-sprint-14-55">20.04 Roadmap Sprint [14:55]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -995,7 +1242,7 @@ is now disabled by default)</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -1193,7 +1440,7 @@ the crash dump could end up in a location of their choosing</li>
 <h3 id="joe-and-alex-discuss-what-scares-them-for-halloween-12-38">Joe and Alex discuss what scares them for Halloween [12:38]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -1454,7 +1701,7 @@ sysctl user.max_user_namespaces=0</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -1627,7 +1874,7 @@ priority issues (buffer over-reads in WAV handling etc)</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -1795,7 +2042,7 @@ bzip2 itself in Ubuntu in <a href="https://ubuntusecuritypodcast.org/episode-38/
 <h3 id="alex-addresses-some-concerns-with-the-perceived-security-of-the-snap-store-20-44">Alex addresses some concerns with the perceived security of the Snap Store [20:44]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -2158,7 +2405,7 @@ and <a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened IRC 
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
@@ -2624,7 +2871,7 @@ the systems DNS resolver settings</li>
 <h3 id="joe-and-alex-also-discuss-password-stashes-20-33">Joe and Alex also discuss password stashes [20:33]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -2790,7 +3037,7 @@ lead to crash</p>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -2973,7 +3220,7 @@ DoS / RCE</li>
 </ul>
 <h2 id="get-in-contact-21-45">Get in contact [21:45]</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -3241,7 +3488,7 @@ passwords etc</li>
 <h3 id="history-of-ubuntu-security-with-jamie-strandboge-and-joe-mcmanus">History of Ubuntu Security with Jamie Strandboge and Joe McManus</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -3368,7 +3615,7 @@ to have inexact argument type matching otherwise will be disallowed.</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -3783,7 +4030,7 @@ due to use of regex with backtracking</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -4162,7 +4409,7 @@ maybe RCE&hellip;
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -4325,7 +4572,7 @@ resistant keyserver</a></li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -4626,7 +4873,7 @@ usually hard-coded to 48) - so can be increased to avoid this DoS issue</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -4866,7 +5113,7 @@ denied hosts from repeatedly trying</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -5078,7 +5325,7 @@ upstream released 67.0.2 which is this new update.</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -5322,7 +5569,7 @@ fact upgraded and therefore think the old profile data was invalid</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -5529,7 +5776,7 @@ version than in backporting</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -5766,7 +6013,7 @@ mediation</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -6109,7 +6356,7 @@ itself</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -6272,7 +6519,7 @@ escaping this data</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -6439,7 +6686,7 @@ mode - fixed by sanitising this filename first</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -6707,7 +6954,7 @@ packages in main by the security team</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -6946,7 +7193,7 @@ rsync or scp</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -7272,7 +7519,7 @@ malicious f2fs images</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -7569,7 +7816,7 @@ and plugins</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -7777,7 +8024,7 @@ mishandling of variable length function arguments - all crash -&gt; DoS</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -7955,7 +8202,7 @@ various Ubuntu kernel configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -8096,7 +8343,7 @@ various Ubuntu kernel configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -8274,7 +8521,7 @@ various Ubuntu kernel configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -8439,7 +8686,7 @@ various Ubuntu kernel configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -8646,7 +8893,7 @@ pass to it to run</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -8833,7 +9080,7 @@ pass to it to run</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -9029,7 +9276,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -9303,7 +9550,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -9453,7 +9700,7 @@ RWX segment at a fixed location, which can be used to bypass DEP / ASLR
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -9697,7 +9944,7 @@ already have latest security updates</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -9942,7 +10189,7 @@ barrier to entry as a trusted developer</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -10049,7 +10296,7 @@ barrier to entry as a trusted developer</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -10320,7 +10567,7 @@ is empty)</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -10521,7 +10768,7 @@ is empty)</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -10647,7 +10894,7 @@ is empty)</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -10873,7 +11120,7 @@ malicious extension - then could privilege escalation or local code execution</l
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11004,7 +11251,7 @@ the system package so weren't affected</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11259,7 +11506,7 @@ format handling leading to DoS etc</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11366,7 +11613,7 @@ format handling leading to DoS etc</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11603,7 +11850,7 @@ allows remote DoS or possibly remote code execution</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11739,7 +11986,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -11905,7 +12152,7 @@ in time and hence the feature had to be disabled</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -12187,7 +12434,7 @@ boot for some hardware configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -12349,7 +12596,7 @@ boot for some hardware configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
@@ -12530,7 +12777,7 @@ boot for some hardware configurations</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
-<li><a href="mailto:security@ubuntu.com"><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></a></li>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
