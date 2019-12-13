@@ -2,9 +2,9 @@
 title = "Episode 19"
 description = "This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in [Episode 17](https://ubuntusecuritypodcast.org/episode-17/)."
 date = 2019-02-04
-lastmod = 2019-12-09T13:07:12+10:30
+lastmod = 2019-12-13T20:51:21+10:30
 draft = false
-weight = 1037
+weight = 1038
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E019.mp3"
