@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 13 Dec 2019 20:49:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2019 13:36:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,122 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 57</title>
+          <link>https://ubuntusecuritypodcast.org/episode-57/</link>
+          <pubDate>Thu, 19 Dec 2019 13:36:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>b113e6411042301448ceef505c8f2dd3c9a8081cc39c6a7758beb85d457fe90468ce0d6dd8f225cdb41fef3f48a53672c0b6cceaace7af7c18dea7cae8f09dd3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  In the final episode of 2019, we look at security updates for RabbitMQ,
+  GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+  day-in-the-life of a Ubuntu Security Team member.
+  </itunes:summary>
+        <description>  In the final episode of 2019, we look at security updates for RabbitMQ,
+  GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+  day-in-the-life of a Ubuntu Security Team member.
+  </description>
+        <googleplay:description>  In the final episode of 2019, we look at security updates for RabbitMQ,
+  GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+  day-in-the-life of a Ubuntu Security Team member.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>In the final episode of 2019, we look at security updates for RabbitMQ,
+GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+day-in-the-life of a Ubuntu Security Team member.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>34 unique CVEs addressed</p>
+<h3 id="usn-4217-2-samba-vulnerabilities-01-00">[<a href="https://usn.ubuntu.com/4217-2/">USN-4217-2</a>] Samba vulnerabilities [01:00]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14870">CVE-2019-14870</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14861">CVE-2019-14861</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>See <a href="https://ubuntusecuritypodcast.org/episode-56/">Episode 56</a></li>
+</ul>
+<h3 id="usn-4214-2-rabbitmq-vulnerability-01-23">[<a href="https://usn.ubuntu.com/4214-2/">USN-4214-2</a>] RabbitMQ vulnerability [01:23]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18609">CVE-2019-18609</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>AMQP implementation</li>
+<li>Possible integer overflow when handling the CONNECTION_STATE_HEADER
+frame - rogue server could return a malicious frame header which is then
+processed by the client and leads to a smaller target_size value due to
+integer overflow - then when the frame data is copied in via memcpy()
+this would overwrite past the bounds of the heap allocation, and with
+attacker controlled data</li>
+<li>Not an issue if connecting to trusted servers</li>
+</ul>
+<h3 id="usn-4222-1-graphicsmagick-vulnerabilities-02-28">[<a href="https://usn.ubuntu.com/4222-1/">USN-4222-1</a>] GraphicsMagick vulnerabilities [02:28]</h3>
+<ul>
+<li>15 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13777">CVE-2017-13777</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13776">CVE-2017-13776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13775">CVE-2017-13775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13737">CVE-2017-13737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13134">CVE-2017-13134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13065">CVE-2017-13065</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13064">CVE-2017-13064</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13063">CVE-2017-13063</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12937">CVE-2017-12937</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12936">CVE-2017-12936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12935">CVE-2017-12935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11643">CVE-2017-11643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11642">CVE-2017-11642</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11641">CVE-2017-11641</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11638">CVE-2017-11638</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-55/">Episode 55</a> covered previous update for GraphicsMagick - more of the same
+here</li>
+</ul>
+<h3 id="usn-4223-1-openjdk-vulnerabilities-03-00">[<a href="https://usn.ubuntu.com/4223-1/">USN-4223-1</a>] OpenJDK vulnerabilities [03:00]</h3>
+<ul>
+<li>16 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2999">CVE-2019-2999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2992">CVE-2019-2992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2989">CVE-2019-2989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2988">CVE-2019-2988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2987">CVE-2019-2987</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2983">CVE-2019-2983</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2978">CVE-2019-2978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2977">CVE-2019-2977</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2975">CVE-2019-2975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2981">CVE-2019-2981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2973">CVE-2019-2973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2964">CVE-2019-2964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2962">CVE-2019-2962</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2949">CVE-2019-2949</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2945">CVE-2019-2945</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2894">CVE-2019-2894</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream micro-release for openjdk 8 and openjdk 11</li>
+<li>Various mix of issues (buffer overflows, NULL pointer dereferences and
+various denial of service issues on application crashes in different
+scenarios) - see the full USN for details</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-and-alex-discuss-a-day-in-the-life-of-a-ubuntu-security-team-member-03-50">Joe and Alex discuss a day-in-the-life of a Ubuntu Security Team member [03:50]</h3>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E057.mp3" length="18082298" type="audio/mpeg" /><itunes:duration>18:50</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 56</title>
           <link>https://ubuntusecuritypodcast.org/episode-56/</link>

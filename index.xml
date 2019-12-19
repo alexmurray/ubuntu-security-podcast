@@ -6,10 +6,30 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Dec 2019 20:49:00 +1030</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2019 13:36:00 +1030</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 57</title>
+      <link>https://ubuntusecuritypodcast.org/episode-57/</link>
+      <pubDate>Thu, 19 Dec 2019 13:36:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-57/</guid>
+      <description>Overview In the final episode of 2019, we look at security updates for RabbitMQ, GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical day-in-the-life of a Ubuntu Security Team member.
+This week in Ubuntu Security Updates 34 unique CVEs addressed
+[USN-4217-2] Samba vulnerabilities [01:00]  2 CVEs addressed in Trusty ESM  CVE-2019-14870  CVE-2019-14861    See Episode 56  [USN-4214-2] RabbitMQ vulnerability [01:23]  1 CVEs addressed in Xenial, Bionic  CVE-2019-18609    AMQP implementation Possible integer overflow when handling the CONNECTION_STATE_HEADER frame - rogue server could return a malicious frame header which is then processed by the client and leads to a smaller target_size value due to integer overflow - then when the frame data is copied in via memcpy() this would overwrite past the bounds of the heap allocation, and with attacker controlled data Not an issue if connecting to trusted servers  [USN-4222-1] GraphicsMagick vulnerabilities [02:28]  15 CVEs addressed in Xenial  CVE-2017-13777  CVE-2017-13776  CVE-2017-13775  CVE-2017-13737  CVE-2017-13134  CVE-2017-13065  CVE-2017-13064  CVE-2017-13063  CVE-2017-12937  CVE-2017-12936  CVE-2017-12935  CVE-2017-11643  CVE-2017-11642  CVE-2017-11641  CVE-2017-11638    Episode 55 covered previous update for GraphicsMagick - more of the same here  [USN-4223-1] OpenJDK vulnerabilities [03:00]  16 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-2999  CVE-2019-2992  CVE-2019-2989  CVE-2019-2988  CVE-2019-2987  CVE-2019-2983  CVE-2019-2978  CVE-2019-2977  CVE-2019-2975  CVE-2019-2981  CVE-2019-2973  CVE-2019-2964  CVE-2019-2962  CVE-2019-2949  CVE-2019-2945  CVE-2019-2894    Latest upstream micro-release for openjdk 8 and openjdk 11 Various mix of issues (buffer overflows, NULL pointer dereferences and various denial of service issues on application crashes in different scenarios) - see the full USN for details  Goings on in Ubuntu Security Community Joe and Alex discuss a day-in-the-life of a Ubuntu Security Team member [03:50] Get in contact  security@ubuntu.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/about/</guid>
+      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+    </item>
     
     <item>
       <title>Episode 56</title>
@@ -23,12 +43,12 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://ubuntusecuritypodcast.org/about/</link>
+      <title>Contact</title>
+      <link>https://ubuntusecuritypodcast.org/contact/</link>
       <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/about/</guid>
-      <description>Ubuntu Security Podcast is a weekly podcast discussing the latest updates and developments from the Ubuntu Security Team.</description>
+      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
+      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
@@ -40,15 +60,6 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed
       <description>Overview This week we cover security updates for NSS, SQLite, the Linux kernel and more, plus Joe and Alex discuss a recent FBI advisory warning about possible dangers of Smart TVs.
 This week in Ubuntu Security Updates 49 unique CVEs addressed
 [USN-4203-1, USN-4203-2] NSS vulnerability [00:59]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11745    OOB write if using an output buffer smaller than the block size (since used block size instead of buffer size) when writing output for NSC_EncryptUpdate()  [USN-4204-1] psutil vulnerability [02:05]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-18874    Double free due to mishandling of reference counting when handling errors during conversion of system data into Python objects - could be triggered when using a malicious disk partition label with an invalid character that fails to decode - so triggers error than fails to cleanup properly and results in a double free  [USN-4205-1] SQLite vulnerabilities [02:59]  6 CVEs addressed in Precise ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-5827  CVE-2019-5018  CVE-2019-19244  CVE-2019-19242  CVE-2019-16168  CVE-2018-8740    Various robustness updates for SQLite related to CVEs from other applications that misuse SQLite - so this makes SQLite more tolerant if it is misused in the future - plus a fix of a possible crash (DoS) under certain usage scenarios.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://ubuntusecuritypodcast.org/contact/</link>
-      <pubDate>Wed, 15 Aug 2018 12:26:17 +0930</pubDate>
-      
-      <guid>https://ubuntusecuritypodcast.org/contact/</guid>
-      <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
     </item>
     
     <item>
