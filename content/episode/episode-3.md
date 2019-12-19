@@ -2,9 +2,9 @@
 title = "Episode 3"
 description = "This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team."
 date = 2018-09-03
-lastmod = 2019-12-13T20:51:48+10:30
+lastmod = 2019-12-19T13:39:11+10:30
 draft = false
-weight = 1054
+weight = 1055
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E003.mp3"

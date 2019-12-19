@@ -8,6 +8,92 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 57
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-57
+:EXPORT_DATE: 2019-12-19 13:36
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E057.mp3 :podcast_duration "18:50" :podcast_bytes "18082298" :permalink "https://ubuntusecuritypodcast.org/episode-57/" :guid b113e6411042301448ceef505c8f2dd3c9a8081cc39c6a7758beb85d457fe90468ce0d6dd8f225cdb41fef3f48a53672c0b6cceaace7af7c18dea7cae8f09dd3
+:END:
+#+begin_description
+In the final episode of 2019, we look at security updates for RabbitMQ,
+GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+day-in-the-life of a Ubuntu Security Team member.
+#+end_description
+** Overview
+In the final episode of 2019, we look at security updates for RabbitMQ,
+GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
+day-in-the-life of a Ubuntu Security Team member.
+** This week in Ubuntu Security Updates
+34 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4217-2/][USN-4217-2]]] Samba vulnerabilities [01:00]
+- 2 CVEs addressed in Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14870][CVE-2019-14870]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14861][CVE-2019-14861]] <!-- medium -->
+- See [[https://ubuntusecuritypodcast.org/episode-56/][Episode 56]]
+
+*** [[[https://usn.ubuntu.com/4214-2/][USN-4214-2]]] RabbitMQ vulnerability [01:23]
+- 1 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18609][CVE-2019-18609]] <!-- medium -->
+- AMQP implementation
+- Possible integer overflow when handling the CONNECTION_STATE_HEADER
+  frame - rogue server could return a malicious frame header which is then
+  processed by the client and leads to a smaller target_size value due to
+  integer overflow - then when the frame data is copied in via memcpy()
+  this would overwrite past the bounds of the heap allocation, and with
+  attacker controlled data
+- Not an issue if connecting to trusted servers
+
+*** [[[https://usn.ubuntu.com/4222-1/][USN-4222-1]]] GraphicsMagick vulnerabilities [02:28]
+- 15 CVEs addressed in Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13777][CVE-2017-13777]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13776][CVE-2017-13776]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13775][CVE-2017-13775]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13737][CVE-2017-13737]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13134][CVE-2017-13134]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13065][CVE-2017-13065]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13064][CVE-2017-13064]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13063][CVE-2017-13063]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12937][CVE-2017-12937]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12936][CVE-2017-12936]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12935][CVE-2017-12935]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11643][CVE-2017-11643]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11642][CVE-2017-11642]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11641][CVE-2017-11641]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11638][CVE-2017-11638]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-55/][Episode 55]] covered previous update for GraphicsMagick - more of the same
+  here
+
+*** [[[https://usn.ubuntu.com/4223-1/][USN-4223-1]]] OpenJDK vulnerabilities [03:00]
+- 16 CVEs addressed in Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2999][CVE-2019-2999]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2992][CVE-2019-2992]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2989][CVE-2019-2989]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2988][CVE-2019-2988]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2987][CVE-2019-2987]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2983][CVE-2019-2983]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2978][CVE-2019-2978]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2977][CVE-2019-2977]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2975][CVE-2019-2975]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2981][CVE-2019-2981]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2973][CVE-2019-2973]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2964][CVE-2019-2964]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2962][CVE-2019-2962]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2949][CVE-2019-2949]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2945][CVE-2019-2945]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2894][CVE-2019-2894]] <!-- medium -->
+- Latest upstream micro-release for openjdk 8 and openjdk 11
+- Various mix of issues (buffer overflows, NULL pointer dereferences and
+  various denial of service issues on application crashes in different
+  scenarios) - see the full USN for details
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss a day-in-the-life of a Ubuntu Security Team member [03:50]
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 56
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-56

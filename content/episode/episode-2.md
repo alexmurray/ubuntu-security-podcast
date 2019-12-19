@@ -2,9 +2,9 @@
 title = "Episode 2"
 description = "L1TF kernel regressions, WPA2 key recovery, mirror fail and more!"
 date = 2018-08-28
-lastmod = 2019-12-13T20:51:50+10:30
+lastmod = 2019-12-19T13:39:13+10:30
 draft = false
-weight = 1055
+weight = 1056
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E002.mp3"

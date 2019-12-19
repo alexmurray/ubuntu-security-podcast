@@ -7,9 +7,9 @@ description = """
   Magazine.
   """
 date = 2019-10-03T20:22:00+09:30
-lastmod = 2019-12-13T20:50:29+10:30
+lastmod = 2019-12-19T13:37:42+10:30
 draft = false
-weight = 1010
+weight = 1011
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E047.mp3"
