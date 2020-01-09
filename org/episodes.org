@@ -8,6 +8,158 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 58
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-58
+:EXPORT_DATE: 2020-01-09 16:18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E058.mp3 :podcast_duration "20:28" :podcast_bytes "19662183" :permalink "https://ubuntusecuritypodcast.org/episode-58/" :guid aa89e8be26bc96c93cdda67991584e240fb69ddc262f36bc78c6a68036b1f3f625c4c73f925044ad21e00debb61ddf7498c304e58b97ad272607ec46c5835760
+:END:
+#+begin_description
+In the first episode for 2020, we look at security updates for Django and
+the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+smart assistant connected devices.
+#+end_description
+** Overview
+In the first episode for 2020, we look at security updates for Django and
+the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+smart assistant connected devices.
+** This week in Ubuntu Security Updates
+34 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4224-1/][USN-4224-1]]] Django vulnerability [00:51]
+- 1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19844][CVE-2019-19844]] <!-- high -->
+- Account takeover via password reset - when comparing email addresses,
+  would not do a proper unicode comparison - and so could specify an email
+  address which appears equal to an existing users email address (after
+  unicode case and character transmformation) and would then get sent a
+  token to reset their accounts password to your doppleganger email
+  address. Fix includes doing both a proper unicode case comparison AND
+  sending the password reset token to the email address to the one
+  registered against the user account, not the one input to the password
+  reset field.
+
+*** [[[https://usn.ubuntu.com/4225-1/][USN-4225-1]]] Linux kernel vulnerabilities [02:25]
+- 5.3 kernel
+- 18 CVEs addressed in Bionic (Azure and GCP edge), Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813][CVE-2019-18813]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807][CVE-2019-19807]] <!-- medium -->
+    - UAF in ALSA timer implementation - local user - crash (DoS) / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534][CVE-2019-19534]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529][CVE-2019-19529]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524][CVE-2019-19524]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072][CVE-2019-19072]] <!-- medium -->
+    - Memory leak in tracing subsystem -> DoS
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055][CVE-2019-19055]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052][CVE-2019-19052]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051][CVE-2019-19051]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19047][CVE-2019-19047]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045][CVE-2019-19045]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19044][CVE-2019-19044]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660][CVE-2019-18660]] <!-- medium -->
+    - SpectreRSB mitigations not properly enforced on PPC
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231][CVE-2019-16231]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897][CVE-2019-14897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896][CVE-2019-14896]] <!-- medium -->
+    - 2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901][CVE-2019-14901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895][CVE-2019-14895]] <!-- medium -->
+    - 2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
+
+*** [[[https://usn.ubuntu.com/4226-1/][USN-4226-1]]] Linux kernel vulnerabilities [03:58]
+- 5.0 kernel
+- 28 CVEs addressed in Bionic (AWS & Oracle Edge, Azure, GKE), Disco
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813][CVE-2019-18813]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075][CVE-2019-17075]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214][CVE-2019-2214]] <!-- medium -->
+    - Binder IPC OOB write - crash, ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19922][CVE-2019-19922]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534][CVE-2019-19534]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19532][CVE-2019-19532]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529][CVE-2019-19529]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19526][CVE-2019-19526]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524][CVE-2019-19524]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083][CVE-2019-19083]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075][CVE-2019-19075]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072][CVE-2019-19072]] <!-- medium -->
+    - Memory leak in tracing subsystem -> DoS
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067][CVE-2019-19067]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065][CVE-2019-19065]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060][CVE-2019-19060]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055][CVE-2019-19055]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052][CVE-2019-19052]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048][CVE-2019-19048]] <!-- medium -->
+    - Memory leak in virtualbox guest driver -> DoS
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045][CVE-2019-19045]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660][CVE-2019-18660]] <!-- medium -->
+    - SpectreRSB mitigations not properly enforced on PPC
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133][CVE-2019-17133]] <!-- medium -->
+    - Wifi stack failed to validate SSID IE length - buffer overflow
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233][CVE-2019-16233]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231][CVE-2019-16231]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897][CVE-2019-14897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896][CVE-2019-14896]] <!-- medium -->
+    - 2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901][CVE-2019-14901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895][CVE-2019-14895]] <!-- medium -->
+    - 2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10220][CVE-2019-10220]] <!-- medium -->
+    - Kernel CIFS impl failed to sanitize paths returned from SMB server -
+      malicious server could overwrite arbitrary files on the client
+
+*** [[[https://usn.ubuntu.com/4227-1/][USN-4227-1]], [[https://usn.ubuntu.com/4227-2/][USN-4227-2]]] Linux kernel vulnerabilities [05:36]
+- 14 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807][CVE-2019-19807]] <!-- medium -->
+    - UAF in ALSA timer implementation - local user - crash (DoS) / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534][CVE-2019-19534]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529][CVE-2019-19529]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524][CVE-2019-19524]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083][CVE-2019-19083]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052][CVE-2019-19052]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045][CVE-2019-19045]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660][CVE-2019-18660]] <!-- medium -->
+    - SpectreRSB mitigations not properly enforced on PPC
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233][CVE-2019-16233]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231][CVE-2019-16231]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897][CVE-2019-14897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896][CVE-2019-14896]] <!-- medium -->
+    - 2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901][CVE-2019-14901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895][CVE-2019-14895]] <!-- medium -->
+    - 2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
+
+*** [[[https://usn.ubuntu.com/4228-1/][USN-4228-1]], [[https://usn.ubuntu.com/4228-2/][USN-4228-2]]] Linux kernel vulnerabilities [06:17]
+- 8 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534][CVE-2019-19534]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524][CVE-2019-19524]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052][CVE-2019-19052]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660][CVE-2019-18660]] <!-- medium -->
+    - SpectreRSB mitigations not properly enforced on PPC
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897][CVE-2019-14897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896][CVE-2019-14896]] <!-- medium -->
+    - 2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901][CVE-2019-14901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895][CVE-2019-14895]] <!-- medium -->
+    - 2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
+
+*** [LSN-0061-1] Linux kernel vulnerability [06:38]
+- 5 CVEs addressed in Bionic & Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794][CVE-2019-15794]] <!-- medium -->
+    - OverlayFS & ShiftFS reference counting issue - [[https://ubuntusecuritypodcast.org/episode-55/][Episode 55]]
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901][CVE-2019-14901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895][CVE-2019-14895]] <!-- medium -->
+    - 2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897][CVE-2019-14897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896][CVE-2019-14896]] <!-- medium -->
+    - 2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe discuss connected devices and smart assistants [07:25]
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 57
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-57

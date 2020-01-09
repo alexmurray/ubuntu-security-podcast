@@ -2,9 +2,9 @@
 title = "Episode 16"
 description = "Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP & more, plus we discuss the security of home routers as evaluated by C-ITL."
 date = 2018-12-17
-lastmod = 2019-12-19T13:38:47+10:30
+lastmod = 2020-01-09T16:20:59+10:30
 draft = false
-weight = 1042
+weight = 1043
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E016.mp3"
