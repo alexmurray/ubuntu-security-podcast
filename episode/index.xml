@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 19 Dec 2019 13:36:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 9 Jan 2020 16:18:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,265 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 58</title>
+          <link>https://ubuntusecuritypodcast.org/episode-58/</link>
+          <pubDate>Thu, 09 Jan 2020 16:18:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>aa89e8be26bc96c93cdda67991584e240fb69ddc262f36bc78c6a68036b1f3f625c4c73f925044ad21e00debb61ddf7498c304e58b97ad272607ec46c5835760</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  </itunes:summary>
+        <description>  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  </description>
+        <googleplay:description>  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>In the first episode for 2020, we look at security updates for Django and
+the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+smart assistant connected devices.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>34 unique CVEs addressed</p>
+<h3 id="usn-4224-1-django-vulnerability-00-51">[<a href="https://usn.ubuntu.com/4224-1/">USN-4224-1</a>] Django vulnerability [00:51]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19844">CVE-2019-19844</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Account takeover via password reset - when comparing email addresses,
+would not do a proper unicode comparison - and so could specify an email
+address which appears equal to an existing users email address (after
+unicode case and character transmformation) and would then get sent a
+token to reset their accounts password to your doppleganger email
+address. Fix includes doing both a proper unicode case comparison AND
+sending the password reset token to the email address to the one
+registered against the user account, not the one input to the password
+reset field.</li>
+</ul>
+<h3 id="usn-4225-1-linux-kernel-vulnerabilities-02-25">[<a href="https://usn.ubuntu.com/4225-1/">USN-4225-1</a>] Linux kernel vulnerabilities [02:25]</h3>
+<ul>
+<li>5.3 kernel</li>
+<li>18 CVEs addressed in Bionic (Azure and GCP edge), Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813">CVE-2019-18813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807">CVE-2019-19807</a> <!-- raw HTML omitted -->
+<ul>
+<li>UAF in ALSA timer implementation - local user - crash (DoS) / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072">CVE-2019-19072</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in tracing subsystem -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055">CVE-2019-19055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051">CVE-2019-19051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19047">CVE-2019-19047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19044">CVE-2019-19044</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4226-1-linux-kernel-vulnerabilities-03-58">[<a href="https://usn.ubuntu.com/4226-1/">USN-4226-1</a>] Linux kernel vulnerabilities [03:58]</h3>
+<ul>
+<li>5.0 kernel</li>
+<li>28 CVEs addressed in Bionic (AWS &amp; Oracle Edge, Azure, GKE), Disco
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813">CVE-2019-18813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075">CVE-2019-17075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214">CVE-2019-2214</a> <!-- raw HTML omitted -->
+<ul>
+<li>Binder IPC OOB write - crash, ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19922">CVE-2019-19922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19532">CVE-2019-19532</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19526">CVE-2019-19526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083">CVE-2019-19083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075">CVE-2019-19075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072">CVE-2019-19072</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in tracing subsystem -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067">CVE-2019-19067</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065">CVE-2019-19065</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060">CVE-2019-19060</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055">CVE-2019-19055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048">CVE-2019-19048</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in virtualbox guest driver -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133">CVE-2019-17133</a> <!-- raw HTML omitted -->
+<ul>
+<li>Wifi stack failed to validate SSID IE length - buffer overflow</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233">CVE-2019-16233</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10220">CVE-2019-10220</a> <!-- raw HTML omitted -->
+<ul>
+<li>Kernel CIFS impl failed to sanitize paths returned from SMB server -
+malicious server could overwrite arbitrary files on the client</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4227-1-usn-4227-2-linux-kernel-vulnerabilities-05-36">[<a href="https://usn.ubuntu.com/4227-1/">USN-4227-1</a>, <a href="https://usn.ubuntu.com/4227-2/">USN-4227-2</a>] Linux kernel vulnerabilities [05:36]</h3>
+<ul>
+<li>14 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807">CVE-2019-19807</a> <!-- raw HTML omitted -->
+<ul>
+<li>UAF in ALSA timer implementation - local user - crash (DoS) / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083">CVE-2019-19083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233">CVE-2019-16233</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4228-1-usn-4228-2-linux-kernel-vulnerabilities-06-17">[<a href="https://usn.ubuntu.com/4228-1/">USN-4228-1</a>, <a href="https://usn.ubuntu.com/4228-2/">USN-4228-2</a>] Linux kernel vulnerabilities [06:17]</h3>
+<ul>
+<li>8 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="lsn-0061-1-linux-kernel-vulnerability-06-38">[LSN-0061-1] Linux kernel vulnerability [06:38]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic &amp; Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794">CVE-2019-15794</a> <!-- raw HTML omitted -->
+<ul>
+<li>OverlayFS &amp; ShiftFS reference counting issue - <a href="https://ubuntusecuritypodcast.org/episode-55/">Episode 55</a></li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-connected-devices-and-smart-assistants-07-25">Alex and Joe discuss connected devices and smart assistants [07:25]</h3>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E058.mp3" length="19662183" type="audio/mpeg" /><itunes:duration>20:28</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 57</title>
           <link>https://ubuntusecuritypodcast.org/episode-57/</link>

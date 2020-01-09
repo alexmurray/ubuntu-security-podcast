@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  ">
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<meta property="og:title" content="Episode 58" />
+<meta property="og:description" content="  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-58/" />
+
+
+
+<meta property="og:updated_time" content="2020-01-09 16:18:00 &#43;1030 ACDT"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta property="article:publisher" content="https://www.facebook.com/" />
+
+  
+    <meta property="article:published_time" content="2020-01-09 16:18:00 &#43;1030 ACDT" />
+  
+
+<meta property="article:modified_time" content="2020-01-09 16:18:00 &#43;1030 ACDT" />
+<meta property="article:section" content="episode" />
+
+
+
+
+
+
+<meta itemprop="name" content="Episode 58">
+<meta itemprop="description" content="  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  ">
+
+
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta itemprop="wordCount" content="594">
+
+
+
+	<meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Episode 58"/>
+<meta name="twitter:description" content="  In the first episode for 2020, we look at security updates for Django and
+  the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+  smart assistant connected devices.
+  "/>
+<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+
+
+
+<title>
+
+
+     Episode 58 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-58/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 58</h1>
+      <small>Posted on Thursday, Jan 9, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            In the first episode for 2020, we look at security updates for Django and
+the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+smart assistant connected devices.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="https://people.canonical.com/~amurray/USP/USP_E058.mp3" preload="auto"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="https://people.canonical.com/~amurray/USP/USP_E058.mp3">Direct Download</a>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>In the first episode for 2020, we look at security updates for Django and
+the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
+smart assistant connected devices.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>34 unique CVEs addressed</p>
+<h3 id="usn-4224-1-django-vulnerability-00-51">[<a href="https://usn.ubuntu.com/4224-1/">USN-4224-1</a>] Django vulnerability [00:51]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19844">CVE-2019-19844</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Account takeover via password reset - when comparing email addresses,
+would not do a proper unicode comparison - and so could specify an email
+address which appears equal to an existing users email address (after
+unicode case and character transmformation) and would then get sent a
+token to reset their accounts password to your doppleganger email
+address. Fix includes doing both a proper unicode case comparison AND
+sending the password reset token to the email address to the one
+registered against the user account, not the one input to the password
+reset field.</li>
+</ul>
+<h3 id="usn-4225-1-linux-kernel-vulnerabilities-02-25">[<a href="https://usn.ubuntu.com/4225-1/">USN-4225-1</a>] Linux kernel vulnerabilities [02:25]</h3>
+<ul>
+<li>5.3 kernel</li>
+<li>18 CVEs addressed in Bionic (Azure and GCP edge), Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813">CVE-2019-18813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807">CVE-2019-19807</a> <!-- raw HTML omitted -->
+<ul>
+<li>UAF in ALSA timer implementation - local user - crash (DoS) / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072">CVE-2019-19072</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in tracing subsystem -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055">CVE-2019-19055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051">CVE-2019-19051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19047">CVE-2019-19047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19044">CVE-2019-19044</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4226-1-linux-kernel-vulnerabilities-03-58">[<a href="https://usn.ubuntu.com/4226-1/">USN-4226-1</a>] Linux kernel vulnerabilities [03:58]</h3>
+<ul>
+<li>5.0 kernel</li>
+<li>28 CVEs addressed in Bionic (AWS &amp; Oracle Edge, Azure, GKE), Disco
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813">CVE-2019-18813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075">CVE-2019-17075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214">CVE-2019-2214</a> <!-- raw HTML omitted -->
+<ul>
+<li>Binder IPC OOB write - crash, ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19922">CVE-2019-19922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19532">CVE-2019-19532</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19526">CVE-2019-19526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083">CVE-2019-19083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075">CVE-2019-19075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072">CVE-2019-19072</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in tracing subsystem -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067">CVE-2019-19067</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065">CVE-2019-19065</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060">CVE-2019-19060</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055">CVE-2019-19055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048">CVE-2019-19048</a> <!-- raw HTML omitted -->
+<ul>
+<li>Memory leak in virtualbox guest driver -&gt; DoS</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133">CVE-2019-17133</a> <!-- raw HTML omitted -->
+<ul>
+<li>Wifi stack failed to validate SSID IE length - buffer overflow</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233">CVE-2019-16233</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10220">CVE-2019-10220</a> <!-- raw HTML omitted -->
+<ul>
+<li>Kernel CIFS impl failed to sanitize paths returned from SMB server -
+malicious server could overwrite arbitrary files on the client</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4227-1-usn-4227-2-linux-kernel-vulnerabilities-05-36">[<a href="https://usn.ubuntu.com/4227-1/">USN-4227-1</a>, <a href="https://usn.ubuntu.com/4227-2/">USN-4227-2</a>] Linux kernel vulnerabilities [05:36]</h3>
+<ul>
+<li>14 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807">CVE-2019-19807</a> <!-- raw HTML omitted -->
+<ul>
+<li>UAF in ALSA timer implementation - local user - crash (DoS) / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083">CVE-2019-19083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233">CVE-2019-16233</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4228-1-usn-4228-2-linux-kernel-vulnerabilities-06-17">[<a href="https://usn.ubuntu.com/4228-1/">USN-4228-1</a>, <a href="https://usn.ubuntu.com/4228-2/">USN-4228-2</a>] Linux kernel vulnerabilities [06:17]</h3>
+<ul>
+<li>8 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted -->
+<ul>
+<li>SpectreRSB mitigations not properly enforced on PPC</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="lsn-0061-1-linux-kernel-vulnerability-06-38">[LSN-0061-1] Linux kernel vulnerability [06:38]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic &amp; Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794">CVE-2019-15794</a> <!-- raw HTML omitted -->
+<ul>
+<li>OverlayFS &amp; ShiftFS reference counting issue - <a href="https://ubuntusecuritypodcast.org/episode-55/">Episode 55</a></li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted -->
+<ul>
+<li>2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-connected-devices-and-smart-assistants-07-25">Alex and Joe discuss connected devices and smart assistants [07:25]</h3>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-57/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script src="/audiojs/audio.min.js"></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-58\/",
+        text: "Episode 58"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+<script>
+audiojs.events.ready(function() {
+  var as = audiojs.createAll({
+    imageLocation: '\/img\/player-graphics.gif',
+    retinaImageLocation: '\/img\/player-graphics@2x.gif',
+    swfLocation: '\/swf\/audiojs.swf'
+   });
+ });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
