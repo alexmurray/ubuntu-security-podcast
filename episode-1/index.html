@@ -9,7 +9,7 @@
 
   <meta name="description" content="Another week, another speculative execution vulnerablity... and more!">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 1" />
@@ -244,8 +244,8 @@
 <li>Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address</li>
 <li>But Intel processor will use offset value from PTE even on non-present pages <strong>speculatively</strong></li>
 <li>For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value</li>
-<li>SGX doesn't affect Ubuntu since not used</li>
-<li>SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can't be used for this</li>
+<li>SGX doesn&rsquo;t affect Ubuntu since not used</li>
+<li>SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&rsquo;t be used for this</li>
 <li>VMM is trickier
 <ul>
 <li>VMs maintain their own PTEs so also need to ensure they are doing the right thing</li>

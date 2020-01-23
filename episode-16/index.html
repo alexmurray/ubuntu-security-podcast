@@ -9,7 +9,7 @@
 
   <meta name="description" content="Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 16" />
@@ -190,11 +190,11 @@
 </li>
 <li>Popular XML/HTML parser for Python</li>
 <li>Tries to remove clean input document and remove links (to say embedded
-javascript code) - but doesn't account for links containing escaped
+javascript code) - but doesn&rsquo;t account for links containing escaped
 characters - so link could persist</li>
 <li>Similar to CVE-2014-3146
 <ul>
-<li>In this case tried to account for whitespace in links but didn't include
+<li>In this case tried to account for whitespace in links but didn&rsquo;t include
 all possible whitespace characters</li>
 </ul>
 </li>
@@ -236,7 +236,7 @@ regressed (crash on opening certain PDF files)</li>
 <li>Low level library for pixel manipulation (used by X, Wayland, Qemu etc)</li>
 <li>Pointer overflow leading to stack-based buffer overflow in computing bounds of pixel buffers
 <ul>
-<li>Did include a check to see if was inside bounds, BUT didn't account for
+<li>Did include a check to see if was inside bounds, BUT didn&rsquo;t account for
 possible overflow in arithmetic before the check</li>
 <li>Need to check for possible overflow before doing arithmetic and comparison</li>
 </ul>

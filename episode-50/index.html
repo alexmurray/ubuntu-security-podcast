@@ -12,7 +12,7 @@
   UW IMAP and more.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 50" />
@@ -223,10 +223,10 @@ UW IMAP and more.</p>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19518">CVE-2018-19518</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-<li>University of Washington IMAP toolkit (used by PHP for it's IMAP implementation)</li>
-<li>Used rsh to implement various operations - wouldn't try and sanitize the
+<li>University of Washington IMAP toolkit (used by PHP for it&rsquo;s IMAP implementation)</li>
+<li>Used rsh to implement various operations - wouldn&rsquo;t try and sanitize the
 provided hostname - so if attacker could provide a hostname/mailbox to
-php's IMAP without any validation could execute arbitrary commands on the
+php&rsquo;s IMAP without any validation could execute arbitrary commands on the
 host
 <ul>
 <li>Fixed by turning off the rsh based functionality by default in PHP - if
@@ -312,7 +312,7 @@ from the latest stable tree so we ended up affected as well
 </ul>
 </li>
 <li>Possible DoS (kernel crash) if users can write to /dev/kvm - by default
-on Ubuntu users don't have this privilege so generally not affected</li>
+on Ubuntu users don&rsquo;t have this privilege so generally not affected</li>
 <li>2 different heap based buffer overflows in Marvell Wifi driver -&gt;
 occurred when setting parameters for the driver so could be triggered by
 a local users -&gt; crash, DoS or

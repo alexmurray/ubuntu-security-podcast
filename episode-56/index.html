@@ -12,7 +12,7 @@
   hacker indictments, unsecured AWS S3 buckets and more.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 56" />
@@ -229,7 +229,7 @@ identifier within a particular namespace - e.g. urn:ietf:rfc:2648):
 <ul>
 <li>When handling URN requests Squid makes a corresponding HTTP request but
 the various access control checks that are normally done for HTTP
-weren't done so could end up accessing restricted HTTP resources (such
+weren&rsquo;t done so could end up accessing restricted HTTP resources (such
 as servers that listen to localhost etc)</li>
 <li>Heap buffer overflow if response received from a server that is
 handling a URN request does not fit within the buffer</li>
@@ -358,13 +358,13 @@ of the export-marks option</li>
 <ul>
 <li>On Windows would write out filenames that contained backslashes even
 though these then act as directory separators on Windows</li>
-<li>Wouldn't enforce NTFS protections in the working directory</li>
-<li>Didn't take into account NTFS Alternate Data Streams, allowing files
+<li>Wouldn&rsquo;t enforce NTFS protections in the working directory</li>
+<li>Didn&rsquo;t take into account NTFS Alternate Data Streams, allowing files
 inside the .git dir to be overwritten during clone (file attribute
 specific to NTFS, allowing to store data for a file alongside the
 actual file itself)</li>
 <li>Second attack via NTFS ADS via name squatting on the git~2 short-name</li>
-<li>Didn't handle Window virtual drives which can be named as not just say
+<li>Didn&rsquo;t handle Window virtual drives which can be named as not just say
 A: but a full name - git would handle these as relative paths, allowing
 writing outside the worktree during a clone</li>
 </ul>

@@ -9,7 +9,7 @@
 
   <meta name="description" content="Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 25" />
@@ -331,7 +331,7 @@ outside of the sandbox)</li>
 architectures the kernel does this comparison as a 64-bit integer - so
 can be circumvented by using a 64-bit value to ioctl systemcall which
 has other bits set in the upper 32 bits - since when seccomp does
-comparison it uses the full 64 bits - so it won't match the 32-bit
+comparison it uses the full 64 bits - so it won&rsquo;t match the 32-bit
 value of TIOCSTI and so will be allowed - but then when used as the
 ioctl() argument it will correctly be truncated to 32-bits and the
 ioctl will proceed</li>

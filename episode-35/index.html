@@ -9,7 +9,7 @@
 
   <meta name="description" content="We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 35" />
@@ -190,7 +190,7 @@
 </li>
 <li>Generates HTML code documentation from code comments</li>
 <li>Includes a field to search across the documentation</li>
-<li>Doesn't treat this as untrusted input and blindly displays the input in resulting pages
+<li>Doesn&rsquo;t treat this as untrusted input and blindly displays the input in resulting pages
 <ul>
 <li>Allows possible XSS or iframe injection</li>
 </ul>
@@ -208,7 +208,7 @@
 </li>
 <li>3 likely DoS issues:
 <ul>
-<li>Buffer overflow when handling invalid BMP images - didn't check for valid
+<li>Buffer overflow when handling invalid BMP images - didn&rsquo;t check for valid
 / sensible width or height parameters</li>
 <li>NULL pointer dereference on malformed GIF images</li>
 <li>Double free when parsing a specially crafted (illegal format) XML
@@ -354,7 +354,7 @@ MariaDB (community maintained fork of MySQL) - <a href="https://ubuntusecuritypo
 </li>
 <li>Sandbox is used when rendering user-provided templates (ie untrusted)</li>
 <li>Possible to escape the sandbox by reading arbitrary python objects via
-Python's internal string format method (by referencing the <!-- raw HTML omitted --><!-- raw HTML omitted -->globals<!-- raw HTML omitted --><!-- raw HTML omitted -->
+Python&rsquo;s internal string format method (by referencing the <!-- raw HTML omitted --><!-- raw HTML omitted -->globals<!-- raw HTML omitted --><!-- raw HTML omitted -->
 array)</li>
 <li>Was originally fixed in 2016 for the str.format method - but at the time
 missed the similar str.format_map method - so both fixed in this update</li>

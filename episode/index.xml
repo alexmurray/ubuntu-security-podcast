@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 9 Jan 2020 16:18:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 08:57:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,341 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 59</title>
+          <link>https://ubuntusecuritypodcast.org/episode-59/</link>
+          <pubDate>Fri, 24 Jan 2020 08:57:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>8c5226e656fef4692233bb39d75e43ecb6afda9c7424fb76b5d55fca10bef921973edeefa7c186a93ddc5a592bce4617ac9bce4c639c4fe4bb9238891be0ae2b</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  After a weeks break we are back to look at updates for ClamAV, GnuTLS,
+  nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle
+  Roadmap Review sprint for the Ubuntu Security Team
+  </itunes:summary>
+        <description>  After a weeks break we are back to look at updates for ClamAV, GnuTLS,
+  nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle
+  Roadmap Review sprint for the Ubuntu Security Team
+  </description>
+        <googleplay:description>  After a weeks break we are back to look at updates for ClamAV, GnuTLS,
+  nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle
+  Roadmap Review sprint for the Ubuntu Security Team
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>After a weeks break we are back to look at updates for ClamAV, GnuTLS,
+nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle
+Roadmap Review sprint for the Ubuntu Security Team</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>73 unique CVEs addressed</p>
+<h3 id="usn-4230-1-clamav-vulnerability-01-16">[<a href="https://usn.ubuntu.com/4230-1/">USN-4230-1</a>] ClamAV vulnerability [01:16]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15961">CVE-2019-15961</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Backport latest upstream release (0.102.1) from focal</li>
+<li>CPU based DoS when scanning crafted emails - parsing of MIME components
+in particular</li>
+</ul>
+<h3 id="usn-4232-1-graphicsmagick-vulnerabilities-01-52">[<a href="https://usn.ubuntu.com/4232-1/">USN-4232-1</a>] GraphicsMagick vulnerabilities [01:52]</h3>
+<ul>
+<li>11 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16353">CVE-2017-16353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16352">CVE-2017-16352</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15930">CVE-2017-15930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15277">CVE-2017-15277</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14997">CVE-2017-14997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14994">CVE-2017-14994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14733">CVE-2017-14733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14649">CVE-2017-14649</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14504">CVE-2017-14504</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14314">CVE-2017-14314</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14165">CVE-2017-14165</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-57/">Episode 57</a>, <a href="https://ubuntusecuritypodcast.org/episode-55/">Episode 55</a></li>
+<li>Heap based buffer over-reads - info leak or crash -&gt; DoS</li>
+<li>Heap based buffer over-flow - crash -&gt; DoS, RCE</li>
+<li>NULL ptr derefs - crash -&gt; DoS</li>
+<li>Memory overallocation -&gt; memory based remote DoS</li>
+</ul>
+<h3 id="usn-4231-1-nss-vulnerability-03-04">[<a href="https://usn.ubuntu.com/4231-1/">USN-4231-1</a>] NSS vulnerability [03:04]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17006">CVE-2019-17006</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UBSAN found possible buffer overflow due to failure to check lengths of
+inputs to various functions - so applications using libnss for crypto
+could be vulnerable to buffer overflow</li>
+</ul>
+<h3 id="usn-4233-1-gnutls-update-03-54">[<a href="https://usn.ubuntu.com/4233-1/">USN-4233-1</a>] GnuTLS update [03:54]</h3>
+<ul>
+<li>Affecting Xenial, Bionic</li>
+<li>Update marks SHA1 as being untrusted for digital signature operations -
+SHA1 has been broken in theory for a while and 2017 Google showed the
+first SHA1 collision - recently the first chosen-prefix attack was
+demonstrated against SHA1 as well - demonstrated by creating a GPG key
+which can impersonate another</li>
+<li>As such GnuTLS will not trust SHA1 based digital signatures since these
+can relatively easily be forged now (but not for an arbitrary input)</li>
+<li>As such libraries / applications which use GnuTLS (libsoup, Epiphany)
+will not trust SHA1 based digital signatures</li>
+<li><a href="https://sha-mbles.github.io/">https://sha-mbles.github.io/</a></li>
+</ul>
+<h3 id="usn-4234-1-firefox-vulnerabilities-06-10">[<a href="https://usn.ubuntu.com/4234-1/">USN-4234-1</a>] Firefox vulnerabilities [06:10]</h3>
+<ul>
+<li>8 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17026">CVE-2019-17026</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17025">CVE-2019-17025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17024">CVE-2019-17024</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17023">CVE-2019-17023</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17022">CVE-2019-17022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17020">CVE-2019-17020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17017">CVE-2019-17017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17016">CVE-2019-17016</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream Firefox release (72.0.1)</li>
+<li>Usual sorts of issues fixed: DoS, info disclosure, bypass content
+security policy restrictions, conduct XSS attacks or execute arbitrary
+code</li>
+</ul>
+<h3 id="usn-4047-2-libvirt-update-vulnerability-06-48">[<a href="https://usn.ubuntu.com/4047-2/">USN-4047-2</a>] libvirt update vulnerability [06:48]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10161">CVE-2019-10161</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> libvirt updated for regular releases - various APIs which
+could cause effects were accessible to read-only users</li>
+<li>Now backported for 14.04 ESM users / customers as well</li>
+</ul>
+<h3 id="usn-4235-1-usn-4235-2-nginx-vulnerability-07-18">[<a href="https://usn.ubuntu.com/4235-1/">USN-4235-1</a>, <a href="https://usn.ubuntu.com/4235-2/">USN-4235-2</a>] nginx vulnerability [07:18]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20372">CVE-2019-20372</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP request smuggling (<a href="https://ubuntusecuritypodcast.org/episode-52/">Episode 52</a>) - allowed attacker to read
+unauthorized web pages where nginx is being fronted by a load balanced
+when used with certain error_page configurations</li>
+</ul>
+<h3 id="usn-4236-1-usn-4236-2-libgcrypt-vulnerability-08-03">[<a href="https://usn.ubuntu.com/4236-1/">USN-4236-1</a>, USN-4236-2] Libgcrypt vulnerability [08:03]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13627">CVE-2019-13627</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ECDSA timing side-channel attack (Minerva)
+<ul>
+<li>observe timing of signature generation on known messages to indicate
+the bit-length of the random nonce scalar during scalar multiplication
+on an elliptic curve - full private key is able to be recovered using
+lattice techniques</li>
+</ul>
+</li>
+<li><a href="https://minerva.crocs.fi.muni.cz/">https://minerva.crocs.fi.muni.cz/</a></li>
+</ul>
+<h3 id="usn-4237-1-usn-4237-2-spamassassin-vulnerabilities-09-04">[<a href="https://usn.ubuntu.com/4237-1/">USN-4237-1</a>, <a href="https://usn.ubuntu.com/4237-2/">USN-4237-2</a>] SpamAssassin vulnerabilities [09:04]</h3>
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12420">CVE-2019-12420</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11805">CVE-2018-11805</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via excessive resource usage</li>
+<li>RCE via crafted conf (CF) files - advised should only use trusted conf
+files</li>
+</ul>
+<h3 id="usn-4238-1-sdl-image-vulnerabilities-09-55">[<a href="https://usn.ubuntu.com/4238-1/">USN-4238-1</a>] SDL_image vulnerabilities [09:55]</h3>
+<ul>
+<li>12 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635">CVE-2019-7635</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5052">CVE-2019-5052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5051">CVE-2019-5051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13616">CVE-2019-13616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12222">CVE-2019-12222</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12221">CVE-2019-12221</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12220">CVE-2019-12220</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12219">CVE-2019-12219</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12218">CVE-2019-12218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12217">CVE-2019-12217</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12216">CVE-2019-12216</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3977">CVE-2018-3977</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Image loading library for SDL1.2 (low level library used for various
+games etc - provides common access to audio, input devices, graphics etc)</li>
+<li>Large C code-base - usual memory safety issues -&gt; usual effects -&gt; crash,
+DoS or possible RCE</li>
+</ul>
+<h3 id="usn-4239-1-php-vulnerabilities-10-32">[<a href="https://usn.ubuntu.com/4239-1/">USN-4239-1</a>] PHP vulnerabilities [10:32]</h3>
+<ul>
+<li>4 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11050">CVE-2019-11050</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11047">CVE-2019-11047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11046">CVE-2019-11046</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11045">CVE-2019-11045</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 heap buffer over-reads in parsing EXIF information, 1 over-read in
+bcmath extension, and 1 issue with handling filenames with embedded NUL
+bytes</li>
+</ul>
+<h3 id="usn-4221-2-libpcap-vulnerability-11-28">[<a href="https://usn.ubuntu.com/4221-2/">USN-4221-2</a>] libpcap vulnerability [11:28]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15165">CVE-2019-15165</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-56/">Episode 56</a></li>
+</ul>
+<h3 id="usn-4240-1-kamailio-vulnerability-11-42">[<a href="https://usn.ubuntu.com/4240-1/">USN-4240-1</a>] Kamailio vulnerability [11:42]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8828">CVE-2018-8828</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>SIP server written in C</li>
+<li>Heap based buffer overflow when receiving a specially crafted REGISTER
+message</li>
+</ul>
+<h3 id="usn-4241-1-thunderbird-vulnerabilities-11-59">[<a href="https://usn.ubuntu.com/4241-1/">USN-4241-1</a>] Thunderbird vulnerabilities [11:59]</h3>
+<ul>
+<li>11 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745">CVE-2019-11745</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17026">CVE-2019-17026</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17024">CVE-2019-17024</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17022">CVE-2019-17022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17017">CVE-2019-17017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17016">CVE-2019-17016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17012">CVE-2019-17012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17011">CVE-2019-17011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17010">CVE-2019-17010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17008">CVE-2019-17008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17005">CVE-2019-17005</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream release (68.4.1)</li>
+<li>Derived from Firefox code-base so contains fixes for lots issues which
+also affected Firefox above</li>
+</ul>
+<h3 id="usn-4225-2-linux-kernel--hwe--vulnerabilities-12-21">[<a href="https://usn.ubuntu.com/4225-2/">USN-4225-2</a>] Linux kernel (HWE) vulnerabilities [12:21]</h3>
+<ul>
+<li>15 CVEs addressed in Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813">CVE-2019-18813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534">CVE-2019-19534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529">CVE-2019-19529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524">CVE-2019-19524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072">CVE-2019-19072</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055">CVE-2019-19055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052">CVE-2019-19052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051">CVE-2019-19051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045">CVE-2019-19045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660">CVE-2019-18660</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231">CVE-2019-16231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-58/">Episode 58</a> - eoan (19.10) 5.3 kernel is now used as the HWE kernel for
+bionic (18.04 LTS)</li>
+</ul>
+<h3 id="usn-4242-1-sysstat-vulnerabilities-13-07">[<a href="https://usn.ubuntu.com/4242-1/">USN-4242-1</a>] Sysstat vulnerabilities [13:07]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19725">CVE-2019-19725</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16167">CVE-2019-16167</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Both issues occur when reading a crafted input file using the sadf
+utility - likely the original reported is fuzzing this</li>
+<li>Double free - heap corruption but on Ubuntu we enable the glibc
+heap-protector so this is just a crash -&gt; DoS</li>
+<li>Integer overflow -&gt; heap buffer overflow when reading crafted input file</li>
+</ul>
+<h3 id="usn-4243-1-libbsd-vulnerabilities-14-12">[<a href="https://usn.ubuntu.com/4243-1/">USN-4243-1</a>] libbsd vulnerabilities [14:12]</h3>
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20367">CVE-2019-20367</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-2090">CVE-2016-2090</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Library providing common BSD C functions which are not available on Linux
+(strlcpy() etc)
+<ul>
+<li>OOB read (crash -&gt; DoS)</li>
+<li>Off-by-one in fgetwln() (get line of wide characters from a stream) -&gt;
+heap buffer overflow -&gt; crash / RCE (doesn&rsquo;t appear to be used by any
+software in Ubuntu)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4244-1-samba-vulnerabilities-15-15">[<a href="https://usn.ubuntu.com/4244-1/">USN-4244-1</a>] Samba vulnerabilities [15:15]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19344">CVE-2019-19344</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14907">CVE-2019-14907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14902">CVE-2019-14902</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF in DNS zone scavenging in AD DC</li>
+<li>Crash if fail to convert characters at log level 3</li>
+<li>Does not automatically replicate ACLs which are set to inherit down a
+subtree (unable to be easily backported to Xenial so only fixed on
+Bionic, Disco and Eoan - instead can workaround by manually replication
+ACLs from one DC to another for a given naming context)</li>
+</ul>
+<h3 id="usn-4245-1-pysaml2-vulnerability-16-32">[<a href="https://usn.ubuntu.com/4245-1/">USN-4245-1</a>] PySAML2 vulnerability [16:32]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Disco, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5390">CVE-2020-5390</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>May fail to properly validate signatures in a particularly crafted SAML
+document by using the wrong data - so could assert a document has been
+fully signed when only a part of it has</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="mid-cycle-product-roadmap-sprint-17-18">Mid cycle product roadmap sprint [17:18]</h3>
+<ul>
+<li>Security team presents progress on plans for Ubuntu 20.04 Focal Fossa -
+ie. ESM offerings, AppArmor features, snapd security features, Ubuntu
+Core security features, MIR security reviews progress etc</li>
+<li>Represented by Joe McManus, Mark Morlino, Chris Coulson and John Johansen</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E059.mp3" length="19134301" type="audio/mpeg" /><itunes:duration>19:55</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 58</title>
           <link>https://ubuntusecuritypodcast.org/episode-58/</link>
@@ -473,7 +808,7 @@ identifier within a particular namespace - e.g. urn:ietf:rfc:2648):
 <ul>
 <li>When handling URN requests Squid makes a corresponding HTTP request but
 the various access control checks that are normally done for HTTP
-weren't done so could end up accessing restricted HTTP resources (such
+weren&rsquo;t done so could end up accessing restricted HTTP resources (such
 as servers that listen to localhost etc)</li>
 <li>Heap buffer overflow if response received from a server that is
 handling a URN request does not fit within the buffer</li>
@@ -602,13 +937,13 @@ of the export-marks option</li>
 <ul>
 <li>On Windows would write out filenames that contained backslashes even
 though these then act as directory separators on Windows</li>
-<li>Wouldn't enforce NTFS protections in the working directory</li>
-<li>Didn't take into account NTFS Alternate Data Streams, allowing files
+<li>Wouldn&rsquo;t enforce NTFS protections in the working directory</li>
+<li>Didn&rsquo;t take into account NTFS Alternate Data Streams, allowing files
 inside the .git dir to be overwritten during clone (file attribute
 specific to NTFS, allowing to store data for a file alongside the
 actual file itself)</li>
 <li>Second attack via NTFS ADS via name squatting on the git~2 short-name</li>
-<li>Didn't handle Window virtual drives which can be named as not just say
+<li>Didn&rsquo;t handle Window virtual drives which can be named as not just say
 A: but a full name - git would handle these as relative paths, allowing
 writing outside the worktree during a clone</li>
 </ul>
@@ -999,7 +1334,7 @@ this fix includes the final upstream fix</li>
 </ul>
 </li>
 <li>See above (i915 vuln) - but also includes a fix for a regression that was
-introduced in last week's kernel - KVM guests would fail to launch if
+introduced in last week&rsquo;s kernel - KVM guests would fail to launch if
 extended page tables were disabled or not supported.</li>
 </ul>
 <h3 id="usn-4185-3-linux-kernel-vulnerability-and-regression-05-05">[<a href="https://usn.ubuntu.com/4185-3/">USN-4185-3</a>] Linux kernel vulnerability and regression [05:05]</h3>
@@ -1055,7 +1390,7 @@ extended page tables were disabled or not supported.</li>
 </li>
 <li>Heap buffer overflow and UAF in SLiRP networking implementation - DoS +
 possible code exec</li>
-<li>Bridge helper didn't validate interface names to be within IFNAMSIZ -
+<li>Bridge helper didn&rsquo;t validate interface names to be within IFNAMSIZ -
 could be used to bypass ACL restrictions</li>
 <li>NULL pointer dereference in qxl paravirtual graphics driver - DoS</li>
 <li>Possible CPU based DoS via an infinite loop able to be triggered in the
@@ -1231,7 +1566,7 @@ microcode, plus Bash, cpio, FriBidi and more.</p>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14866">CVE-2019-14866</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-<li>cpio wouldn't validate values written to headers of TAR archives - could
+<li>cpio wouldn&rsquo;t validate values written to headers of TAR archives - could
 use cpio to create a TAR containing another TAR with a big size and will
 use wrong context values (ie uses inner TAR values in header) - this
 could allow a TAR to be created which has files with permissions not
@@ -1277,7 +1612,7 @@ front-end etc to re-enable if desired</li>
 </li>
 <li>Issue reported about unicode isolated handling in Qt - turns out affected
 GTK applications as well - entirely different code with very similar
-flaw - stack buffer overflow since didn't check bounds of a fixed array
+flaw - stack buffer overflow since didn&rsquo;t check bounds of a fixed array
 used to store details on nested unicode isolate sections - simple fix to
 just check bounds before trying to store next element</li>
 </ul>
@@ -1462,7 +1797,7 @@ issues</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207">CVE-2018-12207</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-<li>Intel hardware issues - CAN'T BE LIVEPATCHED - need to update kernel and reboot</li>
+<li>Intel hardware issues - CAN&rsquo;T BE LIVEPATCHED - need to update kernel and reboot</li>
 </ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
 <h3 id="20-dot-04-roadmap-sprint-14-55">20.04 Roadmap Sprint [14:55]</h3>
@@ -1579,7 +1914,7 @@ new internal API - fixed by updating the API to be backwards compatible</li>
 <li><a href="https://nathandavison.com/blog/haproxy-http-request-smuggling">https://nathandavison.com/blog/haproxy-http-request-smuggling</a></li>
 </ul>
 </li>
-<li>Wouldn't reject messages that specified transfer-encoding without
+<li>Wouldn&rsquo;t reject messages that specified transfer-encoding without
 &ldquo;chunked&rdquo; value</li>
 <li>Could be combined with http reuse for request smuggling - ie. the ability
 to get an attacker controlled chunk appended to a legitimate request and
@@ -1731,7 +2066,7 @@ local machine</li>
 <li>Heap based buffer overflow via a too-long domain name (greater than 63
 characters - in library, caller passes a buffer that is specified to be a
 minimum of 64 bytes - but libidn strcpy()&lsquo;s into it so could easily overflow.</li>
-<li>Possible domain name impersonation since doesn't bother to check unicode
+<li>Possible domain name impersonation since doesn&rsquo;t bother to check unicode
 conversions - so could use punycode (ascii representation of certain
 unicode characters) to impersonate a unicode domain</li>
 </ul>
@@ -1778,13 +2113,13 @@ using the details of the new privileged process - since this was
 originally an unprivileged process, the crash dump is then unprivileged
 too). Fixed by making sure Apport drops privileges to the original
 unprivileged user before reading /proc/PID info so if this happens to
-then be a different user's process will not be able to generate the
+then be a different user&rsquo;s process will not be able to generate the
 crash dump</li>
 <li>Apport would read a per-user configuration file - but would do so as
 root - and so this could be a symlink to a root owned file and Apport
 would happily read it (but might error out if it looked invalid) - so
-drop privileges to read it so it doesn't include anything which it
-shouldn't in the final crash report</li>
+drop privileges to read it so it doesn&rsquo;t include anything which it
+shouldn&rsquo;t in the final crash report</li>
 </ul>
 </li>
 <li>
@@ -1802,7 +2137,7 @@ unprivileged user who (using unprivileged usernamespaces) is root in a
 container to chroot() for a process in a container to a different
 location so it can then intercept the crash dump of a privileged
 process within the container - so could run a setuid process in the
-container, and when it crashes be able to read it's crash dump</li>
+container, and when it crashes be able to read it&rsquo;s crash dump</li>
 <li>TOCCTOU race on PID (like above) but this is in a different code path -
 reads the cwd of the crashed process to write out the core dump to this
 location - but on process ID reuse this could then be in a different
@@ -1876,10 +2211,10 @@ UW IMAP and more.</p>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19518">CVE-2018-19518</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-<li>University of Washington IMAP toolkit (used by PHP for it's IMAP implementation)</li>
-<li>Used rsh to implement various operations - wouldn't try and sanitize the
+<li>University of Washington IMAP toolkit (used by PHP for it&rsquo;s IMAP implementation)</li>
+<li>Used rsh to implement various operations - wouldn&rsquo;t try and sanitize the
 provided hostname - so if attacker could provide a hostname/mailbox to
-php's IMAP without any validation could execute arbitrary commands on the
+php&rsquo;s IMAP without any validation could execute arbitrary commands on the
 host
 <ul>
 <li>Fixed by turning off the rsh based functionality by default in PHP - if
@@ -1965,7 +2300,7 @@ from the latest stable tree so we ended up affected as well
 </ul>
 </li>
 <li>Possible DoS (kernel crash) if users can write to /dev/kvm - by default
-on Ubuntu users don't have this privilege so generally not affected</li>
+on Ubuntu users don&rsquo;t have this privilege so generally not affected</li>
 <li>2 different heap based buffer overflows in Marvell Wifi driver -&gt;
 occurred when setting parameters for the driver so could be triggered by
 a local users -&gt; crash, DoS or
@@ -2209,7 +2544,7 @@ affect a very small number of installations.</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17544">CVE-2019-17544</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-<li>Stack buffer over-read - found by Google's oss-fuzz</li>
+<li>Stack buffer over-read - found by Google&rsquo;s oss-fuzz</li>
 </ul>
 <h3 id="usn-4156-1-sdl-vulnerabilities-08-03">[<a href="https://usn.ubuntu.com/4156-1/">USN-4156-1</a>] SDL vulnerabilities [08:03]</h3>
 <ul>
@@ -2510,7 +2845,7 @@ for wrong host
 </li>
 </ul>
 </li>
-<li>http cookiejar wouldn't validate URL correctly so could also send cookies
+<li>http cookiejar wouldn&rsquo;t validate URL correctly so could also send cookies
 for another domain</li>
 <li>Possible NULL ptr deref when parsing X509 certs if had an empty CRL
 distpoint / URI</li>
@@ -2535,7 +2870,7 @@ block
 </ul>
 </li>
 <li>Possible XSS injection if using SSI printenv command as would echo user
-provided data without escaping - intended only for debugging so shouldn't
+provided data without escaping - intended only for debugging so shouldn&rsquo;t
 be used in a production website anyway</li>
 </ul>
 <h3 id="usn-4120-2-systemd-regression-04-45">[<a href="https://usn.ubuntu.com/4120-2/">USN-4120-2</a>] systemd regression [04:45]</h3>
@@ -2646,7 +2981,7 @@ over-read when looking up current line / column number - possible crash
 </ul>
 </li>
 <li>Failed to apply access controls to D-Bus server socket - could allow
-another local user to connect to logged in local user's IBus daemon and
+another local user to connect to logged in local user&rsquo;s IBus daemon and
 snoop on keystrokes etc
 <ul>
 <li>Attacker needs to know IBus socket address which is randomised and not
@@ -2762,7 +3097,7 @@ hijack mouse cursor and confuse user</li>
 was announced on Saturday 28th - thanks Marc for the quick update :)</li>
 </ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-<h3 id="joe-and-alex-talk-about-the-paris-engineering-sprint-and-joe-s-recent-article-in-admin-magazine-12-42">Joe and Alex talk about the Paris Engineering Sprint and Joe's recent article in Admin Magazine [12:42]</h3>
+<h3 id="joe-and-alex-talk-about-the-paris-engineering-sprint-and-joe-s-recent-article-in-admin-magazine-12-42">Joe and Alex talk about the Paris Engineering Sprint and Joe&rsquo;s recent article in Admin Magazine [12:42]</h3>
 <ul>
 <li><a href="http://www.admin-magazine.com/Articles/Build-a-honeypot-with-real-world-alerts?utm%5Fsource=AMTW">http://www.admin-magazine.com/Articles/Build-a-honeypot-with-real-world-alerts?utm%5Fsource=AMTW</a></li>
 <li><a href="https://github.com/joemcmanus/honeybot">https://github.com/joemcmanus/honeybot</a></li>
@@ -2967,7 +3302,7 @@ address and so defeat KASLR</li>
 <ul>
 <li>NULL pointer address execution (call function pointer which is NULL
 since is not initializated) - Ubuntu defaults to a non-zero
-mmap_min_addr value which means can't map a page at 0 address so this
+mmap_min_addr value which means can&rsquo;t map a page at 0 address so this
 is just a NULL pointer dereference in default config (otherwise is
 arbitrary kernel code execution)</li>
 </ul>
@@ -3153,7 +3488,7 @@ going via AP) - flaw allows a peer to cause wifi disconnection (DoS)</li>
 </ul>
 </li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-27/">Episode 27</a> - PolicyKit could get confused via PID reuse - fix was 2
-parts - 1 kernel to ensure can't race kernel on PID assignment, and
+parts - 1 kernel to ensure can&rsquo;t race kernel on PID assignment, and
 second was in PolicyKit itself to check on PID, UID and start time.</li>
 </ul>
 <h3 id="usn-4119-1-irssi-vulnerability-11-23">[<a href="https://usn.ubuntu.com/4119-1/">USN-4119-1</a>] Irssi vulnerability [11:23]</h3>
@@ -3388,7 +3723,7 @@ proxying enable but misconfigured so that Proxy Error page is shown.</p>
 </li>
 <li>
 <p>HTTP/2 push - allows server to send resources to a client before it
-requests them - could overwrite memory of the server's request pool -
+requests them - could overwrite memory of the server&rsquo;s request pool -
 this is preconfigured and not under control of client but could cause a
 crash etc.</p>
 </li>
@@ -3446,7 +3781,7 @@ lead to crash</p>
 <li>RCE via malicious .desktop file - contianed extra functionality outside
 of XDG spec, where could contain shell commands that would get expanded -
 so if you view a .desktop file in Dolphin, and the Icon property
-contained shell commands, this would get evaluated - so wouldn't need to
+contained shell commands, this would get evaluated - so wouldn&rsquo;t need to
 interact at all - upstream now removed this &lsquo;feature&rsquo;</li>
 </ul>
 <h3 id="usn-4102-1-libreoffice-vulnerabilities-02-45">[<a href="https://usn.ubuntu.com/4102-1/">USN-4102-1</a>] LibreOffice vulnerabilities [02:45]</h3>
@@ -3559,7 +3894,7 @@ repatched that</li>
 <li>Race condition when using single-pass compression, might allow attacker
 to get OOB write IF the caller had provided a smaller output buffer than
 the recommended size</li>
-<li>So likely won't affect all packages which use zstd (there are many) -
+<li>So likely won&rsquo;t affect all packages which use zstd (there are many) -
 should always follow best practice</li>
 </ul>
 <h3 id="usn-4109-1-openjpeg-vulnerabilities-10-11">[<a href="https://usn.ubuntu.com/4109-1/">USN-4109-1</a>] OpenJPEG vulnerabilities [10:11]</h3>
@@ -3690,7 +4025,7 @@ subsequent memory reads to / from userspace</li>
 </ul>
 </li>
 <li>2 different memory corruption issues in the Marvell Wifi driver -
-wouldn't do bounds checking on structures passed to it from user-space -
+wouldn&rsquo;t do bounds checking on structures passed to it from user-space -
 could allow DoS via crash or RCE</li>
 <li>NULL ptr dereferences:
 <ul>
@@ -3909,7 +4244,7 @@ system, as well as the usual roundup of security fixes from the past week.</p>
 <ul>
 <li>Affecting Precise ESM, Trusty ESM, Xenial</li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-40/">Episode 40</a> - previous update introduced a memory leak due to backport
-using different API which didn't just return a const string but allocated
+using different API which didn&rsquo;t just return a const string but allocated
 it and returned it but was not freed
 <ul>
 <li><a href="https://bugs.launchpad.net/ubuntu/+source/glib2.0/+bug/1838890">https://bugs.launchpad.net/ubuntu/+source/glib2.0/+bug/1838890</a></li>
@@ -3926,7 +4261,7 @@ it and returned it but was not freed
 <li>Able to write to files outside of the repository by using a combination of symlinks and subrepositories
 <ul>
 <li>Can be mitigated either by disabling support for subrepositories in
-your local configuration or by ensuring any cloned repos don't contain
+your local configuration or by ensuring any cloned repos don&rsquo;t contain
 malicious symlinks &hellip;</li>
 </ul>
 </li>
@@ -4009,7 +4344,7 @@ to have inexact argument type matching otherwise will be disallowed.</li>
         <description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</description>
         <googleplay:description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight's security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</p>
+<p>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&rsquo;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>90 unique CVEs addressed</p>
 <h3 id="usn-4066-2-clamav-vulnerability">[<a href="https://usn.ubuntu.com/4066-2/">USN-4066-2</a>] ClamAV vulnerability</h3>
@@ -4229,7 +4564,7 @@ code-execution</li>
 </ul>
 </li>
 <li>2 different heap-based buffer overflow - possible RCE but likely mitigated with ASLR (according to upstream)</li>
-<li>Double free -&gt; crash -&gt; DoS (glibc heap-protector ensures can't cause heap corruption -&gt; abort)</li>
+<li>Double free -&gt; crash -&gt; DoS (glibc heap-protector ensures can&rsquo;t cause heap corruption -&gt; abort)</li>
 <li>Invalid pointer dereference (uninitialized) -&gt; crash or infoleak</li>
 </ul>
 <h3 id="usn-4075-1-exim-vulnerability">[<a href="https://usn.ubuntu.com/4075-1/">USN-4075-1</a>] Exim vulnerability</h3>
@@ -4439,7 +4774,7 @@ due to use of regex with backtracking</li>
 <p>Big roundup of security updates from the past 2 weeks including Docker,
 ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
 recent big fines for companies breaching their GDPR responsibilities and
-it's EOL for Ubuntu 18.10 Cosmic Cuttlefish.</p>
+it&rsquo;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>62 unique CVEs addressed</p>
 <h3 id="usn-4047-1-libvirt-vulnerabilities">[<a href="https://usn.ubuntu.com/4047-1/">USN-4047-1</a>] libvirt vulnerabilities</h3>
@@ -4555,7 +4890,7 @@ user could possible connect to it and issue API calls -&gt; possible code
 exection as another user</li>
 <li>files created / moved by admin backend could end up with wrong file
 ownership - admin backend allows to access root files as normal user (via
-admin authorisation) - so can copy files as a user to root's home which
+admin authorisation) - so can copy files as a user to root&rsquo;s home which
 then are still owned by the original user</li>
 </ul>
 <h3 id="usn-4054-1-firefox-vulnerabilities">[<a href="https://usn.ubuntu.com/4054-1/">USN-4054-1</a>] Firefox vulnerabilities</h3>
@@ -4879,7 +5214,7 @@ many selectors as specified by to then discard them later</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7054">CVE-2018-7054</a></li>
 </ul>
 </li>
-<li>2 different UAF's due to mismanagement of data structures:
+<li>2 different UAF&rsquo;s due to mismanagement of data structures:
 <ul>
 <li>One on SASL code-paths - so only affected if using SASL
 authentication - would reuse provided username and password
@@ -4940,7 +5275,7 @@ automatically fetches certs from SKS</li>
 <li>Mitigation
 <ul>
 <li>if using Enigmail, <a href="https://www.enigmail.net/index.php/en/user-manual/handbook-faq">disable auto-fetching / refreshing of public keys</a></li>
-<li>if using GnuPG directly, don't use SKS keyservers, instead use <a href="https://keys.openpgp.org">new
+<li>if using GnuPG directly, don&rsquo;t use SKS keyservers, instead use <a href="https://keys.openpgp.org">new
 resistant keyserver</a></li>
 </ul>
 </li>
@@ -5110,7 +5445,7 @@ information for v4 auth -so encryption keys would be output in
 plaintext to debug logs
 <ul>
 <li>fixed to sanitize before output</li>
-<li>won't be fixed for Xenial since upstream hasn't backported this and
+<li>won&rsquo;t be fixed for Xenial since upstream hasn&rsquo;t backported this and
 there are many instances of other sensitive info being logged there
 as well</li>
 </ul>
@@ -5138,7 +5473,7 @@ connections
 driver using a particular underlying technology</li>
 <li>Rules can specify protocols and source / destination ports</li>
 <li>iptables driver would execute rules but if encountered an error (such as
-a protocol was specified along with a port but the protocol doesn't
+a protocol was specified along with a port but the protocol doesn&rsquo;t
 support ports - like VRRP) then it would error out and not apply further
 rules from the security group
 <ul>
@@ -5351,7 +5686,7 @@ integer overflow -&gt; buffer overflow -&gt; crash / code execution</li>
 users - this would cause libvirt to block and cause a DoS</li>
 <li>Privilege escalation due to insecure permissions on the virt-lockd and
 virt-logd UNIX domain sockets - these are created by systemd unit files
-but were created as world writable - and the daemons don't try and
+but were created as world writable - and the daemons don&rsquo;t try and
 authenticate the user - so anyone could use these sockets to potentially
 elevate privileges - so fixed by ensuring the systemd socket definitions
 specify the right mode.</li>
@@ -5466,7 +5801,7 @@ session</li>
 <li>Environment variables were exposed by an example API endpoint which
 exposed host info and so remote attackers could then possibly gain
 admin access</li>
-<li>Lacked brute-force password protection as wouldn't reject already
+<li>Lacked brute-force password protection as wouldn&rsquo;t reject already
 denied hosts from repeatedly trying</li>
 </ul>
 </li>
@@ -5594,12 +5929,12 @@ kernel), but this is not supported on all platforms (Windows etc)</li>
 <ul>
 <li>In this case, the authenticating user has to prove they are who they
 say by being able to read and provide a magic value from a keyring file
-which dbus drops in the user's home directory</li>
+which dbus drops in the user&rsquo;s home directory</li>
 <li>By abusing symlinks, it would be possible to point the local users
 keyring at some other file and cause DBus to read / write to some other
 file which was not intended</li>
-<li>This could further be abused to point your local dbus keyring to root's
-and cause DBus to eventually confuse the local user's authentication to
+<li>This could further be abused to point your local dbus keyring to root&rsquo;s
+and cause DBus to eventually confuse the local user&rsquo;s authentication to
 the bus as that of the root user and so allow an unprivileged user to
 authenticate as root and so then perform operations as root via DBus</li>
 </ul>
@@ -5731,7 +6066,7 @@ upstream released 67.0.2 which is this new update.</li>
 </li>
 <li>Generates HTML code documentation from code comments</li>
 <li>Includes a field to search across the documentation</li>
-<li>Doesn't treat this as untrusted input and blindly displays the input in resulting pages
+<li>Doesn&rsquo;t treat this as untrusted input and blindly displays the input in resulting pages
 <ul>
 <li>Allows possible XSS or iframe injection</li>
 </ul>
@@ -5749,7 +6084,7 @@ upstream released 67.0.2 which is this new update.</li>
 </li>
 <li>3 likely DoS issues:
 <ul>
-<li>Buffer overflow when handling invalid BMP images - didn't check for valid
+<li>Buffer overflow when handling invalid BMP images - didn&rsquo;t check for valid
 / sensible width or height parameters</li>
 <li>NULL pointer dereference on malformed GIF images</li>
 <li>Double free when parsing a specially crafted (illegal format) XML
@@ -5895,7 +6230,7 @@ MariaDB (community maintained fork of MySQL) - <a href="https://ubuntusecuritypo
 </li>
 <li>Sandbox is used when rendering user-provided templates (ie untrusted)</li>
 <li>Possible to escape the sandbox by reading arbitrary python objects via
-Python's internal string format method (by referencing the <!-- raw HTML omitted --><!-- raw HTML omitted -->globals<!-- raw HTML omitted --><!-- raw HTML omitted -->
+Python&rsquo;s internal string format method (by referencing the <!-- raw HTML omitted --><!-- raw HTML omitted -->globals<!-- raw HTML omitted --><!-- raw HTML omitted -->
 array)</li>
 <li>Was originally fixed in 2016 for the str.format method - but at the time
 missed the similar str.format_map method - so both fixed in this update</li>
@@ -6463,7 +6798,7 @@ management and DHCP server code</li>
 <li>BIND in Bionic + Cosmic contained a change which zeroed out an internal
 index to indicate it was unused - however 0 is still a valid index in the
 DHCP server codebase - and so this could cause a use-after free (since
-would be free'd, index set to 0 by BIND lib but then still used later
+would be free&rsquo;d, index set to 0 by BIND lib but then still used later
 since 0 is valid). Instead changed to track indexes correctly to account
 for this behaviour.</li>
 </ul>
@@ -6790,9 +7125,9 @@ read out the contents of windows behind the lock screen.</li>
 </ul>
 </li>
 <li>CPU DoS in Matroska and HTML subtitle decoding</li>
-<li>Various issues discovered by Google's oss-fuzz project:
+<li>Various issues discovered by Google&rsquo;s oss-fuzz project:
 <ul>
-<li>2 x OOB read found by Google's clusterfuzz / oss-fuzz project in MPEG-4 decoder</li>
+<li>2 x OOB read found by Google&rsquo;s clusterfuzz / oss-fuzz project in MPEG-4 decoder</li>
 <li>NULL pointer dereference and OOB read in HEVC decoder</li>
 </ul>
 </li>
@@ -6913,7 +7248,7 @@ escaping this data</li>
         <description>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.</description>
         <googleplay:description>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.</googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub's credentials database and more.</p>
+<p>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&rsquo;s credentials database and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>19 unique CVEs addressed</p>
 <h3 id="usn-3957-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/3957-1/">USN-3957-1</a>] MySQL vulnerabilities</h3>
@@ -6951,7 +7286,7 @@ encountering a semi-colon that this delimits the maximum size of the
 session id - however the session id has a maximum size of 512 bytes -
 would overflow by using the user-supplied session id length rather than
 sticking to the maximum structure length - changed to only parse up to
-the maximum size of the structure to ensure we then don't overflow when
+the maximum size of the structure to ensure we then don&rsquo;t overflow when
 copying</li>
 </ul>
 <h3 id="usn-3959-1-evince-vulnerability">[<a href="https://usn.ubuntu.com/3959-1/">USN-3959-1</a>] Evince vulnerability</h3>
@@ -7190,7 +7525,7 @@ escalation</li>
 </ul>
 </li>
 <li>This update removes setuid root to additionally harden ntfs-3g so that
-any future vulnerablilites can't be used for privilege escalation</li>
+any future vulnerablilites can&rsquo;t be used for privilege escalation</li>
 </ul>
 <h3 id="usn-3950-1-znc-vulnerability">[<a href="https://usn.ubuntu.com/3950-1/">USN-3950-1</a>] ZNC vulnerability</h3>
 <ul>
@@ -7294,12 +7629,12 @@ for FreeRADIUS</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5743">CVE-2018-5743</a></li>
 </ul>
 </li>
-<li>DoS - possible to bypass bind's limits on simultaneous TCP clients and so
+<li>DoS - possible to bypass bind&rsquo;s limits on simultaneous TCP clients and so
 cause a DoS via excessive resource usage</li>
 </ul>
 <h2 id="iot-security-follow-up-with-joe-mcmanus">IoT Security follow-up with Joe McManus</h2>
 <ul>
-<li>Alex and Joe follow up on last episode's conversation about IoT and in
+<li>Alex and Joe follow up on last episode&rsquo;s conversation about IoT and in
 particular talk about Ubuntu Core and how this has been engineered to
 address many of these common IoT security design and implementation flaws</li>
 </ul>
@@ -7438,7 +7773,7 @@ bypass the Java sandbox</li>
 <li>getfattr -d to dump</li>
 <li>changed to NOT store extended attributes by default AND to strip out
 any credentials when doing so</li>
-<li>doesn't effect Precise ESM</li>
+<li>doesn&rsquo;t effect Precise ESM</li>
 </ul>
 </li>
 </ul>
@@ -7456,7 +7791,7 @@ any credentials when doing so</li>
 <li>Also includes 3 other issues:
 <ul>
 <li>Nonce generated to prevent reply attacks for HTTP digest authentication
-challenenge wasn't sufficiently random
+challenenge wasn&rsquo;t sufficiently random
 <ul>
 <li>Could allow and attacker to reply across a cluster of servers with
 the same common digest authentication configuration</li>
@@ -7486,7 +7821,7 @@ index +2 which could be past the end of the header) - crash, DoS</li>
 hostapd and wpa_supplicant (aka Dragonblood)
 <ul>
 <li>2 apply to SAE (Simultaneous Authentication of Equals , also known as
-Dragonfly Key Exchange) not relevant since we don't enable SAE support
+Dragonfly Key Exchange) not relevant since we don&rsquo;t enable SAE support
 in our builds (this is used for initial key exchange instead of PSK)</li>
 <li>4 apply to the use of EAP-PWD - Extensible Authentication Protocol
 Password
@@ -7627,7 +7962,7 @@ read-only GOT (via RELRO &amp; BIND_NOW))</li>
 </li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - fixed kernel to make process start_time via fork() more atomic</li>
 <li>Updated policykit to also check UIDs match (so now checks start_time,
-PID and UID so can't use another user's authorisations)</li>
+PID and UID so can&rsquo;t use another user&rsquo;s authorisations)</li>
 </ul>
 <h3 id="usn-3935-1-busybox-vulnerabilities">[<a href="https://usn.ubuntu.com/3935-1/">USN-3935-1</a>] BusyBox vulnerabilities</h3>
 <ul>
@@ -7926,7 +8261,7 @@ malicious f2fs images</li>
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
 <p>This week we look security updates for a heap of packages including
-Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook's recent
+Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&rsquo;s recent
 password storage incident as well as some listener hardening tips and
 more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
@@ -8039,7 +8374,7 @@ been added to an internal fallback list to use the old method</li>
 </li>
 <li>Crash due to uncaught DOMException able to be triggered by a malformed
 XML document - DoS</li>
-<li>Thanks to Etienne Dysli Metref who provided debdiff's as well as
+<li>Thanks to Etienne Dysli Metref who provided debdiff&rsquo;s as well as
 testing for this update</li>
 </ul>
 <h3 id="usn-3922-1-php-vulnerabilities">[<a href="https://usn.ubuntu.com/3922-1/">USN-3922-1</a>] PHP vulnerabilities</h3>
@@ -8121,7 +8456,7 @@ parameters leading to possible extreme memory allocation</li>
 absolute URL using backward-slashes (\) in place of forward-slashes
 (/) and this would be propagated by the endpoint to the client where
 the browser would convert these and follow the redirect - due to
-mismatch in how browsers will convert these but apache's own internal
+mismatch in how browsers will convert these but apache&rsquo;s own internal
 URI parsing does not</li>
 </ul>
 <h3 id="usn-3925-1-freeimage-vulnerability">[<a href="https://usn.ubuntu.com/3925-1/">USN-3925-1</a>] FreeImage vulnerability</h3>
@@ -8363,7 +8698,7 @@ outside of the sandbox)</li>
 architectures the kernel does this comparison as a 64-bit integer - so
 can be circumvented by using a 64-bit value to ioctl systemcall which
 has other bits set in the upper 32 bits - since when seccomp does
-comparison it uses the full 64 bits - so it won't match the 32-bit
+comparison it uses the full 64 bits - so it won&rsquo;t match the 32-bit
 value of TIOCSTI and so will be allowed - but then when used as the
 ioctl() argument it will correctly be truncated to 32-bits and the
 ioctl will proceed</li>
@@ -8495,7 +8830,7 @@ permissions on any existing swapfile as well</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9020">CVE-2019-9020</a></li>
 </ul>
 </li>
-<li>See last week's <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Xenial and Trusty - fixed
+<li>See last week&rsquo;s <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Xenial and Trusty - fixed
 now for Precise ESM as well</li>
 </ul>
 <h3 id="usn-3910-1-usn-3910-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3910-1/">USN-3910-1</a>, <a href="https://usn.ubuntu.com/3910-2/">USN-3910-2</a>] Linux kernel vulnerabilities</h3>
@@ -8528,7 +8863,7 @@ option</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133">CVE-2019-6133</a></li>
 </ul>
 </li>
-<li>See last week's <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Bionic kernel - now for
+<li>See last week&rsquo;s <a href="https://ubuntusecuritypodcast.org/episode-23/">Episode 23</a> - discussed for Bionic kernel - now for
 Trusty kernel (and the Trusty HWE kernel backported to Precise ESM)
 <ul>
 <li>PolicyKit start time issue, fixed in kernel</li>
@@ -8633,7 +8968,7 @@ various Ubuntu kernel configurations</li>
 <p>However, fork() system call is not atomic, so attacked could call sys_clone() at same time as real process so it has the same start time. Can then cause kernel to block on returning back to the attacker process, effectively racing against the real process waiting for it to end, in the meantime blocking PID allocation until it has cycled around and end up with the same (reused) PID as the original authorised process (and with same start time) - so can effectively fool PolicyKit into impersonating the real process</p>
 </li>
 <li>
-<p>Fix kernel to make fork() atomic rather than try fix PolicyKit since can't effectively do this at the process level</p>
+<p>Fix kernel to make fork() atomic rather than try fix PolicyKit since can&rsquo;t effectively do this at the process level</p>
 </li>
 <li>
 <p>Kernel fixed to record process start time later in procedure so is much closer to when the process is visible to userspace and after userspace has a chance to delay it to mitigate this</p>
@@ -8767,8 +9102,8 @@ various Ubuntu kernel configurations</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20781">CVE-2018-20781</a></li>
 </ul>
 </li>
-<li>Already fixed upstream (hence doesn't apply to Bionic / Cosmic etc)</li>
-<li>User's login password kept in memory of child process after pam session is opened</li>
+<li>Already fixed upstream (hence doesn&rsquo;t apply to Bionic / Cosmic etc)</li>
+<li>User&rsquo;s login password kept in memory of child process after pam session is opened</li>
 <li>Could be dumped by root user or captured in crash dump etc and possibly exposed
 <ul>
 <li>Other tools exist to try and extract from memory as well (<a href="https://github.com/huntergregal/mimipenguin">minipenguin</a> etc)</li>
@@ -8867,7 +9202,7 @@ various Ubuntu kernel configurations</li>
 <li>Plan to add more hardening features for 19.10 (stack clash and control-flow integrity support via gcc) and review kernel options cf. KSPP</li>
 </ul>
 <h3 id="q-and-a">Q&amp;A</h3>
-<h4 id="does-numerous-bugs-and-regressions-in-ghostscript-indicate-it-is-reaching-it-s-eol">Does numerous bugs and regressions in Ghostscript indicate it is reaching it's EOL?</h4>
+<h4 id="does-numerous-bugs-and-regressions-in-ghostscript-indicate-it-is-reaching-it-s-eol">Does numerous bugs and regressions in Ghostscript indicate it is reaching it&rsquo;s EOL?</h4>
 <ul>
 <li><a href="https://twitter.com/docEbrown1/status/1101452172196163585">doc-E-brown via twitter</a></li>
 <li>Lots of recent focus -&gt; finds bugs</li>
@@ -9034,7 +9369,7 @@ various Ubuntu kernel configurations</li>
 </ul>
 </li>
 <li>Fail to properly apply controls to zone transfers - could allow clients to request and receive a zone transfer to a dynamically loadable zone contrary to the allow-transfer ACL</li>
-<li>Assertion failure if a trust anchor's keys are replaced with keys using an unsupported algorithm during a key rollover when using the managed-keys feature for DNSSEC validation</li>
+<li>Assertion failure if a trust anchor&rsquo;s keys are replaced with keys using an unsupported algorithm during a key rollover when using the managed-keys feature for DNSSEC validation</li>
 <li>Remotely triggerable memory leak when processing particular packets - DoS</li>
 </ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
@@ -9139,7 +9474,7 @@ various Ubuntu kernel configurations</li>
 <li>OOB read on reading USB device descriptor  - need local physical access to connect a malicious device - crash -&gt; DoS</li>
 <li>UAF in ALSA via a malicious USB sound device that expose zero interfaces - crash -&gt; DoS, possible code execution</li>
 <li>Uninitialised ioapics (<a href="https://ubuntusecuritypodcast.org/episode-19/">Episode 19</a>)</li>
-<li>Cleancache subsystem - after file truncation (removal), wouldn't properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
+<li>Cleancache subsystem - after file truncation (removal), wouldn&rsquo;t properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
 <ul>
 <li>Only affects Ubuntu kernels under Xen with tmem driver</li>
 </ul>
@@ -9205,7 +9540,7 @@ script which will get executed without prompting - so onMouseOver()
 etc</li>
 <li>and this can refer to a file on the local filesystem outside the
 document structure itself</li>
-<li>libreoffice ships with it's own Python interpreter that contains
+<li>libreoffice ships with it&rsquo;s own Python interpreter that contains
 functions which can be abused to run arbitrary commands</li>
 <li>so can specify both the path to one of these files AND arguments to
 pass to it to run</li>
@@ -9805,7 +10140,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10910">CVE-2018-10910</a></li>
 </ul>
 </li>
-<li>BlueZ doesn't necessarily make bluetooth device undiscoverable automatically after timeout</li>
+<li>BlueZ doesn&rsquo;t necessarily make bluetooth device undiscoverable automatically after timeout</li>
 <li>Hence after enabling discovery would then still be discoverable even though user expectation is that is not anymore</li>
 <li>Actual bug then is really in BlueZ but now added a workaround in GNOME bluetooth to manually disable discovery</li>
 </ul>
@@ -9908,7 +10243,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 <ul>
 <li>This changes the behaviour of mincore() to only report pages which have been faulted into the cache by the calling process
 <ul>
-<li>So at best can now observe when a page is evicted from the cache but can't see when another process faults in a page</li>
+<li>So at best can now observe when a page is evicted from the cache but can&rsquo;t see when another process faults in a page</li>
 </ul>
 </li>
 <li>Breaks user-space API of mincore() and hence some existing programs (as noted in the commit)
@@ -9956,11 +10291,11 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 </li>
 <li>Popular XML/HTML parser for Python</li>
 <li>Tries to remove clean input document and remove links (to say embedded
-javascript code) - but doesn't account for links containing escaped
+javascript code) - but doesn&rsquo;t account for links containing escaped
 characters - so link could persist</li>
 <li>Similar to CVE-2014-3146
 <ul>
-<li>In this case tried to account for whitespace in links but didn't include
+<li>In this case tried to account for whitespace in links but didn&rsquo;t include
 all possible whitespace characters</li>
 </ul>
 </li>
@@ -10002,7 +10337,7 @@ regressed (crash on opening certain PDF files)</li>
 <li>Low level library for pixel manipulation (used by X, Wayland, Qemu etc)</li>
 <li>Pointer overflow leading to stack-based buffer overflow in computing bounds of pixel buffers
 <ul>
-<li>Did include a check to see if was inside bounds, BUT didn't account for
+<li>Did include a check to see if was inside bounds, BUT didn&rsquo;t account for
 possible overflow in arithmetic before the check</li>
 <li>Need to check for possible overflow before doing arithmetic and comparison</li>
 </ul>
@@ -10157,7 +10492,7 @@ sure you always have the latest security updates by using unattended-upgrades.</
 <p>3 CVEs discovered by Jann Horn (and one inadvertently caused by Jann too)</p>
 <ul>
 <li>mremap() system call - used to expand or shrink an existing
-memory mapping and possibly move it - doesn't properly flush TLB - could
+memory mapping and possibly move it - doesn&rsquo;t properly flush TLB - could
 leave pages in page cache for a short time which can then be raced to obtain
 access afterwards and possible DoS crash or information disclosure etc
 depending on target memory</li>
@@ -10187,7 +10522,7 @@ policy to ensure this was enforced
 </ul>
 </li>
 <li>Secondary kernel keyring (ie where UEFI MOK goes from shim - used by
-DKMS) not trusted - so modules signed with it wouldn't work (except they
+DKMS) not trusted - so modules signed with it wouldn&rsquo;t work (except they
 do due to above)
 <ul>
 <li>Fixed to trust keys in secondary keyring for module signing</li>
@@ -10389,7 +10724,7 @@ to signed - INT_MAX -&gt; -ve -&gt; OOB read - crash / DoS
 <li>CNAME records could point to themselves - infinite recursion in internal AD DNS server
 <ul>
 <li>Users can add CNAME records -&gt; user triggerable</li>
-<li>Fix ensures CNAMEs can't refer to themselves</li>
+<li>Fix ensures CNAMEs can&rsquo;t refer to themselves</li>
 </ul>
 </li>
 <li>If using smartcard authentication for AD, double free could occur due to mismatch in certificate vs authentication request parameters
@@ -10540,7 +10875,7 @@ would instead use the user supplied ones from the overlayed fs</li>
 <li>Hard to fix first one since maintainers can lost interest and hand over to anyone
 <ul>
 <li>New owner may not have trust the old one did</li>
-<li>npm doesn't care - is uncurated</li>
+<li>npm doesn&rsquo;t care - is uncurated</li>
 </ul>
 </li>
 <li>Copay bundled and distributed dependencies so perhaps should have some responsibility to check those etc</li>
@@ -10612,7 +10947,7 @@ barrier to entry as a trusted developer</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2011-2767">CVE-2011-2767</a></li>
 </ul>
 </li>
-<li>Old CVE - reported to Debian in 2011, who assigned a CVE internally but didn't go any further with it</li>
+<li>Old CVE - reported to Debian in 2011, who assigned a CVE internally but didn&rsquo;t go any further with it</li>
 <li>Recently the original reporter of the vulnerability submitted a patch to Debian to fix it - so vuln was reported to Mitre</li>
 <li>Now fixed in Ubuntu as well</li>
 </ul>
@@ -10716,7 +11051,7 @@ more.</p>
 </li>
 <li>Double free for specially crafted translations file, DoS -&gt; crash, possible code execution via heap corruption etc.
 <ul>
-<li>PoC's on github</li>
+<li>PoC&rsquo;s on github</li>
 </ul>
 </li>
 </ul>
@@ -10752,7 +11087,7 @@ more.</p>
 <li>Would follow symlinks in non-terminal path components, and then operate on the resulting file</li>
 <li>Can tell it to set permissions / ownership of given files</li>
 <li>So could race it to replace path components with symlinks to root-owned files and get it to change their ownership to that of the user (or whomeever)</li>
-<li>Original patch series (March) didn't completely fix this - required much more invasive patching later</li>
+<li>Original patch series (March) didn&rsquo;t completely fix this - required much more invasive patching later</li>
 <li>We waited to fix it until the complete fix was available and accepted upstream (August) to then start backporting</li>
 </ul>
 </li>
@@ -10836,7 +11171,7 @@ more.</p>
 </li>
 <li>Bluetooth HID integer overflow and info leak in CDROM ioctl (covered in Episode 9 for Xenial kernel)</li>
 <li>Possible privilege escalation via SCSI subsystem</li>
-<li>Xen virtual network driver didn't check supplied parameters -&gt; integer overflow -&gt; OOB read -&gt; possible OOB write -&gt; privilege escalation, DoS etc</li>
+<li>Xen virtual network driver didn&rsquo;t check supplied parameters -&gt; integer overflow -&gt; OOB read -&gt; possible OOB write -&gt; privilege escalation, DoS etc</li>
 </ul>
 <h3 id="usn-3821-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3821-1/">USN-3821-1</a>] Linux kernel vulnerabilities</h3>
 <ul>
@@ -10852,7 +11187,7 @@ more.</p>
 </ul>
 </li>
 <li>Potential host system crash / code execution from malicious guest for KVM on ARM64</li>
-<li>Stack unwinding in procfs didn't check caller was root - anyone could race stack unwinder to read stack of arbitrary kernel processes</li>
+<li>Stack unwinding in procfs didn&rsquo;t check caller was root - anyone could race stack unwinder to read stack of arbitrary kernel processes</li>
 <li>NULL pointer dereferences in various file-system drivers -&gt; triggered by mounting malicious fs image
 <ul>
 <li>HFS+, btrfs, f2fs</li>
@@ -11021,7 +11356,7 @@ is empty)</li>
 </li>
 <li>Possible to crash the per-connection process on NULL pointer dereference
 <ul>
-<li>Low priority since doesn't crash the main daemon so not really a DoS</li>
+<li>Low priority since doesn&rsquo;t crash the main daemon so not really a DoS</li>
 </ul>
 </li>
 </ul>
@@ -11574,7 +11909,7 @@ particular CVE-2018-12383 was discussed in Episode 4 for Firefox</li>
 <li>Also rolls in fixes for 4 other vulnerabilities in the embedded mspack library
 <ul>
 <li>In trusty and precise we used the embedded libmspack, newer releases use
-the system package so weren't affected</li>
+the system package so weren&rsquo;t affected</li>
 </ul>
 </li>
 </ul>
@@ -11609,7 +11944,7 @@ the system package so weren't affected</li>
 <li>Includes OpenSSL 1.1.1 for TLS 1.3 support</li>
 <li>Support for using fingerprint readers to unlock screen etc
 <ul>
-<li>Ubuntu Security Team consider fingerprints to be akin to usernames only - so we don't enable fingerprint authentication by default - need to opt-in</li>
+<li>Ubuntu Security Team consider fingerprints to be akin to usernames only - so we don&rsquo;t enable fingerprint authentication by default - need to opt-in</li>
 <li>libfprint and fprintd promoted to main to allow this</li>
 </ul>
 </li>
@@ -11675,7 +12010,7 @@ the system package so weren't affected</li>
 </ul>
 </li>
 <li>[<a href="https://usn.ubuntu.com/3771-1/">USN-3771-1</a>] incorporated fixes for multiple CVEs - but these fixes themselves introduced this new vulnerability</li>
-<li>Heap buffer overflow found by Google's OSS-Fuzz leading to DoS for gmp plugin</li>
+<li>Heap buffer overflow found by Google&rsquo;s OSS-Fuzz leading to DoS for gmp plugin</li>
 </ul>
 <h3 id="usn-3775-1-usn-3775-2-usn-3776-1-usn-3776-2-usn-3777-1-usn-3777-2-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3775-1/">USN-3775-1</a>, <a href="https://usn.ubuntu.com/3775-2/">USN-3775-2</a>, <a href="https://usn.ubuntu.com/3776-1/">USN-3776-1</a>, <a href="https://usn.ubuntu.com/3776-2/">USN-3776-2</a>, USN-3777-1, <a href="https://usn.ubuntu.com/3777-2/">USN-3777-2</a>] Linux kernel vulnerabilities</h3>
 <ul>
@@ -11930,7 +12265,7 @@ format handling leading to DoS etc</li>
 <li>udisks prints volume label via printf() passing the label as part of the format string
 <ul>
 <li>Simple fix to replace the label with a %s directive and then pass the label to that</li>
-<li>ie. don't interpret label as printf() directives directly</li>
+<li>ie. don&rsquo;t interpret label as printf() directives directly</li>
 </ul>
 </li>
 </ul>
@@ -12124,7 +12459,7 @@ NTLM authentication could allow heap buffer overflow and hence RCE</li>
 </li>
 <li>Integer overflows in JPEG and EXIF handlers leading to out-of-bounds reads and hence crash - DoS</li>
 <li>php-fpm (FastCGI process manager) - alternative FastCGI implementation for
-PHP - could cause DoS since didn't restart child processes correctly - then
+PHP - could cause DoS since didn&rsquo;t restart child processes correctly - then
 consume CPU and disk space (via logging) - only fixed in Bionic for now</li>
 </ul>
 <h3 id="usn-3722-6-clamav-vulnerabilities">[<a href="https://usn.ubuntu.com/3722-6/">USN-3722-6</a>] ClamAV vulnerabilities</h3>
@@ -12395,7 +12730,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
 <li>Intel microcode updates to address L1TF, Spectre Variant 4 and Rogue System Register Read (RSRE)</li>
 <li>Intel initially released this with a brand new license which included terms around disallowing benchmarking and possibly preventing redistribution via the Ubuntu mirrors
 <ul>
-<li>As a result, we couldn't provide updated microcode packages to full address L1TF etc</li>
+<li>As a result, we couldn&rsquo;t provide updated microcode packages to full address L1TF etc</li>
 <li>Intel have now reverted back to the license used on previous microcode packages and so this can now finally be released</li>
 </ul>
 </li>
@@ -12894,8 +13229,8 @@ boot for some hardware configurations</li>
 <li>Pages can be swapped in our out of memory (Present or not) - so if not present then need to do a full page table walk to look up physical address</li>
 <li>But Intel processor will use offset value from PTE even on non-present pages <strong>speculatively</strong></li>
 <li>For non-present pages, this value is usually junk so can essentially speculatively read arbitrary memory from L1D cache depending on PTE value</li>
-<li>SGX doesn't affect Ubuntu since not used</li>
-<li>SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can't be used for this</li>
+<li>SGX doesn&rsquo;t affect Ubuntu since not used</li>
+<li>SMM fixed via ensuring PTEs of not present pages always refer to non-cacheable memory and hence can&rsquo;t be used for this</li>
 <li>VMM is trickier
 <ul>
 <li>VMs maintain their own PTEs so also need to ensure they are doing the right thing</li>
@@ -13103,7 +13438,7 @@ boot for some hardware configurations</li>
 <li><a href="https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts">https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts</a></li>
 <li><a href="https://blog.ubuntu.com/2018/07/30/national-cyber-security-centre-publish-ubuntu-18-04-lts-security-guide">https://blog.ubuntu.com/2018/07/30/national-cyber-security-centre-publish-ubuntu-18-04-lts-security-guide</a></li>
 </ul>
-<h3 id="seth-arnold-s-apparmor-3-dot-0-presentation-at-debconf">Seth Arnold's AppArmor 3.0 presentation at DebConf</h3>
+<h3 id="seth-arnold-s-apparmor-3-dot-0-presentation-at-debconf">Seth Arnold&rsquo;s AppArmor 3.0 presentation at DebConf</h3>
 <ul>
 <li>Overview of AppArmor with brief history and walkthough of main features</li>
 <li>Efforts to enable AppArmor by default in Debian Buster (10)</li>

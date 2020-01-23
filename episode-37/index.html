@@ -9,7 +9,7 @@
 
   <meta name="description" content="The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 37" />
@@ -262,7 +262,7 @@ integer overflow -&gt; buffer overflow -&gt; crash / code execution</li>
 users - this would cause libvirt to block and cause a DoS</li>
 <li>Privilege escalation due to insecure permissions on the virt-lockd and
 virt-logd UNIX domain sockets - these are created by systemd unit files
-but were created as world writable - and the daemons don't try and
+but were created as world writable - and the daemons don&rsquo;t try and
 authenticate the user - so anyone could use these sockets to potentially
 elevate privileges - so fixed by ensuring the systemd socket definitions
 specify the right mode.</li>
@@ -377,7 +377,7 @@ session</li>
 <li>Environment variables were exposed by an example API endpoint which
 exposed host info and so remote attackers could then possibly gain
 admin access</li>
-<li>Lacked brute-force password protection as wouldn't reject already
+<li>Lacked brute-force password protection as wouldn&rsquo;t reject already
 denied hosts from repeatedly trying</li>
 </ul>
 </li>

@@ -12,7 +12,7 @@
   remote USB devices and password stashes.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 46" />
@@ -349,7 +349,7 @@ address and so defeat KASLR</li>
 <ul>
 <li>NULL pointer address execution (call function pointer which is NULL
 since is not initializated) - Ubuntu defaults to a non-zero
-mmap_min_addr value which means can't map a page at 0 address so this
+mmap_min_addr value which means can&rsquo;t map a page at 0 address so this
 is just a NULL pointer dereference in default config (otherwise is
 arbitrary kernel code execution)</li>
 </ul>
@@ -535,7 +535,7 @@ going via AP) - flaw allows a peer to cause wifi disconnection (DoS)</li>
 </ul>
 </li>
 <li><a href="https://ubuntusecuritypodcast.org/episode-27/">Episode 27</a> - PolicyKit could get confused via PID reuse - fix was 2
-parts - 1 kernel to ensure can't race kernel on PID assignment, and
+parts - 1 kernel to ensure can&rsquo;t race kernel on PID assignment, and
 second was in PolicyKit itself to check on PID, UID and start time.</li>
 </ul>
 <h3 id="usn-4119-1-irssi-vulnerability-11-23">[<a href="https://usn.ubuntu.com/4119-1/">USN-4119-1</a>] Irssi vulnerability [11:23]</h3>

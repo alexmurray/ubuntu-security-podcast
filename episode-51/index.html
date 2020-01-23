@@ -12,7 +12,7 @@
   Whoopsie, Apport and more.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 51" />
@@ -276,7 +276,7 @@ local machine</li>
 <li>Heap based buffer overflow via a too-long domain name (greater than 63
 characters - in library, caller passes a buffer that is specified to be a
 minimum of 64 bytes - but libidn strcpy()&lsquo;s into it so could easily overflow.</li>
-<li>Possible domain name impersonation since doesn't bother to check unicode
+<li>Possible domain name impersonation since doesn&rsquo;t bother to check unicode
 conversions - so could use punycode (ascii representation of certain
 unicode characters) to impersonate a unicode domain</li>
 </ul>
@@ -323,13 +323,13 @@ using the details of the new privileged process - since this was
 originally an unprivileged process, the crash dump is then unprivileged
 too). Fixed by making sure Apport drops privileges to the original
 unprivileged user before reading /proc/PID info so if this happens to
-then be a different user's process will not be able to generate the
+then be a different user&rsquo;s process will not be able to generate the
 crash dump</li>
 <li>Apport would read a per-user configuration file - but would do so as
 root - and so this could be a symlink to a root owned file and Apport
 would happily read it (but might error out if it looked invalid) - so
-drop privileges to read it so it doesn't include anything which it
-shouldn't in the final crash report</li>
+drop privileges to read it so it doesn&rsquo;t include anything which it
+shouldn&rsquo;t in the final crash report</li>
 </ul>
 </li>
 <li>
@@ -347,7 +347,7 @@ unprivileged user who (using unprivileged usernamespaces) is root in a
 container to chroot() for a process in a container to a different
 location so it can then intercept the crash dump of a privileged
 process within the container - so could run a setuid process in the
-container, and when it crashes be able to read it's crash dump</li>
+container, and when it crashes be able to read it&rsquo;s crash dump</li>
 <li>TOCCTOU race on PID (like above) but this is in a different code path -
 reads the cwd of the crashed process to write out the core dump to this
 location - but on process ID reuse this could then be in a different

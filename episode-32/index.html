@@ -14,7 +14,7 @@
   code audits.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 32" />
@@ -243,7 +243,7 @@ management and DHCP server code</li>
 <li>BIND in Bionic + Cosmic contained a change which zeroed out an internal
 index to indicate it was unused - however 0 is still a valid index in the
 DHCP server codebase - and so this could cause a use-after free (since
-would be free'd, index set to 0 by BIND lib but then still used later
+would be free&rsquo;d, index set to 0 by BIND lib but then still used later
 since 0 is valid). Instead changed to track indexes correctly to account
 for this behaviour.</li>
 </ul>

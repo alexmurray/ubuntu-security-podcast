@@ -12,7 +12,7 @@
   sure you always have the latest security updates by using unattended-upgrades.
   ">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 15" />
@@ -246,7 +246,7 @@ sure you always have the latest security updates by using unattended-upgrades.</
 <p>3 CVEs discovered by Jann Horn (and one inadvertently caused by Jann too)</p>
 <ul>
 <li>mremap() system call - used to expand or shrink an existing
-memory mapping and possibly move it - doesn't properly flush TLB - could
+memory mapping and possibly move it - doesn&rsquo;t properly flush TLB - could
 leave pages in page cache for a short time which can then be raced to obtain
 access afterwards and possible DoS crash or information disclosure etc
 depending on target memory</li>
@@ -276,7 +276,7 @@ policy to ensure this was enforced
 </ul>
 </li>
 <li>Secondary kernel keyring (ie where UEFI MOK goes from shim - used by
-DKMS) not trusted - so modules signed with it wouldn't work (except they
+DKMS) not trusted - so modules signed with it wouldn&rsquo;t work (except they
 do due to above)
 <ul>
 <li>Fixed to trust keys in secondary keyring for module signing</li>

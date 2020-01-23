@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 23" />
@@ -215,7 +215,7 @@
 <p>However, fork() system call is not atomic, so attacked could call sys_clone() at same time as real process so it has the same start time. Can then cause kernel to block on returning back to the attacker process, effectively racing against the real process waiting for it to end, in the meantime blocking PID allocation until it has cycled around and end up with the same (reused) PID as the original authorised process (and with same start time) - so can effectively fool PolicyKit into impersonating the real process</p>
 </li>
 <li>
-<p>Fix kernel to make fork() atomic rather than try fix PolicyKit since can't effectively do this at the process level</p>
+<p>Fix kernel to make fork() atomic rather than try fix PolicyKit since can&rsquo;t effectively do this at the process level</p>
 </li>
 <li>
 <p>Kernel fixed to record process start time later in procedure so is much closer to when the process is visible to userspace and after userspace has a chance to delay it to mitigate this</p>

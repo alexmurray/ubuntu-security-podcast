@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 20" />
@@ -237,7 +237,7 @@
 <li>OOB read on reading USB device descriptor  - need local physical access to connect a malicious device - crash -&gt; DoS</li>
 <li>UAF in ALSA via a malicious USB sound device that expose zero interfaces - crash -&gt; DoS, possible code execution</li>
 <li>Uninitialised ioapics (<a href="https://ubuntusecuritypodcast.org/episode-19/">Episode 19</a>)</li>
-<li>Cleancache subsystem - after file truncation (removal), wouldn't properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
+<li>Cleancache subsystem - after file truncation (removal), wouldn&rsquo;t properly clear inode so if a new file was created with the same inode might contain leftover pages from cleancache and hence the data from the old file
 <ul>
 <li>Only affects Ubuntu kernels under Xen with tmem driver</li>
 </ul>
@@ -303,7 +303,7 @@ script which will get executed without prompting - so onMouseOver()
 etc</li>
 <li>and this can refer to a file on the local filesystem outside the
 document structure itself</li>
-<li>libreoffice ships with it's own Python interpreter that contains
+<li>libreoffice ships with it&rsquo;s own Python interpreter that contains
 functions which can be abused to run arbitrary commands</li>
 <li>so can specify both the path to one of these files AND arguments to
 pass to it to run</li>

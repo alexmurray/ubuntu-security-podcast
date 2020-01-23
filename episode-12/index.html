@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 12" />
@@ -204,7 +204,7 @@ more.</p>
 </li>
 <li>Double free for specially crafted translations file, DoS -&gt; crash, possible code execution via heap corruption etc.
 <ul>
-<li>PoC's on github</li>
+<li>PoC&rsquo;s on github</li>
 </ul>
 </li>
 </ul>
@@ -240,7 +240,7 @@ more.</p>
 <li>Would follow symlinks in non-terminal path components, and then operate on the resulting file</li>
 <li>Can tell it to set permissions / ownership of given files</li>
 <li>So could race it to replace path components with symlinks to root-owned files and get it to change their ownership to that of the user (or whomeever)</li>
-<li>Original patch series (March) didn't completely fix this - required much more invasive patching later</li>
+<li>Original patch series (March) didn&rsquo;t completely fix this - required much more invasive patching later</li>
 <li>We waited to fix it until the complete fix was available and accepted upstream (August) to then start backporting</li>
 </ul>
 </li>
@@ -324,7 +324,7 @@ more.</p>
 </li>
 <li>Bluetooth HID integer overflow and info leak in CDROM ioctl (covered in Episode 9 for Xenial kernel)</li>
 <li>Possible privilege escalation via SCSI subsystem</li>
-<li>Xen virtual network driver didn't check supplied parameters -&gt; integer overflow -&gt; OOB read -&gt; possible OOB write -&gt; privilege escalation, DoS etc</li>
+<li>Xen virtual network driver didn&rsquo;t check supplied parameters -&gt; integer overflow -&gt; OOB read -&gt; possible OOB write -&gt; privilege escalation, DoS etc</li>
 </ul>
 <h3 id="usn-3821-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/3821-1/">USN-3821-1</a>] Linux kernel vulnerabilities</h3>
 <ul>
@@ -340,7 +340,7 @@ more.</p>
 </ul>
 </li>
 <li>Potential host system crash / code execution from malicious guest for KVM on ARM64</li>
-<li>Stack unwinding in procfs didn't check caller was root - anyone could race stack unwinder to read stack of arbitrary kernel processes</li>
+<li>Stack unwinding in procfs didn&rsquo;t check caller was root - anyone could race stack unwinder to read stack of arbitrary kernel processes</li>
 <li>NULL pointer dereferences in various file-system drivers -&gt; triggered by mounting malicious fs image
 <ul>
 <li>HFS+, btrfs, f2fs</li>

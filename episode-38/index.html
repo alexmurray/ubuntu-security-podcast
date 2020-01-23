@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 38" />
@@ -322,7 +322,7 @@ information for v4 auth -so encryption keys would be output in
 plaintext to debug logs
 <ul>
 <li>fixed to sanitize before output</li>
-<li>won't be fixed for Xenial since upstream hasn't backported this and
+<li>won&rsquo;t be fixed for Xenial since upstream hasn&rsquo;t backported this and
 there are many instances of other sensitive info being logged there
 as well</li>
 </ul>
@@ -350,7 +350,7 @@ connections
 driver using a particular underlying technology</li>
 <li>Rules can specify protocols and source / destination ports</li>
 <li>iptables driver would execute rules but if encountered an error (such as
-a protocol was specified along with a port but the protocol doesn't
+a protocol was specified along with a port but the protocol doesn&rsquo;t
 support ports - like VRRP) then it would error out and not apply further
 rules from the security group
 <ul>

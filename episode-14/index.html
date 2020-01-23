@@ -9,7 +9,7 @@
 
   <meta name="description" content="This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.63.0" />
 
 
 <meta property="og:title" content="Episode 14" />
@@ -229,7 +229,7 @@ to signed - INT_MAX -&gt; -ve -&gt; OOB read - crash / DoS
 <li>CNAME records could point to themselves - infinite recursion in internal AD DNS server
 <ul>
 <li>Users can add CNAME records -&gt; user triggerable</li>
-<li>Fix ensures CNAMEs can't refer to themselves</li>
+<li>Fix ensures CNAMEs can&rsquo;t refer to themselves</li>
 </ul>
 </li>
 <li>If using smartcard authentication for AD, double free could occur due to mismatch in certificate vs authentication request parameters
@@ -380,7 +380,7 @@ would instead use the user supplied ones from the overlayed fs</li>
 <li>Hard to fix first one since maintainers can lost interest and hand over to anyone
 <ul>
 <li>New owner may not have trust the old one did</li>
-<li>npm doesn't care - is uncurated</li>
+<li>npm doesn&rsquo;t care - is uncurated</li>
 </ul>
 </li>
 <li>Copay bundled and distributed dependencies so perhaps should have some responsibility to check those etc</li>
