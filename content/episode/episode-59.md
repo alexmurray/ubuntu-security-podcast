@@ -6,9 +6,9 @@ description = """
   Roadmap Review sprint for the Ubuntu Security Team
   """
 date = 2020-01-24T08:57:00+10:30
-lastmod = 2020-01-24T08:57:37+10:30
+lastmod = 2020-01-30T17:14:37+10:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E059.mp3"
