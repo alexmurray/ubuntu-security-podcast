@@ -13,76 +13,35 @@
   it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
   ">
 
-<meta name="generator" content="Hugo 0.63.2" />
-
+<meta name="generator" content="Hugo 0.64.0" />
 
 <meta property="og:title" content="Episode 40" />
-<meta property="og:description" content="  Big roundup of security updates from the past 2 weeks including Docker,
+<meta name="twitter:title" content="Episode 40"/>
+<meta itemprop="name" content="Episode 40">
+<meta property="article:modified_time" content="2019-07-24 09:27:00 &#43;0930 ACST" /><meta property="og:description" content="  Big roundup of security updates from the past 2 weeks including Docker,
   ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
   recent big fines for companies breaching their GDPR responsibilities and
   it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
   " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-40/" />
-
-
-
-<meta property="og:updated_time" content="2019-07-24 09:27:00 &#43;0930 ACST"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta property="article:publisher" content="https://www.facebook.com/" />
-
-  
-    <meta property="article:published_time" content="2019-07-24 09:27:00 &#43;0930 ACST" />
-  
-
-<meta property="article:modified_time" content="2019-07-24 09:27:00 &#43;0930 ACST" />
-<meta property="article:section" content="episode" />
-
-
-
-
-
-
-<meta itemprop="name" content="Episode 40">
-<meta itemprop="description" content="  Big roundup of security updates from the past 2 weeks including Docker,
+    <meta name="twitter:description" content="  Big roundup of security updates from the past 2 weeks including Docker,
   ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
   recent big fines for companies breaching their GDPR responsibilities and
   it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
-  ">
-
-
-
-
-
-<meta itemprop="keywords" content="" />
-
-
-<meta itemprop="wordCount" content="1294">
-
-
-
-	<meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:title" content="Episode 40"/>
-<meta name="twitter:description" content="  Big roundup of security updates from the past 2 weeks including Docker,
+  " />
+    <meta itemprop="description" content="  Big roundup of security updates from the past 2 weeks including Docker,
   ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
   recent big fines for companies breaching their GDPR responsibilities and
   it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
-  "/>
-<meta name="twitter:site" content="@ubuntu_sec"/>
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-40/" />
+
+
+
+
 
 
 
@@ -104,7 +63,19 @@
 
 
 <link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
-
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
 
 
 
@@ -186,12 +157,10 @@ it&rsquo;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
         </div>
     <div class="row">
         <div class="col-md-12 player_row">
-          <audio src="https://people.canonical.com/~amurray/USP/USP_E040.mp3" preload="auto"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-11 col-md-offset-1">
-          <a href="https://people.canonical.com/~amurray/USP/USP_E040.mp3">Direct Download</a>
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E040.mp3" type="audio/mp3">
+          </audio>
         </div>
       </div><div class="row">
     <div class="col">
@@ -612,7 +581,6 @@ maybe RCE&hellip;
 </div>
 </div>
 <script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
-<script src="/audiojs/audio.min.js"></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -641,15 +609,17 @@ maybe RCE&hellip;
     ],
     });
 </script>
+
 <script>
-audiojs.events.ready(function() {
-  var as = audiojs.createAll({
-    imageLocation: '\/img\/player-graphics.gif',
-    retinaImageLocation: '\/img\/player-graphics@2x.gif',
-    swfLocation: '\/swf\/audiojs.swf'
-   });
- });
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
 </script>
+
+
+
 
 <script type="application/javascript">
 var doNotTrack = false;

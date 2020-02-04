@@ -10,58 +10,23 @@
   <meta name="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.">
   
 
-<meta name="generator" content="Hugo 0.63.2" />
-
+<meta name="generator" content="Hugo 0.64.0" />
 
 <meta property="og:title" content="Ubuntu Security Podcast" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ubuntusecuritypodcast.org/" />
-
-
-
-<meta property="og:updated_time" content="2020-01-30 17:12:00 &#43;1030 ACDT"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta property="article:publisher" content="https://www.facebook.com/" />
-
-<meta property="article:modified_time" content="2020-01-30 17:12:00 &#43;1030 ACDT" />
-<meta property="article:section" content="" />
-
-
-
-
-
-
-<meta itemprop="name" content="Ubuntu Security Podcast">
-<meta itemprop="description" content="">
-
-
-
-
-
-<meta itemprop="keywords" content="" />
-
-
-
-
-	<meta name="twitter:card" content="summary"/>
-
-
-
 <meta name="twitter:title" content="Ubuntu Security Podcast"/>
-<meta name="twitter:description" content=""/>
-<meta name="twitter:site" content="@ubuntu_sec"/>
+<meta itemprop="name" content="Ubuntu Security Podcast">
+<meta property="article:modified_time" content="2020-01-30 17:12:00 &#43;1030 ACDT" /><meta property="og:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+        <meta name="twitter:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+        <meta itemprop="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." /><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/" />
+
+
+
+
 
 
 
@@ -83,7 +48,19 @@
 
 
 <link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
-
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
 
 
 
@@ -432,7 +409,6 @@ remote USB devices and password stashes.</p></div></div><div class = "row homepa
 </div>
 </div>
 <script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
-<script src="/audiojs/audio.min.js"></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -447,7 +423,7 @@ remote USB devices and password stashes.</p></div></div><div class = "row homepa
         
           via: "ubuntu_sec",       
         
-        url: "",
+        url: "https:\/\/ubuntusecuritypodcast.org\/",
         text: "Ubuntu Security Podcast"
       },
       {
@@ -461,15 +437,17 @@ remote USB devices and password stashes.</p></div></div><div class = "row homepa
     ],
     });
 </script>
+
 <script>
-audiojs.events.ready(function() {
-  var as = audiojs.createAll({
-    imageLocation: '\/img\/player-graphics.gif',
-    retinaImageLocation: '\/img\/player-graphics@2x.gif',
-    swfLocation: '\/swf\/audiojs.swf'
-   });
- });
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
 </script>
+
+
+
 
 <script type="application/javascript">
 var doNotTrack = false;

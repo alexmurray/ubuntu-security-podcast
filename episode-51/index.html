@@ -12,73 +12,32 @@
   Whoopsie, Apport and more.
   ">
 
-<meta name="generator" content="Hugo 0.63.2" />
-
+<meta name="generator" content="Hugo 0.64.0" />
 
 <meta property="og:title" content="Episode 51" />
-<meta property="og:description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
+<meta name="twitter:title" content="Episode 51"/>
+<meta itemprop="name" content="Episode 51">
+<meta property="article:modified_time" content="2019-10-31 18:00:00 &#43;1030 ACDT" /><meta property="og:description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
   security, plus we look at security updates for Firefox, PHP, Samba,
   Whoopsie, Apport and more.
   " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ubuntusecuritypodcast.org/episode-51/" />
-
-
-
-<meta property="og:updated_time" content="2019-10-31 18:00:00 &#43;1030 ACDT"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta property="article:publisher" content="https://www.facebook.com/" />
-
-  
-    <meta property="article:published_time" content="2019-10-31 18:00:00 &#43;1030 ACDT" />
-  
-
-<meta property="article:modified_time" content="2019-10-31 18:00:00 &#43;1030 ACDT" />
-<meta property="article:section" content="episode" />
-
-
-
-
-
-
-<meta itemprop="name" content="Episode 51">
-<meta itemprop="description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
+    <meta name="twitter:description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
   security, plus we look at security updates for Firefox, PHP, Samba,
   Whoopsie, Apport and more.
-  ">
-
-
-
-
-
-<meta itemprop="keywords" content="" />
-
-
-<meta itemprop="wordCount" content="990">
-
-
-
-	<meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:title" content="Episode 51"/>
-<meta name="twitter:description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
+  " />
+    <meta itemprop="description" content="  In this Halloween Special, Joe and Alex talk about what scares them in
   security, plus we look at security updates for Firefox, PHP, Samba,
   Whoopsie, Apport and more.
-  "/>
-<meta name="twitter:site" content="@ubuntu_sec"/>
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-51/" />
+
+
+
+
 
 
 
@@ -100,7 +59,19 @@
 
 
 <link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
-
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
 
 
 
@@ -181,12 +152,10 @@ Whoopsie, Apport and more.
         </div>
     <div class="row">
         <div class="col-md-12 player_row">
-          <audio src="https://people.canonical.com/~amurray/USP/USP_E051.mp3" preload="auto"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-11 col-md-offset-1">
-          <a href="https://people.canonical.com/~amurray/USP/USP_E051.mp3">Direct Download</a>
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E051.mp3" type="audio/mp3">
+          </audio>
         </div>
       </div><div class="row">
     <div class="col">
@@ -429,7 +398,6 @@ the crash dump could end up in a location of their choosing</li>
 </div>
 </div>
 <script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
-<script src="/audiojs/audio.min.js"></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -458,15 +426,17 @@ the crash dump could end up in a location of their choosing</li>
     ],
     });
 </script>
+
 <script>
-audiojs.events.ready(function() {
-  var as = audiojs.createAll({
-    imageLocation: '\/img\/player-graphics.gif',
-    retinaImageLocation: '\/img\/player-graphics@2x.gif',
-    swfLocation: '\/swf\/audiojs.swf'
-   });
- });
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
 </script>
+
+
+
 
 <script type="application/javascript">
 var doNotTrack = false;
