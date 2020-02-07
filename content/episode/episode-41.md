@@ -2,9 +2,9 @@
 title = "Episode 41"
 description = "With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight's security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack."
 date = 2019-08-05T20:15:00+09:30
-lastmod = 2020-01-30T17:15:17+10:30
+lastmod = 2020-02-07T16:21:03+10:30
 draft = false
-weight = 1020
+weight = 1021
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E041.mp3"

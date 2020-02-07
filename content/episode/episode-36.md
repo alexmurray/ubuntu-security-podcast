@@ -2,9 +2,9 @@
 title = "Episode 36"
 description = "Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week."
 date = 2019-06-17
-lastmod = 2020-01-30T17:15:28+10:30
+lastmod = 2020-02-07T16:21:19+10:30
 draft = false
-weight = 1025
+weight = 1026
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E036.mp3"
