@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  Joe is back to discuss a recent breach against Wawa, plus we detail
+  security updates from the past week including Apache Solr, OpenStack
+  Keystone, Sudo, Django and more.
+  ">
+
+<meta name="generator" content="Hugo 0.64.0" />
+
+<meta property="og:title" content="Episode 61" />
+<meta name="twitter:title" content="Episode 61"/>
+<meta itemprop="name" content="Episode 61">
+<meta property="article:modified_time" content="2020-02-07 16:15:00 &#43;1030 ACDT" /><meta property="og:description" content="  Joe is back to discuss a recent breach against Wawa, plus we detail
+  security updates from the past week including Apache Solr, OpenStack
+  Keystone, Sudo, Django and more.
+  " />
+    <meta name="twitter:description" content="  Joe is back to discuss a recent breach against Wawa, plus we detail
+  security updates from the past week including Apache Solr, OpenStack
+  Keystone, Sudo, Django and more.
+  " />
+    <meta itemprop="description" content="  Joe is back to discuss a recent breach against Wawa, plus we detail
+  security updates from the past week including Apache Solr, OpenStack
+  Keystone, Sudo, Django and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-61/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 61 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-61/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 61</h1>
+      <small>Posted on Friday, Feb 7, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Joe is back to discuss a recent breach against Wawa, plus we detail
+security updates from the past week including Apache Solr, OpenStack
+Keystone, Sudo, Django and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E061.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>Joe is back to discuss a recent breach against Wawa, plus we detail
+security updates from the past week including Apache Solr, OpenStack
+Keystone, Sudo, Django and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>23 unique CVEs addressed</p>
+<h3 id="usn-4259-1-apache-solr-vulnerability-00-50">[<a href="https://usn.ubuntu.com/4259-1/">USN-4259-1</a>] Apache Solr vulnerability [00:50]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12629">CVE-2017-12629</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Enterprise search server based on Lucene with XML/HTTP and JSON APIs</li>
+<li>Was vulnerable to an XML External Entity (XXE) attack - XML can include a
+reference to another XML resource which might then be fetched - this
+could then be combined with another flaw (use of Config API to obtain
+access to the RunExecutableListener class) to allow remote code fetched
+from the remote XML</li>
+</ul>
+<h3 id="usn-4261-1-webkitgtk-plus-vulnerabilities-01-44">[<a href="https://usn.ubuntu.com/4261-1/">USN-4261-1</a>] WebKitGTK+ vulnerabilities [01:44]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8846">CVE-2019-8846</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8844">CVE-2019-8844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8835">CVE-2019-8835</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory management issues which could be triggered via a malicious
+websites - possible remote code execution as a result</li>
+</ul>
+<h3 id="usn-4262-1-openstack-keystone-vulnerability-02-13">[<a href="https://usn.ubuntu.com/4262-1/">USN-4262-1</a>] OpenStack Keystone vulnerability [02:13]</h3>
+<ul>
+<li>1 CVEs addressed in Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19687">CVE-2019-19687</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Keystone provides identity services (client authentication etc) for
+OpenStack</li>
+<li>credentials API allowed any user with a role on a project to list all
+credentials when enforce_scope was false - so could view other users
+credentials.</li>
+<li>Was introduced in keystone 15 so didn&rsquo;t affect bionic or older releases -
+only eoan</li>
+</ul>
+<h3 id="lsn-0062-1-linux-kernel-vulnerability-03-01">[LSN-0062-1] Linux kernel vulnerability [03:01]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial and Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18885">CVE-2019-18885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901">CVE-2019-14901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897">CVE-2019-14897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896">CVE-2019-14896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895">CVE-2019-14895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214">CVE-2019-2214</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap and stack buffer overflows in Marvell Wifi drivers, Intel GPU info
+leak on context switch, binder IPC heap buffer overflow</li>
+</ul>
+<h3 id="usn-4263-1-sudo-vulnerability-03-50">[<a href="https://usn.ubuntu.com/4263-1/">USN-4263-1</a>] Sudo vulnerability [03:50]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634">CVE-2019-18634</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Lots of press around this but most people would not be vulnerable since
+need to run in an non-default configuration</li>
+<li>When pwfeedback enabled in /etc/sudoers, stack buffer overflow able to be
+triggered in sudo during password authentication</li>
+<li>Not enabled by default in Ubuntu</li>
+</ul>
+<h3 id="usn-4264-1-django-vulnerability-05-00">[<a href="https://usn.ubuntu.com/4264-1/">USN-4264-1</a>] Django vulnerability [05:00]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7471">CVE-2020-7471</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible SQL injection via the PostgreSQL module if was using the
+StringAgg instance</li>
+<li>Fixed to sanitize the input before processing it</li>
+</ul>
+<h3 id="usn-4265-1-usn-4265-2-spamassassin-vulnerabilities-05-29">[<a href="https://usn.ubuntu.com/4265-1/">USN-4265-1</a>, <a href="https://usn.ubuntu.com/4265-2/">USN-4265-2</a>] SpamAssassin vulnerabilities [05:29]</h3>
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1931">CVE-2020-1931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1930">CVE-2020-1930</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-59/">Episode 59</a> - possible RCE via crafted CF file - 2 more similar
+vulnerabilities fixed - again upstream advise should only use trusted
+update channels or 3rd parted .cf files</li>
+</ul>
+<h3 id="usn-4266-1-graphicsmagick-vulnerabilities-06-37">[<a href="https://usn.ubuntu.com/4266-1/">USN-4266-1</a>] GraphicsMagick vulnerabilities [06:37]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18231">CVE-2017-18231</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18230">CVE-2017-18230</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18229">CVE-2017-18229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18219">CVE-2017-18219</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17915">CVE-2017-17915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17913">CVE-2017-17913</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17912">CVE-2017-17912</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-55/">Episode 55</a>, <a href="https://ubuntusecuritypodcast.org/episode-57/">Episode 57</a>, <a href="https://ubuntusecuritypodcast.org/episode-59/">Episode 59</a>, <a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a></li>
+<li>NULL ptr dereferences -&gt; crash, DoS</li>
+<li>Large memory allocation -&gt; crash, DoS</li>
+<li>Heap + stack based buffer over-read and over-writes too</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-and-alex-discuss-recent-wawa-breach-07-26">Joe and Alex discuss recent Wawa breach [07:26]</h3>
+<ul>
+<li><a href="https://krebsonsecurity.com/2020/01/wawa-breach-may-have-compromised-more-than-30-million-payment-cards/">https://krebsonsecurity.com/2020/01/wawa-breach-may-have-compromised-more-than-30-million-payment-cards/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-60/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-61\/",
+        text: "Episode 61"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
