@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week Alex and Joe take an indepth look at the recent Sudo
+  vulnerability CVE-2019-18634 plus we look at security updates for
+  OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+  recent job opening for a Robotics Security Engineer to join the Ubuntu
+  Security team.
+  ">
+
+<meta name="generator" content="Hugo 0.64.1" />
+
+<meta property="og:title" content="Episode 62" />
+<meta name="twitter:title" content="Episode 62"/>
+<meta itemprop="name" content="Episode 62">
+<meta property="article:modified_time" content="2020-02-13 21:53:00 &#43;1030 ACDT" /><meta property="og:description" content="  This week Alex and Joe take an indepth look at the recent Sudo
+  vulnerability CVE-2019-18634 plus we look at security updates for
+  OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+  recent job opening for a Robotics Security Engineer to join the Ubuntu
+  Security team.
+  " />
+    <meta name="twitter:description" content="  This week Alex and Joe take an indepth look at the recent Sudo
+  vulnerability CVE-2019-18634 plus we look at security updates for
+  OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+  recent job opening for a Robotics Security Engineer to join the Ubuntu
+  Security team.
+  " />
+    <meta itemprop="description" content="  This week Alex and Joe take an indepth look at the recent Sudo
+  vulnerability CVE-2019-18634 plus we look at security updates for
+  OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+  recent job opening for a Robotics Security Engineer to join the Ubuntu
+  Security team.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-62/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 62 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-62/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 62</h1>
+      <small>Posted on Thursday, Feb 13, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week Alex and Joe take an indepth look at the recent Sudo
+vulnerability CVE-2019-18634 plus we look at security updates for
+OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+recent job opening for a Robotics Security Engineer to join the Ubuntu
+Security team.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E062.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week Alex and Joe take an indepth look at the recent Sudo
+vulnerability CVE-2019-18634 plus we look at security updates for
+OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
+recent job opening for a Robotics Security Engineer to join the Ubuntu
+Security team.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>33 unique CVEs addressed</p>
+<h3 id="usn-4263-2-sudo-vulnerability-00-41">[<a href="https://usn.ubuntu.com/4263-2/">USN-4263-2</a>] Sudo vulnerability [00:41]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634">CVE-2019-18634</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>See <a href="https://ubuntusecuritypodcast.org/episode-61/">Episode 61</a> and discussion later in episode</li>
+</ul>
+<h3 id="usn-4268-1-opensmtpd-vulnerability-01-02">[<a href="https://usn.ubuntu.com/4268-1/">USN-4268-1</a>] OpenSMTPD vulnerability [01:02]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7247">CVE-2020-7247</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Logic bug caused existing sanity checks on MAIL FROM field to be skipped
+under certain scenarios - so by failing to perform this validation, could
+allow an attacker to input shell metacharacters to obtain command
+execution in smtpd (which runs as root) -&gt; remote root command execution.</li>
+<li>Fixed to always perform sanity checks on MAIL FROM</li>
+</ul>
+<h3 id="usn-4269-1-systemd-vulnerabilities-02-06">[<a href="https://usn.ubuntu.com/4269-1/">USN-4269-1</a>] systemd vulnerabilities [02:06]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1712">CVE-2020-1712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3844">CVE-2019-3844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3843">CVE-2019-3843</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20386">CVE-2019-20386</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16888">CVE-2018-16888</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap UAF when handing asynchronous policykit queries and dbus messages -
+could allow possible root privesc</li>
+<li>Possible sandbox escape through DynamicUser property on services via
+setuid binaries to gain new privileges or created setgid binaries</li>
+<li>Also DynamicUser services can create setuid/setgid binaries which could
+then be used to escalate privileges after
+<ul>
+<li>Both low priority since not many users of DynamicUser services plus
+requires cooperation between the service and a helper so can&rsquo;t be
+directly exploited</li>
+</ul>
+</li>
+<li>Memory leak in logind when executing udevadm trigger command</li>
+<li>Possible to get systemd to kill the wrong process if can write to it&rsquo;s
+PIDFile since the pid specified here is not validated</li>
+</ul>
+<h3 id="usn-4267-1-arm-mbed-tls-vulnerabilities-03-26">[<a href="https://usn.ubuntu.com/4267-1/">USN-4267-1</a>] ARM mbed TLS vulnerabilities [03:26]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0498">CVE-2018-0498</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0497">CVE-2018-0497</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0488">CVE-2018-0488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0487">CVE-2018-0487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18187">CVE-2017-18187</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>lightweight crypto / TLS library</li>
+<li>integer overflow -&gt; heap overflow -&gt; RCE / DoS</li>
+<li>read buffer overflow in handling of certificate chains -&gt; DOS</li>
+<li>2 different cache side-channel attacks which could allow a remote
+attacker to recover partial plaintext for CBC modes</li>
+</ul>
+<h3 id="usn-4270-1-exiv2-vulnerability-04-22">[<a href="https://usn.ubuntu.com/4270-1/">USN-4270-1</a>] Exiv2 vulnerability [04:22]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20421">CVE-2019-20421</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Infinite loop in JP2 image metadata parser -&gt; CPU DoS</li>
+</ul>
+<h3 id="usn-4271-1-mesa-vulnerability-04-38">[<a href="https://usn.ubuntu.com/4271-1/">USN-4271-1</a>] Mesa vulnerability [04:38]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5068">CVE-2019-5068</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Created a shared memory segment with world readable and writable
+permissions - so any local user could interfere with or access shared
+memory buffers which are often used for back buffers to improve
+performance - changed to open as only user readable / writable</li>
+</ul>
+<h3 id="usn-4272-1-pillow-vulnerabilities-05-24">[<a href="https://usn.ubuntu.com/4272-1/">USN-4272-1</a>] Pillow vulnerabilities [05:24]</h3>
+<ul>
+<li>6 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5313">CVE-2020-5313</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5311">CVE-2020-5311</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5310">CVE-2020-5310</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5312">CVE-2020-5312</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19911">CVE-2019-19911</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16865">CVE-2019-16865</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python Image Library</li>
+<li>Various errors in handling image formats -&gt; Crash -&gt; DoS, RCE etc</li>
+</ul>
+<h3 id="usn-4273-1-reportlab-vulnerability-05-48">[<a href="https://usn.ubuntu.com/4273-1/">USN-4273-1</a>] ReportLab vulnerability [05:48]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17626">CVE-2019-17626</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python library used for creating PDFs</li>
+<li>RCE via a crafted XML document - would eval() an argument which comes
+from a document and so would execute arbitrary python code from the
+document as a result</li>
+</ul>
+<h3 id="usn-4250-2-mariadb-vulnerability-06-21">[<a href="https://usn.ubuntu.com/4250-2/">USN-4250-2</a>] MariaDB vulnerability [06:21]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2574">CVE-2020-2574</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a> for MySQL - similar update for MariaDB - unfortunately no
+details from upstream</li>
+</ul>
+<h3 id="usn-4275-1-qt-vulnerabilities-06-45">[<a href="https://usn.ubuntu.com/4275-1/">USN-4275-1</a>] Qt vulnerabilities [06:45]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0570">CVE-2020-0570</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0569">CVE-2020-0569</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18281">CVE-2019-18281</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19872">CVE-2018-19872</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 possible code execution bugs where Qt would search for plugins and
+libraries in incorrect locations, allowing a local attacker to get code
+execution</li>
+<li>2 different buffer overflow vulnerabilities in handling PPM images and in
+text files with many unicode directional characters</li>
+</ul>
+<h3 id="usn-4274-1-libxml2-vulnerabilities-07-20">[<a href="https://usn.ubuntu.com/4274-1/">USN-4274-1</a>] libxml2 vulnerabilities [07:20]</h3>
+<ul>
+<li>2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7595">CVE-2020-7595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19956">CVE-2019-19956</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Infinite loop for crafted XML documents -&gt; CPU DoS</li>
+<li>Memory leak</li>
+</ul>
+<h3 id="usn-4276-1-yubico-piv-tool-vulnerabilities-07-41">[<a href="https://usn.ubuntu.com/4276-1/">USN-4276-1</a>] Yubico PIV Tool vulnerabilities [07:41]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14780">CVE-2018-14780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14779">CVE-2018-14779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Yubico PIV (personal identity verificatiion) smart card driver - can be
+used with a Yubikey to do authentication</li>
+<li>2 different buffer overflows able to be triggered by a malicious USB
+device - could lead to possible code execution</li>
+</ul>
+<h3 id="usn-4277-1-libexif-vulnerabilities-08-14">[<a href="https://usn.ubuntu.com/4277-1/">USN-4277-1</a>] libexif vulnerabilities [08:14]</h3>
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9278">CVE-2019-9278</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7544">CVE-2017-7544</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6328">CVE-2016-6328</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Buffer overflow (crash or RCE) and 2 buffer over reads (crash / info
+disclosure)</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-the-recent-sudo-vulnerability--cve-2019-18634--08-46">Alex and Joe discuss the recent sudo vulnerability (<a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634">CVE-2019-18634</a>) [08:46]</h3>
+<ul>
+<li><a href="https://threatpost.com/docker-registries-malware-data-theft/152734/">https://threatpost.com/docker-registries-malware-data-theft/152734/</a></li>
+</ul>
+<h3 id="hiring-22-07">Hiring [22:07]</h3>
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/1550997">https://canonical.com/careers/1550997</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-61/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-62\/",
+        text: "Episode 62"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
