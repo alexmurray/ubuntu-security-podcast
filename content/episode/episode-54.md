@@ -5,9 +5,9 @@ description = """
   more, plus Joe and Alex talk about how to get into information security.
   """
 date = 2019-11-24T10:16:00+10:30
-lastmod = 2020-02-07T16:20:21+10:30
+lastmod = 2020-02-13T21:57:51+10:30
 draft = false
-weight = 1008
+weight = 1009
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E054.mp3"

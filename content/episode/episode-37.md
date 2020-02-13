@@ -2,9 +2,9 @@
 title = "Episode 37"
 description = "The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!"
 date = 2019-06-28
-lastmod = 2020-02-07T16:21:16+10:30
+lastmod = 2020-02-13T21:58:27+10:30
 draft = false
-weight = 1025
+weight = 1026
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E037.mp3"

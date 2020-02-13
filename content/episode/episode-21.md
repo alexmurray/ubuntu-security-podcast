@@ -2,9 +2,9 @@
 title = "Episode 21"
 description = "Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team."
 date = 2019-02-21
-lastmod = 2020-02-07T16:22:09+10:30
+lastmod = 2020-02-13T21:58:57+10:30
 draft = false
-weight = 1041
+weight = 1042
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E021.mp3"

@@ -6,9 +6,9 @@ description = """
   remote USB devices and password stashes.
   """
 date = 2019-09-12T23:02:00+09:30
-lastmod = 2020-02-07T16:20:47+10:30
+lastmod = 2020-02-13T21:58:08+10:30
 draft = false
-weight = 1016
+weight = 1017
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E046.mp3"
