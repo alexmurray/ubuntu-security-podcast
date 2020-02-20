@@ -2,9 +2,9 @@
 title = "Episode 43"
 description = "This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team."
 date = 2019-08-21T20:58:00+09:30
-lastmod = 2020-02-13T21:58:14+10:30
+lastmod = 2020-02-20T15:47:56+10:30
 draft = false
-weight = 1020
+weight = 1021
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E043.mp3"

@@ -8,6 +8,221 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 63
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-63
+:EXPORT_DATE: 2020-02-20 15:51
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E063.mp3 :podcast_duration "26:51" :podcast_bytes "25786539" :permalink "https://ubuntusecuritypodcast.org/episode-63/" :guid fbd2de403377ec5c3488d937ebbff935b1a9ed374a20c2404f6d69862b28a26e62003bcc630474425c1caa2382b0f0ada22a4cf2462cb3f34f43b32e424f2671
+:END:
+#+begin_description
+Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+discuss our recommended reading list for getting into infosec and farewell
+long-time member of the Ubuntu Security Team / community Tyler Hicks.
+#+end_description
+** Overview
+Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+discuss our recommended reading list for getting into infosec and farewell
+long-time member of the Ubuntu Security Team / community Tyler Hicks.
+** This week in Ubuntu Security Updates
+54 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4278-1/][USN-4278-1]]] Firefox vulnerabilities [00:55]
+- 4 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6801][CVE-2020-6801]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800][CVE-2020-6800]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798][CVE-2020-6798]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6796][CVE-2020-6796]] <!-- medium -->
+- Firefox 73.0
+  - Various memory safety issues
+  - Possible XSS if a site used a <template> tag within a <select> tag
+    since could allow subsequent JavaScript parsing and execution
+
+*** [[[https://usn.ubuntu.com/4279-1/][USN-4279-1]]] PHP vulnerabilities [01:26]
+- 3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060][CVE-2020-7060]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059][CVE-2020-7059]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253][CVE-2015-9253]] <!-- low -->
+- Buffer overread when converting multibyte characters via mbstring
+  functions and when reading data whilst stripping tags via fgetss() -
+  crash / info disc
+- Fix for a CPU and disk-based DoS when PHP FPM (FastCGI Process Manager)
+  would endlessly restart a child process - busy CPU loop and large error
+  logs -> DoS
+
+*** [[[https://usn.ubuntu.com/4280-1/][USN-4280-1]], [[https://usn.ubuntu.com/4280-2/][USN-4280-2]]] ClamAV vulnerability [02:27]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3123][CVE-2020-3123]] <!-- medium -->
+- OOB read in Data-Loss-Prevention (DLP) module (scans for CC or social
+  security numbers) - crafted email would cause OOB read -> crash -> DoS
+
+*** [[[https://usn.ubuntu.com/4281-1/][USN-4281-1]]] WebKitGTK+ vulnerabilities [03:04]
+- 5 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3868][CVE-2020-3868]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3867][CVE-2020-3867]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3865][CVE-2020-3865]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3864][CVE-2020-3864]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3862][CVE-2020-3862]] <!-- medium -->
+- Various issues able to be triggered by malicious websites
+  - DoS via poor memory handling
+  - Wrong secrity origin for particular DOM objects
+  - Top-level DOM object incorrectly considered secure
+  - Logic issue leading to a universal XSS flaw
+  - Poor memory handling leading to RCE
+
+*** [[[https://usn.ubuntu.com/4282-1/][USN-4282-1]]] PostgreSQL vulnerability [03:50]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1720][CVE-2020-1720]] <!-- medium -->
+- Missing authorization checks on ALTER ... DEPENDS ON EXTENSION
+  sub-commands - could allow unprivileged users to drop any function,
+  procedure, index etc under certain conditions
+
+*** [[[https://usn.ubuntu.com/4283-1/][USN-4283-1]]] QEMU vulnerabilities [04:10]
+- 3 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8608][CVE-2020-8608]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7039][CVE-2020-7039]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1711][CVE-2020-1711]] <!-- medium -->
+- Buffer overflow in libslirp tcp emulation due to misuse of snprintf()
+  return value - assumed snprintf() returns the number of bytes written -
+  BUT returns the number of bytes which would have been written if the dest
+  buffer was big enough - so if buffer is too small then returns a value
+  larger than the buffer - so if that returned size is used later in a
+  memcpy() or similar would overflow the buffer - so instead need to
+  carefully track the return value if it is larger than the dest buffer
+- Separate buffer overflow in libslirp tcp emulation code due to missing
+  size checks
+- Heap buffer OOB write in iSCSI block driver - malicious iSCSI server
+  could trigger this and crash or possibly get code execution on QEMU host
+
+*** [[[https://usn.ubuntu.com/4284-1/][USN-4284-1]]] Linux kernel vulnerabilities [05:21]
+- 23 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15291][CVE-2019-15291]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965][CVE-2019-19965]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947][CVE-2019-19947]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19767][CVE-2019-19767]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19602][CVE-2019-19602]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19332][CVE-2019-19332]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19252][CVE-2019-19252]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19241][CVE-2019-19241]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19082][CVE-2019-19082]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19078][CVE-2019-19078]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19077][CVE-2019-19077]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19071][CVE-2019-19071]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063][CVE-2019-19063]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057][CVE-2019-19057]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19062][CVE-2019-19062]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050][CVE-2019-19050]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18811][CVE-2019-18811]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786][CVE-2019-18786]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18683][CVE-2019-18683]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232][CVE-2019-16232]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229][CVE-2019-16229]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15099][CVE-2019-15099]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+- 5.3 kernel (eoan, bionic hwe)
+- Fix for Intel GPU state leak
+- Atheros Wifi NULL pointer dereference
+- 2x Crypto subsystem memory leak
+- io_uring operations missing credentials checks - unprivileged user could
+  say add an address to the loopback interface as a result
+- Virtual console drivers missing checks on writes
+- OOB write in KVM (need access to /dev/kvm)
+- Memory corruption on x86 platforms due to a race in caching of floating
+  point registers between processors
+- NULL pointer dererefence in SCSI SAS Class driver due to a PHY down
+  race-condition during discovery
+
+*** [[[https://usn.ubuntu.com/4285-1/][USN-4285-1]]] Linux kernel vulnerabilities [07:58]
+- 12 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053][CVE-2020-7053]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108][CVE-2019-5108]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096][CVE-2019-20096]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965][CVE-2019-19965]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947][CVE-2019-19947]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063][CVE-2019-19063]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057][CVE-2019-19057]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18809][CVE-2019-18809]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786][CVE-2019-18786]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232][CVE-2019-16232]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229][CVE-2019-16229]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+- 5.0 kernel (orace, aws, gke, gcp, azure etc)
+- UAF in Intel i915 driver - crash / code exec
+- Wifi-based DoS when used in AP mode - could get AP to send location
+  updates to clients before a new client had finished authentication - so
+  then as an unauthenticated station could DoS other connected stations
+- Memory leak in Datagram Congestion Control Protocol (DCCP) - DoS
+- 2 from above:
+  - NULL ptr deref in SCSI SAS
+  - Intel GPU info leak
+
+*** [[[https://usn.ubuntu.com/4287-1/][USN-4287-1]], [[https://usn.ubuntu.com/4287-2/][USN-4287-2]]] Linux kernel vulnerabilities [08:46]
+- 22 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15291][CVE-2019-15291]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053][CVE-2020-7053]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108][CVE-2019-5108]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096][CVE-2019-20096]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965][CVE-2019-19965]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19767][CVE-2019-19767]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19332][CVE-2019-19332]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19227][CVE-2019-19227]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19082][CVE-2019-19082]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19078][CVE-2019-19078]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19071][CVE-2019-19071]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063][CVE-2019-19063]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19062][CVE-2019-19062]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057][CVE-2019-19057]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18885][CVE-2019-18885]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18809][CVE-2019-18809]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786][CVE-2019-18786]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18683][CVE-2019-18683]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232][CVE-2019-16232]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229][CVE-2019-16229]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15099][CVE-2019-15099]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+- 4.15 (bionic, xenial hwe)
+- i915 UAF, wifi AP DoS, DCCP memory leak, SCSI SAS NULL ptr deref, KVM OOB
+  write via /dev/kvm, crypto subsystem memory leak, atheros wifi NULL ptr
+  deref, i915 info leak
+
+*** [[[https://usn.ubuntu.com/4286-1/][USN-4286-1]], [[https://usn.ubuntu.com/4286-2/][USN-4286-2]]] Linux kernel vulnerabilities [09:44]
+- 12 CVEs addressed in Xenial, Trusty ESM (HWE)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221][CVE-2019-15221]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217][CVE-2019-15217]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108][CVE-2019-5108]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096][CVE-2019-20096]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965][CVE-2019-19965]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19068][CVE-2019-19068]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19066][CVE-2019-19066]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19056][CVE-2019-19056]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051][CVE-2019-19051]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17351][CVE-2019-17351]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220][CVE-2019-15220]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+- 4.4 kernel
+- Intel GPU info leak, SCSI SAS NULL ptr deref, DCCP memory leak, wifi AP
+  DoS
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss their recommended reading list for infosec beginners [10:17]
+- Red Team Field Manual | Ben Clark
+- Head First Programming
+- Linux System Administrators Handbook | Nemeth, et al
+- Robert Seacord’s Secure Coding in C/C++
+- CERT Resilience Management Model (CERT-RMM)
+- The Code Book | Simon Singh
+- The Tao of Network Security Monitoring: Beyond Intrusion Detection | Richard Bejtlich
+- The Cuckoos Egg | Cliff Stoll
+- Linux Pro Magazine
+- Black Hat Python | Justin Seitz
+- Hacking: The Art Of Exploitation | Jon Erickson
+*** Farewell and good luck Tyler Hicks (tyhicks) [25:05]
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 62
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-62

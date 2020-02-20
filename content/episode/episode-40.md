@@ -7,9 +7,9 @@ description = """
   it's EOL for Ubuntu 18.10 Cosmic Cuttlefish.
   """
 date = 2019-07-24T09:27:00+09:30
-lastmod = 2020-02-13T21:58:21+10:30
+lastmod = 2020-02-20T15:48:02+10:30
 draft = false
-weight = 1023
+weight = 1024
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E040.mp3"

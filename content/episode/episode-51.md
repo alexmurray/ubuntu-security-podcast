@@ -6,9 +6,9 @@ description = """
   Whoopsie, Apport and more.
   """
 date = 2019-10-31T18:00:00+10:30
-lastmod = 2020-02-13T21:57:57+10:30
+lastmod = 2020-02-20T15:47:39+10:30
 draft = false
-weight = 1012
+weight = 1013
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E051.mp3"

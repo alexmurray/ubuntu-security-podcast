@@ -6,9 +6,9 @@ description = """
   microcode, plus Bash, cpio, FriBidi and more.
   """
 date = 2019-11-15T18:21:00+10:30
-lastmod = 2020-02-13T21:57:53+10:30
+lastmod = 2020-02-20T15:47:35+10:30
 draft = false
-weight = 1010
+weight = 1011
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E053.mp3"

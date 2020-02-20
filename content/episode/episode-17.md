@@ -2,9 +2,9 @@
 title = "Episode 17"
 description = "First episode of 2019! This week we look \"System Down\" in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call."
 date = 2019-01-22
-lastmod = 2020-02-13T21:59:04+10:30
+lastmod = 2020-02-20T15:48:49+10:30
 draft = false
-weight = 1046
+weight = 1047
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E017.mp3"
