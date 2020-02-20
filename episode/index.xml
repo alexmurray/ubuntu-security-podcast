@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 13 Feb 2020 21:53:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 00:00:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,284 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 63</title>
+          <link>https://ubuntusecuritypodcast.org/episode-63/</link>
+          <pubDate>Thu, 20 Feb 2020 00:00:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>fbd2de403377ec5c3488d937ebbff935b1a9ed374a20c2404f6d69862b28a26e62003bcc630474425c1caa2382b0f0ada22a4cf2462cb3f34f43b32e424f2671</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+  discuss our recommended reading list for getting into infosec and farewell
+  long-time member of the Ubuntu Security Team / community Tyler Hicks.
+  </itunes:summary>
+        <description>  Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+  discuss our recommended reading list for getting into infosec and farewell
+  long-time member of the Ubuntu Security Team / community Tyler Hicks.
+  </description>
+        <googleplay:description>  Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+  discuss our recommended reading list for getting into infosec and farewell
+  long-time member of the Ubuntu Security Team / community Tyler Hicks.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
+discuss our recommended reading list for getting into infosec and farewell
+long-time member of the Ubuntu Security Team / community Tyler Hicks.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>54 unique CVEs addressed</p>
+<h3 id="usn-4278-1-firefox-vulnerabilities-00-55">[<a href="https://usn.ubuntu.com/4278-1/">USN-4278-1</a>] Firefox vulnerabilities [00:55]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6801">CVE-2020-6801</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800">CVE-2020-6800</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798">CVE-2020-6798</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6796">CVE-2020-6796</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Firefox 73.0
+<ul>
+<li>Various memory safety issues</li>
+<li>Possible XSS if a site used a <!-- raw HTML omitted --> tag within a <!-- raw HTML omitted --> tag
+since could allow subsequent JavaScript parsing and execution</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4279-1-php-vulnerabilities-01-26">[<a href="https://usn.ubuntu.com/4279-1/">USN-4279-1</a>] PHP vulnerabilities [01:26]</h3>
+<ul>
+<li>3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060">CVE-2020-7060</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059">CVE-2020-7059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253">CVE-2015-9253</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Buffer overread when converting multibyte characters via mbstring
+functions and when reading data whilst stripping tags via fgetss() -
+crash / info disc</li>
+<li>Fix for a CPU and disk-based DoS when PHP FPM (FastCGI Process Manager)
+would endlessly restart a child process - busy CPU loop and large error
+logs -&gt; DoS</li>
+</ul>
+<h3 id="usn-4280-1-usn-4280-2-clamav-vulnerability-02-27">[<a href="https://usn.ubuntu.com/4280-1/">USN-4280-1</a>, <a href="https://usn.ubuntu.com/4280-2/">USN-4280-2</a>] ClamAV vulnerability [02:27]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3123">CVE-2020-3123</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read in Data-Loss-Prevention (DLP) module (scans for CC or social
+security numbers) - crafted email would cause OOB read -&gt; crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-4281-1-webkitgtk-plus-vulnerabilities-03-04">[<a href="https://usn.ubuntu.com/4281-1/">USN-4281-1</a>] WebKitGTK+ vulnerabilities [03:04]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3868">CVE-2020-3868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3867">CVE-2020-3867</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3865">CVE-2020-3865</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3864">CVE-2020-3864</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3862">CVE-2020-3862</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues able to be triggered by malicious websites
+<ul>
+<li>DoS via poor memory handling</li>
+<li>Wrong secrity origin for particular DOM objects</li>
+<li>Top-level DOM object incorrectly considered secure</li>
+<li>Logic issue leading to a universal XSS flaw</li>
+<li>Poor memory handling leading to RCE</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4282-1-postgresql-vulnerability-03-50">[<a href="https://usn.ubuntu.com/4282-1/">USN-4282-1</a>] PostgreSQL vulnerability [03:50]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1720">CVE-2020-1720</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Missing authorization checks on ALTER &hellip; DEPENDS ON EXTENSION
+sub-commands - could allow unprivileged users to drop any function,
+procedure, index etc under certain conditions</li>
+</ul>
+<h3 id="usn-4283-1-qemu-vulnerabilities-04-10">[<a href="https://usn.ubuntu.com/4283-1/">USN-4283-1</a>] QEMU vulnerabilities [04:10]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8608">CVE-2020-8608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7039">CVE-2020-7039</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1711">CVE-2020-1711</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Buffer overflow in libslirp tcp emulation due to misuse of snprintf()
+return value - assumed snprintf() returns the number of bytes written -
+BUT returns the number of bytes which would have been written if the dest
+buffer was big enough - so if buffer is too small then returns a value
+larger than the buffer - so if that returned size is used later in a
+memcpy() or similar would overflow the buffer - so instead need to
+carefully track the return value if it is larger than the dest buffer</li>
+<li>Separate buffer overflow in libslirp tcp emulation code due to missing
+size checks</li>
+<li>Heap buffer OOB write in iSCSI block driver - malicious iSCSI server
+could trigger this and crash or possibly get code execution on QEMU host</li>
+</ul>
+<h3 id="usn-4284-1-linux-kernel-vulnerabilities-05-21">[<a href="https://usn.ubuntu.com/4284-1/">USN-4284-1</a>] Linux kernel vulnerabilities [05:21]</h3>
+<ul>
+<li>23 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15291">CVE-2019-15291</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965">CVE-2019-19965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947">CVE-2019-19947</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19767">CVE-2019-19767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19602">CVE-2019-19602</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19332">CVE-2019-19332</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19252">CVE-2019-19252</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19241">CVE-2019-19241</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19082">CVE-2019-19082</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19078">CVE-2019-19078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19077">CVE-2019-19077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19071">CVE-2019-19071</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063">CVE-2019-19063</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057">CVE-2019-19057</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19062">CVE-2019-19062</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050">CVE-2019-19050</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18811">CVE-2019-18811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786">CVE-2019-18786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18683">CVE-2019-18683</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232">CVE-2019-16232</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229">CVE-2019-16229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15099">CVE-2019-15099</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 kernel (eoan, bionic hwe)</li>
+<li>Fix for Intel GPU state leak</li>
+<li>Atheros Wifi NULL pointer dereference</li>
+<li>2x Crypto subsystem memory leak</li>
+<li>io_uring operations missing credentials checks - unprivileged user could
+say add an address to the loopback interface as a result</li>
+<li>Virtual console drivers missing checks on writes</li>
+<li>OOB write in KVM (need access to /dev/kvm)</li>
+<li>Memory corruption on x86 platforms due to a race in caching of floating
+point registers between processors</li>
+<li>NULL pointer dererefence in SCSI SAS Class driver due to a PHY down
+race-condition during discovery</li>
+</ul>
+<h3 id="usn-4285-1-linux-kernel-vulnerabilities-07-58">[<a href="https://usn.ubuntu.com/4285-1/">USN-4285-1</a>] Linux kernel vulnerabilities [07:58]</h3>
+<ul>
+<li>12 CVEs addressed in Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053">CVE-2020-7053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108">CVE-2019-5108</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096">CVE-2019-20096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965">CVE-2019-19965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947">CVE-2019-19947</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063">CVE-2019-19063</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057">CVE-2019-19057</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18809">CVE-2019-18809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786">CVE-2019-18786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232">CVE-2019-16232</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229">CVE-2019-16229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.0 kernel (orace, aws, gke, gcp, azure etc)</li>
+<li>UAF in Intel i915 driver - crash / code exec</li>
+<li>Wifi-based DoS when used in AP mode - could get AP to send location
+updates to clients before a new client had finished authentication - so
+then as an unauthenticated station could DoS other connected stations</li>
+<li>Memory leak in Datagram Congestion Control Protocol (DCCP) - DoS</li>
+<li>2 from above:
+<ul>
+<li>NULL ptr deref in SCSI SAS</li>
+<li>Intel GPU info leak</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4287-1-usn-4287-2-linux-kernel-vulnerabilities-08-46">[<a href="https://usn.ubuntu.com/4287-1/">USN-4287-1</a>, <a href="https://usn.ubuntu.com/4287-2/">USN-4287-2</a>] Linux kernel vulnerabilities [08:46]</h3>
+<ul>
+<li>22 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15291">CVE-2019-15291</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053">CVE-2020-7053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108">CVE-2019-5108</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096">CVE-2019-20096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965">CVE-2019-19965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19767">CVE-2019-19767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19332">CVE-2019-19332</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19227">CVE-2019-19227</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19082">CVE-2019-19082</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19078">CVE-2019-19078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19071">CVE-2019-19071</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19063">CVE-2019-19063</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19062">CVE-2019-19062</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19057">CVE-2019-19057</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18885">CVE-2019-18885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18809">CVE-2019-18809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18786">CVE-2019-18786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18683">CVE-2019-18683</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16232">CVE-2019-16232</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16229">CVE-2019-16229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15099">CVE-2019-15099</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 (bionic, xenial hwe)</li>
+<li>i915 UAF, wifi AP DoS, DCCP memory leak, SCSI SAS NULL ptr deref, KVM OOB
+write via /dev/kvm, crypto subsystem memory leak, atheros wifi NULL ptr
+deref, i915 info leak</li>
+</ul>
+<h3 id="usn-4286-1-usn-4286-2-linux-kernel-vulnerabilities-09-44">[<a href="https://usn.ubuntu.com/4286-1/">USN-4286-1</a>, <a href="https://usn.ubuntu.com/4286-2/">USN-4286-2</a>] Linux kernel vulnerabilities [09:44]</h3>
+<ul>
+<li>12 CVEs addressed in Xenial, Trusty ESM (HWE)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221">CVE-2019-15221</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217">CVE-2019-15217</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108">CVE-2019-5108</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096">CVE-2019-20096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19965">CVE-2019-19965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19068">CVE-2019-19068</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19066">CVE-2019-19066</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19056">CVE-2019-19056</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051">CVE-2019-19051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17351">CVE-2019-17351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220">CVE-2019-15220</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 kernel</li>
+<li>Intel GPU info leak, SCSI SAS NULL ptr deref, DCCP memory leak, wifi AP
+DoS</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-and-alex-discuss-their-recommended-reading-list-for-infosec-beginners-10-17">Joe and Alex discuss their recommended reading list for infosec beginners [10:17]</h3>
+<ul>
+<li>Red Team Field Manual | Ben Clark</li>
+<li>Head First Programming</li>
+<li>Linux System Administrators Handbook | Nemeth, et al</li>
+<li>Robert Seacord’s Secure Coding in C/C++</li>
+<li>CERT Resilience Management Model (CERT-RMM)</li>
+<li>The Code Book | Simon Singh</li>
+<li>The Tao of Network Security Monitoring: Beyond Intrusion Detection | Richard Bejtlich</li>
+<li>The Cuckoos Egg | Cliff Stoll</li>
+<li>Linux Pro Magazine</li>
+<li>Black Hat Python | Justin Seitz</li>
+<li>Hacking: The Art Of Exploitation | Jon Erickson</li>
+</ul>
+<h3 id="farewell-and-good-luck-tyler-hicks--tyhicks--25-05">Farewell and good luck Tyler Hicks (tyhicks) [25:05]</h3>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E063.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 62</title>
           <link>https://ubuntusecuritypodcast.org/episode-62/</link>
