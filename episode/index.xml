@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 20 Feb 2020 00:00:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 22:01:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,9 +41,157 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>Episode 64</title>
+          <link>https://ubuntusecuritypodcast.org/episode-64/</link>
+          <pubDate>Thu, 27 Feb 2020 22:01:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>c706dda9eb6c395624a28a4f83cb71742f753e95b91b85208b207bf2c164f29301c2bd4caec2157c09758119db4f1de9118be3b5d9706aa0a2e65b04adf9401d</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  This week we look at security updates for ppp, Squid, rsync &#43; more, and Joe
+  and Alex discuss the wide scope of the Ubuntu Security Team including some
+  current open positions.
+  </itunes:summary>
+        <description>  This week we look at security updates for ppp, Squid, rsync &#43; more, and Joe
+  and Alex discuss the wide scope of the Ubuntu Security Team including some
+  current open positions.
+  </description>
+        <googleplay:description>  This week we look at security updates for ppp, Squid, rsync &#43; more, and Joe
+  and Alex discuss the wide scope of the Ubuntu Security Team including some
+  current open positions.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at security updates for ppp, Squid, rsync + more, and Joe
+and Alex discuss the wide scope of the Ubuntu Security Team including some
+current open positions.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>19 unique CVEs addressed</p>
+<h3 id="lsn-0063-1-linux-kernel-vulnerability-00-43">[<a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-February/005341.html">LSN-0063-1</a>] Linux kernel vulnerability [00:43]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053">CVE-2020-7053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096">CVE-2019-20096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050">CVE-2019-19050</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615">CVE-2019-14615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108">CVE-2019-5108</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>i915 UAF (<a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a>), DCCP memory leak -&gt; DoS (<a href="https://ubuntusecuritypodcast.org/episode-63/">Episode 63</a>), crypto
+subsystem memory leaks (<a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a>), i915 info leak (<a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a>, <a href="https://ubuntusecuritypodcast.org/episode-53/">Episode
+53</a>), WiFi AP mode DoS (<a href="https://ubuntusecuritypodcast.org/episode-53/">Episode 53</a>)</li>
+</ul>
+<h3 id="usn-4279-2-php-regression-01-51">[<a href="https://usn.ubuntu.com/4279-2/">USN-4279-2</a>] PHP regression [01:51]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060">CVE-2020-7060</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059">CVE-2020-7059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253">CVE-2015-9253</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-63/">Episode 63</a> - Upstream fix for <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253">CVE-2015-9253</a> contained a memory leak -
+this fix was backed-out in this update</li>
+</ul>
+<h3 id="usn-4288-1-ppp-vulnerability-02-16">[<a href="https://usn.ubuntu.com/4288-1/">USN-4288-1</a>] ppp vulnerability [02:16]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597">CVE-2020-8597</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Included a check for possible buffer overflow a an rhostname but the
+check was incorrect :( so could still overflow - fixed by making the
+correct check</li>
+</ul>
+<h3 id="usn-4289-1-squid-vulnerabilities-02-41">[<a href="https://usn.ubuntu.com/4289-1/">USN-4289-1</a>] Squid vulnerabilities [02:41]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8517">CVE-2020-8517</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8450">CVE-2020-8450</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8449">CVE-2020-8449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12528">CVE-2019-12528</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Buffer overflow in NTLM credentials parser - out-of-process so would just
+result in a DoS</li>
+<li>Buffer overflow when acting as a reverse proxy</li>
+<li>Incorrect input validation leading to access to server resources which
+should have been prohibited</li>
+<li>Info disclosure due to heap buffer over-read when acting as an FTP client
+from a malicious FTP server</li>
+</ul>
+<h3 id="usn-4290-1-libpam-radius-auth-vulnerability-03-26">[<a href="https://usn.ubuntu.com/4290-1/">USN-4290-1</a>] libpam-radius-auth vulnerability [03:26]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542">CVE-2015-9542</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Stack overflow in password field handling -&gt; crash, DoS</li>
+</ul>
+<h3 id="usn-4291-1-mod-auth-mellon-vulnerability-03-49">[<a href="https://usn.ubuntu.com/4291-1/">USN-4291-1</a>] mod-auth-mellon vulnerability [03:49]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13038">CVE-2019-13038</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>SAML 2.0 authentication module for Apache</li>
+<li>Open redirect - didn&rsquo;t properly validate the ReturnTo substring of the
+login API endpoint - could allow to launch possible phishing attacks etc
+by masquerading as another domain via the redirect</li>
+</ul>
+<h3 id="usn-4292-1-rsync-vulnerabilities-04-33">[<a href="https://usn.ubuntu.com/4292-1/">USN-4292-1</a>] rsync vulnerabilities [04:33]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9843">CVE-2016-9843</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9842">CVE-2016-9842</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9841">CVE-2016-9841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9840">CVE-2016-9840</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All issues with the vendored copy of zlib contained within rsync -
+various low-level memory management issues (discussed back in <a href="https://ubuntusecuritypodcast.org/episode-60/">Episode 60</a>
+in the context of zlib - as a result of a security audit a few years ago
+by Trail of Bits )</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-the-larger-scope-of-the-ubuntu-security-team-and-current-open-positions-05-05">Alex and Joe discuss the larger scope of the Ubuntu Security Team and current open positions [05:05]</h3>
+<h4 id="kyle-fazzari-s-ros-and-ubuntu-video-series">Kyle Fazzari&rsquo;s ROS and Ubuntu Video Series</h4>
+<ul>
+<li><a href="https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core">https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core</a></li>
+<li><a href="https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5">https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5</a></li>
+</ul>
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/1550997">https://canonical.com/careers/1550997</a></li>
+</ul>
+<h4 id="security-engineer-certifications--fips-common-criteria">Security Engineer - Certifications (FIPS, Common Criteria)</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085468">https://canonical.com/careers/2085468</a></li>
+</ul>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085023">https://canonical.com/careers/2085023</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E064.mp3" length="22494275" type="audio/mpeg" /><itunes:duration>23:25</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Episode 63</title>
           <link>https://ubuntusecuritypodcast.org/episode-63/</link>
-          <pubDate>Thu, 20 Feb 2020 00:00:00 +1030 </pubDate>
+          <pubDate>Thu, 20 Feb 2020 15:51:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>fbd2de403377ec5c3488d937ebbff935b1a9ed374a20c2404f6d69862b28a26e62003bcc630474425c1caa2382b0f0ada22a4cf2462cb3f34f43b32e424f2671</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -316,7 +464,7 @@ DoS</li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E063.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E063.mp3" length="25786539" type="audio/mpeg" /><itunes:duration>26:51</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 62</title>
