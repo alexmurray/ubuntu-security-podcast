@@ -8,6 +8,105 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 64
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-64
+:EXPORT_DATE: 2020-02-27 22:01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E064.mp3 :podcast_duration "23:25" :podcast_bytes "22494275" :permalink "https://ubuntusecuritypodcast.org/episode-64/" :guid c706dda9eb6c395624a28a4f83cb71742f753e95b91b85208b207bf2c164f29301c2bd4caec2157c09758119db4f1de9118be3b5d9706aa0a2e65b04adf9401d
+:END:
+#+begin_description
+This week we look at security updates for ppp, Squid, rsync + more, and Joe
+and Alex discuss the wide scope of the Ubuntu Security Team including some
+current open positions.
+#+end_description
+** Overview
+This week we look at security updates for ppp, Squid, rsync + more, and Joe
+and Alex discuss the wide scope of the Ubuntu Security Team including some
+current open positions.
+** This week in Ubuntu Security Updates
+19 unique CVEs addressed
+*** [[[https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-February/005341.html][LSN-0063-1]]] Linux kernel vulnerability [00:43]
+- 5 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053][CVE-2020-7053]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096][CVE-2019-20096]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050][CVE-2019-19050]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108][CVE-2019-5108]] <!-- medium -->
+- i915 UAF ([[https://ubuntusecuritypodcast.org/episode-60/][Episode 60]]), DCCP memory leak -> DoS ([[https://ubuntusecuritypodcast.org/episode-63/][Episode 63]]), crypto
+  subsystem memory leaks ([[https://ubuntusecuritypodcast.org/episode-60/][Episode 60]]), i915 info leak ([[https://ubuntusecuritypodcast.org/episode-60/][Episode 60]], [[https://ubuntusecuritypodcast.org/episode-53/][Episode
+  53]]), WiFi AP mode DoS ([[https://ubuntusecuritypodcast.org/episode-53/][Episode 53]])
+
+*** [[[https://usn.ubuntu.com/4279-2/][USN-4279-2]]] PHP regression [01:51]
+- 3 CVEs addressed in Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060][CVE-2020-7060]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059][CVE-2020-7059]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253][CVE-2015-9253]] <!-- low -->
+- [[https://ubuntusecuritypodcast.org/episode-63/][Episode 63]] - Upstream fix for [[https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253][CVE-2015-9253]] contained a memory leak -
+  this fix was backed-out in this update
+
+*** [[[https://usn.ubuntu.com/4288-1/][USN-4288-1]]] ppp vulnerability [02:16]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597][CVE-2020-8597]] <!-- medium -->
+- Included a check for possible buffer overflow a an rhostname but the
+  check was incorrect :( so could still overflow - fixed by making the
+  correct check
+
+*** [[[https://usn.ubuntu.com/4289-1/][USN-4289-1]]] Squid vulnerabilities [02:41]
+- 4 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8517][CVE-2020-8517]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8450][CVE-2020-8450]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8449][CVE-2020-8449]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12528][CVE-2019-12528]] <!-- medium -->
+- Buffer overflow in NTLM credentials parser - out-of-process so would just
+  result in a DoS
+- Buffer overflow when acting as a reverse proxy
+- Incorrect input validation leading to access to server resources which
+  should have been prohibited
+- Info disclosure due to heap buffer over-read when acting as an FTP client
+  from a malicious FTP server
+
+*** [[[https://usn.ubuntu.com/4290-1/][USN-4290-1]]] libpam-radius-auth vulnerability [03:26]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542][CVE-2015-9542]] <!-- medium -->
+- Stack overflow in password field handling -> crash, DoS
+
+*** [[[https://usn.ubuntu.com/4291-1/][USN-4291-1]]] mod-auth-mellon vulnerability [03:49]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13038][CVE-2019-13038]] <!-- medium -->
+- SAML 2.0 authentication module for Apache
+- Open redirect - didn't properly validate the ReturnTo substring of the
+  login API endpoint - could allow to launch possible phishing attacks etc
+  by masquerading as another domain via the redirect
+
+*** [[[https://usn.ubuntu.com/4292-1/][USN-4292-1]]] rsync vulnerabilities [04:33]
+- 4 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9843][CVE-2016-9843]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9842][CVE-2016-9842]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9841][CVE-2016-9841]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9840][CVE-2016-9840]] <!-- low -->
+- All issues with the vendored copy of zlib contained within rsync -
+  various low-level memory management issues (discussed back in [[https://ubuntusecuritypodcast.org/episode-60/][Episode 60]]
+  in the context of zlib - as a result of a security audit a few years ago
+  by Trail of Bits )
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe discuss the larger scope of the Ubuntu Security Team and current open positions [05:05]
+**** Kyle Fazzari's ROS and Ubuntu Video Series
+- https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core
+- https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5
+**** Robotics Security Engineer
+- https://canonical.com/careers/1550997
+**** Security Engineer - Certifications (FIPS, Common Criteria)
+- https://canonical.com/careers/2085468
+**** Ubuntu Security Engineer
+- https://canonical.com/careers/2085023
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 63
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-63

@@ -5,15 +5,15 @@ description = """
   discuss our recommended reading list for getting into infosec and farewell
   long-time member of the Ubuntu Security Team / community Tyler Hicks.
   """
-date = 2020-02-20
-lastmod = 2020-02-20T15:47:14+10:30
+date = 2020-02-20T15:51:00+10:30
+lastmod = 2020-02-27T22:02:43+10:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E063.mp3"
-podcast_duration = "MM:SS"
-podcast_bytes = "NUM_BYTES"
+podcast_duration = "26:51"
+podcast_bytes = 25786539
 permalink = "https://ubuntusecuritypodcast.org/episode-63/"
 guid = "fbd2de403377ec5c3488d937ebbff935b1a9ed374a20c2404f6d69862b28a26e62003bcc630474425c1caa2382b0f0ada22a4cf2462cb3f34f43b32e424f2671"
 +++

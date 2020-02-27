@@ -2,9 +2,9 @@
 title = "Episode 25"
 description = "Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more."
 date = 2019-03-25
-lastmod = 2020-02-20T15:48:33+10:30
+lastmod = 2020-02-27T22:04:05+10:30
 draft = false
-weight = 1039
+weight = 1040
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E025.mp3"
