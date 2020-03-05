@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 27 Feb 2020 22:01:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 5 Mar 2020 14:35:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,123 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 65</title>
+          <link>https://ubuntusecuritypodcast.org/episode-65/</link>
+          <pubDate>Thu, 05 Mar 2020 14:35:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>ae3fd86077905ed6dee84fcdb19c70e71325cde5af0589489d2b4bfbc430c48aa2824bf583508258ead4cb25ccce9877fbf06f84aaa4d736005cc7c00c36d8f6</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+  OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+  Operating System and how the Ubuntu Security Team is involved in the
+  ongoing development of secure foundations for robotics.
+  </itunes:summary>
+        <description>  Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+  OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+  Operating System and how the Ubuntu Security Team is involved in the
+  ongoing development of secure foundations for robotics.
+  </description>
+        <googleplay:description>  Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+  OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+  Operating System and how the Ubuntu Security Team is involved in the
+  ongoing development of secure foundations for robotics.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+Operating System and how the Ubuntu Security Team is involved in the
+ongoing development of secure foundations for robotics.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>7 unique CVEs addressed</p>
+<h3 id="usn-4293-1-libarchive-vulnerabilities-00-18">[<a href="https://usn.ubuntu.com/4293-1/">USN-4293-1</a>] libarchive vulnerabilities [00:18]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9308">CVE-2020-9308</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19221">CVE-2019-19221</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OSS-Fuzz: RAR unpacker would try and unpack a file with a corrupted /
+malformed header (ie. zero length etc) - OOB read - crash/DoS</li>
+<li>OOB read due to use of wrong length parameter to mbtowc()</li>
+</ul>
+<h3 id="usn-4294-1-opensmtpd-vulnerabilities-02-00">[<a href="https://usn.ubuntu.com/4294-1/">USN-4294-1</a>] OpenSMTPD vulnerabilities [02:00]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8793">CVE-2020-8793</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8794">CVE-2020-8794</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Remote code exec on both clients <strong>and</strong> server (as server reuses client-side code for debouncing)</li>
+<li>Possible arbitrary file read due to race-condition in offline
+functionality - a user could create a hardlink to a root-owned file which
+opensmtpd would then read - mitigated on Ubuntu since we enable
+protected_hardlinks sysctl which stops regular users creating hardlinks
+to root-owned files</li>
+</ul>
+<h3 id="usn-4288-2-ppp-vulnerability-03-12">[<a href="https://usn.ubuntu.com/4288-2/">USN-4288-2</a>] ppp vulnerability [03:12]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597">CVE-2020-8597</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-64/">Episode 64</a> (possible buffer overflow)</li>
+</ul>
+<h3 id="usn-4290-2-libpam-radius-auth-vulnerability-03-23">[<a href="https://usn.ubuntu.com/4290-2/">USN-4290-2</a>] libpam-radius-auth vulnerability [03:23]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM, Trusty ESM
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542">CVE-2015-9542</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-64/">Episode 64</a> (stack overflow in password field handling)</li>
+</ul>
+<h3 id="usn-4295-1-rake-vulnerability-03-31">[<a href="https://usn.ubuntu.com/4295-1/">USN-4295-1</a>] Rake vulnerability [03:31]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8130">CVE-2020-8130</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Command injection vulnerability via Rake::FileList - used the Kernel
+open() method rather than File.open() - this supports launching a process
+if the file-name starts with a pipe `|` - so instead just use File.open()</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-and-alex-discuss-ros-the-robot-operating-system-04-28">Joe and Alex discuss ROS, the Robot Operating System [04:28]</h3>
+<h4 id="kyle-fazzari-s-ros-and-ubuntu-video-series">Kyle Fazzari&rsquo;s ROS and Ubuntu Video Series</h4>
+<ul>
+<li><a href="https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core">https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core</a></li>
+<li><a href="https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5">https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5</a></li>
+</ul>
+<h3 id="hiring">Hiring</h3>
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/1550997">https://canonical.com/careers/1550997</a></li>
+</ul>
+<h4 id="security-engineer-certifications--fips-common-criteria">Security Engineer - Certifications (FIPS, Common Criteria)</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085468">https://canonical.com/careers/2085468</a></li>
+</ul>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085023">https://canonical.com/careers/2085023</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E065.mp3" length="21871516" type="audio/mpeg" /><itunes:duration>22:46</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 64</title>
           <link>https://ubuntusecuritypodcast.org/episode-64/</link>
