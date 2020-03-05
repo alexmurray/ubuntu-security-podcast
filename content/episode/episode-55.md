@@ -6,9 +6,9 @@ description = """
   possible dangers of Smart TVs.
   """
 date = 2019-12-09T13:05:00+10:30
-lastmod = 2020-02-27T22:03:01+10:30
+lastmod = 2020-03-05T14:39:22+10:30
 draft = false
-weight = 1010
+weight = 1011
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E055.mp3"

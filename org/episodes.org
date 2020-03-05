@@ -8,6 +8,81 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 65
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-65
+:EXPORT_DATE: 2020-03-05 14:35
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E065.mp3 :podcast_duration "22:46" :podcast_bytes "21871516" :permalink "https://ubuntusecuritypodcast.org/episode-65/" :guid ae3fd86077905ed6dee84fcdb19c70e71325cde5af0589489d2b4bfbc430c48aa2824bf583508258ead4cb25ccce9877fbf06f84aaa4d736005cc7c00c36d8f6
+:END:
+#+begin_description
+Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+Operating System and how the Ubuntu Security Team is involved in the
+ongoing development of secure foundations for robotics.
+#+end_description
+** Overview
+Whilst avoiding Coronavirus, this week we look at updates for libarchive,
+OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
+Operating System and how the Ubuntu Security Team is involved in the
+ongoing development of secure foundations for robotics.
+** This week in Ubuntu Security Updates
+7 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4293-1/][USN-4293-1]]] libarchive vulnerabilities [00:18]
+- 2 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9308][CVE-2020-9308]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19221][CVE-2019-19221]] <!-- low -->
+- OSS-Fuzz: RAR unpacker would try and unpack a file with a corrupted /
+  malformed header (ie. zero length etc) - OOB read - crash/DoS
+- OOB read due to use of wrong length parameter to mbtowc()
+
+*** [[[https://usn.ubuntu.com/4294-1/][USN-4294-1]]] OpenSMTPD vulnerabilities [02:00]
+- 2 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8793][CVE-2020-8793]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8794][CVE-2020-8794]] <!-- high -->
+- Remote code exec on both clients *and* server (as server reuses client-side code for debouncing)
+- Possible arbitrary file read due to race-condition in offline
+  functionality - a user could create a hardlink to a root-owned file which
+  opensmtpd would then read - mitigated on Ubuntu since we enable
+  protected_hardlinks sysctl which stops regular users creating hardlinks
+  to root-owned files
+
+*** [[[https://usn.ubuntu.com/4288-2/][USN-4288-2]]] ppp vulnerability [03:12]
+- 1 CVEs addressed in Precise ESM, Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597][CVE-2020-8597]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-64/][Episode 64]] (possible buffer overflow)
+
+*** [[[https://usn.ubuntu.com/4290-2/][USN-4290-2]]] libpam-radius-auth vulnerability [03:23]
+- 1 CVEs addressed in Precise ESM, Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542][CVE-2015-9542]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-64/][Episode 64]] (stack overflow in password field handling)
+
+*** [[[https://usn.ubuntu.com/4295-1/][USN-4295-1]]] Rake vulnerability [03:31]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8130][CVE-2020-8130]] <!-- medium -->
+- Command injection vulnerability via Rake::FileList - used the Kernel
+  open() method rather than File.open() - this supports launching a process
+  if the file-name starts with a pipe `|` - so instead just use File.open()
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss ROS, the Robot Operating System [04:28]
+**** Kyle Fazzari's ROS and Ubuntu Video Series
+- https://ubuntu.com/blog/from-ros-prototype-to-production-on-ubuntu-core
+- https://ubuntu.com/blog/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5
+*** Hiring
+**** Robotics Security Engineer
+- https://canonical.com/careers/1550997
+**** Security Engineer - Certifications (FIPS, Common Criteria)
+- https://canonical.com/careers/2085468
+**** Ubuntu Security Engineer
+- https://canonical.com/careers/2085023
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 64
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-64

@@ -6,9 +6,9 @@ description = """
   UW IMAP and more.
   """
 date = 2019-10-24T15:28:00+10:30
-lastmod = 2020-02-27T22:03:12+10:30
+lastmod = 2020-03-05T14:39:32+10:30
 draft = false
-weight = 1015
+weight = 1016
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E050.mp3"
