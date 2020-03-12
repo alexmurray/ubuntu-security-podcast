@@ -16,6 +16,22 @@ a slightly customised version of
 [castanet](https://github.com/mattstratton/castanet) to support the standard
 Ubuntu / Canonical colours etc.
 
+The generated site is stored in the `gh-pages` branch and this corresponds
+to the `public/` subdirectory in a local checkout:
+
+```shell
+ git clone https://github.com/alexmurray/ubuntu-security-podcast.git
+ cd ubuntu-security-podcast/
+ git submodule init
+ git submodule update
+ # checkout the gh-pages branch into a public/ directory
+ git clone --branch gh-pages \
+   https://github.com/alexmurray/ubuntu-security-podcast.git public
+
+ # generate the site locally with hugo
+ hugo   # or serve it with hugo server etc as normal
+```
+
 ## Show notes
 
 To assist in generating show notes, there is an [Emacs Lisp
