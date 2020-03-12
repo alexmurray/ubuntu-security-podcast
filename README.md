@@ -32,6 +32,13 @@ to the `public/` subdirectory in a local checkout:
  hugo   # or serve it with hugo server etc as normal
 ```
 
+To hack on the theme, edit the scss and then regenerate via gulp:
+
+```shell
+cd themes/castanet/
+gulp dev
+```
+
 ## Show notes
 
 To assist in generating show notes, there is an [Emacs Lisp
