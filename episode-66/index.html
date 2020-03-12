@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we cover security updates for Django, runC and SQLite, plus Alex
+  and Joe discuss the AMD speculative execution Take A Way attack and we
+  look at some recent blog posts by the team too.
+  ">
+
+<meta name="generator" content="Hugo 0.67.0" />
+
+<meta property="og:title" content="Episode 66" />
+<meta name="twitter:title" content="Episode 66"/>
+<meta itemprop="name" content="Episode 66">
+<meta property="article:modified_time" content="2020-03-12 22:39:00 &#43;1030 &#43;1030" /><meta property="og:description" content="  This week we cover security updates for Django, runC and SQLite, plus Alex
+  and Joe discuss the AMD speculative execution Take A Way attack and we
+  look at some recent blog posts by the team too.
+  " />
+    <meta name="twitter:description" content="  This week we cover security updates for Django, runC and SQLite, plus Alex
+  and Joe discuss the AMD speculative execution Take A Way attack and we
+  look at some recent blog posts by the team too.
+  " />
+    <meta itemprop="description" content="  This week we cover security updates for Django, runC and SQLite, plus Alex
+  and Joe discuss the AMD speculative execution Take A Way attack and we
+  look at some recent blog posts by the team too.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-66/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 66 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-66/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 66</h1>
+      <small>Posted on Thursday, Mar 12, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we cover security updates for Django, runC and SQLite, plus Alex
+and Joe discuss the AMD speculative execution Take A Way attack and we
+look at some recent blog posts by the team too.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E066.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we cover security updates for Django, runC and SQLite, plus Alex
+and Joe discuss the AMD speculative execution Take A Way attack and we
+look at some recent blog posts by the team too.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>16 unique CVEs addressed</p>
+<h3 id="usn-4296-1-django-vulnerability-00-49">[<a href="https://usn.ubuntu.com/4296-1/">USN-4296-1</a>] Django vulnerability [00:49]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9402">CVE-2020-9402</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible SQL injection in the GIS functions when using an Oracle DB as
+the backend - Oracle provides a tolerance parameter which can be used
+when doing GIS queries and this was not properly sanitised before use so
+could allow SQL injection</li>
+</ul>
+<h3 id="usn-4297-1-runc-vulnerabilities-01-30">[<a href="https://usn.ubuntu.com/4297-1/">USN-4297-1</a>] runC vulnerabilities [01:30]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19921">CVE-2019-19921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16884">CVE-2019-16884</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Race condition on mounting of shared volume mounts between two
+containers - can replace /proc on one container with a symlink inside of
+the shared mount - when this gets cleaned up other parts of /proc can end
+mounted within the shared mount and this could be used for privilege
+escalation since if outside of /proc then regular users might be able to
+write to sensitive parts of /proc - fixed by having runc validate that
+the target for mounting /proc or /sys must either not exist or must be a
+directory to avoid symlink attacks etc</li>
+<li>Possible bypass of AppArmor restrictions since would not properly check
+the target of a mount and so could end up mounting a malicious image over
+/proc - instead add more explicit checks on whether the dest of a mount
+is /proc and only allow this if the source is also a procfs</li>
+</ul>
+<h3 id="usn-4298-1-sqlite-vulnerabilities-03-09">[<a href="https://usn.ubuntu.com/4298-1/">USN-4298-1</a>] SQLite vulnerabilities [03:09]</h3>
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752">CVE-2019-13752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9327">CVE-2020-9327</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20218">CVE-2019-20218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926">CVE-2019-19926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19959">CVE-2019-19959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19925">CVE-2019-19925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19924">CVE-2019-19924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19923">CVE-2019-19923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19880">CVE-2019-19880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751">CVE-2019-13751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753">CVE-2019-13753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750">CVE-2019-13750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734">CVE-2019-13734</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Many different memory safety issues resolved in SQLite - across various
+parts of SQLite including handling of shadow tables, corrupt records,
+parsing, ZIP archives and column optimisations. Most of these were
+detected by fuzzing and so are unlikely to be an issue unless handling
+untrusted SQLite databases or untrusted query inputs.</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-amd-take-a-way-attack-04-10">Alex and Joe discuss AMD Take A Way attack [04:10]</h3>
+<ul>
+<li><a href="https://www.zdnet.com/article/amd-processors-from-2011-to-2019-vulnerable-to-two-new-attacks/">https://www.zdnet.com/article/amd-processors-from-2011-to-2019-vulnerable-to-two-new-attacks/</a></li>
+</ul>
+<h3 id="blog-posts-19-08">Blog posts [19:08]</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/on-boxing-tabletop-exercises-and-threat-models">https://ubuntu.com/blog/on-boxing-tabletop-exercises-and-threat-models</a></li>
+<li><a href="https://ubuntu.com/blog/ros-development-with-lxd">https://ubuntu.com/blog/ros-development-with-lxd</a></li>
+<li><a href="https://ubuntu.com/blog/ros-2-ci-with-github-actions">https://ubuntu.com/blog/ros-2-ci-with-github-actions</a></li>
+</ul>
+<h3 id="hiring-20-21">Hiring [20:21]</h3>
+<h4 id="robotics-security-engineer">Robotics Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/1550997">https://canonical.com/careers/1550997</a></li>
+</ul>
+<h4 id="security-engineer-certifications--fips-common-criteria">Security Engineer - Certifications (FIPS, Common Criteria)</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085468">https://canonical.com/careers/2085468</a></li>
+</ul>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085023">https://canonical.com/careers/2085023</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-65/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2019 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-66\/",
+        text: "Episode 66"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
