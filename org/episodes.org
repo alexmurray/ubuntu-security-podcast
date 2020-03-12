@@ -8,6 +8,92 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 66
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-66
+:EXPORT_DATE: 2020-03-12 22:39
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E066.mp3 :podcast_duration "21:37" :podcast_bytes "20757225" :permalink "https://ubuntusecuritypodcast.org/episode-66/" :guid d1e8818a626f92b9f17bcc02ff8dae1abe27d82cfeeef01ad1ea3da9a39462474d0852264deee569dcecea72ae42aae4588e6964a69dff5d88114878b5153547
+:END:
+#+begin_description
+This week we cover security updates for Django, runC and SQLite, plus Alex
+and Joe discuss the AMD speculative execution Take A Way attack and we
+look at some recent blog posts by the team too.
+#+end_description
+** Overview
+This week we cover security updates for Django, runC and SQLite, plus Alex
+and Joe discuss the AMD speculative execution Take A Way attack and we
+look at some recent blog posts by the team too.
+** This week in Ubuntu Security Updates
+16 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4296-1/][USN-4296-1]]] Django vulnerability [00:49]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9402][CVE-2020-9402]] <!-- medium -->
+- Possible SQL injection in the GIS functions when using an Oracle DB as
+  the backend - Oracle provides a tolerance parameter which can be used
+  when doing GIS queries and this was not properly sanitised before use so
+  could allow SQL injection
+
+*** [[[https://usn.ubuntu.com/4297-1/][USN-4297-1]]] runC vulnerabilities [01:30]
+- 2 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19921][CVE-2019-19921]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16884][CVE-2019-16884]] <!-- medium -->
+- Race condition on mounting of shared volume mounts between two
+  containers - can replace /proc on one container with a symlink inside of
+  the shared mount - when this gets cleaned up other parts of /proc can end
+  mounted within the shared mount and this could be used for privilege
+  escalation since if outside of /proc then regular users might be able to
+  write to sensitive parts of /proc - fixed by having runc validate that
+  the target for mounting /proc or /sys must either not exist or must be a
+  directory to avoid symlink attacks etc
+- Possible bypass of AppArmor restrictions since would not properly check
+  the target of a mount and so could end up mounting a malicious image over
+  /proc - instead add more explicit checks on whether the dest of a mount
+  is /proc and only allow this if the source is also a procfs
+
+*** [[[https://usn.ubuntu.com/4298-1/][USN-4298-1]]] SQLite vulnerabilities [03:09]
+- 13 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752][CVE-2019-13752]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9327][CVE-2020-9327]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20218][CVE-2019-20218]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926][CVE-2019-19926]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19959][CVE-2019-19959]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19925][CVE-2019-19925]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19924][CVE-2019-19924]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19923][CVE-2019-19923]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19880][CVE-2019-19880]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751][CVE-2019-13751]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753][CVE-2019-13753]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750][CVE-2019-13750]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734][CVE-2019-13734]] <!-- medium -->
+- Many different memory safety issues resolved in SQLite - across various
+  parts of SQLite including handling of shadow tables, corrupt records,
+  parsing, ZIP archives and column optimisations. Most of these were
+  detected by fuzzing and so are unlikely to be an issue unless handling
+  untrusted SQLite databases or untrusted query inputs.
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe discuss AMD Take A Way attack [04:10]
+- https://www.zdnet.com/article/amd-processors-from-2011-to-2019-vulnerable-to-two-new-attacks/
+
+*** Blog posts [19:08]
+- https://ubuntu.com/blog/on-boxing-tabletop-exercises-and-threat-models
+- https://ubuntu.com/blog/ros-development-with-lxd
+- https://ubuntu.com/blog/ros-2-ci-with-github-actions
+
+*** Hiring [20:21]
+**** Robotics Security Engineer
+- https://canonical.com/careers/1550997
+**** Security Engineer - Certifications (FIPS, Common Criteria)
+- https://canonical.com/careers/2085468
+**** Ubuntu Security Engineer
+- https://canonical.com/careers/2085023
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 65
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-65
