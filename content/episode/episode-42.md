@@ -6,9 +6,9 @@ description = """
   system, as well as the usual roundup of security fixes from the past week.
   """
 date = 2019-08-14T21:13:00+09:30
-lastmod = 2020-03-05T14:39:48+10:30
+lastmod = 2020-03-19T20:22:32+10:30
 draft = false
-weight = 1024
+weight = 1026
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E042.mp3"

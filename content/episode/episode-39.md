@@ -6,9 +6,9 @@ description = """
   PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
   """
 date = 2019-07-09T14:52:00+09:30
-lastmod = 2020-03-05T14:39:54+10:30
+lastmod = 2020-03-19T20:22:38+10:30
 draft = false
-weight = 1027
+weight = 1029
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E039.mp3"

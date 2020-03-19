@@ -6,9 +6,9 @@ description = """
   current open positions.
   """
 date = 2020-02-27T22:01:00+10:30
-lastmod = 2020-03-05T14:39:05+10:30
+lastmod = 2020-03-19T20:21:50+10:30
 draft = false
-weight = 1002
+weight = 1004
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E064.mp3"

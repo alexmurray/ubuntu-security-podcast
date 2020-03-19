@@ -8,6 +8,153 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 67
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-67
+:EXPORT_DATE: 2020-03-19 20:25
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E067.mp3 :podcast_duration "24:14" :podcast_bytes "23280026" :permalink "https://ubuntusecuritypodcast.org/episode-67/" :guid bfa68a8055be84e37f33b58058b37a06d58a906c34914c4d20cdf859da1359902bbd1b65f5c2ad56be4388ccef2b53856af22e8294b60148db4f92ce55864061
+:END:
+#+begin_description
+A big week in security updates, including the Linux kernel, Ceph, ICU,
+Firefox, Dino and more, plus Joe and Alex discuss tips for securely working
+from home in light of Coronavirus.
+#+end_description
+** Overview
+A big week in security updates, including the Linux kernel, Ceph, ICU,
+Firefox, Dino and more, plus Joe and Alex discuss tips for securely working
+from home in light of Coronavirus.
+** This week in Ubuntu Security Updates
+38 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4299-1/][USN-4299-1]]] Firefox vulnerabilities [00:41]
+- 12 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6811][CVE-2020-6811]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6809][CVE-2020-6809]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6815][CVE-2020-6815]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6814][CVE-2020-6814]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6813][CVE-2020-6813]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6812][CVE-2020-6812]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6810][CVE-2020-6810]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6808][CVE-2020-6808]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6807][CVE-2020-6807]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6806][CVE-2020-6806]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6805][CVE-2020-6805]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20503][CVE-2019-20503]] <!-- medium -->
+- 74.0 - usual sorts of fixes:
+  - Crafted website -> DoS, URL and other browser chrome spoofing, bypass
+    content security policy protections, RCE etc
+  - Extensions with all-url permission could access local files
+  - Copy-as-cURL devtools feature failed to escape website-controlled
+    data - possible command injection -> RCE if user tricked into using
+    this on a crafted website
+
+*** [[[https://usn.ubuntu.com/4300-1/][USN-4300-1]]] Linux kernel vulnerabilities [02:02]
+- 11 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19068][CVE-2019-19068]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19066][CVE-2019-19066]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19064][CVE-2019-19064]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19059][CVE-2019-19059]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19058][CVE-2019-19058]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19056][CVE-2019-19056]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19053][CVE-2019-19053]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19043][CVE-2019-19043]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18809][CVE-2019-18809]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732][CVE-2020-2732]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3016][CVE-2019-3016]] <!-- medium -->
+- 5.3 eoan, bionic hwe
+- 2 KVM issues
+  - Nested KVM guest could access resources of parent -> sensitive info
+    disclosure
+  - Guest VM could read memory from another guest VM since would sometimes
+    miss deferred TLB flushes when switching guests
+- Rest low priority
+  - Memory leaks in various network and other device drivers under
+    particular error scenarios - not likely that a local or remote user
+    could easily trigger these so hence low priority
+
+*** [[[https://usn.ubuntu.com/4301-1/][USN-4301-1]]] Linux kernel vulnerabilities [03:53]
+- 8 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19068][CVE-2019-19068]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19066][CVE-2019-19066]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19059][CVE-2019-19059]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19058][CVE-2019-19058]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19056][CVE-2019-19056]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19053][CVE-2019-19053]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732][CVE-2020-2732]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3016][CVE-2019-3016]] <!-- medium -->
+- 5.0 "cloud" specific kernel (oracle, aws, gke, gcp etc)
+- Same issues as above just with a couple less of the driver memory leak
+  fixes since these were already done in a previous update
+
+*** [[[https://usn.ubuntu.com/4302-1/][USN-4302-1]]] Linux kernel vulnerabilities [04:31]
+- 10 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217][CVE-2019-15217]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19068][CVE-2019-19068]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19066][CVE-2019-19066]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19058][CVE-2019-19058]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19056][CVE-2019-19056]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051][CVE-2019-19051]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046][CVE-2019-19046]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8832][CVE-2020-8832]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615][CVE-2019-14615]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732][CVE-2020-2732]] <!-- medium -->
+- 4.15, bionic and xenial hwe
+- CVE-2020-8832 - Ubuntu Intel i915 specific issue due to previous fix for
+  CVE-2020-14615 being incomplete - so not completely mitigated in this
+  kernel as expected
+- KVM nested virt bug and various driver memory leak fixes (see above) and
+  a NULL pointer deref if a malicious USB device was inserted to the system
+
+*** [[[https://usn.ubuntu.com/4303-1/][USN-4303-1]], [[https://usn.ubuntu.com/4303-2/][USN-4303-2]]] Linux kernel vulnerability [05:26]
+- 1 CVEs addressed in Xenial and Trusty ESM (HWE)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732][CVE-2020-2732]] <!-- medium -->
+- Nested KVM virt issue
+
+*** [[[https://usn.ubuntu.com/4304-1/][USN-4304-1]]] Ceph vulnerability [05:48]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1700][CVE-2020-1700]] <!-- medium -->
+- DoS able to be triggered by an authenticated user causing an unexpected
+  disconnect to radosgw - sockets pile up and eventually exhaust resources
+  -> DoS
+
+*** [[[https://usn.ubuntu.com/4305-1/][USN-4305-1]]] ICU vulnerability [06:26]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10531][CVE-2020-10531]] <!-- medium -->
+- C/C++ library for unicode handling - integer overflow -> heap buffer
+  overflow - DoS/RCE?
+
+*** [[[https://usn.ubuntu.com/4306-1/][USN-4306-1]]] Dino vulnerabilities [07:05]
+- 3 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16237][CVE-2019-16237]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16236][CVE-2019-16236]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16235][CVE-2019-16235]] <!-- medium -->
+- Thanks to Julian Andres Klode from Foundations
+- Fixes for multiple failures to validate inputs - remote attacker could
+  use to obtain, inject or remove info
+- Also includes a change to accept IV of 12 bytes as well as 16 bytes since
+  this is what a lo t of other OMEMO clients are using
+  - OMEMO (OMEMO Multi-End Message and Object Encryption) - XMPP extension
+    for multiclient E2E - so allows messages to be synchronised across
+    multiple clients, even if some are offline
+
+*** [[[https://usn.ubuntu.com/4171-5/][USN-4171-5]]] Apport regression [08:14]
+- 5 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790][CVE-2019-15790]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485][CVE-2019-11485]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483][CVE-2019-11483]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482][CVE-2019-11482]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481][CVE-2019-11481]] <!-- low -->
+- Thanks to Tiago Daitx and Michael Hudson-Doyle from Foundations Team
+- Previous security update broke some autopkgtests and broke python2
+  compatibility for various parts of Apport
+
+** Goings on in Ubuntu Security Community
+*** Joe and Alex discuss securely working from home whilst avoiding Coronavirus [09:21]
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 66
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-66

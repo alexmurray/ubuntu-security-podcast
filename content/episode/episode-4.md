@@ -6,9 +6,9 @@ description = """
   various hardening guides for Ubuntu.
   """
 date = 2018-09-10
-lastmod = 2020-03-05T14:40:58+10:30
+lastmod = 2020-03-19T20:23:38+10:30
 draft = false
-weight = 1062
+weight = 1064
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E004.mp3"
