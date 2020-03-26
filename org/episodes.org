@@ -8,6 +8,85 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 68
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-68
+:EXPORT_DATE: 2020-03-26 13:57
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E068.mp3 :podcast_duration "17:21" :podcast_bytes "16670420" :permalink "https://ubuntusecuritypodcast.org/episode-68/" :guid 752981b197f4eaf0db4708b94d9ac79fa9aa156b054327af10cdd189024f6a0c1904b4b04f29ef7651e09135867e5b460294a84be9dc9c793bfc1155c8e0683a
+:END:
+#+begin_description
+This week we cover security updates for Apache, Twisted, Vim a kernel
+livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+cvescan snap for vulnerability awareness.
+#+end_description
+** Overview
+This week we cover security updates for Apache, Twisted, Vim a kernel
+livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+cvescan snap for vulnerability awareness.
+** This week in Ubuntu Security Updates
+16 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4307-1/][USN-4307-1]]] Apache HTTP Server update [00:24]
+- TLSv1.3 enabled in Ubuntu 18.04 LTS (bionic)
+  - Enabled by default, could cause compatibility issues in some
+    environments - can be disabled using the SSLProtocol directive
+  - https://bugs.launchpad.net/ubuntu/+source/apache2/+bug/1845263
+
+*** [LSN-0064-1] Linux kernel vulnerability [01:03]
+- 1 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732][CVE-2020-2732]] <!-- medium -->
+- KVM nested virtualisation issue (L2 guest could access resources of L1
+  parent) - [[https://ubuntusecuritypodcast.org/episode-67/][Episode 67]]
+
+*** [[[https://usn.ubuntu.com/4308-1/][USN-4308-1]]] Twisted vulnerabilities [02:07]
+- 7 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10109][CVE-2020-10109]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10108][CVE-2020-10108]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9515][CVE-2019-9515]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9514][CVE-2019-9514]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9512][CVE-2019-9512]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12855][CVE-2019-12855]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12387][CVE-2019-12387]] <!-- low -->
+- 2 variations of a HTTP request splitting / smuggling vuln ([[https://ubuntusecuritypodcast.org/episode-52/][Episode 52]])
+- 3 HTTP/2 DoS issues ([[https://ubuntusecuritypodcast.org/episode-43/][Episode 43]])
+- MITM of XMPP TLS connections due to failure to verify certs
+- Failure to sanitize URIs or HTTP methods in twisted.web
+
+*** [[[https://usn.ubuntu.com/4309-1/][USN-4309-1]]] Vim vulnerabilities [03:53]
+- 7 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11109][CVE-2017-11109]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6350][CVE-2017-6350]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6349][CVE-2017-6349]] <!-- negligible -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20079][CVE-2019-20079]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20786][CVE-2018-20786]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953][CVE-2017-5953]] <!-- low -->
+- All low / negligible since requires a user to use vim to source a crafted
+  file (ie a list of commands / settings for vim) or crafted undo /
+  spelling dictionary etc
+- Integer overflows -> heap overflows -> DoS / RCE etc
+
+*** [[[https://usn.ubuntu.com/4134-3/][USN-4134-3]]] IBus vulnerability [04:49]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822][CVE-2019-14822]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-47/][Episode 47]] - implements it's own private DBus server which clients
+  connect to - original vuln allowed any user who knew address of this bus
+  to connect to it - update fixed this by checking the connecting user was
+  the same as the owning user - but caused a regression in Qt clients -
+  would fail to be able to properly connect to ibus - was reverted - this
+  has seen been fixed by fixing the GDBusServer implementation in libglib2
+  since it was actually incorrect - and so now we have re-fixed in ibus
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe discuss Ubuntu Security OVAL feeds and cvescan [06:47]
+- https://people.canonical.com/~ubuntu-security/oval/
+- https://snapcraft.io/cvescan
+*** Securing open source through CVE prioritisation [15:56]
+- https://ubuntu.com/blog/securing-open-source-through-cve-prioritisation
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 67
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-67
