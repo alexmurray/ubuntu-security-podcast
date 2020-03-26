@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 19 Mar 2020 20:25:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 13:57:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,123 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 68</title>
+          <link>https://ubuntusecuritypodcast.org/episode-68/</link>
+          <pubDate>Thu, 26 Mar 2020 13:57:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>752981b197f4eaf0db4708b94d9ac79fa9aa156b054327af10cdd189024f6a0c1904b4b04f29ef7651e09135867e5b460294a84be9dc9c793bfc1155c8e0683a</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:summary>  This week we cover security updates for Apache, Twisted, Vim a kernel
+  livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+  cvescan snap for vulnerability awareness.
+  </itunes:summary>
+        <description>  This week we cover security updates for Apache, Twisted, Vim a kernel
+  livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+  cvescan snap for vulnerability awareness.
+  </description>
+        <googleplay:description>  This week we cover security updates for Apache, Twisted, Vim a kernel
+  livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+  cvescan snap for vulnerability awareness.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we cover security updates for Apache, Twisted, Vim a kernel
+livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
+cvescan snap for vulnerability awareness.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>16 unique CVEs addressed</p>
+<h3 id="usn-4307-1-apache-http-server-update-00-24">[<a href="https://usn.ubuntu.com/4307-1/">USN-4307-1</a>] Apache HTTP Server update [00:24]</h3>
+<ul>
+<li>TLSv1.3 enabled in Ubuntu 18.04 LTS (bionic)
+<ul>
+<li>Enabled by default, could cause compatibility issues in some
+environments - can be disabled using the SSLProtocol directive</li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/apache2/+bug/1845263">https://bugs.launchpad.net/ubuntu/+source/apache2/+bug/1845263</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="lsn-0064-1-linux-kernel-vulnerability-01-03">[LSN-0064-1] Linux kernel vulnerability [01:03]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732">CVE-2020-2732</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>KVM nested virtualisation issue (L2 guest could access resources of L1
+parent) - <a href="https://ubuntusecuritypodcast.org/episode-67/">Episode 67</a></li>
+</ul>
+<h3 id="usn-4308-1-twisted-vulnerabilities-02-07">[<a href="https://usn.ubuntu.com/4308-1/">USN-4308-1</a>] Twisted vulnerabilities [02:07]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10109">CVE-2020-10109</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10108">CVE-2020-10108</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9515">CVE-2019-9515</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9514">CVE-2019-9514</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9512">CVE-2019-9512</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12855">CVE-2019-12855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12387">CVE-2019-12387</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 variations of a HTTP request splitting / smuggling vuln (<a href="https://ubuntusecuritypodcast.org/episode-52/">Episode 52</a>)</li>
+<li>3 HTTP/2 DoS issues (<a href="https://ubuntusecuritypodcast.org/episode-43/">Episode 43</a>)</li>
+<li>MITM of XMPP TLS connections due to failure to verify certs</li>
+<li>Failure to sanitize URIs or HTTP methods in twisted.web</li>
+</ul>
+<h3 id="usn-4309-1-vim-vulnerabilities-03-53">[<a href="https://usn.ubuntu.com/4309-1/">USN-4309-1</a>] Vim vulnerabilities [03:53]</h3>
+<ul>
+<li>7 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11109">CVE-2017-11109</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6350">CVE-2017-6350</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6349">CVE-2017-6349</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20079">CVE-2019-20079</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20786">CVE-2018-20786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953">CVE-2017-5953</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All low / negligible since requires a user to use vim to source a crafted
+file (ie a list of commands / settings for vim) or crafted undo /
+spelling dictionary etc</li>
+<li>Integer overflows -&gt; heap overflows -&gt; DoS / RCE etc</li>
+</ul>
+<h3 id="usn-4134-3-ibus-vulnerability-04-49">[<a href="https://usn.ubuntu.com/4134-3/">USN-4134-3</a>] IBus vulnerability [04:49]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822">CVE-2019-14822</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-47/">Episode 47</a> - implements it&rsquo;s own private DBus server which clients
+connect to - original vuln allowed any user who knew address of this bus
+to connect to it - update fixed this by checking the connecting user was
+the same as the owning user - but caused a regression in Qt clients -
+would fail to be able to properly connect to ibus - was reverted - this
+has seen been fixed by fixing the GDBusServer implementation in libglib2
+since it was actually incorrect - and so now we have re-fixed in ibus</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-ubuntu-security-oval-feeds-and-cvescan-06-47">Alex and Joe discuss Ubuntu Security OVAL feeds and cvescan [06:47]</h3>
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/oval/">https://people.canonical.com/~ubuntu-security/oval/</a></li>
+<li><a href="https://snapcraft.io/cvescan">https://snapcraft.io/cvescan</a></li>
+</ul>
+<h3 id="securing-open-source-through-cve-prioritisation-15-56">Securing open source through CVE prioritisation [15:56]</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/securing-open-source-through-cve-prioritisation">https://ubuntu.com/blog/securing-open-source-through-cve-prioritisation</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E068.mp3" length="16670420" type="audio/mpeg" /><itunes:duration>17:21</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 67</title>
           <link>https://ubuntusecuritypodcast.org/episode-67/</link>

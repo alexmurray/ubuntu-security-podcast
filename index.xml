@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Episode 67</title>
-      <link>https://ubuntusecuritypodcast.org/episode-67/</link>
-      <pubDate>Thu, 19 Mar 2020 20:25:00 +1030</pubDate>
+      <title>Episode 68</title>
+      <link>https://ubuntusecuritypodcast.org/episode-68/</link>
+      <pubDate>Thu, 26 Mar 2020 13:57:00 +1030</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-67/</guid>
-      <description>Overview A big week in security updates, including the Linux kernel, Ceph, ICU, Firefox, Dino and more, plus Joe and Alex discuss tips for securely working from home in light of Coronavirus.
-This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-4299-1] Firefox vulnerabilities [00:41]  12 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-6811  CVE-2020-6809  CVE-2020-6815  CVE-2020-6814  CVE-2020-6813  CVE-2020-6812  CVE-2020-6810  CVE-2020-6808  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2019-20503    74.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-68/</guid>
+      <description>Overview This week we cover security updates for Apache, Twisted, Vim a kernel livepatch and more, plus Alex and Joe discuss OVAL data feeds and the cvescan snap for vulnerability awareness.
+This week in Ubuntu Security Updates 16 unique CVEs addressed
+[USN-4307-1] Apache HTTP Server update [00:24]  TLSv1.3 enabled in Ubuntu 18.04 LTS (bionic)  Enabled by default, could cause compatibility issues in some environments - can be disabled using the SSLProtocol directive https://bugs.</description>
     </item>
     
     <item>
@@ -32,14 +32,14 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
     </item>
     
     <item>
-      <title>Episode 66</title>
-      <link>https://ubuntusecuritypodcast.org/episode-66/</link>
-      <pubDate>Thu, 12 Mar 2020 22:39:00 +1030</pubDate>
+      <title>Episode 67</title>
+      <link>https://ubuntusecuritypodcast.org/episode-67/</link>
+      <pubDate>Thu, 19 Mar 2020 20:25:00 +1030</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-66/</guid>
-      <description>Overview This week we cover security updates for Django, runC and SQLite, plus Alex and Joe discuss the AMD speculative execution Take A Way attack and we look at some recent blog posts by the team too.
-This week in Ubuntu Security Updates 16 unique CVEs addressed
-[USN-4296-1] Django vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9402    Possible SQL injection in the GIS functions when using an Oracle DB as the backend - Oracle provides a tolerance parameter which can be used when doing GIS queries and this was not properly sanitised before use so could allow SQL injection  [USN-4297-1] runC vulnerabilities [01:30]  2 CVEs addressed in Bionic, Eoan  CVE-2019-19921  CVE-2019-16884    Race condition on mounting of shared volume mounts between two containers - can replace /proc on one container with a symlink inside of the shared mount - when this gets cleaned up other parts of /proc can end mounted within the shared mount and this could be used for privilege escalation since if outside of /proc then regular users might be able to write to sensitive parts of /proc - fixed by having runc validate that the target for mounting /proc or /sys must either not exist or must be a directory to avoid symlink attacks etc Possible bypass of AppArmor restrictions since would not properly check the target of a mount and so could end up mounting a malicious image over /proc - instead add more explicit checks on whether the dest of a mount is /proc and only allow this if the source is also a procfs  [USN-4298-1] SQLite vulnerabilities [03:09]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2019-13752  CVE-2020-9327  CVE-2019-20218  CVE-2019-19926  CVE-2019-19959  CVE-2019-19925  CVE-2019-19924  CVE-2019-19923  CVE-2019-19880  CVE-2019-13751  CVE-2019-13753  CVE-2019-13750  CVE-2019-13734    Many different memory safety issues resolved in SQLite - across various parts of SQLite including handling of shadow tables, corrupt records, parsing, ZIP archives and column optimisations.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-67/</guid>
+      <description>Overview A big week in security updates, including the Linux kernel, Ceph, ICU, Firefox, Dino and more, plus Joe and Alex discuss tips for securely working from home in light of Coronavirus.
+This week in Ubuntu Security Updates 38 unique CVEs addressed
+[USN-4299-1] Firefox vulnerabilities [00:41]  12 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-6811  CVE-2020-6809  CVE-2020-6815  CVE-2020-6814  CVE-2020-6813  CVE-2020-6812  CVE-2020-6810  CVE-2020-6808  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2019-20503    74.</description>
     </item>
     
     <item>
@@ -49,6 +49,17 @@ This week in Ubuntu Security Updates 16 unique CVEs addressed
       
       <guid>https://ubuntusecuritypodcast.org/contact/</guid>
       <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
+    </item>
+    
+    <item>
+      <title>Episode 66</title>
+      <link>https://ubuntusecuritypodcast.org/episode-66/</link>
+      <pubDate>Thu, 12 Mar 2020 22:39:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-66/</guid>
+      <description>Overview This week we cover security updates for Django, runC and SQLite, plus Alex and Joe discuss the AMD speculative execution Take A Way attack and we look at some recent blog posts by the team too.
+This week in Ubuntu Security Updates 16 unique CVEs addressed
+[USN-4296-1] Django vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9402    Possible SQL injection in the GIS functions when using an Oracle DB as the backend - Oracle provides a tolerance parameter which can be used when doing GIS queries and this was not properly sanitised before use so could allow SQL injection  [USN-4297-1] runC vulnerabilities [01:30]  2 CVEs addressed in Bionic, Eoan  CVE-2019-19921  CVE-2019-16884    Race condition on mounting of shared volume mounts between two containers - can replace /proc on one container with a symlink inside of the shared mount - when this gets cleaned up other parts of /proc can end mounted within the shared mount and this could be used for privilege escalation since if outside of /proc then regular users might be able to write to sensitive parts of /proc - fixed by having runc validate that the target for mounting /proc or /sys must either not exist or must be a directory to avoid symlink attacks etc Possible bypass of AppArmor restrictions since would not properly check the target of a mount and so could end up mounting a malicious image over /proc - instead add more explicit checks on whether the dest of a mount is /proc and only allow this if the source is also a procfs  [USN-4298-1] SQLite vulnerabilities [03:09]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2019-13752  CVE-2020-9327  CVE-2019-20218  CVE-2019-19926  CVE-2019-19959  CVE-2019-19925  CVE-2019-19924  CVE-2019-19923  CVE-2019-19880  CVE-2019-13751  CVE-2019-13753  CVE-2019-13750  CVE-2019-13734    Many different memory safety issues resolved in SQLite - across various parts of SQLite including handling of shadow tables, corrupt records, parsing, ZIP archives and column optimisations.</description>
     </item>
     
     <item>
