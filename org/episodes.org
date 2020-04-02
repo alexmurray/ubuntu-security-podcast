@@ -8,6 +8,86 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 69
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-69
+:EXPORT_DATE: 2020-04-02 16:32
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E069.mp3 :podcast_duration "20:24" :podcast_bytes "19586521" :permalink "https://ubuntusecuritypodcast.org/episode-69/" :guid 54acb3f1d99f7e138c0b47e12f3aa055d4330e7937cc9eb6e2453df849a76fed266be57f9e59c68dd957b9c370624697eb53175a7f475b952b70fed6a5c7be2f
+:END:
+#+begin_description
+This week we cover security updates for a Linux kernel vulnerability
+disclosed during pwn2own, Timeshift, pam-krb5 and more, plus we have a
+special guest, Vineetha Kamath, to discuss security certifications for
+Ubuntu.
+#+end_description
+** Overview
+This week we cover security updates for a Linux kernel vulnerability
+disclosed during pwn2own, Timeshift, pam-krb5 and more, plus we have a
+special guest, Vineetha Kamath, to discuss security certifications for
+Ubuntu.
+** This week in Ubuntu Security Updates
+10 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4308-2/][USN-4308-2]]] Twisted vulnerabilities [00:42]
+- 4 CVEs addressed in Trusty ESM
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10109][CVE-2020-10109]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10108][CVE-2020-10108]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12855][CVE-2019-12855]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12387][CVE-2019-12387]] <!-- low -->
+- [[https://ubuntusecuritypodcast.org/episode-68/][Episode 68]] - 4 of the 7 CVEs described there affect Twisted in 14.04
+  ESM
+
+*** [[[https://usn.ubuntu.com/4310-1/][USN-4310-1]]] WebKitGTK+ vulnerability [01:09]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10018][CVE-2020-10018]] <!-- medium -->
+- UAF - discovered by CloudFuzz
+
+*** [[[https://usn.ubuntu.com/4312-1/][USN-4312-1]]] Timeshift vulnerability [01:49]
+- 1 CVEs addressed in Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10174][CVE-2020-10174]] <!-- high -->
+- Reuses predictably named temporary directory to execute scripts - and
+  runs as root - so a local attacker could replace the script in this
+  predictably named directory with one containing malicious commands, to
+  get code execution as root. Fixed by using a randomly named directory
+  *and* setting the permissions on it so other users can't write to it.
+
+*** [[[https://usn.ubuntu.com/4313-1/][USN-4313-1]]] Linux kernel vulnerability [02:43]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8835][CVE-2020-8835]] <!-- high -->
+- pwn2own - Manfred Paul discovered the BPF verifier in the Linux kernel
+  did not properly calculate register bounds for 32-bit operations - so if
+  allow unprivileged users to load BPF, this could be used to read or write
+  kernel memory. Can then use this to elevate privileges to root.
+- https://www.thezdi.com/blog/2020/3/19/pwn2own-2020-day-one-results
+
+*** [[[https://usn.ubuntu.com/4311-1/][USN-4311-1]]] BlueZ vulnerabilities [03:52]
+- 2 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7837][CVE-2016-7837]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0556][CVE-2020-0556]] <!-- medium -->
+- Didn't handle bonding of HID and HOGP (HID over GATT - Generic Attribute
+  Profile) devices - local attacker could use this to impersonate
+  non-bonded devices
+- Buffer overflow in parse_line function used by some CLI-based userland
+  utils
+
+*** [[[https://usn.ubuntu.com/4314-1/][USN-4314-1]]] pam-krb5 vulnerability [04:50]
+- 1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10595][CVE-2020-10595]] <!-- medium -->
+- Single-byte buffer overflow could potentially allow RCE - buffer is
+  provided by underlying kerberos library - attacker can supply input of
+  special length to overflow this and then cause memory corruption -
+  possible heap or stack corruption. Only used in code-paths where Kerberos
+  lib does supplemental prompting, or if running PAM with no_prompt
+  configured.
+
+** Goings on in Ubuntu Security Community
+*** Joe and Vineetha discuss security certifications for Ubuntu [06:14]
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 68
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-68

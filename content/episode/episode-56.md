@@ -6,9 +6,9 @@ description = """
   hacker indictments, unsecured AWS S3 buckets and more.
   """
 date = 2019-12-13T20:49:00+10:30
-lastmod = 2020-03-26T14:00:30+10:30
+lastmod = 2020-04-02T16:35:45+10:30
 draft = false
-weight = 1013
+weight = 1014
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E056.mp3"
