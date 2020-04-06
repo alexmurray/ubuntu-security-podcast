@@ -48,6 +48,7 @@
           <guid>54acb3f1d99f7e138c0b47e12f3aa055d4330e7937cc9eb6e2453df849a76fed266be57f9e59c68dd957b9c370624697eb53175a7f475b952b70fed6a5c7be2f</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 69</itunes:title>
         <itunes:summary>  This week we cover security updates for a Linux kernel vulnerability
   disclosed during pwn2own, Timeshift, pam-krb5 and more, plus we have a
   special guest, Vineetha Kamath, to discuss security certifications for
@@ -167,6 +168,7 @@ configured.</li>
           <guid>752981b197f4eaf0db4708b94d9ac79fa9aa156b054327af10cdd189024f6a0c1904b4b04f29ef7651e09135867e5b460294a84be9dc9c793bfc1155c8e0683a</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 68</itunes:title>
         <itunes:summary>  This week we cover security updates for Apache, Twisted, Vim a kernel
   livepatch and more, plus Alex and Joe discuss OVAL data feeds and the
   cvescan snap for vulnerability awareness.
@@ -284,6 +286,7 @@ since it was actually incorrect - and so now we have re-fixed in ibus</li>
           <guid>bfa68a8055be84e37f33b58058b37a06d58a906c34914c4d20cdf859da1359902bbd1b65f5c2ad56be4388ccef2b53856af22e8294b60148db4f92ce55864061</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 67</itunes:title>
         <itunes:summary>  A big week in security updates, including the Linux kernel, Ceph, ICU,
   Firefox, Dino and more, plus Joe and Alex discuss tips for securely working
   from home in light of Coronavirus.
@@ -493,6 +496,7 @@ compatibility for various parts of Apport</li>
           <guid>d1e8818a626f92b9f17bcc02ff8dae1abe27d82cfeeef01ad1ea3da9a39462474d0852264deee569dcecea72ae42aae4588e6964a69dff5d88114878b5153547</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 66</itunes:title>
         <itunes:summary>  This week we cover security updates for Django, runC and SQLite, plus Alex
   and Joe discuss the AMD speculative execution Take A Way attack and we
   look at some recent blog posts by the team too.
@@ -612,6 +616,7 @@ untrusted SQLite databases or untrusted query inputs.</li>
           <guid>ae3fd86077905ed6dee84fcdb19c70e71325cde5af0589489d2b4bfbc430c48aa2824bf583508258ead4cb25ccce9877fbf06f84aaa4d736005cc7c00c36d8f6</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 65</itunes:title>
         <itunes:summary>  Whilst avoiding Coronavirus, this week we look at updates for libarchive,
   OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot
   Operating System and how the Ubuntu Security Team is involved in the
@@ -729,6 +734,7 @@ if the file-name starts with a pipe `|` - so instead just use File.open()</li>
           <guid>c706dda9eb6c395624a28a4f83cb71742f753e95b91b85208b207bf2c164f29301c2bd4caec2157c09758119db4f1de9118be3b5d9706aa0a2e65b04adf9401d</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 64</itunes:title>
         <itunes:summary>  This week we look at security updates for ppp, Squid, rsync &#43; more, and Joe
   and Alex discuss the wide scope of the Ubuntu Security Team including some
   current open positions.
@@ -877,6 +883,7 @@ by Trail of Bits )</li>
           <guid>fbd2de403377ec5c3488d937ebbff935b1a9ed374a20c2404f6d69862b28a26e62003bcc630474425c1caa2382b0f0ada22a4cf2462cb3f34f43b32e424f2671</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 63</itunes:title>
         <itunes:summary>  Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we
   discuss our recommended reading list for getting into infosec and farewell
   long-time member of the Ubuntu Security Team / community Tyler Hicks.
@@ -1155,6 +1162,7 @@ DoS</li>
           <guid>cbcb26e438872f506b36e8e7b7ee21d106655701064861773b7ba0656374e5175dc4e6723661b01cf4f97a1528c9f5675d11820976fb85a19117a2e2c82c30bf</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 62</itunes:title>
         <itunes:summary>  This week Alex and Joe take an indepth look at the recent Sudo
   vulnerability CVE-2019-18634 plus we look at security updates for
   OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a
@@ -1386,6 +1394,7 @@ disclosure)</li>
           <guid>4d1e94a8f9c93dcb3069ca36dde6b773552b0a61a06f811702d0567654b3a3405d3fb891a51518dba4d3afe8e4f57640dd0f2b354e75d1cdb8684c6f2f78bc28</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 61</itunes:title>
         <itunes:summary>  Joe is back to discuss a recent breach against Wawa, plus we detail
   security updates from the past week including Apache Solr, OpenStack
   Keystone, Sudo, Django and more.
@@ -1539,6 +1548,7 @@ update channels or 3rd parted .cf files</li>
           <guid>f21f0a310cd9b3b77ec9aed4aba7830629eb3657eee049ddc03e2be9574b0f08fa15d82320b65e0b6a592206f8237b260aba32005dc4b60a69ee7ccbb9f662ee</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 60</itunes:title>
         <itunes:summary>  Security updates for python-apt, GnuTLS, tcpdump, the Linux kernel and
   more, plus we look at plans to integrate Ubuntu Security Notices within the
   main ubuntu.com website.
@@ -1837,6 +1847,7 @@ on the ubuntu-hardened mailing list</li>
           <guid>8c5226e656fef4692233bb39d75e43ecb6afda9c7424fb76b5d55fca10bef921973edeefa7c186a93ddc5a592bce4617ac9bce4c639c4fe4bb9238891be0ae2b</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 59</itunes:title>
         <itunes:summary>  After a weeks break we are back to look at updates for ClamAV, GnuTLS,
   nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle
   Roadmap Review sprint for the Ubuntu Security Team
@@ -2172,6 +2183,7 @@ Core security features, MIR security reviews progress etc</li>
           <guid>aa89e8be26bc96c93cdda67991584e240fb69ddc262f36bc78c6a68036b1f3f625c4c73f925044ad21e00debb61ddf7498c304e58b97ad272607ec46c5835760</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 58</itunes:title>
         <itunes:summary>  In the first episode for 2020, we look at security updates for Django and
   the Linux kernel, plus Alex and Joe discuss security and privacy aspects of
   smart assistant connected devices.
@@ -2431,6 +2443,7 @@ malicious server could overwrite arbitrary files on the client</li>
           <guid>b113e6411042301448ceef505c8f2dd3c9a8081cc39c6a7758beb85d457fe90468ce0d6dd8f225cdb41fef3f48a53672c0b6cceaace7af7c18dea7cae8f09dd3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 57</itunes:title>
         <itunes:summary>  In the final episode of 2019, we look at security updates for RabbitMQ,
   GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
   day-in-the-life of a Ubuntu Security Team member.
@@ -2547,6 +2560,7 @@ scenarios) - see the full USN for details</li>
           <guid>f287302b1359224248445e7bc22ea58930f25defb4f809f390a9c6589bef6a2fd5f945c313fbf20124d5d495339fa35f77edf452e00177e07b1c3ee0555d9a40</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 56</itunes:title>
         <itunes:summary>  In the second to last episode for 2019, we look at security updates for
   Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp
   hacker indictments, unsecured AWS S3 buckets and more.
@@ -2794,6 +2808,7 @@ issue</li>
           <guid>c0e25d7ca543be2f8864b68c4880a8bce21bdc7fafe372f1a4f9b438b97114da4a395d106471dd4ac1ad2550aa4d13a8d9bade442b08f1ffb531220b45501952</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 55</itunes:title>
         <itunes:summary>  This week we cover security updates for NSS, SQLite, the Linux kernel and
   more, plus Joe and Alex discuss a recent FBI advisory warning about
   possible dangers of Smart TVs.
@@ -3040,6 +3055,7 @@ models</li>
           <guid>e0abd272be0b26357bb4c2a077b96b83dc1a5fd44d91d5d817b0328423aa96543ed9eeae8f12644903e9825e9b31712f5291b1333114a285c89df4393df9b10b</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 54</itunes:title>
         <itunes:summary>  Security updates for DPDK, Linux kernel, QEMU, ImageMagick, Ghostscript and
   more, plus Joe and Alex talk about how to get into information security.
   </itunes:summary>
@@ -3330,6 +3346,7 @@ so would cause a DoS</li>
           <guid>6322701e1569fa8a2176f7ddc3de8a25fec67f74a5d8335395aeafbb7fcc7533c5dc12f28d8ceb3f51469422dcd5da29061f11aa99a33d597ccc55bc2a629fd5</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 53</itunes:title>
         <itunes:summary>  This week we look at the details of the latest Intel hardware
   vulnerabilities, including security updates for the Linux kernel and Intel
   microcode, plus Bash, cpio, FriBidi and more.
@@ -3609,6 +3626,7 @@ issues</li>
           <guid>acc482d7fd9d6f693da4ad85290ddb6ce4e775ac3c5488f1118fe6541a94e2c405f3cb8481ebd9f9d92cf7056ac083cf1173c9e386c45b9efb922620986532be</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 52</itunes:title>
         <itunes:summary>  This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus
   some regressions in Whoopsie, Apport and Firefox, and Joe and Alex discuss
   the release of 14.04 ESM for personal use under the Ubuntu Advantage
@@ -3758,6 +3776,7 @@ is now disabled by default)</li>
           <guid>b4b70514b6fc0095396ed3af2215ac25ed8c1c5f3aeec38a2e93b800831fc26e997456bb3bee80dd083570aed5b4bc12cc1e96fbd11999a6621945f7b6130794</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 51</itunes:title>
         <itunes:summary>  In this Halloween Special, Joe and Alex talk about what scares them in
   security, plus we look at security updates for Firefox, PHP, Samba,
   Whoopsie, Apport and more.
@@ -3956,6 +3975,7 @@ the crash dump could end up in a location of their choosing</li>
           <guid>1ac5b387f58f50b867a6d837f8d9a835c345e155c44b99ff9b2908d433b078520fce6a6a2591e83251e878e95e4937992d25f4f2092f884cdb47c1a102297bad</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 50</itunes:title>
         <itunes:summary>  Alex and Joe discuss the big news of this week - the release of Ubuntu
   19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
   UW IMAP and more.
@@ -4217,6 +4237,7 @@ sysctl user.max_user_namespaces=0</li>
           <guid>4a49a1057918c7b343e9a3d3a318c0bab7d8d3997f2168bcece3a17c461358362c51850bc3414e7c3dfc0575bda71abd59b121437efaffcf9c5b74341e50219d</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 49</itunes:title>
         <itunes:summary>  This week we look at updates for Sudo, Python, OpenStack Octavia and more,
   plus we discuss a recent CVE for Python which resulted in erroneous
   scientific research results, and we go over some of your feedback from
@@ -4390,6 +4411,7 @@ priority issues (buffer over-reads in WAV handling etc)</li>
           <guid>0efb781981d33bf253bba826020da4b973ac05001f4b599cfa817150fd2b4cfe4a44d6c8790e9885a37d043561ecdba098aeda75e53b56f00f858b38473eef01</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 48</itunes:title>
         <itunes:summary>  This week we look at security updates for the Linux kernel, SDL 2, ClamAV
   and more, plus Alex and Joe talk security and performance trade-offs, snaps
   and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
@@ -4558,6 +4580,7 @@ bzip2 itself in Ubuntu in <a href="https://ubuntusecuritypodcast.org/episode-38/
           <guid>eb97d501d3fc0165d53b74fa0f831d75a0b24d77763dc3f68787f6ce5f69dfe2caab85d941d6a0b81f110683ab34cb6cc01b365791d1cf9fdd8fae29494536cb</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 47</itunes:title>
         <itunes:summary>  We catch up on details of the past few weeks of security updates, including
   Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the
   recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin
@@ -4921,6 +4944,7 @@ and <a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened IRC 
           <guid>f9f8ca97c8a93a7d0f78e192f4103ef26bcd7f06d318c0a10eaaddd1a5cad87fe4347f2bf2a967b0b2b4c56fdbce6d261f047fc9c17ee8542b54e5477ce71a99</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 46</itunes:title>
         <itunes:summary>  A massive 85 CVEs addressed this week, including updates for Exim, the
   Linux Kernel, Samba, systemd and more, plus we discuss hacking BMCs via
   remote USB devices and password stashes.
@@ -5385,6 +5409,7 @@ the systems DNS resolver settings</li>
           <guid>f87b82df55da7b039ccf147c10a94c759ed46cab8a843d0e81c042222ce3f8373cf1abe1587107675c11187a834f6d5550da0e76ae338343ad75f1161c036ee5</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 45</itunes:title>
         <itunes:summary>This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.</itunes:summary>
         <description>This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.</description>
         <googleplay:description>This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.</googleplay:description>
@@ -5551,6 +5576,7 @@ lead to crash</p>
           <guid>b063c8dc343daa4078e95f9f481e32335d9acfce6b4aa70e39b53c044e987477a3e4e9e7a7a70b704240207adb256105eab6f6cd98339f76d818885c695cf7e0</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 44</itunes:title>
         <itunes:summary>This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.</itunes:summary>
         <description>This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.</description>
         <googleplay:description>This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.</googleplay:description>
@@ -5734,6 +5760,7 @@ DoS / RCE</li>
           <guid>1415efd498db59ba97e4860b7a2eda77924ceaaed942127fa960ff48a6a5417668327be0327d27ec5271511fc63006be01000b872c0035213a4a09d03232622f</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 43</itunes:title>
         <itunes:summary>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</itunes:summary>
         <description>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</description>
         <googleplay:description>This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</googleplay:description>
@@ -6002,6 +6029,7 @@ passwords etc</li>
           <guid>8d026811c700eb17a35225aad802fabfb76a5f89e860868d40a8e1148b55954acdd5ed0768b1b7d855d7e4be63edf5b0c20c051adcd335e36c12f67eaa7181a8</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 42</itunes:title>
         <itunes:summary>  This week we have a special interview with Ubuntu Security Team member
   Jamie Strandboge, talking about security aspects of the Snap packaging
   system, as well as the usual roundup of security fixes from the past week.
@@ -6129,6 +6157,7 @@ to have inexact argument type matching otherwise will be disallowed.</li>
           <guid>93da5c5539f3f81eac1a3b8ed45073abf86bc2e0b571557bbe3f86ba69d0444b12c536661c741547f3bfd212c198e83734b002caea5ee420146fbde697398a9a</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 41</itunes:title>
         <itunes:summary>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</itunes:summary>
         <description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</description>
         <googleplay:description>With Alex and Joe having been away at a Canonical sprint last week, we look back at the past fortnight&#39;s security updates including new Linux kernel releases, MySQL, VLC, Django and more plus we discuss a recent Citrix password spraying attack.</googleplay:description>
@@ -6544,6 +6573,7 @@ due to use of regex with backtracking</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E040.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 40</itunes:title>
         <itunes:summary>  Big roundup of security updates from the past 2 weeks including Docker,
   ZeroMQ, Squid, Redis and more, plus we talk with Joe McManus about some
   recent big fines for companies breaching their GDPR responsibilities and
@@ -6923,6 +6953,7 @@ maybe RCE&hellip;
           <guid>https://people.canonical.com/~amurray/USP/USP_E039.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 39</itunes:title>
         <itunes:summary>  A look at security updates for Django, Thunderbird, ZNC, Irssi and more,
   plus news on the CanonicalLtd GitHub account credentials compromise, SKS
   PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
@@ -7086,6 +7117,7 @@ resistant keyserver</a></li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E038.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 38</itunes:title>
         <itunes:summary>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</itunes:summary>
         <description>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</description>
         <googleplay:description>This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features.</googleplay:description>
@@ -7387,6 +7419,7 @@ usually hard-coded to 48) - so can be increased to avoid this DoS issue</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E037.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 37</itunes:title>
         <itunes:summary>The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!</itunes:summary>
         <description>The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!</description>
         <googleplay:description>The big new this week is SackPANIC! updates for the Linux kernel, plus we look at vulnerabilities in, and updates for, Samba, SQLite, Bind, Thunderbird and more, and we are hiring!</googleplay:description>
@@ -7627,6 +7660,7 @@ denied hosts from repeatedly trying</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E036.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 36</itunes:title>
         <itunes:summary>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</itunes:summary>
         <description>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</description>
         <googleplay:description>Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week.</googleplay:description>
@@ -7839,6 +7873,7 @@ upstream released 67.0.2 which is this new update.</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E035.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 35</itunes:title>
         <itunes:summary>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</itunes:summary>
         <description>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</description>
         <googleplay:description>We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too.</googleplay:description>
@@ -8083,6 +8118,7 @@ fact upgraded and therefore think the old profile data was invalid</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E034.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 34</itunes:title>
         <itunes:summary>This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.</itunes:summary>
         <description>This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.</description>
         <googleplay:description>This week we look at security updates for Keepalived, Corosync, GnuTLS, libseccomp and more, plus we talk insider threats with Joe McManus.</googleplay:description>
@@ -8290,6 +8326,7 @@ version than in backporting</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E033.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 33</itunes:title>
         <itunes:summary>  Updated Intel microcode for Cherry &#43; Bay Trial CPUs, fixes for
   vulnerabilities in curl, Firefox, PHP and MariaDB, plus we talk
   configuration of virtualised guests to mitigate speculative execution
@@ -8527,6 +8564,7 @@ mediation</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E032.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 32</itunes:title>
         <itunes:summary>  This week we look at updates to cover the latest Intel CPU vulnerabilities
   (MDS - aka RIDL, Fallout, ZombieLoad), plus other vulnerabilies in
   PostgreSQL, ISC DHCP, Samba and more, whilst special guest this week is
@@ -8870,6 +8908,7 @@ itself</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E031.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 31</itunes:title>
         <itunes:summary>This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.</itunes:summary>
         <description>This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.</description>
         <googleplay:description>This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more.</googleplay:description>
@@ -9033,6 +9072,7 @@ escaping this data</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E030.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 30</itunes:title>
         <itunes:summary>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.</itunes:summary>
         <description>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.</description>
         <googleplay:description>Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub&#39;s credentials database and more.</googleplay:description>
@@ -9200,6 +9240,7 @@ mode - fixed by sanitising this filename first</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E029.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 29</itunes:title>
         <itunes:summary>  This week we look at fixes from the past two weeks including BIND, NTFS-3G,
   Dovecot, Pacemaker and more, plus we follow up last episodes IoT security
   discussion with Joe McManus talking about Ubuntu Core. Finally we cover the
@@ -9468,6 +9509,7 @@ packages in main by the security team</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E028.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 28</itunes:title>
         <itunes:summary>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</itunes:summary>
         <description>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</description>
         <googleplay:description>This week we look at updates for vulnerabilities in wpa\_supplicant, Samba, systemd, wget and more and we talk to Joe about IoT security (or the prevailing lack-thereof).</googleplay:description>
@@ -9707,6 +9749,7 @@ rsync or scp</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E027.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 27</itunes:title>
         <itunes:summary>Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.</itunes:summary>
         <description>Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.</description>
         <googleplay:description>Carpe Diem for Apache HTTP Server, plus updates for Dovecot, PolicyKit and the Linux kernel, and we talk to Joe McManus about the recent Asus ShadowHammer supply chain attack and more.</googleplay:description>
@@ -10033,6 +10076,7 @@ malicious f2fs images</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E026.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 26</itunes:title>
         <itunes:summary>  This week we look security updates for a heap of packages including
   Firefox &amp; Thunderbird, PHP &amp; QEMU, plus we discuss Facebook&#39;s recent
   password storage incident as well as some listener hardening tips and
@@ -10330,6 +10374,7 @@ and plugins</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E025.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 25</itunes:title>
         <itunes:summary>Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.</itunes:summary>
         <description>Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.</description>
         <googleplay:description>Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more.</googleplay:description>
@@ -10538,6 +10583,7 @@ mishandling of variable length function arguments - all crash -&gt; DoS</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E024.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 24</itunes:title>
         <itunes:summary>  A look at recent fixes for vulnerabilities in poppler, WALinuxAgent, the
   Linux kernel and more. We also talk about some listener feedback on
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
@@ -10716,6 +10762,7 @@ various Ubuntu kernel configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E023.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 23</itunes:title>
         <itunes:summary>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</itunes:summary>
         <description>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</description>
         <googleplay:description>This week we look at security updates for the Linux kernel, PHP and NVIDIA drivers, revealing recent research into GPU based side-channel attacks plus we call for suggestions on hardening features and more.</googleplay:description>
@@ -10857,6 +10904,7 @@ various Ubuntu kernel configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E022.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 22</itunes:title>
         <itunes:summary>This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.</itunes:summary>
         <description>This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.</description>
         <googleplay:description>This week we cover security updates including Firefox, Thunderbird, OpenSSL and another Ghostscript regression, plus we look at a recent report from Capsule8 comparing Linux hardening features across various distributions and we answer some listener questions.</googleplay:description>
@@ -11035,6 +11083,7 @@ various Ubuntu kernel configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E021.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 21</itunes:title>
         <itunes:summary>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</itunes:summary>
         <description>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</description>
         <googleplay:description>Double episode covering the security updates from the last 2 weeks, including snapd (DirtySock), systemd and more, plus we talk responsible disclosure and some open positions on the Ubuntu Security team.</googleplay:description>
@@ -11200,6 +11249,7 @@ various Ubuntu kernel configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E020.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 20</itunes:title>
         <itunes:summary>This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.</itunes:summary>
         <description>This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.</description>
         <googleplay:description>This week we look at Linux kernel updates for all releases, OpenSSH, dovecot, curl and more. Plus we answer some frequently asked questions for Ubuntu security, in particular the perennial favourite of why we choose to just backport security fixes instead of doing rolling package version updates to resolve outstanding CVEs.</googleplay:description>
@@ -11407,6 +11457,7 @@ pass to it to run</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E019.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 19</itunes:title>
         <itunes:summary>This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in [Episode 17](https://ubuntusecuritypodcast.org/episode-17/).</itunes:summary>
         <description>This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in [Episode 17](https://ubuntusecuritypodcast.org/episode-17/).</description>
         <googleplay:description>This week we look at updates to the Linux kernel in preparation for the 18.04.2 release, plus updates for Open vSwitch, Firefox, Avahi, LibVNCServer and more. We also revisit and discuss upstream changes to the mincore() system call to thwart page-cache side-channel attacks first discussed in [Episode 17](https://ubuntusecuritypodcast.org/episode-17/).</googleplay:description>
@@ -11594,6 +11645,7 @@ pass to it to run</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E018.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 18</itunes:title>
         <itunes:summary>This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.</itunes:summary>
         <description>This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.</description>
         <googleplay:description>This week we look at some details of the 46 unique CVEs addressed across the supported Ubuntu releases and take a deep dive into the recent apt security bug.</googleplay:description>
@@ -11790,6 +11842,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E017.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 17</itunes:title>
         <itunes:summary>First episode of 2019! This week we look &#34;System Down&#34; in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.</itunes:summary>
         <description>First episode of 2019! This week we look &#34;System Down&#34; in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.</description>
         <googleplay:description>First episode of 2019! This week we look &#34;System Down&#34; in systemd, as well as updates for the Linux kernel, GnuPG, PolicyKit and more, and discuss a recent cache-side channel attack using the mincore() system call.</googleplay:description>
@@ -12064,6 +12117,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E016.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 16</itunes:title>
         <itunes:summary>Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.</itunes:summary>
         <description>Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.</description>
         <googleplay:description>Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.</googleplay:description>
@@ -12214,6 +12268,7 @@ RWX segment at a fixed location, which can be used to bypass DEP / ASLR
           <guid>https://people.canonical.com/~amurray/USP/USP_E015.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 15</itunes:title>
         <itunes:summary>  Security updates for 29 CVEs including Perl, the kernel, OpenSSL (PortSmash)
   and more, plus in response to some listener questions, we discuss how to make
   sure you always have the latest security updates by using unattended-upgrades.
@@ -12458,6 +12513,7 @@ already have latest security updates</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E014.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 14</itunes:title>
         <itunes:summary>This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.</itunes:summary>
         <description>This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.</description>
         <googleplay:description>This week we look at some details of the 32 unique CVEs addressed across the supported Ubuntu releases and talk open source software supply chain integrity and how this relates to Ubuntu compared to the recent npm event-stream compromise.</googleplay:description>
@@ -12703,6 +12759,7 @@ barrier to entry as a trusted developer</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E013.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 13</itunes:title>
         <itunes:summary>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</itunes:summary>
         <description>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</description>
         <googleplay:description>This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.</googleplay:description>
@@ -12810,6 +12867,7 @@ barrier to entry as a trusted developer</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E012.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 12</itunes:title>
         <itunes:summary>This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.</itunes:summary>
         <description>This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.</description>
         <googleplay:description>This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more.</googleplay:description>
@@ -13081,6 +13139,7 @@ is empty)</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E011.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 11</itunes:title>
         <itunes:summary>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</itunes:summary>
         <description>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</description>
         <googleplay:description>This week we look at some details of the 23 unique CVEs addressed across the supported Ubuntu releases, discuss the latest purported Intel side-channel vulnerability PortSmash and more.</googleplay:description>
@@ -13282,6 +13341,7 @@ is empty)</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E010.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 10</itunes:title>
         <itunes:summary>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.</itunes:summary>
         <description>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.</description>
         <googleplay:description>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases, have a brief look at some Canonical presentations from LSS-EU and more.</googleplay:description>
@@ -13408,6 +13468,7 @@ is empty)</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E009.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 9</itunes:title>
         <itunes:summary>This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([CVE-2018-14665](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665)), plus Cosmic is now officially supported by the Security Team.</itunes:summary>
         <description>This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([CVE-2018-14665](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665)), plus Cosmic is now officially supported by the Security Team.</description>
         <googleplay:description>This week we look at some details of the 61 unique CVEs addressed across the supported Ubuntu releases, with a particular focus on the recent Xorg vulnerability ([CVE-2018-14665](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14665)), plus Cosmic is now officially supported by the Security Team.</googleplay:description>
@@ -13634,6 +13695,7 @@ malicious extension - then could privilege escalation or local code execution</l
           <guid>https://people.canonical.com/~amurray/USP/USP_E008.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 8</itunes:title>
         <itunes:summary>This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.</itunes:summary>
         <description>This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.</description>
         <googleplay:description>This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more.</googleplay:description>
@@ -13765,6 +13827,7 @@ the system package so weren&rsquo;t affected</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E007.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 7</itunes:title>
         <itunes:summary>This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.</itunes:summary>
         <description>This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.</description>
         <googleplay:description>This week we look at some details of the 78 unique CVEs addressed across the supported Ubuntu releases including more GhostScript, ImageMagick, WebKitGTK, Linux kernel and more.</googleplay:description>
@@ -14020,6 +14083,7 @@ format handling leading to DoS etc</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E006.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 6</itunes:title>
         <itunes:summary>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.</itunes:summary>
         <description>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.</description>
         <googleplay:description>This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more.</googleplay:description>
@@ -14127,6 +14191,7 @@ format handling leading to DoS etc</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E005.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 5</itunes:title>
         <itunes:summary>  This week we look at some details of the 43 unique CVEs addressed across the
   supported Ubuntu releases and talk about the recently announced Extended
   Security Maintenance support for Ubuntu 14.04 Trusty Tahr.
@@ -14364,6 +14429,7 @@ allows remote DoS or possibly remote code execution</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E004.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 4</itunes:title>
         <itunes:summary>  A quieter week in package updates - this week we look at some details of the 9
   unique CVEs addressed across the supported Ubuntu releases and talk about
   various hardening guides for Ubuntu.
@@ -14500,6 +14566,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E003.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 3</itunes:title>
         <itunes:summary>This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.</itunes:summary>
         <description>This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.</description>
         <googleplay:description>This week we look at 29 unique CVEs addressed across the supported Ubuntu releases, a discussion of the Main Inclusion Review process and recent news around the bubblewrap package, and open positions within the team.</googleplay:description>
@@ -14666,6 +14733,7 @@ in time and hence the feature had to be disabled</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E002.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 2</itunes:title>
         <itunes:summary>L1TF kernel regressions, WPA2 key recovery, mirror fail and more!</itunes:summary>
         <description>L1TF kernel regressions, WPA2 key recovery, mirror fail and more!</description>
         <googleplay:description>L1TF kernel regressions, WPA2 key recovery, mirror fail and more!</googleplay:description>
@@ -14948,6 +15016,7 @@ boot for some hardware configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E001.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 1</itunes:title>
         <itunes:summary>Another week, another speculative execution vulnerablity... and more!</itunes:summary>
         <description>Another week, another speculative execution vulnerablity... and more!</description>
         <googleplay:description>Another week, another speculative execution vulnerablity... and more!</googleplay:description>
@@ -15115,6 +15184,7 @@ boot for some hardware configurations</li>
           <guid>https://people.canonical.com/~amurray/USP/USP_E000.mp3</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
+        <itunes:title>Episode 0</itunes:title>
         <itunes:summary>The first ever episode of the Ubuntu Security Podcast!</itunes:summary>
         <description>The first ever episode of the Ubuntu Security Podcast!</description>
         <googleplay:description>The first ever episode of the Ubuntu Security Podcast!</googleplay:description>
