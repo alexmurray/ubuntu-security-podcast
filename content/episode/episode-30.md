@@ -2,9 +2,9 @@
 title = "Episode 30"
 description = "Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub's credentials database and more."
 date = 2019-05-06
-lastmod = 2020-04-02T16:36:44+10:30
+lastmod = 2020-04-10T14:14:13+09:30
 draft = false
-weight = 1040
+weight = 1041
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E030.mp3"

@@ -6,9 +6,9 @@ description = """
   long-time member of the Ubuntu Security Team / community Tyler Hicks.
   """
 date = 2020-02-20T15:51:00+10:30
-lastmod = 2020-04-02T16:35:28+10:30
+lastmod = 2020-04-10T14:13:10+09:30
 draft = false
-weight = 1007
+weight = 1008
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E063.mp3"
