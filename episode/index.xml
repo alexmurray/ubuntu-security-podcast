@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 2 Apr 2020 16:32:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 14:12:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,190 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 70</title>
+          <link>https://ubuntusecuritypodcast.org/episode-70/</link>
+          <pubDate>Fri, 10 Apr 2020 14:12:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>2bf9926db3b0c53514ff0d5a54efbbbef0f32c597d0d989eb0fae132d2427a4a8ee74c3faa35d4cb5d31bdb00e475d42800b711d12962686e283f97696b037eb</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 70</itunes:title>
+        <itunes:summary>  This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu
+  Security team, plus we cover security updates for Apport, Firefox, GnuTLS,
+  the Linux kernel and more.
+  </itunes:summary>
+        <description>  This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu
+  Security team, plus we cover security updates for Apport, Firefox, GnuTLS,
+  the Linux kernel and more.
+  </description>
+        <googleplay:description>  This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu
+  Security team, plus we cover security updates for Apport, Firefox, GnuTLS,
+  the Linux kernel and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu
+Security team, plus we cover security updates for Apport, Firefox, GnuTLS,
+the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>18 unique CVEs addressed</p>
+<h3 id="usn-4315-1-apport-vulnerabilities-00-32">[<a href="https://usn.ubuntu.com/4315-1/">USN-4315-1</a>] Apport vulnerabilities [00:32]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833">CVE-2020-8833</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831">CVE-2020-8831</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Apport creates it&rsquo;s lock file as world writable in a world-writable
+location - so a local attacker could create a symlink in it&rsquo;s place to a
+non-existant file in a root-owned location and Apport would end up
+creating that file but with world-writable permissions - so could be used
+to possibly escalate privileges say by dropping a new cron file or
+similar.</li>
+<li>Apport runs as root but drops privileges when creating crash reports -
+and then changes permissions on crash report to be owned by the user -
+again using a symlink attack it could be possible to get Apport to change
+the permissions on an arbitrary file to be readable by a regular user and
+hence disclose sensitive information. Is generally mitigated by
+protected_symlinks setting.</li>
+</ul>
+<h3 id="usn-4316-1-usn-4316-2-gd-graphics-library-vulnerabilities-02-46">[<a href="https://usn.ubuntu.com/4316-1/">USN-4316-1</a>, <a href="https://usn.ubuntu.com/4316-2/">USN-4316-2</a>] GD Graphics Library vulnerabilities [02:46]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11038">CVE-2019-11038</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14553">CVE-2018-14553</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used by php for image handling</li>
+<li>Use of an uninitialized variable during
+image creation -&gt; info leak or possible memory corruption</li>
+<li>NULL ptr deref in certain circumstances</li>
+</ul>
+<h3 id="usn-4317-1-firefox-vulnerabilities-03-10">[<a href="https://usn.ubuntu.com/4317-1/">USN-4317-1</a>] Firefox vulnerabilities [03:10]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820">CVE-2020-6820</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819">CVE-2020-6819</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>74.0.1 - reports of two issues being used to exploit Firefox in the
+wild - <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-11/">https://www.mozilla.org/en-US/security/advisories/mfsa2020-11/</a></li>
+<li>2 use-after-free  -&gt; remote code execution</li>
+</ul>
+<h3 id="usn-4321-1-haproxy-vulnerability-03-56">[<a href="https://usn.ubuntu.com/4321-1/">USN-4321-1</a>] HAProxy vulnerability [03:56]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11100">CVE-2020-11100</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Arbitrary heap memory write in HPACK decoder (HTTP/2 header
+compression) -&gt; crash, DoS or possible RCE</li>
+</ul>
+<h3 id="usn-4322-1-gnutls-vulnerability-04-35">[<a href="https://usn.ubuntu.com/4322-1/">USN-4322-1</a>] GnuTLS vulnerability [04:35]</h3>
+<ul>
+<li>1 CVEs addressed in Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11501">CVE-2020-11501</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used all zeros instead of a random 32-byte value for key negotiation as a
+DTLS client - so breaks the security guarantees of DTLS
+(datagram-TLS). Introduced in a code change which changed a boolean OR to
+and AND without inverting the logic (ie De Morgan)</li>
+</ul>
+<h3 id="usn-4323-1-firefox-vulnerabilities-05-28">[<a href="https://usn.ubuntu.com/4323-1/">USN-4323-1</a>] Firefox vulnerabilities [05:28]</h3>
+<ul>
+<li>6 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6823">CVE-2020-6823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6826">CVE-2020-6826</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825">CVE-2020-6825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6824">CVE-2020-6824</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822">CVE-2020-6822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821">CVE-2020-6821</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>75.0</li>
+<li>Malicious extension could possibly steal auth codes from OAuth login
+sequences</li>
+<li>Memory corruption -&gt; DoS, info leak or RCE via malicious website</li>
+</ul>
+<h3 id="usn-4318-1-linux-kernel-vulnerabilities-06-18">[<a href="https://usn.ubuntu.com/4318-1/">USN-4318-1</a>] Linux kernel vulnerabilities [06:18]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992">CVE-2020-8992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8834">CVE-2020-8834</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 bionic kernel (xenial hwe)</li>
+<li>3 DoS issues:
+<ul>
+<li>Use-after-free in VFS layer -&gt; crash / info-leak</li>
+<li>PowerPC KVM guest to host state memory corruption -&gt; crash</li>
+<li>Soft-lockup via malicious ext4 image due to failure to properly validate
+the journal size</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4319-1-usn-4325-1-linux-kernel-vulnerabilities-07-22">[<a href="https://usn.ubuntu.com/4319-1/">USN-4319-1</a>, <a href="https://usn.ubuntu.com/4325-1/">USN-4325-1</a>] Linux kernel vulnerabilities [07:22]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046">CVE-2019-19046</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 eoan kernel (bionic hwe), 5.0 bionic clouds kernel</li>
+<li>VFS UAF from above</li>
+<li>Memory leak in IPMI handler -&gt; DoS via memory exhaustion</li>
+</ul>
+<h3 id="usn-4320-1-linux-kernel-vulnerability-08-08">[<a href="https://usn.ubuntu.com/4320-1/">USN-4320-1</a>] Linux kernel vulnerability [08:08]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM, Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 xenial kernel (trusty hwe)</li>
+<li>VFS UAF</li>
+</ul>
+<h3 id="usn-4324-1-linux-kernel-vulnerabilities-08-33">[<a href="https://usn.ubuntu.com/4324-1/">USN-4324-1</a>] Linux kernel vulnerabilities [08:33]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM, Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992">CVE-2020-8992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 rapsi, snapdragon, gke, aws etc - bionic, xenial hwe, trusty esm hwe</li>
+<li>VFS UAF</li>
+<li>Ext4 soft-lockup issue</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-talks-with-ubuntu-security-team-member-emilia-torino-09-06">Joe talks with Ubuntu Security Team member Emilia Torino [09:06]</h3>
+<h3 id="uncompressed-oval-data-being-discontinued-on-1st-may-24-25">Uncompressed OVAL data being discontinued on 1st May [24:25]</h3>
+<ul>
+<li>Will still have bzip2 compressed form just removing uncompressed since is
+redundant and too large to be useful in general</li>
+<li><a href="https://discourse.ubuntu.com/t/uncompressed-oval-data-going-away/14981">https://discourse.ubuntu.com/t/uncompressed-oval-data-going-away/14981</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E070.mp3" length="25363135" type="audio/mpeg" /><itunes:duration>26:25</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 69</title>
           <link>https://ubuntusecuritypodcast.org/episode-69/</link>
