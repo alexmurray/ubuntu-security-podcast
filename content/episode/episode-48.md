@@ -7,9 +7,9 @@ description = """
   some recent concerns about the security of the Snap Store.
   """
 date = 2019-10-10T20:37:00+10:30
-lastmod = 2020-04-10T14:13:39+09:30
+lastmod = 2020-04-16T12:59:06+09:30
 draft = false
-weight = 1023
+weight = 1024
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E048.mp3"

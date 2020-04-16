@@ -6,9 +6,9 @@ description = """
   smart assistant connected devices.
   """
 date = 2020-01-09T16:18:00+10:30
-lastmod = 2020-04-10T14:13:19+09:30
+lastmod = 2020-04-16T12:58:46+09:30
 draft = false
-weight = 1013
+weight = 1014
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E058.mp3"
