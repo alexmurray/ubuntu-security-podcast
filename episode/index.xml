@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 10 Apr 2020 14:12:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 12:57:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,156 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 71</title>
+          <link>https://ubuntusecuritypodcast.org/episode-71/</link>
+          <pubDate>Thu, 16 Apr 2020 12:57:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>288617260ae91cbf53afa10554396a1111971666f1ee68ec94a5ac16e3b7c294c82facbbfef6e94ec83423aa57bb5593dd84883068fc9094f80395cb14ec4766</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 71</itunes:title>
+        <itunes:summary>  This week Joe discusses Ubuntu&#39;s involvement in ZDI&#39;s Pwn2Own with special
+  guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team,
+  plus we do the usual roundup of fixed vulnerabilities including libssh,
+  Thunderbird, Git and a kernel Livepatch.
+  </itunes:summary>
+        <description>  This week Joe discusses Ubuntu&#39;s involvement in ZDI&#39;s Pwn2Own with special
+  guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team,
+  plus we do the usual roundup of fixed vulnerabilities including libssh,
+  Thunderbird, Git and a kernel Livepatch.
+  </description>
+        <googleplay:description>  This week Joe discusses Ubuntu&#39;s involvement in ZDI&#39;s Pwn2Own with special
+  guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team,
+  plus we do the usual roundup of fixed vulnerabilities including libssh,
+  Thunderbird, Git and a kernel Livepatch.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week Joe discusses Ubuntu&rsquo;s involvement in ZDI&rsquo;s Pwn2Own with special
+guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team,
+plus we do the usual roundup of fixed vulnerabilities including libssh,
+Thunderbird, Git and a kernel Livepatch.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>38 unique CVEs addressed</p>
+<h3 id="usn-4325-1-linux-kernel-vulnerabilities-00-59">[<a href="https://usn.ubuntu.com/4325-1/">USN-4325-1</a>] Linux kernel vulnerabilities [00:59]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046">CVE-2019-19046</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc)</li>
+<li>VFS UAF and IPMI memory leak - <a href="https://ubuntusecuritypodcast.org/episode-70/">Episode 70</a></li>
+</ul>
+<h3 id="usn-4326-1-libiberty-vulnerabilities-01-46">[<a href="https://usn.ubuntu.com/4326-1/">USN-4326-1</a>] libiberty vulnerabilities [01:46]</h3>
+<ul>
+<li>14 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9071">CVE-2019-9071</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9070">CVE-2019-9070</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14250">CVE-2019-14250</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9138">CVE-2018-9138</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18701">CVE-2018-18701</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18700">CVE-2018-18700</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18484">CVE-2018-18484</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18483">CVE-2018-18483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17985">CVE-2018-17985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17794">CVE-2018-17794</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12934">CVE-2018-12934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12698">CVE-2018-12698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12697">CVE-2018-12697</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12641">CVE-2018-12641</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>libib - collection of subroutines used by other libraries / applications
+<ul>
+<li>primarily binutils for parsing binary formats (ELF executables etc)</li>
+</ul>
+</li>
+<li>Mostly low priority issues (DoS via memory leak / NULL ptr dereference in
+say objdump etc)</li>
+<li>1 medium - integer overflow -&gt; heap buffer overflow in parsing a crafted
+ELF file</li>
+</ul>
+<h3 id="usn-4327-1-libssh-vulnerability-02-57">[<a href="https://usn.ubuntu.com/4327-1/">USN-4327-1</a>] libssh vulnerability [02:57]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1730">CVE-2020-1730</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Malicious client / server could crash other end when using AES-CTR
+ciphers - error in memory handling on cleanup of cipher context when
+closing the connection -&gt; DoS</li>
+</ul>
+<h3 id="lsn-0065-1-linux-kernel-vulnerability-03-41">[<a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-April/005391.html">LSN-0065-1</a>] Linux kernel vulnerability [03:41]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428">CVE-2020-8428</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3016">CVE-2019-3016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2013-1798">CVE-2013-1798</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced
+back in 2013 for a KVM IOAPIC issue, KVM TLB flush (<a href="https://ubuntusecuritypodcast.org/episode-67/">Episode 67</a>)</li>
+</ul>
+<h3 id="usn-4328-1-thunderbird-vulnerabilities-04-31">[<a href="https://usn.ubuntu.com/4328-1/">USN-4328-1</a>] Thunderbird vulnerabilities [04:31]</h3>
+<ul>
+<li>18 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6811">CVE-2020-6811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825">CVE-2020-6825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821">CVE-2020-6821</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820">CVE-2020-6820</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819">CVE-2020-6819</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6814">CVE-2020-6814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6812">CVE-2020-6812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6807">CVE-2020-6807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6806">CVE-2020-6806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6805">CVE-2020-6805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800">CVE-2020-6800</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798">CVE-2020-6798</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20503">CVE-2019-20503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6794">CVE-2020-6794</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822">CVE-2020-6822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6795">CVE-2020-6795</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6793">CVE-2020-6793</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6792">CVE-2020-6792</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>68.7.0</li>
+<li>Includes various fixes for issues previously covered in Firefox updates</li>
+</ul>
+<h3 id="usn-4329-1-git-vulnerability-05-11">[<a href="https://usn.ubuntu.com/4329-1/">USN-4329-1</a>] Git vulnerability [05:11]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5260">CVE-2020-5260</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Would not properly handle URLs that include newlines - and would possibly
+send credentials to the wrong host as a result - fixed by forbidding a
+newline in any part of credential handling</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-discusses-ubuntu-s-participation-in-zdi-s-pwn2own-with-steve-beattie-and-marc-deslauriers-06-25">Joe discusses Ubuntu&rsquo;s participation in ZDI&rsquo;s Pwn2Own with Steve Beattie and Marc Deslauriers [06:25]</h3>
+<ul>
+<li><a href="https://www.thezdi.com/blog/2020/3/19/pwn2own-2020-day-one-results">https://www.thezdi.com/blog/2020/3/19/pwn2own-2020-day-one-results</a></li>
+<li><a href="https://www.zdnet.com/article/windows-ubuntu-macos-virtualbox-fall-at-pwn2own-hacking-contest/">https://www.zdnet.com/article/windows-ubuntu-macos-virtualbox-fall-at-pwn2own-hacking-contest/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E071.mp3" length="23359020" type="audio/mpeg" /><itunes:duration>24:19</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 70</title>
           <link>https://ubuntusecuritypodcast.org/episode-70/</link>
