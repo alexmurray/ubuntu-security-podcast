@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Episode 71</title>
-      <link>https://ubuntusecuritypodcast.org/episode-71/</link>
-      <pubDate>Thu, 16 Apr 2020 12:57:00 +0930</pubDate>
+      <title>Episode 72</title>
+      <link>https://ubuntusecuritypodcast.org/episode-72/</link>
+      <pubDate>Fri, 24 Apr 2020 10:46:00 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-71/</guid>
-      <description>Overview This week Joe discusses Ubuntu&amp;rsquo;s involvement in ZDI&amp;rsquo;s Pwn2Own with special guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team, plus we do the usual roundup of fixed vulnerabilities including libssh, Thunderbird, Git and a kernel Livepatch.
-This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-4325-1] Linux kernel vulnerabilities [00:59]  2 CVEs addressed in Bionic  CVE-2020-8428  CVE-2019-19046    5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc) VFS UAF and IPMI memory leak - Episode 70  [USN-4326-1] libiberty vulnerabilities [01:46]  14 CVEs addressed in Xenial, Bionic  CVE-2019-9071  CVE-2019-9070  CVE-2019-14250  CVE-2018-9138  CVE-2018-18701  CVE-2018-18700  CVE-2018-18484  CVE-2018-18483  CVE-2018-17985  CVE-2018-17794  CVE-2018-12934  CVE-2018-12698  CVE-2018-12697  CVE-2018-12641    libib - collection of subroutines used by other libraries / applications  primarily binutils for parsing binary formats (ELF executables etc)   Mostly low priority issues (DoS via memory leak / NULL ptr dereference in say objdump etc) 1 medium - integer overflow -&amp;gt; heap buffer overflow in parsing a crafted ELF file  [USN-4327-1] libssh vulnerability [02:57]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1730    Malicious client / server could crash other end when using AES-CTR ciphers - error in memory handling on cleanup of cipher context when closing the connection -&amp;gt; DoS  [LSN-0065-1] Linux kernel vulnerability [03:41]  3 CVEs addressed in Xenial, Bionic  CVE-2020-8428  CVE-2019-3016  CVE-2013-1798    Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced back in 2013 for a KVM IOAPIC issue, KVM TLB flush (Episode 67)  [USN-4328-1] Thunderbird vulnerabilities [04:31]  18 CVEs addressed in Bionic, Eoan  CVE-2020-6811  CVE-2020-6825  CVE-2020-6821  CVE-2020-6820  CVE-2020-6819  CVE-2020-6814  CVE-2020-6812  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2020-6800  CVE-2020-6798  CVE-2019-20503  CVE-2020-6794  CVE-2020-6822  CVE-2020-6795  CVE-2020-6793  CVE-2020-6792    68.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-72/</guid>
+      <description>Overview A huge number of CVEs fixed in the various Ubuntu releases, including for PHP, Git, Thunderbird, GNU binutils and more, plus Joe McManus discusses ROS with Sid Faber.
+This week in Ubuntu Security Updates 93 unique CVEs addressed
+[USN-4330-1] PHP vulnerabilities [01:03]  5 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-7066  CVE-2020-7065  CVE-2020-7064  CVE-2020-7063  CVE-2020-7062    php5, php7.0, php7.</description>
     </item>
     
     <item>
@@ -32,14 +32,14 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
     </item>
     
     <item>
-      <title>Episode 70</title>
-      <link>https://ubuntusecuritypodcast.org/episode-70/</link>
-      <pubDate>Fri, 10 Apr 2020 14:12:00 +0930</pubDate>
+      <title>Episode 71</title>
+      <link>https://ubuntusecuritypodcast.org/episode-71/</link>
+      <pubDate>Thu, 16 Apr 2020 12:57:00 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-70/</guid>
-      <description>Overview This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu Security team, plus we cover security updates for Apport, Firefox, GnuTLS, the Linux kernel and more.
-This week in Ubuntu Security Updates 18 unique CVEs addressed
-[USN-4315-1] Apport vulnerabilities [00:32]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8833  CVE-2020-8831    Apport creates it&amp;rsquo;s lock file as world writable in a world-writable location - so a local attacker could create a symlink in it&amp;rsquo;s place to a non-existant file in a root-owned location and Apport would end up creating that file but with world-writable permissions - so could be used to possibly escalate privileges say by dropping a new cron file or similar.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-71/</guid>
+      <description>Overview This week Joe discusses Ubuntu&amp;rsquo;s involvement in ZDI&amp;rsquo;s Pwn2Own with special guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team, plus we do the usual roundup of fixed vulnerabilities including libssh, Thunderbird, Git and a kernel Livepatch.
+This week in Ubuntu Security Updates 38 unique CVEs addressed
+[USN-4325-1] Linux kernel vulnerabilities [00:59]  2 CVEs addressed in Bionic  CVE-2020-8428  CVE-2019-19046    5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc) VFS UAF and IPMI memory leak - Episode 70  [USN-4326-1] libiberty vulnerabilities [01:46]  14 CVEs addressed in Xenial, Bionic  CVE-2019-9071  CVE-2019-9070  CVE-2019-14250  CVE-2018-9138  CVE-2018-18701  CVE-2018-18700  CVE-2018-18484  CVE-2018-18483  CVE-2018-17985  CVE-2018-17794  CVE-2018-12934  CVE-2018-12698  CVE-2018-12697  CVE-2018-12641    libib - collection of subroutines used by other libraries / applications  primarily binutils for parsing binary formats (ELF executables etc)   Mostly low priority issues (DoS via memory leak / NULL ptr dereference in say objdump etc) 1 medium - integer overflow -&amp;gt; heap buffer overflow in parsing a crafted ELF file  [USN-4327-1] libssh vulnerability [02:57]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1730    Malicious client / server could crash other end when using AES-CTR ciphers - error in memory handling on cleanup of cipher context when closing the connection -&amp;gt; DoS  [LSN-0065-1] Linux kernel vulnerability [03:41]  3 CVEs addressed in Xenial, Bionic  CVE-2020-8428  CVE-2019-3016  CVE-2013-1798    Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced back in 2013 for a KVM IOAPIC issue, KVM TLB flush (Episode 67)  [USN-4328-1] Thunderbird vulnerabilities [04:31]  18 CVEs addressed in Bionic, Eoan  CVE-2020-6811  CVE-2020-6825  CVE-2020-6821  CVE-2020-6820  CVE-2020-6819  CVE-2020-6814  CVE-2020-6812  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2020-6800  CVE-2020-6798  CVE-2019-20503  CVE-2020-6794  CVE-2020-6822  CVE-2020-6795  CVE-2020-6793  CVE-2020-6792    68.</description>
     </item>
     
     <item>
@@ -49,6 +49,17 @@ This week in Ubuntu Security Updates 18 unique CVEs addressed
       
       <guid>https://ubuntusecuritypodcast.org/contact/</guid>
       <description> security@ubuntu.com #ubuntu-hardened on the Freenode IRC network @ubuntu_sec on twitter  </description>
+    </item>
+    
+    <item>
+      <title>Episode 70</title>
+      <link>https://ubuntusecuritypodcast.org/episode-70/</link>
+      <pubDate>Fri, 10 Apr 2020 14:12:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-70/</guid>
+      <description>Overview This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu Security team, plus we cover security updates for Apport, Firefox, GnuTLS, the Linux kernel and more.
+This week in Ubuntu Security Updates 18 unique CVEs addressed
+[USN-4315-1] Apport vulnerabilities [00:32]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8833  CVE-2020-8831    Apport creates it&amp;rsquo;s lock file as world writable in a world-writable location - so a local attacker could create a symlink in it&amp;rsquo;s place to a non-existant file in a root-owned location and Apport would end up creating that file but with world-writable permissions - so could be used to possibly escalate privileges say by dropping a new cron file or similar.</description>
     </item>
     
     <item>
