@@ -8,6 +8,168 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 72
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-72
+:EXPORT_DATE: 2020-04-24 10:46
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E072.mp3 :podcast_duration "20:53" :podcast_bytes "20060487" :permalink "https://ubuntusecuritypodcast.org/episode-72/" :guid 750d3ead49a7caba8b2c33f3c220a1dccf0448ec1eb8b808b93da36dcd80fe057a46919509210da2954652e54e721fcdfb9199e5231c363081fba8129b12b9f1
+:END:
+#+begin_description
+A huge number of CVEs fixed in the various Ubuntu releases, including for
+PHP, Git, Thunderbird, GNU binutils and more, plus Joe McManus discusses
+ROS with Sid Faber.
+#+end_description
+** Overview
+A huge number of CVEs fixed in the various Ubuntu releases, including for
+PHP, Git, Thunderbird, GNU binutils and more, plus Joe McManus discusses
+ROS with Sid Faber.
+** This week in Ubuntu Security Updates
+93 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4330-1/][USN-4330-1]]] PHP vulnerabilities [01:03]
+- 5 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7066][CVE-2020-7066]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7065][CVE-2020-7065]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7064][CVE-2020-7064]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7063][CVE-2020-7063]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7062][CVE-2020-7062]] <!-- low -->
+- php5, php7.0, php7.2, php7.3
+- get_headers() would silently truncate a URL containing a NUL terminator
+  (\0) - so if used with user-supplied URL could get wrong details from the
+  server
+- stack overflow in mb_strtolower() when handling UTF32-LE encoding
+- 1 byte buffer overread in handling EXIF data - info leak / crash
+- PHAR archives created with world readable permissions
+- NULL pointer dereference on file upload in certain situations -> crash
+
+*** [[[https://usn.ubuntu.com/4331-1/][USN-4331-1]]] WebKitGTK+ vulnerability [02:32]
+- 1 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11793][CVE-2020-11793]] <!-- medium -->
+- UAF when processing maliciously crafted web content
+
+*** [[[https://usn.ubuntu.com/4332-1/][USN-4332-1]]] File Roller vulnerability [02:51]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11736][CVE-2020-11736]] <!-- medium -->
+- Possible directory traversal issue when extracting an archive where
+  parent of file is a symlink pointing outside of the archive
+
+*** [[[https://usn.ubuntu.com/4334-1/][USN-4334-1]]] Git vulnerability [03:08]
+- 1 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11008][CVE-2020-11008]] <!-- medium -->
+  - Similar to [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5260][CVE-2020-5260]] from [[https://ubuntusecuritypodcast.org/episode-71/][Episode 71]] - due to an incomplete fix for
+    that where some credentials may still be leaked but the attacker cannot
+    control which ones
+
+*** [[[https://usn.ubuntu.com/4333-1/][USN-4333-1]]] Python vulnerabilities [03:47]
+- 2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8492][CVE-2020-8492]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18348][CVE-2019-18348]] <!-- medium -->
+- CRLF injection via an attacker controlled url parameter to urlopen()
+  function in urllib
+
+*** [[[https://usn.ubuntu.com/4335-1/][USN-4335-1]]] Thunderbird vulnerabilities [04:09]
+- 39 CVEs addressed in Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6811][CVE-2020-6811]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6794][CVE-2020-6794]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822][CVE-2020-6822]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6795][CVE-2020-6795]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6793][CVE-2020-6793]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6792][CVE-2020-6792]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903][CVE-2019-15903]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11755][CVE-2019-11755]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745][CVE-2019-11745]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825][CVE-2020-6825]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821][CVE-2020-6821]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820][CVE-2020-6820]] <!-- high -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819][CVE-2020-6819]] <!-- high -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6814][CVE-2020-6814]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6812][CVE-2020-6812]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6807][CVE-2020-6807]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6806][CVE-2020-6806]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6805][CVE-2020-6805]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800][CVE-2020-6800]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798][CVE-2020-6798]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20503][CVE-2019-20503]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17026][CVE-2019-17026]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17024][CVE-2019-17024]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17022][CVE-2019-17022]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17017][CVE-2019-17017]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17016][CVE-2019-17016]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17012][CVE-2019-17012]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17011][CVE-2019-17011]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17010][CVE-2019-17010]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17008][CVE-2019-17008]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17005][CVE-2019-17005]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764][CVE-2019-11764]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763][CVE-2019-11763]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762][CVE-2019-11762]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761][CVE-2019-11761]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760][CVE-2019-11760]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759][CVE-2019-11759]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11758][CVE-2019-11758]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757][CVE-2019-11757]] <!-- medium -->
+- Updated to latest upstream version 68.7.0
+
+*** [[[https://usn.ubuntu.com/4336-1/][USN-4336-1]]] GNU binutils vulnerabilities [04:46]
+- 44 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9077][CVE-2019-9077]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9075][CVE-2019-9075]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9074][CVE-2019-9074]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9073][CVE-2019-9073]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9071][CVE-2019-9071]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9070][CVE-2019-9070]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17451][CVE-2019-17451]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17450][CVE-2019-17450]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14444][CVE-2019-14444]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14250][CVE-2019-14250]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12972][CVE-2019-12972]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9138][CVE-2018-9138]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8945][CVE-2018-8945]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20671][CVE-2018-20671]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20651][CVE-2018-20651]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20623][CVE-2018-20623]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20002][CVE-2018-20002]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19932][CVE-2018-19932]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19931][CVE-2018-19931]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18701][CVE-2018-18701]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18700][CVE-2018-18700]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18607][CVE-2018-18607]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18606][CVE-2018-18606]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18605][CVE-2018-18605]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18484][CVE-2018-18484]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18483][CVE-2018-18483]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18309][CVE-2018-18309]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17985][CVE-2018-17985]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17794][CVE-2018-17794]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17360][CVE-2018-17360]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17359][CVE-2018-17359]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17358][CVE-2018-17358]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13033][CVE-2018-13033]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12934][CVE-2018-12934]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12700][CVE-2018-12700]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12699][CVE-2018-12699]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12698][CVE-2018-12698]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12697][CVE-2018-12697]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12641][CVE-2018-12641]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10535][CVE-2018-10535]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10534][CVE-2018-10534]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10373][CVE-2018-10373]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10372][CVE-2018-10372]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000876][CVE-2018-1000876]] <!-- low -->
+- Huge update covering many issues - thanks Marc Deslauriers - mostly in
+  low severity issues like memory leaks in functions / utilities which are
+  used only once or which are assumed to process trusted input.
+- Often requested by customers who run vuln scanners - finds many open
+  issues but doesn't consider low severity - only 3 out of 44 had medium
+  severity
+
+** Goings on in Ubuntu Security Community
+*** Joe McManus talks ROS & ROS2 with Sid Faber from the Ubuntu Security Team [06:26]
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 71
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-71

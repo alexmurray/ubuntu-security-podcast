@@ -7,9 +7,9 @@ description = """
   ongoing development of secure foundations for robotics.
   """
 date = 2020-03-05T14:35:00+10:30
-lastmod = 2020-04-16T12:58:33+09:30
+lastmod = 2020-04-24T10:48:53+09:30
 draft = false
-weight = 1007
+weight = 1008
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E065.mp3"

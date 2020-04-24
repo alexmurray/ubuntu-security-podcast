@@ -7,9 +7,9 @@ description = """
   Thunderbird, Git and a kernel Livepatch.
   """
 date = 2020-04-16T12:57:00+09:30
-lastmod = 2020-04-16T12:58:23+09:30
+lastmod = 2020-04-24T10:48:42+09:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E071.mp3"

@@ -6,9 +6,9 @@ description = """
   Keystone, Sudo, Django and more.
   """
 date = 2020-02-07T16:15:00+10:30
-lastmod = 2020-04-16T12:58:40+09:30
+lastmod = 2020-04-24T10:49:02+09:30
 draft = false
-weight = 1011
+weight = 1012
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E061.mp3"
