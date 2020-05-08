@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+  OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+  robot kits and the Kaiji botnet.
+  ">
+
+<meta name="generator" content="Hugo 0.69.2" />
+
+<meta property="og:title" content="Episode 73" />
+<meta name="twitter:title" content="Episode 73"/>
+<meta itemprop="name" content="Episode 73">
+<meta property="article:modified_time" content="2020-05-08 16:33:00 &#43;0930 &#43;0930" /><meta property="og:description" content="  After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+  OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+  robot kits and the Kaiji botnet.
+  " />
+    <meta name="twitter:description" content="  After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+  OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+  robot kits and the Kaiji botnet.
+  " />
+    <meta itemprop="description" content="  After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+  OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+  robot kits and the Kaiji botnet.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-73/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 73 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-73/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 73</h1>
+      <small>Posted on Friday, May 8, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+robot kits and the Kaiji botnet.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E073.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+robot kits and the Kaiji botnet.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>86 unique CVEs addressed</p>
+<h3 id="usn-4337-1-openjdk-vulnerabilities-01-21">[<a href="https://usn.ubuntu.com/4337-1/">USN-4337-1</a>] OpenJDK vulnerabilities [01:21]</h3>
+<ul>
+<li>13 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2830">CVE-2020-2830</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2816">CVE-2020-2816</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2805">CVE-2020-2805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2803">CVE-2020-2803</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2800">CVE-2020-2800</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2781">CVE-2020-2781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2778">CVE-2020-2778</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2773">CVE-2020-2773</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2767">CVE-2020-2767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2757">CVE-2020-2757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2756">CVE-2020-2756</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2755">CVE-2020-2755</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2754">CVE-2020-2754</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>openjdk 11.0.7 and 8u252b09-1</li>
+<li>Errors in regex handling and XML handling -&gt; DoS</li>
+<li>Various issues in TLS handshake handling -&gt; bypass certification
+verification or allow to compromise secure connections</li>
+<li>Insecure handling of CRLF in HTTP headers -&gt; info disclosure via
+bypassing access controls</li>
+<li>Possible sandbox bypass</li>
+</ul>
+<h3 id="usn-4338-1-usn-4338-2-re2c-vulnerability-02-26">[<a href="https://usn.ubuntu.com/4338-1/">USN-4338-1</a>, <a href="https://usn.ubuntu.com/4338-2/">USN-4338-2</a>] re2c vulnerability [02:26]</h3>
+<ul>
+<li>1 CVEs addressed in Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11958">CVE-2020-11958</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used to generate fast C code for parsing regular expressions</li>
+<li>Heap buffer overflow if parsing a very long input due to incorrect length
+checks</li>
+</ul>
+<h3 id="usn-4339-1-openexr-vulnerabilities-02-59">[<a href="https://usn.ubuntu.com/4339-1/">USN-4339-1</a>] OpenEXR vulnerabilities [02:59]</h3>
+<ul>
+<li>12 CVEs addressed in Xenial, Bionic, Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11765">CVE-2020-11765</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11764">CVE-2020-11764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11763">CVE-2020-11763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11762">CVE-2020-11762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11761">CVE-2020-11761</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11760">CVE-2020-11760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11759">CVE-2020-11759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11758">CVE-2020-11758</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18444">CVE-2018-18444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9115">CVE-2017-9115</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9113">CVE-2017-9113</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9111">CVE-2017-9111</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Last mentioned back in <a href="https://ubuntusecuritypodcast.org/episode-49/">Episode 49</a> - handles image format developed by ILM
+with a high definition range for computer imaging applications - used by
+opencv, gimp and others</li>
+<li>Project Zero fuzzing OpenEXR - usual types of issues in large C++ code
+base - OOB reads / writes - usual effects -&gt; crashes, info leaks, RCE</li>
+</ul>
+<h3 id="usn-4340-1-cups-vulnerabilities-04-09">[<a href="https://usn.ubuntu.com/4340-1/">USN-4340-1</a>] CUPS vulnerabilities [04:09]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial, Bionic, Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3898">CVE-2020-3898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2228">CVE-2019-2228</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow when parsing ppd files - so if added a printer with
+a crafted ppd file could crash / RCE - since cupsd runs as root could be
+possible RCE as root</li>
+<li>OOB read -&gt; info leak / crash</li>
+</ul>
+<h3 id="usn-4341-1-usn-4341-2-usn-4341-3-samba-vulnerabilities-05-11">[<a href="https://usn.ubuntu.com/4341-1/">USN-4341-1</a>, <a href="https://usn.ubuntu.com/4341-2/">USN-4341-2</a>, <a href="https://usn.ubuntu.com/4341-3/">USN-4341-3</a>] Samba vulnerabilities [05:11]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10704">CVE-2020-10704</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10700">CVE-2020-10700</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Stack overflow able to be triggered by an unauthenticated user when Samba
+is acting as an AD DC -&gt; crash, code exec?</li>
+<li>UAF in Samba AD DC LDAP server</li>
+</ul>
+<h3 id="usn-4342-1-linux-kernel-vulnerabilities-06-02">[<a href="https://usn.ubuntu.com/4342-1/">USN-4342-1</a>] Linux kernel vulnerabilities [06:02]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383">CVE-2020-9383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992">CVE-2020-8992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648">CVE-2020-8648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942">CVE-2020-10942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768">CVE-2019-19768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234">CVE-2019-16234</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884">CVE-2020-11884</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 kernel for eoan + bionic hwe</li>
+<li>s390 specific race-condition in page table handling -&gt; local attacker arbitrary
+code exec</li>
+<li>race-condition -&gt; UAF in block io tracing -&gt; OOB read -&gt; info leak / crash</li>
+<li>stack buffer overflow in vhost-net driver -&gt; able to be triggered by a
+local attacker via ioctl() on /dev/vhost-net</li>
+<li>race-condition -&gt; UAF in tty (virtual terminal) subsystem</li>
+<li>low priority (DoS etc via crafted file-systems)</li>
+</ul>
+<h3 id="usn-4344-1-linux-kernel-vulnerabilities-07-58">[<a href="https://usn.ubuntu.com/4344-1/">USN-4344-1</a>] Linux kernel vulnerabilities [07:58]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383">CVE-2020-9383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992">CVE-2020-8992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648">CVE-2020-8648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942">CVE-2020-10942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768">CVE-2019-19768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051">CVE-2019-19051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234">CVE-2019-16234</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.0 gke / oem kernel</li>
+<li>Same issues reported earlier</li>
+</ul>
+<h3 id="usn-4343-1-linux-kernel-vulnerability-08-13">[<a href="https://usn.ubuntu.com/4343-1/">USN-4343-1</a>] Linux kernel vulnerability [08:13]</h3>
+<ul>
+<li>1 CVEs addressed in Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884">CVE-2020-11884</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 kernel</li>
+<li>s390 page-table issue</li>
+</ul>
+<h3 id="usn-4345-1-linux-kernel-vulnerabilities-08-25">[<a href="https://usn.ubuntu.com/4345-1/">USN-4345-1</a>] Linux kernel vulnerabilities [08:25]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383">CVE-2020-9383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648">CVE-2020-8648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668">CVE-2020-11668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609">CVE-2020-11609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608">CVE-2020-11608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942">CVE-2020-10942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768">CVE-2019-19768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234">CVE-2019-16234</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884">CVE-2020-11884</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 kernel - xenial hwe + bionic</li>
+<li>Same as above plus a few OOBs read when handing invalid USB camera device
+descriptors in various drivers - so a local attacker could cause a crash
+etc</li>
+</ul>
+<h3 id="usn-4346-1-linux-kernel-vulnerabilities-09-00">[<a href="https://usn.ubuntu.com/4346-1/">USN-4346-1</a>] Linux kernel vulnerabilities [09:00]</h3>
+<ul>
+<li>5 CVEs addressed in Trusty ESM, Xenial
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383">CVE-2020-9383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648">CVE-2020-8648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768">CVE-2019-19768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234">CVE-2019-16234</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233">CVE-2019-16233</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 kernel - trusty hwe + xenial</li>
+<li>tty and blk io subsystem race-conditions -&gt; UAFs</li>
+</ul>
+<h3 id="usn-4347-1-webkitgtk-vulnerability-09-26">[<a href="https://usn.ubuntu.com/4347-1/">USN-4347-1</a>] WebKitGTK vulnerability [09:26]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic, Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3899">CVE-2020-3899</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4348-1-mailman-vulnerabilities-09-47">[<a href="https://usn.ubuntu.com/4348-1/">USN-4348-1</a>] Mailman vulnerabilities [09:47]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial, Bionic
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12137">CVE-2020-12137</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13796">CVE-2018-13796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0618">CVE-2018-0618</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible XSS when viewing list archives since mailman does not track the
+mime-type of attachments -&gt; so HTTP reply may lack a MIME type and so the
+receiving browser may assume that content-type is text/html and so
+execute contained Javascript code</li>
+</ul>
+<h3 id="usn-4349-1-edk-ii-vulnerabilities-10-36">[<a href="https://usn.ubuntu.com/4349-1/">USN-4349-1</a>] EDK II vulnerabilities [10:36]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial, Bionic, Eoan
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14587">CVE-2019-14587</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14586">CVE-2019-14586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14575">CVE-2019-14575</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14563">CVE-2019-14563</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14559">CVE-2019-14559</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14558">CVE-2019-14558</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12181">CVE-2018-12181</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12180">CVE-2018-12180</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12178">CVE-2018-12178</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UEFI firmware stack for x86-64 virtual machines - huge amount of code with a
+large attack surface -&gt; network stack, disk device and file-system
+handling, cryptographic signature parsing etc</li>
+<li>Buffer overflow in network stack and block io system</li>
+<li>stack overflow, fail to clear memory containing passwords, memory leaks,
+failure to properly check EFI signatures, memory corruption via a double
+free etc</li>
+</ul>
+<h3 id="usn-4350-1-mysql-vulnerabilities-12-05">[<a href="https://usn.ubuntu.com/4350-1/">USN-4350-1</a>] MySQL vulnerabilities [12:05]</h3>
+<ul>
+<li>25 CVEs addressed in Xenial, Bionic, Eoan, Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2930">CVE-2020-2930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2928">CVE-2020-2928</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2926">CVE-2020-2926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2925">CVE-2020-2925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2924">CVE-2020-2924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2923">CVE-2020-2923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2922">CVE-2020-2922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2921">CVE-2020-2921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2904">CVE-2020-2904</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2903">CVE-2020-2903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2901">CVE-2020-2901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2898">CVE-2020-2898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2897">CVE-2020-2897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2896">CVE-2020-2896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2895">CVE-2020-2895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2893">CVE-2020-2893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2892">CVE-2020-2892</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2812">CVE-2020-2812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2804">CVE-2020-2804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2780">CVE-2020-2780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2765">CVE-2020-2765</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2763">CVE-2020-2763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2762">CVE-2020-2762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2760">CVE-2020-2760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2759">CVE-2020-2759</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream point releases - 8.0.80 for eoan + focal, 5.7.30 for
+xenial and bionic</li>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-30.html">https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-30.html</a></li>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-20.html">https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-20.html</a></li>
+<li><a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a></li>
+</ul>
+<h3 id="usn-4330-2-php-vulnerabilities-12-46">[<a href="https://usn.ubuntu.com/4330-2/">USN-4330-2</a>] PHP vulnerabilities [12:46]</h3>
+<ul>
+<li>3 CVEs addressed in Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7066">CVE-2020-7066</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7065">CVE-2020-7065</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7064">CVE-2020-7064</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>See <a href="https://ubuntusecuritypodcast.org/episode-72/">Episode 72</a></li>
+</ul>
+<h3 id="usn-4332-2-file-roller-vulnerability-13-05">[<a href="https://usn.ubuntu.com/4332-2/">USN-4332-2</a>] File Roller vulnerability [13:05]</h3>
+<ul>
+<li>1 CVEs addressed in Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11736">CVE-2020-11736</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>See <a href="https://ubuntusecuritypodcast.org/episode-72/">Episode 72</a></li>
+</ul>
+<h3 id="usn-4333-2-python-vulnerabilities-13-06">[<a href="https://usn.ubuntu.com/4333-2/">USN-4333-2</a>] Python vulnerabilities [13:06]</h3>
+<ul>
+<li>2 CVEs addressed in Focal
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8492">CVE-2020-8492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18348">CVE-2019-18348</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>See <a href="https://ubuntusecuritypodcast.org/episode-72/">Episode 72</a></li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="release-of-ubuntu-20-dot-04-lts--focal-fossa--13-16">Release of Ubuntu 20.04 LTS (Focal Fossa) [13:16]</h3>
+<ul>
+<li>Supported as LTS for 5 years and as ESM for 5 years -&gt; 10 years of
+security support</li>
+<li>Kernel changes -&gt; based on upstream 5.4 LTS kernel, includes Lockdown
+LSM, Wireguard as built-in to the kernel</li>
+<li>SSH client / server supports hardware based 2 factor auth (like Yubikeys) OOTB</li>
+<li>More stringent TLS default parameters to blacklist insecure ciphers /
+key-lengths etc</li>
+</ul>
+<h3 id="joe-and-alex-discuss-kaiji-botnet-targeting-linux-iot-devices-16-00">Joe and Alex discuss Kaiji Botnet targeting Linux IoT devices [16:00]</h3>
+<ul>
+<li><a href="https://threatpost.com/kaiji-botnet-iot-linux-devices/155463/">https://threatpost.com/kaiji-botnet-iot-linux-devices/155463/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-72/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-73\/",
+        text: "Episode 73"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
