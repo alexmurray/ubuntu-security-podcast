@@ -6,9 +6,9 @@ description = """
   cvescan snap for vulnerability awareness.
   """
 date = 2020-03-26T13:57:00+10:30
-lastmod = 2020-04-24T10:48:48+09:30
+lastmod = 2020-05-08T16:34:32+09:30
 draft = false
-weight = 1005
+weight = 1006
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E068.mp3"

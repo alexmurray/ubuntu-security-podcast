@@ -8,6 +8,255 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 73
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-73
+:EXPORT_DATE: 2020-05-08 16:33
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E073.mp3 :podcast_duration "30:38" :podcast_bytes "29423608" :permalink "https://ubuntusecuritypodcast.org/episode-73/" :guid c039a9d53dff1addccd7b08a29a0cffd93bea47f1168e91cf96eadc479d09b30da4127061ee5d83517e4be02f217f34bc3e70c115f23e45fd11a57b6db5b976d
+:END:
+#+begin_description
+After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+robot kits and the Kaiji botnet.
+#+end_description
+** Overview
+After the recent release of Ubuntu 20.04 LTS, we look at security fixes for
+OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss
+robot kits and the Kaiji botnet.
+** This week in Ubuntu Security Updates
+86 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4337-1/][USN-4337-1]]] OpenJDK vulnerabilities [01:21]
+- 13 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2830][CVE-2020-2830]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2816][CVE-2020-2816]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2805][CVE-2020-2805]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2803][CVE-2020-2803]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2800][CVE-2020-2800]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2781][CVE-2020-2781]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2778][CVE-2020-2778]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2773][CVE-2020-2773]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2767][CVE-2020-2767]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2757][CVE-2020-2757]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2756][CVE-2020-2756]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2755][CVE-2020-2755]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2754][CVE-2020-2754]] <!-- low -->
+- openjdk 11.0.7 and 8u252b09-1
+- Errors in regex handling and XML handling -> DoS
+- Various issues in TLS handshake handling -> bypass certification
+  verification or allow to compromise secure connections
+- Insecure handling of CRLF in HTTP headers -> info disclosure via
+  bypassing access controls
+- Possible sandbox bypass
+
+*** [[[https://usn.ubuntu.com/4338-1/][USN-4338-1]], [[https://usn.ubuntu.com/4338-2/][USN-4338-2]]] re2c vulnerability [02:26]
+- 1 CVEs addressed in Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11958][CVE-2020-11958]] <!-- medium -->
+- Used to generate fast C code for parsing regular expressions
+- Heap buffer overflow if parsing a very long input due to incorrect length
+  checks
+
+*** [[[https://usn.ubuntu.com/4339-1/][USN-4339-1]]] OpenEXR vulnerabilities [02:59]
+- 12 CVEs addressed in Xenial, Bionic, Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11765][CVE-2020-11765]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11764][CVE-2020-11764]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11763][CVE-2020-11763]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11762][CVE-2020-11762]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11761][CVE-2020-11761]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11760][CVE-2020-11760]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11759][CVE-2020-11759]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11758][CVE-2020-11758]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18444][CVE-2018-18444]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9115][CVE-2017-9115]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9113][CVE-2017-9113]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9111][CVE-2017-9111]] <!-- low -->
+- Last mentioned back in [[https://ubuntusecuritypodcast.org/episode-49/][Episode 49]] - handles image format developed by ILM
+  with a high definition range for computer imaging applications - used by
+  opencv, gimp and others
+- Project Zero fuzzing OpenEXR - usual types of issues in large C++ code
+  base - OOB reads / writes - usual effects -> crashes, info leaks, RCE
+
+*** [[[https://usn.ubuntu.com/4340-1/][USN-4340-1]]] CUPS vulnerabilities [04:09]
+- 2 CVEs addressed in Xenial, Bionic, Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3898][CVE-2020-3898]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2228][CVE-2019-2228]] <!-- low -->
+- Heap buffer overflow when parsing ppd files - so if added a printer with
+  a crafted ppd file could crash / RCE - since cupsd runs as root could be
+  possible RCE as root
+- OOB read -> info leak / crash
+
+*** [[[https://usn.ubuntu.com/4341-1/][USN-4341-1]], [[https://usn.ubuntu.com/4341-2/][USN-4341-2]], [[https://usn.ubuntu.com/4341-3/][USN-4341-3]]] Samba vulnerabilities [05:11]
+- 2 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10704][CVE-2020-10704]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10700][CVE-2020-10700]] <!-- medium -->
+- Stack overflow able to be triggered by an unauthenticated user when Samba
+  is acting as an AD DC -> crash, code exec?
+- UAF in Samba AD DC LDAP server
+
+*** [[[https://usn.ubuntu.com/4342-1/][USN-4342-1]]] Linux kernel vulnerabilities [06:02]
+- 7 CVEs addressed in Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383][CVE-2020-9383]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992][CVE-2020-8992]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648][CVE-2020-8648]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942][CVE-2020-10942]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768][CVE-2019-19768]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234][CVE-2019-16234]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884][CVE-2020-11884]] <!-- high -->
+- 5.3 kernel for eoan + bionic hwe
+- s390 specific race-condition in page table handling -> local attacker arbitrary
+  code exec
+- race-condition -> UAF in block io tracing -> OOB read -> info leak / crash
+- stack buffer overflow in vhost-net driver -> able to be triggered by a
+  local attacker via ioctl() on /dev/vhost-net
+- race-condition -> UAF in tty (virtual terminal) subsystem
+- low priority (DoS etc via crafted file-systems)
+
+*** [[[https://usn.ubuntu.com/4344-1/][USN-4344-1]]] Linux kernel vulnerabilities [07:58]
+- 7 CVEs addressed in Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383][CVE-2020-9383]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992][CVE-2020-8992]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648][CVE-2020-8648]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942][CVE-2020-10942]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768][CVE-2019-19768]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051][CVE-2019-19051]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234][CVE-2019-16234]] <!-- low -->
+- 5.0 gke / oem kernel
+- Same issues reported earlier
+
+*** [[[https://usn.ubuntu.com/4343-1/][USN-4343-1]]] Linux kernel vulnerability [08:13]
+- 1 CVEs addressed in Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884][CVE-2020-11884]] <!-- high -->
+- 5.4 kernel
+- s390 page-table issue
+
+*** [[[https://usn.ubuntu.com/4345-1/][USN-4345-1]]] Linux kernel vulnerabilities [08:25]
+- 9 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383][CVE-2020-9383]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648][CVE-2020-8648]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668][CVE-2020-11668]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609][CVE-2020-11609]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608][CVE-2020-11608]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10942][CVE-2020-10942]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768][CVE-2019-19768]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234][CVE-2019-16234]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11884][CVE-2020-11884]] <!-- high -->
+- 4.15 kernel - xenial hwe + bionic
+- Same as above plus a few OOBs read when handing invalid USB camera device
+  descriptors in various drivers - so a local attacker could cause a crash
+  etc
+
+*** [[[https://usn.ubuntu.com/4346-1/][USN-4346-1]]] Linux kernel vulnerabilities [09:00]
+- 5 CVEs addressed in Trusty ESM, Xenial
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9383][CVE-2020-9383]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8648][CVE-2020-8648]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19768][CVE-2019-19768]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16234][CVE-2019-16234]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233][CVE-2019-16233]] <!-- low -->
+- 4.4 kernel - trusty hwe + xenial
+- tty and blk io subsystem race-conditions -> UAFs
+
+*** [[[https://usn.ubuntu.com/4347-1/][USN-4347-1]]] WebKitGTK vulnerability [09:26]
+- 1 CVEs addressed in Bionic, Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3899][CVE-2020-3899]] <!-- medium -->
+
+*** [[[https://usn.ubuntu.com/4348-1/][USN-4348-1]]] Mailman vulnerabilities [09:47]
+- 3 CVEs addressed in Xenial, Bionic
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12137][CVE-2020-12137]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13796][CVE-2018-13796]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0618][CVE-2018-0618]] <!-- low -->
+- Possible XSS when viewing list archives since mailman does not track the
+  mime-type of attachments -> so HTTP reply may lack a MIME type and so the
+  receiving browser may assume that content-type is text/html and so
+  execute contained Javascript code
+
+*** [[[https://usn.ubuntu.com/4349-1/][USN-4349-1]]] EDK II vulnerabilities [10:36]
+- 9 CVEs addressed in Xenial, Bionic, Eoan
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14587][CVE-2019-14587]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14586][CVE-2019-14586]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14575][CVE-2019-14575]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14563][CVE-2019-14563]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14559][CVE-2019-14559]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14558][CVE-2019-14558]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12181][CVE-2018-12181]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12180][CVE-2018-12180]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12178][CVE-2018-12178]] <!-- medium -->
+- UEFI firmware stack for x86-64 virtual machines - huge amount of code with a
+  large attack surface -> network stack, disk device and file-system
+  handling, cryptographic signature parsing etc
+- Buffer overflow in network stack and block io system
+- stack overflow, fail to clear memory containing passwords, memory leaks,
+  failure to properly check EFI signatures, memory corruption via a double
+  free etc
+
+*** [[[https://usn.ubuntu.com/4350-1/][USN-4350-1]]] MySQL vulnerabilities [12:05]
+- 25 CVEs addressed in Xenial, Bionic, Eoan, Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2930][CVE-2020-2930]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2928][CVE-2020-2928]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2926][CVE-2020-2926]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2925][CVE-2020-2925]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2924][CVE-2020-2924]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2923][CVE-2020-2923]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2922][CVE-2020-2922]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2921][CVE-2020-2921]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2904][CVE-2020-2904]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2903][CVE-2020-2903]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2901][CVE-2020-2901]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2898][CVE-2020-2898]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2897][CVE-2020-2897]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2896][CVE-2020-2896]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2895][CVE-2020-2895]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2893][CVE-2020-2893]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2892][CVE-2020-2892]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2812][CVE-2020-2812]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2804][CVE-2020-2804]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2780][CVE-2020-2780]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2765][CVE-2020-2765]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2763][CVE-2020-2763]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2762][CVE-2020-2762]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2760][CVE-2020-2760]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2759][CVE-2020-2759]] <!-- medium -->
+- Latest upstream point releases - 8.0.80 for eoan + focal, 5.7.30 for
+  xenial and bionic
+- https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-30.html
+- https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-20.html
+- https://www.oracle.com/security-alerts/cpuapr2020.html
+
+*** [[[https://usn.ubuntu.com/4330-2/][USN-4330-2]]] PHP vulnerabilities [12:46]
+- 3 CVEs addressed in Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7066][CVE-2020-7066]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7065][CVE-2020-7065]] <!-- medium -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7064][CVE-2020-7064]] <!-- medium -->
+- See [[https://ubuntusecuritypodcast.org/episode-72/][Episode 72]]
+
+*** [[[https://usn.ubuntu.com/4332-2/][USN-4332-2]]] File Roller vulnerability [13:05]
+- 1 CVEs addressed in Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11736][CVE-2020-11736]] <!-- medium -->
+- See [[https://ubuntusecuritypodcast.org/episode-72/][Episode 72]]
+
+*** [[[https://usn.ubuntu.com/4333-2/][USN-4333-2]]] Python vulnerabilities [13:06]
+- 2 CVEs addressed in Focal
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8492][CVE-2020-8492]] <!-- low -->
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18348][CVE-2019-18348]] <!-- medium -->
+- See [[https://ubuntusecuritypodcast.org/episode-72/][Episode 72]]
+
+** Goings on in Ubuntu Security Community
+*** Release of Ubuntu 20.04 LTS (Focal Fossa) [13:16]
+- Supported as LTS for 5 years and as ESM for 5 years -> 10 years of
+  security support
+- Kernel changes -> based on upstream 5.4 LTS kernel, includes Lockdown
+  LSM, Wireguard as built-in to the kernel
+- SSH client / server supports hardware based 2 factor auth (like Yubikeys) OOTB
+- More stringent TLS default parameters to blacklist insecure ciphers /
+  key-lengths etc
+
+*** Joe and Alex discuss Kaiji Botnet targeting Linux IoT devices [16:00]
+- https://threatpost.com/kaiji-botnet-iot-linux-devices/155463/
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 72
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-72
