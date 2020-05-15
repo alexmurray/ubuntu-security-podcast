@@ -6,9 +6,9 @@ description = """
   day-in-the-life of a Ubuntu Security Team member.
   """
 date = 2019-12-19T13:36:00+10:30
-lastmod = 2020-05-08T16:34:57+09:30
+lastmod = 2020-05-15T16:38:54+09:30
 draft = false
-weight = 1017
+weight = 1018
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E057.mp3"

@@ -6,9 +6,9 @@ description = """
   from home in light of Coronavirus.
   """
 date = 2020-03-19T20:25:00+10:30
-lastmod = 2020-05-08T16:34:34+09:30
+lastmod = 2020-05-15T16:38:30+09:30
 draft = false
-weight = 1007
+weight = 1008
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E067.mp3"

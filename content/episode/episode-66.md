@@ -6,9 +6,9 @@ description = """
   look at some recent blog posts by the team too.
   """
 date = 2020-03-12T22:39:00+10:30
-lastmod = 2020-05-08T16:34:36+09:30
+lastmod = 2020-05-15T16:38:32+09:30
 draft = false
-weight = 1008
+weight = 1009
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E066.mp3"

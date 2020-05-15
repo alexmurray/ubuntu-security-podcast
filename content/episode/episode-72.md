@@ -6,9 +6,9 @@ description = """
   ROS with Sid Faber.
   """
 date = 2020-04-24T10:46:00+09:30
-lastmod = 2020-05-08T16:34:23+09:30
+lastmod = 2020-05-15T16:38:19+09:30
 draft = false
-weight = 1002
+weight = 1003
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E072.mp3"

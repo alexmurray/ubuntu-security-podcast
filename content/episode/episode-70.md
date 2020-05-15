@@ -6,9 +6,9 @@ description = """
   the Linux kernel and more.
   """
 date = 2020-04-10T14:12:00+09:30
-lastmod = 2020-05-08T16:34:28+09:30
+lastmod = 2020-05-15T16:38:24+09:30
 draft = false
-weight = 1004
+weight = 1005
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E070.mp3"

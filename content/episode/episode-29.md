@@ -8,9 +8,9 @@ description = """
   Trusty Tahr to Extended Security Maintenance.
   """
 date = 2019-04-30
-lastmod = 2020-05-08T16:36:05+09:30
+lastmod = 2020-05-15T16:40:02+09:30
 draft = false
-weight = 1045
+weight = 1046
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E029.mp3"

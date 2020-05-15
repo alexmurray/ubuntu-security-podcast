@@ -7,9 +7,9 @@ description = """
   Ubuntu.
   """
 date = 2020-04-02T16:32:00+10:30
-lastmod = 2020-05-08T16:34:30+09:30
+lastmod = 2020-05-15T16:38:26+09:30
 draft = false
-weight = 1005
+weight = 1006
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E069.mp3"

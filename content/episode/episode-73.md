@@ -6,9 +6,9 @@ description = """
   robot kits and the Kaiji botnet.
   """
 date = 2020-05-08T16:33:00+09:30
-lastmod = 2020-05-08T16:34:21+09:30
+lastmod = 2020-05-15T16:38:16+09:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E073.mp3"

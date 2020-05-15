@@ -2,9 +2,9 @@
 title = "Episode 1"
 description = "Another week, another speculative execution vulnerablity... and more!"
 date = 2018-08-20
-lastmod = 2020-05-08T16:37:11+09:30
+lastmod = 2020-05-15T16:41:10+09:30
 draft = false
-weight = 1073
+weight = 1074
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E001.mp3"
