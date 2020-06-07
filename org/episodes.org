@@ -8,6 +8,146 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 77
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-77
+:EXPORT_DATE: 2020-06-07 17:39
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E077.mp3 :podcast_duration "20:32" :podcast_bytes "19725283" :permalink "https://ubuntusecuritypodcast.org/episode-77/" :guid ea72606e1738c23293eee0989cacd396a9cfd589449e033294b71506d765fafa1e6f5c6b16edade636cb67e24ae1aa3ec7419fe1a95aeae62e7f753b38c39ec2
+:END:
+#+begin_description
+This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+Django and more, plus Joe and Alex discuss the Octopus malware infecting
+Netbeans projects.
+#+end_description
+** Overview
+This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+Django and more, plus Joe and Alex discuss the Octopus malware infecting
+Netbeans projects.
+** This week in Ubuntu Security Updates
+40 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4374-1/][USN-4374-1]]] Unbound vulnerabilities
+- 2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12663][CVE-2020-12663]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12662][CVE-2020-12662]] <!-- medium --> 
+- NXNS attack ([[https://ubuntusecuritypodcast.org/episode-75/][Episode 75]]) (form of DNS reflection attack)
+- Infinite loop when processing malformed answers from upstream servers ->
+  CPU DoS
+
+*** [[[https://usn.ubuntu.com/4375-1/][USN-4375-1]]] PHP vulnerability
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11048][CVE-2019-11048]] <!-- medium --> 
+- DoS via upload of files with very long names -> memory allocation
+  failure, stop process, fail to cleanup temp file on disk -> disk space
+  DoS
+
+*** [[[https://usn.ubuntu.com/4376-1/][USN-4376-1]]] OpenSSL vulnerabilities
+- 4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1563][CVE-2019-1563]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1551][CVE-2019-1551]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1549][CVE-2019-1549]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1547][CVE-2019-1547]] <!-- low --> 
+- Timing side-channel attack against ECDSA signatures -> recover private
+  keys
+- RNG state shared between parent and child process across fork()
+- Vulnerable to padding oracle attack -> decrypt traffic
+
+*** [[[https://usn.ubuntu.com/4360-4/][USN-4360-4]]] json-c vulnerability
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12762][CVE-2020-12762]] <!-- medium --> 
+- [[https://ubuntusecuritypodcast.org/episode-75/][Episode 75]] -> update, regression, update without fix -> now properly
+  fixed vuln without regression
+
+*** [[[https://usn.ubuntu.com/4359-2/][USN-4359-2]]] APT vulnerability
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3810][CVE-2020-3810]] <!-- medium --> 
+- [[https://ubuntusecuritypodcast.org/episode-75/][Episode 75]] (ar archive handling)
+
+*** [[[https://usn.ubuntu.com/4367-2/][USN-4367-2]]] Linux kernel regression
+- 3 CVEs addressed in Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657][CVE-2020-12657]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565][CVE-2020-11565]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377][CVE-2019-19377]] <!-- low --> 
+- 5.4 kernel ([[https://ubuntusecuritypodcast.org/episode-75/][Episode 75]])
+- [[https://launchpad.net/bugs/1879690][overlayfs regression]] - caused by adding some changes for shiftfs to
+  special-case overlayfs - BUT in-fact was already present in overlayfs and
+  this just manifested it - so for now revert the shiftfs related changes
+  until is fixed properly in overlayfs itself
+
+*** [[[https://usn.ubuntu.com/4369-2/][USN-4369-2]]] Linux kernel regression
+- 8 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657][CVE-2020-12657]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668][CVE-2020-11668]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609][CVE-2020-11609]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608][CVE-2020-11608]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565][CVE-2020-11565]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494][CVE-2020-11494]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19769][CVE-2019-19769]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377][CVE-2019-19377]] <!-- low --> 
+- 5.3 kernel ([[https://ubuntusecuritypodcast.org/episode-75/][Episode 75]])
+- [[https://launchpad.net/bugs/1879690][overlayfs regression]] above
+
+*** [[[https://usn.ubuntu.com/4377-1/][USN-4377-1]], [[https://usn.ubuntu.com/4377-2/][USN-4377-2]]] ca-certificates update
+- Affecting Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+- "AddTrust Exteral Root CA" certificate had expired - curl and other
+  applications would fail to connect if they found a certificate chain
+  which validated via this cert (even if other paths in the chain would be
+  valid) - removing this cert is the easiest way to fix the issue.
+- Updated the certs for 16.04 & 18.04 LTS as well
+
+*** [[[https://usn.ubuntu.com/4378-1/][USN-4378-1]]] Flask vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000656][CVE-2018-1000656]] <!-- low --> 
+- DoS via memory exhaustion on crafted inputs
+
+*** [[[https://usn.ubuntu.com/4379-1/][USN-4379-1]]] FreeRDP vulnerabilities
+- 19 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13398][CVE-2020-13398]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13397][CVE-2020-13397]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13396][CVE-2020-13396]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11526][CVE-2020-11526]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11525][CVE-2020-11525]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11524][CVE-2020-11524]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11523][CVE-2020-11523]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11522][CVE-2020-11522]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11521][CVE-2020-11521]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11058][CVE-2020-11058]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11049][CVE-2020-11049]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11048][CVE-2020-11048]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11047][CVE-2020-11047]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11046][CVE-2020-11046]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11045][CVE-2020-11045]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11044][CVE-2020-11044]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11042][CVE-2020-11042]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17177][CVE-2019-17177]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000852][CVE-2018-1000852]] <!-- low --> 
+- Various issues including, OOB write for RSA crypto handling, OOB read on
+  font handling, info disclosure via ability to read client memory as color
+  info, etc.
+
+*** [[[https://usn.ubuntu.com/4380-1/][USN-4380-1]]] Apache Ant vulnerability
+- 1 CVEs addressed in Eoan (19.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1945][CVE-2020-1945]] <!-- medium --> 
+- Info leak to / malicious code exec from a local user due to the use of
+  system-wide /tmp for several tasks (Mike Salvatore)
+
+*** [[[https://usn.ubuntu.com/4381-1/][USN-4381-1]]] Django vulnerabilities
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13596][CVE-2020-13596]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13254][CVE-2020-13254]] <!-- medium --> 
+- XSS via the admin ForeignKeyRawIdWidget due to failure to properly
+  encoded query parameters
+- Failure to properly validate memcached cache keys - could allow a remote
+  attacker to DoS / info leak
+
+** Goings on in Ubuntu Security Community
+*** Alex and Joe discuss Github report on Octopus malware targetting Netbeans projects
+- https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 76
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-76
