@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 28 May 2020 15:10:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Sun, 7 Jun 2020 17:39:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,6 +41,208 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>Episode 77</title>
+          <link>https://ubuntusecuritypodcast.org/episode-77/</link>
+          <pubDate>Sun, 07 Jun 2020 17:39:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>ea72606e1738c23293eee0989cacd396a9cfd589449e033294b71506d765fafa1e6f5c6b16edade636cb67e24ae1aa3ec7419fe1a95aeae62e7f753b38c39ec2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 77</itunes:title>
+        <itunes:summary>  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  </itunes:summary>
+        <description>  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  </description>
+        <googleplay:description>  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+Django and more, plus Joe and Alex discuss the Octopus malware infecting
+Netbeans projects.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>40 unique CVEs addressed</p>
+<h3 id="usn-4374-1-unbound-vulnerabilities">[<a href="https://usn.ubuntu.com/4374-1/">USN-4374-1</a>] Unbound vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12663">CVE-2020-12663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12662">CVE-2020-12662</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NXNS attack (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>) (form of DNS reflection attack)</li>
+<li>Infinite loop when processing malformed answers from upstream servers -&gt;
+CPU DoS</li>
+</ul>
+<h3 id="usn-4375-1-php-vulnerability">[<a href="https://usn.ubuntu.com/4375-1/">USN-4375-1</a>] PHP vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11048">CVE-2019-11048</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via upload of files with very long names -&gt; memory allocation
+failure, stop process, fail to cleanup temp file on disk -&gt; disk space
+DoS</li>
+</ul>
+<h3 id="usn-4376-1-openssl-vulnerabilities">[<a href="https://usn.ubuntu.com/4376-1/">USN-4376-1</a>] OpenSSL vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1563">CVE-2019-1563</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1551">CVE-2019-1551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1549">CVE-2019-1549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1547">CVE-2019-1547</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Timing side-channel attack against ECDSA signatures -&gt; recover private
+keys</li>
+<li>RNG state shared between parent and child process across fork()</li>
+<li>Vulnerable to padding oracle attack -&gt; decrypt traffic</li>
+</ul>
+<h3 id="usn-4360-4-json-c-vulnerability">[<a href="https://usn.ubuntu.com/4360-4/">USN-4360-4</a>] json-c vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12762">CVE-2020-12762</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a> -&gt; update, regression, update without fix -&gt; now properly
+fixed vuln without regression</li>
+</ul>
+<h3 id="usn-4359-2-apt-vulnerability">[<a href="https://usn.ubuntu.com/4359-2/">USN-4359-2</a>] APT vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3810">CVE-2020-3810</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a> (ar archive handling)</li>
+</ul>
+<h3 id="usn-4367-2-linux-kernel-regression">[<a href="https://usn.ubuntu.com/4367-2/">USN-4367-2</a>] Linux kernel regression</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657">CVE-2020-12657</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565">CVE-2020-11565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377">CVE-2019-19377</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 kernel (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>)</li>
+<li><a href="https://launchpad.net/bugs/1879690">overlayfs regression</a> - caused by adding some changes for shiftfs to
+special-case overlayfs - BUT in-fact was already present in overlayfs and
+this just manifested it - so for now revert the shiftfs related changes
+until is fixed properly in overlayfs itself</li>
+</ul>
+<h3 id="usn-4369-2-linux-kernel-regression">[<a href="https://usn.ubuntu.com/4369-2/">USN-4369-2</a>] Linux kernel regression</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657">CVE-2020-12657</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668">CVE-2020-11668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609">CVE-2020-11609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608">CVE-2020-11608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565">CVE-2020-11565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494">CVE-2020-11494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19769">CVE-2019-19769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377">CVE-2019-19377</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 kernel (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>)</li>
+<li><a href="https://launchpad.net/bugs/1879690">overlayfs regression</a> above</li>
+</ul>
+<h3 id="usn-4377-1-usn-4377-2-ca-certificates-update">[<a href="https://usn.ubuntu.com/4377-1/">USN-4377-1</a>, <a href="https://usn.ubuntu.com/4377-2/">USN-4377-2</a>] ca-certificates update</h3>
+<ul>
+<li>Affecting Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)</li>
+<li>&ldquo;AddTrust Exteral Root CA&rdquo; certificate had expired - curl and other
+applications would fail to connect if they found a certificate chain
+which validated via this cert (even if other paths in the chain would be
+valid) - removing this cert is the easiest way to fix the issue.</li>
+<li>Updated the certs for 16.04 &amp; 18.04 LTS as well</li>
+</ul>
+<h3 id="usn-4378-1-flask-vulnerability">[<a href="https://usn.ubuntu.com/4378-1/">USN-4378-1</a>] Flask vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000656">CVE-2018-1000656</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via memory exhaustion on crafted inputs</li>
+</ul>
+<h3 id="usn-4379-1-freerdp-vulnerabilities">[<a href="https://usn.ubuntu.com/4379-1/">USN-4379-1</a>] FreeRDP vulnerabilities</h3>
+<ul>
+<li>19 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13398">CVE-2020-13398</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13397">CVE-2020-13397</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13396">CVE-2020-13396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11526">CVE-2020-11526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11525">CVE-2020-11525</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11524">CVE-2020-11524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11523">CVE-2020-11523</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11522">CVE-2020-11522</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11521">CVE-2020-11521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11058">CVE-2020-11058</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11049">CVE-2020-11049</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11048">CVE-2020-11048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11047">CVE-2020-11047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11046">CVE-2020-11046</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11045">CVE-2020-11045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11044">CVE-2020-11044</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11042">CVE-2020-11042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17177">CVE-2019-17177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000852">CVE-2018-1000852</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues including, OOB write for RSA crypto handling, OOB read on
+font handling, info disclosure via ability to read client memory as color
+info, etc.</li>
+</ul>
+<h3 id="usn-4380-1-apache-ant-vulnerability">[<a href="https://usn.ubuntu.com/4380-1/">USN-4380-1</a>] Apache Ant vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1945">CVE-2020-1945</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Info leak to / malicious code exec from a local user due to the use of
+system-wide /tmp for several tasks (Mike Salvatore)</li>
+</ul>
+<h3 id="usn-4381-1-django-vulnerabilities">[<a href="https://usn.ubuntu.com/4381-1/">USN-4381-1</a>] Django vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13596">CVE-2020-13596</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13254">CVE-2020-13254</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>XSS via the admin ForeignKeyRawIdWidget due to failure to properly
+encoded query parameters</li>
+<li>Failure to properly validate memcached cache keys - could allow a remote
+attacker to DoS / info leak</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-github-report-on-octopus-malware-targetting-netbeans-projects">Alex and Joe discuss Github report on Octopus malware targetting Netbeans projects</h3>
+<ul>
+<li><a href="https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain">https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E077.mp3" length="19725283" type="audio/mpeg" /><itunes:duration>20:32</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Episode 76</title>
           <link>https://ubuntusecuritypodcast.org/episode-76/</link>
           <pubDate>Thu, 28 May 2020 15:10:00 +0930 </pubDate>
@@ -49,26 +251,26 @@
           <itunes:author>Ubuntu Security Team</itunes:author>
           
         <itunes:title>Episode 76</itunes:title>
-        <itunes:summary>  In Episode 76, we welcome back Vineetha Kamath, Ubuntu Security
-  Certifications Manager, to discuss the recent release of FIPS modules for
-  Ubuntu 18.04 LTS and we look at security updates for Bind, ClamAV, QEMU,
-  the Linux kernel and more.
+        <itunes:summary>  This week we welcome back Vineetha Kamath, Ubuntu Security Certifications
+  Manager, to discuss the recent release of FIPS modules for Ubuntu 18.04 LTS
+  and we look at security updates for Bind, ClamAV, QEMU, the Linux kernel
+  and more.
   </itunes:summary>
-        <description>  In Episode 76, we welcome back Vineetha Kamath, Ubuntu Security
-  Certifications Manager, to discuss the recent release of FIPS modules for
-  Ubuntu 18.04 LTS and we look at security updates for Bind, ClamAV, QEMU,
-  the Linux kernel and more.
+        <description>  This week we welcome back Vineetha Kamath, Ubuntu Security Certifications
+  Manager, to discuss the recent release of FIPS modules for Ubuntu 18.04 LTS
+  and we look at security updates for Bind, ClamAV, QEMU, the Linux kernel
+  and more.
   </description>
-        <googleplay:description>  In Episode 76, we welcome back Vineetha Kamath, Ubuntu Security
-  Certifications Manager, to discuss the recent release of FIPS modules for
-  Ubuntu 18.04 LTS and we look at security updates for Bind, ClamAV, QEMU,
-  the Linux kernel and more.
+        <googleplay:description>  This week we welcome back Vineetha Kamath, Ubuntu Security Certifications
+  Manager, to discuss the recent release of FIPS modules for Ubuntu 18.04 LTS
+  and we look at security updates for Bind, ClamAV, QEMU, the Linux kernel
+  and more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>In Episode 76, we welcome back Vineetha Kamath, Ubuntu Security
-Certifications Manager, to discuss the recent release of FIPS modules for
-Ubuntu 18.04 LTS and we look at security updates for Bind, ClamAV, QEMU,
-the Linux kernel and more.</p>
+<p>This week we welcome back Vineetha Kamath, Ubuntu Security Certifications
+Manager, to discuss the recent release of FIPS modules for Ubuntu 18.04 LTS
+and we look at security updates for Bind, ClamAV, QEMU, the Linux kernel
+and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>24 unique CVEs addressed</p>
 <h3 id="usn-4365-2-bind-vulnerabilities-00-37">[<a href="https://usn.ubuntu.com/4365-2/">USN-4365-2</a>] Bind vulnerabilities [00:37]</h3>
@@ -5264,7 +5466,7 @@ local machine</li>
 <li>Library for handling internationalised domain names</li>
 <li>Heap based buffer overflow via a too-long domain name (greater than 63
 characters - in library, caller passes a buffer that is specified to be a
-minimum of 64 bytes - but libidn strcpy()&lsquo;s into it so could easily overflow.</li>
+minimum of 64 bytes - but libidn strcpy()&rsquo;s into it so could easily overflow.</li>
 <li>Possible domain name impersonation since doesn&rsquo;t bother to check unicode
 conversions - so could use punycode (ascii representation of certain
 unicode characters) to impersonate a unicode domain</li>

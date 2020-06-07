@@ -12,7 +12,7 @@
   Whoopsie, Apport and more.
   ">
 
-<meta name="generator" content="Hugo 0.71.1" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 <meta property="og:title" content="Episode 51" />
 <meta name="twitter:title" content="Episode 51"/>
@@ -245,7 +245,7 @@ local machine</li>
 <li>Library for handling internationalised domain names</li>
 <li>Heap based buffer overflow via a too-long domain name (greater than 63
 characters - in library, caller passes a buffer that is specified to be a
-minimum of 64 bytes - but libidn strcpy()&lsquo;s into it so could easily overflow.</li>
+minimum of 64 bytes - but libidn strcpy()&rsquo;s into it so could easily overflow.</li>
 <li>Possible domain name impersonation since doesn&rsquo;t bother to check unicode
 conversions - so could use punycode (ascii representation of certain
 unicode characters) to impersonate a unicode domain</li>

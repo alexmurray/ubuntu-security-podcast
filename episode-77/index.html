@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  ">
+
+<meta name="generator" content="Hugo 0.72.0" />
+
+<meta property="og:title" content="Episode 77" />
+<meta name="twitter:title" content="Episode 77"/>
+<meta itemprop="name" content="Episode 77">
+<meta property="article:modified_time" content="2020-06-07 17:39:00 &#43;0930 &#43;0930" /><meta property="og:description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  " />
+    <meta name="twitter:description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  " />
+    <meta itemprop="description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+  Django and more, plus Joe and Alex discuss the Octopus malware infecting
+  Netbeans projects.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-77/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 77 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-77/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 77</h1>
+      <small>Posted on Sunday, Jun 7, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+Django and more, plus Joe and Alex discuss the Octopus malware infecting
+Netbeans projects.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E077.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+Django and more, plus Joe and Alex discuss the Octopus malware infecting
+Netbeans projects.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>40 unique CVEs addressed</p>
+<h3 id="usn-4374-1-unbound-vulnerabilities">[<a href="https://usn.ubuntu.com/4374-1/">USN-4374-1</a>] Unbound vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12663">CVE-2020-12663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12662">CVE-2020-12662</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NXNS attack (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>) (form of DNS reflection attack)</li>
+<li>Infinite loop when processing malformed answers from upstream servers -&gt;
+CPU DoS</li>
+</ul>
+<h3 id="usn-4375-1-php-vulnerability">[<a href="https://usn.ubuntu.com/4375-1/">USN-4375-1</a>] PHP vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11048">CVE-2019-11048</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via upload of files with very long names -&gt; memory allocation
+failure, stop process, fail to cleanup temp file on disk -&gt; disk space
+DoS</li>
+</ul>
+<h3 id="usn-4376-1-openssl-vulnerabilities">[<a href="https://usn.ubuntu.com/4376-1/">USN-4376-1</a>] OpenSSL vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1563">CVE-2019-1563</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1551">CVE-2019-1551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1549">CVE-2019-1549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1547">CVE-2019-1547</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Timing side-channel attack against ECDSA signatures -&gt; recover private
+keys</li>
+<li>RNG state shared between parent and child process across fork()</li>
+<li>Vulnerable to padding oracle attack -&gt; decrypt traffic</li>
+</ul>
+<h3 id="usn-4360-4-json-c-vulnerability">[<a href="https://usn.ubuntu.com/4360-4/">USN-4360-4</a>] json-c vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12762">CVE-2020-12762</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a> -&gt; update, regression, update without fix -&gt; now properly
+fixed vuln without regression</li>
+</ul>
+<h3 id="usn-4359-2-apt-vulnerability">[<a href="https://usn.ubuntu.com/4359-2/">USN-4359-2</a>] APT vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3810">CVE-2020-3810</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a> (ar archive handling)</li>
+</ul>
+<h3 id="usn-4367-2-linux-kernel-regression">[<a href="https://usn.ubuntu.com/4367-2/">USN-4367-2</a>] Linux kernel regression</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657">CVE-2020-12657</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565">CVE-2020-11565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377">CVE-2019-19377</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 kernel (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>)</li>
+<li><a href="https://launchpad.net/bugs/1879690">overlayfs regression</a> - caused by adding some changes for shiftfs to
+special-case overlayfs - BUT in-fact was already present in overlayfs and
+this just manifested it - so for now revert the shiftfs related changes
+until is fixed properly in overlayfs itself</li>
+</ul>
+<h3 id="usn-4369-2-linux-kernel-regression">[<a href="https://usn.ubuntu.com/4369-2/">USN-4369-2</a>] Linux kernel regression</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657">CVE-2020-12657</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668">CVE-2020-11668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609">CVE-2020-11609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608">CVE-2020-11608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565">CVE-2020-11565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494">CVE-2020-11494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19769">CVE-2019-19769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377">CVE-2019-19377</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 kernel (<a href="https://ubuntusecuritypodcast.org/episode-75/">Episode 75</a>)</li>
+<li><a href="https://launchpad.net/bugs/1879690">overlayfs regression</a> above</li>
+</ul>
+<h3 id="usn-4377-1-usn-4377-2-ca-certificates-update">[<a href="https://usn.ubuntu.com/4377-1/">USN-4377-1</a>, <a href="https://usn.ubuntu.com/4377-2/">USN-4377-2</a>] ca-certificates update</h3>
+<ul>
+<li>Affecting Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)</li>
+<li>&ldquo;AddTrust Exteral Root CA&rdquo; certificate had expired - curl and other
+applications would fail to connect if they found a certificate chain
+which validated via this cert (even if other paths in the chain would be
+valid) - removing this cert is the easiest way to fix the issue.</li>
+<li>Updated the certs for 16.04 &amp; 18.04 LTS as well</li>
+</ul>
+<h3 id="usn-4378-1-flask-vulnerability">[<a href="https://usn.ubuntu.com/4378-1/">USN-4378-1</a>] Flask vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000656">CVE-2018-1000656</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via memory exhaustion on crafted inputs</li>
+</ul>
+<h3 id="usn-4379-1-freerdp-vulnerabilities">[<a href="https://usn.ubuntu.com/4379-1/">USN-4379-1</a>] FreeRDP vulnerabilities</h3>
+<ul>
+<li>19 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13398">CVE-2020-13398</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13397">CVE-2020-13397</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13396">CVE-2020-13396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11526">CVE-2020-11526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11525">CVE-2020-11525</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11524">CVE-2020-11524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11523">CVE-2020-11523</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11522">CVE-2020-11522</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11521">CVE-2020-11521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11058">CVE-2020-11058</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11049">CVE-2020-11049</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11048">CVE-2020-11048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11047">CVE-2020-11047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11046">CVE-2020-11046</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11045">CVE-2020-11045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11044">CVE-2020-11044</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11042">CVE-2020-11042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17177">CVE-2019-17177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000852">CVE-2018-1000852</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues including, OOB write for RSA crypto handling, OOB read on
+font handling, info disclosure via ability to read client memory as color
+info, etc.</li>
+</ul>
+<h3 id="usn-4380-1-apache-ant-vulnerability">[<a href="https://usn.ubuntu.com/4380-1/">USN-4380-1</a>] Apache Ant vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Eoan (19.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1945">CVE-2020-1945</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Info leak to / malicious code exec from a local user due to the use of
+system-wide /tmp for several tasks (Mike Salvatore)</li>
+</ul>
+<h3 id="usn-4381-1-django-vulnerabilities">[<a href="https://usn.ubuntu.com/4381-1/">USN-4381-1</a>] Django vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13596">CVE-2020-13596</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13254">CVE-2020-13254</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>XSS via the admin ForeignKeyRawIdWidget due to failure to properly
+encoded query parameters</li>
+<li>Failure to properly validate memcached cache keys - could allow a remote
+attacker to DoS / info leak</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-and-joe-discuss-github-report-on-octopus-malware-targetting-netbeans-projects">Alex and Joe discuss Github report on Octopus malware targetting Netbeans projects</h3>
+<ul>
+<li><a href="https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain">https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-76/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-77\/",
+        text: "Episode 77"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
