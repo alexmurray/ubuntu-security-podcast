@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week Joe discusses Intel&#39;s CET announcement with John Johansen, plus
+  Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+  more.
+  ">
+
+<meta name="generator" content="Hugo 0.72.0" />
+
+<meta property="og:title" content="Episode 79" />
+<meta name="twitter:title" content="Episode 79"/>
+<meta itemprop="name" content="Episode 79">
+<meta property="article:modified_time" content="2020-06-19 16:06:00 &#43;0930 &#43;0930" /><meta property="og:description" content="  This week Joe discusses Intel&#39;s CET announcement with John Johansen, plus
+  Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+  more.
+  " />
+    <meta name="twitter:description" content="  This week Joe discusses Intel&#39;s CET announcement with John Johansen, plus
+  Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+  more.
+  " />
+    <meta itemprop="description" content="  This week Joe discusses Intel&#39;s CET announcement with John Johansen, plus
+  Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+  more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-79/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 79 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-79/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 79</h1>
+      <small>Posted on Friday, Jun 19, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week Joe discusses Intel&rsquo;s CET announcement with John Johansen, plus
+Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E079.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week Joe discusses Intel&rsquo;s CET announcement with John Johansen, plus
+Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>24 unique CVEs addressed</p>
+<h3 id="usn-4394-1-sqlite-vulnerabilities-00-56">[<a href="https://usn.ubuntu.com/4394-1/">USN-4394-1</a>] SQLite vulnerabilities [00:56]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13632">CVE-2020-13632</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13631">CVE-2020-13631</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13630">CVE-2020-13630</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13435">CVE-2020-13435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13434">CVE-2020-13434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11655">CVE-2020-11655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19645">CVE-2019-19645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19603">CVE-2019-19603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740">CVE-2018-8740</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr deref via crafted query, UAF, OOB read, integer overflow when
+printing high precision floating point numbers, various minor issues when
+handling crafted databases</li>
+</ul>
+<h3 id="usn-4385-2-intel-microcode-regression-01-43">[<a href="https://usn.ubuntu.com/4385-2/">USN-4385-2</a>] Intel Microcode regression [01:43]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549">CVE-2020-0549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548">CVE-2020-0548</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-78/">Episode 78</a> - SRBDS etc - microcode is specific to processors, and is
+identified by the triplet of CPU Family, Model and Stepping - this is
+listed in /proc/cpuinfo - mine say is 6, 142, 10 - in hex - 06-8E-0A -
+would cause a specific Skylake processor type to fail to boot
+(06-4e-03) - we reverted this back to the previous release version from
+November 2019</li>
+</ul>
+<h3 id="usn-4395-1-fwupd-vulnerability-03-39">[<a href="https://usn.ubuntu.com/4395-1/">USN-4395-1</a>] fwupd vulnerability [03:39]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10759">CVE-2020-10759</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>A crafted firmware update file could bypass signature verification - in
+general not an issue since would need to be able to get in the middle of
+firmware updates (which come from LVFS via HTTPS) - so either would need
+to compromise LVFS directly or the HTTPS connection to it.
+<ul>
+<li>Dangling S3 bucket&hellip; :/</li>
+</ul>
+</li>
+<li><a href="https://github.com/justinsteven/advisories/blob/master/2020%5Ffwupd%5Fdangling%5Fs3%5Fbucket%5Fand%5FCVE-2020-10759%5Fsignature%5Fverification%5Fbypass.md">https://github.com/justinsteven/advisories/blob/master/2020%5Ffwupd%5Fdangling%5Fs3%5Fbucket%5Fand%5FCVE-2020-10759%5Fsignature%5Fverification%5Fbypass.md</a></li>
+</ul>
+<h3 id="usn-4315-2-apport-vulnerabilities-06-11">[<a href="https://usn.ubuntu.com/4315-2/">USN-4315-2</a>] Apport vulnerabilities [06:11]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833">CVE-2020-8833</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831">CVE-2020-8831</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-70/">Episode 70</a></li>
+</ul>
+<h3 id="usn-4396-1--usn-dot-ubuntu-dot-com-4396-1--libexif-vulnerabilities-06-24">[<a href="//usn.ubuntu.com/4396-1/">USN-4396-1</a>] libexif vulnerabilities [06:24]</h3>
+<ul>
+<li>6 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13114">CVE-2020-13114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13113">CVE-2020-13113</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13112">CVE-2020-13112</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0198">CVE-2020-0198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0182">CVE-2020-0182</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0093">CVE-2020-0093</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF due to uninitialised memory, various buffer over-reads, integer
+overflow, etc</li>
+</ul>
+<h3 id="usn-4397-1-nss-vulnerabilities-07-24">[<a href="https://usn.ubuntu.com/4397-1/">USN-4397-1</a>] NSS vulnerabilities [07:24]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399">CVE-2020-12399</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17023">CVE-2019-17023</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible timing side-channel attack during DSA key generation - due to
+the difference in time of various operations (dependent on the contents
+of the private key) - the key value could be inferred by an attacker</li>
+</ul>
+<h3 id="usn-4398-1-usn-4398-2-dbus-vulnerability-08-01">[<a href="https://usn.ubuntu.com/4398-1/">USN-4398-1</a>, <a href="https://usn.ubuntu.com/4398-2/">USN-4398-2</a>] DBus vulnerability [08:01]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12049">CVE-2020-12049</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DBus can be used to send file-descriptors - client sends to server via
+the dbus daemon - daemon will validate that messages only contain a
+certain number of file-descriptors - if too may, will reject BUT fail to
+close those file-descriptors - eventually would accumulate too many open
+files itself and so the daemon would not be able to accept new
+connections -&gt; DoS from a local unprivileged user</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-discusses-intel-cet-with-john-johansen--aka-jj--09-28">Joe discusses Intel CET with John Johansen (aka JJ) [09:28]</h3>
+<ul>
+<li>
+<p>Return Oriented Programming (ROP) <a href="https://en.wikipedia.org/wiki/Return-oriented%5Fprogramming">https://en.wikipedia.org/wiki/Return-oriented%5Fprogramming</a></p>
+</li>
+<li>
+<p>Sigreturn Oriented Programming (SROP) (<a href="https://en.wikipedia.org/wiki/Sigreturn-oriented%5Fprogramming">https://en.wikipedia.org/wiki/Sigreturn-oriented%5Fprogramming</a></p>
+</li>
+<li>
+<p>Jump/Call Oriented Programming (JOP) <a href="https://www.csc2.ncsu.edu/faculty/xjiang4/pubs/ASIACCS11.pdf">https://www.csc2.ncsu.edu/faculty/xjiang4/pubs/ASIACCS11.pdf</a></p>
+</li>
+<li>
+<p>Control-flow Enforcement technology (CET)</p>
+<ul>
+<li><a href="https://www.linuxplumbersconf.org/event/2/contributions/147/attachments/72/83/CET-LPC-2018.pdf">https://www.linuxplumbersconf.org/event/2/contributions/147/attachments/72/83/CET-LPC-2018.pdf</a></li>
+<li><a href="https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf">https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf</a></li>
+</ul>
+</li>
+<li>
+<p>CFI in software</p>
+<ul>
+<li><a href="https://www.cse.usf.edu/~ligatti/papers/cficcs.pdf">https://www.cse.usf.edu/~ligatti/papers/cficcs.pdf</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>CET on Linux
+<ul>
+<li>
+<p>Kernel</p>
+<ul>
+<li><a href="https://lwn.net/Articles/758245/">https://lwn.net/Articles/758245/</a></li>
+</ul>
+</li>
+<li>
+<p>gcc</p>
+<ul>
+<li><a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8d286dd118a5bd16f7ae0fb9dfcdcfd020bea803">https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8d286dd118a5bd16f7ae0fb9dfcdcfd020bea803</a></li>
+<li><a href="https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d17cdc17c90ce77cb90c569322c1f241d3530cec">https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d17cdc17c90ce77cb90c569322c1f241d3530cec</a></li>
+<li><a href="https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d21486483579c2205fcabf1308b155000af86fe1">https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d21486483579c2205fcabf1308b155000af86fe1</a></li>
+<li><a href="https://gcc.gnu.org/git/?p=gcc.git&amp;a=search&amp;h=HEAD&amp;st=commit&amp;s=CET">https://gcc.gnu.org/git/?p=gcc.git&amp;a=search&amp;h=HEAD&amp;st=commit&amp;s=CET</a></li>
+</ul>
+</li>
+<li>
+<p>glibc</p>
+<ul>
+<li><a href="https://sourceware.org/legacy-ml/libc-alpha/2018-08/msg00003.html">https://sourceware.org/legacy-ml/libc-alpha/2018-08/msg00003.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>LLVM/Clang</p>
+<ul>
+<li>not just CET, clang has it own CFI not dependent on CET but will support CET</li>
+<li><a href="https://clang.llvm.org/docs/ControlFlowIntegrity.html">https://clang.llvm.org/docs/ControlFlowIntegrity.html</a></li>
+<li><a href="https://clang.llvm.org/docs/ShadowCallStack.html">https://clang.llvm.org/docs/ShadowCallStack.html</a></li>
+</ul>
+</li>
+<li>
+<p>CET on windows</p>
+<ul>
+<li><a href="https://windows-internals.com/cet-on-windows/">https://windows-internals.com/cet-on-windows/</a></li>
+</ul>
+</li>
+<li>
+<p>Pre CET software based CFI on windows</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/windows/win32/secbp/control-flow-guard">https://docs.microsoft.com/en-us/windows/win32/secbp/control-flow-guard</a></li>
+</ul>
+</li>
+<li>
+<p>Papers/talks on attacking CET/CFI</p>
+<ul>
+<li><a href="https://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Sun-How-to-Survive-the-Hardware-Assisted-Control-Flow-Integrity-Enforcement.pdf">https://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Sun-How-to-Survive-the-Hardware-Assisted-Control-Flow-Integrity-Enforcement.pdf</a></li>
+<li><a href="https://windows-internals.com/cet-on-windows/">https://windows-internals.com/cet-on-windows/</a></li>
+</ul>
+</li>
+<li>
+<p>Smashing the stack for fun and profit</p>
+<ul>
+<li><a href="https://www.eecs.umich.edu/courses/eecs588/static/stack%5Fsmashing.pdf">https://www.eecs.umich.edu/courses/eecs588/static/stack%5Fsmashing.pdf</a></li>
+</ul>
+</li>
+<li>
+<p>StackClash</p>
+<ul>
+<li><a href="https://blog.qualys.com/securitylabs/2017/06/19/the-stack-clash">https://blog.qualys.com/securitylabs/2017/06/19/the-stack-clash</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-78/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-79\/",
+        text: "Episode 79"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
