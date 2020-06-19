@@ -8,6 +8,150 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 79
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-79
+:EXPORT_DATE: 2020-06-19 16:06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E079.mp3 :podcast_duration "23:01" :podcast_bytes "22108069" :permalink "https://ubuntusecuritypodcast.org/episode-79/" :guid 069f8ee0d049cb3efe3a8d1c4883fd518ee0d6b95332531af2ce42971cc6b8acfcb31f58cfa9fbf70adc61a7a03d7bda1fd93ade2478f6ead6deb5ae593768e8
+:END:
+#+begin_description
+This week Joe discusses Intel's CET announcement with John Johansen, plus
+Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+more.
+#+end_description
+** Overview
+This week Joe discusses Intel's CET announcement with John Johansen, plus
+Alex details recent security fixes including SQLite, fwupd, NSS, DBus and
+more.
+** This week in Ubuntu Security Updates
+24 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4394-1/][USN-4394-1]]] SQLite vulnerabilities [00:56]
+- 9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13632][CVE-2020-13632]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13631][CVE-2020-13631]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13630][CVE-2020-13630]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13435][CVE-2020-13435]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13434][CVE-2020-13434]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11655][CVE-2020-11655]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19645][CVE-2019-19645]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19603][CVE-2019-19603]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740][CVE-2018-8740]] <!-- low --> 
+- NULL ptr deref via crafted query, UAF, OOB read, integer overflow when
+  printing high precision floating point numbers, various minor issues when
+  handling crafted databases
+
+*** [[[https://usn.ubuntu.com/4385-2/][USN-4385-2]]] Intel Microcode regression [01:43]
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549][CVE-2020-0549]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548][CVE-2020-0548]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543][CVE-2020-0543]] <!-- medium --> 
+- [[https://ubuntusecuritypodcast.org/episode-78/][Episode 78]] - SRBDS etc - microcode is specific to processors, and is
+  identified by the triplet of CPU Family, Model and Stepping - this is
+  listed in /proc/cpuinfo - mine say is 6, 142, 10 - in hex - 06-8E-0A -
+  would cause a specific Skylake processor type to fail to boot
+  (06-4e-03) - we reverted this back to the previous release version from
+  November 2019
+
+*** [[[https://usn.ubuntu.com/4395-1/][USN-4395-1]]] fwupd vulnerability [03:39]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10759][CVE-2020-10759]] <!-- medium -->
+- A crafted firmware update file could bypass signature verification - in
+  general not an issue since would need to be able to get in the middle of
+  firmware updates (which come from LVFS via HTTPS) - so either would need
+  to compromise LVFS directly or the HTTPS connection to it.
+  - Dangling S3 bucket... :/
+- https://github.com/justinsteven/advisories/blob/master/2020_fwupd_dangling_s3_bucket_and_CVE-2020-10759_signature_verification_bypass.md
+
+*** [[[https://usn.ubuntu.com/4315-2/][USN-4315-2]]] Apport vulnerabilities [06:11]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833][CVE-2020-8833]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831][CVE-2020-8831]] <!-- high --> 
+- [[https://ubuntusecuritypodcast.org/episode-70/][Episode 70]]
+
+*** [[[HTTPS://usn.ubuntu.com/4396-1/][USN-4396-1]]] libexif vulnerabilities [06:24]
+- 6 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13114][CVE-2020-13114]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13113][CVE-2020-13113]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13112][CVE-2020-13112]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0198][CVE-2020-0198]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0182][CVE-2020-0182]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0093][CVE-2020-0093]] <!-- low --> 
+- UAF due to uninitialised memory, various buffer over-reads, integer
+  overflow, etc
+
+*** [[[https://usn.ubuntu.com/4397-1/][USN-4397-1]]] NSS vulnerabilities [07:24]
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399][CVE-2020-12399]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17023][CVE-2019-17023]] <!-- low --> 
+- Possible timing side-channel attack during DSA key generation - due to
+  the difference in time of various operations (dependent on the contents
+  of the private key) - the key value could be inferred by an attacker
+
+*** [[[https://usn.ubuntu.com/4398-1/][USN-4398-1]], [[https://usn.ubuntu.com/4398-2/][USN-4398-2]]] DBus vulnerability [08:01]
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12049][CVE-2020-12049]] <!-- medium --> 
+- DBus can be used to send file-descriptors - client sends to server via
+  the dbus daemon - daemon will validate that messages only contain a
+  certain number of file-descriptors - if too may, will reject BUT fail to
+  close those file-descriptors - eventually would accumulate too many open
+  files itself and so the daemon would not be able to accept new
+  connections -> DoS from a local unprivileged user
+
+** Goings on in Ubuntu Security Community 
+*** Joe discusses Intel CET with John Johansen (aka JJ) [09:28]
+- Return Oriented Programming (ROP) https://en.wikipedia.org/wiki/Return-oriented_programming
+- Sigreturn Oriented Programming (SROP) (https://en.wikipedia.org/wiki/Sigreturn-oriented_programming
+- Jump/Call Oriented Programming (JOP) https://www.csc2.ncsu.edu/faculty/xjiang4/pubs/ASIACCS11.pdf
+
+- Control-flow Enforcement technology (CET)
+  - https://www.linuxplumbersconf.org/event/2/contributions/147/attachments/72/83/CET-LPC-2018.pdf
+  - https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf
+
+- CFI in software
+  - https://www.cse.usf.edu/~ligatti/papers/cficcs.pdf
+
+
+- CET on Linux
+  - Kernel
+    - https://lwn.net/Articles/758245/
+
+  - gcc
+    - https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8d286dd118a5bd16f7ae0fb9dfcdcfd020bea803
+    - https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d17cdc17c90ce77cb90c569322c1f241d3530cec
+    - https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=d21486483579c2205fcabf1308b155000af86fe1
+    - https://gcc.gnu.org/git/?p=gcc.git&a=search&h=HEAD&st=commit&s=CET
+
+  - glibc
+    - https://sourceware.org/legacy-ml/libc-alpha/2018-08/msg00003.html
+
+
+  - LLVM/Clang
+    - not just CET, clang has it own CFI not dependent on CET but will support CET
+    - https://clang.llvm.org/docs/ControlFlowIntegrity.html
+    - https://clang.llvm.org/docs/ShadowCallStack.html
+
+- CET on windows
+  - https://windows-internals.com/cet-on-windows/
+
+- Pre CET software based CFI on windows
+  - https://docs.microsoft.com/en-us/windows/win32/secbp/control-flow-guard
+
+- Papers/talks on attacking CET/CFI
+  - https://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Sun-How-to-Survive-the-Hardware-Assisted-Control-Flow-Integrity-Enforcement.pdf
+  - https://windows-internals.com/cet-on-windows/
+
+- Smashing the stack for fun and profit
+  - https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf
+
+- StackClash
+  - https://blog.qualys.com/securitylabs/2017/06/19/the-stack-clash
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 78
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-78
