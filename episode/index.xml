@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 25 Jun 2020 15:21:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 3 Jul 2020 12:28:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,122 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 81</title>
+          <link>https://ubuntusecuritypodcast.org/episode-81/</link>
+          <pubDate>Fri, 03 Jul 2020 12:28:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>96dabe7210ab90c56ce077c80456e3b140f35accdcbb024dc478e5827b235d909fbbe0a2c2c0fd6530ba219b42bce627b2801a3e75a0fa1efa443b111c5a9b38</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 81</itunes:title>
+        <itunes:summary>  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
+  Alex covers the week in security updates including Mutt, NVIDIA graphics
+  drivers, Mailman and more.
+  </itunes:summary>
+        <description>  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
+  Alex covers the week in security updates including Mutt, NVIDIA graphics
+  drivers, Mailman and more.
+  </description>
+        <googleplay:description>  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
+  Alex covers the week in security updates including Mutt, NVIDIA graphics
+  drivers, Mailman and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
+Alex covers the week in security updates including Mutt, NVIDIA graphics
+drivers, Mailman and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>6 unique CVEs addressed</p>
+<h3 id="usn-4403-1-mutt-vulnerability-and-regression-00-40">[<a href="https://usn.ubuntu.com/4403-1/">USN-4403-1</a>] Mutt vulnerability and regression [00:40]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14954">CVE-2020-14954</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When connecting to an IMAP/SMTP/POP3 server via STARTTLS, would read
+additional data after the clear-text command to begin TLS - if someone
+was able to intercept the connection they could inject content which
+would then later get processed by Mutt as though it had come from the TLS
+connection. Fixed to simply clear input buffer at the start of TLS
+negotiation.</li>
+<li>Also includes a fix for a possible regression in the previous security
+update (<a href="https://ubuntusecuritypodcast.org/episode-80/">Episode 80</a>)</li>
+</ul>
+<h3 id="usn-4404-1-usn-4404-2-nvidia-graphics-drivers-and-linux-kernel-vulnerabilities-01-59">[<a href="https://usn.ubuntu.com/4404-1/">USN-4404-1</a>, <a href="https://usn.ubuntu.com/4404-2/">USN-4404-2</a>] NVIDIA graphics drivers &amp; Linux kernel vulnerabilities [01:59]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5973">CVE-2020-5973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5967">CVE-2020-5967</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5963">CVE-2020-5963</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>CUDA driver failed to properly perform access control during IPC - could
+allow a local attacker to DoS/RCE</li>
+<li>UVM driver (Unified Virtual Memory - used with CUDA driver for better
+performance) race condition - local attacker DoS</li>
+<li>Virtual guest GPU driver unspecified vuln -&gt; privileged operations -&gt; DoS</li>
+<li>Updates the linux kernel source package since this is used to provide the
+DKMS packages</li>
+</ul>
+<h3 id="usn-4405-1-glib-networking-vulnerability-03-15">[<a href="https://usn.ubuntu.com/4405-1/">USN-4405-1</a>] GLib Networking vulnerability [03:15]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13645">CVE-2020-13645</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>glib-networking - additional library for glib/gio to provide TLS (ie
+links against gnutls etc.)</li>
+<li>Would fail to verify that the hostname of a server&rsquo;s TLS certificate
+matches the expected hostname by the client - but only if the client
+failed to specify the hostname itself. If did not provide hostname, would
+expect it to fail validation completely. Balsa (GNOME mail client) did
+this, so could possibly be tricked into connecting to a different mail
+server as a result.</li>
+</ul>
+<h3 id="usn-4406-1-mailman-vulnerability-04-48">[<a href="https://usn.ubuntu.com/4406-1/">USN-4406-1</a>] Mailman vulnerability [04:48]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15011">CVE-2020-15011</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to validate inputs to the private archive login page - would then
+echo these back inside the generated page and so provides arbitrary
+content injection from a crafted URL.</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="joe-talks-cyber-security-policy-with-dr-david-reed-scholar-in-residence-uc-boulder-05-51">Joe talks cyber security policy with Dr David Reed, Scholar in Residence @ UC Boulder [05:51]</h3>
+<ul>
+<li><a href="https://www.colorado.edu/program/tcp/people/david-reed">https://www.colorado.edu/program/tcp/people/david-reed</a></li>
+<li>Stock price study:
+<ul>
+<li><a href="https://www.comparitech.com/blog/information-security/data-breach-share-price-analysis/">https://www.comparitech.com/blog/information-security/data-breach-share-price-analysis/</a></li>
+</ul>
+</li>
+<li>FCC 5G FAST Plan</li>
+<li><a href="https://docs.fcc.gov/public/attachments/DOC-354326A1.pdf">https://docs.fcc.gov/public/attachments/DOC-354326A1.pdf</a></li>
+</ul>
+<h3 id="ubuntu-security-notices-relocated-27-00">Ubuntu Security Notices relocated [27:00]</h3>
+<ul>
+<li>Thanks to the design and web teams at Canonical</li>
+<li>Notices now live at <a href="https://ubuntu.com/security/notices/">https://ubuntu.com/security/notices/</a></li>
+<li>Old notices from <a href="https://usn.ubuntu.com">https://usn.ubuntu.com</a> will get redirected</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E081.mp3" length="27686570" type="audio/mpeg" /><itunes:duration>28:50</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 80</title>
           <link>https://ubuntusecuritypodcast.org/episode-80/</link>
