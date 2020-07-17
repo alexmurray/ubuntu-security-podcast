@@ -6,10 +6,21 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2020 12:28:00 +0930</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 15:57:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 82</title>
+      <link>https://ubuntusecuritypodcast.org/episode-82/</link>
+      <pubDate>Fri, 17 Jul 2020 15:57:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-82/</guid>
+      <description>Overview With Ubuntu 19.10 going EOL, we have a special interview by Joe with Chris Coulson and Steve Beattie from the Ubuntu Security Team to talk TPMs and Ubuntu Core 20, plus Alex looks at some of the 71 CVEs addressed by the team and more.
+This week in Ubuntu Security Updates 71 unique CVEs addressed
+[USN-4407-1] LibVNCServer vulnerabilities [01:02]  5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.</description>
+    </item>
     
     <item>
       <title>Episode 81</title>
