@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 17 Jul 2020 15:57:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 15:48:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,175 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 83</title>
+          <link>https://ubuntusecuritypodcast.org/episode-83/</link>
+          <pubDate>Fri, 24 Jul 2020 15:48:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>6b30c5a284402264c8293f99c92cdf36688884f475fb4144e4809ec49906f42ff29b9d5eba00c14e51690f292403e7646c3b21c89f6464e188716daaa56c4bec</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 83</itunes:title>
+        <itunes:summary>  This week Joe talks Linux Security Modules stacking with John Johansen and
+  Steve Beattie plus Alex looks at security updates for snapd, the Linux
+  kernel and more.
+  </itunes:summary>
+        <description>  This week Joe talks Linux Security Modules stacking with John Johansen and
+  Steve Beattie plus Alex looks at security updates for snapd, the Linux
+  kernel and more.
+  </description>
+        <googleplay:description>  This week Joe talks Linux Security Modules stacking with John Johansen and
+  Steve Beattie plus Alex looks at security updates for snapd, the Linux
+  kernel and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week Joe talks Linux Security Modules stacking with John Johansen and
+Steve Beattie plus Alex looks at security updates for snapd, the Linux
+kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>24 unique CVEs addressed</p>
+<h3 id="usn-4199-2-libvpx-vulnerabilities-01-05">[<a href="https://usn.ubuntu.com/4199-2/">USN-4199-2</a>] libvpx vulnerabilities [01:05]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9433">CVE-2019-9433</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9232">CVE-2019-9232</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13194">CVE-2017-13194</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>VP8/VP9 video code (webm)</li>
+<li>Various OOB read on crafted input</li>
+</ul>
+<h3 id="usn-4424-1-snapd-vulnerabilities-01-38">[<a href="https://usn.ubuntu.com/4424-1/">USN-4424-1</a>] snapd vulnerabilities [01:38]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11934">CVE-2020-11934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11933">CVE-2020-11933</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>James Henstridge from Ubuntu Desktop team</li>
+<li>snapd sandbox for strict mode snaps - within sandbox provides xdg-open
+implementation which can forward to the real xdg-open outside the
+sandbox - but would use XDG_DATA_DIRS env from the snap when launching
+xdg-open outside of the snap - XDG_DATA_DIRS could then contain a
+directory which the snap itself controls - allows to launch arbitrary
+binaries from the snap outside of confinement</li>
+<li>Fixed to not incorporate XDG_DATA_DIRS from the snap</li>
+<li>cloud-init would run on every boot without restriction - supports the
+concept of loading meta-data from an external disk - so a local attacker
+with physical access could alter the boot sequence - would be an issue
+with FDE since could intercept the disk encryption key etc - fixed via
+snapd to disable cloud-init after the first boot since cloud-init is
+managed by snapd
+<ul>
+<li>Is only an issue for Ubuntu Core 16/18 devices which employed FDE</li>
+<li>Doesn&rsquo;t affect UC20</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4425-1-linux-kernel-vulnerabilities-06-20">[<a href="https://usn.ubuntu.com/4425-1/">USN-4425-1</a>] Linux kernel vulnerabilities [06:20]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780">CVE-2020-15780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935">CVE-2020-11935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19462">CVE-2019-19462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16089">CVE-2019-16089</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 kernel (focal / bionic hwe)</li>
+<li>Possible bypass of Secure Boot lockdown protections via loading of ACPI
+tables via configs - provides a means of arbitrary memory write - allows
+root user to bypass lockdown</li>
+<li>aufs inode reference count issue - BUG() -&gt; DoS</li>
+<li>relay subsystem crash (<a href="https://ubuntusecuritypodcast.org/episode-81/">Episode 81</a>)</li>
+</ul>
+<h3 id="usn-4426-1-linux-kernel-vulnerabilities-7-32">[<a href="https://usn.ubuntu.com/4426-1/">USN-4426-1</a>] Linux kernel vulnerabilities [7:32]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780">CVE-2020-15780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935">CVE-2020-11935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757">CVE-2020-10757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908">CVE-2019-20908</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 kernel (bionic / xenial hwe)</li>
+<li>ACPI lockdown bypass / aufs inode above</li>
+<li>Second lockdown bypass via loading of ACPI tables via the SSDT EFI
+variable similar to above</li>
+<li>DAX (direct access to files in persistent memory arrays) huge pages
+support - abuse mremap() to gain root privileges - requires the system to
+make use of DAX storage to be able to exploit</li>
+</ul>
+<h3 id="usn-4427-1-linux-kernel-vulnerabilities-08-30">[<a href="https://usn.ubuntu.com/4427-1/">USN-4427-1</a>] Linux kernel vulnerabilities [08:30]</h3>
+<ul>
+<li>10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12380">CVE-2019-12380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974">CVE-2020-13974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935">CVE-2020-11935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768">CVE-2020-10768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767">CVE-2020-10767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766">CVE-2020-10766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732">CVE-2020-10732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908">CVE-2019-20908</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810">CVE-2019-20810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947">CVE-2019-19947</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 kernel (xenial / trusty hwe)</li>
+<li>aufs</li>
+<li>Various means to bypass spectre related mitigations</li>
+<li>SSDT ACPI lockdown bypass</li>
+</ul>
+<h3 id="usn-4429-1-evolution-data-server-vulnerability-09-12">[<a href="https://usn.ubuntu.com/4429-1/">USN-4429-1</a>] Evolution Data Server vulnerability [09:12]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14928">CVE-2020-14928</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Very similar to recent mutt &amp; Thunderbird vuln from <a href="https://ubuntusecuritypodcast.org/episode-81/">Episode 81</a> / <a href="https://ubuntusecuritypodcast.org/episode-82/">Episode
+82</a></li>
+<li>Would read extra data after clear-text &ldquo;begin TLS&rdquo; when initiating
+STARTTLS - would allow an untrusted attacker who could intercept and
+modify traffic to inject arbitrary responses that then get processed
+later as though they had come from the trusted, encrypted connection to
+the server - fixed in same way as mutt by clearing buffered content when
+starting TLS</li>
+</ul>
+<h3 id="usn-4430-1-pillow-vulnerabilities-10-24">[<a href="https://usn.ubuntu.com/4430-1/">USN-4430-1</a>] Pillow vulnerabilities [10:24]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11538">CVE-2020-11538</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10994">CVE-2020-10994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10378">CVE-2020-10378</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10177">CVE-2020-10177</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python Imaging Library - used for image handling by lots of Python GUIs</li>
+<li>All OOB reads on crafted input -&gt; crash, DoS</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="john-johansen-and-steve-beattie-talk-linux-security-modules-with-joe-10-51">John Johansen and Steve Beattie talk Linux Security Modules with Joe [10:51]</h3>
+<ul>
+<li><a href="https://www.kernel.org/doc/html/latest/security/lsm.html">https://www.kernel.org/doc/html/latest/security/lsm.html</a></li>
+<li><a href="https://lwn.net/Articles/808048/">https://lwn.net/Articles/808048/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E083.mp3" length="27835363" type="audio/mpeg" /><itunes:duration>28:59</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 82</title>
           <link>https://ubuntusecuritypodcast.org/episode-82/</link>
