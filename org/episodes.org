@@ -8,6 +8,154 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 88
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-88
+:EXPORT_DATE: 2020-08-27 16:16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E088.mp3 :podcast_duration "10:55" :podcast_bytes "10484624" :permalink "https://ubuntusecuritypodcast.org/episode-88/" :guid 4c2390e1261b8aecf784f345f828c78f0d508cbca083da301b4be6a0a8388d75e149acccf35e138f5e9a573ce7c2785bd9ce5f327bc1a114530c6b140e3463de
+:END:
+#+begin_description
+This week we talk antivirus scanners and false positives in the Ubuntu
+archive, plus we look at security updates for QEMU, Bind, Net-SNMP,
+sane-backends and more.
+#+end_description
+** Overview
+This week we talk antivirus scanners and false positives in the Ubuntu
+archive, plus we look at security updates for QEMU, Bind, Net-SNMP,
+sane-backends and more.
+** This week in Ubuntu Security Updates
+56 unique CVEs addressed
+*** [[[https://usn.ubuntu.com/4467-1/][USN-4467-1]]] QEMU vulnerabilities [00:52]
+- 13 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16092][CVE-2020-16092]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15863][CVE-2020-15863]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14415][CVE-2020-14415]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13800][CVE-2020-13800]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13765][CVE-2020-13765]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13754][CVE-2020-13754]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13659][CVE-2020-13659]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13362][CVE-2020-13362]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13361][CVE-2020-13361]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13253][CVE-2020-13253]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12829][CVE-2020-12829]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10761][CVE-2020-10761]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10756][CVE-2020-10756]] <!-- medium --> 
+- OOB read in SLiRP networking implementation when replying to a ICMP ping
+  echo request -> malicious guest could leak host memory -> info leak
+- Network Block Device server assertion failure able to be triggered via a
+  remote NBD client -> DoS
+- Malicious guest could cause a OOB write / read in SM501 graphic driver on
+  host -> crash / code exec
+
+*** [[[https://usn.ubuntu.com/4466-2/][USN-4466-2]]] curl vulnerability [01:58]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8231][CVE-2020-8231]] <!-- low --> 
+- [[https://ubuntusecuritypodcast.org/episode-87/][Episode 87]] - connect_only option -> could connect to wrong destination
+  -> info leak
+
+*** [[[https://usn.ubuntu.com/4468-1/][USN-4468-1]], [[https://usn.ubuntu.com/4468-2/][USN-4468-2]]] Bind vulnerabilities [02:16]
+- 5 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8624][CVE-2020-8624]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8623][CVE-2020-8623]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8622][CVE-2020-8622]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8621][CVE-2020-8621]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8620][CVE-2020-8620]] <!-- medium --> 
+- Assertion failures when handling:
+  - queries for zones signed by RSA signature
+  - truncated response to a TSIG-signed request
+  - queries when QNAME minimazation and forward first are enabled
+  - specially crafted large TCP payload on most recent versions (focal
+    only)
+
+*** [[[https://usn.ubuntu.com/4471-1/][USN-4471-1]]] Net-SNMP vulnerabilities [03:10]
+- 2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15862][CVE-2020-15862]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15861][CVE-2020-15861]] <!-- medium --> 
+- Would cache MIBs in a directory on the host - an attacker who has
+  read-write access to the SNMP service could use the NET-SNMP-EXTEND-MIB
+  extension to modify an existing MIB to add a command to be executed when
+  the MIB attribute is read, and this would be cached for future. In
+  general net-snmp server runs as a low privileged user, so any
+  command-exec is not privileged, except at startup when it runs as root
+  *and* loads the cached MIBs - these could then contain commands to change
+  the configuration of net-snmp to instead run as root and not drop
+  privileges. Then subsequent runs of net-snmp will run as root and so any
+  command-exec can be done as root. Fix is to both disable the EXTEND-MIB
+  extension by default and to not cache MIBs.
+
+*** [[[https://usn.ubuntu.com/4469-1/][USN-4469-1]]] Ghostscript vulnerabilities [04:47]
+- 25 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-17538][CVE-2020-17538]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16310][CVE-2020-16310]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16309][CVE-2020-16309]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16308][CVE-2020-16308]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16307][CVE-2020-16307]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16306][CVE-2020-16306]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16305][CVE-2020-16305]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16304][CVE-2020-16304]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16303][CVE-2020-16303]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16302][CVE-2020-16302]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16301][CVE-2020-16301]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16300][CVE-2020-16300]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16299][CVE-2020-16299]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16298][CVE-2020-16298]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16297][CVE-2020-16297]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16296][CVE-2020-16296]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16295][CVE-2020-16295]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16294][CVE-2020-16294]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16293][CVE-2020-16293]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16292][CVE-2020-16292]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16291][CVE-2020-16291]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16290][CVE-2020-16290]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16289][CVE-2020-16289]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16288][CVE-2020-16288]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16287][CVE-2020-16287]] <!-- medium --> 
+- Fixes for various buffer overflows etc found via fuzzing with address
+  sanitizer enabled - crafted PDF files -> crash / RCE
+
+*** [[[https://usn.ubuntu.com/4470-1/][USN-4470-1]]] sane-backends vulnerabilities [05:17]
+- 8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12867][CVE-2020-12867]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12866][CVE-2020-12866]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12865][CVE-2020-12865]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12864][CVE-2020-12864]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12863][CVE-2020-12863]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12862][CVE-2020-12862]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12861][CVE-2020-12861]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6318][CVE-2017-6318]] <!-- low --> 
+- Heap buffer overflows when accessing network attached scanners - could
+  happen automatically when starting a scanning app which then scans the
+  local network -> crash / code exec - found by GitHub security team
+- https://securitylab.github.com/research/last-orders-at-the-house-of-force
+- https://youtu.be/EGiQ-0pCcwc
+
+*** [[[https://usn.ubuntu.com/4472-1/][USN-4472-1]]] PostgreSQL vulnerabilities [06:25]
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14350][CVE-2020-14350]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14349][CVE-2020-14349]] <!-- medium --> 
+- 2 issues in the mishandling of the search path, allowing a remote
+  attacker to execute arbitrary SQL code - one when using logical
+  replication and the other with CREATE EXTENSION command.
+
+** Goings on in Ubuntu Security Community
+*** Windows Defender and other AVs flagging jq as possibly malicious [06:54]
+- https://discourse.ubuntu.com/t/several-av-engines-are-hating-on-usr-bin-jq-from-jq-1-6-1-false-positive-imo/18030
+- https://bugs.launchpad.net/ubuntu/+source/jq/+bug/1892843
+- https://bugs.launchpad.net/ubuntu/+source/jq/+bug/1892552
+- Windows Defender flags as Trojan:Linux/CoinMiner.N!MTB whilst Trend Micro
+  flags as Trojan.SH.HADGLIDER.TSE - false positives, possible hash
+  collision?
+#+begin_src shell
+sudo apt install jq
+xdg-open "https://www.virustotal.com/gui/file/$(sha256sum /usr/bin/jq | cut -f1 -d' ')"
+#+end_src
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 87
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-87
