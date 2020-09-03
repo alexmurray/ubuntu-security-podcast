@@ -6,10 +6,21 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 16:16:00 +0930</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:20:00 +0930</lastBuildDate>
     
 	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Episode 89</title>
+      <link>https://ubuntusecuritypodcast.org/episode-89/</link>
+      <pubDate>Thu, 03 Sep 2020 17:20:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-89/</guid>
+      <description>Overview This week we farewell Joe McManus plus we look at security updates for Firefox, Chrony, Squid, Django, the Linux kernel and more.
+This week in Ubuntu Security Updates 59 unique CVEs addressed
+[USN-4473-1] libmysofa vulnerabilities [01:01]  5 CVEs addressed in Bionic (18.04 LTS)  CVE-2019-16095  CVE-2019-16094  CVE-2019-16093  CVE-2019-16092  CVE-2019-16091    OOB, NULL ptr deref, heap buffer overflow etc -&amp;gt; DoS  [USN-4474-1] Firefox vulnerabilities [01:30]  8 CVEs addressed in Xenial (16.</description>
+    </item>
     
     <item>
       <title>Episode 88</title>

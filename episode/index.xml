@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 27 Aug 2020 16:16:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Thu, 3 Sep 2020 17:20:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,272 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 89</title>
+          <link>https://ubuntusecuritypodcast.org/episode-89/</link>
+          <pubDate>Thu, 03 Sep 2020 17:20:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>eaad6772979ced6825b11a497941a1b76c5a1d65b4e2d6d684aac06554cc4c3207588d025bcf438c5eb5cce2a1c2cf137f747927da22b487e5833ddb1393d480</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 89</itunes:title>
+        <itunes:summary>  This week we farewell Joe McManus plus we look at security updates for
+  Firefox, Chrony, Squid, Django, the Linux kernel and more.
+  </itunes:summary>
+        <description>  This week we farewell Joe McManus plus we look at security updates for
+  Firefox, Chrony, Squid, Django, the Linux kernel and more.
+  </description>
+        <googleplay:description>  This week we farewell Joe McManus plus we look at security updates for
+  Firefox, Chrony, Squid, Django, the Linux kernel and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we farewell Joe McManus plus we look at security updates for
+Firefox, Chrony, Squid, Django, the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>59 unique CVEs addressed</p>
+<h3 id="usn-4473-1-libmysofa-vulnerabilities-01-01">[<a href="https://usn.ubuntu.com/4473-1/">USN-4473-1</a>] libmysofa vulnerabilities [01:01]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16095">CVE-2019-16095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16094">CVE-2019-16094</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16093">CVE-2019-16093</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16092">CVE-2019-16092</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16091">CVE-2019-16091</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB, NULL ptr deref, heap buffer overflow etc -&gt; DoS</li>
+</ul>
+<h3 id="usn-4474-1-firefox-vulnerabilities-01-30">[<a href="https://usn.ubuntu.com/4474-1/">USN-4474-1</a>] Firefox vulnerabilities [01:30]</h3>
+<ul>
+<li>8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15668">CVE-2020-15668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6829">CVE-2020-6829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12401">CVE-2020-12401</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12400">CVE-2020-12400</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15670">CVE-2020-15670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15666">CVE-2020-15666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15665">CVE-2020-15665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15664">CVE-2020-15664</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>80.0</li>
+<li>Attacker controlled website -&gt; DoS, install malicious extension, spoof
+URL bar, leak sensitive info across origins, RCE etc</li>
+<li>NSS side-channel attacks etc</li>
+<li>Race condition when importing a cert into the trust store (unspec impact)</li>
+</ul>
+<h3 id="usn-4446-2-squid-regression-02-31">[<a href="https://usn.ubuntu.com/4446-2/">USN-4446-2</a>] Squid regression [02:31]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676">CVE-2019-18676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12524">CVE-2019-12524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523">CVE-2019-12523</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12520">CVE-2019-12520</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Regression in recent squid update would cause issues if using icap or
+ecap protocols to do content adaptation</li>
+</ul>
+<h3 id="usn-4475-1-chrony-vulnerability-02-51">[<a href="https://usn.ubuntu.com/4475-1/">USN-4475-1</a>] Chrony vulnerability [02:51]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14367">CVE-2020-14367</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>pid file is created as root before drops privileges and was susceptible
+to a symlink attack -&gt; could be used to overwrite arbitrary files on the
+system</li>
+</ul>
+<h3 id="usn-4476-1-nss-vulnerability-03-45">[<a href="https://usn.ubuntu.com/4476-1/">USN-4476-1</a>] NSS vulnerability [03:45]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12403">CVE-2020-12403</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read for CHACHA20 decryption with undersized tag</li>
+</ul>
+<h3 id="usn-4477-1-squid-vulnerabilities">[<a href="https://usn.ubuntu.com/4477-1/">USN-4477-1</a>] Squid vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24606">CVE-2020-24606</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15811">CVE-2020-15811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15810">CVE-2020-15810</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP request smuggling</li>
+</ul>
+<h3 id="usn-4478-1-python-rsa-vulnerability-04-15">[<a href="https://usn.ubuntu.com/4478-1/">USN-4478-1</a>] Python-RSA vulnerability [04:15]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13757">CVE-2020-13757</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Ignores leading NUL/zero byte in decryption of ciphertext - fixed to
+check length matches block size</li>
+</ul>
+<h3 id="usn-4479-1-django-vulnerabilities-04-40">[<a href="https://usn.ubuntu.com/4479-1/">USN-4479-1</a>] Django vulnerabilities [04:40]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24584">CVE-2020-24584</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24583">CVE-2020-24583</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Incorrect handling of permissions on directories in caches - caused by a
+behavioural change in python 3.7 - so only affects Python Django when
+used with python 3.7 and hence say bionic (which uses python 3.6) is not
+affected</li>
+</ul>
+<h3 id="usn-4480-1-openstack-keystone-vulnerabilities-05-25">[<a href="https://usn.ubuntu.com/4480-1/">USN-4480-1</a>] OpenStack Keystone vulnerabilities [05:25]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12692">CVE-2020-12692</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12690">CVE-2020-12690</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12691">CVE-2020-12691</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12689">CVE-2020-12689</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Incorrect handling of EC2 permissions could allow an authenticated
+attacker to create EC2 credentials with elevated permissions</li>
+<li>Incorrect handling of OAUTH1 roles could give an authenticated attacker
+more role assignments than intended</li>
+<li>Incorrect handling of EC2 signature TTL checks could allow reuse of
+authorisation headers</li>
+</ul>
+<h3 id="usn-4471-2-net-snmp-regression-05-51">[<a href="https://usn.ubuntu.com/4471-2/">USN-4471-2</a>] Net-SNMP regression [05:51]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15862">CVE-2020-15862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15861">CVE-2020-15861</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Previous update (<a href="https://ubuntusecuritypodcast.org/episode-87/">Episode 87</a>) caused `nsExtendCacheTime` to be not
+settable as MIB attribute - instead add cacheTime feature flag to set
+this</li>
+</ul>
+<h3 id="usn-4481-1-freerdp-vulnerabilities-06-23">[<a href="https://usn.ubuntu.com/4481-1/">USN-4481-1</a>] FreeRDP vulnerabilities [06:23]</h3>
+<ul>
+<li>10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4033">CVE-2020-4033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4032">CVE-2020-4032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4031">CVE-2020-4031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4030">CVE-2020-4030</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15103">CVE-2020-15103</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11099">CVE-2020-11099</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11098">CVE-2020-11098</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11097">CVE-2020-11097</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11096">CVE-2020-11096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11095">CVE-2020-11095</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption and handling issues -&gt; OOB reads / writes, UAF
+etc -&gt; crash / RCE</li>
+</ul>
+<h3 id="usn-4482-1-ark-vulnerability-06-54">[<a href="https://usn.ubuntu.com/4482-1/">USN-4482-1</a>] Ark vulnerability [06:54]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24654">CVE-2020-24654</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Crafted TAR with symlinks outside of working directory -&gt; overwrite or
+creation of arbitrary files (zipslip but for tar - tarslip?)</li>
+</ul>
+<h3 id="usn-4483-1-linux-kernel-vulnerabilities-07-22">[<a href="https://usn.ubuntu.com/4483-1/">USN-4483-1</a>] Linux kernel vulnerabilities [07:22]</h3>
+<ul>
+<li>13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12656">CVE-2020-12656</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24394">CVE-2020-24394</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15393">CVE-2020-15393</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14356">CVE-2020-14356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974">CVE-2020-13974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12771">CVE-2020-12771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12655">CVE-2020-12655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10781">CVE-2020-10781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768">CVE-2020-10768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767">CVE-2020-10767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766">CVE-2020-10766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757">CVE-2020-10757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810">CVE-2019-20810</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 kernel - focal - raspi / aws / gcp / oracle / azure / gcp etc for
+bionic</li>
+<li>Memory leak in USB audio and USB testing drivers, DAX mremap, Speculative
+Store Bypass Disable (SSBD), Indirect Branch Predictor Barrier (IBPB) &amp;
+Indirect Branch Speculation mitigation bypasses, crafted XFS metadata
+DoS, cgroupv2 reference count -&gt; NULL ptr deref etc</li>
+</ul>
+<h3 id="usn-4484-1-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4484-1/">USN-4484-1</a>] Linux kernel vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14356">CVE-2020-14356</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.3 gke/HWE kernel</li>
+<li>cgroupv2 issue</li>
+</ul>
+<h3 id="usn-4485-1-linux-kernel-vulnerabilities">[<a href="https://usn.ubuntu.com/4485-1/">USN-4485-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>14 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12656">CVE-2020-12656</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24394">CVE-2020-24394</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15393">CVE-2020-15393</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974">CVE-2020-13974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12771">CVE-2020-12771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12655">CVE-2020-12655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10781">CVE-2020-10781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768">CVE-2020-10768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767">CVE-2020-10767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766">CVE-2020-10766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732">CVE-2020-10732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810">CVE-2019-20810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19947">CVE-2019-19947</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20669">CVE-2018-20669</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 (bionic / xenial hwe / trusty esm azure)</li>
+<li>Mostly same as above</li>
+</ul>
+<h3 id="usn-4486-1-linux-kernel-vulnerability">[<a href="https://usn.ubuntu.com/4486-1/">USN-4486-1</a>] Linux kernel vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10323">CVE-2018-10323</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 (xenial / trusy esm hwe)</li>
+<li>XFS metadata DoS</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="farewell-joe-mcmanus-09-04">Farewell Joe McManus [09:04]</h3>
+<ul>
+<li>Thanks for being the best co-host a bloke could wish for</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E089.mp3" length="10554841" type="audio/mpeg" /><itunes:duration>10:59</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 88</title>
           <link>https://ubuntusecuritypodcast.org/episode-88/</link>
