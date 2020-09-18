@@ -6,10 +6,17 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 15:26:00 +0930</lastBuildDate>
-    
-	<atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 18 Sep 2020 16:51:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 91</title>
+      <link>https://ubuntusecuritypodcast.org/episode-91/</link>
+      <pubDate>Fri, 18 Sep 2020 16:51:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-91/</guid>
+      <description>Overview This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.
+This week in Ubuntu Security Updates 24 unique CVEs addressed
+[USN-4488-2] X.Org X Server vulnerabilities [00:31]  5 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2020-14345  CVE-2020-14362  CVE-2020-14361  CVE-2020-14347  CVE-2020-14346    Episode 90  [LSN-0071-1] Linux kernel vulnerability [00:50]  1 CVEs addressed in Bionic (18.04 LTS)  CVE-2020-14386    Episode 90 (AF_PACKET OOB write - crash / code exec) Also affects Focal (20.</description>
+    </item>
     
     <item>
       <title>Episode 90</title>

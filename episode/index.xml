@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 11 Sep 2020 15:26:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 16:51:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,176 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 91</title>
+          <link>https://ubuntusecuritypodcast.org/episode-91/</link>
+          <pubDate>Fri, 18 Sep 2020 16:51:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>c003dcca038c1bcb46cecbc475409cbd6cf023facdeb870cd2c4df0db1b3d43d28b040b2a4061fe027bd49a5e4157ac89f980cc9e82afb24eaad191d9c509b86</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 91</itunes:title>
+        <itunes:summary>This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.</itunes:summary>
+        <description>This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.</description>
+        <googleplay:description>This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.</googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>24 unique CVEs addressed</p>
+<h3 id="usn-4488-2-x-dot-org-x-server-vulnerabilities-00-31">[<a href="https://usn.ubuntu.com/4488-2/">USN-4488-2</a>] X.Org X Server vulnerabilities [00:31]</h3>
+<ul>
+<li>5 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14345">CVE-2020-14345</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14362">CVE-2020-14362</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14361">CVE-2020-14361</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14347">CVE-2020-14347</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14346">CVE-2020-14346</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-90/">Episode 90</a></li>
+</ul>
+<h3 id="lsn-0071-1-linux-kernel-vulnerability-00-50">[<a href="https://usn.ubuntu.com/lsn/0071-1/">LSN-0071-1</a>] Linux kernel vulnerability [00:50]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14386">CVE-2020-14386</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-90/">Episode 90</a> (AF_PACKET OOB write - crash / code exec)</li>
+<li>Also affects Focal (20.04 LTS) but livepatch is still being prepared</li>
+</ul>
+<h3 id="usn-4494-1-gupnp-vulnerability-01-29">[<a href="https://usn.ubuntu.com/4494-1/">USN-4494-1</a>] GUPnP vulnerability [01:29]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12695">CVE-2020-12695</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>GNOME UPnP impl, used by Rygel for media sharing on GNOME (standard
+Ubuntu) desktop and many other applications</li>
+<li><a href="https://callstranger.com/">Callstranger Vulnerability</a> - vuln in UPnP protocol - callback header in
+UPnP SUBSCRIBE can contain arbitrary delivery URL - so this could be on a
+different network segment than the event subscription URL - so you can
+SUBSCRIBE to events and supply one or more URLs for delivery of the
+messages. Can then make this point anywhere and so can get the device to
+send HTTP traffic to any arbitrary destination - and so can be used for
+data exfil or DDoS attacks etc. Fixed to check the destination host is
+either a link-local address or the address mask matches - either way,
+check is on the same network segment.</li>
+</ul>
+<h3 id="usn-4495-1-apache-log4j-vulnerability-03-21">[<a href="https://usn.ubuntu.com/4495-1/">USN-4495-1</a>] Apache Log4j vulnerability [03:21]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17571">CVE-2019-17571</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to properly deserialise data - so if is listening to untrusted log
+data from the network could be exploited to run arbitrary code</li>
+</ul>
+<h3 id="usn-4496-1-apache-xml-rpc-vulnerability-03-42">[<a href="https://usn.ubuntu.com/4496-1/">USN-4496-1</a>] Apache XML-RPC vulnerability [03:42]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17570">CVE-2019-17570</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similarly failed to properly deserialize data - a malicious XML-RPC
+server could cause code execution on the client as a result</li>
+</ul>
+<h3 id="usn-4497-1-openjpeg-vulnerabilities-03-58">[<a href="https://usn.ubuntu.com/4497-1/">USN-4497-1</a>] OpenJPEG vulnerabilities [03:58]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12973">CVE-2019-12973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15389">CVE-2020-15389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8112">CVE-2020-8112</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6851">CVE-2020-6851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-21010">CVE-2018-21010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20847">CVE-2018-20847</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9112">CVE-2016-9112</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Usual mix of memory safety issues in image handling libraries written in
+C - DoS, RCE etc via crafted image data</li>
+</ul>
+<h3 id="usn-4499-1-milkytracker-vulnerabilities-04-27">[<a href="https://usn.ubuntu.com/4499-1/">USN-4499-1</a>] MilkyTracker vulnerabilities [04:27]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14497">CVE-2019-14497</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14496">CVE-2019-14496</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14464">CVE-2019-14464</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to properly validate files - 2 different heap and 1 stack based
+buffer overflows - RCE if loading untrusted files</li>
+</ul>
+<h3 id="usn-4498-1-loofah-vulnerability-04-52">[<a href="https://usn.ubuntu.com/4498-1/">USN-4498-1</a>] Loofah vulnerability [04:52]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15587">CVE-2019-15587</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ruby module for manipulation and transformation of HTML/XML etc</li>
+<li>Possible XSS - failed to sanitize JS when handling crafted SVG</li>
+</ul>
+<h3 id="usn-4500-1-bsdiff-vulnerabilities-05-16">[<a href="https://usn.ubuntu.com/4500-1/">USN-4500-1</a>] bsdiff vulnerabilities [05:16]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-9862">CVE-2014-9862</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>(Oldest CVE of the week!)</li>
+<li>Failed to properly validate input patch file -&gt; integer overflow -&gt; heap
+based buffer overflow -&gt; code exec / DoS</li>
+</ul>
+<h3 id="usn-4501-1-luajit-vulnerability-05-40">[<a href="https://usn.ubuntu.com/4501-1/">USN-4501-1</a>] LuaJIT vulnerability [05:40]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15890">CVE-2020-15890</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read -&gt; crash / info leak</li>
+</ul>
+<h3 id="usn-4502-1-websocket-extensions-vulnerability-05-49">[<a href="https://usn.ubuntu.com/4502-1/">USN-4502-1</a>] websocket-extensions vulnerability [05:49]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7663">CVE-2020-7663</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ruby websockets extension - used regex with backtracking to properly
+parse headers, could be sent crafted input which is very computationally
+intensive to parse as a result -&gt; CPU based DoS</li>
+</ul>
+<h3 id="usn-4503-1-perl-dbi-module-vulnerability-06-21">[<a href="https://usn.ubuntu.com/4503-1/">USN-4503-1</a>] Perl DBI module vulnerability [06:21]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14392">CVE-2020-14392</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Perl DB interface - underlying code would potentially allocate the stack
+and hence result in invalid pointers to object that were previously on
+the stack - could be manipulated by a remote user to result in memory
+corruption etc -&gt; crash</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E091.mp3" length="7799236" type="audio/mpeg" /><itunes:duration>08:07</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 90</title>
           <link>https://ubuntusecuritypodcast.org/episode-90/</link>
@@ -8341,7 +8511,7 @@ to reset the pointer when done</li>
 </li>
 <li>Integer overflow -&gt; buffer overflow -&gt; root privesc in binder</li>
 <li>Reintroduction of Spectre v1 vulnerability in ptrace subsystem - Brad
-Spengler - fixed properly in Linus&rsquo; tree but not when it got backported
+Spengler - fixed properly in Linus' tree but not when it got backported
 to the stable tree - two lines of code got reordered - so load of
 possible speculative value occurred _after_it had been used - so the
 speculative load barrier had no effect - Ubuntu regularly backports fixes
@@ -9077,7 +9247,7 @@ patches</li>
 <li>Possible host privilege escalation from a libvirt guest (guest user needs
 to be privileged)</li>
 <li>2 related info disclosures on PowerPC - local user could possibly read
-vector registers of other users&rsquo; processes either during an interrupt or
+vector registers of other users' processes either during an interrupt or
 via a facility unavailable exception</li>
 </ul>
 <h3 id="lsn-0056-1-linux-kernel-vulnerability-09-51">[LSN-0056-1] Linux kernel vulnerability [09:51]</h3>
@@ -10911,7 +11081,7 @@ settings or allow other users to modify settings etc.</li>
 <li>Reported by Kevin Backhouse of Semmle Security Research Team</li>
 <li>TOCTOU when processing a users own ignore configuration file</li>
 <li>Apport runs as root, but would check permission to file via access()
-system call - which uses the real processes&rsquo; UID / GID - so is safe as a
+system call - which uses the real processes' UID / GID - so is safe as a
 permission check - BUT would then go and open the file - so in the
 meantime this could be replaced by a symlink to say a root owned file
 which could then get included in the resulting crash report</li>
@@ -15437,7 +15607,7 @@ various Ubuntu kernel configurations</li>
 <h3 id="usn-3866-2-ghostscript-regression">[<a href="https://usn.ubuntu.com/3866-2/">USN-3866-2</a>] Ghostscript regression</h3>
 <ul>
 <li>Affecting Trusty, Xenial, Bionic, Cosmic</li>
-<li>Previous update for Ghostscript (<a href="https://usn.ubuntu.com/3866-1/">USN-3866-1</a> - <a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a>) caused a regression in printing 4&quot;x6&rdquo; (v9.26 - upstream bug)</li>
+<li>Previous update for Ghostscript (<a href="https://usn.ubuntu.com/3866-1/">USN-3866-1</a> - <a href="https://ubuntusecuritypodcast.org/episode-18/">Episode 18</a>) caused a regression in printing 4&quot;x6&quot; (v9.26 - upstream bug)</li>
 </ul>
 <h3 id="usn-3893-1-bind-vulnerabilities">[<a href="https://usn.ubuntu.com/3893-1/">USN-3893-1</a>] Bind vulnerabilities</h3>
 <ul>
@@ -16332,7 +16502,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 </li>
 <li>Breaks user-space API of mincore() and hence some existing programs (as noted in the commit)
 <ul>
-<li>Linus&rsquo; primary rule is to never break userspace BUT in this case as is a security vulnerability this is okay</li>
+<li>Linus' primary rule is to never break userspace BUT in this case as is a security vulnerability this is okay</li>
 <li>This might also likely affect other programs that use mincore in Ubuntu etc (fincore, e4defrag, qemu etc)</li>
 </ul>
 </li>

@@ -13,7 +13,7 @@
   it&#39;s EOL for Ubuntu 18.10 Cosmic Cuttlefish.
   ">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 <meta property="og:title" content="Episode 40" />
 <meta name="twitter:title" content="Episode 40"/>
@@ -246,7 +246,7 @@ settings or allow other users to modify settings etc.</li>
 <li>Reported by Kevin Backhouse of Semmle Security Research Team</li>
 <li>TOCTOU when processing a users own ignore configuration file</li>
 <li>Apport runs as root, but would check permission to file via access()
-system call - which uses the real processes&rsquo; UID / GID - so is safe as a
+system call - which uses the real processes' UID / GID - so is safe as a
 permission check - BUT would then go and open the file - so in the
 meantime this could be replaced by a symlink to say a root owned file
 which could then get included in the resulting crash report</li>
