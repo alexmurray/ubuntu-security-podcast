@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we cover news of the CITL drop of 7000 &#34;vulnerabilities&#34;, the
+  Ubuntu Security disclosure and embargo policy plus we look at security
+  updates for pip, blueman, the Linux kernel and more.
+  ">
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+<meta property="og:title" content="Episode 94" />
+<meta name="twitter:title" content="Episode 94"/>
+<meta itemprop="name" content="Episode 94">
+<meta property="article:modified_time" content="2020-10-30 16:14:00 &#43;1030 &#43;1030" /><meta property="og:description" content="  This week we cover news of the CITL drop of 7000 &#34;vulnerabilities&#34;, the
+  Ubuntu Security disclosure and embargo policy plus we look at security
+  updates for pip, blueman, the Linux kernel and more.
+  " />
+    <meta name="twitter:description" content="  This week we cover news of the CITL drop of 7000 &#34;vulnerabilities&#34;, the
+  Ubuntu Security disclosure and embargo policy plus we look at security
+  updates for pip, blueman, the Linux kernel and more.
+  " />
+    <meta itemprop="description" content="  This week we cover news of the CITL drop of 7000 &#34;vulnerabilities&#34;, the
+  Ubuntu Security disclosure and embargo policy plus we look at security
+  updates for pip, blueman, the Linux kernel and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-94/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 94 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-94/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 94</h1>
+      <small>Posted on Friday, Oct 30, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we cover news of the CITL drop of 7000 &ldquo;vulnerabilities&rdquo;, the
+Ubuntu Security disclosure and embargo policy plus we look at security
+updates for pip, blueman, the Linux kernel and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E094.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we cover news of the CITL drop of 7000 &ldquo;vulnerabilities&rdquo;, the
+Ubuntu Security disclosure and embargo policy plus we look at security
+updates for pip, blueman, the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>117 unique CVEs addressed</p>
+<h3 id="usn-4596-1-tomcat-vulnerabilities-01-01">[<a href="https://usn.ubuntu.com/4596-1/">USN-4596-1</a>] Tomcat vulnerabilities [01:01]</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9484">CVE-2020-9484</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13935">CVE-2020-13935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13934">CVE-2020-13934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11996">CVE-2020-11996</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4587-1-italc-vulnerabilities">[<a href="https://usn.ubuntu.com/4587-1/">USN-4587-1</a>] iTALC vulnerabilities</h3>
+<ul>
+<li>19 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15681">CVE-2019-15681</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7225">CVE-2018-7225</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20750">CVE-2018-20750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20749">CVE-2018-20749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20748">CVE-2018-20748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20024">CVE-2018-20024</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20023">CVE-2018-20023</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20022">CVE-2018-20022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20021">CVE-2018-20021</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20020">CVE-2018-20020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20019">CVE-2018-20019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15127">CVE-2018-15127</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9942">CVE-2016-9942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9941">CVE-2016-9941</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6055">CVE-2014-6055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6054">CVE-2014-6054</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6053">CVE-2014-6053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6052">CVE-2014-6052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6051">CVE-2014-6051</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4588-1-flightgear-vulnerability">[<a href="https://usn.ubuntu.com/4588-1/">USN-4588-1</a>] FlightGear vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9956">CVE-2016-9956</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4552-2-pam-python-vulnerability">[<a href="https://usn.ubuntu.com/4552-2/">USN-4552-2</a>] Pam-python vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16729">CVE-2019-16729</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4597-1-mod-auth-mellon-vulnerabilities">[<a href="https://usn.ubuntu.com/4597-1/">USN-4597-1</a>] mod_auth_mellon vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3878">CVE-2019-3878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3877">CVE-2019-3877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6807">CVE-2017-6807</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4598-1-libetpan-vulnerability">[<a href="https://usn.ubuntu.com/4598-1/">USN-4598-1</a>] LibEtPan vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15953">CVE-2020-15953</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4600-1-usn-4600-2-netty-vulnerabilities">[<a href="https://usn.ubuntu.com/4600-1/">USN-4600-1</a>, <a href="https://usn.ubuntu.com/4600-2/">USN-4600-2</a>] Netty vulnerabilities</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), 4 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11612">CVE-2020-11612</a> <!-- raw HTML omitted -->  (bionic only)</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7238">CVE-2020-7238</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16869">CVE-2019-16869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20445">CVE-2019-20445</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20444">CVE-2019-20444</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4601-1-pip-vulnerability-01-34">[<a href="https://usn.ubuntu.com/4601-1/">USN-4601-1</a>] pip vulnerability [01:34]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20916">CVE-2019-20916</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to sanitize filenames during pip install if provided a URL in the
+install command - could allow a remote attacker to provide a
+Content-Disposition header that instructs pip to overwrite arbitrary
+files</li>
+</ul>
+<h3 id="usn-4599-1-usn-4599-2-firefox-vulnerabilities-02-42">[<a href="https://usn.ubuntu.com/4599-1/">USN-4599-1</a>, <a href="https://usn.ubuntu.com/4599-2/">USN-4599-2</a>] Firefox vulnerabilities [02:42]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15969">CVE-2020-15969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15684">CVE-2020-15684</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15683">CVE-2020-15683</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15682">CVE-2020-15682</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15681">CVE-2020-15681</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15680">CVE-2020-15680</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15254">CVE-2020-15254</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="lsn-0073-1-linux-kernel-vulnerability-03-02">[<a href="https://usn.ubuntu.com/lsn/0073-1/">LSN-0073-1</a>] Linux kernel vulnerability [03:02]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24490">CVE-2020-24490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12352">CVE-2020-12352</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12351">CVE-2020-12351</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>BleedingTooth (<a href="https://ubuntusecuritypodcast.org/episode-93/">Episode 93</a>)</li>
+</ul>
+<h3 id="usn-4593-2-freetype-vulnerability-03-23">[<a href="https://usn.ubuntu.com/4593-2/">USN-4593-2</a>] FreeType vulnerability [03:23]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15999">CVE-2020-15999</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-93/">Episode 93</a></li>
+</ul>
+<h3 id="usn-4602-1-usn-4602-2-perl-vulnerabilities-03-38">[<a href="https://usn.ubuntu.com/4602-1/">USN-4602-1</a>, USN-4602-2] Perl vulnerabilities [03:38]</h3>
+<ul>
+<li>3 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12723">CVE-2020-12723</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10878">CVE-2020-10878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10543">CVE-2020-10543</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4562-2-kramdown-vulnerability">[<a href="https://usn.ubuntu.com/4562-2/">USN-4562-2</a>] kramdown vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14001">CVE-2020-14001</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4605-1-blueman-vulnerability-04-10">[<a href="https://usn.ubuntu.com/4605-1/">USN-4605-1</a>] Blueman vulnerability [04:10]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15238">CVE-2020-15238</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Reported to Ubuntu by Vaisha Bernard - worked with upstream blueman devs
+&amp; Debian maintainers to get this resolved - thanks :)</li>
+<li>Blueman provides a dbus API to spawn DHCP client when doing
+bluetooth-based networking</li>
+<li>Would not sanitise the provided argument and would pass this directly to
+dhcpcd which supports specifying a script file to run - this gets
+executed as root so is a simple local root-privesc</li>
+<li>Fixed to change the way the argument is provided to dhcpcd so that it
+cannot pass arbitrary flags</li>
+<li>Should also note, by default on Ubuntu we use isc-dhcp-client not dhcpcd
+so unless you have manually installed it, this cannot be exploited</li>
+</ul>
+<h3 id="usn-4583-2-php-vulnerabilities">[<a href="https://usn.ubuntu.com/4583-2/">USN-4583-2</a>] PHP vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7070">CVE-2020-7070</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7069">CVE-2020-7069</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-3081-2-tomcat-vulnerability">[<a href="https://usn.ubuntu.com/3081-2/">USN-3081-2</a>] Tomcat vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2016-1240">CVE-2016-1240</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4603-1-mariadb-vulnerabilities">[<a href="https://usn.ubuntu.com/4603-1/">USN-4603-1</a>] MariaDB vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2814">CVE-2020-2814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2812">CVE-2020-2812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2760">CVE-2020-2760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2752">CVE-2020-2752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15180">CVE-2020-15180</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13249">CVE-2020-13249</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4604-1-mysql-vulnerabilities">[<a href="https://usn.ubuntu.com/4604-1/">USN-4604-1</a>] MySQL vulnerabilities</h3>
+<ul>
+<li>49 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14893">CVE-2020-14893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14891">CVE-2020-14891</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14888">CVE-2020-14888</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14878">CVE-2020-14878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14873">CVE-2020-14873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14870">CVE-2020-14870</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14869">CVE-2020-14869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14868">CVE-2020-14868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14867">CVE-2020-14867</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14866">CVE-2020-14866</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14861">CVE-2020-14861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14860">CVE-2020-14860</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14853">CVE-2020-14853</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14852">CVE-2020-14852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14848">CVE-2020-14848</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14846">CVE-2020-14846</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14845">CVE-2020-14845</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14844">CVE-2020-14844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14839">CVE-2020-14839</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14838">CVE-2020-14838</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14837">CVE-2020-14837</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14836">CVE-2020-14836</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14830">CVE-2020-14830</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14829">CVE-2020-14829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14828">CVE-2020-14828</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14827">CVE-2020-14827</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14821">CVE-2020-14821</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14814">CVE-2020-14814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14812">CVE-2020-14812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14809">CVE-2020-14809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14804">CVE-2020-14804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14800">CVE-2020-14800</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14794">CVE-2020-14794</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14793">CVE-2020-14793</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14791">CVE-2020-14791</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14790">CVE-2020-14790</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14789">CVE-2020-14789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14786">CVE-2020-14786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14785">CVE-2020-14785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14777">CVE-2020-14777</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14776">CVE-2020-14776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14775">CVE-2020-14775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14773">CVE-2020-14773</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14771">CVE-2020-14771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14769">CVE-2020-14769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14765">CVE-2020-14765</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14760">CVE-2020-14760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14672">CVE-2020-14672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14775">CVE-2019-14775</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4607-1-openjdk-vulnerabilities">[<a href="https://usn.ubuntu.com/4607-1/">USN-4607-1</a>] OpenJDK vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14803">CVE-2020-14803</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14798">CVE-2020-14798</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14797">CVE-2020-14797</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14796">CVE-2020-14796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14792">CVE-2020-14792</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14782">CVE-2020-14782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14781">CVE-2020-14781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14779">CVE-2020-14779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4608-1-ca-certificates-update-06-41">[<a href="https://usn.ubuntu.com/4608-1/">USN-4608-1</a>] ca-certificates update [06:41]</h3>
+<ul>
+<li>Affecting Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)</li>
+<li>Updates to the latest from Mozill a - removes some root CAs (expired etc)
+and adds some new ones too</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-security-disclosure-and-embargo-policy-07-17">Ubuntu Security disclosure and embargo policy [07:17]</h3>
+<ul>
+<li><a href="https://ubuntu.com/security/disclosure-policy">https://ubuntu.com/security/disclosure-policy</a></li>
+<li>How to report an issue to us (LP / <a href="mailto:security@ubuntu.com">security@ubuntu.com</a>)</li>
+<li>Scope (Ubuntu archive + Canonical software / infrastructure -
+coordination etc)</li>
+<li>What to expect from us</li>
+<li>Disclosure timelines (within 1 week after updates provided, prefer
+exploits etc kept private for at least 1 week after fixes available)</li>
+<li>Safe harbour (welcome research into the software we provide but no active
+probing of Canonical infra/services)</li>
+</ul>
+<h3 id="citl-releases-high-level-details-of-7000-defects-09-06">CITL releases high level details of 7000 defects [09:06]</h3>
+<ul>
+<li><a href="https://cyber-itl.org/2020/10/28/citl-7000-defects.html">https://cyber-itl.org/2020/10/28/citl-7000-defects.html</a></li>
+<li>7000 defects/vulns across 3243 packages from Ubuntu 18.04</li>
+<li>Automated static / dynamic analysis system (fuzzing?)</li>
+<li>Provide list of binaries / packages and the type of &lsquo;vuln&rsquo; (SIG_SEGV
+etc) - without reproducers etc</li>
+<li>Expect package maintainers to contact them to request full details</li>
+<li>Some package maintainers / upstreams will likely contact but we expect
+this to be in the minority</li>
+<li>Not really possible for @ubuntu_sec to triage and handle all of these but
+will likely be a collective effort between distros to try and analyse
+these all if CITL are willing to provide details</li>
+<li>Without a collective effort unlikely that CVEs will get assigned and so
+fixes could be missed if various upstreams just contact and fix these
+themselves</li>
+<li>Lots of open questions as to how this will play out&hellip;</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-93/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-94\/",
+        text: "Episode 94"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
