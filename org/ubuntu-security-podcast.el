@@ -22,7 +22,7 @@
   (when usn
     (let ((usn-n (substring usn (string-match "[0-9]" usn))))
       (pcase (substring usn 0 1)
-        ("U" (format "[[https://ubuntu.com/security/notices/%s/][%s]]" usn-n usn))
+        ("U" (format "[[https://ubuntu.com/security/notices/%s][%s]]" usn usn))
         (_ usn)))))
 
 (defun usp-generate-cve-link (cve)
