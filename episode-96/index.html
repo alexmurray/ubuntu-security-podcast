@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+  against Intel CPUs, a detailed writeup of the GDM/accountsservice
+  vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episode-95/) and more.
+  ">
+
+<meta name="generator" content="Hugo 0.78.1" />
+
+<meta property="og:title" content="Episode 96" />
+<meta name="twitter:title" content="Episode 96"/>
+<meta itemprop="name" content="Episode 96">
+<meta property="article:modified_time" content="2020-11-13 12:35:00 &#43;1030 &#43;1030" /><meta property="og:description" content="  This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+  against Intel CPUs, a detailed writeup of the GDM/accountsservice
+  vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episode-95/) and more.
+  " />
+    <meta name="twitter:description" content="  This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+  against Intel CPUs, a detailed writeup of the GDM/accountsservice
+  vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episode-95/) and more.
+  " />
+    <meta itemprop="description" content="  This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+  against Intel CPUs, a detailed writeup of the GDM/accountsservice
+  vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episode-95/) and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-96/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 96 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-96/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 96</h1>
+      <small>Posted on Friday, Nov 13, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+against Intel CPUs, a detailed writeup of the GDM/accountsservice
+vulnerabilities covered in <a href="https://ubuntusecuritypodcast.org/episode-95/">Episode 95</a> and more.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E096.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack
+against Intel CPUs, a detailed writeup of the GDM/accountsservice
+vulnerabilities covered in <a href="https://ubuntusecuritypodcast.org/episode-95/">Episode 95</a> and more.</p>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="tianfu-cup-2020-00-37">Tianfu Cup 2020 [00:37]</h3>
+<ul>
+<li><a href="https://www.zdnet.com/article/windows-10-ios-chrome-and-many-others-fall-at-chinas-top-hacking-contest/">https://www.zdnet.com/article/windows-10-ios-chrome-and-many-others-fall-at-chinas-top-hacking-contest/</a></li>
+<li>QEMU on Ubuntu, Firefox and docker all pwned (as well as Chrome, Safari,
+VMWare ESXi, CentOS 8, iPhone etc)</li>
+<li>qemu-kvm on Ubuntu - used a UAF and an info-leak to escape VM and get
+root code exec on host - by Xiao Wei from 360 ESG Vuln Research Institute
+who has previously found lots of QEMU bugs - $60k</li>
+<li>Still waiting on upstream qemu / docker to release details - Firefox
+already patched in <a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26950">CVE-2020-26950</a></li>
+</ul>
+<h3 id="github-writeup-of-gdm-accountsservice-vulnerabilities-02-53">Github writeup of GDM/accountsservice vulnerabilities [02:53]</h3>
+<ul>
+<li>We covered the vulns in last week&rsquo;s <a href="https://ubuntusecuritypodcast.org/episode-95/">Episode 95</a></li>
+<li>Kevin Backhouse provides a great amount of detail and a cool demo video
+of the attack -
+<a href="https://securitylab.github.com/research/Ubuntu-gdm3-accountsservice-LPE">https://securitylab.github.com/research/Ubuntu-gdm3-accountsservice-LPE</a></li>
+<li><a href="https://portswigger.net/daily-swig/vulnerabilities-in-ubuntu-desktop-enabled-root-access-in-two-simple-steps">https://portswigger.net/daily-swig/vulnerabilities-in-ubuntu-desktop-enabled-root-access-in-two-simple-steps</a></li>
+</ul>
+<h3 id="platypus-attack-against-intel-cpus-03-41">PLATYPUS attack against Intel CPUs [03:41]</h3>
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/Platypus">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/Platypus</a></li>
+<li><a href="https://platypusattack.com/">https://platypusattack.com/</a></li>
+<li><a href="https://www.zdnet.com/article/new-platypus-attack-can-steal-data-from-intel-cpus/">https://www.zdnet.com/article/new-platypus-attack-can-steal-data-from-intel-cpus/</a></li>
+</ul>
+<h2 id="this-week-in-ubuntu-security-updates-05-27">This week in Ubuntu Security Updates [05:27]</h2>
+<p>23 unique CVEs addressed</p>
+<h3 id="usn-4617-1-spice-vdagent-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4617-1">USN-4617-1</a>] SPICE vdagent vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25653">CVE-2020-25653</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25652">CVE-2020-25652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25651">CVE-2020-25651</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25650">CVE-2020-25650</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4616-2-accountsservice-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4616-2">USN-4616-2</a>] AccountsService vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14036">CVE-2018-14036</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16126">CVE-2020-16126</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4618-1-tmux-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4618-1">USN-4618-1</a>] tmux vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27347">CVE-2020-27347</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4619-1-dom4j-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4619-1">USN-4619-1</a>] dom4j vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000632">CVE-2018-1000632</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4599-3-firefox-regressions">[<a href="https://ubuntu.com/security/notices/USN-4599-3">USN-4599-3</a>] Firefox regressions</h3>
+<ul>
+<li>Affecting Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-94/">Episode 94</a></li>
+</ul>
+<h3 id="usn-4620-1-phpldapadmin-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4620-1">USN-4620-1</a>] phpLDAPadmin vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11107">CVE-2017-11107</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4621-1-netqmail-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4621-1">USN-4621-1</a>] netqmail vulnerabilities</h3>
+<ul>
+<li>5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3812">CVE-2020-3812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3811">CVE-2020-3811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1515">CVE-2005-1515</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1514">CVE-2005-1514</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1513">CVE-2005-1513</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4622-1-openldap-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4622-1">USN-4622-1</a>] OpenLDAP vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25692">CVE-2020-25692</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4623-1-pacemaker-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4623-1">USN-4623-1</a>] Pacemaker vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25654">CVE-2020-25654</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4624-1-libexif-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4624-1">USN-4624-1</a>] libexif vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0452">CVE-2020-0452</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4625-1-firefox-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4625-1">USN-4625-1</a>] Firefox vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26950">CVE-2020-26950</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4626-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4626-1">USN-4626-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8694">CVE-2020-8694</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27194">CVE-2020-27194</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4627-1-linux-kernel-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4627-1">USN-4627-1</a>] Linux kernel vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8694">CVE-2020-8694</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4628-1-intel-microcode-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4628-1">USN-4628-1</a>] Intel Microcode vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8698">CVE-2020-8698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8696">CVE-2020-8696</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8695">CVE-2020-8695</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-95/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-96\/",
+        text: "Episode 96"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

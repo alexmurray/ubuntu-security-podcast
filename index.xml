@@ -6,7 +6,17 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2020 15:37:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Nov 2020 12:35:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 96</title>
+      <link>https://ubuntusecuritypodcast.org/episode-96/</link>
+      <pubDate>Fri, 13 Nov 2020 12:35:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-96/</guid>
+      <description>Overview This week we look at results from the Tianfu Cup 2020, the PLATYPUS attack against Intel CPUs, a detailed writeup of the GDM/accountsservice vulnerabilities covered in Episode 95 and more.
+Goings on in Ubuntu Security Community Tianfu Cup 2020 [00:37]  https://www.zdnet.com/article/windows-10-ios-chrome-and-many-others-fall-at-chinas-top-hacking-contest/ QEMU on Ubuntu, Firefox and docker all pwned (as well as Chrome, Safari, VMWare ESXi, CentOS 8, iPhone etc) qemu-kvm on Ubuntu - used a UAF and an info-leak to escape VM and get root code exec on host - by Xiao Wei from 360 ESG Vuln Research Institute who has previously found lots of QEMU bugs - $60k Still waiting on upstream qemu / docker to release details - Firefox already patched in CVE-2020-26950  Github writeup of GDM/accountsservice vulnerabilities [02:53]  We covered the vulns in last week&amp;rsquo;s Episode 95 Kevin Backhouse provides a great amount of detail and a cool demo video of the attack - https://securitylab.</description>
+    </item>
+    
     <item>
       <title>Episode 95</title>
       <link>https://ubuntusecuritypodcast.org/episode-95/</link>
