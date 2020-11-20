@@ -8,6 +8,182 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 97
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-97
+:EXPORT_DATE: 2020-11-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E097.mp3 :podcast_duration "MM:SS" :podcast_bytes "NUM_BYTES" :permalink "https://ubuntusecuritypodcast.org/episode-97/" :guid ef6d6a059883f9765e613e8aa454bd5672bcfb21bf7fc21d5b79d351f9580ef5236f6a56edd28508844570088da6ae46cc5fc38fb77b2e2b8399a890def30176
+:END:
+#+begin_description
+This week we look at some details of the 45 unique CVEs addressed across the supported Ubuntu releases and more.
+#+end_description
+** Overview
+This week we look at some details of the 45 unique CVEs addressed across the supported Ubuntu releases and more.
+** This week in Ubuntu Security Updates
+45 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-4629-1][USN-4629-1]]] MoinMoin vulnerabilities
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15275][CVE-2020-15275]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25074][CVE-2020-25074]] <!-- high -->
+- RCE via attachment upload - can upload an attachment which is then
+  cached - a subsequent crafted request can exploit a vulnerability in the
+  cache handling code to achieve directory traversal and a subsequent RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-4630-1][USN-4630-1]]] Raptor vulnerability
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18926][CVE-2017-18926]] <!-- medium -->
+- https://www.openwall.com/lists/oss-security/2017/06/07/1
+- Old vulnerability, recently rediscovered that triggered various
+  discussions on oss-security mailing list
+  - https://www.openwall.com/lists/oss-security/2020/11/13/1
+  - Discussion covered value of CVEs, how distros try and stay on top of
+    the constant stream of CVEs etc
+- Shows the value of a CVE - many distros use these as essentially work
+  items - if a CVE doesn't exist, the vulnerability won't get patched
+
+*** [[[https://ubuntu.com/security/notices/USN-4622-2][USN-4622-2]]] OpenLDAP vulnerability
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25692][CVE-2020-25692]] <!-- medium --> 
+- [[https://ubuntusecuritypodcast.org/episode-96/][Episode 96]] - NULL ptr deref for a remote unauthenticated user in slapd
+- Upstream dispute this as a real CVE - say that only unintended info
+  disclosure is a security issue (what about RCE?)
+  
+*** [[[https://ubuntu.com/security/notices/USN-4628-2][USN-4628-2]]] Intel Microcode regression
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8698][CVE-2020-8698]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8696][CVE-2020-8696]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8695][CVE-2020-8695]] <!-- medium --> 
+- [[https://ubuntusecuritypodcast.org/episode-96/][Episode 96]] - Failed to boot on new Tiger Lake platforms
+- We took the decision to remove this MCU once we saw the regression and
+  had updates out within 24h of initial release
+- Intel have now reverted this themselves upstream in a [[https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/tree/microcode-20201118][fixup release
+  20201118]]
+  
+*** [[[https://ubuntu.com/security/notices/USN-4171-6][USN-4171-6]]] Apport regression
+- 5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790][CVE-2019-15790]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485][CVE-2019-11485]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483][CVE-2019-11483]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482][CVE-2019-11482]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481][CVE-2019-11481]] <!-- low -->
+- Previous update could possibly be used to crash Apport itself due to
+  mishandling of dropping permissions when reading the user's config file
+  (note these don't normally exist unless you manually create one so in
+  general is not an issue) - this fixes that and introduces some more
+  hardening measures to try and ensure permissions are always dropped
+  correctly and this is more robust overall
+
+*** [[[https://ubuntu.com/security/notices/USN-4631-1][USN-4631-1]]] libmaxminddb vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-28241][CVE-2020-28241]] <!-- medium -->
+- Heap based buffer overread -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-4632-1][USN-4632-1]]] SLiRP vulnerabilities
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8608][CVE-2020-8608]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7039][CVE-2020-7039]] <!-- medium -->
+- 2 different buffer overflows - 1 due to improper use of return value from
+  snprintf() - the other due to mishandling of pointer arithmetic -> DoS,
+  RCE?
+
+*** [[[https://ubuntu.com/security/notices/USN-4607-2][USN-4607-2]]] OpenJDK regressions
+- 8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14803][CVE-2020-14803]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14798][CVE-2020-14798]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14797][CVE-2020-14797]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14796][CVE-2020-14796]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14792][CVE-2020-14792]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14782][CVE-2020-14782]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14781][CVE-2020-14781]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14779][CVE-2020-14779]] <!-- medium --> 
+
+*** [[[https://ubuntu.com/security/notices/USN-4633-1][USN-4633-1]]] PostgreSQL vulnerabilities
+- 3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25696][CVE-2020-25696]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25695][CVE-2020-25695]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25694][CVE-2020-25694]] <!-- medium -->
+- 1 RCE, 1 arbitrary SQL execution but need to be an authenticated user and
+  1 DoS via dropping of connection
+
+*** [[[https://ubuntu.com/security/notices/USN-4634-1][USN-4634-1]]] OpenLDAP vulnerabilities
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25710][CVE-2020-25710]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25709][CVE-2020-25709]] <!-- medium -->
+- 2 more DoS bugs against OpenLDAP - both assertion failures able to be
+  triggered by a remote attacker
+
+*** [[[https://ubuntu.com/security/notices/USN-4635-1][USN-4635-1]]] Kerberos vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-28196][CVE-2020-28196]] <!-- medium -->
+- DoS via unbounded recursion in parsing of ASN.1 encoded message - BER can
+  specify an indefinite length - so this was parsed recursively but since
+  it never placed any limit on this if the nesting was deep enough, could
+  overrun the stack an trigger an abort.
+
+*** [[[https://ubuntu.com/security/notices/USN-4636-1][USN-4636-1]]] LibVNCServer, Vino vulnerability
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25708][CVE-2020-25708]] <!-- medium -->
+- Divide by zero -> DoS    
+
+*** [[[https://ubuntu.com/security/notices/USN-4637-1][USN-4637-1]]] Firefox vulnerabilities
+- 15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26969][CVE-2020-26969]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26968][CVE-2020-26968]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26967][CVE-2020-26967]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26965][CVE-2020-26965]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26963][CVE-2020-26963]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26962][CVE-2020-26962]] <!-- low --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26961][CVE-2020-26961]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26960][CVE-2020-26960]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26959][CVE-2020-26959]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26958][CVE-2020-26958]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26956][CVE-2020-26956]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26953][CVE-2020-26953]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26952][CVE-2020-26952]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26951][CVE-2020-26951]] <!-- medium --> 
+  - [[https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16012][CVE-2020-16012]] <!-- medium -->
+- 83.0
+
+** Goings on in Ubuntu Security Community
+*** Migration of Ubuntu CVE information from people.canonical.com to ubuntu.com
+- Long time in the making - worked with the design team at Canonical to
+  design and prototype display of CVEs in a more human friendly format (for
+  machine friendly we have OVAL etc)
+- ubuntu.com/security/CVE-XXXX-XXXX
+- Still includes CVE description, priority, status per-release and other
+  details - but focusses on the most salient ones rather than the more
+  engineering style of the old ones
+- Redirects in place for old people.canonical.com URLs
+- Thanks Design team  
+*** Securing Linux Machines with AppArmor Webinar
+- 2020-11-24 16:00 UTC
+- Presented by Mike Salvatore - who also wrote the [[https://ubuntu.com/engage/apparmor-intro][Introduction to AppArmor whitepaper]]
+- Will cover:
+  - Why a ‘defence in depth’ strategy should be employed to mitigate the
+    potential damage caused by a breach
+  - An explanation of AppArmor, its key features and why the principle of
+    least privilege is recommended
+  - The use of AppArmor in Ubuntu and snaps
+- Good overview of why and how to apply AppArmor as well as a demo of how
+  to generate a profile to confine an application with [[http://manpages.ubuntu.com/manpages/focal/man8/aa-genprof.8.html][`aa-genprof`]]
+*** Analysis of the dovecat and hy4 Linux Malware
+- https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html
+- By Matthew Ruffell from the Sustaining Engineering team at Canonical
+- Previously maintained his own Linux distro (Dapper Linux) where he
+  manually forward-ported the grsecurity patch set - topic of his LCA 2019
+  talk [[https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html][Maintaining the Unmaintainable: Picking up the Baton of a Secure
+  Kernel Patchset]]
+- Walks through how he root-caused strange behaviour on a system down to
+  some suspicious processes, and then reverse engineering those to
+  demonstrate they were malware, and explaining what the malware did, how
+  it operated etc - great teardown
+  
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 96
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-96
