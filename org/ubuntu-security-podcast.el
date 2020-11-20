@@ -27,7 +27,7 @@
 
 (defun usp-generate-cve-link (cve)
   "Generate an 'org-mode' link for CVE."
-  (format "[[https://people.canonical.com/~ubuntu-security/cve/%s][%s]]" cve cve))
+  (format "[[https://ubuntu.com/security/%s][%s]]" cve cve))
 
 (defun usp-generate-bug-link (bug)
   "Generate an 'org-mode' link for LP BUG."
