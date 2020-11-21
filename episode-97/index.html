@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+  Raptor (including a discussion of CVE workflows and the oss-security
+  mailing list) and more, whilst in community news we talk about the upcoming
+  AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+  reverse engineering of malware by the Canonical Sustaining Engineering
+  team.
+  ">
+
+<meta name="generator" content="Hugo 0.78.2" />
+
+<meta property="og:title" content="Episode 97" />
+<meta name="twitter:title" content="Episode 97"/>
+<meta itemprop="name" content="Episode 97">
+<meta property="article:modified_time" content="2020-11-21 12:13:00 &#43;1030 &#43;1030" /><meta property="og:description" content="  This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+  Raptor (including a discussion of CVE workflows and the oss-security
+  mailing list) and more, whilst in community news we talk about the upcoming
+  AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+  reverse engineering of malware by the Canonical Sustaining Engineering
+  team.
+  " />
+    <meta name="twitter:description" content="  This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+  Raptor (including a discussion of CVE workflows and the oss-security
+  mailing list) and more, whilst in community news we talk about the upcoming
+  AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+  reverse engineering of malware by the Canonical Sustaining Engineering
+  team.
+  " />
+    <meta itemprop="description" content="  This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+  Raptor (including a discussion of CVE workflows and the oss-security
+  mailing list) and more, whilst in community news we talk about the upcoming
+  AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+  reverse engineering of malware by the Canonical Sustaining Engineering
+  team.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/episode-97/" />
+
+
+
+
+
+
+
+
+<title>
+
+
+     Episode 97 
+
+</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-97/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+
+
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 97</h1>
+      <small>Posted on Saturday, Nov 21, 2020</small>
+    </div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+Raptor (including a discussion of CVE workflows and the oss-security
+mailing list) and more, whilst in community news we talk about the upcoming
+AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+reverse engineering of malware by the Canonical Sustaining Engineering
+team.
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E097.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we look at vulnerabilities in MoinMoin, OpenLDAP, Kerberos,
+Raptor (including a discussion of CVE workflows and the oss-security
+mailing list) and more, whilst in community news we talk about the upcoming
+AppArmor webinar, migration of Ubuntu CVE information to ubuntu.com and
+reverse engineering of malware by the Canonical Sustaining Engineering
+team.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>45 unique CVEs addressed</p>
+<h3 id="usn-4629-1-moinmoin-vulnerabilities-00-50">[<a href="https://ubuntu.com/security/notices/USN-4629-1">USN-4629-1</a>] MoinMoin vulnerabilities [00:50]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-15275">CVE-2020-15275</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25074">CVE-2020-25074</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>RCE via attachment upload - can upload an attachment which is then
+cached - a subsequent crafted request can exploit a vulnerability in the
+cache handling code to achieve directory traversal and a subsequent RCE</li>
+</ul>
+<h3 id="usn-4630-1-raptor-vulnerability-01-40">[<a href="https://ubuntu.com/security/notices/USN-4630-1">USN-4630-1</a>] Raptor vulnerability [01:40]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-18926">CVE-2017-18926</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://www.openwall.com/lists/oss-security/2017/06/07/1">https://www.openwall.com/lists/oss-security/2017/06/07/1</a></li>
+<li>Old vulnerability, recently rediscovered that triggered various
+discussions on oss-security mailing list
+<ul>
+<li><a href="https://www.openwall.com/lists/oss-security/2020/11/13/1">https://www.openwall.com/lists/oss-security/2020/11/13/1</a></li>
+<li>Discussion covered value of CVEs, how distros try and stay on top of
+the constant stream of CVEs etc</li>
+</ul>
+</li>
+<li>Shows the value of a CVE - many distros use these as essentially work
+items - if a CVE doesn&rsquo;t exist, the vulnerability won&rsquo;t get patched</li>
+</ul>
+<h3 id="usn-4622-2-openldap-vulnerability-03-43">[<a href="https://ubuntu.com/security/notices/USN-4622-2">USN-4622-2</a>] OpenLDAP vulnerability [03:43]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25692">CVE-2020-25692</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-96/">Episode 96</a> - NULL ptr deref for a remote unauthenticated user in slapd</li>
+<li>Upstream dispute this as a real CVE - say that only unintended info
+disclosure is a security issue (what about RCE?)</li>
+</ul>
+<h3 id="usn-4628-2-intel-microcode-regression-04-29">[<a href="https://ubuntu.com/security/notices/USN-4628-2">USN-4628-2</a>] Intel Microcode regression [04:29]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8698">CVE-2020-8698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8696">CVE-2020-8696</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8695">CVE-2020-8695</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-96/">Episode 96</a> - Failed to boot on new Tiger Lake platforms</li>
+<li>We took the decision to remove this MCU once we saw the regression and
+had updates out within 24h of initial release</li>
+<li>Intel have now reverted this themselves upstream in a <a href="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/tree/microcode-20201118">fixup release
+20201118</a></li>
+</ul>
+<h3 id="usn-4171-6-apport-regression-05-40">[<a href="https://ubuntu.com/security/notices/USN-4171-6">USN-4171-6</a>] Apport regression [05:40]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-15790">CVE-2019-15790</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-11485">CVE-2019-11485</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-11483">CVE-2019-11483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-11482">CVE-2019-11482</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-11481">CVE-2019-11481</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Previous update could possibly be used to crash Apport itself due to
+mishandling of dropping permissions when reading the user&rsquo;s config file
+(note these don&rsquo;t normally exist unless you manually create one so in
+general is not an issue) - this fixes that and introduces some more
+hardening measures to try and ensure permissions are always dropped
+correctly and this is more robust overall</li>
+</ul>
+<h3 id="usn-4631-1-libmaxminddb-vulnerability-06-50">[<a href="https://ubuntu.com/security/notices/USN-4631-1">USN-4631-1</a>] libmaxminddb vulnerability [06:50]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-28241">CVE-2020-28241</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap based buffer overread -&gt; DoS</li>
+</ul>
+<h3 id="usn-4632-1-slirp-vulnerabilities-07-03">[<a href="https://ubuntu.com/security/notices/USN-4632-1">USN-4632-1</a>] SLiRP vulnerabilities [07:03]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8608">CVE-2020-8608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-7039">CVE-2020-7039</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different buffer overflows - 1 due to improper use of return value from
+snprintf() - the other due to mishandling of pointer arithmetic -&gt; DoS,
+RCE?</li>
+</ul>
+<h3 id="usn-4607-2-openjdk-regressions">[<a href="https://ubuntu.com/security/notices/USN-4607-2">USN-4607-2</a>] OpenJDK regressions</h3>
+<ul>
+<li>8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-14803">CVE-2020-14803</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14798">CVE-2020-14798</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14797">CVE-2020-14797</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14796">CVE-2020-14796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14792">CVE-2020-14792</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14782">CVE-2020-14782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14781">CVE-2020-14781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14779">CVE-2020-14779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4633-1-postgresql-vulnerabilities-07-42">[<a href="https://ubuntu.com/security/notices/USN-4633-1">USN-4633-1</a>] PostgreSQL vulnerabilities [07:42]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25696">CVE-2020-25696</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25695">CVE-2020-25695</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25694">CVE-2020-25694</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>1 RCE, 1 arbitrary SQL execution but need to be an authenticated user and
+1 DoS via dropping of connection</li>
+</ul>
+<h3 id="usn-4634-1-openldap-vulnerabilities-08-03">[<a href="https://ubuntu.com/security/notices/USN-4634-1">USN-4634-1</a>] OpenLDAP vulnerabilities [08:03]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25710">CVE-2020-25710</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25709">CVE-2020-25709</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 more DoS bugs against OpenLDAP - both assertion failures able to be
+triggered by a remote attacker</li>
+</ul>
+<h3 id="usn-4635-1-kerberos-vulnerability-08-29">[<a href="https://ubuntu.com/security/notices/USN-4635-1">USN-4635-1</a>] Kerberos vulnerability [08:29]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-28196">CVE-2020-28196</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS via unbounded recursion in parsing of ASN.1 encoded message - BER can
+specify an indefinite length - so this was parsed recursively but since
+it never placed any limit on this if the nesting was deep enough, could
+overrun the stack an trigger an abort.</li>
+</ul>
+<h3 id="usn-4636-1-libvncserver-vino-vulnerability-09-05">[<a href="https://ubuntu.com/security/notices/USN-4636-1">USN-4636-1</a>] LibVNCServer, Vino vulnerability [09:05]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25708">CVE-2020-25708</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Divide by zero -&gt; DoS</li>
+</ul>
+<h3 id="usn-4637-1-firefox-vulnerabilities-09-18">[<a href="https://ubuntu.com/security/notices/USN-4637-1">USN-4637-1</a>] Firefox vulnerabilities [09:18]</h3>
+<ul>
+<li>15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-26969">CVE-2020-26969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26968">CVE-2020-26968</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26967">CVE-2020-26967</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26965">CVE-2020-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26963">CVE-2020-26963</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26962">CVE-2020-26962</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26961">CVE-2020-26961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26960">CVE-2020-26960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26959">CVE-2020-26959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26958">CVE-2020-26958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26956">CVE-2020-26956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26953">CVE-2020-26953</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26952">CVE-2020-26952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26951">CVE-2020-26951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-16012">CVE-2020-16012</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>83.0</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="migration-of-ubuntu-cve-information-from-people-dot-canonical-dot-com-to-ubuntu-dot-com-09-37">Migration of Ubuntu CVE information from people.canonical.com to ubuntu.com [09:37]</h3>
+<ul>
+<li>Long time in the making - worked with the design team at Canonical to
+design and prototype display of CVEs in a more human friendly format (for
+machine friendly we have OVAL etc)</li>
+<li>ubuntu.com/security/CVE-XXXX-XXXX</li>
+<li>Still includes CVE description, priority, status per-release and other
+details - but focusses on the most salient ones rather than the more
+engineering style of the old ones</li>
+<li>Redirects in place for old people.canonical.com URLs</li>
+</ul>
+<h3 id="securing-linux-machines-with-apparmor-webinar-11-18">Securing Linux Machines with AppArmor Webinar [11:18]</h3>
+<ul>
+<li><a href="https://www.brighttalk.com/webcast/6793/440491/securing-linux-machines-with-apparmor">https://www.brighttalk.com/webcast/6793/440491/securing-linux-machines-with-apparmor</a></li>
+<li>2020-11-24 16:00 UTC</li>
+<li>Presented by Mike Salvatore - who also wrote the <a href="https://ubuntu.com/engage/apparmor-intro">Introduction to AppArmor whitepaper</a></li>
+<li>Will cover:
+<ul>
+<li>Why a ‘defence in depth’ strategy should be employed to mitigate the
+potential damage caused by a breach</li>
+<li>An explanation of AppArmor, its key features and why the principle of
+least privilege is recommended</li>
+<li>The use of AppArmor in Ubuntu and snaps</li>
+</ul>
+</li>
+<li>Good overview of why and how to apply AppArmor as well as a demo of how
+to generate a profile to confine an application with <a href="http://manpages.ubuntu.com/manpages/focal/man8/aa-genprof.8.html">`aa-genprof`</a></li>
+</ul>
+<h3 id="analysis-of-the-dovecat-and-hy4-linux-malware-12-36">Analysis of the dovecat and hy4 Linux Malware [12:36]</h3>
+<ul>
+<li><a href="https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html">https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html</a></li>
+<li>By Matthew Ruffell from the Sustaining Engineering team at Canonical</li>
+<li>Previously maintained his own Linux distro (Dapper Linux) where he
+manually forward-ported the grsecurity patch set - topic of his LCA 2019
+talk <a href="https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html">Maintaining the Unmaintainable: Picking up the Baton of a Secure
+Kernel Patchset</a></li>
+<li>Walks through how he root-caused strange behaviour on a system down to
+some suspicious processes, and then reverse engineering those to
+demonstrate they were malware, and explaining what the malware did, how
+it operated etc - great teardown</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-96/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-97\/",
+        text: "Episode 97"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
