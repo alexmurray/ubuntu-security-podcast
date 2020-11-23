@@ -9,7 +9,7 @@ description = """
   team.
   """
 date = 2020-11-21T12:13:00+10:30
-lastmod = 2020-11-21T12:13:43+10:30
+lastmod = 2020-11-23T10:45:54+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -222,7 +222,7 @@ team.
 -   Previously maintained his own Linux distro (Dapper Linux) where he
     manually forward-ported the grsecurity patch set - topic of his LCA 2019
     talk [Maintaining the Unmaintainable: Picking up the Baton of a Secure
-    Kernel Patchset](https://ruffell.nz/reverse-engineering/writeups/2020/10/27/analysis-of-the-dovecat-and-hy4-linux-malware.html)
+    Kernel Patchset](https://2019.linux.conf.au/schedule/presentation/180/)
 -   Walks through how he root-caused strange behaviour on a system down to
     some suspicious processes, and then reverse engineering those to
     demonstrate they were malware, and explaining what the malware did, how
