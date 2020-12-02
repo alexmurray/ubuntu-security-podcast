@@ -12,12 +12,14 @@
   Netbeans projects.
   ">
 
-<meta name="generator" content="Hugo 0.78.2" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <meta property="og:title" content="Episode 77" />
 <meta name="twitter:title" content="Episode 77"/>
 <meta itemprop="name" content="Episode 77">
-<meta property="article:modified_time" content="2020-06-07 17:39:00 &#43;0930 &#43;0930" /><meta property="og:description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
+<meta property="article:published_time" content="2020-06-07T17:39:00&#43;09:30" />
+<meta property="article:modified_time" content="2020-06-07T17:43:09&#43;09:30" />
+<meta property="og:updated_time" content="2020-06-07T17:43:09&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP,
   Django and more, plus Joe and Alex discuss the Octopus malware infecting
   Netbeans projects.
   " />
@@ -31,26 +33,24 @@
   "><meta name="twitter:site" content="@ubuntu_sec"/>
 <meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
-<meta property="og:type" content="website" />
 
+<meta property="og:type" content="article" />
 <meta property="og:url" content="/episode-77/" />
 
 
 
 
-
-
-
-
-<title>
-
-
-     Episode 77 
-
-</title>
+<title>Episode 77</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-77/">
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
 
 
 <link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
@@ -71,9 +71,7 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
-
-
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -135,9 +133,10 @@
 
   <div class="row">
     <div class="col">
-      <h1>Episode 77</h1>
-      <small>Posted on Sunday, Jun 7, 2020</small>
-    </div>
+      <h1>Episode 77</h1><small>Posted on Sunday, Jun 7, 2020 
+
+
+</small></div>
   </div>
 
   
@@ -152,13 +151,15 @@ Netbeans projects.
           </div>
         </div>
     <div class="row">
-        <div class="col-md-12 player_row">
+          <div class="col-md-12 player_row">
 
-        <audio id="player2" style="width: 100%" controls preload="none">
-          <source src="https://people.canonical.com/~amurray/USP/USP_E077.mp3" type="audio/mp3">
-          </audio>
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E077.mp3" type="audio/mp3">
+            </audio>
+          </div>
         </div>
-      </div><div class="row">
+
+  <div class="row">
     <div class="col">
       <h2>Show Notes</h2>
       <h2 id="overview">Overview</h2>
@@ -343,6 +344,8 @@ attacker to DoS / info leak</li>
     </div>
   </div>
 
+
+
   
 
   
@@ -356,6 +359,7 @@ attacker to DoS / info leak</li>
       </div>
       
       
+
       <div class="row">
         
         <div class="col-md-12">
@@ -401,7 +405,7 @@ attacker to DoS / info leak</li>
   </div>
 </div>
 </div>
-<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -429,6 +433,27 @@ attacker to DoS / info leak</li>
       }
     ],
     });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
 </script>
 
 <script>

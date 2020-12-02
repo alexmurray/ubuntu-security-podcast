@@ -9,36 +9,36 @@
 
   <meta name="description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more.">
 
-<meta name="generator" content="Hugo 0.78.2" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <meta property="og:title" content="Episode 13" />
 <meta name="twitter:title" content="Episode 13"/>
 <meta itemprop="name" content="Episode 13">
-<meta property="article:modified_time" content="2018-11-26 00:00:00 &#43;0000 UTC" /><meta property="og:description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more." />
+<meta property="article:published_time" content="2018-11-26T00:00:00Z" />
+<meta property="article:modified_time" content="2020-05-15T16:40:40&#43;09:30" />
+<meta property="og:updated_time" content="2020-05-15T16:40:40&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more." />
     <meta name="twitter:description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more." />
     <meta itemprop="description" content="This week we look at some details of the 16 unique CVEs addressed across the supported Ubuntu releases and more."><meta name="twitter:site" content="@ubuntu_sec"/>
 <meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
-<meta property="og:type" content="website" />
 
+<meta property="og:type" content="article" />
 <meta property="og:url" content="/episode-13/" />
 
 
 
 
-
-
-
-
-<title>
-
-
-     Episode 13 
-
-</title>
+<title>Episode 13</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-13/">
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
 
 
 <link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
@@ -59,9 +59,7 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
-
-
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -123,9 +121,10 @@
 
   <div class="row">
     <div class="col">
-      <h1>Episode 13</h1>
-      <small>Posted on Monday, Nov 26, 2018</small>
-    </div>
+      <h1>Episode 13</h1><small>Posted on Monday, Nov 26, 2018 
+
+
+</small></div>
   </div>
 
   
@@ -138,13 +137,15 @@
           </div>
         </div>
     <div class="row">
-        <div class="col-md-12 player_row">
+          <div class="col-md-12 player_row">
 
-        <audio id="player2" style="width: 100%" controls preload="none">
-          <source src="https://people.canonical.com/~amurray/USP/USP_E013.mp3" type="audio/mp3">
-          </audio>
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E013.mp3" type="audio/mp3">
+            </audio>
+          </div>
         </div>
-      </div><div class="row">
+
+  <div class="row">
     <div class="col">
       <h2>Show Notes</h2>
       <h2 id="overview">Overview</h2>
@@ -244,6 +245,8 @@
     </div>
   </div>
 
+
+
   
 
   
@@ -257,6 +260,7 @@
       </div>
       
       
+
       <div class="row">
         
         <div class="col-md-12">
@@ -302,7 +306,7 @@
   </div>
 </div>
 </div>
-<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -330,6 +334,27 @@
       }
     ],
     });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
 </script>
 
 <script>

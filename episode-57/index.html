@@ -12,12 +12,14 @@
   day-in-the-life of a Ubuntu Security Team member.
   ">
 
-<meta name="generator" content="Hugo 0.78.2" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <meta property="og:title" content="Episode 57" />
 <meta name="twitter:title" content="Episode 57"/>
 <meta itemprop="name" content="Episode 57">
-<meta property="article:modified_time" content="2019-12-19 13:36:00 &#43;1030 &#43;1030" /><meta property="og:description" content="  In the final episode of 2019, we look at security updates for RabbitMQ,
+<meta property="article:published_time" content="2019-12-19T13:36:00&#43;10:30" />
+<meta property="article:modified_time" content="2020-05-15T16:38:54&#43;09:30" />
+<meta property="og:updated_time" content="2020-05-15T16:38:54&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  In the final episode of 2019, we look at security updates for RabbitMQ,
   GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical
   day-in-the-life of a Ubuntu Security Team member.
   " />
@@ -31,26 +33,24 @@
   "><meta name="twitter:site" content="@ubuntu_sec"/>
 <meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
-<meta property="og:type" content="website" />
 
+<meta property="og:type" content="article" />
 <meta property="og:url" content="/episode-57/" />
 
 
 
 
-
-
-
-
-<title>
-
-
-     Episode 57 
-
-</title>
+<title>Episode 57</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-57/">
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
 
 
 <link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
@@ -71,9 +71,7 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
-
-
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -135,9 +133,10 @@
 
   <div class="row">
     <div class="col">
-      <h1>Episode 57</h1>
-      <small>Posted on Thursday, Dec 19, 2019</small>
-    </div>
+      <h1>Episode 57</h1><small>Posted on Thursday, Dec 19, 2019 
+
+
+</small></div>
   </div>
 
   
@@ -152,13 +151,15 @@ day-in-the-life of a Ubuntu Security Team member.
           </div>
         </div>
     <div class="row">
-        <div class="col-md-12 player_row">
+          <div class="col-md-12 player_row">
 
-        <audio id="player2" style="width: 100%" controls preload="none">
-          <source src="https://people.canonical.com/~amurray/USP/USP_E057.mp3" type="audio/mp3">
-          </audio>
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E057.mp3" type="audio/mp3">
+            </audio>
+          </div>
         </div>
-      </div><div class="row">
+
+  <div class="row">
     <div class="col">
       <h2>Show Notes</h2>
       <h2 id="overview">Overview</h2>
@@ -258,6 +259,8 @@ scenarios) - see the full USN for details</li>
     </div>
   </div>
 
+
+
   
 
   
@@ -271,6 +274,7 @@ scenarios) - see the full USN for details</li>
       </div>
       
       
+
       <div class="row">
         
         <div class="col-md-12">
@@ -316,7 +320,7 @@ scenarios) - see the full USN for details</li>
   </div>
 </div>
 </div>
-<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -344,6 +348,27 @@ scenarios) - see the full USN for details</li>
       }
     ],
     });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
 </script>
 
 <script>

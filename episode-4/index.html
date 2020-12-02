@@ -12,12 +12,14 @@
   various hardening guides for Ubuntu.
   ">
 
-<meta name="generator" content="Hugo 0.78.2" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <meta property="og:title" content="Episode 4" />
 <meta name="twitter:title" content="Episode 4"/>
 <meta itemprop="name" content="Episode 4">
-<meta property="article:modified_time" content="2018-09-10 00:00:00 &#43;0000 UTC" /><meta property="og:description" content="  A quieter week in package updates - this week we look at some details of the 9
+<meta property="article:published_time" content="2018-09-10T00:00:00Z" />
+<meta property="article:modified_time" content="2020-05-15T16:41:02&#43;09:30" />
+<meta property="og:updated_time" content="2020-05-15T16:41:02&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  A quieter week in package updates - this week we look at some details of the 9
   unique CVEs addressed across the supported Ubuntu releases and talk about
   various hardening guides for Ubuntu.
   " />
@@ -31,26 +33,24 @@
   "><meta name="twitter:site" content="@ubuntu_sec"/>
 <meta name="twitter:creator" content="@ubuntu_sec"/>
 <meta name="twitter:domain" content="ubuntu.com"/>
-<meta property="og:type" content="website" />
 
+<meta property="og:type" content="article" />
 <meta property="og:url" content="/episode-4/" />
 
 
 
 
-
-
-
-
-<title>
-
-
-     Episode 4 
-
-</title>
+<title>Episode 4</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-4/">
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
 
 
 <link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
@@ -71,9 +71,7 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
-
-
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -135,9 +133,10 @@
 
   <div class="row">
     <div class="col">
-      <h1>Episode 4</h1>
-      <small>Posted on Monday, Sep 10, 2018</small>
-    </div>
+      <h1>Episode 4</h1><small>Posted on Monday, Sep 10, 2018 
+
+
+</small></div>
   </div>
 
   
@@ -152,13 +151,15 @@ various hardening guides for Ubuntu.
           </div>
         </div>
     <div class="row">
-        <div class="col-md-12 player_row">
+          <div class="col-md-12 player_row">
 
-        <audio id="player2" style="width: 100%" controls preload="none">
-          <source src="https://people.canonical.com/~amurray/USP/USP_E004.mp3" type="audio/mp3">
-          </audio>
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E004.mp3" type="audio/mp3">
+            </audio>
+          </div>
         </div>
-      </div><div class="row">
+
+  <div class="row">
     <div class="col">
       <h2>Show Notes</h2>
       <h2 id="overview">Overview</h2>
@@ -278,6 +279,8 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
     </div>
   </div>
 
+
+
   
 
   
@@ -291,6 +294,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
       </div>
       
       
+
       <div class="row">
         
         <div class="col-md-12">
@@ -336,7 +340,7 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
   </div>
 </div>
 </div>
-<script src=https://ubuntusecuritypodcast.org/js/castanet-min.js></script>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -364,6 +368,27 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
       }
     ],
     });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
 </script>
 
 <script>
