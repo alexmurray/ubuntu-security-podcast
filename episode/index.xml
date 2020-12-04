@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 27 Nov 2020 14:38:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 4 Dec 2020 13:45:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,344 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 99</title>
+          <link>https://ubuntusecuritypodcast.org/episode-99/</link>
+          <pubDate>Fri, 04 Dec 2020 13:45:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>0fa844c6cdb807ff9af17a962dfca6cd15d4872b142501e31bcf0a59f87d4f6f64097a47a0c32848161eebbfff3f56fa48635972e6f35baba7a82a8b1a43d6a6</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 99</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we look at security updates for Mutt, Thunderbird, Poppler, QEMU,
+  containerd, Linux kernel &amp; more, plus we discuss the 2020 State of the
+  Octoverse Security Report from Github, Launchpad GPG keyserver migration, a
+  new AppArmor...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we look at security updates for Mutt, Thunderbird, Poppler, QEMU,
+  containerd, Linux kernel &amp; more, plus we discuss the 2020 State of the
+  Octoverse Security Report from Github, Launchpad GPG keyserver migration, a
+  new AppArmor release &amp; some open positions on the team.
+  </itunes:summary>
+        <description>  This week we look at security updates for Mutt, Thunderbird, Poppler, QEMU,
+  containerd, Linux kernel &amp; more, plus we discuss the 2020 State of the
+  Octoverse Security Report from Github, Launchpad GPG keyserver migration, a
+  new AppArmor release &amp; some open positions on the team.
+  </description>
+        <googleplay:description>  This week we look at security updates for Mutt, Thunderbird, Poppler, QEMU,
+  containerd, Linux kernel &amp; more, plus we discuss the 2020 State of the
+  Octoverse Security Report from Github, Launchpad GPG keyserver migration, a
+  new AppArmor release &amp; some open positions on the team.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at security updates for Mutt, Thunderbird, Poppler, QEMU,
+containerd, Linux kernel &amp; more, plus we discuss the 2020 State of the
+Octoverse Security Report from Github, Launchpad GPG keyserver migration, a
+new AppArmor release &amp; some open positions on the team.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>68 unique CVEs addressed</p>
+<h3 id="usn-4645-1-mutt-vulnerability-00-59">[<a href="https://ubuntu.com/security/notices/USN-4645-1">USN-4645-1</a>] Mutt vulnerability [00:59]</h3>
+<ul>
+<li>1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-28896">CVE-2020-28896</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When connecting to an IMAP server, if the first reponse from the server
+was invalid, would fail to properly terminate the connection and could
+continue trying to authenticate and hence send credentials in the clear.</li>
+</ul>
+<h3 id="usn-4646-1-poppler-vulnerabilities-01-44">[<a href="https://ubuntu.com/security/notices/USN-4646-1">USN-4646-1</a>] poppler vulnerabilities [01:44]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27778">CVE-2020-27778</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9959">CVE-2019-9959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-13283">CVE-2019-13283</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-10871">CVE-2019-10871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-21009">CVE-2018-21009</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption issues, all DoS-able, some RCE?</li>
+</ul>
+<h3 id="usn-4646-2-poppler-regression">[<a href="https://ubuntu.com/security/notices/USN-4646-2">USN-4646-2</a>] poppler regression</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-10871">CVE-2019-10871</a> <!-- raw HTML omitted --></li>
+<li>Some applications linked against poppler would fail - backed out this
+fix for future</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4647-1-thunderbird-vulnerabilities-02-25">[<a href="https://ubuntu.com/security/notices/USN-4647-1">USN-4647-1</a>] Thunderbird vulnerabilities [02:25]</h3>
+<ul>
+<li>13 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-26968">CVE-2020-26968</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26965">CVE-2020-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26961">CVE-2020-26961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26960">CVE-2020-26960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26959">CVE-2020-26959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26958">CVE-2020-26958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26956">CVE-2020-26956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26953">CVE-2020-26953</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26951">CVE-2020-26951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26950">CVE-2020-26950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-16012">CVE-2020-16012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15969">CVE-2020-15969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15683">CVE-2020-15683</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>78.5.0</li>
+<li>Usual web rendering type vulns - denial of service, obtain sensitive
+information across origins, bypass security restrictions, conduct
+phishing attacks, conduct cross-site scripting (XSS) attacks, bypass
+Content Security Policy (CSP) restrictions, conduct DNS rebinding
+attacks, or execute arbitrary code.</li>
+</ul>
+<h3 id="usn-4648-1-webkitgtk-vulnerabilities-03-21">[<a href="https://ubuntu.com/security/notices/USN-4648-1">USN-4648-1</a>] WebKitGTK vulnerabilities [03:21]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-9983">CVE-2020-9983</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-9952">CVE-2020-9952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-9951">CVE-2020-9951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-9948">CVE-2020-9948</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-13753">CVE-2020-13753</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>dejavu with thunderbird above - latest upstream version (2.30.3) and same sorts of
+vulns - including cross-site scripting attacks, denial of service
+attacks, and arbitrary code execution.</li>
+</ul>
+<h3 id="usn-4649-1-xdg-utils-vulnerability-03-54">[<a href="https://ubuntu.com/security/notices/USN-4649-1">USN-4649-1</a>] xdg-utils vulnerability [03:54]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27748">CVE-2020-27748</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Could cause files to be attached by not sanitizing <a href="mailto:?attach">mailto:?attach</a>= -
+particularly relevant to TB - so if a user is not paying attention, could
+attach say a sensitive local file to the outgoing email</li>
+</ul>
+<h3 id="usn-4382-2-freerdp-vulnerabilities-05-09">[<a href="https://ubuntu.com/security/notices/USN-4382-2">USN-4382-2</a>] FreeRDP vulnerabilities [05:09]</h3>
+<ul>
+<li>13 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-13398">CVE-2020-13398</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-13397">CVE-2020-13397</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-13396">CVE-2020-13396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11526">CVE-2020-11526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11525">CVE-2020-11525</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11523">CVE-2020-11523</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11522">CVE-2020-11522</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11521">CVE-2020-11521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11058">CVE-2020-11058</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11048">CVE-2020-11048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11046">CVE-2020-11046</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11045">CVE-2020-11045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11042">CVE-2020-11042</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-78/">Episode 78</a> - covered this for xenial, now for bionic</li>
+</ul>
+<h3 id="usn-4650-1-qemu-vulnerabilities-05-29">[<a href="https://ubuntu.com/security/notices/USN-4650-1">USN-4650-1</a>] QEMU vulnerabilities [05:29]</h3>
+<ul>
+<li>8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27617">CVE-2020-27617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27616">CVE-2020-27616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25723">CVE-2020-25723</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25625">CVE-2020-25625</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25624">CVE-2020-25624</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25085">CVE-2020-25085</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25084">CVE-2020-25084</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-17380">CVE-2020-17380</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible host RCE from guest via incorrect handling of SDHCI device
+emulation but mitigated when using libvirt by AppArmor profile</li>
+<li>Various issues with USB and other device emulation, crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-4651-1-mysql-vulnerabilities-06-14">[<a href="https://ubuntu.com/security/notices/USN-4651-1">USN-4651-1</a>] MySQL vulnerabilities [06:14]</h3>
+<ul>
+<li>Affecting Focal (20.04 LTS)</li>
+<li>Tom Reynolds (tomreyn in #ubuntu-hardened) reported issue with MySQL on
+20.04 had the new MySQLX plugin enabled and listenting on all network
+interfaces by default -&gt; violates no open ports principle - this update
+insteads changes the configuration to bind it to localhost only - if you
+were using it you may now need to change your local configuration to
+purposefully change this so it is remotely accessible</li>
+</ul>
+<h3 id="usn-4653-1-containerd-vulnerability-07-27">[<a href="https://ubuntu.com/security/notices/USN-4653-1">USN-4653-1</a>] containerd vulnerability [07:27]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-15257">CVE-2020-15257</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>containerd-shim API exposed from abstract unix socket to host network
+containers (in same network namespace) - would validate the effective UID
+of a connecting process as 0 but did not apply other access controls - so
+a malicious container in same network namespace with effective UID 0 but
+otherwise reduced privileges could spawn new processes via
+containerd-shim with full root privileges</li>
+<li>upstream advise against running containers in the hosts network namespace</li>
+<li>docker.io stops on upgrade of containerd
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/usn-4653-1-containerd-vulnerability/19607">https://discourse.ubuntu.com/t/usn-4653-1-containerd-vulnerability/19607</a></li>
+<li>manual restart</li>
+<li>server team working on a fix for this</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4652-1-sniffit-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4652-1">USN-4652-1</a>] SniffIt vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2014-5439">CVE-2014-5439</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4654-1-pear-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4654-1">USN-4654-1</a>] PEAR vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-28949">CVE-2020-28949</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-28948">CVE-2020-28948</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4655-1-werkzeug-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4655-1">USN-4655-1</a>] Werkzeug vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-28724">CVE-2020-28724</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-14806">CVE-2019-14806</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4656-1-x-dot-org-x-server-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4656-1">USN-4656-1</a>] X.Org X Server vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25712">CVE-2020-25712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14360">CVE-2020-14360</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4657-1-linux-kernel-vulnerabilities-09-11">[<a href="https://ubuntu.com/security/notices/USN-4657-1">USN-4657-1</a>] Linux kernel vulnerabilities [09:11]</h3>
+<ul>
+<li>12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-4788">CVE-2020-4788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-28915">CVE-2020-28915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25705">CVE-2020-25705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25645">CVE-2020-25645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25643">CVE-2020-25643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25284">CVE-2020-25284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25211">CVE-2020-25211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14390">CVE-2020-14390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14351">CVE-2020-14351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12352">CVE-2020-12352</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-10135">CVE-2020-10135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-0427">CVE-2020-0427</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Most interesting is Power 9 processers could end up exposing information
+via L1 cache -&gt; spectre-like attack could allow this to be read - fix is
+similar to spectre etc - flush L1 cache when transitioning between
+privilege boundaries</li>
+<li>Thanks to Daniel Axtens from IBM for doing a lot of the heavy lifting,
+working with the kernel team to provide backports etc</li>
+</ul>
+<h3 id="usn-4658-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4658-1">USN-4658-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-4788">CVE-2020-4788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-28915">CVE-2020-28915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25705">CVE-2020-25705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25645">CVE-2020-25645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25643">CVE-2020-25643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25284">CVE-2020-25284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25211">CVE-2020-25211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14390">CVE-2020-14390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14351">CVE-2020-14351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-10135">CVE-2020-10135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-0423">CVE-2020-0423</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4659-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4659-1">USN-4659-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>7 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-4788">CVE-2020-4788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-28915">CVE-2020-28915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27152">CVE-2020-27152</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25705">CVE-2020-25705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14351">CVE-2020-14351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-10135">CVE-2020-10135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-0423">CVE-2020-0423</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="github-state-of-open-source-security-report-2020-10-43">GitHub state of open source security report 2020 [10:43]</h3>
+<ul>
+<li><a href="https://octoverse.github.com/static/2020-security-report.pdf">https://octoverse.github.com/static/2020-security-report.pdf</a></li>
+<li>Scanned packages in Composer (PHP), Maven (Java), npm (JS), NuGet (.NET),
+PyPI and RubyGems</li>
+<li>Found 94% of projects on GitHub relied on open source components - JS
+packages have a median of nearly 700 transitive dependencies - cf Python
+with 19</li>
+<li>17% of advisories sampled related to explicitly malicious behaviour
+(almost all in npm packages) - but most are just mistakes</li>
+<li>Vulns go undetected for just over 4 years (218 weeks) before disclosure,
+fixes though then come quick in ~4.4 weeks and then 10 weeks to alert
+users of the fix</li>
+<li>A line of code written today is just as likely to contain a vulnerability
+today as 4 years ago - so we are not getting more secure over time</li>
+</ul>
+<h3 id="migrating-launchpad-pgp-keyservers-from-sks-to-hockeypuck-15-03">Migrating Launchpad PGP keyservers from SKS to Hockeypuck [15:03]</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/migrating-the-launchpad-keyservers-from-sks-to-hockeypuck">https://ubuntu.com/blog/migrating-the-launchpad-keyservers-from-sks-to-hockeypuck</a></li>
+</ul>
+<h3 id="apparmor-3-dot-0-dot-1-released-16-27">AppArmor 3.0.1 Released [16:27]</h3>
+<ul>
+<li><a href="https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.1">https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.1</a></li>
+<li>cap checkpoint_restore for 5.9 kernels onwards plus bug fixes etc</li>
+</ul>
+<h3 id="hiring-16-52">Hiring [16:52]</h3>
+<h4 id="apparmor-security-engineer">AppArmor Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2114847">https://canonical.com/careers/2114847</a></li>
+</ul>
+<h4 id="engineering-director-ubuntu-security">Engineering Director - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439068">https://canonical.com/careers/2439068</a></li>
+</ul>
+<h4 id="engineering-manager-ubuntu-security">Engineering Manager - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439058">https://canonical.com/careers/2439058</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E099.mp3" length="14174734" type="audio/mpeg" /><itunes:duration>18:35</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 98</title>
           <link>https://ubuntusecuritypodcast.org/episode-98/</link>
