@@ -1,13 +1,13 @@
 +++
 title = "Episode 100"
 description = """
-  For the last last episode of 2020, we look back at the most "popular"
+  For the last episode of 2020, we look back at the most "popular"
   packages on this podcast for this year as well as the biggest
   vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
   as well as vulnerability fixes from the past week too.
   """
 date = 2020-12-11T17:26:00+10:30
-lastmod = 2020-12-11T17:29:02+10:30
+lastmod = 2020-12-11T17:32:20+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -21,7 +21,7 @@ guid = "e1033eaebcf43b593d104d0bd33a86fd88a749bc08b321000daf4430672668126f4c0196
 
 ## Overview {#overview}
 
-For the last last episode of 2020, we look back at the most "popular"
+For the last episode of 2020, we look back at the most "popular"
 packages on this podcast for this year as well as the biggest
 vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
 as well as vulnerability fixes from the past week too.

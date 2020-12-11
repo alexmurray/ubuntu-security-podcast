@@ -15,13 +15,13 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E100.mp3 :podcast_duration "17:46" :podcast_bytes "14111732" :permalink "https://ubuntusecuritypodcast.org/episode-100/" :guid e1033eaebcf43b593d104d0bd33a86fd88a749bc08b321000daf4430672668126f4c0196e5068563f8b199231e762e712983f19f6c7ad7ac27a4b52e76f6e246
 :END:
 #+begin_description
-For the last last episode of 2020, we look back at the most "popular"
+For the last episode of 2020, we look back at the most "popular"
 packages on this podcast for this year as well as the biggest
 vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
 as well as vulnerability fixes from the past week too.
 #+end_description
 ** Overview
-For the last last episode of 2020, we look back at the most "popular"
+For the last episode of 2020, we look back at the most "popular"
 packages on this podcast for this year as well as the biggest
 vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
 as well as vulnerability fixes from the past week too.
