@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 4 Dec 2020 13:45:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2020 17:26:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,216 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 100</title>
+          <link>https://ubuntusecuritypodcast.org/episode-100/</link>
+          <pubDate>Fri, 11 Dec 2020 17:26:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>e1033eaebcf43b593d104d0bd33a86fd88a749bc08b321000daf4430672668126f4c0196e5068563f8b199231e762e712983f19f6c7ad7ac27a4b52e76f6e246</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 100</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          For the last last episode of 2020, we look back at the most &#34;popular&#34;
+  packages on this podcast for this year as well as the biggest
+  vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
+  as well as vulnerability...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  For the last last episode of 2020, we look back at the most &#34;popular&#34;
+  packages on this podcast for this year as well as the biggest
+  vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
+  as well as vulnerability fixes from the past week too.
+  </itunes:summary>
+        <description>  For the last last episode of 2020, we look back at the most &#34;popular&#34;
+  packages on this podcast for this year as well as the biggest
+  vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
+  as well as vulnerability fixes from the past week too.
+  </description>
+        <googleplay:description>  For the last last episode of 2020, we look back at the most &#34;popular&#34;
+  packages on this podcast for this year as well as the biggest
+  vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
+  as well as vulnerability fixes from the past week too.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>For the last last episode of 2020, we look back at the most &ldquo;popular&rdquo;
+packages on this podcast for this year as well as the biggest
+vulnerabilities from 2020, plus a BootHole presentation at Ubuntu Masters
+as well as vulnerability fixes from the past week too.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>21 unique CVEs addressed</p>
+<h3 id="usn-4660-1-linux-kernel-vulnerabilities-01-04">[<a href="https://ubuntu.com/security/notices/USN-4660-1">USN-4660-1</a>] Linux kernel vulnerabilities [01:04]</h3>
+<ul>
+<li>10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-4788">CVE-2020-4788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-28915">CVE-2020-28915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25645">CVE-2020-25645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25643">CVE-2020-25643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25641">CVE-2020-25641</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25285">CVE-2020-25285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25284">CVE-2020-25284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25211">CVE-2020-25211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14390">CVE-2020-14390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14351">CVE-2020-14351</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-99/">Episode 99</a></li>
+</ul>
+<h3 id="usn-4661-1-snapcraft-vulnerability-01-36">[<a href="https://ubuntu.com/security/notices/USN-4661-1">USN-4661-1</a>] Snapcraft vulnerability [01:36]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27348">CVE-2020-27348</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>itszn reported via Launchpad - LD_LIBRARY_PATH as generated by snapcraft
+would contain an empty element - so cwd would be included - if an
+attacker can drop a malicious library that will be loaded by a snap
+(eg. libc.so) into your home dir (and since home plug is used by almost
+all snaps - and is autoconnected on non-Ubuntu Core systems) would allow
+the attacker to get code-execution in the context of any snap</li>
+<li>Fixed in snapcraft - as part of the snap USN notification service -
+notified all affected snap publishers just need to rebuild their snaps
+and users will get protected via snap refresh</li>
+</ul>
+<h3 id="usn-4656-2-x-dot-org-x-server-vulnerabilities-04-20">[<a href="https://ubuntu.com/security/notices/USN-4656-2">USN-4656-2</a>] X.Org X Server vulnerabilities [04:20]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25712">CVE-2020-25712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14360">CVE-2020-14360</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-99/">Episode 99</a></li>
+</ul>
+<h3 id="usn-4662-1-openssl-vulnerability-04-34">[<a href="https://ubuntu.com/security/notices/USN-4662-1">USN-4662-1</a>] OpenSSL vulnerability [04:34]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-1971">CVE-2020-1971</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL pointer dereference when comparing two GENERAL_NAMEs with an
+EDIPARTYNAME - so if an attacker can cause this they can cause a crash -&gt;
+DoS in any application which uses openssl for TLS handling etc - this can
+be done if an attacker can get a client to check a malicious cert against
+a malicious CRL - and since some apps auto-download CRLs based on URLs
+presented in the cert itself this is not an unreasonable scenario - hence
+high priority as the attack complexity is not high in this case</li>
+</ul>
+<h3 id="usn-4663-1-gdk-pixbuf-vulnerability-05-53">[<a href="https://ubuntu.com/security/notices/USN-4663-1">USN-4663-1</a>] GDK-PixBuf vulnerability [05:53]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-29385">CVE-2020-29385</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>infinite loop when handling crafted LZW compression code in gifs -&gt; DoS</li>
+</ul>
+<h3 id="usn-4664-1-aptdaemon-vulnerabilities-06-31">[<a href="https://ubuntu.com/security/notices/USN-4664-1">USN-4664-1</a>] Aptdaemon vulnerabilities [06:31]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27349">CVE-2020-27349</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-16128">CVE-2020-16128</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Kevin Backhouse from Github reported via Launchpad</li>
+<li>aptdaemon provides dbus API for installing packages - provides an
+InstallFile method to install a local .deb - and uses policykit to ensure
+that unprivileged users cannot use this to install packages - however,
+that check only occurs <strong>after</strong> the deb has been parsed - so if there were
+vulns in the parsing (which is provided by apt itself) - since aptd runs
+as root could use these to get RCE - fixed by moving auth checks to occur
+before parsing anything</li>
+</ul>
+<h3 id="usn-4665-1-curl-vulnerabilities-08-32">[<a href="https://ubuntu.com/security/notices/USN-4665-1">USN-4665-1</a>] curl vulnerabilities [08:32]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8286">CVE-2020-8286</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8285">CVE-2020-8285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8284">CVE-2020-8284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8231">CVE-2020-8231</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues:
+<ul>
+<li>memory leak in handling of FTP wildcard matchings -&gt; DoS</li>
+<li>failure to properly validate OCSP responses</li>
+<li>incorrect handling of CONNECT_ONLY option -&gt; could end up connecting to
+wrong host -&gt; info leak</li>
+<li>incorrect handling of FTP PASV responses - server can respond with
+alternate IP address + port to connect to -&gt; could then trick clients
+into doing port-scanning on their behalf or other info gathering etc</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="look-back-over-2020-of-the-ubuntu-security-podcast">Look back over 2020 of the Ubuntu Security Podcast</h3>
+<h4 id="top-20-most-featured-packages-10-09">Top 20 most featured packages [10:09]</h4>
+<ul>
+<li>81 Linux kernel</li>
+<li>16 Firefox</li>
+<li>7 PHP</li>
+<li>6 Thunderbird</li>
+<li>6 Samba</li>
+<li>6 NSS</li>
+<li>6 Django</li>
+<li>5 WebKitGTK+</li>
+<li>5 Tomcat</li>
+<li>5 Squid</li>
+<li>5 QEMU</li>
+<li>5 OpenLDAP</li>
+<li>5 MySQL</li>
+<li>5 ClamAV</li>
+<li>4 X.Org X Server</li>
+<li>4 SQLite</li>
+<li>4 Python</li>
+<li>4 ppp</li>
+<li>4 OpenSSL</li>
+<li>4 OpenJDK</li>
+</ul>
+<h4 id="most-high-profile-vulnerabilities-12-53">Most high profile vulnerabilities [12:53]</h4>
+<ul>
+<li><a href="">PLATYPUS attack against Intel CPUs</a> (<a href="https://ubuntusecuritypodcast.org/episode-96/">Episode 96</a>)</li>
+<li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00435.html">BleedingTooth attack against bluez</a> (<a href="https://ubuntusecuritypodcast.org/episode-93/">Episode 93</a>)</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-93/#usn-4593-1-freetype-vulnerability-07-30">FreeType being exploited in the wild</a> (<a href="https://ubuntusecuritypodcast.org/episode-93/">Episode 93</a>)</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-84/#alex-and-joe-take-an-in-depth-and-behind-the-scenes-look-at-boothole-grub-2-08-14">BootHole attack against GRUB2</a> (<a href="https://ubuntusecuritypodcast.org/episode-84/">Episode 84</a>)</li>
+</ul>
+<h3 id="ubuntu-masters-4-together-we-sink-or-swim-plugging-the-boothole-14-12">Ubuntu Masters 4 - Together We Sink or Swim: Plugging the BootHole [14:12]</h3>
+<ul>
+<li><a href="https://www.brighttalk.com/webcast/6793/453235">https://www.brighttalk.com/webcast/6793/453235</a></li>
+<li>Chris Coulson + Daniel Kiper (Oracle, upstream grub maintainer) + Jesse
+Michael (Eclypsium, discovered original BootHole vuln)</li>
+<li>Earlier today / yesterday</li>
+</ul>
+<h3 id="hiring-15-58">Hiring [15:58]</h3>
+<h4 id="apparmor-security-engineer">AppArmor Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2114847">https://canonical.com/careers/2114847</a></li>
+</ul>
+<h4 id="engineering-director-ubuntu-security">Engineering Director - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439068">https://canonical.com/careers/2439068</a></li>
+</ul>
+<h4 id="engineering-manager-ubuntu-security">Engineering Manager - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439058">https://canonical.com/careers/2439058</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E100.mp3" length="14111732" type="audio/mpeg" /><itunes:duration>17:46</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 99</title>
           <link>https://ubuntusecuritypodcast.org/episode-99/</link>
