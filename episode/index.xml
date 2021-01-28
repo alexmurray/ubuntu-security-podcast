@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 28 Jan 2021 15:58:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 19:42:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -43,7 +43,7 @@
         <item>
           <title>Episode 101</title>
           <link>https://ubuntusecuritypodcast.org/episode-101/</link>
-          <pubDate>Thu, 28 Jan 2021 15:58:00 +1030 </pubDate>
+          <pubDate>Thu, 28 Jan 2021 19:42:00 +1030 </pubDate>
           <dc:creator></dc:creator>
           <guid>a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -218,7 +218,7 @@ exploit it</li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E101.mp3" length="17595789" type="audio/mpeg" /><itunes:duration>27:25</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E101.mp3" length="18542638" type="audio/mpeg" /><itunes:duration>27:25</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 100</title>
