@@ -6,15 +6,15 @@ description = """
   drivers and mutt. We also cover some open positions in the team and say
   farewell to long-time Ubuntu Security superstar Jamie Strandboge.
   """
-date = 2021-01-28T15:58:00+10:30
-lastmod = 2021-01-28T16:04:39+10:30
+date = 2021-01-28T19:42:00+10:30
+lastmod = 2021-01-28T19:42:49+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E101.mp3"
 podcast_duration = "27:25"
-podcast_bytes = 17595789
+podcast_bytes = 18542638
 permalink = "https://ubuntusecuritypodcast.org/episode-101/"
 guid = "a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581"
 +++

@@ -10,8 +10,8 @@
 * Episode 101
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-101
-:EXPORT_DATE: 2021-01-28 15:58
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E101.mp3 :podcast_duration "27:25" :podcast_bytes "17595789" :permalink "https://ubuntusecuritypodcast.org/episode-101/" :guid a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581
+:EXPORT_DATE: 2021-01-28 19:42
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E101.mp3 :podcast_duration "27:25" :podcast_bytes "18542638" :permalink "https://ubuntusecuritypodcast.org/episode-101/" :guid a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581
 :END:
 #+begin_description
 In the first episode for 2021 we bring back Joe McManus to discuss the
