@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 11 Dec 2020 17:26:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 15:58:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,186 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 101</title>
+          <link>https://ubuntusecuritypodcast.org/episode-101/</link>
+          <pubDate>Thu, 28 Jan 2021 15:58:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 101</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          In the first episode for 2021 we bring back Joe McManus to discuss the
+  SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+  drivers and mutt. We also cover some open positions in the team and say
+  farewell to...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  In the first episode for 2021 we bring back Joe McManus to discuss the
+  SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+  drivers and mutt. We also cover some open positions in the team and say
+  farewell to long-time Ubuntu Security superstar Jamie Strandboge.
+  </itunes:summary>
+        <description>  In the first episode for 2021 we bring back Joe McManus to discuss the
+  SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+  drivers and mutt. We also cover some open positions in the team and say
+  farewell to long-time Ubuntu Security superstar Jamie Strandboge.
+  </description>
+        <googleplay:description>  In the first episode for 2021 we bring back Joe McManus to discuss the
+  SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+  drivers and mutt. We also cover some open positions in the team and say
+  farewell to long-time Ubuntu Security superstar Jamie Strandboge.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>In the first episode for 2021 we bring back Joe McManus to discuss the
+SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+drivers and mutt. We also cover some open positions in the team and say
+farewell to long-time Ubuntu Security superstar Jamie Strandboge.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>22 unique CVEs addressed</p>
+<h3 id="usn-4689-3-nvidia-graphics-drivers-vulnerabilities-01-09">[<a href="https://ubuntu.com/security/notices/USN-4689-3">USN-4689-3</a>] NVIDIA graphics drivers vulnerabilities [01:09]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-1056">CVE-2021-1056</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-1053">CVE-2021-1053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-1052">CVE-2021-1052</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>3 different vulns in binary nvidia graphics drivers which could allow
+unprivileged users to DoS / info leak or possible priv esc</li>
+</ul>
+<h3 id="usn-4689-4-linux-kernel-update-01-42">[<a href="https://ubuntu.com/security/notices/USN-4689-4">USN-4689-4</a>] Linux kernel update [01:42]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-1056">CVE-2021-1056</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-1053">CVE-2021-1053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-1052">CVE-2021-1052</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Corresponding kernel updates for nvidia dkms driver update</li>
+</ul>
+<h3 id="usn-4697-2-pillow-vulnerabilities-02-00">[<a href="https://ubuntu.com/security/notices/USN-4697-2">USN-4697-2</a>] Pillow vulnerabilities [02:00]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-10177">CVE-2020-10177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35653">CVE-2020-35653</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4702-1-pound-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4702-1">USN-4702-1</a>] Pound vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-21245">CVE-2018-21245</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-10711">CVE-2016-10711</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4703-1-mutt-vulnerability-02-18">[<a href="https://ubuntu.com/security/notices/USN-4703-1">USN-4703-1</a>] Mutt vulnerability [02:18]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3181">CVE-2021-3181</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Memory allocation amplification attack -&gt; a &ldquo;small&rdquo; sized email can cause
+mutt to allocate a very large amount of memory when processing the email
+and cause it to crash as a result of exhausting available memory</li>
+<li>If had empty semicolons in an address field, mutt would allocate 40 bytes
+for each - so for a 1 byte ; mutt allocates 40 bytes - and so a 25MB
+email can cause mutt to allocate 1GB</li>
+</ul>
+<h3 id="usn-4704-1-libsndfile-vulnerabilities-03-52">[<a href="https://ubuntu.com/security/notices/USN-4704-1">USN-4704-1</a>] libsndfile vulnerabilities [03:52]</h3>
+<ul>
+<li>12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-3832">CVE-2019-3832</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19758">CVE-2018-19758</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19662">CVE-2018-19662</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19661">CVE-2018-19661</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19432">CVE-2018-19432</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-13139">CVE-2018-13139</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-6892">CVE-2017-6892</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-16942">CVE-2017-16942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14634">CVE-2017-14634</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14246">CVE-2017-14246</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14245">CVE-2017-14245</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-12562">CVE-2017-12562</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4705-1-sudo-vulnerabilities-04-06">[<a href="https://ubuntu.com/security/notices/USN-4705-1">USN-4705-1</a>] Sudo vulnerabilities [04:06]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-23239">CVE-2021-23239</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3156">CVE-2021-3156</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://www.openwall.com/lists/oss-security/2021/01/26/3">https://www.openwall.com/lists/oss-security/2021/01/26/3</a></li>
+<li><a href="https://blog.qualys.com/vulnerabilities-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit">https://blog.qualys.com/vulnerabilities-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit</a></li>
+<li>Qualys discovered a heap based buffer overflow in command-line argument
+parsing in sudo that has existed since July 2011</li>
+<li>sudo is setuid root so anyone who executes it is then running a process
+as root - so if a user can exploit a vuln in sudo to get code execution,
+can get code execution as root as so escalate privileges to root</li>
+<li>Requires to execute sudo as `sudoedit -s` since this then ensures the right
+mode is automatically set so that the vulnerability is active</li>
+<li>Developed 3 different exploits for this vulnerability against various
+Linux distros (Ubuntu 20.04, Debian 10, Fedora 33 etc)</li>
+<li>ASLR helps to make this harder to exploit since it randomises the
+location of the environment variables in memory etc but assuming an
+unprivileged user can run the exploit multiple times they can eventually
+exploit it</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="alex-discusses-the-solarwinds-hack-with-special-guest-joe-mcmanus-07-03">Alex discusses the SolarWinds hack with special guest Joe McManus [07:03]</h3>
+<ul>
+<li>Joe is now CISO at Drizly</li>
+<li><a href="https://www.zdnet.com/article/microsoft-fireeye-confirm-solarwinds-supply-chain-attack/">https://www.zdnet.com/article/microsoft-fireeye-confirm-solarwinds-supply-chain-attack/</a></li>
+<li><a href="https://srslyriskybiz.substack.com/p/newsletter38">https://srslyriskybiz.substack.com/p/newsletter38</a></li>
+</ul>
+<h3 id="private-home-directories-for-ubuntu-21-dot-04">Private home directories for Ubuntu 21.04</h3>
+<ul>
+<li><a href="https://ubuntusecuritypodcast.org/episode-98/">Episode 98</a></li>
+</ul>
+<h3 id="hiring">Hiring</h3>
+<h4 id="engineering-director-ubuntu-security">Engineering Director - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439068">https://canonical.com/careers/2439068</a></li>
+</ul>
+<h4 id="engineering-manager-ubuntu-security">Engineering Manager - Ubuntu Security</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2439058">https://canonical.com/careers/2439058</a></li>
+</ul>
+<h4 id="apparmor-security-engineer">AppArmor Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2114847">https://canonical.com/careers/2114847</a></li>
+</ul>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2085468">https://canonical.com/careers/2085468</a></li>
+</ul>
+<h3 id="farewells">Farewells</h3>
+<ul>
+<li>Jamie Strandboge (jdstrand)</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E101.mp3" length="17595789" type="audio/mpeg" /><itunes:duration>27:25</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 100</title>
           <link>https://ubuntusecuritypodcast.org/episode-100/</link>
