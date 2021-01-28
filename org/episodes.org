@@ -7,6 +7,120 @@
 # https://github.com/kaushalmodi/ox-hugo/issues/180
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
+* Episode 101
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-101
+:EXPORT_DATE: 2021-01-28 15:58
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E101.mp3 :podcast_duration "27:25" :podcast_bytes "17595789" :permalink "https://ubuntusecuritypodcast.org/episode-101/" :guid a804e169f1bfb0f7382c5fb1a8c8fa9eb343a0c46c0dfdae7c3ae59777124ec767f15d5045ff277e46a64bc95f5694abcc26763f56e66fa3c8da9c38ac5b5581
+:END:
+#+begin_description
+In the first episode for 2021 we bring back Joe McManus to discuss the
+SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+drivers and mutt. We also cover some open positions in the team and say
+farewell to long-time Ubuntu Security superstar Jamie Strandboge.
+#+end_description
+** Overview
+In the first episode for 2021 we bring back Joe McManus to discuss the
+SolarWinds hack plus we look at vulnerabilities in sudo, NVIDIA graphics
+drivers and mutt. We also cover some open positions in the team and say
+farewell to long-time Ubuntu Security superstar Jamie Strandboge.
+** This week in Ubuntu Security Updates
+22 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-4689-3][USN-4689-3]]] NVIDIA graphics drivers vulnerabilities [01:09]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-1056][CVE-2021-1056]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1053][CVE-2021-1053]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1052][CVE-2021-1052]] <!-- medium -->
+- 3 different vulns in binary nvidia graphics drivers which could allow
+  unprivileged users to DoS / info leak or possible priv esc
+
+*** [[[https://ubuntu.com/security/notices/USN-4689-4][USN-4689-4]]] Linux kernel update [01:42]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-1056][CVE-2021-1056]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1053][CVE-2021-1053]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1052][CVE-2021-1052]] <!-- medium -->
+- Corresponding kernel updates for nvidia dkms driver update
+
+*** [[[https://ubuntu.com/security/notices/USN-4697-2][USN-4697-2]]] Pillow vulnerabilities [02:00]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2020-10177][CVE-2020-10177]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-35653][CVE-2020-35653]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4702-1][USN-4702-1]]] Pound vulnerabilities
+- 2 CVEs addressed in Xenial (16.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2018-21245][CVE-2018-21245]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2016-10711][CVE-2016-10711]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4703-1][USN-4703-1]]] Mutt vulnerability [02:18]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-3181][CVE-2021-3181]] <!-- medium -->
+- Memory allocation amplification attack -> a "small" sized email can cause
+  mutt to allocate a very large amount of memory when processing the email
+  and cause it to crash as a result of exhausting available memory
+- If had empty semicolons in an address field, mutt would allocate 40 bytes
+  for each - so for a 1 byte ; mutt allocates 40 bytes - and so a 25MB
+  email can cause mutt to allocate 1GB
+
+*** [[[https://ubuntu.com/security/notices/USN-4704-1][USN-4704-1]]] libsndfile vulnerabilities [03:52]
+- 12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2019-3832][CVE-2019-3832]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19758][CVE-2018-19758]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19662][CVE-2018-19662]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19661][CVE-2018-19661]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19432][CVE-2018-19432]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-13139][CVE-2018-13139]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-6892][CVE-2017-6892]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16942][CVE-2017-16942]] <!-- negligible -->
+  - [[https://ubuntu.com/security/CVE-2017-14634][CVE-2017-14634]] <!-- negligible -->
+  - [[https://ubuntu.com/security/CVE-2017-14246][CVE-2017-14246]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14245][CVE-2017-14245]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12562][CVE-2017-12562]] <!-- low -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4705-1][USN-4705-1]]] Sudo vulnerabilities [04:06]
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-23239][CVE-2021-23239]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3156][CVE-2021-3156]] <!-- high -->
+- https://www.openwall.com/lists/oss-security/2021/01/26/3
+- https://blog.qualys.com/vulnerabilities-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit
+- Qualys discovered a heap based buffer overflow in command-line argument
+  parsing in sudo that has existed since July 2011
+- sudo is setuid root so anyone who executes it is then running a process
+  as root - so if a user can exploit a vuln in sudo to get code execution,
+  can get code execution as root as so escalate privileges to root
+- Requires to execute sudo as `sudoedit -s` since this then ensures the right
+  mode is automatically set so that the vulnerability is active
+- Developed 3 different exploits for this vulnerability against various
+  Linux distros (Ubuntu 20.04, Debian 10, Fedora 33 etc)
+- ASLR helps to make this harder to exploit since it randomises the
+  location of the environment variables in memory etc but assuming an
+  unprivileged user can run the exploit multiple times they can eventually
+  exploit it
+
+** Goings on in Ubuntu Security Community
+*** Alex discusses the SolarWinds hack with special guest Joe McManus [07:03]
+- Joe is now CISO at Drizly
+- https://www.zdnet.com/article/microsoft-fireeye-confirm-solarwinds-supply-chain-attack/
+- https://srslyriskybiz.substack.com/p/newsletter38
+*** Private home directories for Ubuntu 21.04
+- [[https://ubuntusecuritypodcast.org/episode-98/][Episode 98]]
+*** Hiring
+**** Engineering Director - Ubuntu Security
+- https://canonical.com/careers/2439068
+**** Engineering Manager - Ubuntu Security
+- https://canonical.com/careers/2439058
+**** AppArmor Security Engineer
+- https://canonical.com/careers/2114847
+**** Ubuntu Security Engineer
+- https://canonical.com/careers/2085468
+*** Farewells
+- Jamie Strandboge (jdstrand)
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 
 * Episode 100
 :PROPERTIES:
