@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+  20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+  Autoar and more.
+  ">
+
+<meta name="generator" content="Hugo 0.80.0" />
+
+<meta property="og:title" content="Episode 104" />
+<meta name="twitter:title" content="Episode 104"/>
+<meta itemprop="name" content="Episode 104">
+<meta property="article:published_time" content="2021-02-19T22:44:00&#43;10:30" />
+<meta property="article:modified_time" content="2021-02-19T22:44:55&#43;10:30" />
+<meta property="og:updated_time" content="2021-02-19T22:44:55&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+  20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+  Autoar and more.
+  " />
+    <meta name="twitter:description" content="  This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+  20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+  Autoar and more.
+  " />
+    <meta itemprop="description" content="  This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+  20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+  Autoar and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-104/" />
+
+
+
+
+<title>Episode 104</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-104/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 104</h1><small>Posted on Friday, Feb 19, 2021 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+Autoar and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E104.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we take a look at a long-awaited update of Thunderbird in Ubuntu
+20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME
+Autoar and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>14 unique CVEs addressed</p>
+<h3 id="usn-4729-1-open-vswitch-vulnerability-00-55">[<a href="https://ubuntu.com/security/notices/USN-4729-1">USN-4729-1</a>] Open vSwitch vulnerability [00:55]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-35498">CVE-2020-35498</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Most convoluted CVE description: A vulnerability was found in
+openvswitch. A limitation in the implementation of userspace packet
+parsing can allow a malicious user to send a specially crafted packet
+causing the resulting megaflow in the kernel to be too wide, potentially
+causing a denial of service. The highest threat from this vulnerability
+is to system availability.</li>
+</ul>
+<h3 id="usn-4731-1-junit-4-vulnerability-02-05">[<a href="https://ubuntu.com/security/notices/USN-4731-1">USN-4731-1</a>] JUnit 4 vulnerability [02:05]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-15250">CVE-2020-15250</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Tests that used rule TemporaryFolder would use /tmp which is world
+accessible - so contents could be read by other users - so if tests were
+writing API keys or passwords these would be able to be read by others
+users -&gt; info disclosure. Fixed to create temp directory with permissions
+so it is only readable by the owner.</li>
+</ul>
+<h3 id="usn-4730-1-postsrsd-vulnerability-02-57">[<a href="https://ubuntu.com/security/notices/USN-4730-1">USN-4730-1</a>] PostSRSd vulnerability [02:57]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-35573">CVE-2020-35573</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Postfix Sender Rewriter Scheme Daemon - Used for rewriting sender email
+addresses when forwarding emails from hosts that use SPF - rewrites the
+address to appear to come from your hosts address and allows you to do
+the inverse and appropriately handle and bounces etc by reverse-rewriting
+the sender address to recover the original address</li>
+<li>Could cause a CPU based DoS by excessive processing if an email contained
+an exceedingly long SRS timestamp - fixed to just reject those which are
+past the expected regular size</li>
+</ul>
+<h3 id="usn-4732-1-sqlite-vulnerability-04-20">[<a href="https://ubuntu.com/security/notices/USN-4732-1">USN-4732-1</a>] SQLite vulnerability [04:20]</h3>
+<ul>
+<li>1 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20227">CVE-2021-20227</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Only affected more recent releases of sqlite - could cause a crash on
+particular query constructs</li>
+</ul>
+<h3 id="usn-4733-1-gnome-autoar-vulnerability-04-42">[<a href="https://ubuntu.com/security/notices/USN-4733-1">USN-4733-1</a>] GNOME Autoar vulnerability [04:42]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-36241">CVE-2020-36241</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Another archive extraction symlink traversal issue - gnome-autoar is a
+library used by nautilus and other gnome components when handling
+archives - ie right click an archive in nautilus and select &ldquo;extract
+here&rdquo;</li>
+<li>If an archive contained a file whose parent was a symlink that pointed
+outside the destination directory, would blindly follow the symlink and
+overwrite arbitrary files - instead fixed to check if is a symlink with
+an absolute target OR one that points outside the destination folder via
+relative path and reject in that case</li>
+</ul>
+<h3 id="usn-4734-1-usn-4734-2-wpa-supplicant-and-hostapd-vulnerabilities-06-01">[<a href="https://ubuntu.com/security/notices/USN-4734-1">USN-4734-1</a>, <a href="https://ubuntu.com/security/notices/USN-4734-2">USN-4734-2</a>] wpa_supplicant and hostapd vulnerabilities [06:01]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-12695">CVE-2020-12695</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0326">CVE-2021-0326</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible OOB write when doing a wifi-direct / p2p search - so an attacker
+just has to be in radio range when the victim performs a P2P discovery
+aka wifi direct search - discovered by Google&rsquo;s OSS-Fuzz project</li>
+<li>CallStranger (<a href="https://ubuntusecuritypodcast.org/episode-91/">Episode 91</a>) - UPnP callback reflection</li>
+</ul>
+<h3 id="usn-4735-1-postgresql-vulnerability-07-23">[<a href="https://ubuntu.com/security/notices/USN-4735-1">USN-4735-1</a>] PostgreSQL vulnerability [07:23]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3393">CVE-2021-3393</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream 12.6 release to fix a possible info leak which could
+occur when handling particular errors - if a user had the permission to
+UPDATE on a partitioned table but not the SELECT privilege on some column
+and tried to UPDATE on that column, the resulting error message
+concerning this constraint violation could leak values on the columns
+which the user did not have permission. Rare setup so unlikely to be
+affected in practice.</li>
+</ul>
+<h3 id="usn-4736-1-thunderbird-vulnerabilities-08-18">[<a href="https://ubuntu.com/security/notices/USN-4736-1">USN-4736-1</a>] Thunderbird vulnerabilities [08:18]</h3>
+<ul>
+<li>6 CVEs addressed in Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-15685">CVE-2020-15685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23964">CVE-2021-23964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23960">CVE-2021-23960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23954">CVE-2021-23954</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23953">CVE-2021-23953</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26976">CVE-2020-26976</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Update to latest upstream release 78.7, usual spread of issues for TB
+(derived from firefox) - DoS, info leak, RCE. Also possible response
+injection attack from a person-in-the-middle during STARTTLS connection
+setup - ie could inject unencrypted response which would then be
+evaluated <strong>after</strong> the encrypted connection was setup so would get treated
+as coming from the trusted host.</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="thunderbird-to-be-upgraded-to-78-dot-x-in-ubuntu-20-dot-04-lts-09-32">Thunderbird to be upgraded to 78.x in Ubuntu 20.04 LTS [09:32]</h3>
+<ul>
+<li>Lead by oSoMoN (Olivier Tilloy) from Desktop Team</li>
+<li>68.x no longer supported upstream and not really practical to backport
+security fixes for this old codebase</li>
+<li>78.x as a new major version introduces a bunch of breaking changes, in
+particular with handling of PGP - previously TB had no native support for
+PGP but Enigmail addon provided this</li>
+<li>Now does support PGP itself and enigmail is not supported anymore - new
+internal PGP is a bit different and requires migration - this should be
+handled automatically by the new version to migrate existing enigmail
+users across</li>
+<li>A couple other packages tinyjsd and junit are also not supported by TB 78
+<ul>
+<li>tinyjsd - JS debugger with a particular focus on being able to debug TB
+extensions etc</li>
+<li>jsunit - unit testing tool for TB to allow add-on developers to setup
+unit tests for their extensions and to run these in TB/FF etc</li>
+<li>these will be replaced by empty packages in the Ubuntu archive for
+20.04</li>
+</ul>
+</li>
+<li>Once this is done will then look to do Bionic (18.04 LTS) as well</li>
+<li><a href="https://discourse.ubuntu.com/t/thunderbird-lts-update/20819">https://discourse.ubuntu.com/t/thunderbird-lts-update/20819</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-103/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-104\/",
+        text: "Episode 104"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
