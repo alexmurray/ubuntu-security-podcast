@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 19 Feb 2021 22:44:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 25 Feb 2021 15:38:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,239 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 105</title>
+          <link>https://ubuntusecuritypodcast.org/episode-105/</link>
+          <pubDate>Thu, 25 Feb 2021 15:38:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>d7e05c6a419fcf89029f94175d43fffa4b8846d99a3c112920035f23f76ad445ed7fec71a0e75e70b61b4fb73114f4341cce4426f1cd4c1da49dc2a7f7cce45a</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 105</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we discuss security updates in Linux Mint, Google funding Linux
+  kernel security development and details for security updates in BIND,
+  OpenSSL, Jackson, OpenLDAP and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we discuss security updates in Linux Mint, Google funding Linux
+  kernel security development and details for security updates in BIND,
+  OpenSSL, Jackson, OpenLDAP and more.
+  </itunes:summary>
+        <description>  This week we discuss security updates in Linux Mint, Google funding Linux
+  kernel security development and details for security updates in BIND,
+  OpenSSL, Jackson, OpenLDAP and more.
+  </description>
+        <googleplay:description>  This week we discuss security updates in Linux Mint, Google funding Linux
+  kernel security development and details for security updates in BIND,
+  OpenSSL, Jackson, OpenLDAP and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we discuss security updates in Linux Mint, Google funding Linux
+kernel security development and details for security updates in BIND,
+OpenSSL, Jackson, OpenLDAP and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>14 unique CVEs addressed</p>
+<h3 id="usn-4737-1-bind-vulnerability-00-45">[<a href="https://ubuntu.com/security/notices/USN-4737-1">USN-4737-1</a>] Bind vulnerability [00:45]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8625">CVE-2020-8625</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>If using GSS-TSIG could be vulnerable to a DoS or possible RCE - this
+option is not enabled by default BUT is often used when bind is
+integrated with Samba or with a AD-DC. In Ubuntu we confine BIND with an
+AppArmor profile by default isolates BIND quite tightly so helps to
+mitigate any affect a possible RCE attack could have.
+<ul>
+<li>Was interesting to see upstream released <a href="https://www.openwall.com/lists/oss-security/2021/02/19/1">2</a> <a href="https://www.openwall.com/lists/oss-security/2021/02/20/2">advisories</a> that some of
+their upstream version updates (e.g. 9.16.12) for this caused some
+regressions as this included some new as well features - and they
+specifically ended up recommended downstreams ship the prior version
+(9.16.11) with just the fix for this backported - this is what we do in
+Ubuntu precisely for this reason, to minimise the chance of introducing
+regressions in our security updates by only backporting the patch for
+the particularly vulnerability</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4738-1-openssl-vulnerabilities-02-13">[<a href="https://ubuntu.com/security/notices/USN-4738-1">USN-4738-1</a>] OpenSSL vulnerabilities [02:13]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-23841">CVE-2021-23841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23840">CVE-2021-23840</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr deref when parsing malicious issuer fields in X509
+certificates - crash, DoS</li>
+<li>Possible buffer overflow if some library functions were used in an
+unlikely manner - had to specify an input length that was close to the
+bounds of an integer size of the platform - so only if calling with a
+buffer of INT_MAX or similar could this be an issue</li>
+</ul>
+<h3 id="usn-4745-1-openssl-vulnerabilities-02-56">[<a href="https://ubuntu.com/security/notices/USN-4745-1">USN-4745-1</a>] OpenSSL vulnerabilities [02:56]</h3>
+<ul>
+<li>2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-23841">CVE-2021-23841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-1971">CVE-2020-1971</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr deref above plus separate NULL pointer deref in handling of
+EDIPartyNames as discussed in <a href="https://ubuntusecuritypodcast.org/episode-100/">Episode 100</a></li>
+</ul>
+<h3 id="usn-4739-1-webkitgtk-vulnerability-03-25">[<a href="https://ubuntu.com/security/notices/USN-4739-1">USN-4739-1</a>] WebKitGTK vulnerability [03:25]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-13558">CVE-2020-13558</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF in audio handling - specially crafted webpage could cause an RCE on
+local machine</li>
+</ul>
+<h3 id="usn-4741-1-jackson-vulnerabilities-03-40">[<a href="https://ubuntu.com/security/notices/USN-4741-1">USN-4741-1</a>] Jackson vulnerabilities [03:40]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial (16.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-10172">CVE-2019-10172</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-7525">CVE-2017-7525</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-15095">CVE-2017-15095</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>JSON processor for Java - allows to map JSON to Java objects</li>
+<li>Flaws in (de)serialization could expose various classes to being mapped
+to the resulting input and hence allow a remote code execution attack -
+fix is to deny various classes being mapped as a result</li>
+<li>Also fixed an XML external entity issue that could also result in RCE</li>
+</ul>
+<h3 id="usn-4740-1-apache-shiro-vulnerabilities-04-20">[<a href="https://ubuntu.com/security/notices/USN-4740-1">USN-4740-1</a>] Apache Shiro vulnerabilities [04:20]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-1957">CVE-2020-1957</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11989">CVE-2020-11989</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different possible authentication bypass issues when using with Spring
+dynamic controllers</li>
+</ul>
+<h3 id="usn-4742-1-django-vulnerability-04-33">[<a href="https://ubuntu.com/security/notices/USN-4742-1">USN-4742-1</a>] Django vulnerability [04:33]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-23336">CVE-2021-23336</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible web-cache poisoning attack - due to difference in handling of
+requests between the proxy and the server - malicious requests can be
+cached as they look like safe ones due to difference in interpretation</li>
+</ul>
+<h3 id="usn-4743-1-gdk-pixbuf-vulnerability-05-06">[<a href="https://ubuntu.com/security/notices/USN-4743-1">USN-4743-1</a>] GDK-PixBuf vulnerability [05:06]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20240">CVE-2021-20240</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Integer underflow in GIF loader - code execution?</li>
+</ul>
+<h3 id="usn-4744-1-openldap-vulnerability-05-27">[<a href="https://ubuntu.com/security/notices/USN-4744-1">USN-4744-1</a>] OpenLDAP vulnerability [05:27]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-27212">CVE-2021-27212</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Assertion failure could be triggered by crafted timestamp content -&gt; crash, DoS</li>
+</ul>
+<h3 id="usn-4467-3-qemu-regression-05-46">[<a href="https://ubuntu.com/security/notices/USN-4467-3">USN-4467-3</a>] QEMU regression [05:46]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-13754">CVE-2020-13754</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>In patching previous vulnerabilities in QEMU, we backported various
+patches but missed some related to riscv emulation so would cause a
+possible crash in this case - fixed to add missing patches to resolve
+this crash issue</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="linux-mint-users-being-slow-with-security-updates-running-old-versions-06-33">Linux Mint users being slow with security updates, running old versions [06:33]</h3>
+<ul>
+<li><a href="https://www.zdnet.com/article/top-linux-distro-tells-users-stop-using-out-of-date-versions-update-your-software-now/">https://www.zdnet.com/article/top-linux-distro-tells-users-stop-using-out-of-date-versions-update-your-software-now/</a></li>
+<li><a href="https://www.theregister.com/2021/02/23/linux%5Fmint%5Fteam%5Fberates%5Fusers/">https://www.theregister.com/2021/02/23/linux%5Fmint%5Fteam%5Fberates%5Fusers/</a></li>
+<li><a href="https://blog.linuxmint.com/?p=4030">https://blog.linuxmint.com/?p=4030</a></li>
+<li>Blog post from lead developer Clem (Clement Lefebvre) discussing how
+Linux Mint users seem to not be installing updates</li>
+<li>Linux Mint is a Ubuntu derivative - uses the Ubuntu archives plus some of
+their own repos - so in general all security updates for Ubuntu get
+propagated to Linux Mint - cf. relationship between Ubuntu and Debian.</li>
+<li>Interesting history in regards to security
+<ul>
+<li>In Febrary 2016, website was hacked and the link to the installer ISO
+was modified to point to a malicious one with a backdoor -
+<a href="https://blog.linuxmint.com/?p=2994">https://blog.linuxmint.com/?p=2994</a></li>
+<li>Recommend to turn of UEFI Secure Boot since their shim is not signed by
+Microsoft</li>
+<li>Update Manager would offer security updates but would rate them in
+supposed terms of safety - so would in essence deter users from
+installing some security updates - and also would not select to install
+some updates which they deemed as more risky - but how did they assign
+this safety level? Based more on if a component was critical to boot
+(kernel/firmware would get rated as more risky) than anything to do
+with the actual update itself. So was intended to help guide users BUT
+created a system where users believed they were &ldquo;safer&rdquo; in terms of
+stability, but in fact were less safe in terms of security.</li>
+<li>This created an impression that Linux Mint either blocked security
+updates or actively discouraged users from installing them -
+<a href="https://distrowatch.com/weekly.php?issue=20170320#myth">https://distrowatch.com/weekly.php?issue=20170320#myth</a></li>
+<li>These levels were removed in the 19.2 release but it seems users are
+still wary</li>
+</ul>
+</li>
+<li>30% of users apply updates in less than a week (based on recent Firefox update)</li>
+<li>30% of users are still running 17.x - EOLd in April 2019 - (based on
+Ubuntu 14.04)</li>
+<li>So it is not really surprising given their past history that their
+userbase is wary of security updates and are perhaps putting themselves
+at risk as a result by delaying installing security updates</li>
+<li>But good to see they are now actively encouraging users to install
+security updates</li>
+<li>Use of timeshift is interesting as a mitigation against possible issues
+with security updates</li>
+<li>Also was interesting to see they published an emergency update just for
+Firefox for the 17.x release to upgrade this from 66.0 to 78 ESR - so
+this gives some protection but perhaps again lessens the incentive for
+these users to upgrade to a newer supported release of Linux Mint</li>
+</ul>
+<h3 id="google-funds-linux-kernel-developers-to-work-exclusively-on-security-14-20">Google funds Linux kernel developers to work exclusively on security [14:20]</h3>
+<ul>
+<li><a href="https://www.linuxfoundation.org/en/press-release/google-funds-linux-kernel-developers-to-focus-exclusively-on-security/">https://www.linuxfoundation.org/en/press-release/google-funds-linux-kernel-developers-to-focus-exclusively-on-security/</a></li>
+<li>Gustavo Silva and Nathan Chancellor</li>
+<li>Chancellor - Triaging and fixing bugs found via Clang/LLVM, CI systems
+<ul>
+<li>Already leading a lot of the upstream ClangBuiltLinux work</li>
+</ul>
+</li>
+<li>Silva - KSPP related work on eliminating bug classes - VLAs etc</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E105.mp3" length="13486792" type="audio/mpeg" /><itunes:duration>17:03</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 104</title>
           <link>https://ubuntusecuritypodcast.org/episode-104/</link>
