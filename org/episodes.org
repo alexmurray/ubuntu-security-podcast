@@ -8,6 +8,207 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 106
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-106
+:EXPORT_DATE: 2021-03-04 15:38
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E106.mp3 :podcast_duration "14:00" :podcast_bytes "11510651" :permalink "https://ubuntusecuritypodcast.org/episode-106/" :guid 85ce611b78e86ab697836030bbe87fac13492f26f69c3e578cdd3d689bd2801603926023f74a31e4ad4b1303355e3c838eb34f5461543ec773c8e7466906ff0f
+:END:
+#+begin_description
+This week we talk about more BootHole-like vulnerabilities in GRUB2, a
+Spectre exploit found in-the-wild, security updates for xterm, screen,
+Python, wpa_supplicant and more.
+#+end_description
+** Overview
+This week we talk about more BootHole-like vulnerabilities in GRUB2, a
+Spectre exploit found in-the-wild, security updates for xterm, screen,
+Python, wpa_supplicant and more.
+** This week in Ubuntu Security Updates
+52 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-4698-2][USN-4698-2]]] Dnsmasq regression [00:44]
+- 8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2019-14834][CVE-2019-14834]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-25686][CVE-2020-25686]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25685][CVE-2020-25685]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25684][CVE-2020-25684]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25683][CVE-2020-25683]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25682][CVE-2020-25682]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25687][CVE-2020-25687]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25681][CVE-2020-25681]] <!-- medium -->
+- Relates to a dnsmasq update done back in January - upstream fixes results
+  in regressions in some network environments - backported the resulting
+  additional fixes from upstream to resolve these
+
+*** [[[https://ubuntu.com/security/notices/USN-4746-1][USN-4746-1]]] xterm vulnerability [01:14]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-27135][CVE-2021 -27135]] <!-- medium -->
+- taviso - crafted UTF-8 could cause a crash - related to very similar bug
+  in screen
+
+*** [[[https://ubuntu.com/security/notices/USN-4747-1][USN-4747-1]], [[https://ubuntu.com/security/notices/USN-4747-2][USN-4747-2]]] GNU Screen vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-26937][CVE-2021-26937]] <!-- medium -->
+- Crash in screen from crafted UTF-8 - found by users crashing a minecraft
+  server with this crafted content - ? - server was running under screen so
+  would log this crafted content - screen dies, minecraft server dies -
+  lots of tutorials for running a minecraft server mention to run it under
+  screen so this is a common thing apparently
+
+*** [[[https://ubuntu.com/security/notices/USN-4748-1][USN-4748-1]]] Linux kernel vulnerabilities [02:54]
+- 5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29568][CVE-2020-29568]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29374][CVE-2020-29374]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27815][CVE-2020-27815]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4749-1][USN-4749-1]]] Linux kernel vulnerabilities
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29569][CVE-2020-29569]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29568][CVE-2020-29568]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29374][CVE-2020-29374]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28941][CVE-2020-28941]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27830][CVE-2020-27830]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27815][CVE-2020-27815]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25669][CVE-2020-25669]] <!-- low -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4750-1][USN-4750-1]]] Linux kernel vulnerabilities
+- 10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-20177][CVE-2021-20177]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29569][CVE-2020-29569]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29568][CVE-2020-29568]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-28588][CVE-2020-28588]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28941][CVE-2020-28941]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27830][CVE-2020-27830]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27815][CVE-2020-27815]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25669][CVE-2020-25669]] <!-- low -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4751-1][USN-4751-1]]] Linux kernel vulnerabilities
+- 18 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2020-35508][CVE-2020-35508]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29569][CVE-2020-29569]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29568][CVE-2020-29568]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-28974][CVE-2020-28974]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28588][CVE-2020-28588]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27835][CVE-2020-27835]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28941][CVE-2020-28941]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27830][CVE-2020-27830]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27815][CVE-2020-27815]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27777][CVE-2020-27777]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27675][CVE-2020-27675]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-27673][CVE-2020-27673]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25704][CVE-2020-25704]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25669][CVE-2020-25669]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-25668][CVE-2020-25668]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25656][CVE-2020-25656]] <!-- low -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4752-1][USN-4752-1]]] Linux kernel (OEM) vulnerabilities
+- 20 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-35508][CVE-2020-35508]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29371][CVE-2020-29371]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29369][CVE-2020-29369]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-29368][CVE-2020-29368]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28915][CVE-2020-28915]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-28588][CVE-2020-28588]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27815][CVE-2020-27815]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27152][CVE-2020-27152]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25704][CVE-2020-25704]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25643][CVE-2020-25643]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25641][CVE-2020-25641]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25284][CVE-2020-25284]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25212][CVE-2020-25212]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-24490][CVE-2020-24490]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-15437][CVE-2020-15437]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-15436][CVE-2020-15436]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-14314][CVE-2020-14314]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-10135][CVE-2020-10135]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4753-1][USN-4753-1]]] Linux kernel (OEM) vulnerability
+- 2 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3178][CVE-2021-3178]] <!-- negligible -->
+  - [[https://ubuntu.com/security/CVE-2020-28374][CVE-2020-28374]] <!-- high -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4754-1][USN-4754-1]]] Python vulnerabilities [03:07]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-3177][CVE-2021-3177]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-27619][CVE-2020-27619]] <!-- low -->
+- unsafe sprintf() call to format doubles - heap buffer overflow - BUT on
+  Ubuntu Python (like the vast majority of the archive) is compiled with
+  FORTIFY_SOURCE - just one of various hardening features - so can detect
+  some buffer overflows at runtime - turns this into a DoS
+- test code calls eval on content received via HTTP - so if ran the tests
+  and someone could interpose on connection, could get RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-4754-2][USN-4754-2]]] Python regression
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-27619][CVE-2020-27619]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3177][CVE-2021-3177]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4754-4][USN-4754-4]]] Python 2.7 vulnerability
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-27619][CVE-2020-27619]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3177][CVE-2021-3177]] <!-- medium -->
+
+*** [[[https://ubuntu.com/security/notices/USN-4755-1][USN-4755-1]]] LibTIFF vulnerabilities [04:21]
+- 2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2020-35524][CVE-2020-35524]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-35523][CVE-2020-35523]] <!-- medium -->
+- Heap buffer overflow in tiff2pdf tool and integer overflow -> buffer
+  overflow from crafted tiff file input
+
+*** [[[https://ubuntu.com/security/notices/USN-4737-2][USN-4737-2]]] Bind vulnerability [04:39]
+- 1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2020-8625][CVE-2020-8625]] <!-- medium -->
+- [[https://ubuntusecuritypodcast.org/episode-105/][Episode 105]]
+
+*** [[[https://ubuntu.com/security/notices/USN-4757-1][USN-4757-1]]] wpa_supplicant and hostapd vulnerability [04:53]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-27803][CVE-2021-27803]] <!-- medium -->
+- When using P2P could result in a UAF -> crash or possible RCE from a
+  remote user within local radio range
+
+** Goings on in Ubuntu Security Community
+*** GRUB2 Secure Boot Bypass 2021 [05:31]
+- https://ubuntu.com/blog/grub2-secure-boot-bypass-2021
+- https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/GRUB2SecureBootBypass2021
+- https://discourse.ubuntu.com/t/grub2-secureboot-bypass-2021-and-one-grub/21200
+
+*** First Spectre Exploit discovered in the wild [09:47]
+- https://dustri.org/b/spectre-exploits-in-the-wild.html
+- Uploaded to VT last month - not the first artefacts the use Spectre to be
+  uploaded - back in 2018 the original PoCs and various variants thereof
+  were uploaded to VT but these were all benign.
+- This one is a real exploit with versions targeting Windows and Linux -
+  the Linux variant reads /etc/shadow by default - it does this by spawning
+  a call to su to get the file paged into memory, then by walking in-kernel
+  file-system structures through their spec exec read gadget to eventually
+  read and dump out the file
+- Was developed by Immunity as part of their CANVAS tool
+  (https://vimeo.com/271127615)
+
+*** Linux Mint to more forcefully encourage security updates be installed [12:02]
+- https://blog.linuxmint.com/?p=4037
+- Update manager will track metrics, can then detect cases where updates
+  are overlooked, remind or even insist to apply updates
+- Focus on not getting in the way, here to help, employ smart patters and
+  usages, will be configurable etc
+- Still forming strategies but space to watch
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 105
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-105
