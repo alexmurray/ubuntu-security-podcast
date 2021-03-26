@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Mar 2021 11:19:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Mar 2021 21:38:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 109</title>
+      <link>https://ubuntusecuritypodcast.org/episode-109/</link>
+      <pubDate>Fri, 26 Mar 2021 21:38:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-109/</guid>
+      <description>Overview This week we look at security updates for containerd, Ruby, the Linux kernel, Pygments and more, plus we cover some open positions within the team as well.
+This week in Ubuntu Security Updates 28 unique CVEs addressed
+[USN-4881-1] containerd vulnerability [00:38]  1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)  CVE-2021-21334    When using the containerd CRI implementation (kubernetes container runtime interface) - would share environment variables etc between containers that shared the same image - so could allow an inadvertent info leak from one container to another - race condition so would be less likely to occur if not launching containers in rapid succession which share the same image  [USN-4882-1] Ruby vulnerabilities [01:27]  3 CVEs addressed in Xenial (16.</description>
+    </item>
+    
     <item>
       <title>Episode 108</title>
       <link>https://ubuntusecuritypodcast.org/episode-108/</link>

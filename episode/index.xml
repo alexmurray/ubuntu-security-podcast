@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 19 Mar 2021 11:19:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 26 Mar 2021 21:38:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,194 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 109</title>
+          <link>https://ubuntusecuritypodcast.org/episode-109/</link>
+          <pubDate>Fri, 26 Mar 2021 21:38:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>23a44745f686037a64e99f2db617828256373927f9e45bb2a6760f542bc6aaa6a78e7d0738bac74e3b5f98d767a562aa5d48934ea808a5039bbd9a6a8849b4a1</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 109</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we look at security updates for containerd, Ruby, the Linux
+  kernel, Pygments and more, plus we cover some open positions within the
+  team as well.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we look at security updates for containerd, Ruby, the Linux
+  kernel, Pygments and more, plus we cover some open positions within the
+  team as well.
+  </itunes:summary>
+        <description>  This week we look at security updates for containerd, Ruby, the Linux
+  kernel, Pygments and more, plus we cover some open positions within the
+  team as well.
+  </description>
+        <googleplay:description>  This week we look at security updates for containerd, Ruby, the Linux
+  kernel, Pygments and more, plus we cover some open positions within the
+  team as well.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at security updates for containerd, Ruby, the Linux
+kernel, Pygments and more, plus we cover some open positions within the
+team as well.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>28 unique CVEs addressed</p>
+<h3 id="usn-4881-1-containerd-vulnerability-00-38">[<a href="https://ubuntu.com/security/notices/USN-4881-1">USN-4881-1</a>] containerd vulnerability [00:38]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21334">CVE-2021-21334</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When using the containerd CRI implementation (kubernetes container
+runtime interface) - would share environment variables etc between
+containers that shared the same image - so could allow an inadvertent
+info leak from one container to another - race condition so would be less
+likely to occur if not launching containers in rapid succession which
+share the same image</li>
+</ul>
+<h3 id="usn-4882-1-ruby-vulnerabilities-01-27">[<a href="https://ubuntu.com/security/notices/USN-4882-1">USN-4882-1</a>] Ruby vulnerabilities [01:27]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25613">CVE-2020-25613</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-10933">CVE-2020-10933</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-10663">CVE-2020-10663</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Crafted JSON could result in RCE - could create a malicious object within
+the interpreter</li>
+<li>Possible info leak via unintialised memory across socket operations -
+heap info leak so could expose sensitive data from the interpreter</li>
+<li>Failure to validate xfer encoding header - could bypass reverse proxy and
+so be vulnerable to HTTP request smuggling attacks</li>
+</ul>
+<h3 id="usn-4883-1-linux-kernel-vulnerabilities-02-32">[<a href="https://ubuntu.com/security/notices/USN-4883-1">USN-4883-1</a>] Linux kernel vulnerabilities [02:32]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-27364">CVE-2021-27364</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-27363">CVE-2021-27363</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-27365">CVE-2021-27365</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 kernel for bionic + 4.4 kernel for xenial</li>
+<li>3 iSCSI issues, most important was heap overflow that could be exploited
+by a local attacker -&gt; code-exec as root
+<ul>
+<li>Other 2 are info leak via kernel pointers being disclosed to userspace
+and a OOB read -&gt; crash or possible infoleak</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4884-1-linux-kernel--oem--vulnerabilities-03-13">[<a href="https://ubuntu.com/security/notices/USN-4884-1">USN-4884-1</a>] Linux kernel (OEM) vulnerabilities [03:13]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3348">CVE-2021-3348</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3347">CVE-2021-3347</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20194">CVE-2021-20194</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OEM kernel - 5.10
+<ul>
+<li>UAF in network block device driver - local attacker could exploit for
+crash/codexec</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4885-1-pygments-vulnerability-03-36">[<a href="https://ubuntu.com/security/notices/USN-4885-1">USN-4885-1</a>] Pygments vulnerability [03:36]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20270">CVE-2021-20270</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>infinite loop -&gt; CPU based DoS when parsing crafted Standard ML files -
+input file containing just &lsquo;exception&rsquo; would be enough to trigger this</li>
+</ul>
+<h3 id="usn-4886-1-privoxy-vulnerabilities-04-18">[<a href="https://ubuntu.com/security/notices/USN-4886-1">USN-4886-1</a>] Privoxy vulnerabilities [04:18]</h3>
+<ul>
+<li>14 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20214">CVE-2021-20214</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20211">CVE-2021-20211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20276">CVE-2021-20276</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20212">CVE-2021-20212</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20275">CVE-2021-20275</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20273">CVE-2021-20273</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20272">CVE-2021-20272</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20217">CVE-2021-20217</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20216">CVE-2021-20216</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20215">CVE-2021-20215</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20213">CVE-2021-20213</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20210">CVE-2021-20210</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20209">CVE-2021-20209</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35502">CVE-2020-35502</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Privacy enhancing HTTP proxy</li>
+<li>Incorrect handling of:
+<ul>
+<li>CGI requests -&gt; DoS/info-leak</li>
+<li>regexes -&gt; DoS (crash + mem-leak)</li>
+<li>client tags -&gt; DoS (memory leaks)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4887-1-linux-kernel-vulnerabilities-05-03">[<a href="https://ubuntu.com/security/notices/USN-4887-1">USN-4887-1</a>] Linux kernel vulnerabilities [05:03]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-27364">CVE-2021-27364</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-27363">CVE-2021-27363</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27170">CVE-2020-27170</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27171">CVE-2020-27171</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-27365">CVE-2021-27365</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3444">CVE-2021-3444</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>BPF verifier failed to properly handle mod32 destination register
+truncation when source register was known to be 0 -&gt; could be turned into
+an arbitrary memory read -&gt; info-leak - and can&rsquo;t rule out arbitrary
+memory write -&gt; RCE</li>
+<li>Spectre mitigations for BPF were found to be insufficient - could allow
+an attacker to read entirety of kernel memory via speculative execution
+attack through BPF</li>
+<li>iSCSI issues discussed earlier too</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="hiring-07-04">Hiring [07:04]</h3>
+<h4 id="apparmor-security-engineer">AppArmor Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2114847/apparmor-security-engineer-remote">https://canonical.com/careers/2114847/apparmor-security-engineer-remote</a></li>
+</ul>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2612092/ubuntu-security-engineer-remote">https://canonical.com/careers/2612092/ubuntu-security-engineer-remote</a>
+<!-- raw HTML omitted -->
+</li>
+</ul>
+<h4 id="security-engineer-ubuntu">Security Engineer - Ubuntu</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a>
+<!-- raw HTML omitted -->
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E109.mp3" length="6409765" type="audio/mpeg" /><itunes:duration>08:16</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 108</title>
           <link>https://ubuntusecuritypodcast.org/episode-108/</link>
