@@ -23,6 +23,7 @@ malicious commits in the upstream Linux kernel.
 With 21 CVEs fixed this week we look at updates for Dnsmasq, Firefox,
 OpenJDK and more, plus we discuss the recent release of Ubuntu 21.04 and
 malicious commits in the upstream Linux kernel.
+
 ** This week in Ubuntu Security Updates
 21 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/USN-4916-2][USN-4916-2]]] Linux kernel regression [00:48]

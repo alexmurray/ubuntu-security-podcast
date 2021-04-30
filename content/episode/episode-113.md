@@ -6,7 +6,7 @@ description = """
   malicious commits in the upstream Linux kernel.
   """
 date = 2021-04-30T14:33:00+09:30
-lastmod = 2021-04-30T14:34:47+09:30
+lastmod = 2021-04-30T15:49:11+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
