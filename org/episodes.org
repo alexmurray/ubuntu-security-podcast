@@ -8,6 +8,166 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 113
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-113
+:EXPORT_DATE: 2021-04-30 14:33
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E113.mp3 :podcast_duration "16:28" :podcast_bytes "12103984" :permalink "https://ubuntusecuritypodcast.org/episode-113/" :guid 4cf1fb7128e92aa989b8461391b0e737610b4c789c116b67292134e5b4a0d8b994ef77c40086bb1d933b6b49e2ba8436456c53504c2f95fe3c613014519778fc
+:END:
+#+begin_description
+With 21 CVEs fixed this week we look at updates for Dnsmasq, Firefox,
+OpenJDK and more, plus we discuss the recent release of Ubuntu 21.04 and
+malicious commits in the upstream Linux kernel.
+#+end_description
+** Overview
+With 21 CVEs fixed this week we look at updates for Dnsmasq, Firefox,
+OpenJDK and more, plus we discuss the recent release of Ubuntu 21.04 and
+malicious commits in the upstream Linux kernel.
+** This week in Ubuntu Security Updates
+21 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-4916-2][USN-4916-2]]] Linux kernel regression [00:48]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-29154][CVE-2021-29154]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2021-3493][CVE-2021-3493]] <!-- high -->
+- Possible memory leak introduced via fix for overlayfs priv esc vuln - so
+  the fix effectively introduced a new vuln but only a DoS not priv esc
+
+*** [[[https://ubuntu.com/security/notices/USN-4924-1][USN-4924-1]]] Dnsmasq vulnerabilities [01:17]
+- 2 CVEs addressed in Xenial (16.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2019-14513][CVE-2019-14513]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15107][CVE-2017-15107]] <!-- low -->
+- 2 DoS issues, one possible OOB read -> crash, the other a trust issue
+  where for DNSSEC configurations could end up having dnsmasq prove the
+  non-existence of hostnames that actually exist - so again a DoS but not
+  in the traditional sense
+
+*** [[[https://ubuntu.com/security/notices/USN-4925-1][USN-4925-1]]] Shibboleth vulnerability [01:57]
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-28963][CVE-2021-28963]] <!-- medium -->
+- SSO solution for InCommon Federation system
+- Possible content injection bug in error or other pages since template
+  generation would use attacker controlled inputs
+
+*** [[[https://ubuntu.com/security/notices/USN-4926-1][USN-4926-1]]] Firefox vulnerabilities [02:19]
+- 12 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Groovy (20.10), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-24002][CVE-2021-24002]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23995][CVE-2021-23995]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-29947][CVE-2021-29947]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-29946][CVE-2021-29946]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-29945][CVE-2021-29945]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-24001][CVE-2021-24001]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-24000][CVE-2021-24000]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23999][CVE-2021-23999]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23998][CVE-2021-23998]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23997][CVE-2021-23997]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23996][CVE-2021-23996]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23994][CVE-2021-23994]] <!-- medium -->
+- 88.0
+- Usual web issues plus a possible UAF in responsive design mode as well as
+  an issue in FTP client where specially crafted FTP URL (ie one containing
+  newlines) could embed FTP commands and cause the client to execute
+  arbitrary FTP commands to the server
+  - FTP client in Firefox is deprecated and disabled by default now -
+    expected to be removed in a future release
+
+*** [[[https://ubuntu.com/security/notices/USN-4927-1][USN-4927-1]]] File Roller vulnerability [03:46]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2020-36314][CVE-2020-36314]] <!-- medium -->
+- Incomplete fix for previous CVE-2020-11736 ([[https://ubuntusecuritypodcast.org/episode-72/][Episode 72]]) - directory
+  traversal via symlink issue on extraction of archives
+
+*** [[[https://ubuntu.com/security/notices/USN-4892-1][USN-4892-1]]] OpenJDK vulnerability [04:15]
+- 1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-2163][CVE-2021-2163]] <!-- medium -->
+- Latest upstream point release to fix an issue where would fail to
+  properly verify signatures on crafted JARs - could bypass security
+  restrictions if a JAR is signed with an algorithm that is disabled
+
+*** [[[https://ubuntu.com/security/notices/USN-4922-2][USN-4922-2]]] Ruby vulnerability [04:35]
+- 1 CVEs addressed in Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-28965][CVE-2021-28965]] <!-- medium -->
+- First USN for Hirsute \o/
+- XML deserialisation issue
+
+*** [[[https://ubuntu.com/security/notices/USN-4913-2][USN-4913-2]]] Underscore vulnerability [04:49]
+- 1 CVEs addressed in 21.04
+  - [[https://ubuntu.com/security/CVE-2021-23358][CVE-2021-23358]] <!-- medium -->
+- Code injection via template function due to failure to properly handle
+  untrusted input
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu 21.04 Hirsute Hippo Released [05:05]
+- Standard support release, supported for 9 months
+- Private home dirs
+- Kernel 5.11
+  - Stack protector for RISC-V
+  - Improved performance for Spectre mitigations via static calls
+  - Initial support for memory tagging for ARM64
+    - Will require support in glibc etc but this is an initial start to
+      providing improved protection against memory corruption vulns
+- OpenSSH 8.4
+  - Improved support for FIDO/U2F keys for 2FA
+
+*** Hypocrite commits and the upstream Linux kernel [07:38]
+- First came to light in November 2020 when one of the authors of a paper
+  from University of Minnesota tweeted about the acceptance of their paper
+  to IEEE S&P 2021 - this showed the first page of the paper and seemed to
+  indicate that for the purposes of academic research a number of malicious
+  commits (ie commits that when added to the kernel would create a
+  vulnerability) had been introduced into the upstream kernel.
+- Lots of blowback at the time amongst both [[https://twitter.com/SarahJamieLewis/status/1330618919376228352][kernel devs]], [[https://twitter.com/tobycmurray/status/1330704953891979268][other researchers]]
+  etc regarding both the ethics of effectively experimenting on subjects
+  without their consent and the concept of purposely introducing vulns just
+  for the sake of research purposes
+- The researchers claimed they followed these up with subsequent commits to
+  fix the vulns and so none actually would have made it to end users so
+  they thought it was effectively done
+- At this stage as a team we thought this was interesting but effectively
+  just demonstrating something that most folks in OSS always knew was a
+  potential reality - that once a contributor to a project builds a certain
+  level of trust it would be relatively easy to introduce vulns like this
+  in a stealthy manner and that the best defence would be better automated
+  review tooling (static/dynamic analysis via CI etc) rather than trying to
+  rely on human reviewers to detect
+- Issue again came to light recently when the [[https://github.com/QiushiWu/QiushiWu.github.io/blob/main/papers/OpenSourceInsecurity.pdf][paper]] was made available in
+  full and it was revealed that 3 malicious commits were potentially
+  integrated into the upstream kernel - actually only 1 was ACKed and then
+  this was rejected and the other 2 were rejected outright.  Recently,
+  GregKH weighed in and effectively blacklisted all contributions from UMN
+  and proposed to revert all commits that had come from umn.edu authors
+- Not surprisingly, most of these were NOT malicious and so took careful
+  review by various developers to decide which should NOT be reverted as
+  lots of them did actually fix legitimate issues
+- Researchers then apologised and so only a few commits actually got
+  reverted as a result
+- In the end it highlights how OSS development is built on trust and how
+  this can be abused in either direction - tempting to jump to technical
+  solutions (ie better static analysis/CI etc) but this will never be
+  foolproof - also need the ability to move fast so can get say reverts
+  done and delivered to users, and also to build good relationships BUT in
+  the end need to still be wary - "trust but verify" - both on a technical
+  basis and also on a personal basis so we can better understand the
+  provenance of code etc
+  <!-- Doveryay, no proveryay -->
+
+*** Hiring [14:36]
+**** AppArmor Security Engineer
+- https://canonical.com/careers/2114847/apparmor-security-engineer-remote
+  <!-- americas, emea -->
+**** Linux Cryptography and Security Engineer
+- https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote
+  <!-- americas -->
+**** Security Engineer - Ubuntu
+- https://canonical.com/careers/2925180/security-engineer-ubuntu-remote
+  <!-- worldwide -->
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[http://webchat.freenode.net/#ubuntu-hardened][#ubuntu-hardened on the Freenode IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 112
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-112
