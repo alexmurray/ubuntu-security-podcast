@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 21 May 2021 13:41:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 28 May 2021 17:21:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,146 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 117</title>
+          <link>https://ubuntusecuritypodcast.org/episode-117/</link>
+          <pubDate>Fri, 28 May 2021 17:21:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>b0fe6e834504138a02a53fc582738b0270b774195bf6c3446e05050d7108d69926ad7176e74b451917944499bceca1ad1cfebb94d5868c0ecc4f2dfb26a42ad9</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 117</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        This week we&#39;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>This week we&#39;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.</itunes:summary>
+        <description>This week we&#39;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.</description>
+        <googleplay:description>This week we&#39;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.</googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we&rsquo;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>24 unique CVEs addressed</p>
+<h3 id="usn-4963-1-pillow-vulnerabilities-00-55">[<a href="https://ubuntu.com/security/notices/USN-4963-1">USN-4963-1</a>] Pillow vulnerabilities [00:55]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-28678">CVE-2021-28678</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28677">CVE-2021-28677</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28676">CVE-2021-28676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28675">CVE-2021-28675</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-25288">CVE-2021-25288</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-25287">CVE-2021-25287</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python image handling library - used by many other packages for their
+image handling</li>
+<li>All DoS issues via OOB read and similar so not critical</li>
+</ul>
+<h3 id="usn-4962-1-babel-vulnerability-01-31">[<a href="https://ubuntu.com/security/notices/USN-4962-1">USN-4962-1</a>] Babel vulnerability [01:31]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20095">CVE-2021-20095</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Internationalisation handling for python apps</li>
+<li>Directory traversal flaw - could be exploited to load arbitrary locale
+.dat files - these contain serialized Python objects - so hence can get
+arbitrary code execution as a result.</li>
+<li>Could use relative path to specify a file outside the locate-data
+directory</li>
+</ul>
+<h3 id="usn-4964-1-exiv2-vulnerabilities-02-25">[<a href="https://ubuntu.com/security/notices/USN-4964-1">USN-4964-1</a>] Exiv2 vulnerabilities [02:25]</h3>
+<ul>
+<li>5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-29623">CVE-2021-29623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32617">CVE-2021-32617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29473">CVE-2021-29473</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29464">CVE-2021-29464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29463">CVE-2021-29463</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>CLI util and library (C++) for reading+modifying metadata in image
+files - more exiv2 - last only in <a href="https://ubuntusecuritypodcast.org/episode-115/">Episode 115</a></li>
+<li>OOB reads on metadata write</li>
+<li>heap buffer overflow on m w</li>
+<li>quadratic complexity algorithm on metadata write - DoS</li>
+<li>stack info leak on m r</li>
+</ul>
+<h3 id="usn-4965-1-usn-4965-2-apport-vulnerabilities-03-19">[<a href="https://ubuntu.com/security/notices/USN-4965-1">USN-4965-1</a>, <a href="https://ubuntu.com/security/notices/USN-4965-2">USN-4965-2</a>] Apport vulnerabilities [03:19]</h3>
+<ul>
+<li>11 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-32557">CVE-2021-32557</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32556">CVE-2021-32556</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32555">CVE-2021-32555</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32554">CVE-2021-32554</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32553">CVE-2021-32553</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32552">CVE-2021-32552</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32551">CVE-2021-32551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32550">CVE-2021-32550</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32549">CVE-2021-32549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32548">CVE-2021-32548</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32547">CVE-2021-32547</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Seems it&rsquo;s time for more Apport vulns - every quarter or so</li>
+<li>Arbitrary file read / write vulns discovered by Maik Münch</li>
+<li>Apport parses various details out of /proc and some of these can be
+crafted by the process, ie process name, current working dir etc - and
+then goes to gather files etc - and so if can craft these details can get
+it to read files which weren&rsquo;t intended via symlinks etc (mitigated by
+symlink protections in Ubuntu) - or from injection of data into say dpkg
+queries to get it to include other files like /etc/passwd since this
+operation happens as root by apport</li>
+<li>These end up in the crash dump and this can be read by the regular user</li>
+<li>Also when uploading via whoopsie, race condition where crash dump can be
+replaced by a symlink and then the crash dump will be written to the dest
+of the symlink - file write vuln - but again mitigated by
+symlink-restriction</li>
+</ul>
+<h3 id="usn-4966-1-usn-4966-2-libx11-vulnerability-05-57">[<a href="https://ubuntu.com/security/notices/USN-4966-1">USN-4966-1</a>, <a href="https://ubuntu.com/security/notices/USN-4966-2">USN-4966-2</a>] libx11 vulnerability [05:57]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-31535">CVE-2021-31535</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When looking up a color, failed to properly validate it - app could then
+get extra X protocol requests sent to the X server - ie. could then
+disable X server authorisation etc so remote attackers could connect to
+the local X server and snoop on inputs etc</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-hardened-ubuntu-security-on-libera-dot-chat-06-45">#ubuntu-hardened -&gt; #ubuntu-security on Libera.Chat [06:45]</h3>
+<ul>
+<li>LWN writeup <a href="https://lwn.net/Articles/857140/">https://lwn.net/Articles/857140/</a></li>
+<li>Volunteer staff resigned en masse after network was taken over by tech
+entrepreneur</li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-irc/2021-May/001922.html">Ubuntu IRC council voted and approved a resolution to recommend moving
+Ubuntu IRC channels from freenode to Libera.Chat</a></li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-irc/2021-May/001923.html">Community Council approved this</a> so now all channels have moved to
+Libera.Chat</li>
+<li>Almost all of the old channels on freenode have now all been taken over
+by the new freenode staff</li>
+<li>irc.ubuntu.com now redirects to irc.libera.chat</li>
+<li>Finally took the opportunity to rename our channel - #ubuntu-security</li>
+<li>Come join us</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E117.mp3" length="8030524" type="audio/mpeg" /><itunes:duration>09:40</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 116</title>
           <link>https://ubuntusecuritypodcast.org/episode-116/</link>

@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 May 2021 13:41:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 17:21:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 117</title>
+      <link>https://ubuntusecuritypodcast.org/episode-117/</link>
+      <pubDate>Fri, 28 May 2021 17:21:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-117/</guid>
+      <description>Overview This week we&amp;rsquo;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.
+This week in Ubuntu Security Updates 24 unique CVEs addressed
+[USN-4963-1] Pillow vulnerabilities [00:55]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-28678  CVE-2021-28677  CVE-2021-28676  CVE-2021-28675  CVE-2021-25288  CVE-2021-25287    Python image handling library - used by many other packages for their image handling All DoS issues via OOB read and similar so not critical  [USN-4962-1] Babel vulnerability [01:31]  1 CVEs addressed in Trusty ESM (14.</description>
+    </item>
+    
     <item>
       <title>Episode 116</title>
       <link>https://ubuntusecuritypodcast.org/episode-116/</link>
