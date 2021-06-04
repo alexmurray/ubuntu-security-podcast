@@ -8,6 +8,164 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 118
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-118
+:EXPORT_DATE: 2021-06-04 15:04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E118.mp3 :podcast_duration "13:34" :podcast_bytes "10194405" :permalink "https://ubuntusecuritypodcast.org/episode-118/" :guid 147bfb7e506ff059e07375b957ab03b698f4831786804c5adcf05184baf7e102d928347faf826134ee4d7a9f0c9a43b2069872bcc1d17758e507b6b33a7cff8f
+:END:
+#+begin_description
+This week we look at DMCA notices sent against Ubuntu ISOs plus security
+updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
+#+end_description
+** Overview
+This week we look at DMCA notices sent against Ubuntu ISOs plus security
+updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
+** This week in Ubuntu Security Updates
+24 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-4967-1][USN-4967-1]], [[https://ubuntu.com/security/notices/USN-4967-2][USN-4967-2]]] nginx vulnerability [00:50]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-23017][CVE-2021-23017]] <!-- medium -->
+- 1 byte buffer overflow, able to be trigged by a crafted DNS response -
+  UDP so could possibly be more easily forged than TCP (less state) -
+  crash, RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-4968-1][USN-4968-1]], [[https://ubuntu.com/security/notices/USN-4968-2][USN-4968-2]]] LZ4 vulnerability [01:27]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-3520][CVE-2021-3520]] <!-- medium -->
+- integer overflow -> OOB write -> crash, RCE - crafted lz4 archive
+
+*** [[[https://ubuntu.com/security/notices/USN-4969-1][USN-4969-1]], [[https://ubuntu.com/security/notices/USN-4969-2][USN-4969-2]]] DHCP vulnerability [01:52]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-25217][CVE-2021-25217]] <!-- medium -->
+- Crafted lease file could trigger an OOB read - could be triggered against
+  both dhclient and dhcpd - DoS. In case of dhcpd could also cause that
+  lease to be deleted (and the one that follows it in the lease database).
+  ISC claim impact is LESS is using compiler hardening
+  (stack-protector-strong) - since in this case will trigger an abort - but
+  if not used it will keep running...
+
+*** [[[https://ubuntu.com/security/notices/USN-4970-1][USN-4970-1]]] GUPnP vulnerability [03:15]
+- 1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-33516][CVE-2021-33516]] <!-- medium -->
+- DNS rebinding attack - able to be exploited by a remote web server -
+  cause the local web browser into triggering actions against local UPnP
+  services that use gupnp library as it would not check that the Host
+  header specified the expected IP address. Could then be used for data
+  exfil / tampering etc.
+- Can be mitigated against by using a DNS resolver that prevents DNS
+  rebinding
+
+*** [[[https://ubuntu.com/security/notices/USN-4971-1][USN-4971-1]]] libwebp vulnerabilities [04:11]
+- 11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2020-36332][CVE-2020-36332]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-36331][CVE-2020-36331]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-36330][CVE-2020-36330]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-36329][CVE-2020-36329]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-36328][CVE-2020-36328]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25014][CVE-2018-25014]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25013][CVE-2018-25013]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25012][CVE-2018-25012]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25011][CVE-2018-25011]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25010][CVE-2018-25010]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2018-25009][CVE-2018-25009]] <!-- medium -->
+- Google's image format to relace both jpg/png and be faster (like vp8
+  video codec using predictive encoding - uses neighboring pixels to
+  predict values in a block and then encodes only the difference)
+- C library :( - memory unsafe
+- OOB reads, heap buffer overflow, UAF, excessive memory allocation etc
+  - DoS, RCE etc
+
+*** [[[https://ubuntu.com/security/notices/USN-4972-1][USN-4972-1]]] PostgreSQL vulnerabilities [05:05]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-32029][CVE-2021-32029]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-32028][CVE-2021-32028]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-32027][CVE-2021-32027]] <!-- medium -->
+- Thanks to Christian Ehrhardt from the Ubuntu Server team for preparing
+  these updates
+- Latest upstream point-releases
+  - 10.17 - 18.04
+  - 12.7 - 20.04 LTS, 20.10
+  - 13.3 - 21.04
+
+*** [[[https://ubuntu.com/security/notices/USN-4973-1][USN-4973-1]]] Python vulnerability [05:44]
+- 1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-29921][CVE-2021-29921]] <!-- medium -->
+- ipaddress library in the python stdlib mishandled leading zero characters
+  in octets of an IP address - could allow bypass of access controls that
+  are based on IP addresses. Now treats leading zeros as invalid input
+  (before would try and treat them as octal... but could end up confused as
+  a result)
+
+*** [[[https://ubuntu.com/security/notices/USN-4974-1][USN-4974-1]]] Lasso vulnerability [06:40]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-28091][CVE-2021-28091]] <!-- medium -->
+- SAML protocol library
+- Reported by Akamai (uses Lasso in their Enterprise Application Access
+  product) - and coordinated between affected distros and vendors etc
+- Could allow unauthenticated access to applications that use SAMLv2
+  (Security Assertion Markup Language v2) for authentication
+- If a SAML response contained both a signed and valid assertion, plus
+  additional unsigned assertions appened to this, these unsigned assertions
+  would be treated as valid as well.
+- So could allow an authenticated user to take their own signed SAML
+  assertion and append assertions for other users to the end to then
+  impersonate those other users.
+- https://blogs.akamai.com/2021/06/saml-implementation-vulnerability-impacting-some-akamai-services.html
+
+*** [[[https://ubuntu.com/security/notices/USN-4975-1][USN-4975-1]]] Django vulnerabilities [08:19]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-33571][CVE-2021-33571]] <!--  -->
+  - [[https://ubuntu.com/security/CVE-2021-33203][CVE-2021-33203]] <!--  -->
+  - [[https://ubuntu.com/security/CVE-2021-32052][CVE-2021-32052]] <!-- medium -->
+- URLValidator failed to properly handle newlines, tabs - could be used to
+  inject other headers into responses etc
+- Paths not properly sanitized in the admindocs module - could be used to
+  probe for the existence of files or possibly obtain their contents
+- Leading zeros in IPv4 addresses - basically identical to the Python issue
+  above
+
+*** [[[https://ubuntu.com/security/notices/USN-4976-1][USN-4976-1]]] Dnsmasq vulnerability [08:56]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-3448][CVE-2021-3448]] <!-- medium -->
+- Failed to properly randomise source port (ie used a fixed port) when
+  forwarding queries when configured to use a specific server for a given
+  network interface - could then allow a remote attacker to more easily
+  perform cache poisoning attacks (ie just need to guess the transmission
+  ID once know the source port to get a forged reply accepted)
+  - Very similar to the issues that were discovered back in 2008 by Dan
+    Kaminsky - the whole reason source port randomisation was introduced as
+    part of the DNS protocol
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu user's DMCA violation [09:58]
+- Last week was [[https://torrentfreak.com/comcast-subscriber-receives-dmca-notice-for-downloading-ubuntu-210526/][reported]] that a user downloading Ubuntu 20.04.2 iso via
+  bittorrent received a DMCA violation notice from their ISP (Comcast)
+- Clearly absurd given Ubuntu is free (beer & freedom/libre)
+- Also the hash of the iso in question was legit too
+- Sent by "OpSec Online Antipiracy" not Canonical
+- OpSec [[https://torrentfreak.com/opsec-says-dmca-notice-system-was-spoofed-to-target-ubuntu-download-210527/][responded]] saying their notice sending program was "spoofed" by
+  unknown parties across multiple streaming platforms
+- Not clear then if the user spoofed it directly or if someone else spoofed
+  the notice and sent it to the user...
+- Still being investigated by OpSec apparently - our legal team is also
+  looking into it as well
+- Not the first time this sort of thing has happened - [[https://torrentfreak.com/paramount-wipes-infringing-ubuntu-torrent-google-160909/][back in 2016]]
+  Paramount Pictures used the DMCA to send a takedown request to Google to
+  remove a search result linking to the Ubuntu 12.04.2 alternate ISO at
+  extratorrent.cc - this was listed as apparently being a link to the
+  Transformers: Age of Extinction movie...
+  - Google did follow through on this - likely an automated system due to
+    the sheer volume of such requests they get per day (3 million p/d
+    pirate URLs to be removed from search results)
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 117
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-117
