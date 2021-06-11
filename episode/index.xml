@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 4 Jun 2021 15:04:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 11 Jun 2021 10:53:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,283 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 119</title>
+          <link>https://ubuntusecuritypodcast.org/episode-119/</link>
+          <pubDate>Fri, 11 Jun 2021 10:53:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>0a9ae10a119edff8c63af0049d12ad1ec78c835e904acecd3a32404bff978eae43ca09a1f89f65d4dcb45a633bca48021a27f8a7f9337444bbfd87ae127a8e7e</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 119</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we cover security updates for the Linux kernel, PolicyKit, Intel
+  Microcode and more, plus we look at a report of an apparent malicious snap
+  in the Snap Store and some of the mechanics behind snap confinement.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we cover security updates for the Linux kernel, PolicyKit, Intel
+  Microcode and more, plus we look at a report of an apparent malicious snap
+  in the Snap Store and some of the mechanics behind snap confinement.
+  </itunes:summary>
+        <description>  This week we cover security updates for the Linux kernel, PolicyKit, Intel
+  Microcode and more, plus we look at a report of an apparent malicious snap
+  in the Snap Store and some of the mechanics behind snap confinement.
+  </description>
+        <googleplay:description>  This week we cover security updates for the Linux kernel, PolicyKit, Intel
+  Microcode and more, plus we look at a report of an apparent malicious snap
+  in the Snap Store and some of the mechanics behind snap confinement.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we cover security updates for the Linux kernel, PolicyKit, Intel
+Microcode and more, plus we look at a report of an apparent malicious snap
+in the Snap Store and some of the mechanics behind snap confinement.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>42 unique CVEs addressed</p>
+<h3 id="usn-4979-1-linux-kernel-vulnerabilities-01-04">[<a href="https://ubuntu.com/security/notices/USN-4979-1">USN-4979-1</a>] Linux kernel vulnerabilities [01:04]</h3>
+<ul>
+<li>13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3483">CVE-2021-3483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3428">CVE-2021-3428</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33033">CVE-2021-33033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31916">CVE-2021-31916</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29647">CVE-2021-29647</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28972">CVE-2021-28972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28971">CVE-2021-28971</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28964">CVE-2021-28964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28660">CVE-2021-28660</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25673">CVE-2020-25673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25672">CVE-2020-25672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25671">CVE-2020-25671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25670">CVE-2020-25670</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 based kernel</li>
+<li>integer overflow in ext4 extent handling -&gt; could be triggered by
+mounting an malicious ext4 image -&gt; crash (DoS)</li>
+<li>reference counting error in firewire packet sniffer driver - UAF</li>
+<li>NFC LLCP issues above</li>
+</ul>
+<h3 id="usn-4982-1-linux-kernel-vulnerabilities-02-23">[<a href="https://ubuntu.com/security/notices/USN-4982-1">USN-4982-1</a>] Linux kernel vulnerabilities [02:23]</h3>
+<ul>
+<li>13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3483">CVE-2021-3483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31916">CVE-2021-31916</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29647">CVE-2021-29647</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29264">CVE-2021-29264</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28972">CVE-2021-28972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28971">CVE-2021-28971</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28964">CVE-2021-28964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28950">CVE-2021-28950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28688">CVE-2021-28688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25673">CVE-2020-25673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25672">CVE-2020-25672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25671">CVE-2020-25671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25670">CVE-2020-25670</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 based kernel</li>
+</ul>
+<h3 id="usn-4984-1-linux-kernel-vulnerabilities-02-39">[<a href="https://ubuntu.com/security/notices/USN-4984-1">USN-4984-1</a>] Linux kernel vulnerabilities [02:39]</h3>
+<ul>
+<li>13 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3483">CVE-2021-3483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33033">CVE-2021-33033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31916">CVE-2021-31916</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-30002">CVE-2021-30002</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29647">CVE-2021-29647</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28972">CVE-2021-28972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28971">CVE-2021-28971</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28964">CVE-2021-28964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28952">CVE-2021-28952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28950">CVE-2021-28950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28688">CVE-2021-28688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28660">CVE-2021-28660</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28038">CVE-2021-28038</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.8 based kernel</li>
+</ul>
+<h3 id="usn-4977-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-4977-1">USN-4977-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3501">CVE-2021-3501</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29155">CVE-2021-29155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25673">CVE-2020-25673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25672">CVE-2020-25672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25671">CVE-2020-25671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25670">CVE-2020-25670</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.11 based kernel</li>
+<li>OOB write in KVM VMX implementation (crash -&gt; DoS, RCE)</li>
+<li>eBPF Spectre side-channel attack - info leak</li>
+<li>NFC LLCP (logical link control protocol) - allows to multiplex a single
+connection between two NFC devices
+<ul>
+<li>infinite loop on error condition -&gt; DoS</li>
+<li>memory leak</li>
+<li>reference count mishandling -&gt; crash -&gt; DoS</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4983-1-linux-kernel--oem--vulnerabilities-03-32">[<a href="https://ubuntu.com/security/notices/USN-4983-1">USN-4983-1</a>] Linux kernel (OEM) vulnerabilities [03:32]</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3501">CVE-2021-3501</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31829">CVE-2021-31829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29155">CVE-2021-29155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33200">CVE-2021-33200</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.10 based kernel</li>
+<li>OOB write in KVM VMX implementation (crash -&gt; DoS, RCE)</li>
+<li>eBPF Spectre side-channel attacks - verifier fails to stop loading of eBPF
+programs which could cause speculative loads -&gt; info leak</li>
+<li>eBPF pointer limit error - OOB read/write - crash / RCE</li>
+</ul>
+<h3 id="usn-4978-1-firefox-vulnerabilities-03-40">[<a href="https://ubuntu.com/security/notices/USN-4978-1">USN-4978-1</a>] Firefox vulnerabilities [03:40]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-29960">CVE-2021-29960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29967">CVE-2021-29967</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29966">CVE-2021-29966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29961">CVE-2021-29961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29959">CVE-2021-29959</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>89.0 upstream release
+<ul>
+<li>not only the new visual UI PLUS enhanced private browsing mode via
+&ldquo;Total Cookie Protection&rdquo; - confines cookies to the site where they
+were created to avoid tracking across sites - PLUS a bunch of security
+fixes including
+<ul>
+<li>cached the last filename of a printed file even in private browsing
+mode - would then surface this next time you choose to print a file</li>
+<li>Various memory safety issues - RCE / crash etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4980-1-polkit-vulnerability-04-43">[<a href="https://ubuntu.com/security/notices/USN-4980-1">USN-4980-1</a>] polkit vulnerability [04:43]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3560">CVE-2021-3560</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Daemons often use policykit to ask whether a user&rsquo;s application is
+permitted to perform an action - to do this, they send the DBus name of
+the process to polkit and it looks up the resulting uid/pid via an
+internal function polkit_system_bus_name_get_creds_sync() - logic error
+within policykit when looking if the process in question were to
+disconnect from DBus at the right time, policykit would return an error
+but also a boolean TRUE value indicating success (depends on how the
+daemon interpreted this value with an associated error). This could then
+allow an application which was not privileged to be able to perform more
+privileged actions. Fixed to actually return FALSE in this case and avoid
+any potential confusion.</li>
+</ul>
+<h3 id="usn-4981-1-squid-vulnerabilities-06-11">[<a href="https://ubuntu.com/security/notices/USN-4981-1">USN-4981-1</a>] Squid vulnerabilities [06:11]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33620">CVE-2021-33620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31808">CVE-2021-31808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31807">CVE-2021-31807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31806">CVE-2021-31806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28662">CVE-2021-28662</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28652">CVE-2021-28652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28651">CVE-2021-28651</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All DoS issues - memory leaks, OOB reads etc, able to be triggered by
+remote attackers</li>
+</ul>
+<h3 id="usn-4969-3-dhcp-regression-06-28">[<a href="https://ubuntu.com/security/notices/USN-4969-3">USN-4969-3</a>] DHCP regression [06:28]</h3>
+<ul>
+<li>Affecting Hirsute (21.04)</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-118/">Episode 118</a> - update for 21.04 <strong>only</strong> introduced a regression where valid
+config files would be seen as invalid and rejected and hence
+isc-dhcp-server would fail to start - actually caused as a result of the
+newer toolchain used in 21.04 - has stricter aliasing checking and so
+would treat certain operations introduced in this change as UB and change
+code-flow as a result. Fixed by disabling this stricter aliasing checking
+in the build to restore the original behaviour.</li>
+</ul>
+<h3 id="usn-4937-2-gnome-autoar-regression-07-22">[<a href="https://ubuntu.com/security/notices/USN-4937-2">USN-4937-2</a>] GNOME Autoar regression [07:22]</h3>
+<ul>
+<li><a href="https://ubuntusecuritypodcast.org/episode-115/">Episode 115</a></li>
+<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)</li>
+<li>upstream regression where when extracting an archive, only an empty
+directory would be created if an archive contained a file of the same
+name as the archive itself - fixed to avoid creating this directory first
+so that files would then actually get created as expected</li>
+</ul>
+<h3 id="usn-4985-1-intel-microcode-vulnerabilities-07-48">[<a href="https://ubuntu.com/security/notices/USN-4985-1">USN-4985-1</a>] Intel Microcode vulnerabilities [07:48]</h3>
+<ul>
+<li>5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-24513">CVE-2020-24513</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-24512">CVE-2020-24512</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-24511">CVE-2020-24511</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-5715">CVE-2017-5715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-24489">CVE-2021-24489</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest intel-microcode release from upstream, fixes a number of security
+issues for particular processors PLUS potential stability issues that
+have been seen in previous microcode releases (processor would hang if
+tried to load a too new microcode version compared to the one contained
+within the BIOS)
+<ul>
+<li>potential cross-domain issue with Intel VT-d (priv esc) plus a fix for
+an issue which would result in EIBRS (Spectre) mitigations not being
+applied, cache-lines not being flushed properly and a speculative
+execution issue specific to Atom processors via micro-arch buffers.</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-4986-1-rpcbind-vulnerability-09-02">[<a href="https://ubuntu.com/security/notices/USN-4986-1">USN-4986-1</a>] rpcbind vulnerability [09:02]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-8779">CVE-2017-8779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS since would fail to free memory allocated during particular
+requests - could then be made to crash by allocating too much memory</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="odrive-unofficial-snap-investigation-09-20">odrive-unofficial snap investigation [09:20]</h3>
+<ul>
+<li><a href="https://twitter.com/XHaughin/status/1400743600464355331">https://twitter.com/XHaughin/status/1400743600464355331</a></li>
+</ul>
+<h3 id="the-magic-behind-snap-interfaces-12-36">The magic behind snap interfaces [12:36]</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/the-magic-behind-snap-interfaces">https://ubuntu.com/blog/the-magic-behind-snap-interfaces</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E119.mp3" length="11276225" type="audio/mpeg" /><itunes:duration>14:38</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 118</title>
           <link>https://ubuntusecuritypodcast.org/episode-118/</link>
