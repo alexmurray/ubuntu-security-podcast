@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  ">
+
+<meta name="generator" content="Hugo 0.83.1" />
+
+<meta property="og:title" content="Episode 120" />
+<meta name="twitter:title" content="Episode 120"/>
+<meta itemprop="name" content="Episode 120">
+<meta property="article:published_time" content="2021-06-18T16:21:00&#43;09:30" />
+<meta property="article:modified_time" content="2021-06-18T16:22:05&#43;09:30" />
+<meta property="og:updated_time" content="2021-06-18T16:22:05&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  " />
+    <meta name="twitter:description" content="  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  " />
+    <meta itemprop="description" content="  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-120/" />
+
+
+
+
+<title>Episode 120</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-120/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 120</h1><small>Posted on Friday, Jun 18, 2021 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            In this week&rsquo;s episode we look at how to get media coverage for your shiny
+new vulnerability, plus we cover security updates for ExifTool,
+ImageMagick, BlueZ and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E120.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>In this week&rsquo;s episode we look at how to get media coverage for your shiny
+new vulnerability, plus we cover security updates for ExifTool,
+ImageMagick, BlueZ and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>49 unique CVEs addressed</p>
+<h3 id="usn-4986-2-rpcbind-vulnerability-00-44">[<a href="https://ubuntu.com/security/notices/USN-4986-2">USN-4986-2</a>] rpcbind vulnerability [00:44]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-8779">CVE-2017-8779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-119/">Episode 119</a> (bionic) - memory leak on crafted requests</li>
+</ul>
+<h3 id="usn-4986-3-usn-4986-4-rpcbind-regression-01-11">[<a href="https://ubuntu.com/security/notices/USN-4986-3">USN-4986-3</a>, <a href="https://ubuntu.com/security/notices/USN-4986-4">USN-4986-4</a>] rpcbind regression [01:11]</h3>
+<ul>
+<li>Affecting Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)</li>
+<li>Original fix missed follow-up patches to correct problems in the upstream
+fix - required multiple other bits to work correctly</li>
+</ul>
+<h3 id="usn-4971-2-libwebp-vulnerabilities-01-34">[<a href="https://ubuntu.com/security/notices/USN-4971-2">USN-4971-2</a>] libwebp vulnerabilities [01:34]</h3>
+<ul>
+<li>10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-36331">CVE-2020-36331</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36330">CVE-2020-36330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36329">CVE-2020-36329</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36328">CVE-2020-36328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25014">CVE-2018-25014</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25013">CVE-2018-25013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25012">CVE-2018-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25011">CVE-2018-25011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25010">CVE-2018-25010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25009">CVE-2018-25009</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-118/">Episode 118</a></li>
+</ul>
+<h3 id="usn-4987-1-exiftool-vulnerability-01-50">[<a href="https://ubuntu.com/security/notices/USN-4987-1">USN-4987-1</a>] ExifTool vulnerability [01:50]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-22204">CVE-2021-22204</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Was originally reported to gitlab via hackerone as exiftool is used on
+image uploads to redact image metadata etc - they coordinated the fix
+with exiftool upstream. RCE when parsing a malicious DjVu image - uses
+perl to parse DjVu and in doing so it eval&rsquo;s certain constructs without
+properly validating them</li>
+</ul>
+<h3 id="usn-4988-1-imagemagick-vulnerabilities-03-17">[<a href="https://ubuntu.com/security/notices/USN-4988-1">USN-4988-1</a>] ImageMagick vulnerabilities [03:17]</h3>
+<ul>
+<li>34 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20176">CVE-2021-20176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27776">CVE-2020-27776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27775">CVE-2020-27775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27774">CVE-2020-27774</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27773">CVE-2020-27773</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27772">CVE-2020-27772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27771">CVE-2020-27771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27770">CVE-2020-27770</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27769">CVE-2020-27769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27768">CVE-2020-27768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27767">CVE-2020-27767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27766">CVE-2020-27766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27765">CVE-2020-27765</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27764">CVE-2020-27764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27763">CVE-2020-27763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27762">CVE-2020-27762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27761">CVE-2020-27761</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27760">CVE-2020-27760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27759">CVE-2020-27759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27758">CVE-2020-27758</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27757">CVE-2020-27757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27756">CVE-2020-27756</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27755">CVE-2020-27755</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27754">CVE-2020-27754</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27753">CVE-2020-27753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27751">CVE-2020-27751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27750">CVE-2020-27750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25676">CVE-2020-25676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25675">CVE-2020-25675</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25674">CVE-2020-25674</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25666">CVE-2020-25666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25665">CVE-2020-25665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19667">CVE-2020-19667</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14528">CVE-2017-14528</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>every ~30 weeks we seem to have another ImageMagick update - so that time again ;)</li>
+<li>DoS, RCE etc</li>
+</ul>
+<h3 id="usn-4989-1-bluez-vulnerabilities-03-56">[<a href="https://ubuntu.com/security/notices/USN-4989-1">USN-4989-1</a>] BlueZ vulnerabilities [03:56]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3588">CVE-2021-3588</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27153">CVE-2020-27153</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>1 bluetooth core specification issue - during pairing a nearby attacker
+could interpose on the pairing process and hence complete the pairing
+instead of the intended device</li>
+<li>2 issues in bluez code itself
+<ul>
+<li>double free (UAF) + OOB read</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="how-to-get-media-coverage-for-your-linux-vulnerabilities-04-48">How to get media coverage for your Linux vulnerabilities [04:48]</h3>
+<ul>
+<li>In <a href="https://ubuntusecuritypodcast.org/episode-119/">Episode 119</a> covered an update for polkit - the following day Github
+<a href="https://github.blog/2021-06-10-privilege-escalation-polkit-root-on-linux-with-bug/">published a blog post</a> with significant details of the vuln - then we saw
+a heap of media coverage
+<ul>
+<li><a href="https://www.theregister.com/2021/06/11/linux%5Fpolkit%5Fpackage%5Fpatched/">https://www.theregister.com/2021/06/11/linux%5Fpolkit%5Fpackage%5Fpatched/</a></li>
+<li><a href="https://www.zdnet.com/article/nasty-linux-systemd-root-level-security-bug-revealed-and-patched/">https://www.zdnet.com/article/nasty-linux-systemd-root-level-security-bug-revealed-and-patched/</a></li>
+</ul>
+</li>
+<li>Why did this vuln get so much coverage when lots of others don&rsquo;t?
+<ul>
+<li>Great technical detail from a reputable and popular source (github)</li>
+<li>Very clearly written and easy to understand
+<ul>
+<li>Is a simple logic error that can be triggered via a race-condition in
+a privileged daemon</li>
+<li>PoC can be implemented as a 1 line bash invocation so is also simple
+to understand</li>
+<li>c.f. a complicated memory corruption vuln or similar (ie no need to
+understand memory management, heap grooming etc etc)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Or give it a cool name and logo
+<ul>
+<li>heartbleed was one of the first to do this and this likely helped it
+get noticed and patched (plus fame/notoriety for the researchers)</li>
+<li>Since then we have seen many (shellshock, stagefright, dirty cow,
+spectre, meltdown, boothole etc) but not all vulns that get names/logos
+are created equal - impact / exploitability varies greatly - so a name
+and a logo doesn&rsquo;t necessarily mean a vuln is critical</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-119/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-120\/",
+        text: "Episode 120"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

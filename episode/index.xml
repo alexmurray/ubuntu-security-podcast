@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 11 Jun 2021 10:53:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jun 2021 16:21:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,196 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 120</title>
+          <link>https://ubuntusecuritypodcast.org/episode-120/</link>
+          <pubDate>Fri, 18 Jun 2021 16:21:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>1580d8948f4c929e33808605579ef600743e0848526106f8cea1ab175aa5cda7d0d52c52a04e3b48fa489743575c268e6100b9d5732f5df1e95abd20385d9ad3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 120</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  </itunes:summary>
+        <description>  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  </description>
+        <googleplay:description>  In this week&#39;s episode we look at how to get media coverage for your shiny
+  new vulnerability, plus we cover security updates for ExifTool,
+  ImageMagick, BlueZ and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>In this week&rsquo;s episode we look at how to get media coverage for your shiny
+new vulnerability, plus we cover security updates for ExifTool,
+ImageMagick, BlueZ and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>49 unique CVEs addressed</p>
+<h3 id="usn-4986-2-rpcbind-vulnerability-00-44">[<a href="https://ubuntu.com/security/notices/USN-4986-2">USN-4986-2</a>] rpcbind vulnerability [00:44]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-8779">CVE-2017-8779</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-119/">Episode 119</a> (bionic) - memory leak on crafted requests</li>
+</ul>
+<h3 id="usn-4986-3-usn-4986-4-rpcbind-regression-01-11">[<a href="https://ubuntu.com/security/notices/USN-4986-3">USN-4986-3</a>, <a href="https://ubuntu.com/security/notices/USN-4986-4">USN-4986-4</a>] rpcbind regression [01:11]</h3>
+<ul>
+<li>Affecting Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)</li>
+<li>Original fix missed follow-up patches to correct problems in the upstream
+fix - required multiple other bits to work correctly</li>
+</ul>
+<h3 id="usn-4971-2-libwebp-vulnerabilities-01-34">[<a href="https://ubuntu.com/security/notices/USN-4971-2">USN-4971-2</a>] libwebp vulnerabilities [01:34]</h3>
+<ul>
+<li>10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-36331">CVE-2020-36331</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36330">CVE-2020-36330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36329">CVE-2020-36329</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36328">CVE-2020-36328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25014">CVE-2018-25014</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25013">CVE-2018-25013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25012">CVE-2018-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25011">CVE-2018-25011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25010">CVE-2018-25010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25009">CVE-2018-25009</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-118/">Episode 118</a></li>
+</ul>
+<h3 id="usn-4987-1-exiftool-vulnerability-01-50">[<a href="https://ubuntu.com/security/notices/USN-4987-1">USN-4987-1</a>] ExifTool vulnerability [01:50]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-22204">CVE-2021-22204</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Was originally reported to gitlab via hackerone as exiftool is used on
+image uploads to redact image metadata etc - they coordinated the fix
+with exiftool upstream. RCE when parsing a malicious DjVu image - uses
+perl to parse DjVu and in doing so it eval&rsquo;s certain constructs without
+properly validating them</li>
+</ul>
+<h3 id="usn-4988-1-imagemagick-vulnerabilities-03-17">[<a href="https://ubuntu.com/security/notices/USN-4988-1">USN-4988-1</a>] ImageMagick vulnerabilities [03:17]</h3>
+<ul>
+<li>34 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20176">CVE-2021-20176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27776">CVE-2020-27776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27775">CVE-2020-27775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27774">CVE-2020-27774</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27773">CVE-2020-27773</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27772">CVE-2020-27772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27771">CVE-2020-27771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27770">CVE-2020-27770</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27769">CVE-2020-27769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27768">CVE-2020-27768</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27767">CVE-2020-27767</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27766">CVE-2020-27766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27765">CVE-2020-27765</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27764">CVE-2020-27764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27763">CVE-2020-27763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27762">CVE-2020-27762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27761">CVE-2020-27761</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27760">CVE-2020-27760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27759">CVE-2020-27759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27758">CVE-2020-27758</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27757">CVE-2020-27757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27756">CVE-2020-27756</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27755">CVE-2020-27755</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27754">CVE-2020-27754</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27753">CVE-2020-27753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27751">CVE-2020-27751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27750">CVE-2020-27750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25676">CVE-2020-25676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25675">CVE-2020-25675</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25674">CVE-2020-25674</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25666">CVE-2020-25666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25665">CVE-2020-25665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19667">CVE-2020-19667</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14528">CVE-2017-14528</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>every ~30 weeks we seem to have another ImageMagick update - so that time again ;)</li>
+<li>DoS, RCE etc</li>
+</ul>
+<h3 id="usn-4989-1-bluez-vulnerabilities-03-56">[<a href="https://ubuntu.com/security/notices/USN-4989-1">USN-4989-1</a>] BlueZ vulnerabilities [03:56]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3588">CVE-2021-3588</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27153">CVE-2020-27153</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>1 bluetooth core specification issue - during pairing a nearby attacker
+could interpose on the pairing process and hence complete the pairing
+instead of the intended device</li>
+<li>2 issues in bluez code itself
+<ul>
+<li>double free (UAF) + OOB read</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="how-to-get-media-coverage-for-your-linux-vulnerabilities-04-48">How to get media coverage for your Linux vulnerabilities [04:48]</h3>
+<ul>
+<li>In <a href="https://ubuntusecuritypodcast.org/episode-119/">Episode 119</a> covered an update for polkit - the following day Github
+<a href="https://github.blog/2021-06-10-privilege-escalation-polkit-root-on-linux-with-bug/">published a blog post</a> with significant details of the vuln - then we saw
+a heap of media coverage
+<ul>
+<li><a href="https://www.theregister.com/2021/06/11/linux%5Fpolkit%5Fpackage%5Fpatched/">https://www.theregister.com/2021/06/11/linux%5Fpolkit%5Fpackage%5Fpatched/</a></li>
+<li><a href="https://www.zdnet.com/article/nasty-linux-systemd-root-level-security-bug-revealed-and-patched/">https://www.zdnet.com/article/nasty-linux-systemd-root-level-security-bug-revealed-and-patched/</a></li>
+</ul>
+</li>
+<li>Why did this vuln get so much coverage when lots of others don&rsquo;t?
+<ul>
+<li>Great technical detail from a reputable and popular source (github)</li>
+<li>Very clearly written and easy to understand
+<ul>
+<li>Is a simple logic error that can be triggered via a race-condition in
+a privileged daemon</li>
+<li>PoC can be implemented as a 1 line bash invocation so is also simple
+to understand</li>
+<li>c.f. a complicated memory corruption vuln or similar (ie no need to
+understand memory management, heap grooming etc etc)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Or give it a cool name and logo
+<ul>
+<li>heartbleed was one of the first to do this and this likely helped it
+get noticed and patched (plus fame/notoriety for the researchers)</li>
+<li>Since then we have seen many (shellshock, stagefright, dirty cow,
+spectre, meltdown, boothole etc) but not all vulns that get names/logos
+are created equal - impact / exploitability varies greatly - so a name
+and a logo doesn&rsquo;t necessarily mean a vuln is critical</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E120.mp3" length="8246704" type="audio/mpeg" /><itunes:duration>10:16</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 119</title>
           <link>https://ubuntusecuritypodcast.org/episode-119/</link>
