@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Thu, 8 Jul 2021 00:00:00 &#43;0000</lastBuildDate>
+    <lastBuildDate>Fri, 9 Jul 2021 13:48:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -43,7 +43,7 @@
         <item>
           <title>Episode 123</title>
           <link>https://ubuntusecuritypodcast.org/episode-123/</link>
-          <pubDate>Thu, 08 Jul 2021 00:00:00 +0000 </pubDate>
+          <pubDate>Fri, 09 Jul 2021 13:48:00 +0930 </pubDate>
           <dc:creator></dc:creator>
           <guid>53716e1d5454b19c35501c2028afa9831de625d0dc4f1dffbb8dbf9cd454d7a14fe9d9e86fadb2dc2a27bb8c9aac524370ccbecce9a3084dbf513daa1b34fe28</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
@@ -51,17 +51,26 @@
         <itunes:title>Episode 123</itunes:title>
         <itunes:subtitle><![CDATA[
         
-        This week we look at some details of the 8 unique CVEs addressed across the supported Ubuntu releases and more.
+          Is npm audit more harm than good? Plus this week we look at security
+  updates for DjVuLibre, libuv, PHP and more.
+  
         
         ]]></itunes:subtitle>
-        <itunes:summary>This week we look at some details of the 8 unique CVEs addressed across the supported Ubuntu releases and more.</itunes:summary>
-        <description>This week we look at some details of the 8 unique CVEs addressed across the supported Ubuntu releases and more.</description>
-        <googleplay:description>This week we look at some details of the 8 unique CVEs addressed across the supported Ubuntu releases and more.</googleplay:description>
+        <itunes:summary>  Is npm audit more harm than good? Plus this week we look at security
+  updates for DjVuLibre, libuv, PHP and more.
+  </itunes:summary>
+        <description>  Is npm audit more harm than good? Plus this week we look at security
+  updates for DjVuLibre, libuv, PHP and more.
+  </description>
+        <googleplay:description>  Is npm audit more harm than good? Plus this week we look at security
+  updates for DjVuLibre, libuv, PHP and more.
+  </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>This week we look at some details of the 8 unique CVEs addressed across the supported Ubuntu releases and more.</p>
+<p>Is npm audit more harm than good? Plus this week we look at security
+updates for DjVuLibre, libuv, PHP and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>8 unique CVEs addressed</p>
-<h3 id="usn-4905-2-x-dot-org-x-server-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-4905-2">USN-4905-2</a>] X.Org X Server vulnerability</h3>
+<h3 id="usn-4905-2-x-dot-org-x-server-vulnerability-00-42">[<a href="https://ubuntu.com/security/notices/USN-4905-2">USN-4905-2</a>] X.Org X Server vulnerability [00:42]</h3>
 <ul>
 <li>1 CVEs addressed in Trusty ESM (14.04 ESM)
 <ul>
@@ -72,7 +81,7 @@
 extension and ChangeFeedbackControl request - integer underflow -&gt; heap
 buffer overflow</li>
 </ul>
-<h3 id="usn-5005-1-djvulibre-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5005-1">USN-5005-1</a>] DjVuLibre vulnerability</h3>
+<h3 id="usn-5005-1-djvulibre-vulnerability-01-26">[<a href="https://ubuntu.com/security/notices/USN-5005-1">USN-5005-1</a>] DjVuLibre vulnerability [01:26]</h3>
 <ul>
 <li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
 <ul>
@@ -81,7 +90,7 @@ buffer overflow</li>
 </li>
 <li>OOB write via crafted djvu file -&gt; crash -&gt; DoS, RCE</li>
 </ul>
-<h3 id="usn-5007-1-libuv-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5007-1">USN-5007-1</a>] libuv vulnerability</h3>
+<h3 id="usn-5007-1-libuv-vulnerability-01-53">[<a href="https://ubuntu.com/security/notices/USN-5007-1">USN-5007-1</a>] libuv vulnerability [01:53]</h3>
 <ul>
 <li>1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
 <ul>
@@ -94,7 +103,7 @@ handling TCP/UDP sockets, DNS resolution, file system operations etc</li>
 to uv_getaddrinfo() which are done by clients who handle TCP/UDP sockets
 async (ie nodejs, Julia,, BIND etc)</li>
 </ul>
-<h3 id="usn-5006-1-php-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5006-1">USN-5006-1</a>] PHP vulnerabilities</h3>
+<h3 id="usn-5006-1-php-vulnerabilities-03-04">[<a href="https://ubuntu.com/security/notices/USN-5006-1">USN-5006-1</a>] PHP vulnerabilities [03:04]</h3>
 <ul>
 <li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
 <ul>
@@ -114,6 +123,11 @@ deref (so malicious server could trigger a crash) -&gt; DoS</li>
 FILTER_VALIDATE_URL</li>
 </ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="npm-audit-broken-by-design-04-13">npm audit broken by design? [04:13]</h3>
+<ul>
+<li><a href="https://overreacted.io/npm-audit-broken-by-design/">https://overreacted.io/npm-audit-broken-by-design/</a></li>
+</ul>
+<h3 id="ubuntu-security-podcast-on-break-for-next-2-weeks-07-56">Ubuntu Security Podcast on break for next 2 weeks [07:56]</h3>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
 <li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
@@ -123,7 +137,7 @@ FILTER_VALIDATE_URL</li>
 <li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E123.mp3" length="NUM_BYTES" type="audio/mpeg" /><itunes:duration>MM:SS</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E123.mp3" length="7209464" type="audio/mpeg" /><itunes:duration>08:57</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 122</title>
