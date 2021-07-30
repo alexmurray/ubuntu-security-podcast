@@ -20,10 +20,7 @@
 (defun usp-generate-usn-link (usn)
   "Generate an 'org-mode' link for USN."
   (when usn
-    (let ((usn-n (substring usn (string-match "[0-9]" usn))))
-      (pcase (substring usn 0 1)
-        ("U" (format "[[https://ubuntu.com/security/notices/%s][%s]]" usn usn))
-        (_ usn)))))
+    (format "[[https://ubuntu.com/security/notices/%s][%s]]" usn usn)))
 
 (defun usp-generate-cve-link (cve)
   "Generate an 'org-mode' link for CVE."
