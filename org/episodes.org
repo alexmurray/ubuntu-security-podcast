@@ -8,6 +8,414 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 124
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-124
+:EXPORT_DATE: 2021-07-30 14:46
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E124.mp3 :podcast_duration "14:29" :podcast_bytes "11590829" :permalink "https://ubuntusecuritypodcast.org/episode-124/" :guid d2899b04375c5cc8e92e37291c2a2b4bce70b742950e9fb74e649c4cc57db94e40d4895e1f98b2efe91802633a405fa32df0636f14f2bf40eab766c8ba1d5b27
+:END:
+#+begin_description
+It's another week when too many security updates are never enough as we
+cover 240 CVE fixes across Avahi, QEMU, the Linux kernel, containerd,
+binutils and more, plus the Ubuntu 20.10 Groovy Gorilla end-of-life.
+#+end_description
+** Overview
+It's another week when too many security updates are never enough as we
+cover 240 CVE fixes across Avahi, QEMU, the Linux kernel, containerd,
+binutils and more, plus the Ubuntu 20.10 Groovy Gorilla end-of-life.
+** This week in Ubuntu Security Updates
+240 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5008-1][USN-5008-1]], [[https://ubuntu.com/security/notices/USN-5008-2][USN-5008-2]]] Avahi vulnerabilities [00:36]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-3502][CVE-2021-3502]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3468][CVE-2021-3468]] <!-- medium -->
+- 2 DoS via local users - first via abusing the Avahi daemon's unix socket -> hang
+- second by calling asking the avahi daemon to resolve a crafted domain
+  name either via the DBus API or the local socket - assert() -> crash
+
+*** [[[https://ubuntu.com/security/notices/USN-5006-2][USN-5006-2]]] PHP vulnerabilities [01:12]
+- 5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2021-21705][CVE-2021-21705]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-21704][CVE-2021-21704]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-21702][CVE-2021-21702]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-7071][CVE-2020-7071]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-7068][CVE-2020-7068]] <!-- low -->
+- [[https://ubuntusecuritypodcast.org/episode-123/][Episode 123]]
+
+*** [[[https://ubuntu.com/security/notices/USN-5009-1][USN-5009-1]]] libslirp vulnerabilities [01:31]
+- 6 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-3595][CVE-2021-3595]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3594][CVE-2021-3594]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3593][CVE-2021-3593]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3592][CVE-2021-3592]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29130][CVE-2020-29130]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29129][CVE-2020-29129]] <!-- low -->
+- TCP/IP emulation library using by QEMU etc
+- Info leaks from the host to the guest via buffer over-reads in handling
+  of various network packet types (UDP etc)
+
+*** [[[https://ubuntu.com/security/notices/USN-5010-1][USN-5010-1]]] QEMU vulnerabilities [02:07]
+- 21 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-3595][CVE-2021-3595]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3594][CVE-2021-3594]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3593][CVE-2021-3593]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3592][CVE-2021-3592]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3608][CVE-2021-3608]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3607][CVE-2021-3607]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3582][CVE-2021-3582]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3546][CVE-2021-3546]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3545][CVE-2021-3545]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3544][CVE-2021-3544]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3527][CVE-2021-3527]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3416][CVE-2021-3416]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3409][CVE-2021-3409]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-20257][CVE-2021-20257]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-20221][CVE-2021-20221]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-35517][CVE-2020-35517]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3392][CVE-2021-3392]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-35505][CVE-2020-35505]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-35504][CVE-2020-35504]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-29443][CVE-2020-29443]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-15469][CVE-2020-15469]] <!-- low -->
+- Usual mix of vulns in emulation of various devices etc - generally allows
+  a malicious guest to cause QEMU to crash on the host -> DoS
+  - MMIO, ATAPI, SCSI, ARM Generic Interrupt Controller, e1000
+- Mishandling in virtio-fs shared filesystem daemon allows malicious guest
+  to read/write host devices
+- A few others possibly result on code-exec on the host as the QEMU daemon
+  BUT on Ubuntu QEMU is confined via AppArmor by default so this limits the
+  possible impact
+
+*** [[[https://ubuntu.com/security/notices/LSN-0078-1][LSN-0078-1]]] Linux kernel vulnerability [03:14]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3609][CVE-2021-3609]] <!-- high -->
+- Livepatch for CAN BCM UAF -> arbitrary code exec ([[https://ubuntusecuritypodcast.org/episode-121/][Episode 121]])
+
+*** [[[https://ubuntu.com/security/notices/USN-5014-1][USN-5014-1]]] Linux kernel vulnerability [03:49]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+- high priority respin
+- seq\under{}file vuln - this virt file-system contained an unsigned integer
+  conversion error - would result in a local user being able to cause an
+  OOB write and hence possible code-exec in the kernel -> privesc
+
+*** [[[https://ubuntu.com/security/notices/USN-5015-1][USN-5015-1]]] Linux kernel (OEM) vulnerabilities [04:28]
+- 5 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3587][CVE-2021-3587]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3573][CVE-2021-3573]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3564][CVE-2021-3564]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-28691][CVE-2021-28691]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+- 5.10 oem
+- seq\under{}file vuln plus a couple UAF in bluetooth, NULL ptr deref in NFC, UAF
+  in Xen networking - guest to host crash/code-exec etc
+
+*** [[[https://ubuntu.com/security/notices/USN-5016-1][USN-5016-1]]] Linux kernel vulnerabilities [04:54]
+- 5 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
+  - [[https://ubuntu.com/security/CVE-2021-3506][CVE-2021-3506]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-33034][CVE-2021-33034]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-32399][CVE-2021-32399]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23134][CVE-2021-23134]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+- 5.8 - hirsute, focal hwe
+- seq\under{}file vuln plus, NFC UAF, Bluetooth UAFs, F2FS OOB read
+
+*** [[[https://ubuntu.com/security/notices/USN-5017-1][USN-5017-1]]] Linux kernel vulnerabilities [05:26]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-0129][CVE-2021-0129]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-26558][CVE-2020-26558]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+- 5.4 - focal, bionic hwe, oem, aws, azure, gcp, gke etc
+- seq\under{}file vuln plus a few bluetooth info leaks
+
+*** [[[https://ubuntu.com/security/notices/USN-5018-1][USN-5018-1]]] Linux kernel vulnerabilities [05:49]
+- 12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33034][CVE-2021-33034]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-32399][CVE-2021-32399]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-31829][CVE-2021-31829]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23134][CVE-2021-23134]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-0129][CVE-2021-0129]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-26558][CVE-2020-26558]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-26147][CVE-2020-26147]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-26139][CVE-2020-26139]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-24587][CVE-2020-24587]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-24586][CVE-2020-24586]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-33200][CVE-2021-33200]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+- 4.15 - bionic, xenial hwe, trusty azure
+- seq\under{}file vuln plus various other fixes from recent kernels - eBPF
+  privesc, Wifi FRAGATTACKs fixes, bluetooth info leaks and UAFs and NFC
+  UAF
+
+*** [[[https://ubuntu.com/security/notices/LSN-0079-1][LSN-0079-1]]] Linux kernel vulnerability [06:21]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33909][CVE-2021-33909]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2021-3600][CVE-2021-3600]] <!-- high -->
+- seq\under{}file vuln plus eBPF codeexec
+
+*** [[[https://ubuntu.com/security/notices/USN-5019-1][USN-5019-1]]] NVIDIA graphics drivers vulnerabilities [06:43]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-1095][CVE-2021-1095]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1094][CVE-2021-1094]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-1093][CVE-2021-1093]] <!-- medium -->
+- 2 DoS - one by triggering an assert(), the other by dereferencing an
+  untrusted pointer - kernel crash in either case
+- OOB array access (OOB read) - info leak or crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5012-1][USN-5012-1]]] containerd vulnerabilities [07:23]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-32760][CVE-2021-32760]] <!-- high -->
+- When extracting a container image, would try and set the
+  owner/permissions on the resulting extracted files - if these files were
+  symlinks pointing to existing files on the host then would change perms
+  of those files instead - fixed to ensure it does not follow symlinks when
+  applying this permissions changes
+
+*** [[[https://ubuntu.com/security/notices/USN-5013-1][USN-5013-1]], [[https://ubuntu.com/security/notices/USN-5013-2][USN-5013-2]]] systemd vulnerabilities [08:00]
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2020-13529][CVE-2020-13529]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-33910][CVE-2021-33910]] <!-- high -->
+- When parsing mount paths, would allocate memory for the path on the
+  stack - if a local attacker can mount a file-system with a very long path
+  name, would overflow the entire stack memory and cause systemd to crash -
+  as systemd is PID1 this effectively crashes the whole system
+- Remote attacker could cause sytemd DHCP client to force assign a
+  different address and hence could cause a networking DoS against a remote
+  server on the same network by making it unroutable etc
+
+*** [[[https://ubuntu.com/security/notices/USN-4336-2][USN-4336-2]]] GNU binutils vulnerabilities [09:12]
+- 147 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2019-9077][CVE-2019-9077]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-9075][CVE-2019-9075]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-9074][CVE-2019-9074]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-9073][CVE-2019-9073]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-9071][CVE-2019-9071]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-9070][CVE-2019-9070]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-17451][CVE-2019-17451]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2019-17450][CVE-2019-17450]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2019-14444][CVE-2019-14444]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2019-14250][CVE-2019-14250]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2019-12972][CVE-2019-12972]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-9138][CVE-2018-9138]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-8945][CVE-2018-8945]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-7643][CVE-2018-7643]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-7642][CVE-2018-7642]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-7569][CVE-2018-7569]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-7568][CVE-2018-7568]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-7208][CVE-2018-7208]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-6759][CVE-2018-6759]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-6543][CVE-2018-6543]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-6323][CVE-2018-6323]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-20671][CVE-2018-20671]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-20623][CVE-2018-20623]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-20002][CVE-2018-20002]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19932][CVE-2018-19932]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-19931][CVE-2018-19931]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18701][CVE-2018-18701]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18700][CVE-2018-18700]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18607][CVE-2018-18607]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18606][CVE-2018-18606]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18605][CVE-2018-18605]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18484][CVE-2018-18484]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18483][CVE-2018-18483]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-18309][CVE-2018-18309]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-17985][CVE-2018-17985]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-17794][CVE-2018-17794]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-17360][CVE-2018-17360]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-17359][CVE-2018-17359]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-17358][CVE-2018-17358]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-13033][CVE-2018-13033]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12934][CVE-2018-12934]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12700][CVE-2018-12700]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12699][CVE-2018-12699]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12698][CVE-2018-12698]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12697][CVE-2018-12697]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-12641][CVE-2018-12641]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-10535][CVE-2018-10535]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-10534][CVE-2018-10534]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-10373][CVE-2018-10373]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-10372][CVE-2018-10372]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2018-1000876][CVE-2018-1000876]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9954][CVE-2017-9954]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9756][CVE-2017-9756]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9755][CVE-2017-9755]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9754][CVE-2017-9754]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9753][CVE-2017-9753]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9752][CVE-2017-9752]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9751][CVE-2017-9751]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9750][CVE-2017-9750]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9749][CVE-2017-9749]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9748][CVE-2017-9748]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9747][CVE-2017-9747]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9746][CVE-2017-9746]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9745][CVE-2017-9745]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9744][CVE-2017-9744]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9742][CVE-2017-9742]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9044][CVE-2017-9044]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9042][CVE-2017-9042]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9041][CVE-2017-9041]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9040][CVE-2017-9040]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9039][CVE-2017-9039]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-9038][CVE-2017-9038]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8421][CVE-2017-8421]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8398][CVE-2017-8398]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8397][CVE-2017-8397]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8396][CVE-2017-8396]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8395][CVE-2017-8395]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8394][CVE-2017-8394]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-8393][CVE-2017-8393]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7614][CVE-2017-7614]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7302][CVE-2017-7302]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7301][CVE-2017-7301]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7300][CVE-2017-7300]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7299][CVE-2017-7299]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7227][CVE-2017-7227]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7226][CVE-2017-7226]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7225][CVE-2017-7225]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7224][CVE-2017-7224]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7223][CVE-2017-7223]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7210][CVE-2017-7210]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-7209][CVE-2017-7209]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-6969][CVE-2017-6969]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-6966][CVE-2017-6966]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-6965][CVE-2017-6965]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17125][CVE-2017-17125]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17124][CVE-2017-17124]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17123][CVE-2017-17123]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17121][CVE-2017-17121]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17080][CVE-2017-17080]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16832][CVE-2017-16832]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16831][CVE-2017-16831]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16828][CVE-2017-16828]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16827][CVE-2017-16827]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-16826][CVE-2017-16826]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15996][CVE-2017-15996]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15939][CVE-2017-15939]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15938][CVE-2017-15938]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15225][CVE-2017-15225]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15025][CVE-2017-15025]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15024][CVE-2017-15024]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15022][CVE-2017-15022]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15021][CVE-2017-15021]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-15020][CVE-2017-15020]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14940][CVE-2017-14940]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14939][CVE-2017-14939]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14938][CVE-2017-14938]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14932][CVE-2017-14932]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14930][CVE-2017-14930]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14529][CVE-2017-14529]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14333][CVE-2017-14333]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14130][CVE-2017-14130]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14129][CVE-2017-14129]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-14128][CVE-2017-14128]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-13710][CVE-2017-13710]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12967][CVE-2017-12967]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12799][CVE-2017-12799]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12459][CVE-2017-12459]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12458][CVE-2017-12458]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12457][CVE-2017-12457]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12456][CVE-2017-12456]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12455][CVE-2017-12455]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12454][CVE-2017-12454]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12453][CVE-2017-12453]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12452][CVE-2017-12452]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12451][CVE-2017-12451]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12450][CVE-2017-12450]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12449][CVE-2017-12449]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-12448][CVE-2017-12448]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-6131][CVE-2016-6131]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4493][CVE-2016-4493]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4492][CVE-2016-4492]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4491][CVE-2016-4491]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4490][CVE-2016-4490]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4489][CVE-2016-4489]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4488][CVE-2016-4488]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-4487][CVE-2016-4487]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2016-2226][CVE-2016-2226]] <!-- low -->
+- Most CVEs fixed in a single update?
+- binutils gets a lot of CVEs which are generally low priority -
+  ie. objdump could crash or get code-exec if run on untrusted input - but
+  since is installed in a lot of common developer scenarious we often get
+  requests about these CVEs - even though they are unlikely to actually be
+  able to be exploited in most scenarios
+- Thanks to Leo on our team (and Marc for the original backport of a lot of
+  these patches)
+
+*** [[[https://ubuntu.com/security/notices/USN-5020-1][USN-5020-1]]] Ruby vulnerabilities [10:24]
+- 3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-32066][CVE-2021-32066]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-31810][CVE-2021-31810]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-31799][CVE-2021-31799]] <!-- medium -->
+- RCE, port scans / banner extractions, interpose on connections to bypass
+  TLS
+
+*** [[[https://ubuntu.com/security/notices/USN-5021-1][USN-5021-1]]] curl vulnerabilities [10:46]
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-22924][CVE-2021-22924]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-22925][CVE-2021-22925]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-22898][CVE-2021-22898]] <!-- low -->
+- Failed to initialise data when handling TELNET connections - if these
+  structures happened to contain sensitive info -> info leak
+- Could reuse connections from the connection pool in the wrong
+  circumstances, leading to reusing wrong connection and sending data to
+  wrong host
+
+*** [[[https://ubuntu.com/security/notices/USN-5022-1][USN-5022-1]]] MySQL vulnerabilities [11:36]
+- 31 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-2441][CVE-2021-2441]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2440][CVE-2021-2440]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2437][CVE-2021-2437]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2429][CVE-2021-2429]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2427][CVE-2021-2427]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2426][CVE-2021-2426]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2425][CVE-2021-2425]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2424][CVE-2021-2424]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2422][CVE-2021-2422]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2418][CVE-2021-2418]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2417][CVE-2021-2417]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2410][CVE-2021-2410]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2402][CVE-2021-2402]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2399][CVE-2021-2399]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2390][CVE-2021-2390]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2389][CVE-2021-2389]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2387][CVE-2021-2387]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2385][CVE-2021-2385]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2384][CVE-2021-2384]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2383][CVE-2021-2383]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2374][CVE-2021-2374]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2372][CVE-2021-2372]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2370][CVE-2021-2370]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2367][CVE-2021-2367]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2357][CVE-2021-2357]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2356][CVE-2021-2356]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2354][CVE-2021-2354]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2352][CVE-2021-2352]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2342][CVE-2021-2342]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2340][CVE-2021-2340]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-2339][CVE-2021-2339]] <!-- medium -->
+- 8.0.26 (focal, hirsute)
+- 5.7.35 (bionic)
+
+*** [[[https://ubuntu.com/security/notices/USN-5023-1][USN-5023-1]]] Aspell vulnerability [12:00]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2019-25051][CVE-2019-25051]] <!-- medium -->
+- Heap buffer overflow - fixed to actually validate size before using
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu 20.10 Groovy Gorilla EOL [12:25]
+- as of July 22, 2021, Ubuntu 20.10 is no longer supported.
+- No more package updates will be accepted to 20.10
+- Will be archived to old-releases.ubuntu.com in the coming weeks
+- Upgrade to Hirsute - https://help.ubuntu.com/community/HirsuteUpgrades
+- https://lists.ubuntu.com/archives/ubuntu-security-announce/2021-July/006117.html
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 123
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-123
