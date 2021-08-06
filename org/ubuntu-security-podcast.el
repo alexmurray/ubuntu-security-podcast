@@ -183,14 +183,14 @@
            (labels-file-name (expand-file-name (format "USP_E%03d_labels.txt" episode)
                                                "~/Ubuntu Security Podcast/"))
            (num-bytes (file-attribute-size (file-attributes audio-file-name)))
-           (output (shell-command-to-string (format "ffmpeg -i \"%s\"" audio-file-name))))
+           (output (shell-command-to-string (format "mp3info -p %%m:%%s \"%s\"" audio-file-name))))
       (save-excursion
         ;; first update export date
         (re-search-forward "^:EXPORT_DATE: \\(.*\\)$")
         (replace-match (format-time-string "%Y-%m-%d %H:%M") t t nil 1)
-        (if (null (string-match "Duration: [0-9]\\{2\\}:\\([0-9]\\{2\\}\\):\\([0-9]\\{2\\}\\).[0-9]\\{2\\}"
+        (if (null (string-match "\\([0-9]\\{2\\}\\):\\([0-9]\\{2\\}\\)"
                                 output))
-            (error "Unable to get Duration of %s via ffmpeg" audio-file-name)
+            (error "Unable to get Duration of %s via mp3info" audio-file-name)
           (let ((mins (match-string 1 output))
                 (secs (match-string 2 output)))
             (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\" :guid [a-z0-9]+$")
