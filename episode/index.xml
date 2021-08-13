@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 6 Aug 2021 16:02:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 13 Aug 2021 15:04:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,175 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 126</title>
+          <link>https://ubuntusecuritypodcast.org/episode-126/</link>
+          <pubDate>Fri, 13 Aug 2021 15:04:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>1cf7484a0aad93fdbfe137c475da46ef305fbc882d3d7013ecd12d939ba6f0e3580d61129d5a14f1f6137f57891a709825cb23530f87b89d7ee6cc1dc8867208</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 126</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week Ubuntu 20.04 LTS was FIPS 140-2 certified plus the AppArmor
+  project made some point releases, and we released security updates for
+  Docker, Perl, c-ares, GPSd and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week Ubuntu 20.04 LTS was FIPS 140-2 certified plus the AppArmor
+  project made some point releases, and we released security updates for
+  Docker, Perl, c-ares, GPSd and more.
+  </itunes:summary>
+        <description>  This week Ubuntu 20.04 LTS was FIPS 140-2 certified plus the AppArmor
+  project made some point releases, and we released security updates for
+  Docker, Perl, c-ares, GPSd and more.
+  </description>
+        <googleplay:description>  This week Ubuntu 20.04 LTS was FIPS 140-2 certified plus the AppArmor
+  project made some point releases, and we released security updates for
+  Docker, Perl, c-ares, GPSd and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week Ubuntu 20.04 LTS was FIPS 140-2 certified plus the AppArmor
+project made some point releases, and we released security updates for
+Docker, Perl, c-ares, GPSd and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>2 unique CVEs addressed</p>
+<h3 id="usn-5031-1-opencryptoki-vulnerability-00-54">[<a href="https://ubuntu.com/security/notices/USN-5031-1">USN-5031-1</a>] openCryptoki vulnerability [00:54]</h3>
+<ul>
+<li>Affecting Hirsute (21.04)</li>
+<li>PKCS#11 daemon</li>
+<li>Bug fix that was deemed to have security implications - so was going to
+be done via SRU for 21.04 but instead we published via -security to
+ensure all users received it</li>
+<li>Thanks to Simon Chopin from Foundations team for preparing this update</li>
+</ul>
+<h3 id="usn-5032-1-usn-5032-2-docker-vulnerabilities-02-29">[<a href="https://ubuntu.com/security/notices/USN-5032-1">USN-5032-1</a>, <a href="https://ubuntu.com/security/notices/USN-5032-2">USN-5032-2</a>] Docker vulnerabilities [02:29]</h3>
+<ul>
+<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)</li>
+<li>Backport of the 20.10.7 version from 21.10 to older releases - this
+includes a bunch of security fixes as well</li>
+<li>Unfortunately as this is a version upgrade there are some changes that
+may break existing containers - in particular, drops support for the aufs
+storage driver so if you were using this you should upgrade your
+configuration to use the overlayfs2 storage driver instead -
+<a href="https://docs.docker.com/storage/storagedriver/overlayfs-driver/">https://docs.docker.com/storage/storagedriver/overlayfs-driver/</a> - this is
+a bit involved since you need to export your images, switch the storage
+driver, then load the images back one after another</li>
+<li>Thanks for Lucas Kanashiro from Server team for preparing this update</li>
+</ul>
+<h3 id="usn-5033-1-perl-vulnerability-03-32">[<a href="https://ubuntu.com/security/notices/USN-5033-1">USN-5033-1</a>] Perl vulnerability [03:32]</h3>
+<ul>
+<li>1 CVEs addressed in Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-36770">CVE-2021-36770</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Perl Encode library could end up running arbitrary Perl code from the
+current working directory - was introduced by a change in Encode 3.05 in
+perl 5.32/5.34 so only affected &gt;= 21.04</li>
+</ul>
+<h3 id="usn-5034-1-usn-5034-2-c-ares-vulnerability-03-59">[<a href="https://ubuntu.com/security/notices/USN-5034-1">USN-5034-1</a>, <a href="https://ubuntu.com/security/notices/USN-5034-2">USN-5034-2</a>] c-ares vulnerability [03:59]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3672">CVE-2021-3672</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Lib for async name resolution</li>
+<li>Failed to properly validate certain hostnames returned from DNS servers -
+could allow a remote attacker to possibly perform domain hijacking
+attacks</li>
+</ul>
+<h3 id="usn-5035-1-gpsd-vulnerability-04-28">[<a href="https://ubuntu.com/security/notices/USN-5035-1">USN-5035-1</a>] GPSd vulnerability [04:28]</h3>
+<ul>
+<li>Affecting Focal (20.04 LTS), Hirsute (21.04)</li>
+<li>incorrectly handled certain leap second events which would result in the
+time jumping back 1024 weeks on 2021-10-31</li>
+<li>Upstream don&rsquo;t consider this a security issue per-se but given how
+pervasive gpsd is used for handling GPS receivers which are often used
+for high precision timing or positioning systems (self-driving cars?) -
+this could have real-world security implications</li>
+<li>Backported the fix from upstream - note this only affected gpsd &gt;= 3.20
+so older versions in 18.04 LTS etc were not affected</li>
+<li><a href="https://lwn.net/Articles/865044/">https://lwn.net/Articles/865044/</a></li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="apparmor-3-dot-0-dot-2-3-dot-0-dot-3-released-06-39">AppArmor 3.0.2 / 3.0.3 released [06:39]</h3>
+<ul>
+<li>Includes bug fixes for various issues plus updates to the policies for
+things like PHP 8, widevine DRM in firefox, support reading of crypto
+policies for SSL-using applications</li>
+<li>Expected to land 3.0.3 for Ubuntu 21.10 (impish) before FF next week</li>
+<li><a href="https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.2">https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.2</a></li>
+<li><a href="https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.3">https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.3</a></li>
+</ul>
+<h3 id="fips-140-2-certification-for-ubuntu-20-dot-04-lts-07-44">FIPS 140-2 certification for Ubuntu 20.04 LTS! [07:44]</h3>
+<ul>
+<li>Enables organisations to run and develop applications and solutions for
+the US public sector and Federal government including regulated
+industries such as healthcare and finance</li>
+<li>FIPS 140-2, Level 1 certification crypto modules in Ubuntu 20.04 LTS,
+including OpenSSL 1.1.1
+<ul>
+<li>Linux kernel (crypto subsystem)</li>
+<li>OpenSSL</li>
+<li>Libgcrypt (used for LUKS for FDE so provides fully certified FDE
+implementation)</li>
+<li>StrongSwan (IPsec based VPN) *under validation</li>
+</ul>
+</li>
+<li>Available through Ubuntu Advantage and Ubuntu Pro - On public clouds,
+Ubuntu Pro for AWS​ and ​Ubuntu Pro for Azure​ include subscriptions to
+Canonical’s FIPS 140-2 repositories, alongside expanded security and
+hardening.</li>
+<li>Future is FIPS 140-3 - aligns with ISO/IEC 19790 (Security requirements
+for cryptographic modules)
+<ul>
+<li>Existing certifications under FIPS 140-2 have a sunset date of five
+years from the validation date</li>
+<li>Canonical is preparing Ubuntu for the new certification, and intends
+to provide FIPS 140-3 certified cryptographic packages on a future
+release of Ubuntu.</li>
+</ul>
+</li>
+<li><a href="https://ubuntu.com/blog/fips-certification-ubuntu-20-04-lts">https://ubuntu.com/blog/fips-certification-ubuntu-20-04-lts</a></li>
+<li>Full list of certifications at <a href="https://ubuntu.com/security/certifications">https://ubuntu.com/security/certifications</a></li>
+</ul>
+<h3 id="ubuntu-20-dot-04-dot-3-lts-release-delayed-until-august-26th-10-11">Ubuntu 20.04.3 LTS release delayed until August 26th [10:11]</h3>
+<ul>
+<li>Next point release for 20.04 LTS series - respin of install media with
+latest security updates etc - includes newest shim - this is now unified
+across various Ubuntu releases - installation media with this new version
+fails to boot on certain Dell and Sony Vaio machines - fix for this is in
+progress, plus the current RISC-V HWE kernel build PANIC&rsquo;s under certain
+scenarios</li>
+<li>Release team decided to delay the release by 1 week to ensure these bugs
+can be fixed and new media spun up and tested adequetly before the
+release</li>
+<li><a href="https://discourse.ubuntu.com/t/focal-fossa-20-04-3-lts-point-release-status-tracking/22948">https://discourse.ubuntu.com/t/focal-fossa-20-04-3-lts-point-release-status-tracking/22948</a></li>
+</ul>
+<h3 id="hiring-11-27">Hiring [11:27]</h3>
+<h4 id="linux-cryptography-and-security-engineer">Linux Cryptography and Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote">https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote</a></li>
+</ul>
+<h4 id="security-engineer-ubuntu">Security Engineer - Ubuntu</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E126.mp3" length="9793922" type="audio/mpeg" /><itunes:duration>12:39</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 125</title>
           <link>https://ubuntusecuritypodcast.org/episode-125/</link>
