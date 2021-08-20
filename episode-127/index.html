@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+  HAProxy, the Linux kernel and more, plus we cover some current openings on
+  the team - come join us ☺
+  ">
+
+<meta name="generator" content="Hugo 0.87.0" />
+
+<meta property="og:title" content="Episode 127" />
+<meta name="twitter:title" content="Episode 127"/>
+<meta itemprop="name" content="Episode 127">
+<meta property="article:published_time" content="2021-08-20T12:47:00&#43;09:30" />
+<meta property="article:modified_time" content="2021-08-20T12:48:18&#43;09:30" />
+<meta property="og:updated_time" content="2021-08-20T12:48:18&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+  HAProxy, the Linux kernel and more, plus we cover some current openings on
+  the team - come join us ☺
+  " />
+    <meta name="twitter:description" content="  This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+  HAProxy, the Linux kernel and more, plus we cover some current openings on
+  the team - come join us ☺
+  " />
+    <meta itemprop="description" content="  This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+  HAProxy, the Linux kernel and more, plus we cover some current openings on
+  the team - come join us ☺
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-127/" />
+
+
+
+
+<title>Episode 127</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-127/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 127</h1><small>Posted on Friday, Aug 20, 2021 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+HAProxy, the Linux kernel and more, plus we cover some current openings on
+the team - come join us ☺
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E127.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we look at security updates for Firefox, PostgreSQL, MariaDB,
+HAProxy, the Linux kernel and more, plus we cover some current openings on
+the team - come join us ☺</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>35 unique CVEs addressed</p>
+<h3 id="usn-5037-1-firefox-vulnerabilities-00-39">[<a href="https://ubuntu.com/security/notices/USN-5037-1">USN-5037-1</a>] Firefox vulnerabilities [00:39]</h3>
+<ul>
+<li>10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-29990">CVE-2021-29990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29989">CVE-2021-29989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29988">CVE-2021-29988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29987">CVE-2021-29987</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29986">CVE-2021-29986</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29985">CVE-2021-29985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29984">CVE-2021-29984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29982">CVE-2021-29982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29981">CVE-2021-29981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29980">CVE-2021-29980</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>91.0
+<ul>
+<li>Better support for clearing cookies to stop possible hidden data leaks as part of the Total Cookie Protection</li>
+<li>Private browsing to use attempt HTTPS by default than fallback to HTTP</li>
+<li>Various security fixes:
+<ul>
+<li>race condition on DNS resolution specific to Linux -&gt; memory
+corruption -&gt; crash / RCE</li>
+<li>also specific to Linux - subsequent permissions dialogs would accept
+input in the location of the original one - so could possibly trick a
+user into accepting a permission without their direct knowledge</li>
+<li>various other memory corruption issues in JIT etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-3809-2-openssh-regression-02-54">[<a href="https://ubuntu.com/security/notices/USN-3809-2">USN-3809-2</a>] OpenSSH regression [02:54]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2016-10708">CVE-2016-10708</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-15473">CVE-2018-15473</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-11/">Episode 11</a> - possible user enumeration since as a result of patching
+<a href="https://ubuntu.com/security/CVE-2018-15473">CVE-2018-15473</a> the behaviour when trying to log in changed depending on
+whether the specific user account existed or not - due to a mistake made
+when backporting the upstream patch</li>
+</ul>
+<h3 id="usn-5038-1-postgresql-vulnerabilities-03-38">[<a href="https://ubuntu.com/security/notices/USN-5038-1">USN-5038-1</a>] PostgreSQL vulnerabilities [03:38]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3449">CVE-2021-3449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3677">CVE-2021-3677</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 possible remote crasher bugs - one through just sending a crafted TLS
+ClientHello message -&gt; NULL ptr deref -&gt; crash, the other via the planner
+which is used to try and optimise SQL queries - possible OOB read</li>
+</ul>
+<h3 id="usn-5022-2-mariadb-vulnerabilities-04-19">[<a href="https://ubuntu.com/security/notices/USN-5022-2">USN-5022-2</a>] MariaDB vulnerabilities [04:19]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-2389">CVE-2021-2389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2372">CVE-2021-2372</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-124/">Episode 124</a> in MySQL - only 2 of these also were relevant to MariaDB</li>
+<li>Like MySQL, update to latest point release in each series - 10.5.12 for
+hirsute, 10.3.31 for focal - includes both bug <strong>and</strong> security fixes</li>
+</ul>
+<h3 id="usn-5042-1-haproxy-vulnerabilities-05-07">[<a href="https://ubuntu.com/security/notices/USN-5042-1">USN-5042-1</a>] HAProxy vulnerabilities [05:07]</h3>
+<ul>
+<li>Affecting Focal (20.04 LTS), Hirsute (21.04)</li>
+<li>HTTP/2 handling issues in HAProxy</li>
+<li><a href="https://portswigger.net/research/http2">Researchers</a> investigated HTTP/2 handling in various gateway / proxies and
+found multiple issues - HTTP/2 desync attacks - allow to possibly hijack
+clients, poison caches, and steal credentials</li>
+<li><a href="https://www.mail-archive.com/haproxy@formilux.org/msg41041.html">Initially HAProxy upstream</a> thought they were safe but then found after
+more analysis they were vulnerable to a few of the possible issues
+<ul>
+<li>Can be mitigated by disabling HTTP/2 or just install these updates :)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5043-1-exiv2-vulnerabilities-06-04">[<a href="https://ubuntu.com/security/notices/USN-5043-1">USN-5043-1</a>] Exiv2 vulnerabilities [06:04]</h3>
+<ul>
+<li>11 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-37623">CVE-2021-37623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37621">CVE-2021-37621</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37619">CVE-2021-37619</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37618">CVE-2021-37618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37616">CVE-2021-37616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37615">CVE-2021-37615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34335">CVE-2021-34335</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37622">CVE-2021-37622</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37620">CVE-2021-37620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34334">CVE-2021-34334</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32815">CVE-2021-32815</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Slew of issues discovered by Kevin Backhouse from Github security team</li>
+<li>C++ - so usual mix of issues - OOB read, NULL ptr deref, floating point
+exception (div/0), infinte loop, assertion failure - all DoS</li>
+</ul>
+<h3 id="usn-5039-1-linux-kernel-vulnerability-06-49">[<a href="https://ubuntu.com/security/notices/USN-5039-1">USN-5039-1</a>] Linux kernel vulnerability [06:49]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-22555">CVE-2021-22555</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>netfilter setsockopt()</li>
+</ul>
+<h3 id="lsn-0080-1-linux-kernel-vulnerability-07-08">[<a href="https://ubuntu.com/security/notices/LSN-0080-1">LSN-0080-1</a>] Linux kernel vulnerability [07:08]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-22555">CVE-2021-22555</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5044-1-linux-kernel-vulnerabilities-07-39">[<a href="https://ubuntu.com/security/notices/USN-5044-1">USN-5044-1</a>] Linux kernel vulnerabilities [07:39]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3587">CVE-2021-3587</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3573">CVE-2021-3573</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 bionic + ESM HWE</li>
+<li>2 bluetooth UAF and 1 NFC NULL ptr deref</li>
+</ul>
+<h3 id="usn-5045-1-linux-kernel-vulnerabilities-08-06">[<a href="https://ubuntu.com/security/notices/USN-5045-1">USN-5045-1</a>] Linux kernel vulnerabilities [08:06]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3587">CVE-2021-3587</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3573">CVE-2021-3573</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34693">CVE-2021-34693</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 focal + bionic hwe</li>
+<li>same as above plus CAN BCM uninitialised memory - info leak to local
+attacker</li>
+</ul>
+<h3 id="usn-5046-1-linux-kernel-vulnerabilities-08-31">[<a href="https://ubuntu.com/security/notices/USN-5046-1">USN-5046-1</a>] Linux kernel vulnerabilities [08:31]</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3587">CVE-2021-3587</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3573">CVE-2021-3573</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28691">CVE-2021-28691</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0129">CVE-2021-0129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.11 hirsute + focal hwe</li>
+<li>bluetooth UAF, NFC NULL ptr deref, access control issue in bluetooth -
+could allow a local attacker in range to expose info, xen PV issue -
+attacker in guest could DoS/RCE on host</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="hiring-09-10">Hiring [09:10]</h3>
+<h4 id="linux-cryptography-and-security-engineer">Linux Cryptography and Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote">https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote</a></li>
+</ul>
+<h4 id="security-engineer-ubuntu">Security Engineer - Ubuntu</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-126/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-127\/",
+        text: "Episode 127"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
