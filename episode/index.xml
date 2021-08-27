@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 20 Aug 2021 12:47:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 27 Aug 2021 12:23:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,210 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 128</title>
+          <link>https://ubuntusecuritypodcast.org/episode-128/</link>
+          <pubDate>Fri, 27 Aug 2021 12:23:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>fb48a2b4f858022e2badbd76057680ed0553067fa1be365bd94c2e113b849329c388ef20395e365d381a3bb8607d801e59826d7d2aa2be890bae2af2144931e2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 128</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we dive into Trend Micro&#39;s recent Linux Threat Report and the
+  release of Ubuntu 20.04.3 LTS, plus we detail security updates for
+  Inetutils telnetd, the Linux kernel and OpenSSL.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we dive into Trend Micro&#39;s recent Linux Threat Report and the
+  release of Ubuntu 20.04.3 LTS, plus we detail security updates for
+  Inetutils telnetd, the Linux kernel and OpenSSL.
+  </itunes:summary>
+        <description>  This week we dive into Trend Micro&#39;s recent Linux Threat Report and the
+  release of Ubuntu 20.04.3 LTS, plus we detail security updates for
+  Inetutils telnetd, the Linux kernel and OpenSSL.
+  </description>
+        <googleplay:description>  This week we dive into Trend Micro&#39;s recent Linux Threat Report and the
+  release of Ubuntu 20.04.3 LTS, plus we detail security updates for
+  Inetutils telnetd, the Linux kernel and OpenSSL.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we dive into Trend Micro&rsquo;s recent Linux Threat Report and the
+release of Ubuntu 20.04.3 LTS, plus we detail security updates for
+Inetutils telnetd, the Linux kernel and OpenSSL.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>9 unique CVEs addressed</p>
+<h3 id="usn-5048-1-inetutils-vulnerability-00-45">[<a href="https://ubuntu.com/security/notices/USN-5048-1">USN-5048-1</a>] Inetutils vulnerability [00:45]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-10188">CVE-2020-10188</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Buffer overflow in inetutils telnetd - originally CVE was found in netkit
+telnetd - but subsequently the GNU inetutils version was also found to
+contain basically the same vulnerable function. Very detailed blog post
+re exploiting this on Fedora, great example if you are interested in vuln
+hunting etc - patched but why run telnetd?</li>
+<li><a href="https://appgateresearch.blogspot.com/2020/02/bravestarr-fedora-31-netkit-telnetd%5F28.html">https://appgateresearch.blogspot.com/2020/02/bravestarr-fedora-31-netkit-telnetd%5F28.html</a></li>
+</ul>
+<h3 id="usn-5050-1-linux-kernel-vulnerabilities-02-03">[<a href="https://ubuntu.com/security/notices/USN-5050-1">USN-5050-1</a>] Linux kernel vulnerabilities [02:03]</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-38208">CVE-2021-38208</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3573">CVE-2021-3573</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28691">CVE-2021-28691</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0129">CVE-2021-0129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 bluetooth HCI UAFs, NFC NULL ptr deref, Xen PV UAF from guest-&gt;host, 2
+other bluetooth vulns - info leak - all covered in previous episodes</li>
+</ul>
+<h3 id="usn-5051-1-openssl-vulnerabilities-02-49">[<a href="https://ubuntu.com/security/notices/USN-5051-1">USN-5051-1</a>] OpenSSL vulnerabilities [02:49]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3712">CVE-2021-3712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3711">CVE-2021-3711</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>High profile vuln in SM2 algorithm impl in openssl - (Chinese and later
+ISO standard elliptic curve algo used for both signature and encryption)
+<ul>
+<li>Usual scheme is to call the API function <code>EVP_PKEY_decrypt()</code> twice - call
+first time to get the required buffer size to hold the decrypted
+plaintext - second time to do the actual decryption passing a buffer of
+the specified length to hold the result</li>
+<li>Bug meant the returned length in first call would be smaller than
+required -&gt; up to 62 byte buffer overflow using attacker controlled data</li>
+<li>Depending on application, could be heap or stack buffer</li>
+<li>Possible RCE</li>
+</ul>
+</li>
+<li>Buffer overread in handling of ASN.1 strings
+<ul>
+<li>ASN1 strings in openssl are represented as the bytes plus a length -
+unlike normal C strings, bytes array of the string is NOT NUL
+terminated in general</li>
+<li>However some internal functions would actually add a NUL byte - and
+other functions ended up assuming ASN1 strings would all be NUL
+terminated - plus various functions to parse ASN1 data would also add
+NUL terminators too - so if had an application that was manually
+constructing ASN1 strings without adding a NUL terminator, this could
+result in a buffer overread if these were passed to a function which
+expected a NUL (ie functions which print the contents etc)</li>
+<li>Again depends on application that uses OpenSSL - so not all will be
+vulnerable - but fixed to ensure all internal functions which handle
+ASN1 strings in OpenSSL respect the length field and not assume is NUL
+terminated</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-20-dot-04-dot-3-lts-released-05-58">Ubuntu 20.04.3 LTS released [05:58]</h3>
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2021-August/000271.html">https://lists.ubuntu.com/archives/ubuntu-announce/2021-August/000271.html</a></li>
+<li>Desktop installer uses HWE stack by default - Server uses GA but can
+select HWE during install process</li>
+<li>Includes all security etc updates so less to download during / after
+install</li>
+<li>Flavours have also updated</li>
+<li>If already running 20.04 then no need to do anything - you already have
+this :)</li>
+</ul>
+<h3 id="trend-micro-linux-threat-report-2021-1h-07-20">Trend Micro Linux Threat Report 2021 1H [07:20]</h3>
+<ul>
+<li><a href="https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/linux-threat-report-2021-1h-linux-threats-in-the-cloud-and-security-recommendations">https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/linux-threat-report-2021-1h-linux-threats-in-the-cloud-and-security-recommendations</a></li>
+<li>Report which collates data from Trend Micro™ Smart Protection Network™
+(SPN) (data lake) - collects data across all Trend Micro products plus
+various honeypots and other sensors etc - measure of real-world malware
+prevalence and vuln exploitation in enterprises</li>
+<li>Linux makes up 61% of Cloud One users - cloud native product for
+protection of cloud deployments</li>
+<li>Ubuntu makes up 16% of that (RH 30%, AWS Linux 18%)</li>
+<li>Top threats:
+<ul>
+<li>Coinminers, Web shells, Ransomware, Trojans, other</li>
+<li>For systems which contained these:
+<ul>
+<li>51% CentOS, 31% CloudLinux, 10% Ubuntu, 3% RHEL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Intrusion Protection System (IPS) hits:
+<ul>
+<li>36% Amazon Linux, 23% RHEL 7, 8% CentOS 7, 7% RHEL 6, Amazon Linux, Ubuntu 18.04, 4% Ubuntu 20.04, 16.04</li>
+</ul>
+</li>
+<li>Top 15 vulns with known exploits:
+<ul>
+<li>5 were in Apache Struts2 - incl. vuln used in Equifax breach in 2017</li>
+<li>1 each in Drupal, Oracle WebLogic, WordPress file manager plugin,
+vBulletin, Eclipse Jetty, Alibaba Nacos, Atlassian Jira, NginX, Liferay
+<ul>
+<li>Most of these are not shipped in Ubuntu but clearly orgs are
+deploying these sorts of applications on Ubuntu/RHEL etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Of 20k vulns from 2020, only ~200 were observed with known public exploits
+<ul>
+<li>roughly the same as above but more of the sorts of things we ship <strong>and
+support</strong> in Ubuntu
+<ul>
+<li>struts, netty, drupal, <strong>dnsmasq</strong>, JIRA, WebLogic, Wordpress, <strong>nginx</strong>,
+<strong>apache httpd</strong>, <strong>ISC BIND</strong>, <strong>openssl</strong>, <strong>tomcat</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>76% are attacks against web apps</li>
+<li>Looking at OWASP top 10 - of all attack by volume, only 21% fit into
+OWASP top 10 - ie. SQL injection, command injection, XSS, insecure
+deserialisation, XML EE,
+<ul>
+<li>Looking at attacks outside OWASP top 10
+<ul>
+<li>Brute force ~40% of all attacks</li>
+<li>Directory traversal 21%</li>
+<li>Request smuggling</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Also briefly mentions how to secure Linux but only talks technologies -
+iptables, seccomp, AppArmor, SELinux etc - and on practical guidance
+mentions Antimalware (ie Trend 😉), IPS/IDS, application whitelisting,
+<strong>vuln patching</strong>, activity monitoring etc</li>
+<li>Plus looks a bit at containers - ranks vulns in 15 most popular official
+docker images - Python comes in on top with 482 vulns, Node 470,
+Wordpress 402, Golang 288, nginx 118, postgres 86, influxdb 85, apache
+httpd 84, mysql 76&hellip;
+<ul>
+<li>Not surprising perhaps that the more general purpose images have more
+vulns - more code, more vulns, also perhaps a larger attack surface etc
+too</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E128.mp3" length="13439687" type="audio/mpeg" /><itunes:duration>17:56</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 127</title>
           <link>https://ubuntusecuritypodcast.org/episode-127/</link>
