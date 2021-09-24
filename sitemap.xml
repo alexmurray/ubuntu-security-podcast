@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ubuntusecuritypodcast.org/episode-132/</loc>
+    <lastmod>2021-09-24T15:05:59+09:30</lastmod>
+  </url><url>
     <loc>https://ubuntusecuritypodcast.org/episode-131/</loc>
-    <lastmod>2021-09-17T13:56:26+09:30</lastmod>
+    <lastmod>2021-09-17T13:58:46+09:30</lastmod>
   </url><url>
     <loc>https://ubuntusecuritypodcast.org/episode-130/</loc>
     <lastmod>2021-09-10T14:22:09+09:30</lastmod>
@@ -405,10 +408,10 @@
     <lastmod>2020-05-15T16:41:12+09:30</lastmod>
   </url><url>
     <loc>https://ubuntusecuritypodcast.org/episode/</loc>
-    <lastmod>2021-09-17T13:56:26+09:30</lastmod>
+    <lastmod>2021-09-24T15:05:59+09:30</lastmod>
   </url><url>
     <loc>https://ubuntusecuritypodcast.org/</loc>
-    <lastmod>2021-09-17T13:56:26+09:30</lastmod>
+    <lastmod>2021-09-24T15:05:59+09:30</lastmod>
   </url><url>
     <loc>https://ubuntusecuritypodcast.org/categories/</loc>
   </url><url>
