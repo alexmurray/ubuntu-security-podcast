@@ -183,19 +183,16 @@
            (labels-file-name (expand-file-name (format "USP_E%03d_labels.txt" episode)
                                                "~/Ubuntu Security Podcast/"))
            (num-bytes (file-attribute-size (file-attributes audio-file-name)))
-           (output (shell-command-to-string (format "mp3info -p %%m:%%s \"%s\"" audio-file-name))))
+           (length (string-to-number (shell-command-to-string (format "mp3info -p %%S \"%s\"" audio-file-name)))))
       (save-excursion
         ;; first update export date
         (re-search-forward "^:EXPORT_DATE: \\(.*\\)$")
         (replace-match (format-time-string "%Y-%m-%d %H:%M") t t nil 1)
-        (if (null (string-match "\\([0-9]\\{2\\}\\):\\([0-9]\\{2\\}\\)"
-                                output))
-            (error "Unable to get Duration of %s via mp3info" audio-file-name)
-          (let ((mins (match-string 1 output))
-                (secs (match-string 2 output)))
+          (let ((mins (/ length 60))
+                (secs (% length 60)))
             (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\" :guid [a-z0-9]+$")
-            (replace-match (concat mins ":" secs) t t nil 1)
-            (replace-match (format "%d" num-bytes) t t nil 2))))
+            (replace-match (format "%d:%02d" mins secs) t t nil 1)
+            (replace-match (format "%d" num-bytes) t t nil 2)))
       (save-excursion
         ;; now update timestamps for each heading when available
         (let ((labels))
