@@ -5,7 +5,7 @@ description = """
   updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
   """
 date = 2021-10-01T15:10:00+09:30
-lastmod = 2021-10-01T15:11:41+09:30
+lastmod = 2021-10-01T15:44:55+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -73,7 +73,7 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
     LetsEncrypt started they got their issuing / intermediate cert (R3)
     signed by IdenTrust's "DST Root CA X3" root certificate -
     "cross-signature"
--   DST Root CA X3 cert expired yesterday (30th Sept 201)
+-   DST Root CA X3 cert expired yesterday (30th Sept 2021)
 -   So if you only had that then any HTTPS connections to a site using a
     LetsEncrypt cert would fail
 -   Also to support various older Android devices which aren't getting any
