@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 22 Oct 2021 14:51:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 5 Nov 2021 15:22:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,393 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 136</title>
+          <link>https://ubuntusecuritypodcast.org/episode-136/</link>
+          <pubDate>Fri, 05 Nov 2021 15:22:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>eb56ebc24c87e251a795c264678bf0eed56741e4d0897ae4eff711dcd6c10b33615284793a71e6852ec3ae4d7b8ec15a3d86c0858ecf4b2d7dd4bed9f6c93b57</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 136</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          The road to Ubuntu 22.04 LTS begins so we look at some of its planned
+  features plus we cover security updates for the Linux kernel, Mailman,
+  Apport, PHP, Bind and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  The road to Ubuntu 22.04 LTS begins so we look at some of its planned
+  features plus we cover security updates for the Linux kernel, Mailman,
+  Apport, PHP, Bind and more.
+  </itunes:summary>
+        <description>  The road to Ubuntu 22.04 LTS begins so we look at some of its planned
+  features plus we cover security updates for the Linux kernel, Mailman,
+  Apport, PHP, Bind and more.
+  </description>
+        <googleplay:description>  The road to Ubuntu 22.04 LTS begins so we look at some of its planned
+  features plus we cover security updates for the Linux kernel, Mailman,
+  Apport, PHP, Bind and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>The road to Ubuntu 22.04 LTS begins so we look at some of its planned
+features plus we cover security updates for the Linux kernel, Mailman,
+Apport, PHP, Bind and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>92 unique CVEs addressed</p>
+<h3 id="usn-5114-1-linux-kernel-vulnerabilities-01-15">[<a href="https://ubuntu.com/security/notices/USN-5114-1">USN-5114-1</a>] Linux kernel vulnerabilities [01:15]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-42008">CVE-2021-42008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40490">CVE-2021-40490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38198">CVE-2021-38198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-3702">CVE-2020-3702</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 + HWE on ESM</li>
+<li>Race in ath9k -&gt; could fail to properly encrypt traffic -&gt; info leak</li>
+<li>KVM shadow pages perms -&gt; local user DoS</li>
+<li>ext4 race in xattr handling - local DoS / priv-esc</li>
+<li>6pack driver validation failure -&gt; DoS / code-exec</li>
+</ul>
+<h3 id="usn-5115-1-linux-kernel--oem--vulnerabilities-02-19">[<a href="https://ubuntu.com/security/notices/USN-5115-1">USN-5115-1</a>] Linux kernel (OEM) vulnerabilities [02:19]</h3>
+<ul>
+<li>16 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-42008">CVE-2021-42008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40490">CVE-2021-40490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38205">CVE-2021-38205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38204">CVE-2021-38204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38166">CVE-2021-38166</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3759">CVE-2021-3759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3753">CVE-2021-3753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3743">CVE-2021-3743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3739">CVE-2021-3739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3732">CVE-2021-3732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-37159">CVE-2021-37159</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3679">CVE-2021-3679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35477">CVE-2021-35477</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34556">CVE-2021-34556</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33624">CVE-2021-33624</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-3702">CVE-2020-3702</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.10 OEM</li>
+<li>As above plus various BPF hardening fixes against spectre-like attacks,
+fixes for security issues in tracing subsystem, overlayfs, btrfs,
+Qualcomm IPC router, Xilinx ethernet driver info leak</li>
+</ul>
+<h3 id="usn-5116-1-usn-5116-2-linux-kernel-vulnerabilities-02-55">[<a href="https://ubuntu.com/security/notices/USN-5116-1">USN-5116-1</a>, <a href="https://ubuntu.com/security/notices/USN-5116-2">USN-5116-2</a>] Linux kernel vulnerabilities [02:55]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-42008">CVE-2021-42008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40490">CVE-2021-40490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38205">CVE-2021-38205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38198">CVE-2021-38198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3732">CVE-2021-3732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-3702">CVE-2020-3702</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 + KVM + bionic HWE + clouds (AWS, Azure, GCP, GKE, IBM, Oracle + RPi)</li>
+<li>Race in ath9k -&gt; could fail to properly encrypt traffic -&gt; info leak</li>
+<li>KVM shadow pages perms -&gt; local user DoS</li>
+<li>ext4 race in xattr handling - local DoS / priv-esc</li>
+<li>6pack driver validation failure -&gt; DoS / code-exec</li>
+<li>overlayfs + xilinx</li>
+</ul>
+<h3 id="usn-5117-1-linux-kernel--oem--vulnerabilities-03-29">[<a href="https://ubuntu.com/security/notices/USN-5117-1">USN-5117-1</a>] Linux kernel (OEM) vulnerabilities [03:29]</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3759">CVE-2021-3759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3753">CVE-2021-3753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3743">CVE-2021-3743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3739">CVE-2021-3739</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.13 OEM</li>
+<li>btrfs, qualcomm IPC, VT IOCTL handling, memory leak in IPC object
+handling</li>
+</ul>
+<h3 id="usn-5120-1-linux-kernel--azure--vulnerabilities-03-40">[<a href="https://ubuntu.com/security/notices/USN-5120-1">USN-5120-1</a>] Linux kernel (Azure) vulnerabilities [03:40]</h3>
+<ul>
+<li>9 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-40490">CVE-2021-40490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38207">CVE-2021-38207</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38199">CVE-2021-38199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3759">CVE-2021-3759</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3612">CVE-2021-3612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-22543">CVE-2021-22543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36311">CVE-2020-36311</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26541">CVE-2020-26541</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-19449">CVE-2019-19449</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.8 Azure</li>
+</ul>
+<h3 id="usn-5119-1-libcaca-vulnerabilities-03-53">[<a href="https://ubuntu.com/security/notices/USN-5119-1">USN-5119-1</a>] libcaca vulnerabilities [03:53]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
+Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-30499">CVE-2021-30499</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-30498">CVE-2021-30498</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>text mode graphics handling library</li>
+<li>2 buffer overflows -&gt; crash / code exec in handling of TGA images and
+when exporting to troff format</li>
+</ul>
+<h3 id="usn-5121-1-usn-5121-2-mailman-vulnerabilities-04-24">[<a href="https://ubuntu.com/security/notices/USN-5121-1">USN-5121-1</a>, <a href="https://ubuntu.com/security/notices/USN-5121-2">USN-5121-2</a>] Mailman vulnerabilities [04:24]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), 5 CVEs
+addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-42096">CVE-2021-42096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-42097">CVE-2021-42097</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12137">CVE-2020-12137</a> (20.04 LTS only) <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15011">CVE-2020-15011</a> (20.04 LTS only) <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12108">CVE-2020-12108</a> (20.04 LTS only) <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different CSRF attacks against mailman - in first, failed to properly
+associate CSRF tokens with accounts - could be used to take over
+another account</li>
+<li>In second, CSRF tokens which are generated are derived from the admin
+password - could then allow a remote attacker to use this to help brute
+force guess admin pw</li>
+<li>In both cases need to already be an existing list member and be logged
+in to mount attacks</li>
+<li>For focal also included a couple medium priority vulns (don&rsquo;t affect
+older versions):
+<ul>
+<li>Possible arbitrary content injection in 2 different ways which allow
+content to be provided by an attacker as POST parameters to form
+handling scripts which will then be incorporated into the page shown
+to a user</li>
+<li>So could allow an attacker to say inject a URL to be displayed on a
+legitimate mailman admin page instance which an unsuspecting user
+may then follow thinking this is trusted etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5122-1-usn-5122-2-apport-vulnerability-05-41">[<a href="https://ubuntu.com/security/notices/USN-5122-1">USN-5122-1</a>, <a href="https://ubuntu.com/security/notices/USN-5122-2">USN-5122-2</a>] Apport vulnerability [05:41]</h3>
+<ul>
+<li>Affecting Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)</li>
+<li>Could trick Apport into writing core files into arbitrary directories -
+then these could say be interpreted by other root-level applications to
+escalate privileges</li>
+<li>Changed Apport to write core files to known location
+<code>/var/lib/apport/coredump</code></li>
+</ul>
+<h3 id="usn-5123-1-usn-5123-2-mysql-vulnerabilities-06-25">[<a href="https://ubuntu.com/security/notices/USN-5123-1">USN-5123-1</a>, <a href="https://ubuntu.com/security/notices/USN-5123-2">USN-5123-2</a>] MySQL vulnerabilities [06:25]</h3>
+<ul>
+<li>43 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal
+(20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-35648">CVE-2021-35648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35647">CVE-2021-35647</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35646">CVE-2021-35646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35645">CVE-2021-35645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35644">CVE-2021-35644</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35643">CVE-2021-35643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35642">CVE-2021-35642</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35641">CVE-2021-35641</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35640">CVE-2021-35640</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35639">CVE-2021-35639</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35638">CVE-2021-35638</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35637">CVE-2021-35637</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35636">CVE-2021-35636</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35635">CVE-2021-35635</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35634">CVE-2021-35634</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35633">CVE-2021-35633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35632">CVE-2021-35632</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35631">CVE-2021-35631</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35630">CVE-2021-35630</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35628">CVE-2021-35628</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35627">CVE-2021-35627</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35626">CVE-2021-35626</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35625">CVE-2021-35625</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35624">CVE-2021-35624</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35623">CVE-2021-35623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35622">CVE-2021-35622</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35613">CVE-2021-35613</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35612">CVE-2021-35612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35610">CVE-2021-35610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35608">CVE-2021-35608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35607">CVE-2021-35607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35604">CVE-2021-35604</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35602">CVE-2021-35602</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35597">CVE-2021-35597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35596">CVE-2021-35596</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35591">CVE-2021-35591</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35584">CVE-2021-35584</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35577">CVE-2021-35577</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35575">CVE-2021-35575</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35546">CVE-2021-35546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2481">CVE-2021-2481</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2479">CVE-2021-2479</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2478">CVE-2021-2478</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-27.html">8.0.27</a> in Ubuntu 20.04 LTS, Ubuntu 21.04 and Ubuntu 21.10</li>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-36.html">5.7.36</a> in Ubuntu 18.04 LTS, Ubuntu 16.04 ESM</li>
+<li><a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a></li>
+</ul>
+<h3 id="usn-5124-1-gnu-binutils-vulnerabilities-06-53">[<a href="https://ubuntu.com/security/notices/USN-5124-1">USN-5124-1</a>] GNU binutils vulnerabilities [06:53]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3487">CVE-2021-3487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-16592">CVE-2020-16592</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 issues in libbfd (binary file descriptor) - can be triggered by crafted
+files
+<ul>
+<li>UAF in when using hash table impl</li>
+<li>cause large memory allocation - crash</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5009-2-libslirp-vulnerabilities-07-30">[<a href="https://ubuntu.com/security/notices/USN-5009-2">USN-5009-2</a>] libslirp vulnerabilities [07:30]</h3>
+<ul>
+<li>6 CVEs addressed in Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3595">CVE-2021-3595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3594">CVE-2021-3594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3593">CVE-2021-3593</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3592">CVE-2021-3592</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-29130">CVE-2020-29130</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-29129">CVE-2020-29129</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-124/">Episode 124</a></li>
+</ul>
+<h3 id="usn-5125-1-php-vulnerability-07-41">[<a href="https://ubuntu.com/security/notices/USN-5125-1">USN-5125-1</a>] PHP vulnerability [07:41]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
+Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21703">CVE-2021-21703</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Root code exec in PHP-FPM - uses a privileged root level process and
+unpriv child worker processes but child could access shared memory with
+parent and cause it to do OOB R/W -&gt; code execution in parent -&gt; priv-esc</li>
+</ul>
+<h3 id="usn-5126-1-usn-5126-2-bind-vulnerability-08-33">[<a href="https://ubuntu.com/security/notices/USN-5126-1">USN-5126-1</a>, <a href="https://ubuntu.com/security/notices/USN-5126-2">USN-5126-2</a>] Bind vulnerability [08:33]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
+Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-25219">CVE-2021-25219</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible cache poisoning could lead to DoS via excessive entries in the
+cache causing slow lookup performance</li>
+</ul>
+<h3 id="usn-5127-1-webkitgtk-vulnerabilities-08-55">[<a href="https://ubuntu.com/security/notices/USN-5127-1">USN-5127-1</a>] WebKitGTK vulnerabilities [08:55]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-42762">CVE-2021-42762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-30851">CVE-2021-30851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-30846">CVE-2021-30846</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Usual web engine vulns - plus one in the bubblewrap launcher which allows
+a limited sandbox bypass - could trick host processors into believing a
+sandboxed process was not and hence could potentially escalate privs</li>
+</ul>
+<h3 id="usn-5128-1-ceph-vulnerabilities-09-35">[<a href="https://ubuntu.com/security/notices/USN-5128-1">USN-5128-1</a>] Ceph vulnerabilities [09:35]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3531">CVE-2021-3531</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3524">CVE-2021-3524</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3509">CVE-2021-3509</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20288">CVE-2021-20288</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27781">CVE-2020-27781</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="22-dot-04-lts-development-cycle-begins-09-46">22.04 LTS development cycle begins [09:46]</h3>
+<ul>
+<li>Will include all the features from the various interim releases since the
+last 20.04 LTS plus some more</li>
+<li>Since is an LTS, this cycle is mostly to be spent making things as solid
+and stable as possible, but a few new features are planned:
+<ul>
+<li>nftables supported
+<ul>
+<li>firewalling on Linux has 2 components - kernel-space mechanism and
+userspace tooling to control that</li>
+<li>traditionally kernel supported iptables (aka xtables - ip,ip6,arp,eb -tables)</li>
+<li>nftables as introduced into the kernel in 3.13 as a new mechanism to
+implement network packet classification and handling - aka firewalling
+etc</li>
+<li>kernel has 2 mechanisms then - xtables and nftables</li>
+<li>userspace then has 2 primary tools for handling these - iptables for
+xtables and nftables (nft) for nftables</li>
+<li>iptables userspace added a nft backend so existing iptables rules and
+users would be switched to that automatically -  was already switched to
+use nft backend in Ubuntu 21.04</li>
+<li>now want to support the nftables userspace package for handling
+nftables as a first class system</li>
+<li>also look at implementing a <code>nftables</code> backend in <code>ufw</code> so it can drive
+<code>nftables</code> directly rather than <code>iptables</code></li>
+</ul>
+</li>
+<li>Improvements to OVAL data
+<ul>
+<li>Improved information around ESM products etc</li>
+</ul>
+</li>
+<li>Improved handling of <code>pivot_root</code> in AppArmor
+<ul>
+<li>Upstream issue <a href="https://gitlab.com/apparmor/apparmor/-/issues/113">https://gitlab.com/apparmor/apparmor/-/issues/113</a></li>
+<li>once a <code>pivot_root</code> occurs, AppArmor loses track of the original paths so
+if a root level process is granted <code>pivot_root</code> permission, can move
+around inside it&rsquo;s own mount namespace to be able to escape outside the
+AppArmor policy</li>
+<li>AppArmor needs to track root before and after and allow to specify
+policy both pre-and-post</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="hiring-14-46">Hiring [14:46]</h3>
+<h4 id="security-product-manager">Security - Product Manager</h4>
+<ul>
+<li>HOME BASED - EMEA (Europe, Middle East, Africa)</li>
+<li>Role includes:
+<ul>
+<li>guiding the evolution of security offerings from Canonical and Ubuntu</li>
+<li>driving compliance and certification of Ubuntu</li>
+<li>engaging with the open source security community</li>
+<li>telling the story of Canonical&rsquo;s work to deliver secure platforms</li>
+</ul>
+</li>
+<li><a href="https://canonical.com/careers/2278145/security-product-manager-remote">https://canonical.com/careers/2278145/security-product-manager-remote</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E136.mp3" length="12441656" type="audio/mpeg" /><itunes:duration>16:11</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 135</title>
           <link>https://ubuntusecuritypodcast.org/episode-135/</link>
