@@ -8,6 +8,196 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 138
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-138
+:EXPORT_DATE: 2021-11-19 14:21
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E138.mp3 :podcast_duration "15:56" :podcast_bytes "12122338" :permalink "https://ubuntusecuritypodcast.org/episode-138/" :guid 7bbf4ff223c9dd9f124a917ecd3c8b18d78346dd5833d27792ecb6b57754e21cf51a5deb01bdd0820074eaf0ffb81debeed05e46c47cbc28d791414e8a561bcd
+:END:
+#+begin_description
+This week we discuss some of the challenges and trade-offs encountered when
+providing security support for ageing software, plus we discuss security
+updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
+#+end_description
+** Overview
+This week we discuss some of the challenges and trade-offs encountered when
+providing security support for ageing software, plus we discuss security
+updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
+** This week in Ubuntu Security Updates
+42 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5138-1][USN-5138-1]]] python-py vulnerability [00:38]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-29651][CVE-2020-29651]] <!-- medium -->
+- Python library providing path handling, config file parsing and other
+  features which are now in standard lib or other packages - has been
+  deprecated
+- ReDoS against path handling code (regex with catastrophic backtracking)
+
+*** [[[https://ubuntu.com/security/notices/USN-5139-1][USN-5139-1]]] Linux kernel (OEM 5.10) vulnerabilities [01:25]
+- 7 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-43389][CVE-2021-43389]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-43056][CVE-2021-43056]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-41864][CVE-2021-41864]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3760][CVE-2021-3760]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3764][CVE-2021-3764]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3744][CVE-2021-3744]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3655][CVE-2021-3655]] <!-- medium -->
+- Power8 specific KVM issue -> guest can crash host -> DoS
+- AMD cryptographic coprocessor driver memory leaks -> DoS
+- eBPF integer overflow -> DoS / code-exec
+- NFC UAF
+- SCTP info leak
+
+*** [[[https://ubuntu.com/security/notices/USN-5140-1][USN-5140-1]]] Linux kernel (OEM 5.14) vulnerabilities [02:12]
+- 3 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-41864][CVE-2021-41864]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3764][CVE-2021-3764]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3744][CVE-2021-3744]] <!-- low -->
+- eBPF integer overflow -> DoS / code-exec
+- AMD cryptographic coprocessor driver memory leaks -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5137-2][USN-5137-2]]] Linux kernel vulnerabilities [02:33]
+- 9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3759][CVE-2021-3759]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3753][CVE-2021-3753]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3743][CVE-2021-3743]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3739][CVE-2021-3739]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-35477][CVE-2021-35477]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-34556][CVE-2021-34556]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3428][CVE-2021-3428]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2020-36385][CVE-2020-36385]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2019-19449][CVE-2019-19449]] <!-- low -->
+- 5.4 (focal bluefield / oracle, bionic oracle / gke)
+
+*** [[[https://ubuntu.com/security/notices/LSN-0082-1][LSN-0082-1]]] Linux kernel vulnerability [03:05]
+- 4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3715][CVE-2021-3715]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2021-3444][CVE-2021-3444]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2020-29661][CVE-2020-29661]] <!-- high -->
+  - [[https://ubuntu.com/security/CVE-2020-29660][CVE-2020-29660]] <!-- medium -->
+- 2 high priority vulns from GPZ ([[https://ubuntusecuritypodcast.org/episode-138/][Episode 138]]) in tty subsystem and 1 in
+  BPF verifier - code-exec -> privesc
+- UAF in IPv4 networking routing handling
+
+*** [[[https://ubuntu.com/security/notices/USN-5141-1][USN-5141-1]]] Firejail vulnerability [03:48]
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-26910][CVE-2021-26910]] <!-- medium -->
+- TOCTOU race condition in handling of overlayfs - decided to drop support
+  for overlayfs since was deemed - thanks to Reiner Herrmann for providing
+  this update
+
+*** [[[https://ubuntu.com/security/notices/USN-5142-1][USN-5142-1]]] Samba vulnerabilities [04:43]
+- 9 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-3671][CVE-2021-3671]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3738][CVE-2021-3738]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23192][CVE-2021-23192]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25722][CVE-2020-25722]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25721][CVE-2020-25721]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25719][CVE-2020-25719]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25718][CVE-2020-25718]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2020-25717][CVE-2020-25717]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2016-2124][CVE-2016-2124]] <!-- medium -->
+- Raft of issues including unauthenticated users able to become root on
+  domain members since Samba might incorrectly map local users to domain
+  members, plus incorrect handling of Kerberos tickets such that delegated
+  users could become domain admin by confusing Samba on which user a ticket
+  represented
+- Memory corruption issues too
+- In particular the fix to correctly map local to domain users results in
+  changed behaviour regarding matching AD users to local users - would
+  previously fallback to a local user but now does not to avoid someone
+  specifying DOMAIN/root and then having that fallback to say root on the
+  local machine
+- https://www.samba.org/samba/security/CVE-2020-25717.html
+*** [[[https://ubuntu.com/security/notices/USN-5144-1][USN-5144-1]]] OpenEXR vulnerability [05:55]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3933][CVE-2021-3933]] <!-- medium -->
+- Integer overflow -> buffer overflow -> crash / RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-5145-1][USN-5145-1]]] PostgreSQL vulnerabilities [06:08]
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-23222][CVE-2021-23222]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-23214][CVE-2021-23214]] <!-- medium -->
+- Incorrect handling of SSL cert verification - could allow a remote
+  attacker to inject arbitrary SQL queries on the initial connection
+  establishment (similar to various STARTTLS vulns which have been seen
+  recently) - would process data sent in the clear before the TLS
+  connection had been established but should just throw this away
+- New upstream release with other bug fixes too (13.5 - impish/hirsute,
+  12.9 - focal, 10.19 - bionic)
+
+*** [[[https://ubuntu.com/security/notices/USN-5147-1][USN-5147-1]]] Vim vulnerabilities [07:13]
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-3928][CVE-2021-3928]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3927][CVE-2021-3927]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2021-3903][CVE-2021-3903]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2021-3872][CVE-2021-3872]] <!-- medium -->
+  - [[https://ubuntu.com/security/CVE-2019-20807][CVE-2019-20807]] <!-- low -->
+  - [[https://ubuntu.com/security/CVE-2017-17087][CVE-2017-17087]] <!-- low -->
+- Swap file permissions handling, restricted mode bypass (shouldn't be
+  considered a real security mechanism), various memory corruption issues
+  too
+
+*** [[[https://ubuntu.com/security/notices/USN-5149-1][USN-5149-1]]] AccountsService vulnerability [08:01]
+- 1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-3939][CVE-2021-3939]] <!-- high -->
+- Double free in SetLanguage() DBus method - memory corruption in root
+  daemon which can be triggered by an unprivileged user - is due to a
+  Ubuntu specific patch which we include so that when the user selects a
+  language / format we save this in their =~/.pam_environment= to keep
+  settings in sync
+- Patch contained code to use an existing pointer but then freed it - and
+  then it would get freed again by the original code
+- Priv-esc by getting accountsservice daemon to run arbitrary code
+
+*** [[[https://ubuntu.com/security/notices/USN-5148-1][USN-5148-1]]] hivex vulnerability [09:24]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-3504][CVE-2021-3504]] <!-- medium -->
+- Tools for handling Windows Registry hive files
+- OOB read with specially crafted input file -> crash -> DoS
+
+** Goings on in Ubuntu Security Community
+*** How to handle large security updates in outdated software versions? [09:56]
+- Samba updates in [[[https://ubuntu.com/security/notices/USN-5142-1][USN-5142-1]]] do not include Bionic
+- Upstream released a new 4.13.14 which we could upgrade to in F/H/I/J
+  without a lot of work or risk of regression since those releases already
+  used a more recent version like 4.11 etc so the change in behaviour as a
+  result of upgrading was so large and other packages in the archive were
+  still compatible with this new version
+- Upstream has released patches for these vulns back to 4.10 but this is
+  686 individual patches - bionic has Samba 4.7 and so would require a lot
+  of manual work to backport these ~700 patches, and the risk of
+  introducing a regression (ie breaking something) when backporting such a
+  large set of changes is higher
+  - We are security engineers not full-time Samba software developers so
+    not cognisant of all the possible pitfalls etc
+- Other option would be to update Samba in bionic to 4.13.14 like in the
+  later releases, other packages like talloc, tdb, tevent and ldb and these
+  would all need to be upgraded as well
+- *But* this new Samba version only supports python3, not python2.7 which the
+  older Samba currently in bionic does
+- FreeIPA in bionic is Python2 so would then be broken if we did this upgrade
+- We could also try and upgrade FreeIPA to a newer version which uses
+  Python3 but it isn't clear if the required Python3 dependencies even
+  exist in the 18.04 archive - so they man need to be backported and
+  introduced there as well
+- Either option involves a lot of change and hence complexity ∴ a high risk
+  of regression
+- Unclear yet which will be the preferred option but this illustrates the
+  difficulties involved in doing security support for old software versions
+  which upstream has ceased to provide support
+- Will likely come across more cases like this as we get further into ESM
+  support periods for various packages - Bionic is still in it's LTS phase
+  till 2023 so not even in ESM and already has trouble for Samba
+- Watch this space...
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 137
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-137
