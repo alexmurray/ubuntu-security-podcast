@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 19 Nov 2021 14:21:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 26 Nov 2021 15:19:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,145 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 139</title>
+          <link>https://ubuntusecuritypodcast.org/episode-139/</link>
+          <pubDate>Fri, 26 Nov 2021 15:19:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>ca90d0671dad9395b79082838517120c0f2e6bf8b9bbb3074db98bb73096e39c5042a7ffcd7b0985a4bc89fc7a7e6b1efb44456e004945fd7be502360c7d13fc</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 139</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we put out a call for testing and feedback on proposed Samba
+  updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman,
+  Thunderbird, LibreOffice, BlueZ and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we put out a call for testing and feedback on proposed Samba
+  updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman,
+  Thunderbird, LibreOffice, BlueZ and more.
+  </itunes:summary>
+        <description>  This week we put out a call for testing and feedback on proposed Samba
+  updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman,
+  Thunderbird, LibreOffice, BlueZ and more.
+  </description>
+        <googleplay:description>  This week we put out a call for testing and feedback on proposed Samba
+  updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman,
+  Thunderbird, LibreOffice, BlueZ and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we put out a call for testing and feedback on proposed Samba
+updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman,
+Thunderbird, LibreOffice, BlueZ and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>15 unique CVEs addressed</p>
+<h3 id="usn-5150-1-openexr-vulnerability-00-39">[<a href="https://ubuntu.com/security/notices/USN-5150-1">USN-5150-1</a>] OpenEXR vulnerability [00:39]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3941">CVE-2021-3941</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>oss-fuzz -&gt; div-by-zero with crafted image using YUV-encoded colors</li>
+</ul>
+<h3 id="usn-5151-1-mailman-vulnerabilities-00-58">[<a href="https://ubuntu.com/security/notices/USN-5151-1">USN-5151-1</a>] Mailman vulnerabilities [00:58]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-43332">CVE-2021-43332</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43331">CVE-2021-43331</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similar to vulns in last Mailman update (<a href="https://ubuntusecuritypodcast.org/episode-136/">Episode 136</a>)</li>
+</ul>
+<h3 id="usn-5152-1-thunderbird-vulnerabilities-01-27">[<a href="https://ubuntu.com/security/notices/USN-5152-1">USN-5152-1</a>] Thunderbird vulnerabilities [01:27]</h3>
+<ul>
+<li>5 CVEs addressed in Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-38509">CVE-2021-38509</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38507">CVE-2021-38507</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38506">CVE-2021-38506</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38504">CVE-2021-38504</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38503">CVE-2021-38503</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>91.3.1</li>
+<li>Usual web framework issues (HTML email etc) - one TB specific issue
+around the ability to force TB into full-screen via web content
+navigation - could then spoof usual chrome which is hidden in fullscreen
+and get user input unexpectedly</li>
+</ul>
+<h3 id="usn-5153-1-libreoffice-vulnerabilities-02-23">[<a href="https://ubuntu.com/security/notices/USN-5153-1">USN-5153-1</a>] LibreOffice vulnerabilities [02:23]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-25634">CVE-2021-25634</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-25633">CVE-2021-25633</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 issues around interpretation / display of details for signed
+documents - could inject a new timestamp and get this shown as the time
+the document was signed, or could cause to show incorrect details for a
+signed document by adding details from another certificate</li>
+<li>Too invasive to backport for 18.04 LTS</li>
+</ul>
+<h3 id="usn-5154-1-freerdp-vulnerabilities-03-28">[<a href="https://ubuntu.com/security/notices/USN-5154-1">USN-5154-1</a>] FreeRDP vulnerabilities [03:28]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-41160">CVE-2021-41160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-41159">CVE-2021-41159</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB write in client if sent malicious data from server -&gt; crash / code-exec</li>
+<li>if using a gateway and the RPC protocol, would fail to validate input -&gt;
+malicious gateway could then corrupt client memory -&gt; crash / code-exec</li>
+</ul>
+<h3 id="usn-5155-1-bluez-vulnerabilities-04-07">[<a href="https://ubuntu.com/security/notices/USN-5155-1">USN-5155-1</a>] BlueZ vulnerabilities [04:07]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-43400">CVE-2021-43400</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-41229">CVE-2021-41229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3658">CVE-2021-3658</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Would save and restore discoverable status on power down / power up - so
+if powered down when discoverable would power up as discoverable</li>
+<li>UAF if gatt client disconnected during a particular write operation with
+dbus - so would likely need bad luck or cooperation between a local
+application / user and the device to trigger</li>
+<li>Memory leak in handling of SDP devices -&gt; DoS</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="samba-updates-available-for-testing-for-ubuntu-18-dot-04-lts-05-24">Samba updates available for testing for Ubuntu 18.04 LTS [05:24]</h3>
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/samba-update-for-ubuntu-18-04-lts-bionic/25408">https://discourse.ubuntu.com/t/samba-update-for-ubuntu-18-04-lts-bionic/25408</a></li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-138/">Episode 138</a> discussed difficulties in handling large security updates for
+ageing software</li>
+<li>Backport ~700 patches (with potential regressions) or backport newer
+version, possibly breaking things in the process due to new features /
+changes in behaviour etc (plus incompatibilities with other software in
+Ubuntu archive)</li>
+<li>Upstream released</li>
+<li>Contains fixes for the most severe CVEs from the most recent updates for
+Samba (<a href="https://ubuntu.com/security/notices/USN-5142-1">USN-5142-1</a>) - <a href="https://ubuntu.com/security/CVE-2016-2124">CVE-2016-2124</a>, <a href="https://ubuntu.com/security/CVE-2020-25717">CVE-2020-25717</a>, <a href="https://ubuntu.com/security/CVE-2020-25722">CVE-2020-25722</a>,
+<a href="https://ubuntu.com/security/CVE-2021-3671">CVE-2021-3671</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E139.mp3" length="5930294" type="audio/mpeg" /><itunes:duration>7:49</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 138</title>
           <link>https://ubuntusecuritypodcast.org/episode-138/</link>

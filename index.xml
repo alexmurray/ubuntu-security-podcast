@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Nov 2021 14:21:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 15:19:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 139</title>
+      <link>https://ubuntusecuritypodcast.org/episode-139/</link>
+      <pubDate>Fri, 26 Nov 2021 15:19:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-139/</guid>
+      <description>Overview This week we put out a call for testing and feedback on proposed Samba updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman, Thunderbird, LibreOffice, BlueZ and more.
+This week in Ubuntu Security Updates 15 unique CVEs addressed
+[USN-5150-1] OpenEXR vulnerability [00:39]  1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)  CVE-2021-3941    oss-fuzz -&amp;gt; div-by-zero with crafted image using YUV-encoded colors  [USN-5151-1] Mailman vulnerabilities [00:58]  2 CVEs addressed in Xenial ESM (16.</description>
+    </item>
+    
     <item>
       <title>Episode 138</title>
       <link>https://ubuntusecuritypodcast.org/episode-138/</link>
