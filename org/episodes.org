@@ -8,6 +8,28 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 143
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-143
+:EXPORT_DATE: 2021-12-25 09:40
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E143.mp3 :podcast_duration "24:53" :podcast_bytes "16287014" :permalink "https://ubuntusecuritypodcast.org/episode-143/" :guid f937752e55884f70add548bcd1bb8be350c5f932a84286011a23c169753c2d381955b0323e941d6d9a9b3dfee8be41481479b23031d41e312fbd3e81d595a34d
+:END:
+#+begin_description
+Happy holidays! This week we bring you the first part of a special two-part
+holiday themed feature by Camila from the Ubuntu Security team discussing
+the top cyber threats faced during the holidays.
+#+end_description
+** Overview
+Happy holidays! This week we bring you the first part of a special two-part
+holiday themed feature by Camila from the Ubuntu Security team discussing
+the top cyber threats faced during the holidays.
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 142
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-142
