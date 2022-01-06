@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  The Ubuntu Security Podcast is back for 2022 and we&#39;re starting off the
+  year with a bang💥! This week we bring you a special interview with Kees
+  Cook of Google and the Linux Kernel Self Protection Project discussing
+  Linux kernel hardening upstream developments. Plus we look at security
+  updates for Mumble, Apache Log4j2, OpenJDK and more.
+  ">
+
+<meta name="generator" content="Hugo 0.91.2" />
+
+<meta property="og:title" content="Episode 145" />
+<meta name="twitter:title" content="Episode 145"/>
+<meta itemprop="name" content="Episode 145">
+<meta property="article:published_time" content="2022-01-06T16:09:00&#43;10:30" />
+<meta property="article:modified_time" content="2022-01-06T16:10:58&#43;10:30" />
+<meta property="og:updated_time" content="2022-01-06T16:10:58&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  The Ubuntu Security Podcast is back for 2022 and we&#39;re starting off the
+  year with a bang💥! This week we bring you a special interview with Kees
+  Cook of Google and the Linux Kernel Self Protection Project discussing
+  Linux kernel hardening upstream developments. Plus we look at security
+  updates for Mumble, Apache Log4j2, OpenJDK and more.
+  " />
+    <meta name="twitter:description" content="  The Ubuntu Security Podcast is back for 2022 and we&#39;re starting off the
+  year with a bang💥! This week we bring you a special interview with Kees
+  Cook of Google and the Linux Kernel Self Protection Project discussing
+  Linux kernel hardening upstream developments. Plus we look at security
+  updates for Mumble, Apache Log4j2, OpenJDK and more.
+  " />
+    <meta itemprop="description" content="  The Ubuntu Security Podcast is back for 2022 and we&#39;re starting off the
+  year with a bang💥! This week we bring you a special interview with Kees
+  Cook of Google and the Linux Kernel Self Protection Project discussing
+  Linux kernel hardening upstream developments. Plus we look at security
+  updates for Mumble, Apache Log4j2, OpenJDK and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-145/" />
+
+
+
+
+<title>Episode 145</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-145/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 145</h1><small>Posted on Thursday, Jan 6, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            The Ubuntu Security Podcast is back for 2022 and we&rsquo;re starting off the
+year with a bang💥! This week we bring you a special interview with Kees
+Cook of Google and the Linux Kernel Self Protection Project discussing
+Linux kernel hardening upstream developments. Plus we look at security
+updates for Mumble, Apache Log4j2, OpenJDK and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E145.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>The Ubuntu Security Podcast is back for 2022 and we&rsquo;re starting off the
+year with a bang💥! This week we bring you a special interview with Kees
+Cook of Google and the Linux Kernel Self Protection Project discussing
+Linux kernel hardening upstream developments. Plus we look at security
+updates for Mumble, Apache Log4j2, OpenJDK and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>31 unique CVEs addressed</p>
+<h3 id="usn-5195-1-mumble-vulnerability-01-02">[<a href="https://ubuntu.com/security/notices/USN-5195-1">USN-5195-1</a>] Mumble vulnerability [01:02]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-27229">CVE-2021-27229</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Low-latency VoIP client - client / server model</li>
+<li>Client picks a server to connect to from public server list</li>
+<li>Malicious actor could register a server with a web URL that uses some
+other protocol - e.g. <code>smb</code> to then refer to a <code>.desktop</code> file</li>
+<li>When user chose the option to &lsquo;Open Webpage&rsquo; for that server, would
+automatically fetch and execute via underlying Qt framework libraries
+<code>QDesktopServices::openUrl</code> function</li>
+<li>Fixed to check URI scheme and only open if is http/https</li>
+<li>Wonder if this kind of vuln may be seen in other applications?</li>
+</ul>
+<h3 id="usn-5192-2-apache-log4j-2-vulnerability-02-13">[<a href="https://ubuntu.com/security/notices/USN-5192-2">USN-5192-2</a>] Apache Log4j 2 vulnerability [02:13]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-44228">CVE-2021-44228</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Log4j2 update for 16.04 ESM - see <a href="https://ubuntusecuritypodcast.org/episode-142/">Episode 142</a></li>
+</ul>
+<h3 id="usn-5203-1-apache-log4j-2-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5203-1">USN-5203-1</a>] Apache Log4j 2 vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-45105">CVE-2021-45105</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>More Log4j2 vulns - possible to crash applications using log4j2 by
+specifying a crafted string that would get logged which would then cause
+infinite recursion when doing lookup evaluation</li>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/Log4Shell">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/Log4Shell</a></li>
+</ul>
+<h3 id="usn-5202-1-openjdk-vulnerabilities-03-13">[<a href="https://ubuntu.com/security/notices/USN-5202-1">USN-5202-1</a>] OpenJDK vulnerabilities [03:13]</h3>
+<ul>
+<li>14 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-35603">CVE-2021-35603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35588">CVE-2021-35588</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35586">CVE-2021-35586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35578">CVE-2021-35578</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35567">CVE-2021-35567</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35565">CVE-2021-35565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35564">CVE-2021-35564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35561">CVE-2021-35561</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35559">CVE-2021-35559</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35556">CVE-2021-35556</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35550">CVE-2021-35550</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2388">CVE-2021-2388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2369">CVE-2021-2369</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-2341">CVE-2021-2341</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Mix of issues resolved with this latest point release update for
+openjdk-8 and openjdk-11</li>
+<li>Info leak via FTP client impl when connecting to malicious FTP server</li>
+<li>Mishandling of JARs with multiple manifests -&gt; signature verification bypass</li>
+<li>Sandbox escape via crafted Java class</li>
+<li>Use of weak crypto ciphers by default -&gt; info leak</li>
+<li>DoS via malicious RTF, BMP or class files</li>
+<li>and more&hellip;</li>
+</ul>
+<h3 id="usn-5199-1-usn-5200-1-usn-5201-1-python-vulnerabilities-04-26">[<a href="https://ubuntu.com/security/notices/USN-5199-1">USN-5199-1</a>, <a href="https://ubuntu.com/security/notices/USN-5200-1">USN-5200-1</a>, <a href="https://ubuntu.com/security/notices/USN-5201-1">USN-5201-1</a>] Python vulnerabilities [04:26]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04) for Python 3.8/3.9
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3737">CVE-2021-3737</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 CVEs addressed in Bionic (18.04 LTS) for Python 3.6
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3737">CVE-2021-3737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3733">CVE-2021-3733</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>3 CVEs addressed in Bionic (18.04 LTS) for Python 3.7/3.8
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3737">CVE-2021-3737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3733">CVE-2021-3733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-8492">CVE-2020-8492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>3 different DoS via urllib http client
+<ul>
+<li>infinite loop when handling <code>100 Continue</code> responses - malicious HTTP
+server could cause a DoS against clients - affects all</li>
+<li>ReDoS due to quadratic complexity regex in basic auth handling - only
+affects Python 3.6-&gt;3.8 in Ubuntu 18.04</li>
+<li>Similar but different ReDos in basic auth handling - only affects
+Python 3.7/3.8 in Ubuntu 18.04</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5198-1-htmldoc-vulnerability-05-37">[<a href="https://ubuntu.com/security/notices/USN-5198-1">USN-5198-1</a>] HTMLDOC vulnerability [05:37]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-23180">CVE-2021-23180</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used to covert HTML/Markdown files to generate EPUB/HTML/PS/PDF with ToC
+etc</li>
+<li>Through fuzzing a NULL ptr deref was found if given crafted input HTML
+file -&gt; crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-5186-2-firefox-regressions-06-06">[<a href="https://ubuntu.com/security/notices/USN-5186-2">USN-5186-2</a>] Firefox regressions [06:06]</h3>
+<ul>
+<li>10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-43540">CVE-2021-43540</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43546">CVE-2021-43546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43545">CVE-2021-43545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43543">CVE-2021-43543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43542">CVE-2021-43542</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43541">CVE-2021-43541</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43539">CVE-2021-43539</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43538">CVE-2021-43538</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43537">CVE-2021-43537</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43536">CVE-2021-43536</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>95.0.1
+<ul>
+<li>WebRender crash on some X11 systems</li>
+<li>Failure to connect to microsoft.com domains</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="seth-and-john-talk-linux-kernel-security-with-kees-cook-06-53">Seth and John talk Linux Kernel Security with Kees Cook [06:53]</h3>
+<ul>
+<li>Seth Arnold and John Johansen from the Ubuntu Security team chat with
+<a href="https://twitter.com/kees%5Fcook">Kees Cook</a> from Google (KSPP) about Linux kernel hardening and
+self-protection, including KASLR and FGKASLR, delving into the finer
+points of linker scripts, kernel address pointer info leaks through debug
+logs, detecting possible integer overflows in C by relying on undefined
+behaviour of signed integer wraparound, hardware support for detecting
+memory corruption and more.</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu%5Fsec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-144/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2020 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-145\/",
+        text: "Episode 145"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
