@@ -35,12 +35,6 @@ twitter = "ubuntu_sec"
 twitter_domain = "ubuntu.com"
 
 [params.authors]
-[params.authors.Alex]
-name = "Alex Murray"
-thumbnail = "https://avatars3.githubusercontent.com/u/56540?s=100&v=4"
-bio = "Ubuntu Security Tech Lead at Canonical"
-github = "alexmurray"
-twitter = "alex_murray"
 
 [permalinks]
         page = "/:filename/"
