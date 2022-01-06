@@ -8,6 +8,136 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 145
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-145
+:EXPORT_DATE: 2022-01-06 16:09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E145.mp3 :podcast_duration "56:49" :podcast_bytes "31032397" :permalink "https://ubuntusecuritypodcast.org/episode-145/" :guid b81f2062c310f710fd3a1cd961125e1c67cf180c6fe98bba59f753e29f3b3870c59f701a99a475f9e91d8f82920249b9e8dc71001aa1b981d2e30a4074220d00
+:END:
+#+begin_description
+The Ubuntu Security Podcast is back for 2022 and we're starting off the
+year with a bang💥! This week we bring you a special interview with Kees
+Cook of Google and the Linux Kernel Self Protection Project discussing
+Linux kernel hardening upstream developments. Plus we look at security
+updates for Mumble, Apache Log4j2, OpenJDK and more.
+#+end_description
+** Overview
+The Ubuntu Security Podcast is back for 2022 and we're starting off the
+year with a bang💥! This week we bring you a special interview with Kees
+Cook of Google and the Linux Kernel Self Protection Project discussing
+Linux kernel hardening upstream developments. Plus we look at security
+updates for Mumble, Apache Log4j2, OpenJDK and more.
+** This week in Ubuntu Security Updates
+31 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5195-1][USN-5195-1]]] Mumble vulnerability [01:02]
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-27229][CVE-2021-27229]] @@html:<!-- medium -->@@
+- Low-latency VoIP client - client / server model
+- Client picks a server to connect to from public server list
+- Malicious actor could register a server with a web URL that uses some
+  other protocol - e.g. =smb= to then refer to a =.desktop= file
+- When user chose the option to 'Open Webpage' for that server, would
+  automatically fetch and execute via underlying Qt framework libraries
+  =QDesktopServices::openUrl= function
+- Fixed to check URI scheme and only open if is http/https
+- Wonder if this kind of vuln may be seen in other applications?
+
+*** [[[https://ubuntu.com/security/notices/USN-5192-2][USN-5192-2]]] Apache Log4j 2 vulnerability [02:13]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2021-44228][CVE-2021-44228]] @@html:<!-- high -->@@
+- Log4j2 update for 16.04 ESM - see [[https://ubuntusecuritypodcast.org/episode-142/][Episode 142]]
+
+*** [[[https://ubuntu.com/security/notices/USN-5203-1][USN-5203-1]]] Apache Log4j 2 vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-45105][CVE-2021-45105]] @@html:<!-- medium -->@@
+- More Log4j2 vulns - possible to crash applications using log4j2 by
+  specifying a crafted string that would get logged which would then cause
+  infinite recursion when doing lookup evaluation
+- https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/Log4Shell
+
+*** [[[https://ubuntu.com/security/notices/USN-5202-1][USN-5202-1]]] OpenJDK vulnerabilities [03:13]
+- 14 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-35603][CVE-2021-35603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35588][CVE-2021-35588]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35586][CVE-2021-35586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35578][CVE-2021-35578]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35567][CVE-2021-35567]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35565][CVE-2021-35565]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35564][CVE-2021-35564]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35561][CVE-2021-35561]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35559][CVE-2021-35559]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35556][CVE-2021-35556]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-35550][CVE-2021-35550]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-2388][CVE-2021-2388]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-2369][CVE-2021-2369]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-2341][CVE-2021-2341]] @@html:<!-- medium -->@@
+- Mix of issues resolved with this latest point release update for
+  openjdk-8 and openjdk-11
+- Info leak via FTP client impl when connecting to malicious FTP server
+- Mishandling of JARs with multiple manifests -> signature verification bypass
+- Sandbox escape via crafted Java class
+- Use of weak crypto ciphers by default -> info leak
+- DoS via malicious RTF, BMP or class files
+- and more...
+
+*** [[[https://ubuntu.com/security/notices/USN-5199-1][USN-5199-1]], [[https://ubuntu.com/security/notices/USN-5200-1][USN-5200-1]], [[https://ubuntu.com/security/notices/USN-5201-1][USN-5201-1]]] Python vulnerabilities [04:26]
+- 1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04) for Python 3.8/3.9
+  - [[https://ubuntu.com/security/CVE-2021-3737][CVE-2021-3737]] @@html:<!-- medium -->@@
+- 2 CVEs addressed in Bionic (18.04 LTS) for Python 3.6
+  - [[https://ubuntu.com/security/CVE-2021-3737][CVE-2021-3737]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3733][CVE-2021-3733]] @@html:<!-- medium -->@@
+- 3 CVEs addressed in Bionic (18.04 LTS) for Python 3.7/3.8
+  - [[https://ubuntu.com/security/CVE-2021-3737][CVE-2021-3737]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3733][CVE-2021-3733]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-8492][CVE-2020-8492]] @@html:<!-- low -->@@
+- 3 different DoS via urllib http client
+  - infinite loop when handling =100 Continue= responses - malicious HTTP
+     server could cause a DoS against clients - affects all
+  - ReDoS due to quadratic complexity regex in basic auth handling - only
+    affects Python 3.6->3.8 in Ubuntu 18.04
+  - Similar but different ReDos in basic auth handling - only affects
+    Python 3.7/3.8 in Ubuntu 18.04
+
+*** [[[https://ubuntu.com/security/notices/USN-5198-1][USN-5198-1]]] HTMLDOC vulnerability [05:37]
+- 1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
+  - [[https://ubuntu.com/security/CVE-2021-23180][CVE-2021-23180]] @@html:<!-- medium -->@@
+- Used to covert HTML/Markdown files to generate EPUB/HTML/PS/PDF with ToC
+  etc
+- Through fuzzing a NULL ptr deref was found if given crafted input HTML
+  file -> crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5186-2][USN-5186-2]]] Firefox regressions [06:06]
+- 10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2021-43540][CVE-2021-43540]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43546][CVE-2021-43546]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43545][CVE-2021-43545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43543][CVE-2021-43543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43542][CVE-2021-43542]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43541][CVE-2021-43541]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43539][CVE-2021-43539]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43538][CVE-2021-43538]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43537][CVE-2021-43537]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-43536][CVE-2021-43536]] @@html:<!-- medium -->@@
+- 95.0.1
+  - WebRender crash on some X11 systems
+  - Failure to connect to microsoft.com domains
+
+** Goings on in Ubuntu Security Community
+*** Seth and John talk Linux Kernel Security with Kees Cook [06:53]
+- Seth Arnold and John Johansen from the Ubuntu Security team chat with
+  [[https://twitter.com/kees_cook][Kees Cook]] from Google (KSPP) about Linux kernel hardening and
+  self-protection, including KASLR and FGKASLR, delving into the finer
+  points of linker scripts, kernel address pointer info leaks through debug
+  logs, detecting possible integer overflows in C by relying on undefined
+  behaviour of signed integer wraparound, hardware support for detecting
+  memory corruption and more.
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 144
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-144
