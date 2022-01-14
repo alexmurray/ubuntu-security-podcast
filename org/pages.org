@@ -19,5 +19,7 @@ Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and d
 :EXPORT_FILE_NAME: contact
 :END:
 - [[mailto:security@ubuntu.com][security@ubuntu.com]]
-- [[http://webchat.freenode.net?channels=%2523ubuntu-hardened&uio=d4][#ubuntu-hardended on the Freenode IRC network]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
 - [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
