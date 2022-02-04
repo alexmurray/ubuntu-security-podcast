@@ -78,25 +78,28 @@
     (bugs . ,(usp-parse-usn-email-bugs buffer))
     (releases . ,(usp-parse-usn-email-releases buffer))))
 
-(defun usp-parse-usn-email-with-path (path)
-  "Parse a USN email located at PATH returing the salient details."
+(defun usp-parse-usn-email-with-notmuch-query (query)
+  "Parse a USN email with QUERY returing the salient details."
   (with-temp-buffer
-    ;; view via mu since might be base64 encoded or other
-    (shell-command (format "mu view \"%s\"" path) (current-buffer))
+    ;; view via notmuch since might be base64 encoded or other
+    (shell-command (format "notmuch show \"%s\"" query) (current-buffer))
     (usp-parse-usn-email-buffer)))
 
-(defun usp-parse-usn-message (msg)
-  "Parse a USN MSG returing the salient details."
-  (let* ((subject (and msg (mu4e-message-field msg :subject)))
-         (usn (usp-extract-usn-from-subject subject))
-         (link (usp-generate-usn-link usn))
-         (details nil))
-    (when usn
-      (setq details (usp-parse-usn-email-with-path (mu4e-message-field msg :path)))
-      (push `(usn . ,usn) details)
-      (push `(subject . ,subject) details)
-      (push `(link . ,link) details))
-    details))
+(defun usp-parse-usn-messages (msgs)
+  "Parse USNs from MSGS returing the salient details."
+  (let ((all-details nil))
+    (dolist (msg msgs (nreverse all-details))
+      (let* ((subject (and msg (plist-get msg :subject)))
+             (usn (usp-extract-usn-from-subject subject))
+             (link (usp-generate-usn-link usn))
+             (query (car (and msg (plist-get msg :query))))
+             (details nil))
+        (when usn
+          (setq details (usp-parse-usn-email-with-notmuch-query query))
+          (push `(usn . ,usn) details)
+          (push `(subject . ,subject) details)
+          (push `(link . ,link) details)
+          (cl-pushnew details all-details :test #'equal))))))
 
 (defun usp-generate-usn-summary (details)
   "Generate a 'org-mode' summary for DETAILS."
@@ -130,23 +133,17 @@
     (buffer-string)))
 
 (defun usp-generate-summary-details (start end)
-  "Generate summary details for USNs from mu4e from dates START to END."
-  (let ((all-details nil))
-    (with-temp-buffer
-      (shell-command (concat "mu find --format=sexp "
-                             "list:ubuntu-security-announce.lists.ubuntu.com "
-                             (format "date:%s..%s" start end) " "
-                             "not flag:trashed") (current-buffer))
-      (goto-char (point-min))
-      (while (not (eobp))
-        (let ((details (usp-parse-usn-message
-                        ;; ignore errors reading so we don't get error
-                        ;; on end of buffer
-                        (ignore-errors (read (current-buffer))))))
-          (when details
-            ;; collect details but ensure we don't get the same one twice
-            (cl-pushnew details all-details :test #'equal)))))
-    all-details))
+  "Generate summary details for USNs from dates START to END."
+  (with-temp-buffer
+    (shell-command (concat "notmuch search --format=sexp "
+                           "list:ubuntu-security-announce.lists.ubuntu.com "
+                           (format "date:%s..%s"
+                                   (string-replace "-" "" start)
+                                   (string-replace "-" "" end)))
+                   (current-buffer))
+    (goto-char (point-min))
+    (usp-parse-usn-messages
+     (read (current-buffer)))))
 
 (defun usp-get-unique-cves (details)
   "Get the unique CVEs from all DETAILS."
