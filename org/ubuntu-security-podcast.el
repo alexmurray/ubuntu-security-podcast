@@ -3,9 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
-(eval-when-compile
-  (require 'cl))
-(require 'mu4e)
+(require 'cl-lib)
 (require 'org)
 (require 'uct nil t)
 
@@ -46,10 +44,9 @@
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
   (let ((codename release))
-    (dolist (pair usp-ubuntu-releases)
+    (dolist (pair usp-ubuntu-releases codename)
       (when (string= release (car pair))
-        (setq codename (cadr pair))))
-    codename))
+        (setq codename (cadr pair))))))
 
 (defun usp-parse-usn-email-regex (regex group &optional buffer)
   "Parse email which is in BUFFER returning a list of match GROUP using REGEX."
@@ -148,11 +145,10 @@
 (defun usp-get-unique-cves (details)
   "Get the unique CVEs from all DETAILS."
   (let ((unique-cves nil))
-    (dolist (det details)
+    (dolist (det details unique-cves)
       (mapc #'(lambda (cve)
                 (cl-pushnew cve unique-cves :test #'string=))
-            (alist-get 'cves det)))
-    unique-cves))
+            (alist-get 'cves det)))))
 
 (defun usp-generate-usn-summaries (details)
   "Insert a summary from USNs described by DETAILS in usp-buffer."
@@ -166,7 +162,7 @@
   "Find the current highest numbered episode and return it +1."
   (save-excursion
     (goto-char (point-min))
-    (if (re-search-forward "^* Episode \\([0-9]+\\)" nil t)
+    (if (re-search-forward "^\\* Episode \\([0-9]+\\)" nil t)
         (1+ (string-to-number (match-string 1)))
       1)))
 
@@ -207,7 +203,7 @@
               (insert (format " [%02d:%02d]" (/ (cdr label) 60) (% (cdr label) 60))))))))))
 
 (defun usp-insert-episode-template (episode publish-date start end description)
-  "Insert template for episode number EPISODE on PUBLISH-DATE covering time from START to END with DESCRIPTION."
+  "Insert template for EPISODE on PUBLISH-DATE from START to END with DESCRIPTION."
   (interactive
    (list (read-number "Episode: " (usp-get-next-episode-number))
          (org-read-date nil nil nil "Publish Date: ")
@@ -250,7 +246,7 @@
                           "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
 (defun usp-insert-episode-link (&optional episode)
-  "Insert an org-mode link to the show-notes for EPISODE."
+  "Insert an 'org-mode' link to the show-notes for EPISODE."
   (interactive "nEpisode: ")
   (insert (format "[[https://ubuntusecuritypodcast.org/episode-%d/][Episode %d]]"
                   episode episode)))
