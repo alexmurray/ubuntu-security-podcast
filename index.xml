@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 14:28:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Feb 2022 16:51:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 149</title>
+      <link>https://ubuntusecuritypodcast.org/episode-149/</link>
+      <pubDate>Fri, 18 Feb 2022 16:51:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-149/</guid>
+      <description>Overview This week Qualys dominate the week in security updates, disclosing details of 4 different SUID-root vulnerabilities, including Oh Snap! More Lemmings (Local Privilege Escalation in snap-confine), plus we look at updates for Firefox, cryptsetup and more.
+This week in Ubuntu Security Updates 23 unique CVEs addressed
+[USN-5279-1] util-linux vulnerabilities [00:59]  2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)  CVE-2021-3996  CVE-2021-3995    First 2 of number of vulns discovered by Qualys this week umount and fusermount are both setuid root An unprivileged user is allowed to unmount a FUSE filesystem which is already mounted and which they own libumount parses /proc/self/mountinfo to validate if is a FUSE fs When a mount entry is deleted, the kernel appends (deleted) to the name of it in the mount table libumount strips this off when parsing mountinfo to get the actual path so a user could mount a FUSE filesystem at a mountpoint with (deleted) in the name - and then libumount will strip this off and umount the original path - ie.</description>
+    </item>
+    
     <item>
       <title>Episode 148</title>
       <link>https://ubuntusecuritypodcast.org/episode-148/</link>
