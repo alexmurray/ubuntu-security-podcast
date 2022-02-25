@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 18 Feb 2022 16:51:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 25 Feb 2022 14:40:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,349 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 150</title>
+          <link>https://ubuntusecuritypodcast.org/episode-150/</link>
+          <pubDate>Fri, 25 Feb 2022 14:40:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>682cb3a0b2124c939876f020415aa419fe4d305d424cfde0f437f09c806b6f5ceffb297f6187437d7043263abddcfa9c3d598afb855c48beebfbd410c08a00fa</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 150</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&#39;s
+  metrics report as well as security updates for the Linux kernel, expat,
+  c3p0, Cyrus SASL and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&#39;s
+  metrics report as well as security updates for the Linux kernel, expat,
+  c3p0, Cyrus SASL and more.
+  </itunes:summary>
+        <description>  Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&#39;s
+  metrics report as well as security updates for the Linux kernel, expat,
+  c3p0, Cyrus SASL and more.
+  </description>
+        <googleplay:description>  Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&#39;s
+  metrics report as well as security updates for the Linux kernel, expat,
+  c3p0, Cyrus SASL and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&rsquo;s
+metrics report as well as security updates for the Linux kernel, expat,
+c3p0, Cyrus SASL and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>62 unique CVEs addressed</p>
+<h3 id="usn-5292-2-usn-5292-3-snapd-vulnerabilities-00-44">[<a href="https://ubuntu.com/security/notices/USN-5292-2">USN-5292-2</a>, <a href="https://ubuntu.com/security/notices/USN-5292-3">USN-5292-3</a>] snapd vulnerabilities [00:44]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-44731">CVE-2021-44731</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44730">CVE-2021-44730</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4120">CVE-2021-4120</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3155">CVE-2021-3155</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-149/">Episode 149</a></li>
+</ul>
+<h3 id="usn-5294-1-usn-5294-2-linux-kernel-vulnerabilities-01-38">[<a href="https://ubuntu.com/security/notices/USN-5294-1">USN-5294-1</a>, <a href="https://ubuntu.com/security/notices/USN-5294-2">USN-5294-2</a>] Linux kernel vulnerabilities [01:38]</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22942">CVE-2022-22942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0330">CVE-2022-0330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4202">CVE-2021-4202</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4155">CVE-2021-4155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4083">CVE-2021-4083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-22600">CVE-2021-22600</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - focal GA + clouds</li>
+<li>Usual sorts of issues - double-free (UAF) in packet network protocol, OOB
+R/W in USB Gadget, race condition in Unix domain sockets - UAF, XFS info
+leak, NFC race -&gt; UAF, Intel GPU TLB flush missing - DoS/RCE, VMWare vGPU
+missing cleanup on errors - stale entries in fd table - info leak /
+privesc</li>
+</ul>
+<h3 id="usn-5295-1-usn-5295-2-linux-kernel--hwe--vulnerabilities-02-57">[<a href="https://ubuntu.com/security/notices/USN-5295-1">USN-5295-1</a>, <a href="https://ubuntu.com/security/notices/USN-5295-2">USN-5295-2</a>] Linux kernel (HWE) vulnerabilities [02:57]</h3>
+<ul>
+<li>5 CVEs addressed in Impish (21.10), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22942">CVE-2022-22942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0330">CVE-2022-0330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4155">CVE-2021-4155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4083">CVE-2021-4083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-22600">CVE-2021-22600</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.13 - impish GA + focal HWE</li>
+</ul>
+<h3 id="usn-5297-1-linux-kernel--gke--vulnerabilities-03-17">[<a href="https://ubuntu.com/security/notices/USN-5297-1">USN-5297-1</a>] Linux kernel (GKE) vulnerabilities [03:17]</h3>
+<ul>
+<li>7 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22942">CVE-2022-22942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0330">CVE-2022-0330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4202">CVE-2021-4202</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4155">CVE-2021-4155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4083">CVE-2021-4083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 gke specific kernel - focal + bionic</li>
+</ul>
+<h3 id="usn-5298-1-linux-kernel-vulnerabilities-03-29">[<a href="https://ubuntu.com/security/notices/USN-5298-1">USN-5298-1</a>] Linux kernel vulnerabilities [03:29]</h3>
+<ul>
+<li>12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22942">CVE-2022-22942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0330">CVE-2022-0330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4202">CVE-2021-4202</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4155">CVE-2021-4155</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4083">CVE-2021-4083</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28715">CVE-2021-28715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28714">CVE-2021-28714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-22600">CVE-2021-22600</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 bionic GA + xenial HWE + trusty azure</li>
+</ul>
+<h3 id="usn-5299-1-linux-kernel-vulnerabilities-03-46">[<a href="https://ubuntu.com/security/notices/USN-5299-1">USN-5299-1</a>] Linux kernel vulnerabilities [03:46]</h3>
+<ul>
+<li>13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-45485">CVE-2021-45485</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-42008">CVE-2021-42008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38204">CVE-2021-38204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3679">CVE-2021-3679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3612">CVE-2021-3612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3483">CVE-2021-3483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34693">CVE-2021-34693</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33034">CVE-2021-33034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28972">CVE-2021-28972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0129">CVE-2021-0129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26147">CVE-2020-26147</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 - xenial GA + trusty ESM</li>
+</ul>
+<h3 id="usn-5302-1-linux-kernel--oem--vulnerabilities-03-57">[<a href="https://ubuntu.com/security/notices/USN-5302-1">USN-5302-1</a>] Linux kernel (OEM) vulnerabilities [03:57]</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted -->
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44879">CVE-2021-44879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.14 - focal OEM</li>
+</ul>
+<h3 id="usn-5288-1-expat-vulnerabilities-04-12">[<a href="https://ubuntu.com/security/notices/USN-5288-1">USN-5288-1</a>] Expat vulnerabilities [04:12]</h3>
+<ul>
+<li>12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-25236">CVE-2022-25236</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25235">CVE-2022-25235</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23990">CVE-2022-23990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23852">CVE-2022-23852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22827">CVE-2022-22827</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22826">CVE-2022-22826</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22825">CVE-2022-22825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22824">CVE-2022-22824</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22823">CVE-2022-22823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22822">CVE-2022-22822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46143">CVE-2021-46143</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45960">CVE-2021-45960</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>XML parser written in C - used by a huge number of other applications
+from audacity, avahi, ceph, dbus, gdb, git, fontconfig, python, mesa,
+squid and a lot more</li>
+<li>2 possible RCE vulns - possible to inject content into XML namespace
+tags, and failure to validate encoding e.g. for UTF-8 in particular
+contexts
+<ul>
+<li>critical severity according to upstream since if expat passes malformed
+data back to the application could result in memory corruption etc -&gt;
+RCE (thanks to upstream for the heads-up on the possible impact of
+these)</li>
+<li>Plus a bunch of DoS and other less severe bugs fixed too (stack
+exhaustion, integer overflows when multi-gigabyte input is parsed etc)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5293-1-c3p0-vulnerability-05-41">[<a href="https://ubuntu.com/security/notices/USN-5293-1">USN-5293-1</a>] c3p0 vulnerability [05:41]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-5427">CVE-2019-5427</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>JDBC connection pooling library</li>
+<li>billion laughs attack (aka XML bomb) when parsing XML config via
+recursive XML entity expansion - have one entity defined as 10 of the
+previous entity - then do this 10 times - 1 billion copies of the
+original entity - memory exhaustion</li>
+<li>billion laughs comes from original PoC which used an entity called <code>lol</code>
+which was defined as 10 copies of <code>lol8</code> which was defined as 10 copies of
+<code>lol7</code> etc&hellip;</li>
+</ul>
+<h3 id="usn-5301-1-usn-5301-2-cyrus-sasl-vulnerability-06-44">[<a href="https://ubuntu.com/security/notices/USN-5301-1">USN-5301-1</a>, <a href="https://ubuntu.com/security/notices/USN-5301-2">USN-5301-2</a>] Cyrus SASL vulnerability [06:44]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24407">CVE-2022-24407</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>SASL implementation for Cyrus IMAP server, used also by exim, ldap-utils,
+mutt, php, postfix and others</li>
+<li>SQL plugin failed to properly validate input - SQL injection</li>
+</ul>
+<h3 id="usn-5300-1-php-vulnerabilities-07-23">[<a href="https://ubuntu.com/security/notices/USN-5300-1">USN-5300-1</a>] PHP vulnerabilities [07:23]</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21707">CVE-2021-21707</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9119">CVE-2017-9119</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9120">CVE-2017-9120</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9118">CVE-2017-9118</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-8923">CVE-2017-8923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2015-9253">CVE-2015-9253</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>php 7 - 4 different DoS vulns, 1 memory corruption - crash/RCE and one
+info leak</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="gpz-report-on-vulnerability-metrics-07-48">GPZ report on vulnerability metrics [07:48]</h3>
+<ul>
+<li><a href="https://googleprojectzero.blogspot.com/2022/02/a-walk-through-project-zero-metrics.html">https://googleprojectzero.blogspot.com/2022/02/a-walk-through-project-zero-metrics.html</a></li>
+<li>Looks at vulns which GPZ has reported between Jan 2019 - Dec 2021 and how
+fast they get patched</li>
+<li>376 vulns
+<ul>
+<li>351 (93%) fixed, 14 (4%) wontfix, 11 (3%) unfixed</li>
+<li>96 (26%) Microsoft, 85 (23%) Apple, 60 (16%) Google</li>
+</ul>
+</li>
+<li>Strict 90-day deadline to fix and ship (with additional 14-day grace
+period)</li>
+<li>When looking at vulns, group by Vendor - Apple, MS, Google, Linux
+(kernel), Adobe, Mozilla, Samsung, Oracle and Others
+<ul>
+<li>Others: includes both vendors: Apache, AWS, Canonical, Intel, Qualcomm,
+RedHat etc, but also individual OSS projects: c-ares, git, glibc,
+gnupg, libseccomp, systemd and more</li>
+</ul>
+</li>
+<li>Time-to-patch:
+<ul>
+<li>Linux - 25 days on average</li>
+<li>Google + Others - 44 days</li>
+<li>Mozilla - 61</li>
+<li>Adobe - 65</li>
+<li>Apple - 69</li>
+<li>Microsoft - 83</li>
+<li>Oracle - 109</li>
+</ul>
+</li>
+<li>If look by year - shows most vendors have gotten faster over time - but
+in particular Linux and Others are twice as fast in 2021 cf. 2019
+<ul>
+<li>Good news for Ubuntu users as these encompass the Linux relevant vulns</li>
+</ul>
+</li>
+<li>Also look into stats on Phone - comparing iOS, Android (Samsung), Android
+(Google) - and all have a TTP of ~70 days</li>
+<li>Then also dig into specifics of timelines for OSS projects, focusing on
+browsers since can break down the process into 2 discrete steps:
+<ul>
+<li>time from report to a public patch being available</li>
+<li>time from public patch to release</li>
+</ul>
+</li>
+<li>And compare these across Chrome, WebKit and Firefox
+<ul>
+<li>Chrome is fastest overall at 30 days total, Firefox 38 days, WebKit 73</li>
+<li>When looking at the two steps:
+<ul>
+<li>Chrome has a very short initial patch time - 5 days - but both WebKit
+and Firefox are respectible with 12 and 17 days respectively</li>
+<li>But release cycle of WebKit is so long (61 days)compared to Chrome
+(25) and Firefox (21) that this significantly delays the time to
+fixes being available to users</li>
+<li>Also puts them at more risk, since once a patch is publicly
+available, it is usually not too hard to engineer a PoC for motivated
+researchers, so they then have 2 months to use this on average before
+it is patched</li>
+<li>WebKit is used for all web rendering on iOS so iPhone users are then
+vulnerable for quite a while no matter what browser they use -
+hopefully Apple get faster at doing WebKit releases</li>
+<li>Compared to Firefox and Chrome - both 4 week cycle now</li>
+<li>Is not enough to develop fixes - you actually have to get them into
+the hands of users to protect them</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ubuntu-20-dot-04-dot-4-lts-released-15-27">Ubuntu 20.04.4 LTS Released [15:27]</h3>
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2022-February/000277.html">https://lists.ubuntu.com/archives/ubuntu-announce/2022-February/000277.html</a></li>
+</ul>
+<p>The Ubuntu team is pleased to announce the release of Ubuntu 20.04.4 LTS
+(Long-Term Support) for its Desktop, Server, and Cloud products, as well
+as other flavours of Ubuntu with long-term support.</p>
+<p>Like previous LTS series, 20.04.4 includes hardware enablement stacks
+for use on newer hardware. This support is offered on all architectures.</p>
+<p>Ubuntu Server defaults to installing the GA kernel; however you may
+select the HWE kernel from the installer bootloader.</p>
+<p>As usual, this point release includes many updates, and updated
+installation media has been provided so that fewer updates will need to
+be downloaded after installation. These include security updates and
+corrections for other high-impact bugs, with a focus on maintaining
+stability and compatibility with Ubuntu 20.04 LTS.</p>
+<p>Kubuntu 20.04.4 LTS, Ubuntu Budgie 20.04.4 LTS, Ubuntu MATE 20.04.4 LTS,
+Lubuntu 20.04.4 LTS, Ubuntu Kylin 20.04.4 LTS, Ubuntu Studio 20.04.4 LTS,
+and Xubuntu 20.04.4 LTS are also now available. More details can be found
+in their individual release notes:</p>
+<p><a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes#Official_flavours">https://wiki.ubuntu.com/FocalFossa/ReleaseNotes#Official_flavours</a></p>
+<p>Maintenance updates will be provided for 5 years for Ubuntu Desktop,
+Ubuntu Server, Ubuntu Cloud, and Ubuntu Core. All the remaining
+flavours will be supported for 3 years. Additional security support is
+available with ESM (Extended Security Maintenance).</p>
+<ul>
+<li><a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes">https://wiki.ubuntu.com/FocalFossa/ReleaseNotes</a></li>
+<li><a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.4">https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.4</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E150.mp3" length="14301756" type="audio/mpeg" /><itunes:duration>1093</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 149</title>
           <link>https://ubuntusecuritypodcast.org/episode-149/</link>
