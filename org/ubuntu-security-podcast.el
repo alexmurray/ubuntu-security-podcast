@@ -177,13 +177,16 @@
            (labels-file-name (expand-file-name (format "USP_E%03d_labels.txt" episode)
                                                "~/Ubuntu Security Podcast/"))
            (num-bytes (file-attribute-size (file-attributes audio-file-name)))
-           (length (string-to-number (shell-command-to-string (format "mp3info -p %%S \"%s\"" audio-file-name)))))
+           (output (shell-command-to-string (format "ffmpeg -i \"%s\"" audio-file-name))))
       (save-excursion
         ;; first update export date
         (re-search-forward "^:EXPORT_DATE: \\(.*\\)$")
         (replace-match (format-time-string "%Y-%m-%d %H:%M") t t nil 1)
-          (let ((mins (/ length 60))
-                (secs (% length 60)))
+        (if (null (string-match "Duration: [0-9]\\{2\\}:\\([0-9]\\{2\\}\\):\\([0-9]\\{2\\}\\).[0-9]\\{2\\}"
+                                output))
+            (error "Unable to get Duration of %s via ffmpeg" audio-file-name)
+          (let ((mins (match-string 1 output))
+                (secs (match-string 2 output)))
             (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\([0-9M]\\{2\\}:[0-9S]\\{2\\}\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\" :guid [a-z0-9]+$")
             (replace-match (format "%d:%02d" mins secs) t t nil 1)
             (replace-match (format "%d" num-bytes) t t nil 2)))
@@ -200,7 +203,7 @@
                 (setq labels (cons `(,label . ,time) labels)))))
           (dolist (label (nreverse labels))
             (when (re-search-forward (car label) nil t)
-              (insert (format " [%02d:%02d]" (/ (cdr label) 60) (% (cdr label) 60))))))))))
+              (insert (format " [%02d:%02d]" (/ (cdr label) 60) (% (cdr label) 60)))))))))))
 
 (defun usp-insert-episode-template (episode publish-date start end description)
   "Insert template for EPISODE on PUBLISH-DATE from START to END with DESCRIPTION."
