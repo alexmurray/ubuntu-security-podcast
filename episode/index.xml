@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 25 Feb 2022 14:40:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 4 Mar 2022 15:31:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,192 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 151</title>
+          <link>https://ubuntusecuritypodcast.org/episode-151/</link>
+          <pubDate>Fri, 04 Mar 2022 15:31:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>b49a5da81cbdc2ad450faaa0b4df18a3e231b91427796591b5e069a977d74a089c0fd87a893352b109b0fac7a1c34033b04bcbb2b30acb8eff7be5a7ccb0b442</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 151</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we do the usual round-up of security vulnerability fixes for the
+  various Ubuntu releases, plus we discuss enabling PIE for Python and
+  preview some upcoming content on Ubuntu system hardening as well.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we do the usual round-up of security vulnerability fixes for the
+  various Ubuntu releases, plus we discuss enabling PIE for Python and
+  preview some upcoming content on Ubuntu system hardening as well.
+  </itunes:summary>
+        <description>  This week we do the usual round-up of security vulnerability fixes for the
+  various Ubuntu releases, plus we discuss enabling PIE for Python and
+  preview some upcoming content on Ubuntu system hardening as well.
+  </description>
+        <googleplay:description>  This week we do the usual round-up of security vulnerability fixes for the
+  various Ubuntu releases, plus we discuss enabling PIE for Python and
+  preview some upcoming content on Ubuntu system hardening as well.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we do the usual round-up of security vulnerability fixes for the
+various Ubuntu releases, plus we discuss enabling PIE for Python and
+preview some upcoming content on Ubuntu system hardening as well.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>44 unique CVEs addressed</p>
+<h3 id="usn-5292-4-snapd-regression-00-52">[<a href="https://ubuntu.com/security/notices/USN-5292-4">USN-5292-4</a>] snapd regression [00:52]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-44731">CVE-2021-44731</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44730">CVE-2021-44730</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4120">CVE-2021-4120</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3155">CVE-2021-3155</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-149/">Episode 149</a> - another regression with fish shell</li>
+</ul>
+<h3 id="usn-5303-1-php-vulnerability-01-20">[<a href="https://ubuntu.com/security/notices/USN-5303-1">USN-5303-1</a>] PHP vulnerability [01:20]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21708">CVE-2021-21708</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF - PoC exists which shows the ability to crash PHP interpreter via a
+crafted database query - possible RCE as well</li>
+</ul>
+<h3 id="usn-5304-1-policykit-vulnerability-01-40">[<a href="https://ubuntu.com/security/notices/USN-5304-1">USN-5304-1</a>] PolicyKit vulnerability [01:40]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-4115">CVE-2021-4115</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>fd exhaustion - send 2 requests and cause the first one to fail - leaks
+the fd - eventually polkit runs out of fds and crashes - will be
+restarted by systemd so impact is low</li>
+</ul>
+<h3 id="usn-5305-1-mariadb-vulnerabilities-02-17">[<a href="https://ubuntu.com/security/notices/USN-5305-1">USN-5305-1</a>] MariaDB vulnerabilities [02:17]</h3>
+<ul>
+<li>10 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24052">CVE-2022-24052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24051">CVE-2022-24051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24050">CVE-2022-24050</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24048">CVE-2022-24048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46668">CVE-2021-46668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46665">CVE-2021-46665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46664">CVE-2021-46664</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46663">CVE-2021-46663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46661">CVE-2021-46661</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46659">CVE-2021-46659</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Several security issues - latest upstream point releases</li>
+<li>10.3.34 for 20.04 LTS</li>
+<li>10.5.15 for 21.10</li>
+</ul>
+<h3 id="usn-5306-1-webkitgtk-vulnerabilities-02-44">[<a href="https://ubuntu.com/security/notices/USN-5306-1">USN-5306-1</a>] WebKitGTK vulnerabilities [02:44]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22592">CVE-2022-22592</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22590">CVE-2022-22590</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22589">CVE-2022-22589</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues in webkit fixed</li>
+</ul>
+<h3 id="usn-5307-1-qemu-vulnerabilities-02-58">[<a href="https://ubuntu.com/security/notices/USN-5307-1">USN-5307-1</a>] QEMU vulnerabilities [02:58]</h3>
+<ul>
+<li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0358">CVE-2022-0358</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4158">CVE-2021-4158</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3930">CVE-2021-3930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3748">CVE-2021-3748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3713">CVE-2021-3713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3682">CVE-2021-3682</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3546">CVE-2021-3546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3545">CVE-2021-3545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3544">CVE-2021-3544</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20203">CVE-2021-20203</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20196">CVE-2021-20196</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various issues - integer overflow, NULL ptr derefs, memory leaks and
+disclosures in vhost-user GPU driver, crash or possible code-exec in USB
+redirector device emulation etc</li>
+</ul>
+<h3 id="usn-5309-1-virglrenderer-vulnerabilities-03-28">[<a href="https://ubuntu.com/security/notices/USN-5309-1">USN-5309-1</a>] virglrenderer vulnerabilities [03:28]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0175">CVE-2022-0175</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0135">CVE-2022-0135</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Virtual GPU for KVM</li>
+<li>info leak and possible OOB write</li>
+</ul>
+<h3 id="usn-5310-1-gnu-c-library-vulnerabilities-03-48">[<a href="https://ubuntu.com/security/notices/USN-5310-1">USN-5310-1</a>] GNU C Library vulnerabilities [03:48]</h3>
+<ul>
+<li>12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23219">CVE-2022-23219</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23218">CVE-2022-23218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3999">CVE-2021-3999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3998">CVE-2021-3998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-35942">CVE-2021-35942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-27645">CVE-2021-27645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-6096">CVE-2020-6096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3326">CVE-2021-3326</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-29562">CVE-2020-29562</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27618">CVE-2020-27618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-25013">CVE-2019-25013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-10228">CVE-2016-10228</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Usual mix of issues in libc - OOB read / writes - crash / possible code
+execution - in various modules - character encoding handling in iconv,
+netgroup lookups via nscd daemon, <code>wordexp()</code> / <code>realpath()</code> / <code>getcwd()</code>
+functions etc</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="python-plus-pie-04-45">Python + PIE? [04:45]</h3>
+<ul>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/python2.7/+bug/1452115">https://bugs.launchpad.net/ubuntu/+source/python2.7/+bug/1452115</a></li>
+<li>Request since 2015 to enable this</li>
+<li>When compiled as PIE enables to use exec ASLR which can frustrate ROP
+exploits etc</li>
+<li>Performance testing shows this to have no impact</li>
+<li>Coordinating with foundations team to try and land for Ubuntu 22.04 LTS
+as a FFe</li>
+</ul>
+<h3 id="security-advice-for-running-your-own-server-07-02">Security advice for running your own server [07:02]</h3>
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/basic-security-advice-for-running-your-own-server/26786">https://discourse.ubuntu.com/t/basic-security-advice-for-running-your-own-server/26786</a></li>
+</ul>
+<h3 id="hiring-07-33">Hiring [07:33]</h3>
+<h4 id="ubuntu-security-engineer">Ubuntu Security Engineer</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a></li>
+<li>Home based, worldwide</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E151.mp3" length="7468558" type="audio/mpeg" /><itunes:duration>559</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 150</title>
           <link>https://ubuntusecuritypodcast.org/episode-150/</link>
@@ -5112,7 +5298,7 @@ to compile everything who work on detecting new warnings</li>
 <li>Is a lofty goal and is very useful from a security PoV and is
 illustrative of many real world efforts that try and introduce static
 analysis etc for an existing codebase</li>
-<li>Immediately get a high number of &lsquo;errors&rsquo; now that need to be addressed -
+<li>Immediately get a high number of &rsquo;errors&rsquo; now that need to be addressed -
 was fine before? - so how to introduce these in a way that doesn&rsquo;t impose
 a huge upfront cost but still incentivizes fixing them over time and
 allows to detect new issues</li>
@@ -9970,7 +10156,7 @@ crash/codexec</li>
 </ul>
 </li>
 <li>infinite loop -&gt; CPU based DoS when parsing crafted Standard ML files -
-input file containing just &lsquo;exception&rsquo; would be enough to trigger this</li>
+input file containing just &rsquo;exception&rsquo; would be enough to trigger this</li>
 </ul>
 <h3 id="usn-4886-1-privoxy-vulnerabilities-04-18">[<a href="https://ubuntu.com/security/notices/USN-4886-1">USN-4886-1</a>] Privoxy vulnerabilities [04:18]</h3>
 <ul>
@@ -15460,9 +15646,9 @@ flags as Trojan.SH.HADGLIDER.TSE - false positives, possible hash
 collision?</li>
 </ul>
 <!-- raw HTML omitted -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install jq
-xdg-open <span style="color:#e6db74">&#34;https://www.virustotal.com/gui/file/</span><span style="color:#66d9ef">$(</span>sha256sum /usr/bin/jq | cut -f1 -d<span style="color:#e6db74">&#39; &#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h2 id="get-in-contact">Get in contact</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt install jq
+</span></span><span style="display:flex;"><span>xdg-open <span style="color:#e6db74">&#34;https://www.virustotal.com/gui/file/</span><span style="color:#66d9ef">$(</span>sha256sum /usr/bin/jq | cut -f1 -d<span style="color:#e6db74">&#39; &#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h2 id="get-in-contact">Get in contact</h2>
 <ul>
 <li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
 <li><a href="http://webchat.freenode.net/#ubuntu-hardened">#ubuntu-hardened on the Freenode IRC network</a></li>
@@ -23484,7 +23670,7 @@ to reset the pointer when done</li>
 </li>
 <li>Integer overflow -&gt; buffer overflow -&gt; root privesc in binder</li>
 <li>Reintroduction of Spectre v1 vulnerability in ptrace subsystem - Brad
-Spengler - fixed properly in Linus' tree but not when it got backported
+Spengler - fixed properly in Linus&rsquo; tree but not when it got backported
 to the stable tree - two lines of code got reordered - so load of
 possible speculative value occurred _after_it had been used - so the
 speculative load barrier had no effect - Ubuntu regularly backports fixes
@@ -24245,7 +24431,7 @@ patches</li>
 <li>Possible host privilege escalation from a libvirt guest (guest user needs
 to be privileged)</li>
 <li>2 related info disclosures on PowerPC - local user could possibly read
-vector registers of other users' processes either during an interrupt or
+vector registers of other users&rsquo; processes either during an interrupt or
 via a facility unavailable exception</li>
 </ul>
 <h3 id="lsn-0056-1-linux-kernel-vulnerability-09-51">[LSN-0056-1] Linux kernel vulnerability [09:51]</h3>
@@ -26123,7 +26309,7 @@ settings or allow other users to modify settings etc.</li>
 <li>Reported by Kevin Backhouse of Semmle Security Research Team</li>
 <li>TOCTOU when processing a users own ignore configuration file</li>
 <li>Apport runs as root, but would check permission to file via access()
-system call - which uses the real processes' UID / GID - so is safe as a
+system call - which uses the real processes&rsquo; UID / GID - so is safe as a
 permission check - BUT would then go and open the file - so in the
 meantime this could be replaced by a symlink to say a root owned file
 which could then get included in the resulting crash report</li>
@@ -26344,7 +26530,7 @@ corrupted hyperloglog data structure</li>
 used with the built-in LibreLogo turtle graphics script to execute
 bundled python code - so can get RCE via a mouse-over event using
 LibreLogo and embedded python</li>
-<li>Stealth mode - documents can only fetch resources from &lsquo;trusted&rsquo;
+<li>Stealth mode - documents can only fetch resources from &rsquo;trusted'
 locations
 <ul>
 <li>Allows to disable the normal remote resource handling in documents to
@@ -31678,7 +31864,7 @@ providing the path to list - NULL pointer dereference -&gt; crash</li>
 </li>
 <li>Breaks user-space API of mincore() and hence some existing programs (as noted in the commit)
 <ul>
-<li>Linus' primary rule is to never break userspace BUT in this case as is a security vulnerability this is okay</li>
+<li>Linus&rsquo; primary rule is to never break userspace BUT in this case as is a security vulnerability this is okay</li>
 <li>This might also likely affect other programs that use mincore in Ubuntu etc (fincore, e4defrag, qemu etc)</li>
 </ul>
 </li>
@@ -33808,7 +33994,7 @@ format handling leading to DoS etc</li>
 <h3 id="evince-apparmor-hardening-lp-1788929">Evince AppArmor hardening <a href="https://bugs.launchpad.net/ubuntu/+source/evince/+bug/1788929">LP #1788929</a></h3>
 <ul>
 <li>Jann Horn (GPZ) reported gaps in evince AppArmor profile</li>
-<li>Clever use of GNOME thumbnailer infrastructure to specify a new &lsquo;evil&rsquo; thumbnailer and the use of systemd via DBus to escape AppArmor confinement</li>
+<li>Clever use of GNOME thumbnailer infrastructure to specify a new &rsquo;evil&rsquo; thumbnailer and the use of systemd via DBus to escape AppArmor confinement</li>
 <li>Policy fixed in Cosmic, in process of updating for Bionic etc</li>
 </ul>
 <h3 id="new-ubuntu-security-manager">New Ubuntu Security Manager</h3>
