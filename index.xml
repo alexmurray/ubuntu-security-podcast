@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Mar 2022 15:31:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Mar 2022 14:19:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 152</title>
+      <link>https://ubuntusecuritypodcast.org/episode-152/</link>
+      <pubDate>Fri, 11 Mar 2022 14:19:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-152/</guid>
+      <description>Overview It&amp;rsquo;s a big week for kernel security vulnerabilities - we cover Dirty Pipe and fixes for the latest microarchitectural side channel issues, plus we bring you the first in a 3 part series on hardening your Ubuntu systems against malicious attackers.
+This week in Ubuntu Security Updates 34 unique CVEs addressed
+[USN-5312-1] HAProxy vulnerability [00:46]  1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)  CVE-2022-0711 &amp;lt;!&amp;ndash; medium &amp;ndash;&amp;gt;   CPU based DoS via the Set-Cookie2 header - obsolete HTTP response header used to send cookies from the server to the user - possible infinite loop when parsing responses which contained this header  [USN-5300-2, USN-5300-3] PHP vulnerabilities [01:24]  6 CVEs addressed in Bionic (18.</description>
+    </item>
+    
     <item>
       <title>Episode 151</title>
       <link>https://ubuntusecuritypodcast.org/episode-151/</link>
@@ -15,7 +26,7 @@
       <guid>https://ubuntusecuritypodcast.org/episode-151/</guid>
       <description>Overview This week we do the usual round-up of security vulnerability fixes for the various Ubuntu releases, plus we discuss enabling PIE for Python and preview some upcoming content on Ubuntu system hardening as well.
 This week in Ubuntu Security Updates 44 unique CVEs addressed
-[USN-5292-4] snapd regression [00:52]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)  CVE-2021-44731  CVE-2021-44730  CVE-2021-4120  CVE-2021-3155    Episode 149 - another regression with fish shell  [USN-5303-1] PHP vulnerability [01:20]  1 CVEs addressed in Focal (20.</description>
+[USN-5292-4] snapd regression [00:52]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)  CVE-2021-44731 CVE-2021-44730 CVE-2021-4120 CVE-2021-3155   Episode 149 - another regression with fish shell  [USN-5303-1] PHP vulnerability [01:20]  1 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>
@@ -26,7 +37,7 @@ This week in Ubuntu Security Updates 44 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-150/</guid>
       <description>Overview Ubuntu 20.04.4 LTS is released, plus we talk about Google Project Zero&amp;rsquo;s metrics report as well as security updates for the Linux kernel, expat, c3p0, Cyrus SASL and more.
 This week in Ubuntu Security Updates 62 unique CVEs addressed
-[USN-5292-2, USN-5292-3] snapd vulnerabilities [00:44]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Focal (20.04 LTS)  CVE-2021-44731  CVE-2021-44730  CVE-2021-4120  CVE-2021-3155    Episode 149  [USN-5294-1, USN-5294-2] Linux kernel vulnerabilities [01:38]  8 CVEs addressed in Bionic (18.</description>
+[USN-5292-2, USN-5292-3] snapd vulnerabilities [00:44]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Focal (20.04 LTS)  CVE-2021-44731 CVE-2021-44730 CVE-2021-4120 CVE-2021-3155   Episode 149  [USN-5294-1, USN-5294-2] Linux kernel vulnerabilities [01:38]  8 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -37,7 +48,7 @@ This week in Ubuntu Security Updates 62 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-149/</guid>
       <description>Overview This week Qualys dominate the week in security updates, disclosing details of 4 different SUID-root vulnerabilities, including Oh Snap! More Lemmings (Local Privilege Escalation in snap-confine), plus we look at updates for Firefox, cryptsetup and more.
 This week in Ubuntu Security Updates 23 unique CVEs addressed
-[USN-5279-1] util-linux vulnerabilities [00:59]  2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)  CVE-2021-3996  CVE-2021-3995    First 2 of number of vulns discovered by Qualys this week umount and fusermount are both setuid root An unprivileged user is allowed to unmount a FUSE filesystem which is already mounted and which they own libumount parses /proc/self/mountinfo to validate if is a FUSE fs When a mount entry is deleted, the kernel appends (deleted) to the name of it in the mount table libumount strips this off when parsing mountinfo to get the actual path so a user could mount a FUSE filesystem at a mountpoint with (deleted) in the name - and then libumount will strip this off and umount the original path - ie.</description>
+[USN-5279-1] util-linux vulnerabilities [00:59]  2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)  CVE-2021-3996 CVE-2021-3995   First 2 of number of vulns discovered by Qualys this week umount and fusermount are both setuid root An unprivileged user is allowed to unmount a FUSE filesystem which is already mounted and which they own libumount parses /proc/self/mountinfo to validate if is a FUSE fs When a mount entry is deleted, the kernel appends (deleted) to the name of it in the mount table libumount strips this off when parsing mountinfo to get the actual path so a user could mount a FUSE filesystem at a mountpoint with (deleted) in the name - and then libumount will strip this off and umount the original path - ie.</description>
     </item>
     
     <item>
@@ -79,7 +90,7 @@ This week in Ubuntu Security Updates 100 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-146/</guid>
       <description>Overview Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux kernel, Apache httpd2 + Log4j2, Ghostscript and more.
 This week in Ubuntu Security Updates 28 unique CVEs addressed
-[USN-5204-1] Django vulnerabilities [00:45]  3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)  CVE-2021-45452  CVE-2021-45116  CVE-2021-45115    Possible to write to arbitrary locations if a plugin etc would call Storage.</description>
+[USN-5204-1] Django vulnerabilities [00:45]  3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)  CVE-2021-45452 CVE-2021-45116 CVE-2021-45115   Possible to write to arbitrary locations if a plugin etc would call Storage.</description>
     </item>
     
     <item>
@@ -121,7 +132,7 @@ Get in contact  security@ubuntu.com #ubuntu-security on the Libera.Chat IRC netw
       <guid>https://ubuntusecuritypodcast.org/episode-142/</guid>
       <description>Overview Just in time for the holidays, Log4Shell comes along to wreck everyone&amp;rsquo;s weekend - so we take a deep dive into the vulnerability that has set the internet on fire, plus we cover security updates for BlueZ, Firefox, Flatpak and more.
 This week in Ubuntu Security Updates 27 unique CVEs addressed
-[USN-5183-1] BlueZ vulnerability [00:48]  1 CVEs addressed in Bionic (18.04 LTS)  CVE-2019-8922    Heap based buffer overflow when handling overly large SDP requests - crash / possible code execution as a result  [USN-5186-1] Firefox vulnerabilities [01:08]  10 CVEs addressed in Bionic (18.</description>
+[USN-5183-1] BlueZ vulnerability [00:48]  1 CVEs addressed in Bionic (18.04 LTS)  CVE-2019-8922   Heap based buffer overflow when handling overly large SDP requests - crash / possible code execution as a result  [USN-5186-1] Firefox vulnerabilities [01:08]  10 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -132,7 +143,7 @@ This week in Ubuntu Security Updates 27 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-141/</guid>
       <description>Overview A preview of some things to come for the Ubuntu Security Podcast plus we cover security updates for Samba, uriparser, libmodbus, MariaDB, Mailman and more.
 This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-5174-1] Samba vulnerabilities [00:58]  4 CVEs addressed in Bionic (18.04 LTS)  CVE-2021-3671  CVE-2020-25722  CVE-2020-25717  CVE-2016-2124    Few weeks ago published Samba updates for a range of vulns - mentioned in Episode 139 the difficulties involved in patching older Samba versions like 4.</description>
+[USN-5174-1] Samba vulnerabilities [00:58]  4 CVEs addressed in Bionic (18.04 LTS)  CVE-2021-3671 CVE-2020-25722 CVE-2020-25717 CVE-2016-2124   Few weeks ago published Samba updates for a range of vulns - mentioned in Episode 139 the difficulties involved in patching older Samba versions like 4.</description>
     </item>
     
     <item>
@@ -143,7 +154,7 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-140/</guid>
       <description>Overview A gnarly old bug in NSS is unearthed, plus we cover security updates for ICU, the Linux kernel and ImageMagick as well.
 This week in Ubuntu Security Updates 20 unique CVEs addressed
-[USN-5156-1] ICU vulnerability [00:40]  1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-30535    Double free - originally reported in chromium but is actually in embedded copy of icu - able to be triggered on crafted content to icu, in the case of chromium this could be via a crafted webpage or similar so not too dissimilar to usual web handling issues - memory corruption -&amp;gt; code execution (but within chromium sandbox in that case)  [USN-5158-1] ImageMagick vulnerabilities [01:25]  5 CVEs addressed in Trusty ESM (14.</description>
+[USN-5156-1] ICU vulnerability [00:40]  1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-30535   Double free - originally reported in chromium but is actually in embedded copy of icu - able to be triggered on crafted content to icu, in the case of chromium this could be via a crafted webpage or similar so not too dissimilar to usual web handling issues - memory corruption -&amp;gt; code execution (but within chromium sandbox in that case)  [USN-5158-1] ImageMagick vulnerabilities [01:25]  5 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -154,7 +165,7 @@ This week in Ubuntu Security Updates 20 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-139/</guid>
       <description>Overview This week we put out a call for testing and feedback on proposed Samba updates for Ubuntu 18.04 LTS plus we look at security updates for Mailman, Thunderbird, LibreOffice, BlueZ and more.
 This week in Ubuntu Security Updates 15 unique CVEs addressed
-[USN-5150-1] OpenEXR vulnerability [00:39]  1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)  CVE-2021-3941    oss-fuzz -&amp;gt; div-by-zero with crafted image using YUV-encoded colors  [USN-5151-1] Mailman vulnerabilities [00:58]  2 CVEs addressed in Xenial ESM (16.</description>
+[USN-5150-1] OpenEXR vulnerability [00:39]  1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)  CVE-2021-3941   oss-fuzz -&amp;gt; div-by-zero with crafted image using YUV-encoded colors  [USN-5151-1] Mailman vulnerabilities [00:58]  2 CVEs addressed in Xenial ESM (16.</description>
     </item>
     
     <item>
@@ -165,7 +176,7 @@ This week in Ubuntu Security Updates 15 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-138/</guid>
       <description>Overview This week we discuss some of the challenges and trade-offs encountered when providing security support for ageing software, plus we discuss security updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 This week in Ubuntu Security Updates 42 unique CVEs addressed
-[USN-5138-1] python-py vulnerability [00:38]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-29651    Python library providing path handling, config file parsing and other features which are now in standard lib or other packages - has been deprecated ReDoS against path handling code (regex with catastrophic backtracking)  [USN-5139-1] Linux kernel (OEM 5.</description>
+[USN-5138-1] python-py vulnerability [00:38]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-29651   Python library providing path handling, config file parsing and other features which are now in standard lib or other packages - has been deprecated ReDoS against path handling code (regex with catastrophic backtracking)  [USN-5139-1] Linux kernel (OEM 5.</description>
     </item>
     
     <item>
@@ -176,7 +187,7 @@ This week in Ubuntu Security Updates 42 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-137/</guid>
       <description>Overview This week we look at some details of the 29 unique CVEs addressed across the supported Ubuntu releases in the past 7 days and more.
 This week in Ubuntu Security Updates 29 unique CVEs addressed
-[USN-5131-1] Firefox vulnerabilities [00:42]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)  CVE-2021-38509  CVE-2021-38508  CVE-2021-38507  CVE-2021-38506  CVE-2021-38504  CVE-2021-38503    94.</description>
+[USN-5131-1] Firefox vulnerabilities [00:42]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)  CVE-2021-38509 CVE-2021-38508 CVE-2021-38507 CVE-2021-38506 CVE-2021-38504 CVE-2021-38503   94.0  Copy image link - copies final image URL after redirects - if a page were to then combine this with a content security policy which blocked a redirect, the image URL may then contain any authentication tokens - and so if a page could trick a user into copying and pasting that image URL into the page an attacker could steal their auth token Various web framework issues    [USN-5132-1] Thunderbird vulnerabilities [01:56]  6 CVEs addressed in Impish (21.</description>
     </item>
     
     <item>
@@ -187,7 +198,7 @@ This week in Ubuntu Security Updates 29 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-136/</guid>
       <description>Overview The road to Ubuntu 22.04 LTS begins so we look at some of its planned features plus we cover security updates for the Linux kernel, Mailman, Apport, PHP, Bind and more.
 This week in Ubuntu Security Updates 92 unique CVEs addressed
-[USN-5114-1] Linux kernel vulnerabilities [01:15]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)  CVE-2021-42008  CVE-2021-40490  CVE-2021-38198  CVE-2020-3702    4.</description>
+[USN-5114-1] Linux kernel vulnerabilities [01:15]  4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)  CVE-2021-42008 CVE-2021-40490 CVE-2021-38198 CVE-2020-3702   4.</description>
     </item>
     
     <item>
@@ -198,7 +209,7 @@ This week in Ubuntu Security Updates 92 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-135/</guid>
       <description>Overview Ubuntu 20.04 LTS targeted at Tianfu Cup 2021 plus we cover security updates for Linux kernel, nginx, Ardour and strongSwan.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-5091-3] Linux kernel (Azure) regression  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-38204  CVE-2021-38199  CVE-2021-38160  CVE-2021-37576  CVE-2021-3679  CVE-2021-33624     [USN-5092-3] Linux kernel (Azure) regression [00:50]  12 CVEs addressed in Focal (20.</description>
+[USN-5091-3] Linux kernel (Azure) regression  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-38204 CVE-2021-38199 CVE-2021-38160 CVE-2021-37576 CVE-2021-3679 CVE-2021-33624    [USN-5092-3] Linux kernel (Azure) regression [00:50]  12 CVEs addressed in Focal (20.04 LTS), Hirsute (21.</description>
     </item>
     
     <item>
@@ -209,7 +220,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-134/</guid>
       <description>Overview It&amp;rsquo;s release week! As Ubuntu 21.10 Impish Indri is released we take a look at some of the new security features it brings, plus we cover security updates for containerd, MongoDB, Mercurial, docker.io and more.
 This week in Ubuntu Security Updates 58 unique CVEs addressed
-[USN-5095-1] Apache Commons IO vulnerability [00:46]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-29425    Failed to properly sanitize filenames in FileNameUtils.</description>
+[USN-5095-1] Apache Commons IO vulnerability [00:46]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-29425   Failed to properly sanitize filenames in FileNameUtils.</description>
     </item>
     
     <item>
@@ -231,7 +242,7 @@ This week in Ubuntu Security Updates 28 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-132/</guid>
       <description>Overview Extended Security Maintenance gets an extension, Linux disk encryption and authentication goes under the microscope and we cover security updates for libgcrypt, the Linux kernel, Python, and more.
 This week in Ubuntu Security Updates 20 unique CVEs addressed
-[USN-5078-2] Squashfs-Tools vulnerabilities [01:02]  2 CVEs addressed in Xenial ESM (16.04 ESM)  CVE-2021-41072  CVE-2021-40153    Episode 131  [USN-5080-1, USN-5080-2] Libgcrypt vulnerabilities [01:43]  2 CVEs addressed in Xenial ESM (16.</description>
+[USN-5078-2] Squashfs-Tools vulnerabilities [01:02]  2 CVEs addressed in Xenial ESM (16.04 ESM)  CVE-2021-41072 CVE-2021-40153   Episode 131  [USN-5080-1, USN-5080-2] Libgcrypt vulnerabilities [01:43]  2 CVEs addressed in Xenial ESM (16.</description>
     </item>
     
     <item>
@@ -242,7 +253,7 @@ This week in Ubuntu Security Updates 20 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-131/</guid>
       <description>Overview OWASP Top 10 gets updated for 2021 and we look at security vulnerabilities in the Linux kernel, Ghostscript, Git, curl and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-5069-2] mod-auth-mellon vulnerability [00:43]  1 CVEs addressed in Hirsute (21.04)  CVE-2021-3639    Episode 130 - failed to properly handle crafted redirect links -&amp;gt; open redirect  [USN-5070-1] Linux kernel vulnerabilities  10 CVEs addressed in Focal (20.</description>
+[USN-5069-2] mod-auth-mellon vulnerability [00:43]  1 CVEs addressed in Hirsute (21.04)  CVE-2021-3639   Episode 130 - failed to properly handle crafted redirect links -&amp;gt; open redirect  [USN-5070-1] Linux kernel vulnerabilities  10 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>
@@ -253,7 +264,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-130/</guid>
       <description>Overview This week we discuss compiler warnings as build errors in the Linux kernel, plus we look at security updates for HAProxy, GNU cpio, PySAML2, mod-auth-mellon and more.
 This week in Ubuntu Security Updates 15 unique CVEs addressed
-[USN-5051-4] OpenSSL regression [00:51]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-3712    Episode 129 Original backport of patch contained a typo which introduced a regression where ASN1_STRINGs would fail to print in some cases  [USN-5062-1] Linux kernel vulnerability [01:20]  1 CVEs addressed in Trusty ESM (14.</description>
+[USN-5051-4] OpenSSL regression [00:51]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-3712   Episode 129 Original backport of patch contained a typo which introduced a regression where ASN1_STRINGs would fail to print in some cases  [USN-5062-1] Linux kernel vulnerability [01:20]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -275,7 +286,7 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-128/</guid>
       <description>Overview This week we dive into Trend Micro&amp;rsquo;s recent Linux Threat Report and the release of Ubuntu 20.04.3 LTS, plus we detail security updates for Inetutils telnetd, the Linux kernel and OpenSSL.
 This week in Ubuntu Security Updates 9 unique CVEs addressed
-[USN-5048-1] Inetutils vulnerability [00:45]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-10188    Buffer overflow in inetutils telnetd - originally CVE was found in netkit telnetd - but subsequently the GNU inetutils version was also found to contain basically the same vulnerable function.</description>
+[USN-5048-1] Inetutils vulnerability [00:45]  1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-10188   Buffer overflow in inetutils telnetd - originally CVE was found in netkit telnetd - but subsequently the GNU inetutils version was also found to contain basically the same vulnerable function.</description>
     </item>
     
     <item>
@@ -286,7 +297,7 @@ This week in Ubuntu Security Updates 9 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-127/</guid>
       <description>Overview This week we look at security updates for Firefox, PostgreSQL, MariaDB, HAProxy, the Linux kernel and more, plus we cover some current openings on the team - come join us ☺
 This week in Ubuntu Security Updates 35 unique CVEs addressed
-[USN-5037-1] Firefox vulnerabilities [00:39]  10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-29990  CVE-2021-29989  CVE-2021-29988  CVE-2021-29987  CVE-2021-29986  CVE-2021-29985  CVE-2021-29984  CVE-2021-29982  CVE-2021-29981  CVE-2021-29980    91.</description>
+[USN-5037-1] Firefox vulnerabilities [00:39]  10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-29990 CVE-2021-29989 CVE-2021-29988 CVE-2021-29987 CVE-2021-29986 CVE-2021-29985 CVE-2021-29984 CVE-2021-29982 CVE-2021-29981 CVE-2021-29980   91.</description>
     </item>
     
     <item>
@@ -308,7 +319,7 @@ This week in Ubuntu Security Updates 2 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-125/</guid>
       <description>Overview This week we discuss new kernel memory hardening and security development proposals from Ubuntu Security Alumnus Kees Cook, plus we look at details of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 This week in Ubuntu Security Updates 22 unique CVEs addressed
-[USN-5024-1] WebKitGTK vulnerabilities [00:57]  13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-30799  CVE-2021-30797  CVE-2021-30795  CVE-2021-30758  CVE-2021-30749  CVE-2021-30744  CVE-2021-30734  CVE-2021-30720  CVE-2021-30689  CVE-2021-30665  CVE-2021-30663  CVE-2021-21779  CVE-2021-21775    Every 5-10 weeks so time for another one Usual web / js engine issues - XSS, DoS, RCE etc  [USN-4944-2] MariaDB regression [01:30]  Affecting Focal (20.</description>
+[USN-5024-1] WebKitGTK vulnerabilities [00:57]  13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)  CVE-2021-30799 CVE-2021-30797 CVE-2021-30795 CVE-2021-30758 CVE-2021-30749 CVE-2021-30744 CVE-2021-30734 CVE-2021-30720 CVE-2021-30689 CVE-2021-30665 CVE-2021-30663 CVE-2021-21779 CVE-2021-21775   Every 5-10 weeks so time for another one Usual web / js engine issues - XSS, DoS, RCE etc  [USN-4944-2] MariaDB regression [01:30]  Affecting Focal (20.</description>
     </item>
     
     <item>
@@ -330,7 +341,7 @@ This week in Ubuntu Security Updates 240 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-123/</guid>
       <description>Overview Is npm audit more harm than good? Plus this week we look at security updates for DjVuLibre, libuv, PHP and more.
 This week in Ubuntu Security Updates 8 unique CVEs addressed
-[USN-4905-2] X.Org X Server vulnerability [00:42]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-3472    Episode 112 - Local user (X client) could crash the server via Xinput extension and ChangeFeedbackControl request - integer underflow -&amp;gt; heap buffer overflow  [USN-5005-1] DjVuLibre vulnerability [01:26]  1 CVEs addressed in Xenial ESM (16.</description>
+[USN-4905-2] X.Org X Server vulnerability [00:42]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-3472   Episode 112 - Local user (X client) could crash the server via Xinput extension and ChangeFeedbackControl request - integer underflow -&amp;gt; heap buffer overflow  [USN-5005-1] DjVuLibre vulnerability [01:26]  1 CVEs addressed in Xenial ESM (16.</description>
     </item>
     
     <item>
@@ -341,7 +352,7 @@ This week in Ubuntu Security Updates 8 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-122/</guid>
       <description>Overview This week we look at some new Linux kernel security features including the Landlock LSM and Core Scheduling plus we cover security updates for RabbitMQ, Ceph, Thunderbird and more.
 This week in Ubuntu Security Updates 46 unique CVEs addressed
-[USN-5004-1] RabbitMQ vulnerabilities [00:44]  2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-22116  CVE-2019-11287    AMQP server written in Erlang Possible to cause the server to consume excessive memory by sending large values in the X-Reason HTTP header - resource exhaustion - DoS Possible infinite loop - failed to perform sufficient validation - DoS  [USN-4998-1] Ceph vulnerabilities [01:38]  7 CVEs addressed in Focal (20.</description>
+[USN-5004-1] RabbitMQ vulnerabilities [00:44]  2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-22116 CVE-2019-11287   AMQP server written in Erlang Possible to cause the server to consume excessive memory by sending large values in the X-Reason HTTP header - resource exhaustion - DoS Possible infinite loop - failed to perform sufficient validation - DoS  [USN-4998-1] Ceph vulnerabilities [01:38]  7 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>
@@ -352,7 +363,7 @@ This week in Ubuntu Security Updates 46 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-121/</guid>
       <description>Overview Ubuntu One opens up two-factor authentication for all, plus we cover security updates for Nettle, libxml2, GRUB2, the Linux kernel and more.
 This week in Ubuntu Security Updates 73 unique CVEs addressed
-[USN-4989-2] BlueZ vulnerabilities [00:57]  2 CVEs addressed in Xenial ESM (16.04 ESM)  CVE-2020-27153  CVE-2020-26558    Episode 120 - bluetooth spec issue around pairing takeover plus a possible double-free in gattool that is likely quite hard to exploit due to time window race between the two free() calls  [USN-4990-1] Nettle vulnerabilities [01:27]  2 CVEs addressed in Bionic (18.</description>
+[USN-4989-2] BlueZ vulnerabilities [00:57]  2 CVEs addressed in Xenial ESM (16.04 ESM)  CVE-2020-27153 CVE-2020-26558   Episode 120 - bluetooth spec issue around pairing takeover plus a possible double-free in gattool that is likely quite hard to exploit due to time window race between the two free() calls  [USN-4990-1] Nettle vulnerabilities [01:27]  2 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -363,7 +374,7 @@ This week in Ubuntu Security Updates 73 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-120/</guid>
       <description>Overview In this week&amp;rsquo;s episode we look at how to get media coverage for your shiny new vulnerability, plus we cover security updates for ExifTool, ImageMagick, BlueZ and more.
 This week in Ubuntu Security Updates 49 unique CVEs addressed
-[USN-4986-2] rpcbind vulnerability [00:44]  1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)  CVE-2017-8779    Episode 119 (bionic) - memory leak on crafted requests  [USN-4986-3, USN-4986-4] rpcbind regression [01:11]  Affecting Trusty ESM (14.</description>
+[USN-4986-2] rpcbind vulnerability [00:44]  1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)  CVE-2017-8779   Episode 119 (bionic) - memory leak on crafted requests  [USN-4986-3, USN-4986-4] rpcbind regression [01:11]  Affecting Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -374,7 +385,7 @@ This week in Ubuntu Security Updates 49 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-119/</guid>
       <description>Overview This week we cover security updates for the Linux kernel, PolicyKit, Intel Microcode and more, plus we look at a report of an apparent malicious snap in the Snap Store and some of the mechanics behind snap confinement.
 This week in Ubuntu Security Updates 42 unique CVEs addressed
-[USN-4979-1] Linux kernel vulnerabilities [01:04]  13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2021-3483  CVE-2021-3428  CVE-2021-33033  CVE-2021-31916  CVE-2021-29647  CVE-2021-28972  CVE-2021-28971  CVE-2021-28964  CVE-2021-28660  CVE-2020-25673  CVE-2020-25672  CVE-2020-25671  CVE-2020-25670    4.</description>
+[USN-4979-1] Linux kernel vulnerabilities [01:04]  13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2021-3483 CVE-2021-3428 CVE-2021-33033 CVE-2021-31916 CVE-2021-29647 CVE-2021-28972 CVE-2021-28971 CVE-2021-28964 CVE-2021-28660 CVE-2020-25673 CVE-2020-25672 CVE-2020-25671 CVE-2020-25670   4.</description>
     </item>
     
     <item>
@@ -385,7 +396,7 @@ This week in Ubuntu Security Updates 42 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-118/</guid>
       <description>Overview This week we look at DMCA notices sent against Ubuntu ISOs plus security updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4967-1, USN-4967-2] nginx vulnerability [00:50]  1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-23017    1 byte buffer overflow, able to be trigged by a crafted DNS response - UDP so could possibly be more easily forged than TCP (less state) - crash, RCE  [USN-4968-1, USN-4968-2] LZ4 vulnerability [01:27]  1 CVEs addressed in Trusty ESM (14.</description>
+[USN-4967-1, USN-4967-2] nginx vulnerability [00:50]  1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-23017   1 byte buffer overflow, able to be trigged by a crafted DNS response - UDP so could possibly be more easily forged than TCP (less state) - crash, RCE  [USN-4968-1, USN-4968-2] LZ4 vulnerability [01:27]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -396,7 +407,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-117/</guid>
       <description>Overview This week we&amp;rsquo;re talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4963-1] Pillow vulnerabilities [00:55]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-28678  CVE-2021-28677  CVE-2021-28676  CVE-2021-28675  CVE-2021-25288  CVE-2021-25287    Python image handling library - used by many other packages for their image handling All DoS issues via OOB read and similar so not critical  [USN-4962-1] Babel vulnerability [01:31]  1 CVEs addressed in Trusty ESM (14.</description>
+[USN-4963-1] Pillow vulnerabilities [00:55]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)  CVE-2021-28678 CVE-2021-28677 CVE-2021-28676 CVE-2021-28675 CVE-2021-25288 CVE-2021-25287   Python image handling library - used by many other packages for their image handling All DoS issues via OOB read and similar so not critical  [USN-4962-1] Babel vulnerability [01:31]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -418,7 +429,7 @@ This week in Ubuntu Security Updates 60 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-115/</guid>
       <description>Overview This week we look at some details of the 90 unique CVEs addressed across the supported Ubuntu releases and more.
 This week in Ubuntu Security Updates 90 unique CVEs addressed
-[USN-4934-2] Exim vulnerabilities [00:41]  16 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)  CVE-2021-27216  CVE-2020-28025  CVE-2020-28024  CVE-2020-28022  CVE-2020-28020  CVE-2020-28017  CVE-2020-28016  CVE-2020-28015  CVE-2020-28014  CVE-2020-28013  CVE-2020-28012  CVE-2020-28011  CVE-2020-28009  CVE-2020-28008  CVE-2020-28007  CVE-2020-28026    Episode 114  [USN-4937-1] GNOME Autoar vulnerability [01:00]  1 CVEs addressed in Bionic (18.</description>
+[USN-4934-2] Exim vulnerabilities [00:41]  16 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)  CVE-2021-27216 CVE-2020-28025 CVE-2020-28024 CVE-2020-28022 CVE-2020-28020 CVE-2020-28017 CVE-2020-28016 CVE-2020-28015 CVE-2020-28014 CVE-2020-28013 CVE-2020-28012 CVE-2020-28011 CVE-2020-28009 CVE-2020-28008 CVE-2020-28007 CVE-2020-28026   Episode 114  [USN-4937-1] GNOME Autoar vulnerability [01:00]  1 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -429,7 +440,7 @@ This week in Ubuntu Security Updates 90 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-114/</guid>
       <description>Overview This week we look at the response from the Linux Technical Advisory Board to the UMN Linux kernel incident, plus we cover the 21Nails Exim vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 This week in Ubuntu Security Updates 40 unique CVEs addressed
-[USN-4928-1] GStreamer Good Plugins vulnerabilities [00:40]  2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2021-3498  CVE-2021-3497    UAF or heap corruption when handling crafted Matroska files - crash / RCE  [USN-4929-1] Bind vulnerabilities [01:18]  3 CVEs addressed in Xenial (16.</description>
+[USN-4928-1] GStreamer Good Plugins vulnerabilities [00:40]  2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2021-3498 CVE-2021-3497   UAF or heap corruption when handling crafted Matroska files - crash / RCE  [USN-4929-1] Bind vulnerabilities [01:18]  3 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -440,7 +451,7 @@ This week in Ubuntu Security Updates 40 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-113/</guid>
       <description>Overview With 21 CVEs fixed this week we look at updates for Dnsmasq, Firefox, OpenJDK and more, plus we discuss the recent release of Ubuntu 21.04 and malicious commits in the upstream Linux kernel.
 This week in Ubuntu Security Updates 21 unique CVEs addressed
-[USN-4916-2] Linux kernel regression [00:48]  2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-29154  CVE-2021-3493    Possible memory leak introduced via fix for overlayfs priv esc vuln - so the fix effectively introduced a new vuln but only a DoS not priv esc  [USN-4924-1] Dnsmasq vulnerabilities [01:17]  2 CVEs addressed in Xenial (16.</description>
+[USN-4916-2] Linux kernel regression [00:48]  2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-29154 CVE-2021-3493   Possible memory leak introduced via fix for overlayfs priv esc vuln - so the fix effectively introduced a new vuln but only a DoS not priv esc  [USN-4924-1] Dnsmasq vulnerabilities [01:17]  2 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -451,7 +462,7 @@ This week in Ubuntu Security Updates 21 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-112/</guid>
       <description>Overview This week we look at a reboot of the DWF project, Rust in the Linux kernel, an Ubuntu security webinar plus some details of the 45 CVEs addressed across the Ubuntu releases this last week and more.
 This week in Ubuntu Security Updates 45 unique CVEs addressed
-[LSN-0075-1] Linux kernel vulnerability [01:01]  8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-27365  CVE-2021-27364  CVE-2021-27363  CVE-2021-3444  CVE-2020-29374  CVE-2020-29372  CVE-2020-27171  CVE-2020-27170    madvise issue reported by Jann Horn - BPF spectre mitigations fixes (Episode 109)  [USN-4903-1] curl vulnerability [02:02]  1 CVEs addressed in Trusty ESM (14.</description>
+[LSN-0075-1] Linux kernel vulnerability [01:01]  8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2021-27365 CVE-2021-27364 CVE-2021-27363 CVE-2021-3444 CVE-2020-29374 CVE-2020-29372 CVE-2020-27171 CVE-2020-27170   madvise issue reported by Jann Horn - BPF spectre mitigations fixes (Episode 109)  [USN-4903-1] curl vulnerability [02:02]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -473,7 +484,7 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-110/</guid>
       <description>Overview This week we look at 2 years of 14.04 ESM, a kernel Livepatch issue, DNS-over-HTTPS for Google Chrome plus security updates for ldb, OpenSSL, Squid, curl and more.
 This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-4888-1, USN-4888-2] ldb vulnerabilities [01:06]  2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-27840  CVE-2021-20277    In the ldb package but was reported by Samba - libldb provides an LDAP-like database - is used internally by Samba etc - and whilst the Samba package contains a copy of ldb internally we don&amp;rsquo;t compile this in Ubuntu, instead we link it against the ldb package in the repo so we only have to patch a CVE in one place Heap buffer overflow when parsing a DN string with lots of trailing whitespace - allows to place a single NUL byte at a chosen offset before an allocated buffer Heap buffer overflow when parsing an LDAP attribute string with multiple consecutive leading spaces - memmove() to a location beyond the end of the buffer Crash -&amp;gt; DoS, can&amp;rsquo;t rule out RCE due to nature of heap buffer overflows  [USN-4889-1] Linux kernel vulnerabilities [02:49]  3 CVEs addressed in Trusty ESM (14.</description>
+[USN-4888-1, USN-4888-2] ldb vulnerabilities [01:06]  2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-27840 CVE-2021-20277   In the ldb package but was reported by Samba - libldb provides an LDAP-like database - is used internally by Samba etc - and whilst the Samba package contains a copy of ldb internally we don&amp;rsquo;t compile this in Ubuntu, instead we link it against the ldb package in the repo so we only have to patch a CVE in one place Heap buffer overflow when parsing a DN string with lots of trailing whitespace - allows to place a single NUL byte at a chosen offset before an allocated buffer Heap buffer overflow when parsing an LDAP attribute string with multiple consecutive leading spaces - memmove() to a location beyond the end of the buffer Crash -&amp;gt; DoS, can&amp;rsquo;t rule out RCE due to nature of heap buffer overflows  [USN-4889-1] Linux kernel vulnerabilities [02:49]  3 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -484,7 +495,7 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-109/</guid>
       <description>Overview This week we look at security updates for containerd, Ruby, the Linux kernel, Pygments and more, plus we cover some open positions within the team as well.
 This week in Ubuntu Security Updates 28 unique CVEs addressed
-[USN-4881-1] containerd vulnerability [00:38]  1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)  CVE-2021-21334    When using the containerd CRI implementation (kubernetes container runtime interface) - would share environment variables etc between containers that shared the same image - so could allow an inadvertent info leak from one container to another - race condition so would be less likely to occur if not launching containers in rapid succession which share the same image  [USN-4882-1] Ruby vulnerabilities [01:27]  3 CVEs addressed in Xenial (16.</description>
+[USN-4881-1] containerd vulnerability [00:38]  1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)  CVE-2021-21334   When using the containerd CRI implementation (kubernetes container runtime interface) - would share environment variables etc between containers that shared the same image - so could allow an inadvertent info leak from one container to another - race condition so would be less likely to occur if not launching containers in rapid succession which share the same image  [USN-4882-1] Ruby vulnerabilities [01:27]  3 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -495,7 +506,7 @@ This week in Ubuntu Security Updates 28 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-108/</guid>
       <description>Overview This week we start preparing for 16.04 LTS to transition to Extended Security Maintenance, plus we look at security updates for OpenSSH, Python, the Linux kernel and more, as well as some currently open positions on our team.
 This week in Ubuntu Security Updates 28 unique CVEs addressed
-[USN-4762-1] OpenSSH vulnerability [00:54]  1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)  CVE-2021-28041    Double free in ssh-agent - so only affects openssh-client and where the ssh-agent socket is able to be accessed by other users etc - on moderns systems the socket is only accessible by the owner so would need to have forwarded the ssh-agent to an attacker controlled host perhaps to be vulnerable.</description>
+[USN-4762-1] OpenSSH vulnerability [00:54]  1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)  CVE-2021-28041   Double free in ssh-agent - so only affects openssh-client and where the ssh-agent socket is able to be accessed by other users etc - on moderns systems the socket is only accessible by the owner so would need to have forwarded the ssh-agent to an attacker controlled host perhaps to be vulnerable.</description>
     </item>
     
     <item>
@@ -506,7 +517,7 @@ This week in Ubuntu Security Updates 28 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-107/</guid>
       <description>Overview This week we check on the status of the pending GRUB2 Secure Boot updates and detail some open positions within the team, plus we look at security updates for GLib, zstd, Go, Git and more.
 This week in Ubuntu Security Updates 7 unique CVEs addressed
-[USN-4757-2] wpa_supplicant and hostapd vulnerability [00:45]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-27803    P2P/wifi direct UAF -&amp;gt; crash, RCE from Episode 106  [USN-4733-2] GNOME Autoar regression [01:23]  Affecting Bionic (18.</description>
+[USN-4757-2] wpa_supplicant and hostapd vulnerability [00:45]  1 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-27803   P2P/wifi direct UAF -&amp;gt; crash, RCE from Episode 106  [USN-4733-2] GNOME Autoar regression [01:23]  Affecting Bionic (18.</description>
     </item>
     
     <item>
@@ -517,7 +528,7 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-106/</guid>
       <description>Overview This week we talk about more BootHole-like vulnerabilities in GRUB2, a Spectre exploit found in-the-wild, security updates for xterm, screen, Python, wpa_supplicant and more.
 This week in Ubuntu Security Updates 52 unique CVEs addressed
-[USN-4698-2] Dnsmasq regression [00:44]  8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2019-14834  CVE-2020-25686  CVE-2020-25685  CVE-2020-25684  CVE-2020-25683  CVE-2020-25682  CVE-2020-25687  CVE-2020-25681    Relates to a dnsmasq update done back in January - upstream fixes results in regressions in some network environments - backported the resulting additional fixes from upstream to resolve these  [USN-4746-1] xterm vulnerability [01:14]  1 CVEs addressed in Xenial (16.</description>
+[USN-4698-2] Dnsmasq regression [00:44]  8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2019-14834 CVE-2020-25686 CVE-2020-25685 CVE-2020-25684 CVE-2020-25683 CVE-2020-25682 CVE-2020-25687 CVE-2020-25681   Relates to a dnsmasq update done back in January - upstream fixes results in regressions in some network environments - backported the resulting additional fixes from upstream to resolve these  [USN-4746-1] xterm vulnerability [01:14]  1 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -528,7 +539,7 @@ This week in Ubuntu Security Updates 52 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-105/</guid>
       <description>Overview This week we discuss security updates in Linux Mint, Google funding Linux kernel security development and details for security updates in BIND, OpenSSL, Jackson, OpenLDAP and more.
 This week in Ubuntu Security Updates 14 unique CVEs addressed
-[USN-4737-1] Bind vulnerability [00:45]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-8625    If using GSS-TSIG could be vulnerable to a DoS or possible RCE - this option is not enabled by default BUT is often used when bind is integrated with Samba or with a AD-DC.</description>
+[USN-4737-1] Bind vulnerability [00:45]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-8625   If using GSS-TSIG could be vulnerable to a DoS or possible RCE - this option is not enabled by default BUT is often used when bind is integrated with Samba or with a AD-DC.</description>
     </item>
     
     <item>
@@ -539,7 +550,7 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-104/</guid>
       <description>Overview This week we take a look at a long-awaited update of Thunderbird in Ubuntu 20.04LTS, plus security updates for Open vSwitch, JUnit 4, PostSRSd, GNOME Autoar and more.
 This week in Ubuntu Security Updates 14 unique CVEs addressed
-[USN-4729-1] Open vSwitch vulnerability [00:55]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-35498    Most convoluted CVE description: A vulnerability was found in openvswitch.</description>
+[USN-4729-1] Open vSwitch vulnerability [00:55]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)  CVE-2020-35498   Most convoluted CVE description: A vulnerability was found in openvswitch.</description>
     </item>
     
     <item>
@@ -550,7 +561,7 @@ This week in Ubuntu Security Updates 14 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-103/</guid>
       <description>Overview This week we take a deep dive look at 2 recent vulnerabilities in the popular application containerisation frameworks, snapd and flatpak, plus we cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-4720-2] Apport vulnerabilities [00:53]  3 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-25684  CVE-2021-25683  CVE-2021-25682    Episode 102  [USN-4721-1] Flatpak vulnerability [01:06]  1 CVEs addressed in Bionic (18.</description>
+[USN-4720-2] Apport vulnerabilities [00:53]  3 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2021-25684 CVE-2021-25683 CVE-2021-25682   Episode 102  [USN-4721-1] Flatpak vulnerability [01:06]  1 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -561,7 +572,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-102/</guid>
       <description>Overview This week we discuss the recent high profile vulnerability found in libcrypt 1.9.0, plus we look at updates for the Linux kernel, XStream, Django, Apport and more.
 This week in Ubuntu Security Updates 66 unique CVEs addressed
-[USN-4705-2] Sudo vulnerability [00:48]  1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2021-3156    Episode 101  [USN-4708-1] Linux kernel vulnerabilities  5 CVEs addressed in Trusty ESM (14.</description>
+[USN-4705-2] Sudo vulnerability [00:48]  1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2021-3156   Episode 101  [USN-4708-1] Linux kernel vulnerabilities  5 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -637,7 +648,7 @@ Goings on in Ubuntu Security Community Tianfu Cup 2020 [00:37]  https://www.zdne
       <guid>https://ubuntusecuritypodcast.org/episode-95/</guid>
       <description>Overview This week we look at vulnerabilities in Samba, GDM, AccountsService, GOsa and more, plus we cover some AppArmor related Ubuntu Security community updates as well.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-4552-3] Pam-python regression [00:40]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2019-16729    Original update (Episode 92 - bionic), (Episode 94 - xenial) caused was too restrictive and would disallow PAM modules written in python from importing python modules from site-specific directories  [USN-4609-1] GOsa vulnerabilities [01:18]  3 CVEs addressed in Xenial (16.</description>
+[USN-4552-3] Pam-python regression [00:40]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2019-16729   Original update (Episode 92 - bionic), (Episode 94 - xenial) caused was too restrictive and would disallow PAM modules written in python from importing python modules from site-specific directories  [USN-4609-1] GOsa vulnerabilities [01:18]  3 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -648,7 +659,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-94/</guid>
       <description>Overview This week we cover news of the CITL drop of 7000 &amp;ldquo;vulnerabilities&amp;rdquo;, the Ubuntu Security disclosure and embargo policy plus we look at security updates for pip, blueman, the Linux kernel and more.
 This week in Ubuntu Security Updates 117 unique CVEs addressed
-[USN-4596-1] Tomcat vulnerabilities [01:01]  4 CVEs addressed in Focal (20.04 LTS)  CVE-2020-9484  CVE-2020-13935  CVE-2020-13934  CVE-2020-11996     [USN-4587-1] iTALC vulnerabilities  19 CVEs addressed in Xenial (16.</description>
+[USN-4596-1] Tomcat vulnerabilities [01:01]  4 CVEs addressed in Focal (20.04 LTS)  CVE-2020-9484 CVE-2020-13935 CVE-2020-13934 CVE-2020-11996    [USN-4587-1] iTALC vulnerabilities  19 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -681,7 +692,7 @@ This week in Ubuntu Security Updates 121 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-91/</guid>
       <description>Overview This week we look at security updates for GUPnP, OpenJPEG, bsdiff and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4488-2] X.Org X Server vulnerabilities [00:31]  5 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2020-14345  CVE-2020-14362  CVE-2020-14361  CVE-2020-14347  CVE-2020-14346    Episode 90  [LSN-0071-1] Linux kernel vulnerability [00:50]  1 CVEs addressed in Bionic (18.04 LTS)  CVE-2020-14386    Episode 90 (AF_PACKET OOB write - crash / code exec) Also affects Focal (20.</description>
+[USN-4488-2] X.Org X Server vulnerabilities [00:31]  5 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2020-14345 CVE-2020-14362 CVE-2020-14361 CVE-2020-14347 CVE-2020-14346   Episode 90  [LSN-0071-1] Linux kernel vulnerability [00:50]  1 CVEs addressed in Bionic (18.04 LTS)  CVE-2020-14386   Episode 90 (AF_PACKET OOB write - crash / code exec) Also affects Focal (20.</description>
     </item>
     
     <item>
@@ -692,7 +703,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-90/</guid>
       <description>Overview This week we look at security updates for the X server, the Linux kernel and GnuTLS plus we preview the upcoming AppArmor3 release that is slated for Ubuntu 20.10 (Groovy Gorilla).
 This week in Ubuntu Security Updates 20 unique CVEs addressed
-[USN-4487-1, USN-4487-2] libx11 vulnerabilities [00:58]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-14363  CVE-2020-14344    2 privilege escalation attacks  integer overflow -&amp;gt; double free -&amp;gt; memory corruption integer overflow -&amp;gt; heap buffer overflow privilege escalation may be possible since in both cases could cause arbitrary code exec with a binary that is using libX11 and running with root privileges (setuid / sudo etc) - this is why we often advise don&amp;rsquo;t run graphical applications via sudo etc    [USN-4488-1, USN-4490-1] X.</description>
+[USN-4487-1, USN-4487-2] libx11 vulnerabilities [00:58]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-14363 CVE-2020-14344   2 privilege escalation attacks  integer overflow -&amp;gt; double free -&amp;gt; memory corruption integer overflow -&amp;gt; heap buffer overflow privilege escalation may be possible since in both cases could cause arbitrary code exec with a binary that is using libX11 and running with root privileges (setuid / sudo etc) - this is why we often advise don&amp;rsquo;t run graphical applications via sudo etc    [USN-4488-1, USN-4490-1] X.</description>
     </item>
     
     <item>
@@ -703,7 +714,7 @@ This week in Ubuntu Security Updates 20 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-89/</guid>
       <description>Overview This week we farewell Joe McManus plus we look at security updates for Firefox, Chrony, Squid, Django, the Linux kernel and more.
 This week in Ubuntu Security Updates 59 unique CVEs addressed
-[USN-4473-1] libmysofa vulnerabilities [01:01]  5 CVEs addressed in Bionic (18.04 LTS)  CVE-2019-16095  CVE-2019-16094  CVE-2019-16093  CVE-2019-16092  CVE-2019-16091    OOB, NULL ptr deref, heap buffer overflow etc -&amp;gt; DoS  [USN-4474-1] Firefox vulnerabilities [01:30]  8 CVEs addressed in Xenial (16.</description>
+[USN-4473-1] libmysofa vulnerabilities [01:01]  5 CVEs addressed in Bionic (18.04 LTS)  CVE-2019-16095 CVE-2019-16094 CVE-2019-16093 CVE-2019-16092 CVE-2019-16091   OOB, NULL ptr deref, heap buffer overflow etc -&amp;gt; DoS  [USN-4474-1] Firefox vulnerabilities [01:30]  8 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -714,7 +725,7 @@ This week in Ubuntu Security Updates 59 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-88/</guid>
       <description>Overview This week we talk antivirus scanners and false positives in the Ubuntu archive, plus we look at security updates for QEMU, Bind, Net-SNMP, sane-backends and more.
 This week in Ubuntu Security Updates 56 unique CVEs addressed
-[USN-4467-1] QEMU vulnerabilities [00:52]  13 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-16092  CVE-2020-15863  CVE-2020-14415  CVE-2020-13800  CVE-2020-13765  CVE-2020-13754  CVE-2020-13659  CVE-2020-13362  CVE-2020-13361  CVE-2020-13253  CVE-2020-12829  CVE-2020-10761  CVE-2020-10756    OOB read in SLiRP networking implementation when replying to a ICMP ping echo request -&amp;gt; malicious guest could leak host memory -&amp;gt; info leak Network Block Device server assertion failure able to be triggered via a remote NBD client -&amp;gt; DoS Malicious guest could cause a OOB write / read in SM501 graphic driver on host -&amp;gt; crash / code exec  [USN-4466-2] curl vulnerability [01:58]  1 CVEs addressed in Trusty ESM (14.</description>
+[USN-4467-1] QEMU vulnerabilities [00:52]  13 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-16092 CVE-2020-15863 CVE-2020-14415 CVE-2020-13800 CVE-2020-13765 CVE-2020-13754 CVE-2020-13659 CVE-2020-13362 CVE-2020-13361 CVE-2020-13253 CVE-2020-12829 CVE-2020-10761 CVE-2020-10756   OOB read in SLiRP networking implementation when replying to a ICMP ping echo request -&amp;gt; malicious guest could leak host memory -&amp;gt; info leak Network Block Device server assertion failure able to be triggered via a remote NBD client -&amp;gt; DoS Malicious guest could cause a OOB write / read in SM501 graphic driver on host -&amp;gt; crash / code exec  [USN-4466-2] curl vulnerability [01:58]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -725,7 +736,7 @@ This week in Ubuntu Security Updates 56 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-87/</guid>
       <description>Overview This week we look at the Drovorub Linux malware outed by the NSA/FBI plus we detail security updates for Dovecot, Apache, Salt, the Linux kernel and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4456-1, USN-4456-2] Dovecot vulnerabilities [00:46]  3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-12674  CVE-2020-12673  CVE-2020-12100    3 DoS issues - nested MIME -&amp;gt; resource exhaustion, Compuserve RPA auth mechanism (rare) -&amp;gt; zero length message -&amp;gt; assert fail, NTLM missing length check -&amp;gt; buffer over read -&amp;gt; crash  [USN-4457-1, USN-4457-2] Software Properties vulnerability [01:39]  1 CVEs addressed in Trusty ESM (14.</description>
+[USN-4456-1, USN-4456-2] Dovecot vulnerabilities [00:46]  3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-12674 CVE-2020-12673 CVE-2020-12100   3 DoS issues - nested MIME -&amp;gt; resource exhaustion, Compuserve RPA auth mechanism (rare) -&amp;gt; zero length message -&amp;gt; assert fail, NTLM missing length check -&amp;gt; buffer over read -&amp;gt; crash  [USN-4457-1, USN-4457-2] Software Properties vulnerability [01:39]  1 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -736,7 +747,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-86/</guid>
       <description>Overview This week we discuss the recent announcement of a long-awaited native client for 1password, plus Google Chrome experiments with anti-phishing techniques, and we take a look at security updates for OpenJDK 8, Samba, NSS and more.
 This week in Ubuntu Security Updates 13 unique CVEs addressed
-[USN-4453-1] OpenJDK 8 vulnerabilities [01:03]  8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-14621  CVE-2020-14593  CVE-2020-14583  CVE-2020-14581  CVE-2020-14579  CVE-2020-14578  CVE-2020-14577  CVE-2020-14556    Usual mix of issues for a Java update - sandbox escape, DoS, information disclosure etc  [USN-4451-2] ppp vulnerability [01:29]  1 CVEs addressed in Precise ESM (12.</description>
+[USN-4453-1] OpenJDK 8 vulnerabilities [01:03]  8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-14621 CVE-2020-14593 CVE-2020-14583 CVE-2020-14581 CVE-2020-14579 CVE-2020-14578 CVE-2020-14577 CVE-2020-14556   Usual mix of issues for a Java update - sandbox escape, DoS, information disclosure etc  [USN-4451-2] ppp vulnerability [01:29]  1 CVEs addressed in Precise ESM (12.</description>
     </item>
     
     <item>
@@ -747,7 +758,7 @@ This week in Ubuntu Security Updates 13 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-85/</guid>
       <description>Overview Dr. Levi Perigo is our special guest this week to discuss SDN and NFV with Joe, plus Alex does the weekly roundup of security updates, including Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 This week in Ubuntu Security Updates 37 unique CVEs addressed
-[USN-4444-1] WebKitGTK vulnerabilities [00:48]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-9925  CVE-2020-9915  CVE-2020-9895  CVE-2020-9894  CVE-2020-9893  CVE-2020-9862    Various issues in web / JS engines - remote attacker with a malicious website could cause XSS, DoS, RCE etc  [USN-4445-1] Ghostscript vulnerability [01:22]  1 CVEs addressed in Focal (20.</description>
+[USN-4444-1] WebKitGTK vulnerabilities [00:48]  6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)  CVE-2020-9925 CVE-2020-9915 CVE-2020-9895 CVE-2020-9894 CVE-2020-9893 CVE-2020-9862   Various issues in web / JS engines - remote attacker with a malicious website could cause XSS, DoS, RCE etc  [USN-4445-1] Ghostscript vulnerability [01:22]  1 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>
@@ -769,7 +780,7 @@ This week in Ubuntu Security Updates 109 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-83/</guid>
       <description>Overview This week Joe talks Linux Security Modules stacking with John Johansen and Steve Beattie plus Alex looks at security updates for snapd, the Linux kernel and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4199-2] libvpx vulnerabilities [01:05]  3 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2019-9433  CVE-2019-9232  CVE-2017-13194    VP8/VP9 video code (webm) Various OOB read on crafted input  [USN-4424-1] snapd vulnerabilities [01:38]  2 CVEs addressed in Xenial (16.</description>
+[USN-4199-2] libvpx vulnerabilities [01:05]  3 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2019-9433 CVE-2019-9232 CVE-2017-13194   VP8/VP9 video code (webm) Various OOB read on crafted input  [USN-4424-1] snapd vulnerabilities [01:38]  2 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -791,7 +802,7 @@ This week in Ubuntu Security Updates 71 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-81/</guid>
       <description>Overview Joe talks cyber security policy with Dr David Reed from CU Boulder, plus Alex covers the week in security updates including Mutt, NVIDIA graphics drivers, Mailman and more.
 This week in Ubuntu Security Updates 6 unique CVEs addressed
-[USN-4403-1] Mutt vulnerability and regression [00:40]  1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-14954    When connecting to an IMAP/SMTP/POP3 server via STARTTLS, would read additional data after the clear-text command to begin TLS - if someone was able to intercept the connection they could inject content which would then later get processed by Mutt as though it had come from the TLS connection.</description>
+[USN-4403-1] Mutt vulnerability and regression [00:40]  1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-14954   When connecting to an IMAP/SMTP/POP3 server via STARTTLS, would read additional data after the clear-text command to begin TLS - if someone was able to intercept the connection they could inject content which would then later get processed by Mutt as though it had come from the TLS connection.</description>
     </item>
     
     <item>
@@ -802,7 +813,7 @@ This week in Ubuntu Security Updates 6 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-80/</guid>
       <description>Overview This week, Sid Faber and Kyle Fazzari of the Ubuntu Robotics team interview Vijay Sarvepalli from CERT about the recent Ripple20 vulnerabilities announcement, plus we look at security updates for Bind, Mutt, curl and more.
 This week in Ubuntu Security Updates 8 unique CVEs addressed
-[USN-4397-2] NSS vulnerability [00:40]  1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2020-12399    Episode 79 - timing side-channel attack during DSA key generation  [USN-4399-1] Bind vulnerabilities [01:00]  2 CVEs addressed in Focal (20.</description>
+[USN-4397-2] NSS vulnerability [00:40]  1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2020-12399   Episode 79 - timing side-channel attack during DSA key generation  [USN-4399-1] Bind vulnerabilities [01:00]  2 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>
@@ -813,7 +824,7 @@ This week in Ubuntu Security Updates 8 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-79/</guid>
       <description>Overview This week Joe discusses Intel&amp;rsquo;s CET announcement with John Johansen, plus Alex details recent security fixes including SQLite, fwupd, NSS, DBus and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4394-1] SQLite vulnerabilities [00:56]  9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-13632  CVE-2020-13631  CVE-2020-13630  CVE-2020-13435  CVE-2020-13434  CVE-2020-11655  CVE-2019-19645  CVE-2019-19603  CVE-2018-8740    NULL ptr deref via crafted query, UAF, OOB read, integer overflow when printing high precision floating point numbers, various minor issues when handling crafted databases  [USN-4385-2] Intel Microcode regression [01:43]  3 CVEs addressed in Trusty ESM (14.</description>
+[USN-4394-1] SQLite vulnerabilities [00:56]  9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-13632 CVE-2020-13631 CVE-2020-13630 CVE-2020-13435 CVE-2020-13434 CVE-2020-11655 CVE-2019-19645 CVE-2019-19603 CVE-2018-8740   NULL ptr deref via crafted query, UAF, OOB read, integer overflow when printing high precision floating point numbers, various minor issues when handling crafted databases  [USN-4385-2] Intel Microcode regression [01:43]  3 CVEs addressed in Trusty ESM (14.</description>
     </item>
     
     <item>
@@ -824,7 +835,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-78/</guid>
       <description>Overview SRBDS aka CrossTalk, the latest Intel speculative execution attack, is the big news this week in security updates for Ubuntu, as well as fixes for GnuTLS, Firefox and more, plus Alex and Joe talk about using STRIDE for threat modelling of software products.
 This week in Ubuntu Security Updates 39 unique CVEs addressed
-[USN-4381-2] Django vulnerabilities [01:00]  2 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2020-13596  CVE-2020-13254    Episode 77  [USN-4382-1] FreeRDP vulnerabilities [01:28]  14 CVEs addressed in Xenial (16.</description>
+[USN-4381-2] Django vulnerabilities [01:00]  2 CVEs addressed in Trusty ESM (14.04 ESM)  CVE-2020-13596 CVE-2020-13254   Episode 77  [USN-4382-1] FreeRDP vulnerabilities [01:28]  14 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -835,7 +846,7 @@ This week in Ubuntu Security Updates 39 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-77/</guid>
       <description>Overview This week we look at security updates for Unbound, OpenSSL, Flask, FreeRDP, Django and more, plus Joe and Alex discuss the Octopus malware infecting Netbeans projects.
 This week in Ubuntu Security Updates 40 unique CVEs addressed
-[USN-4374-1] Unbound vulnerabilities  2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-12663  CVE-2020-12662    NXNS attack (Episode 75) (form of DNS reflection attack) Infinite loop when processing malformed answers from upstream servers -&amp;gt; CPU DoS  [USN-4375-1] PHP vulnerability  1 CVEs addressed in Precise ESM (12.</description>
+[USN-4374-1] Unbound vulnerabilities  2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-12663 CVE-2020-12662   NXNS attack (Episode 75) (form of DNS reflection attack) Infinite loop when processing malformed answers from upstream servers -&amp;gt; CPU DoS  [USN-4375-1] PHP vulnerability  1 CVEs addressed in Precise ESM (12.</description>
     </item>
     
     <item>
@@ -846,7 +857,7 @@ This week in Ubuntu Security Updates 40 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-76/</guid>
       <description>Overview This week we welcome back Vineetha Kamath, Ubuntu Security Certifications Manager, to discuss the recent release of FIPS modules for Ubuntu 18.04 LTS and we look at security updates for Bind, ClamAV, QEMU, the Linux kernel and more.
 This week in Ubuntu Security Updates 24 unique CVEs addressed
-[USN-4365-2] Bind vulnerabilities [00:37]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2020-8617  CVE-2020-8616    Episode 75 - https://nxnsattack.</description>
+[USN-4365-2] Bind vulnerabilities [00:37]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)  CVE-2020-8617 CVE-2020-8616   Episode 75 - https://nxnsattack.</description>
     </item>
     
     <item>
@@ -857,7 +868,7 @@ This week in Ubuntu Security Updates 24 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-75/</guid>
       <description>Overview In episode 75 we look at security updates for APT, json-c, Bind, the Linux kernel and more, plus Joe and Alex discuss recent phishing attacks and the Wired biopic of Marcus Hutchins.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-4358-1] libexif vulnerabilities [00:44]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-12767  CVE-2018-20030    Divide by zero and a CPU infinite loop (DoS) for handling crafted exif content  [USN-4359-1] APT vulnerability [01:19]  1 CVEs addressed in Xenial (16.</description>
+[USN-4358-1] libexif vulnerabilities [00:44]  2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)  CVE-2020-12767 CVE-2018-20030   Divide by zero and a CPU infinite loop (DoS) for handling crafted exif content  [USN-4359-1] APT vulnerability [01:19]  1 CVEs addressed in Xenial (16.</description>
     </item>
     
     <item>
@@ -868,7 +879,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-74/</guid>
       <description>Overview Special guest, Tim McNamara, author of Rust In Action talks all things Rust plus we look at security updates for Linux bluetooth firmware, OpenLDAP, PulseAudio, Squid and more.
 This week in Ubuntu Security Updates 17 unique CVEs addressed
-[USN-4351-1] Linux firmware vulnerability [01:03]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2018-5383    Bluetooth devices failed to properly validate elliptic curve parameters used in key exchange - remote attacker could possibly force a weak key to be used and hence obtain the encryption key.</description>
+[USN-4351-1] Linux firmware vulnerability [01:03]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2018-5383   Bluetooth devices failed to properly validate elliptic curve parameters used in key exchange - remote attacker could possibly force a weak key to be used and hence obtain the encryption key.</description>
     </item>
     
     <item>
@@ -888,7 +899,7 @@ This week in Ubuntu Security Updates 17 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-73/</guid>
       <description>Overview After the recent release of Ubuntu 20.04 LTS, we look at security fixes for OpenJDK, CUPS, the Linux kernel, Samba and more, plus Joe and Alex discuss robot kits and the Kaiji botnet.
 This week in Ubuntu Security Updates 86 unique CVEs addressed
-[USN-4337-1] OpenJDK vulnerabilities [01:21]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-2830  CVE-2020-2816  CVE-2020-2805  CVE-2020-2803  CVE-2020-2800  CVE-2020-2781  CVE-2020-2778  CVE-2020-2773  CVE-2020-2767  CVE-2020-2757  CVE-2020-2756  CVE-2020-2755  CVE-2020-2754    openjdk 11.</description>
+[USN-4337-1] OpenJDK vulnerabilities [01:21]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-2830 CVE-2020-2816 CVE-2020-2805 CVE-2020-2803 CVE-2020-2800 CVE-2020-2781 CVE-2020-2778 CVE-2020-2773 CVE-2020-2767 CVE-2020-2757 CVE-2020-2756 CVE-2020-2755 CVE-2020-2754   openjdk 11.</description>
     </item>
     
     <item>
@@ -899,7 +910,7 @@ This week in Ubuntu Security Updates 86 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-72/</guid>
       <description>Overview A huge number of CVEs fixed in the various Ubuntu releases, including for PHP, Git, Thunderbird, GNU binutils and more, plus Joe McManus discusses ROS with Sid Faber.
 This week in Ubuntu Security Updates 93 unique CVEs addressed
-[USN-4330-1] PHP vulnerabilities [01:03]  5 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-7066  CVE-2020-7065  CVE-2020-7064  CVE-2020-7063  CVE-2020-7062    php5, php7.0, php7.</description>
+[USN-4330-1] PHP vulnerabilities [01:03]  5 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-7066 CVE-2020-7065 CVE-2020-7064 CVE-2020-7063 CVE-2020-7062   php5, php7.0, php7.2, php7.3 get_headers() would silently truncate a URL containing a NUL terminator (\0) - so if used with user-supplied URL could get wrong details from the server stack overflow in mb_strtolower() when handling UTF32-LE encoding 1 byte buffer overread in handling EXIF data - info leak / crash PHAR archives created with world readable permissions NULL pointer dereference on file upload in certain situations -&amp;gt; crash  [USN-4331-1] WebKitGTK+ vulnerability [02:32]  1 CVEs addressed in Bionic, Eoan  CVE-2020-11793   UAF when processing maliciously crafted web content  [USN-4332-1] File Roller vulnerability [02:51]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-11736   Possible directory traversal issue when extracting an archive where parent of file is a symlink pointing outside of the archive  [USN-4334-1] Git vulnerability [03:08]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-11008 Similar to CVE-2020-5260 from Episode 71 - due to an incomplete fix for that where some credentials may still be leaked but the attacker cannot control which ones    [USN-4333-1] Python vulnerabilities [03:47]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-8492 CVE-2019-18348   CRLF injection via an attacker controlled url parameter to urlopen() function in urllib  [USN-4335-1] Thunderbird vulnerabilities [04:09]  39 CVEs addressed in Xenial  CVE-2020-6811 CVE-2020-6794 CVE-2020-6822 CVE-2020-6795 CVE-2020-6793 CVE-2020-6792 CVE-2019-15903 CVE-2019-11755 CVE-2019-11745 CVE-2020-6825 CVE-2020-6821 CVE-2020-6820 CVE-2020-6819 CVE-2020-6814 CVE-2020-6812 CVE-2020-6807 CVE-2020-6806 CVE-2020-6805 CVE-2020-6800 CVE-2020-6798 CVE-2019-20503 CVE-2019-17026 CVE-2019-17024 CVE-2019-17022 CVE-2019-17017 CVE-2019-17016 CVE-2019-17012 CVE-2019-17011 CVE-2019-17010 CVE-2019-17008 CVE-2019-17005 CVE-2019-11764 CVE-2019-11763 CVE-2019-11762 CVE-2019-11761 CVE-2019-11760 CVE-2019-11759 CVE-2019-11758 CVE-2019-11757   Updated to latest upstream version 68.</description>
     </item>
     
     <item>
@@ -910,7 +921,7 @@ This week in Ubuntu Security Updates 93 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-71/</guid>
       <description>Overview This week Joe discusses Ubuntu&amp;rsquo;s involvement in ZDI&amp;rsquo;s Pwn2Own with special guests Steve Beattie and Marc Deslauriers from the Ubuntu Security team, plus we do the usual roundup of fixed vulnerabilities including libssh, Thunderbird, Git and a kernel Livepatch.
 This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-4325-1] Linux kernel vulnerabilities [00:59]  2 CVEs addressed in Bionic  CVE-2020-8428  CVE-2019-19046    5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc) VFS UAF and IPMI memory leak - Episode 70  [USN-4326-1] libiberty vulnerabilities [01:46]  14 CVEs addressed in Xenial, Bionic  CVE-2019-9071  CVE-2019-9070  CVE-2019-14250  CVE-2018-9138  CVE-2018-18701  CVE-2018-18700  CVE-2018-18484  CVE-2018-18483  CVE-2018-17985  CVE-2018-17794  CVE-2018-12934  CVE-2018-12698  CVE-2018-12697  CVE-2018-12641    libib - collection of subroutines used by other libraries / applications  primarily binutils for parsing binary formats (ELF executables etc)   Mostly low priority issues (DoS via memory leak / NULL ptr dereference in say objdump etc) 1 medium - integer overflow -&amp;gt; heap buffer overflow in parsing a crafted ELF file  [USN-4327-1] libssh vulnerability [02:57]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1730    Malicious client / server could crash other end when using AES-CTR ciphers - error in memory handling on cleanup of cipher context when closing the connection -&amp;gt; DoS  [LSN-0065-1] Linux kernel vulnerability [03:41]  3 CVEs addressed in Xenial, Bionic  CVE-2020-8428  CVE-2019-3016  CVE-2013-1798    Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced back in 2013 for a KVM IOAPIC issue, KVM TLB flush (Episode 67)  [USN-4328-1] Thunderbird vulnerabilities [04:31]  18 CVEs addressed in Bionic, Eoan  CVE-2020-6811  CVE-2020-6825  CVE-2020-6821  CVE-2020-6820  CVE-2020-6819  CVE-2020-6814  CVE-2020-6812  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2020-6800  CVE-2020-6798  CVE-2019-20503  CVE-2020-6794  CVE-2020-6822  CVE-2020-6795  CVE-2020-6793  CVE-2020-6792    68.</description>
+[USN-4325-1] Linux kernel vulnerabilities [00:59]  2 CVEs addressed in Bionic  CVE-2020-8428 CVE-2019-19046   5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc) VFS UAF and IPMI memory leak - Episode 70  [USN-4326-1] libiberty vulnerabilities [01:46]  14 CVEs addressed in Xenial, Bionic  CVE-2019-9071 CVE-2019-9070 CVE-2019-14250 CVE-2018-9138 CVE-2018-18701 CVE-2018-18700 CVE-2018-18484 CVE-2018-18483 CVE-2018-17985 CVE-2018-17794 CVE-2018-12934 CVE-2018-12698 CVE-2018-12697 CVE-2018-12641   libib - collection of subroutines used by other libraries / applications  primarily binutils for parsing binary formats (ELF executables etc)   Mostly low priority issues (DoS via memory leak / NULL ptr dereference in say objdump etc) 1 medium - integer overflow -&amp;gt; heap buffer overflow in parsing a crafted ELF file  [USN-4327-1] libssh vulnerability [02:57]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1730   Malicious client / server could crash other end when using AES-CTR ciphers - error in memory handling on cleanup of cipher context when closing the connection -&amp;gt; DoS  [LSN-0065-1] Linux kernel vulnerability [03:41]  3 CVEs addressed in Xenial, Bionic  CVE-2020-8428 CVE-2019-3016 CVE-2013-1798   Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced back in 2013 for a KVM IOAPIC issue, KVM TLB flush (Episode 67)  [USN-4328-1] Thunderbird vulnerabilities [04:31]  18 CVEs addressed in Bionic, Eoan  CVE-2020-6811 CVE-2020-6825 CVE-2020-6821 CVE-2020-6820 CVE-2020-6819 CVE-2020-6814 CVE-2020-6812 CVE-2020-6807 CVE-2020-6806 CVE-2020-6805 CVE-2020-6800 CVE-2020-6798 CVE-2019-20503 CVE-2020-6794 CVE-2020-6822 CVE-2020-6795 CVE-2020-6793 CVE-2020-6792   68.</description>
     </item>
     
     <item>
@@ -921,7 +932,7 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-70/</guid>
       <description>Overview This week we have a great interview between Joe McManus and Emilia Torino from the Ubuntu Security team, plus we cover security updates for Apport, Firefox, GnuTLS, the Linux kernel and more.
 This week in Ubuntu Security Updates 18 unique CVEs addressed
-[USN-4315-1] Apport vulnerabilities [00:32]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8833  CVE-2020-8831    Apport creates it&amp;rsquo;s lock file as world writable in a world-writable location - so a local attacker could create a symlink in it&amp;rsquo;s place to a non-existant file in a root-owned location and Apport would end up creating that file but with world-writable permissions - so could be used to possibly escalate privileges say by dropping a new cron file or similar.</description>
+[USN-4315-1] Apport vulnerabilities [00:32]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8833 CVE-2020-8831   Apport creates it&amp;rsquo;s lock file as world writable in a world-writable location - so a local attacker could create a symlink in it&amp;rsquo;s place to a non-existant file in a root-owned location and Apport would end up creating that file but with world-writable permissions - so could be used to possibly escalate privileges say by dropping a new cron file or similar.</description>
     </item>
     
     <item>
@@ -932,7 +943,7 @@ This week in Ubuntu Security Updates 18 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-69/</guid>
       <description>Overview This week we cover security updates for a Linux kernel vulnerability disclosed during pwn2own, Timeshift, pam-krb5 and more, plus we have a special guest, Vineetha Kamath, to discuss security certifications for Ubuntu.
 This week in Ubuntu Security Updates 10 unique CVEs addressed
-[USN-4308-2] Twisted vulnerabilities [00:42]  4 CVEs addressed in Trusty ESM  CVE-2020-10109  CVE-2020-10108  CVE-2019-12855  CVE-2019-12387    Episode 68 - 4 of the 7 CVEs described there affect Twisted in 14.</description>
+[USN-4308-2] Twisted vulnerabilities [00:42]  4 CVEs addressed in Trusty ESM  CVE-2020-10109 CVE-2020-10108 CVE-2019-12855 CVE-2019-12387   Episode 68 - 4 of the 7 CVEs described there affect Twisted in 14.</description>
     </item>
     
     <item>
@@ -954,7 +965,7 @@ This week in Ubuntu Security Updates 16 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-67/</guid>
       <description>Overview A big week in security updates, including the Linux kernel, Ceph, ICU, Firefox, Dino and more, plus Joe and Alex discuss tips for securely working from home in light of Coronavirus.
 This week in Ubuntu Security Updates 38 unique CVEs addressed
-[USN-4299-1] Firefox vulnerabilities [00:41]  12 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-6811  CVE-2020-6809  CVE-2020-6815  CVE-2020-6814  CVE-2020-6813  CVE-2020-6812  CVE-2020-6810  CVE-2020-6808  CVE-2020-6807  CVE-2020-6806  CVE-2020-6805  CVE-2019-20503    74.</description>
+[USN-4299-1] Firefox vulnerabilities [00:41]  12 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-6811 CVE-2020-6809 CVE-2020-6815 CVE-2020-6814 CVE-2020-6813 CVE-2020-6812 CVE-2020-6810 CVE-2020-6808 CVE-2020-6807 CVE-2020-6806 CVE-2020-6805 CVE-2019-20503   74.0 - usual sorts of fixes:  Crafted website -&amp;gt; DoS, URL and other browser chrome spoofing, bypass content security policy protections, RCE etc Extensions with all-url permission could access local files Copy-as-cURL devtools feature failed to escape website-controlled data - possible command injection -&amp;gt; RCE if user tricked into using this on a crafted website    [USN-4300-1] Linux kernel vulnerabilities [02:02]  11 CVEs addressed in Bionic, Eoan  CVE-2019-19068 CVE-2019-19066 CVE-2019-19064 CVE-2019-19059 CVE-2019-19058 CVE-2019-19056 CVE-2019-19053 CVE-2019-19043 CVE-2019-18809 CVE-2020-2732 CVE-2019-3016   5.</description>
     </item>
     
     <item>
@@ -965,7 +976,7 @@ This week in Ubuntu Security Updates 38 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-66/</guid>
       <description>Overview This week we cover security updates for Django, runC and SQLite, plus Alex and Joe discuss the AMD speculative execution Take A Way attack and we look at some recent blog posts by the team too.
 This week in Ubuntu Security Updates 16 unique CVEs addressed
-[USN-4296-1] Django vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9402    Possible SQL injection in the GIS functions when using an Oracle DB as the backend - Oracle provides a tolerance parameter which can be used when doing GIS queries and this was not properly sanitised before use so could allow SQL injection  [USN-4297-1] runC vulnerabilities [01:30]  2 CVEs addressed in Bionic, Eoan  CVE-2019-19921  CVE-2019-16884    Race condition on mounting of shared volume mounts between two containers - can replace /proc on one container with a symlink inside of the shared mount - when this gets cleaned up other parts of /proc can end mounted within the shared mount and this could be used for privilege escalation since if outside of /proc then regular users might be able to write to sensitive parts of /proc - fixed by having runc validate that the target for mounting /proc or /sys must either not exist or must be a directory to avoid symlink attacks etc Possible bypass of AppArmor restrictions since would not properly check the target of a mount and so could end up mounting a malicious image over /proc - instead add more explicit checks on whether the dest of a mount is /proc and only allow this if the source is also a procfs  [USN-4298-1] SQLite vulnerabilities [03:09]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2019-13752  CVE-2020-9327  CVE-2019-20218  CVE-2019-19926  CVE-2019-19959  CVE-2019-19925  CVE-2019-19924  CVE-2019-19923  CVE-2019-19880  CVE-2019-13751  CVE-2019-13753  CVE-2019-13750  CVE-2019-13734    Many different memory safety issues resolved in SQLite - across various parts of SQLite including handling of shadow tables, corrupt records, parsing, ZIP archives and column optimisations.</description>
+[USN-4296-1] Django vulnerability [00:49]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9402   Possible SQL injection in the GIS functions when using an Oracle DB as the backend - Oracle provides a tolerance parameter which can be used when doing GIS queries and this was not properly sanitised before use so could allow SQL injection  [USN-4297-1] runC vulnerabilities [01:30]  2 CVEs addressed in Bionic, Eoan  CVE-2019-19921 CVE-2019-16884   Race condition on mounting of shared volume mounts between two containers - can replace /proc on one container with a symlink inside of the shared mount - when this gets cleaned up other parts of /proc can end mounted within the shared mount and this could be used for privilege escalation since if outside of /proc then regular users might be able to write to sensitive parts of /proc - fixed by having runc validate that the target for mounting /proc or /sys must either not exist or must be a directory to avoid symlink attacks etc Possible bypass of AppArmor restrictions since would not properly check the target of a mount and so could end up mounting a malicious image over /proc - instead add more explicit checks on whether the dest of a mount is /proc and only allow this if the source is also a procfs  [USN-4298-1] SQLite vulnerabilities [03:09]  13 CVEs addressed in Xenial, Bionic, Eoan  CVE-2019-13752 CVE-2020-9327 CVE-2019-20218 CVE-2019-19926 CVE-2019-19959 CVE-2019-19925 CVE-2019-19924 CVE-2019-19923 CVE-2019-19880 CVE-2019-13751 CVE-2019-13753 CVE-2019-13750 CVE-2019-13734   Many different memory safety issues resolved in SQLite - across various parts of SQLite including handling of shadow tables, corrupt records, parsing, ZIP archives and column optimisations.</description>
     </item>
     
     <item>
@@ -976,7 +987,7 @@ This week in Ubuntu Security Updates 16 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-65/</guid>
       <description>Overview Whilst avoiding Coronavirus, this week we look at updates for libarchive, OpenSMTPD, rake and more, plus Joe and Alex discuss ROS, the Robot Operating System and how the Ubuntu Security Team is involved in the ongoing development of secure foundations for robotics.
 This week in Ubuntu Security Updates 7 unique CVEs addressed
-[USN-4293-1] libarchive vulnerabilities [00:18]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9308  CVE-2019-19221    OSS-Fuzz: RAR unpacker would try and unpack a file with a corrupted / malformed header (ie.</description>
+[USN-4293-1] libarchive vulnerabilities [00:18]  2 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-9308 CVE-2019-19221   OSS-Fuzz: RAR unpacker would try and unpack a file with a corrupted / malformed header (ie.</description>
     </item>
     
     <item>
@@ -987,7 +998,7 @@ This week in Ubuntu Security Updates 7 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-64/</guid>
       <description>Overview This week we look at security updates for ppp, Squid, rsync + more, and Joe and Alex discuss the wide scope of the Ubuntu Security Team including some current open positions.
 This week in Ubuntu Security Updates 19 unique CVEs addressed
-[LSN-0063-1] Linux kernel vulnerability [00:43]  5 CVEs addressed in Xenial, Bionic  CVE-2020-7053  CVE-2019-20096  CVE-2019-19050  CVE-2019-14615  CVE-2019-5108    i915 UAF (Episode 60), DCCP memory leak -&amp;gt; DoS (Episode 63), crypto subsystem memory leaks (Episode 60), i915 info leak (Episode 60, Episode 53), WiFi AP mode DoS (Episode 53)  [USN-4279-2] PHP regression [01:51]  3 CVEs addressed in Xenial  CVE-2020-7060  CVE-2020-7059  CVE-2015-9253    Episode 63 - Upstream fix for CVE-2015-9253 contained a memory leak - this fix was backed-out in this update  [USN-4288-1] ppp vulnerability [02:16]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8597    Included a check for possible buffer overflow a an rhostname but the check was incorrect :( so could still overflow - fixed by making the correct check  [USN-4289-1] Squid vulnerabilities [02:41]  4 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8517  CVE-2020-8450  CVE-2020-8449  CVE-2019-12528    Buffer overflow in NTLM credentials parser - out-of-process so would just result in a DoS Buffer overflow when acting as a reverse proxy Incorrect input validation leading to access to server resources which should have been prohibited Info disclosure due to heap buffer over-read when acting as an FTP client from a malicious FTP server  [USN-4290-1] libpam-radius-auth vulnerability [03:26]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2015-9542    Stack overflow in password field handling -&amp;gt; crash, DoS  [USN-4291-1] mod-auth-mellon vulnerability [03:49]  1 CVEs addressed in Bionic, Eoan  CVE-2019-13038    SAML 2.</description>
+[LSN-0063-1] Linux kernel vulnerability [00:43]  5 CVEs addressed in Xenial, Bionic  CVE-2020-7053 CVE-2019-20096 CVE-2019-19050 CVE-2019-14615 CVE-2019-5108   i915 UAF (Episode 60), DCCP memory leak -&amp;gt; DoS (Episode 63), crypto subsystem memory leaks (Episode 60), i915 info leak (Episode 60, Episode 53), WiFi AP mode DoS (Episode 53)  [USN-4279-2] PHP regression [01:51]  3 CVEs addressed in Xenial  CVE-2020-7060 CVE-2020-7059 CVE-2015-9253   Episode 63 - Upstream fix for CVE-2015-9253 contained a memory leak - this fix was backed-out in this update  [USN-4288-1] ppp vulnerability [02:16]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8597   Included a check for possible buffer overflow a an rhostname but the check was incorrect :( so could still overflow - fixed by making the correct check  [USN-4289-1] Squid vulnerabilities [02:41]  4 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8517 CVE-2020-8450 CVE-2020-8449 CVE-2019-12528   Buffer overflow in NTLM credentials parser - out-of-process so would just result in a DoS Buffer overflow when acting as a reverse proxy Incorrect input validation leading to access to server resources which should have been prohibited Info disclosure due to heap buffer over-read when acting as an FTP client from a malicious FTP server  [USN-4290-1] libpam-radius-auth vulnerability [03:26]  1 CVEs addressed in Xenial, Bionic, Eoan  CVE-2015-9542   Stack overflow in password field handling -&amp;gt; crash, DoS  [USN-4291-1] mod-auth-mellon vulnerability [03:49]  1 CVEs addressed in Bionic, Eoan  CVE-2019-13038   SAML 2.</description>
     </item>
     
     <item>
@@ -998,7 +1009,7 @@ This week in Ubuntu Security Updates 19 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-63/</guid>
       <description>Overview Security updates for Firefox, QEMU, Linux kernel, ClamAV and more, plus we discuss our recommended reading list for getting into infosec and farewell long-time member of the Ubuntu Security Team / community Tyler Hicks.
 This week in Ubuntu Security Updates 54 unique CVEs addressed
-[USN-4278-1] Firefox vulnerabilities [00:55]  4 CVEs addressed in Bionic, Eoan  CVE-2020-6801  CVE-2020-6800  CVE-2020-6798  CVE-2020-6796    Firefox 73.0  Various memory safety issues Possible XSS if a site used a tag within a tag since could allow subsequent JavaScript parsing and execution    [USN-4279-1] PHP vulnerabilities [01:26]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-7060  CVE-2020-7059  CVE-2015-9253    Buffer overread when converting multibyte characters via mbstring functions and when reading data whilst stripping tags via fgetss() - crash / info disc Fix for a CPU and disk-based DoS when PHP FPM (FastCGI Process Manager) would endlessly restart a child process - busy CPU loop and large error logs -&amp;gt; DoS  [USN-4280-1, USN-4280-2] ClamAV vulnerability [02:27]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-3123    OOB read in Data-Loss-Prevention (DLP) module (scans for CC or social security numbers) - crafted email would cause OOB read -&amp;gt; crash -&amp;gt; DoS  [USN-4281-1] WebKitGTK+ vulnerabilities [03:04]  5 CVEs addressed in Bionic, Eoan  CVE-2020-3868  CVE-2020-3867  CVE-2020-3865  CVE-2020-3864  CVE-2020-3862    Various issues able to be triggered by malicious websites  DoS via poor memory handling Wrong secrity origin for particular DOM objects Top-level DOM object incorrectly considered secure Logic issue leading to a universal XSS flaw Poor memory handling leading to RCE    [USN-4282-1] PostgreSQL vulnerability [03:50]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1720    Missing authorization checks on ALTER &amp;hellip; DEPENDS ON EXTENSION sub-commands - could allow unprivileged users to drop any function, procedure, index etc under certain conditions  [USN-4283-1] QEMU vulnerabilities [04:10]  3 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8608  CVE-2020-7039  CVE-2020-1711    Buffer overflow in libslirp tcp emulation due to misuse of snprintf() return value - assumed snprintf() returns the number of bytes written - BUT returns the number of bytes which would have been written if the dest buffer was big enough - so if buffer is too small then returns a value larger than the buffer - so if that returned size is used later in a memcpy() or similar would overflow the buffer - so instead need to carefully track the return value if it is larger than the dest buffer Separate buffer overflow in libslirp tcp emulation code due to missing size checks Heap buffer OOB write in iSCSI block driver - malicious iSCSI server could trigger this and crash or possibly get code execution on QEMU host  [USN-4284-1] Linux kernel vulnerabilities [05:21]  23 CVEs addressed in Bionic, Eoan  CVE-2019-15291  CVE-2019-19965  CVE-2019-19947  CVE-2019-19767  CVE-2019-19602  CVE-2019-19332  CVE-2019-19252  CVE-2019-19241  CVE-2019-19082  CVE-2019-19078  CVE-2019-19077  CVE-2019-19071  CVE-2019-19063  CVE-2019-19057  CVE-2019-19062  CVE-2019-19050  CVE-2019-18811  CVE-2019-18786  CVE-2019-18683  CVE-2019-16232  CVE-2019-16229  CVE-2019-15099  CVE-2019-14615    5.</description>
+[USN-4278-1] Firefox vulnerabilities [00:55]  4 CVEs addressed in Bionic, Eoan  CVE-2020-6801 CVE-2020-6800 CVE-2020-6798 CVE-2020-6796   Firefox 73.0  Various memory safety issues Possible XSS if a site used a tag within a tag since could allow subsequent JavaScript parsing and execution    [USN-4279-1] PHP vulnerabilities [01:26]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-7060 CVE-2020-7059 CVE-2015-9253   Buffer overread when converting multibyte characters via mbstring functions and when reading data whilst stripping tags via fgetss() - crash / info disc Fix for a CPU and disk-based DoS when PHP FPM (FastCGI Process Manager) would endlessly restart a child process - busy CPU loop and large error logs -&amp;gt; DoS  [USN-4280-1, USN-4280-2] ClamAV vulnerability [02:27]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan  CVE-2020-3123   OOB read in Data-Loss-Prevention (DLP) module (scans for CC or social security numbers) - crafted email would cause OOB read -&amp;gt; crash -&amp;gt; DoS  [USN-4281-1] WebKitGTK+ vulnerabilities [03:04]  5 CVEs addressed in Bionic, Eoan  CVE-2020-3868 CVE-2020-3867 CVE-2020-3865 CVE-2020-3864 CVE-2020-3862   Various issues able to be triggered by malicious websites  DoS via poor memory handling Wrong secrity origin for particular DOM objects Top-level DOM object incorrectly considered secure Logic issue leading to a universal XSS flaw Poor memory handling leading to RCE    [USN-4282-1] PostgreSQL vulnerability [03:50]  1 CVEs addressed in Bionic, Eoan  CVE-2020-1720   Missing authorization checks on ALTER &amp;hellip; DEPENDS ON EXTENSION sub-commands - could allow unprivileged users to drop any function, procedure, index etc under certain conditions  [USN-4283-1] QEMU vulnerabilities [04:10]  3 CVEs addressed in Xenial, Bionic, Eoan  CVE-2020-8608 CVE-2020-7039 CVE-2020-1711   Buffer overflow in libslirp tcp emulation due to misuse of snprintf() return value - assumed snprintf() returns the number of bytes written - BUT returns the number of bytes which would have been written if the dest buffer was big enough - so if buffer is too small then returns a value larger than the buffer - so if that returned size is used later in a memcpy() or similar would overflow the buffer - so instead need to carefully track the return value if it is larger than the dest buffer Separate buffer overflow in libslirp tcp emulation code due to missing size checks Heap buffer OOB write in iSCSI block driver - malicious iSCSI server could trigger this and crash or possibly get code execution on QEMU host  [USN-4284-1] Linux kernel vulnerabilities [05:21]  23 CVEs addressed in Bionic, Eoan  CVE-2019-15291 CVE-2019-19965 CVE-2019-19947 CVE-2019-19767 CVE-2019-19602 CVE-2019-19332 CVE-2019-19252 CVE-2019-19241 CVE-2019-19082 CVE-2019-19078 CVE-2019-19077 CVE-2019-19071 CVE-2019-19063 CVE-2019-19057 CVE-2019-19062 CVE-2019-19050 CVE-2019-18811 CVE-2019-18786 CVE-2019-18683 CVE-2019-16232 CVE-2019-16229 CVE-2019-15099 CVE-2019-14615   5.</description>
     </item>
     
     <item>
@@ -1009,7 +1020,7 @@ This week in Ubuntu Security Updates 54 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-62/</guid>
       <description>Overview This week Alex and Joe take an indepth look at the recent Sudo vulnerability CVE-2019-18634 plus we look at security updates for OpenSMTPD, systemd, Mesa, Yubico PIV tool and more. We also look at a recent job opening for a Robotics Security Engineer to join the Ubuntu Security team.
 This week in Ubuntu Security Updates 33 unique CVEs addressed
-[USN-4263-2] Sudo vulnerability [00:41]  1 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-18634    See Episode 61 and discussion later in episode  [USN-4268-1] OpenSMTPD vulnerability [01:02]  1 CVEs addressed in Bionic, Eoan  CVE-2020-7247    Logic bug caused existing sanity checks on MAIL FROM field to be skipped under certain scenarios - so by failing to perform this validation, could allow an attacker to input shell metacharacters to obtain command execution in smtpd (which runs as root) -&amp;gt; remote root command execution.</description>
+[USN-4263-2] Sudo vulnerability [00:41]  1 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-18634   See Episode 61 and discussion later in episode  [USN-4268-1] OpenSMTPD vulnerability [01:02]  1 CVEs addressed in Bionic, Eoan  CVE-2020-7247   Logic bug caused existing sanity checks on MAIL FROM field to be skipped under certain scenarios - so by failing to perform this validation, could allow an attacker to input shell metacharacters to obtain command execution in smtpd (which runs as root) -&amp;gt; remote root command execution.</description>
     </item>
     
     <item>
@@ -1020,7 +1031,7 @@ This week in Ubuntu Security Updates 33 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-61/</guid>
       <description>Overview Joe is back to discuss a recent breach against Wawa, plus we detail security updates from the past week including Apache Solr, OpenStack Keystone, Sudo, Django and more.
 This week in Ubuntu Security Updates 23 unique CVEs addressed
-[USN-4259-1] Apache Solr vulnerability [00:50]  1 CVEs addressed in Xenial  CVE-2017-12629    Enterprise search server based on Lucene with XML/HTTP and JSON APIs Was vulnerable to an XML External Entity (XXE) attack - XML can include a reference to another XML resource which might then be fetched - this could then be combined with another flaw (use of Config API to obtain access to the RunExecutableListener class) to allow remote code fetched from the remote XML  [USN-4261-1] WebKitGTK+ vulnerabilities [01:44]  3 CVEs addressed in Bionic, Eoan  CVE-2019-8846  CVE-2019-8844  CVE-2019-8835    Various memory management issues which could be triggered via a malicious websites - possible remote code execution as a result  [USN-4262-1] OpenStack Keystone vulnerability [02:13]  1 CVEs addressed in Eoan  CVE-2019-19687    Keystone provides identity services (client authentication etc) for OpenStack credentials API allowed any user with a role on a project to list all credentials when enforce_scope was false - so could view other users credentials.</description>
+[USN-4259-1] Apache Solr vulnerability [00:50]  1 CVEs addressed in Xenial  CVE-2017-12629   Enterprise search server based on Lucene with XML/HTTP and JSON APIs Was vulnerable to an XML External Entity (XXE) attack - XML can include a reference to another XML resource which might then be fetched - this could then be combined with another flaw (use of Config API to obtain access to the RunExecutableListener class) to allow remote code fetched from the remote XML  [USN-4261-1] WebKitGTK+ vulnerabilities [01:44]  3 CVEs addressed in Bionic, Eoan  CVE-2019-8846 CVE-2019-8844 CVE-2019-8835   Various memory management issues which could be triggered via a malicious websites - possible remote code execution as a result  [USN-4262-1] OpenStack Keystone vulnerability [02:13]  1 CVEs addressed in Eoan  CVE-2019-19687   Keystone provides identity services (client authentication etc) for OpenStack credentials API allowed any user with a role on a project to list all credentials when enforce_scope was false - so could view other users credentials.</description>
     </item>
     
     <item>
@@ -1031,7 +1042,7 @@ This week in Ubuntu Security Updates 23 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-60/</guid>
       <description>Overview Security updates for python-apt, GnuTLS, tcpdump, the Linux kernel and more, plus we look at plans to integrate Ubuntu Security Notices within the main ubuntu.com website.
 This week in Ubuntu Security Updates 91 unique CVEs addressed
-[USN-4247-1, USN-4247-2, USN-4247-3] python-apt vulnerabilities [00:42]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-15796  CVE-2019-15795    Could still use md5 to validate downloads - md5 has been broken for a while now so if md5 hashes were available for a repo then these would be trusted - instead, verify all hashes Ensure repository is trusted before downloading from it - in some cases, could configure repositories that were not trusted and python-apt based clients would not check trust - so would use it - now always check and verify unless the repository is specifically configured as trusted  [USN-4248-1] GraphicsMagick vulnerabilities [02:31]  10 CVEs addressed in Xenial  CVE-2017-17783  CVE-2017-17782  CVE-2017-17503  CVE-2017-17502  CVE-2017-17501  CVE-2017-17500  CVE-2017-17498  CVE-2017-16669  CVE-2017-16547  CVE-2017-16545    Episode 59, Episode 57, Episode 55 etc  [USN-4246-1] zlib vulnerabilities [02:55]  4 CVEs addressed in Xenial  CVE-2016-9843  CVE-2016-9842  CVE-2016-9841  CVE-2016-9840    Trail of Bits security audit of zlib found various instances of undefined behaviour in the implementation - pointer increment operations on undefined memory ranges, shifts by negative indices etc.</description>
+[USN-4247-1, USN-4247-2, USN-4247-3] python-apt vulnerabilities [00:42]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-15796 CVE-2019-15795   Could still use md5 to validate downloads - md5 has been broken for a while now so if md5 hashes were available for a repo then these would be trusted - instead, verify all hashes Ensure repository is trusted before downloading from it - in some cases, could configure repositories that were not trusted and python-apt based clients would not check trust - so would use it - now always check and verify unless the repository is specifically configured as trusted  [USN-4248-1] GraphicsMagick vulnerabilities [02:31]  10 CVEs addressed in Xenial  CVE-2017-17783 CVE-2017-17782 CVE-2017-17503 CVE-2017-17502 CVE-2017-17501 CVE-2017-17500 CVE-2017-17498 CVE-2017-16669 CVE-2017-16547 CVE-2017-16545   Episode 59, Episode 57, Episode 55 etc  [USN-4246-1] zlib vulnerabilities [02:55]  4 CVEs addressed in Xenial  CVE-2016-9843 CVE-2016-9842 CVE-2016-9841 CVE-2016-9840   Trail of Bits security audit of zlib found various instances of undefined behaviour in the implementation - pointer increment operations on undefined memory ranges, shifts by negative indices etc.</description>
     </item>
     
     <item>
@@ -1042,7 +1053,7 @@ This week in Ubuntu Security Updates 91 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-59/</guid>
       <description>Overview After a weeks break we are back to look at updates for ClamAV, GnuTLS, nginx, Samba and more, plus we briefly discuss the current 20.04 Mid-Cycle Roadmap Review sprint for the Ubuntu Security Team
 This week in Ubuntu Security Updates 73 unique CVEs addressed
-[USN-4230-1] ClamAV vulnerability [01:16]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-15961    Backport latest upstream release (0.102.1) from focal CPU based DoS when scanning crafted emails - parsing of MIME components in particular  [USN-4232-1] GraphicsMagick vulnerabilities [01:52]  11 CVEs addressed in Xenial  CVE-2017-16353  CVE-2017-16352  CVE-2017-15930  CVE-2017-15277  CVE-2017-14997  CVE-2017-14994  CVE-2017-14733  CVE-2017-14649  CVE-2017-14504  CVE-2017-14314  CVE-2017-14165    Episode 57, Episode 55 Heap based buffer over-reads - info leak or crash -&amp;gt; DoS Heap based buffer over-flow - crash -&amp;gt; DoS, RCE NULL ptr derefs - crash -&amp;gt; DoS Memory overallocation -&amp;gt; memory based remote DoS  [USN-4231-1] NSS vulnerability [03:04]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-17006    UBSAN found possible buffer overflow due to failure to check lengths of inputs to various functions - so applications using libnss for crypto could be vulnerable to buffer overflow  [USN-4233-1] GnuTLS update [03:54]  Affecting Xenial, Bionic Update marks SHA1 as being untrusted for digital signature operations - SHA1 has been broken in theory for a while and 2017 Google showed the first SHA1 collision - recently the first chosen-prefix attack was demonstrated against SHA1 as well - demonstrated by creating a GPG key which can impersonate another As such GnuTLS will not trust SHA1 based digital signatures since these can relatively easily be forged now (but not for an arbitrary input) As such libraries / applications which use GnuTLS (libsoup, Epiphany) will not trust SHA1 based digital signatures https://sha-mbles.</description>
+[USN-4230-1] ClamAV vulnerability [01:16]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-15961   Backport latest upstream release (0.102.1) from focal CPU based DoS when scanning crafted emails - parsing of MIME components in particular  [USN-4232-1] GraphicsMagick vulnerabilities [01:52]  11 CVEs addressed in Xenial  CVE-2017-16353 CVE-2017-16352 CVE-2017-15930 CVE-2017-15277 CVE-2017-14997 CVE-2017-14994 CVE-2017-14733 CVE-2017-14649 CVE-2017-14504 CVE-2017-14314 CVE-2017-14165   Episode 57, Episode 55 Heap based buffer over-reads - info leak or crash -&amp;gt; DoS Heap based buffer over-flow - crash -&amp;gt; DoS, RCE NULL ptr derefs - crash -&amp;gt; DoS Memory overallocation -&amp;gt; memory based remote DoS  [USN-4231-1] NSS vulnerability [03:04]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-17006   UBSAN found possible buffer overflow due to failure to check lengths of inputs to various functions - so applications using libnss for crypto could be vulnerable to buffer overflow  [USN-4233-1] GnuTLS update [03:54]  Affecting Xenial, Bionic Update marks SHA1 as being untrusted for digital signature operations - SHA1 has been broken in theory for a while and 2017 Google showed the first SHA1 collision - recently the first chosen-prefix attack was demonstrated against SHA1 as well - demonstrated by creating a GPG key which can impersonate another As such GnuTLS will not trust SHA1 based digital signatures since these can relatively easily be forged now (but not for an arbitrary input) As such libraries / applications which use GnuTLS (libsoup, Epiphany) will not trust SHA1 based digital signatures https://sha-mbles.</description>
     </item>
     
     <item>
@@ -1053,7 +1064,7 @@ This week in Ubuntu Security Updates 73 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-58/</guid>
       <description>Overview In the first episode for 2020, we look at security updates for Django and the Linux kernel, plus Alex and Joe discuss security and privacy aspects of smart assistant connected devices.
 This week in Ubuntu Security Updates 34 unique CVEs addressed
-[USN-4224-1] Django vulnerability [00:51]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-19844    Account takeover via password reset - when comparing email addresses, would not do a proper unicode comparison - and so could specify an email address which appears equal to an existing users email address (after unicode case and character transmformation) and would then get sent a token to reset their accounts password to your doppleganger email address.</description>
+[USN-4224-1] Django vulnerability [00:51]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-19844   Account takeover via password reset - when comparing email addresses, would not do a proper unicode comparison - and so could specify an email address which appears equal to an existing users email address (after unicode case and character transmformation) and would then get sent a token to reset their accounts password to your doppleganger email address.</description>
     </item>
     
     <item>
@@ -1064,7 +1075,7 @@ This week in Ubuntu Security Updates 34 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-57/</guid>
       <description>Overview In the final episode of 2019, we look at security updates for RabbitMQ, GraphicsMagick, OpenJDK and more, plus Joe and Alex discuss a typical day-in-the-life of a Ubuntu Security Team member.
 This week in Ubuntu Security Updates 34 unique CVEs addressed
-[USN-4217-2] Samba vulnerabilities [01:00]  2 CVEs addressed in Trusty ESM  CVE-2019-14870  CVE-2019-14861    See Episode 56  [USN-4214-2] RabbitMQ vulnerability [01:23]  1 CVEs addressed in Xenial, Bionic  CVE-2019-18609    AMQP implementation Possible integer overflow when handling the CONNECTION_STATE_HEADER frame - rogue server could return a malicious frame header which is then processed by the client and leads to a smaller target_size value due to integer overflow - then when the frame data is copied in via memcpy() this would overwrite past the bounds of the heap allocation, and with attacker controlled data Not an issue if connecting to trusted servers  [USN-4222-1] GraphicsMagick vulnerabilities [02:28]  15 CVEs addressed in Xenial  CVE-2017-13777  CVE-2017-13776  CVE-2017-13775  CVE-2017-13737  CVE-2017-13134  CVE-2017-13065  CVE-2017-13064  CVE-2017-13063  CVE-2017-12937  CVE-2017-12936  CVE-2017-12935  CVE-2017-11643  CVE-2017-11642  CVE-2017-11641  CVE-2017-11638    Episode 55 covered previous update for GraphicsMagick - more of the same here  [USN-4223-1] OpenJDK vulnerabilities [03:00]  16 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-2999  CVE-2019-2992  CVE-2019-2989  CVE-2019-2988  CVE-2019-2987  CVE-2019-2983  CVE-2019-2978  CVE-2019-2977  CVE-2019-2975  CVE-2019-2981  CVE-2019-2973  CVE-2019-2964  CVE-2019-2962  CVE-2019-2949  CVE-2019-2945  CVE-2019-2894    Latest upstream micro-release for openjdk 8 and openjdk 11 Various mix of issues (buffer overflows, NULL pointer dereferences and various denial of service issues on application crashes in different scenarios) - see the full USN for details  Goings on in Ubuntu Security Community Joe and Alex discuss a day-in-the-life of a Ubuntu Security Team member [03:50] Get in contact  security@ubuntu.</description>
+[USN-4217-2] Samba vulnerabilities [01:00]  2 CVEs addressed in Trusty ESM  CVE-2019-14870 CVE-2019-14861   See Episode 56  [USN-4214-2] RabbitMQ vulnerability [01:23]  1 CVEs addressed in Xenial, Bionic  CVE-2019-18609   AMQP implementation Possible integer overflow when handling the CONNECTION_STATE_HEADER frame - rogue server could return a malicious frame header which is then processed by the client and leads to a smaller target_size value due to integer overflow - then when the frame data is copied in via memcpy() this would overwrite past the bounds of the heap allocation, and with attacker controlled data Not an issue if connecting to trusted servers  [USN-4222-1] GraphicsMagick vulnerabilities [02:28]  15 CVEs addressed in Xenial  CVE-2017-13777 CVE-2017-13776 CVE-2017-13775 CVE-2017-13737 CVE-2017-13134 CVE-2017-13065 CVE-2017-13064 CVE-2017-13063 CVE-2017-12937 CVE-2017-12936 CVE-2017-12935 CVE-2017-11643 CVE-2017-11642 CVE-2017-11641 CVE-2017-11638   Episode 55 covered previous update for GraphicsMagick - more of the same here  [USN-4223-1] OpenJDK vulnerabilities [03:00]  16 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-2999 CVE-2019-2992 CVE-2019-2989 CVE-2019-2988 CVE-2019-2987 CVE-2019-2983 CVE-2019-2978 CVE-2019-2977 CVE-2019-2975 CVE-2019-2981 CVE-2019-2973 CVE-2019-2964 CVE-2019-2962 CVE-2019-2949 CVE-2019-2945 CVE-2019-2894   Latest upstream micro-release for openjdk 8 and openjdk 11 Various mix of issues (buffer overflows, NULL pointer dereferences and various denial of service issues on application crashes in different scenarios) - see the full USN for details  Goings on in Ubuntu Security Community Joe and Alex discuss a day-in-the-life of a Ubuntu Security Team member [03:50] Get in contact  security@ubuntu.</description>
     </item>
     
     <item>
@@ -1075,7 +1086,7 @@ This week in Ubuntu Security Updates 34 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-56/</guid>
       <description>Overview In the second to last episode for 2019, we look at security updates for Samba, Squid, Git, HAProxy and more, plus Alex and Joe discuss Evil Corp hacker indictments, unsecured AWS S3 buckets and more.
 This week in Ubuntu Security Updates 43 unique CVEs addressed
-[USN-4212-1] HAProxy vulnerability [00:50]  1 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-19330    Failed to treat malformed headers as invalid - HTTP/2 allows encoding headers as binary and these can then contain characters which would be invalid when converted to HTTP/1.</description>
+[USN-4212-1] HAProxy vulnerability [00:50]  1 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-19330   Failed to treat malformed headers as invalid - HTTP/2 allows encoding headers as binary and these can then contain characters which would be invalid when converted to HTTP/1.</description>
     </item>
     
     <item>
@@ -1086,7 +1097,7 @@ This week in Ubuntu Security Updates 43 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-55/</guid>
       <description>Overview This week we cover security updates for NSS, SQLite, the Linux kernel and more, plus Joe and Alex discuss a recent FBI advisory warning about possible dangers of Smart TVs.
 This week in Ubuntu Security Updates 49 unique CVEs addressed
-[USN-4203-1, USN-4203-2] NSS vulnerability [00:59]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11745    OOB write if using an output buffer smaller than the block size (since used block size instead of buffer size) when writing output for NSC_EncryptUpdate()  [USN-4204-1] psutil vulnerability [02:05]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-18874    Double free due to mishandling of reference counting when handling errors during conversion of system data into Python objects - could be triggered when using a malicious disk partition label with an invalid character that fails to decode - so triggers error than fails to cleanup properly and results in a double free  [USN-4205-1] SQLite vulnerabilities [02:59]  6 CVEs addressed in Precise ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-5827  CVE-2019-5018  CVE-2019-19244  CVE-2019-19242  CVE-2019-16168  CVE-2018-8740    Various robustness updates for SQLite related to CVEs from other applications that misuse SQLite - so this makes SQLite more tolerant if it is misused in the future - plus a fix of a possible crash (DoS) under certain usage scenarios.</description>
+[USN-4203-1, USN-4203-2] NSS vulnerability [00:59]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11745   OOB write if using an output buffer smaller than the block size (since used block size instead of buffer size) when writing output for NSC_EncryptUpdate()  [USN-4204-1] psutil vulnerability [02:05]  1 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-18874   Double free due to mishandling of reference counting when handling errors during conversion of system data into Python objects - could be triggered when using a malicious disk partition label with an invalid character that fails to decode - so triggers error than fails to cleanup properly and results in a double free  [USN-4205-1] SQLite vulnerabilities [02:59]  6 CVEs addressed in Precise ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-5827 CVE-2019-5018 CVE-2019-19244 CVE-2019-19242 CVE-2019-16168 CVE-2018-8740   Various robustness updates for SQLite related to CVEs from other applications that misuse SQLite - so this makes SQLite more tolerant if it is misused in the future - plus a fix of a possible crash (DoS) under certain usage scenarios.</description>
     </item>
     
     <item>
@@ -1097,7 +1108,7 @@ This week in Ubuntu Security Updates 49 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-54/</guid>
       <description>Overview Security updates for DPDK, Linux kernel, QEMU, ImageMagick, Ghostscript and more, plus Joe and Alex talk about how to get into information security.
 This week in Ubuntu Security Updates 89 unique CVEs addressed
-[USN-4189-1] DPDK vulnerability [01:00]  1 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-14818    Data Plane Development Kit - Memory and file-descriptor leak, able to be triggered by a malicious master or a container with access to the vhost_user socket  [USN-4190-1] libjpeg-turbo vulnerabilities [01:41]  4 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-2201  CVE-2018-20330  CVE-2018-19664  CVE-2018-14498    2 x heap-buffer overflow - crash or possible RCE 2 x heap-buffer overread - crash  [USN-4183-2] Linux kernel vulnerability [02:48]  9 CVEs addressed in Eoan  CVE-2019-17666  CVE-2019-16746  CVE-2019-15793  CVE-2019-15792  CVE-2019-15791  CVE-2019-0154  CVE-2018-12207  CVE-2019-11135  CVE-2019-0155    Episode 53 - Extra update for CVE-2019-0155 (i915 blitter command streamer) - previous one was based on an in-flight patch that got changed at the last minute before the CRD - part of this fix is to whitelist certain commands to the command-streamer, and this is done via a bitmask - this used a memset() to zero it out but assumed the size of the underlying data was 32-bit - so on 64-bit platforms this becomes a 64-bit size and so half the bitmask is not zeroed out - meaning the whitelist may be able to be bypassed - this fix includes the final upstream fix  [USN-4184-2] Linux kernel vulnerability and regression [04:37]  14 CVEs addressed in Bionic (HWE), Disco  CVE-2019-17666  CVE-2019-17056  CVE-2019-17055  CVE-2019-17054  CVE-2019-17053  CVE-2019-17052  CVE-2019-15793  CVE-2019-15792  CVE-2019-15791  CVE-2019-15098  CVE-2019-0154  CVE-2018-12207  CVE-2019-11135  CVE-2019-0155    See above (i915 vuln) - but also includes a fix for a regression that was introduced in last week&amp;rsquo;s kernel - KVM guests would fail to launch if extended page tables were disabled or not supported.</description>
+[USN-4189-1] DPDK vulnerability [01:00]  1 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-14818   Data Plane Development Kit - Memory and file-descriptor leak, able to be triggered by a malicious master or a container with access to the vhost_user socket  [USN-4190-1] libjpeg-turbo vulnerabilities [01:41]  4 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-2201 CVE-2018-20330 CVE-2018-19664 CVE-2018-14498   2 x heap-buffer overflow - crash or possible RCE 2 x heap-buffer overread - crash  [USN-4183-2] Linux kernel vulnerability [02:48]  9 CVEs addressed in Eoan  CVE-2019-17666 CVE-2019-16746 CVE-2019-15793 CVE-2019-15792 CVE-2019-15791 CVE-2019-0154 CVE-2018-12207 CVE-2019-11135 CVE-2019-0155   Episode 53 - Extra update for CVE-2019-0155 (i915 blitter command streamer) - previous one was based on an in-flight patch that got changed at the last minute before the CRD - part of this fix is to whitelist certain commands to the command-streamer, and this is done via a bitmask - this used a memset() to zero it out but assumed the size of the underlying data was 32-bit - so on 64-bit platforms this becomes a 64-bit size and so half the bitmask is not zeroed out - meaning the whitelist may be able to be bypassed - this fix includes the final upstream fix  [USN-4184-2] Linux kernel vulnerability and regression [04:37]  14 CVEs addressed in Bionic (HWE), Disco  CVE-2019-17666 CVE-2019-17056 CVE-2019-17055 CVE-2019-17054 CVE-2019-17053 CVE-2019-17052 CVE-2019-15793 CVE-2019-15792 CVE-2019-15791 CVE-2019-15098 CVE-2019-0154 CVE-2018-12207 CVE-2019-11135 CVE-2019-0155   See above (i915 vuln) - but also includes a fix for a regression that was introduced in last week&amp;rsquo;s kernel - KVM guests would fail to launch if extended page tables were disabled or not supported.</description>
     </item>
     
     <item>
@@ -1108,7 +1119,7 @@ This week in Ubuntu Security Updates 89 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-53/</guid>
       <description>Overview This week we look at the details of the latest Intel hardware vulnerabilities, including security updates for the Linux kernel and Intel microcode, plus Bash, cpio, FriBidi and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-4176-1] GNU cpio vulnerability [01:00]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14866    cpio wouldn&amp;rsquo;t validate values written to headers of TAR archives - could use cpio to create a TAR containing another TAR with a big size and will use wrong context values (ie uses inner TAR values in header) - this could allow a TAR to be created which has files with permissions not owned by the original user - when extracted by cpio will overwrite target files - whereas if using tar to extract will avoid this - fixed to check and handle header values correctly  [USN-4177-1] Rygel vulnerability [02:18]  Affecting Eoan Added Rygel in Eoan which is off by default but needed GNOME to handle that - it would disable it dynamically - so if not running GNOME, rygel would be running and sharing your stuff on the local network - fixed to disable automatically on upgrade - and then can use the GNOME settings front-end etc to re-enable if desired  [USN-4178-1] WebKitGTK+ vulnerabilities [03:34]  4 CVEs addressed in Bionic, Disco  CVE-2019-8771  CVE-2019-8769  CVE-2019-8720  CVE-2019-8625     [USN-4181-1] WebKitGTK+ vulnerabilities [03:34]  2 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-8814  CVE-2019-8812     [USN-4179-1] FriBidi vulnerability [04:00]  1 CVEs addressed in Disco, Eoan  CVE-2019-18397    Issue reported about unicode isolated handling in Qt - turns out affected GTK applications as well - entirely different code with very similar flaw - stack buffer overflow since didn&amp;rsquo;t check bounds of a fixed array used to store details on nested unicode isolate sections - simple fix to just check bounds before trying to store next element  [USN-4180-1] Bash vulnerability [05:38]  1 CVEs addressed in Precise ESM  CVE-2012-6711    Recently announced vuln (heap-based buffer overflow) in bash affecting old versions - so most releases unaffected except Precise - can trigger by printing wide characters via echo -e  [USN-4182-1, USN-4182-2] Intel Microcode update [06:12]  2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11139  CVE-2019-11135    Voltage modulation able to be performed by a local privileged user - disabled via microcode TSX Asynchronous Abort (TAA) - https://wiki.</description>
+[USN-4176-1] GNU cpio vulnerability [01:00]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14866   cpio wouldn&amp;rsquo;t validate values written to headers of TAR archives - could use cpio to create a TAR containing another TAR with a big size and will use wrong context values (ie uses inner TAR values in header) - this could allow a TAR to be created which has files with permissions not owned by the original user - when extracted by cpio will overwrite target files - whereas if using tar to extract will avoid this - fixed to check and handle header values correctly  [USN-4177-1] Rygel vulnerability [02:18]  Affecting Eoan Added Rygel in Eoan which is off by default but needed GNOME to handle that - it would disable it dynamically - so if not running GNOME, rygel would be running and sharing your stuff on the local network - fixed to disable automatically on upgrade - and then can use the GNOME settings front-end etc to re-enable if desired  [USN-4178-1] WebKitGTK+ vulnerabilities [03:34]  4 CVEs addressed in Bionic, Disco  CVE-2019-8771 CVE-2019-8769 CVE-2019-8720 CVE-2019-8625    [USN-4181-1] WebKitGTK+ vulnerabilities [03:34]  2 CVEs addressed in Bionic, Disco, Eoan  CVE-2019-8814 CVE-2019-8812    [USN-4179-1] FriBidi vulnerability [04:00]  1 CVEs addressed in Disco, Eoan  CVE-2019-18397   Issue reported about unicode isolated handling in Qt - turns out affected GTK applications as well - entirely different code with very similar flaw - stack buffer overflow since didn&amp;rsquo;t check bounds of a fixed array used to store details on nested unicode isolate sections - simple fix to just check bounds before trying to store next element  [USN-4180-1] Bash vulnerability [05:38]  1 CVEs addressed in Precise ESM  CVE-2012-6711   Recently announced vuln (heap-based buffer overflow) in bash affecting old versions - so most releases unaffected except Precise - can trigger by printing wide characters via echo -e  [USN-4182-1, USN-4182-2] Intel Microcode update [06:12]  2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11139 CVE-2019-11135   Voltage modulation able to be performed by a local privileged user - disabled via microcode TSX Asynchronous Abort (TAA) - https://wiki.</description>
     </item>
     
     <item>
@@ -1119,7 +1130,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-52/</guid>
       <description>Overview This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus some regressions in Whoopsie, Apport and Firefox, and Joe and Alex discuss the release of 14.04 ESM for personal use under the Ubuntu Advantage program.
 This week in Ubuntu Security Updates 9 unique CVEs addressed
-[USN-4171-2] Apport vulnerabilities [00:44]  5 CVEs addressed in Trusty ESM  CVE-2019-15790  CVE-2019-11485  CVE-2019-11483  CVE-2019-11482  CVE-2019-11481    Episode 51  [USN-4172-1, USN-4172-2] file vulnerability [00:58]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-18218    OSS-Fuzz using libFuzzer - heap based buffer overflow of up to 4 bytes in the CDF parser when handing vector elements - Composite Document File - used in MS Office prior to new zipped XML format - ie.</description>
+[USN-4171-2] Apport vulnerabilities [00:44]  5 CVEs addressed in Trusty ESM  CVE-2019-15790 CVE-2019-11485 CVE-2019-11483 CVE-2019-11482 CVE-2019-11481   Episode 51  [USN-4172-1, USN-4172-2] file vulnerability [00:58]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-18218   OSS-Fuzz using libFuzzer - heap based buffer overflow of up to 4 bytes in the CDF parser when handing vector elements - Composite Document File - used in MS Office prior to new zipped XML format - ie.</description>
     </item>
     
     <item>
@@ -1130,7 +1141,7 @@ This week in Ubuntu Security Updates 9 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-51/</guid>
       <description>Overview In this Halloween Special, Joe and Alex talk about what scares them in security, plus we look at security updates for Firefox, PHP, Samba, Whoopsie, Apport and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
-[USN-4165-1] Firefox vulnerabilities [00:46]  13 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-17002  CVE-2019-17001  CVE-2019-17000  CVE-2019-15903  CVE-2019-11765  CVE-2019-11764  CVE-2019-11763  CVE-2019-11762  CVE-2019-11761  CVE-2019-11760  CVE-2019-11759  CVE-2019-11757  CVE-2018-6156    1 high priority, 11 medium and 1 low  Heap buffer overflow via a crafted WebRTC video - originally for Chromium and was fixed for that last year - Firefox suffered similarly but disables the feature by default - has finally been fixed for Firefox as well by integrating the original fix from Chromium Usual suspects of stack-based buffer overflows, UAFs, a heap buffer overflow in bundled expat (Episode 47),    [USN-4166-1, USN-4166-2] PHP vulnerability [02:10]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11043    RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM module to write past allocated buffers - and so ends up also writing into the FCGI protocol data buffers - which can then create a chance for RCE Exploit on github targetting vulnerable PHP-FPM servers which use nginx in a particular configuration  [USN-4167-1, USN-4167-2] Samba vulnerabilities [03:11]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14847  CVE-2019-14833  CVE-2019-10218    DoS from a user with &amp;ldquo;get changes&amp;rdquo; permissions - could crash an AD DC LDAP server due to a NULL pointer deref when using dirsync with ranged results Can configure AD DC to call out to a custom command to verify password complexity - is handed a copy of the cleartext password - but if this contained any multi-byte characters, would not get the full password - since it would pass the password as bytes but only copy the number of characters - and since multi-byte characters take more than 1 byte would miss the last few bytes of the password - so could circumvent password complexity requirements Malicious server could craft filenames which contain relative path characters (.</description>
+[USN-4165-1] Firefox vulnerabilities [00:46]  13 CVEs addressed in Xenial, Bionic, Disco, Eoan  CVE-2019-17002 CVE-2019-17001 CVE-2019-17000 CVE-2019-15903 CVE-2019-11765 CVE-2019-11764 CVE-2019-11763 CVE-2019-11762 CVE-2019-11761 CVE-2019-11760 CVE-2019-11759 CVE-2019-11757 CVE-2018-6156   1 high priority, 11 medium and 1 low  Heap buffer overflow via a crafted WebRTC video - originally for Chromium and was fixed for that last year - Firefox suffered similarly but disables the feature by default - has finally been fixed for Firefox as well by integrating the original fix from Chromium Usual suspects of stack-based buffer overflows, UAFs, a heap buffer overflow in bundled expat (Episode 47),    [USN-4166-1, USN-4166-2] PHP vulnerability [02:10]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-11043   RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM module to write past allocated buffers - and so ends up also writing into the FCGI protocol data buffers - which can then create a chance for RCE Exploit on github targetting vulnerable PHP-FPM servers which use nginx in a particular configuration  [USN-4167-1, USN-4167-2] Samba vulnerabilities [03:11]  3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan  CVE-2019-14847 CVE-2019-14833 CVE-2019-10218   DoS from a user with &amp;ldquo;get changes&amp;rdquo; permissions - could crash an AD DC LDAP server due to a NULL pointer deref when using dirsync with ranged results Can configure AD DC to call out to a custom command to verify password complexity - is handed a copy of the cleartext password - but if this contained any multi-byte characters, would not get the full password - since it would pass the password as bytes but only copy the number of characters - and since multi-byte characters take more than 1 byte would miss the last few bytes of the password - so could circumvent password complexity requirements Malicious server could craft filenames which contain relative path characters (.</description>
     </item>
     
     <item>
@@ -1141,7 +1152,7 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-50/</guid>
       <description>Overview Alex and Joe discuss the big news of this week - the release of Ubuntu 19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt, UW IMAP and more.
 This week in Ubuntu Security Updates 51 unique CVEs addressed
-[USN-4156-2] SDL vulnerabilities [00:37]  11 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-7637  CVE-2019-7636  CVE-2019-7635  CVE-2019-7578  CVE-2019-7577  CVE-2019-7576  CVE-2019-7575  CVE-2019-7574  CVE-2019-7573  CVE-2019-7572  CVE-2019-13616    Covered in Episode 49 and Episode 48  [USN-4160-1] UW IMAP vulnerability [01:04]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-19518    University of Washington IMAP toolkit (used by PHP for it&amp;rsquo;s IMAP implementation) Used rsh to implement various operations - wouldn&amp;rsquo;t try and sanitize the provided hostname - so if attacker could provide a hostname/mailbox to php&amp;rsquo;s IMAP without any validation could execute arbitrary commands on the host  Fixed by turning off the rsh based functionality by default in PHP - if you still want this you can set imap.</description>
+[USN-4156-2] SDL vulnerabilities [00:37]  11 CVEs addressed in Precise ESM, Trusty ESM  CVE-2019-7637 CVE-2019-7636 CVE-2019-7635 CVE-2019-7578 CVE-2019-7577 CVE-2019-7576 CVE-2019-7575 CVE-2019-7574 CVE-2019-7573 CVE-2019-7572 CVE-2019-13616   Covered in Episode 49 and Episode 48  [USN-4160-1] UW IMAP vulnerability [01:04]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-19518   University of Washington IMAP toolkit (used by PHP for it&amp;rsquo;s IMAP implementation) Used rsh to implement various operations - wouldn&amp;rsquo;t try and sanitize the provided hostname - so if attacker could provide a hostname/mailbox to php&amp;rsquo;s IMAP without any validation could execute arbitrary commands on the host  Fixed by turning off the rsh based functionality by default in PHP - if you still want this you can set imap.</description>
     </item>
     
     <item>
@@ -1152,7 +1163,7 @@ This week in Ubuntu Security Updates 51 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-49/</guid>
       <description>Overview This week we look at updates for Sudo, Python, OpenStack Octavia and more, plus we discuss a recent CVE for Python which resulted in erroneous scientific research results, and we go over some of your feedback from Episode 48.
 This week in Ubuntu Security Updates 27 unique CVEs addressed
-[USN-4148-1] OpenEXR vulnerabilities [00:45]  8 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-18444  CVE-2017-9115  CVE-2017-9113  CVE-2017-9111  CVE-2017-9116  CVE-2017-9112  CVE-2017-9110  CVE-2017-12596    Image format developed by ILM with a high definition range for computer imaging applications Range of issues (c++ codebase)  OOB writes (usually only of a few bytes past the end of a buffer) - assertion failure or memory corruption -&amp;gt; crash / code execution OOB reads (same) - crash    [USN-4149-1] Unbound vulnerability [02:06]  1 CVEs addressed in Disco  CVE-2019-16866    Validating, recursive DNS resolver OOB read due to a remotely crafted NOTIFY query (source IP needs to match an ACL) -&amp;gt; crash  [USN-4151-1, USN-4151-2] Python vulnerabilities [02:40]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-16935  CVE-2019-16056    XML-RPC server module could end up serving arbitrary JS if set via the set_server_title() method as did not escape content Python email module tries to parse email address into sender + domain - if domain contains multiple @ chars could get confused and return wrong output - so applications which rely on this for validating email addresses could accept an email address which is actually invalid  [USN-4152-1] libsoup vulnerability [03:53]  1 CVEs addressed in Bionic, Disco  CVE-2019-17266    Heap buffer OOB read - fails to check the specified length of message against the actual received message - could then memcpy past the end of the input message -&amp;gt; crash  [USN-4153-1] Octavia vulnerability [04:33]  1 CVEs addressed in Disco  CVE-2019-17134    Amphora Images in OpenStack Octavia - fails to properly validate client certificates for management network clients -&amp;gt; could allow anyone with management network access to retrieve information / issue config commands  [USN-4154-1] Sudo vulnerability [05:06]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-14287    Lots of press around a seemingly high priority privilege escalation vulnerability - BUT requires an admin to have configured sudo with a particular configuration (ie specifying a user can run a command as any other user via the ALL keyword in a Runas rule).</description>
+[USN-4148-1] OpenEXR vulnerabilities [00:45]  8 CVEs addressed in Xenial, Bionic, Disco  CVE-2018-18444 CVE-2017-9115 CVE-2017-9113 CVE-2017-9111 CVE-2017-9116 CVE-2017-9112 CVE-2017-9110 CVE-2017-12596   Image format developed by ILM with a high definition range for computer imaging applications Range of issues (c++ codebase)  OOB writes (usually only of a few bytes past the end of a buffer) - assertion failure or memory corruption -&amp;gt; crash / code execution OOB reads (same) - crash    [USN-4149-1] Unbound vulnerability [02:06]  1 CVEs addressed in Disco  CVE-2019-16866   Validating, recursive DNS resolver OOB read due to a remotely crafted NOTIFY query (source IP needs to match an ACL) -&amp;gt; crash  [USN-4151-1, USN-4151-2] Python vulnerabilities [02:40]  2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-16935 CVE-2019-16056   XML-RPC server module could end up serving arbitrary JS if set via the set_server_title() method as did not escape content Python email module tries to parse email address into sender + domain - if domain contains multiple @ chars could get confused and return wrong output - so applications which rely on this for validating email addresses could accept an email address which is actually invalid  [USN-4152-1] libsoup vulnerability [03:53]  1 CVEs addressed in Bionic, Disco  CVE-2019-17266   Heap buffer OOB read - fails to check the specified length of message against the actual received message - could then memcpy past the end of the input message -&amp;gt; crash  [USN-4153-1] Octavia vulnerability [04:33]  1 CVEs addressed in Disco  CVE-2019-17134   Amphora Images in OpenStack Octavia - fails to properly validate client certificates for management network clients -&amp;gt; could allow anyone with management network access to retrieve information / issue config commands  [USN-4154-1] Sudo vulnerability [05:06]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-14287   Lots of press around a seemingly high priority privilege escalation vulnerability - BUT requires an admin to have configured sudo with a particular configuration (ie specifying a user can run a command as any other user via the ALL keyword in a Runas rule).</description>
     </item>
     
     <item>
@@ -1163,7 +1174,7 @@ This week in Ubuntu Security Updates 27 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-48/</guid>
       <description>Overview This week we look at security updates for the Linux kernel, SDL 2, ClamAV and more, plus Alex and Joe talk security and performance trade-offs, snaps and OWASP Top 10 Cloud Security recommendations, and finally Alex covers some recent concerns about the security of the Snap Store.
 This week in Ubuntu Security Updates 31 unique CVEs addressed
-[USN-4142-1, USN-4142-2] e2fsprogs vulnerability [00:37]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-5094    Cisco TALOS - possible code execution via OOB write to the heap for code which handles quota support in ext4 - so possible to trigger via a specially crafted ext4 partition - could be triggered during an fsck on the partition etc.</description>
+[USN-4142-1, USN-4142-2] e2fsprogs vulnerability [00:37]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-5094   Cisco TALOS - possible code execution via OOB write to the heap for code which handles quota support in ext4 - so possible to trigger via a specially crafted ext4 partition - could be triggered during an fsck on the partition etc.</description>
     </item>
     
     <item>
@@ -1174,7 +1185,7 @@ This week in Ubuntu Security Updates 31 unique CVEs addressed
       <guid>https://ubuntusecuritypodcast.org/episode-47/</guid>
       <description>Overview We catch up on details of the past few weeks of security updates, including Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin Magazine.
 This week in Ubuntu Security Updates 93 unique CVEs addressed
-[USN-4125-1] Memcached vulnerability [00:42]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15026    Possible stack buffer over-read when using UNIX sockets (copies address of UNIX socket using strncpy() which could possibly read past the end of the src buffer) - possible crash -&amp;gt; DoS - fixed to explicitly limit length to smallest of src/dst buffers rather than just size of dest buffer  [USN-4126-1] FreeType vulnerability [01:49]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial  CVE-2015-9383    2 CVEs addressed in Precise ESM, Trusty ESM only  CVE-2015-9382  CVE-2015-9381    All various heap based buffer over-reads - crash -&amp;gt; DoS  [USN-4127-1, USN-4127-2] Python vulnerabilities [02:13]  8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-9948  CVE-2019-9947  CVE-2019-9740  CVE-2019-5010  CVE-2019-10160  CVE-2019-9636  CVE-2018-20852  CVE-2018-20406    4 issues in urllib:  would allow to easily open files from local file-system 2 different CRLF injection issues specially crafted URL could cause urllib to send cookies / auth data for wrong host  Fixed incorrectly upstream so had a two CVEs assigned     http cookiejar wouldn&amp;rsquo;t validate URL correctly so could also send cookies for another domain Possible NULL ptr deref when parsing X509 certs if had an empty CRL distpoint / URI Possible integer overflow when serializing a tens of hundreds of gigabytes of data via the pickle format - could cause memory exhaustion  [USN-4128-1, USN-4128-2] Tomcat vulnerabilities [03:35]  3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)  CVE-2019-10072  CVE-2019-0199  CVE-2019-0221    HTTP/2 server would accept streams with an excessive number of SETTINGS frames and would permit clients to keep streams open without reading / writing anything - could lead to DoS by causing server-side threads to block  Original fix was incomplete - so got a second CVE   Possible XSS injection if using SSI printenv command as would echo user provided data without escaping - intended only for debugging so shouldn&amp;rsquo;t be used in a production website anyway  [USN-4120-2] systemd regression [04:45]  Affecting Bionic, Disco Episode 46 - systemd-resolved dbus access control - the update was prepared using a pending SRU update - but this contained a regression in networking - re-released the security fix but without this SRU update included.</description>
+[USN-4125-1] Memcached vulnerability [00:42]  1 CVEs addressed in Xenial, Bionic, Disco  CVE-2019-15026   Possible stack buffer over-read when using UNIX sockets (copies address of UNIX socket using strncpy() which could possibly read past the end of the src buffer) - possible crash -&amp;gt; DoS - fixed to explicitly limit length to smallest of src/dst buffers rather than just size of dest buffer  [USN-4126-1] FreeType vulnerability [01:49]  1 CVEs addressed in Precise ESM, Trusty ESM, Xenial  CVE-2015-9383   2 CVEs addressed in Precise ESM, Trusty ESM only  CVE-2015-9382 CVE-2015-9381   All various heap based buffer over-reads - crash -&amp;gt; DoS  [USN-4127-1, USN-4127-2] Python vulnerabilities [02:13]  8 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco  CVE-2019-9948 CVE-2019-9947 CVE-2019-9740 CVE-2019-5010 CVE-2019-10160 CVE-2019-9636 CVE-2018-20852 CVE-2018-20406   4 issues in urllib:  would allow to easily open files from local file-system 2 different CRLF injection issues specially crafted URL could cause urllib to send cookies / auth data for wrong host  Fixed incorrectly upstream so had a two CVEs assigned     http cookiejar wouldn&amp;rsquo;t validate URL correctly so could also send cookies for another domain Possible NULL ptr deref when parsing X509 certs if had an empty CRL distpoint / URI Possible integer overflow when serializing a tens of hundreds of gigabytes of data via the pickle format - could cause memory exhaustion  [USN-4128-1, USN-4128-2] Tomcat vulnerabilities [03:35]  3 CVEs addressed in Xenial, Bionic (tomcat-8) and Bionic, Disco (tomcat-9)  CVE-2019-10072 CVE-2019-0199 CVE-2019-0221   HTTP/2 server would accept streams with an excessive number of SETTINGS frames and would permit clients to keep streams open without reading / writing anything - could lead to DoS by causing server-side threads to block  Original fix was incomplete - so got a second CVE   Possible XSS injection if using SSI printenv command as would echo user provided data without escaping - intended only for debugging so shouldn&amp;rsquo;t be used in a production website anyway  [USN-4120-2] systemd regression [04:45]  Affecting Bionic, Disco Episode 46 - systemd-resolved dbus access control - the update was prepared using a pending SRU update - but this contained a regression in networking - re-released the security fix but without this SRU update included.</description>
     </item>
     
     <item>
