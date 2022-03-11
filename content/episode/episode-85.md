@@ -33,12 +33,12 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4444-1](https://usn.ubuntu.com/4444-1/)] WebKitGTK vulnerabilities [00:48] {#usn-4444-1-webkitgtk-vulnerabilities-00-48}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-9925](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9925) <!-- medium -->
-    -   [CVE-2020-9915](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9915) <!-- medium -->
-    -   [CVE-2020-9895](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9895) <!-- medium -->
-    -   [CVE-2020-9894](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9894) <!-- medium -->
-    -   [CVE-2020-9893](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9893) <!-- medium -->
-    -   [CVE-2020-9862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9862) <!-- medium -->
+    -   [CVE-2020-9925](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9925)
+    -   [CVE-2020-9915](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9915)
+    -   [CVE-2020-9895](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9895)
+    -   [CVE-2020-9894](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9894)
+    -   [CVE-2020-9893](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9893)
+    -   [CVE-2020-9862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9862)
 -   Various issues in web / JS engines - remote attacker with a malicious
     website could cause XSS, DoS, RCE etc
 
@@ -46,7 +46,7 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4445-1](https://usn.ubuntu.com/4445-1/)] Ghostscript vulnerability [01:22] {#usn-4445-1-ghostscript-vulnerability-01-22}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-15900](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15900) <!-- medium -->
+    -   [CVE-2020-15900](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15900)
 -   Integer overflow via \`rsearch\` operator - could allow to override file
     access controls and hence get code execution as the user who is viewing /
     processing the PS file - only affects most recent versions
@@ -55,10 +55,10 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4446-1](https://usn.ubuntu.com/4446-1/)] Squid vulnerabilities [02:24] {#usn-4446-1-squid-vulnerabilities-02-24}
 
 -   4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2019-18676](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676) <!-- medium -->
-    -   [CVE-2019-12524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12524) <!-- medium -->
-    -   [CVE-2019-12523](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523) <!-- medium -->
-    -   [CVE-2019-12520](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12520) <!-- medium -->
+    -   [CVE-2019-18676](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676)
+    -   [CVE-2019-12524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12524)
+    -   [CVE-2019-12523](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523)
+    -   [CVE-2019-12520](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12520)
 -   Jeriko One & Kristoffer Danielsson - incorrect cache handling -> cache
     injection attacks. Incorrect URN / URL handling -> bypass access / rule
     checks. Input validation failure -> crash, DoS
@@ -67,19 +67,19 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4298-2](https://usn.ubuntu.com/4298-2/)] SQLite vulnerabilities [03:07] {#usn-4298-2-sqlite-vulnerabilities-03-07}
 
 -   6 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2019-19926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926) <!-- medium -->
-    -   [CVE-2019-13751](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751) <!-- medium -->
-    -   [CVE-2019-13753](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753) <!-- medium -->
-    -   [CVE-2019-13752](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752) <!-- medium -->
-    -   [CVE-2019-13750](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750) <!-- medium -->
-    -   [CVE-2019-13734](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734) <!-- medium -->
+    -   [CVE-2019-19926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926)
+    -   [CVE-2019-13751](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751)
+    -   [CVE-2019-13753](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753)
+    -   [CVE-2019-13752](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752)
+    -   [CVE-2019-13750](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750)
+    -   [CVE-2019-13734](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734)
 -   [Episode 66](https://ubuntusecuritypodcast.org/episode-66/)
 
 
 ### [[USN-4447-1](https://usn.ubuntu.com/4447-1/)] libssh vulnerability [03:27] {#usn-4447-1-libssh-vulnerability-03-27}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-16135](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16135) <!-- medium -->
+    -   [CVE-2020-16135](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16135)
 -   Under low memory conditions, could fail to allocate a buffer, would
     result in a NULL pointer dereference and hence crash
 
@@ -87,9 +87,9 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4448-1](https://usn.ubuntu.com/4448-1/)] Tomcat vulnerabilities [04:01] {#usn-4448-1-tomcat-vulnerabilities-04-01}
 
 -   3 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-9484](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9484) <!-- low -->
-    -   [CVE-2020-1935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1935) <!-- low -->
-    -   [CVE-2020-13935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13935) <!-- medium -->
+    -   [CVE-2020-9484](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9484)
+    -   [CVE-2020-1935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1935)
+    -   [CVE-2020-13935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13935)
 -   Infinite loop if sent a WebSocket frame with an invalid payload length ->
     DoS if then sent multiple requests
 
@@ -97,9 +97,9 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4449-1](https://usn.ubuntu.com/4449-1/)] Apport vulnerabilities [04:23] {#usn-4449-1-apport-vulnerabilities-04-23}
 
 -   3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15702) <!-- medium -->
-    -   [CVE-2020-15701](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15701) <!-- medium -->
-    -   [CVE-2020-11936](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11936) <!-- medium -->
+    -   [CVE-2020-15702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15702)
+    -   [CVE-2020-15701](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15701)
+    -   [CVE-2020-11936](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11936)
 -   2 from Ryota Shiga:
     -   Failed to drop privileges correctly when invoking gdbus to determine if
         the user is closing their session -> would be invoked with root group
@@ -120,9 +120,9 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4450-1](https://usn.ubuntu.com/4450-1/)] Whoopsie vulnerabilities [07:24] {#usn-4450-1-whoopsie-vulnerabilities-07-24}
 
 -   3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15570](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15570) <!-- medium -->
-    -   [CVE-2020-12135](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12135) <!-- medium -->
-    -   [CVE-2020-11937](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11937) <!-- medium -->
+    -   [CVE-2020-15570](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15570)
+    -   [CVE-2020-12135](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12135)
+    -   [CVE-2020-11937](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11937)
 -   All 3 from Seong-Joong Kim
     -   Crash when trying to process a crafted crash file (tries to allocate
         too large amount of memory and crashes) -> DoS
@@ -135,7 +135,7 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4451-1](https://usn.ubuntu.com/4451-1/)] ppp vulnerability [09:18] {#usn-4451-1-ppp-vulnerability-09-18}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15704](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15704) <!-- medium -->
+    -   [CVE-2020-15704](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15704)
 -   Ubuntu specific patch - pppd is setuid() root and would helpfully
     modprobe ppp\_generic module when needed - but would not clear
     MODPROBE\_OPTIONS environment module and so this could be used to either
@@ -148,7 +148,7 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4452-1](https://usn.ubuntu.com/4452-1/)] libvirt vulnerability [10:31] {#usn-4452-1-libvirt-vulnerability-10-31}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-15708](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15708) <!-- medium -->
+    -   [CVE-2020-15708](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15708)
 -   libvirt package sets up the libvirt socket via systemd - systemd unit
     specifies a SocketMode=0666 so is world writable :( - fixed to ensure
     systemd unit specifies this as only owner/group writable and ensures the
@@ -158,14 +158,14 @@ Ghostscript, Squid, Apport, Whoopsie, libvirt and more.
 ### [[USN-4432-2](https://usn.ubuntu.com/4432-2/)] GRUB2 regression [11:10] {#usn-4432-2-grub2-regression-11-10}
 
 -   8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15707](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15707) <!-- medium -->
-    -   [CVE-2020-15705](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15705) <!-- medium -->
-    -   [CVE-2020-14308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14308) <!-- high -->
-    -   [CVE-2020-14311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14311) <!-- high -->
-    -   [CVE-2020-14310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14310) <!-- high -->
-    -   [CVE-2020-14309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14309) <!-- high -->
-    -   [CVE-2020-15706](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15706) <!-- high -->
-    -   [CVE-2020-10713](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10713) <!-- high -->
+    -   [CVE-2020-15707](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15707)
+    -   [CVE-2020-15705](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15705)
+    -   [CVE-2020-14308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14308)
+    -   [CVE-2020-14311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14311)
+    -   [CVE-2020-14310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14310)
+    -   [CVE-2020-14309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14309)
+    -   [CVE-2020-15706](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15706)
+    -   [CVE-2020-10713](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10713)
 -   Legacy BIOS systems - grub core (in MBR) and modules (in file-system)
     could get out of sync if grub was not being installed onto the correct
     disk (this was the case for some users with manually configured RAID

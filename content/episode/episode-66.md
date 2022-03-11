@@ -33,7 +33,7 @@ look at some recent blog posts by the team too.
 ### [[USN-4296-1](https://usn.ubuntu.com/4296-1/)] Django vulnerability [00:49] {#usn-4296-1-django-vulnerability-00-49}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-9402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9402) <!-- medium -->
+    -   [CVE-2020-9402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9402)
 -   Possible SQL injection in the GIS functions when using an Oracle DB as
     the backend - Oracle provides a tolerance parameter which can be used
     when doing GIS queries and this was not properly sanitised before use so
@@ -43,8 +43,8 @@ look at some recent blog posts by the team too.
 ### [[USN-4297-1](https://usn.ubuntu.com/4297-1/)] runC vulnerabilities [01:30] {#usn-4297-1-runc-vulnerabilities-01-30}
 
 -   2 CVEs addressed in Bionic, Eoan
-    -   [CVE-2019-19921](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19921) <!-- medium -->
-    -   [CVE-2019-16884](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16884) <!-- medium -->
+    -   [CVE-2019-19921](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19921)
+    -   [CVE-2019-16884](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16884)
 -   Race condition on mounting of shared volume mounts between two
     containers - can replace /proc on one container with a symlink inside of
     the shared mount - when this gets cleaned up other parts of /proc can end
@@ -62,19 +62,19 @@ look at some recent blog posts by the team too.
 ### [[USN-4298-1](https://usn.ubuntu.com/4298-1/)] SQLite vulnerabilities [03:09] {#usn-4298-1-sqlite-vulnerabilities-03-09}
 
 -   13 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2019-13752](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752) <!-- medium -->
-    -   [CVE-2020-9327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9327) <!-- medium -->
-    -   [CVE-2019-20218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20218) <!-- low -->
-    -   [CVE-2019-19926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926) <!-- medium -->
-    -   [CVE-2019-19959](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19959) <!-- medium -->
-    -   [CVE-2019-19925](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19925) <!-- medium -->
-    -   [CVE-2019-19924](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19924) <!-- medium -->
-    -   [CVE-2019-19923](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19923) <!-- medium -->
-    -   [CVE-2019-19880](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19880) <!-- medium -->
-    -   [CVE-2019-13751](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751) <!-- medium -->
-    -   [CVE-2019-13753](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753) <!-- medium -->
-    -   [CVE-2019-13750](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750) <!-- medium -->
-    -   [CVE-2019-13734](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734) <!-- medium -->
+    -   [CVE-2019-13752](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13752)
+    -   [CVE-2020-9327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9327)
+    -   [CVE-2019-20218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20218)
+    -   [CVE-2019-19926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19926)
+    -   [CVE-2019-19959](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19959)
+    -   [CVE-2019-19925](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19925)
+    -   [CVE-2019-19924](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19924)
+    -   [CVE-2019-19923](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19923)
+    -   [CVE-2019-19880](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19880)
+    -   [CVE-2019-13751](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13751)
+    -   [CVE-2019-13753](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13753)
+    -   [CVE-2019-13750](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13750)
+    -   [CVE-2019-13734](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13734)
 -   Many different memory safety issues resolved in SQLite - across various
     parts of SQLite including handling of shadow tables, corrupt records,
     parsing, ZIP archives and column optimisations. Most of these were

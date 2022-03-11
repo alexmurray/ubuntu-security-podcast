@@ -35,8 +35,8 @@ ongoing development of secure foundations for robotics.
 ### [[USN-4293-1](https://usn.ubuntu.com/4293-1/)] libarchive vulnerabilities [00:18] {#usn-4293-1-libarchive-vulnerabilities-00-18}
 
 -   2 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-9308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9308) <!-- medium -->
-    -   [CVE-2019-19221](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19221) <!-- low -->
+    -   [CVE-2020-9308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-9308)
+    -   [CVE-2019-19221](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19221)
 -   OSS-Fuzz: RAR unpacker would try and unpack a file with a corrupted /
     malformed header (ie. zero length etc) - OOB read - crash/DoS
 -   OOB read due to use of wrong length parameter to mbtowc()
@@ -45,8 +45,8 @@ ongoing development of secure foundations for robotics.
 ### [[USN-4294-1](https://usn.ubuntu.com/4294-1/)] OpenSMTPD vulnerabilities [02:00] {#usn-4294-1-opensmtpd-vulnerabilities-02-00}
 
 -   2 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-8793](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8793) <!-- low -->
-    -   [CVE-2020-8794](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8794) <!-- high -->
+    -   [CVE-2020-8793](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8793)
+    -   [CVE-2020-8794](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8794)
 -   Remote code exec on both clients **and** server (as server reuses client-side code for debouncing)
 -   Possible arbitrary file read due to race-condition in offline
     functionality - a user could create a hardlink to a root-owned file which
@@ -58,21 +58,21 @@ ongoing development of secure foundations for robotics.
 ### [[USN-4288-2](https://usn.ubuntu.com/4288-2/)] ppp vulnerability [03:12] {#usn-4288-2-ppp-vulnerability-03-12}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2020-8597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597) <!-- medium -->
+    -   [CVE-2020-8597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597)
 -   [Episode 64](https://ubuntusecuritypodcast.org/episode-64/) (possible buffer overflow)
 
 
 ### [[USN-4290-2](https://usn.ubuntu.com/4290-2/)] libpam-radius-auth vulnerability [03:23] {#usn-4290-2-libpam-radius-auth-vulnerability-03-23}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2015-9542](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542) <!-- medium -->
+    -   [CVE-2015-9542](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542)
 -   [Episode 64](https://ubuntusecuritypodcast.org/episode-64/) (stack overflow in password field handling)
 
 
 ### [[USN-4295-1](https://usn.ubuntu.com/4295-1/)] Rake vulnerability [03:31] {#usn-4295-1-rake-vulnerability-03-31}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-8130](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8130) <!-- medium -->
+    -   [CVE-2020-8130](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8130)
 -   Command injection vulnerability via Rake::FileList - used the Kernel
     open() method rather than File.open() - this supports launching a process
     if the file-name starts with a pipe \`|\` - so instead just use File.open()

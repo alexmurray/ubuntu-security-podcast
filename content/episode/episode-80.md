@@ -35,15 +35,15 @@ more.
 ### [[USN-4397-2](https://usn.ubuntu.com/4397-2/)] NSS vulnerability [00:40] {#usn-4397-2-nss-vulnerability-00-40}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399) <!-- medium -->
+    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399)
 -   [Episode 79](https://ubuntusecuritypodcast.org/episode-79/) - timing side-channel attack during DSA key generation
 
 
 ### [[USN-4399-1](https://usn.ubuntu.com/4399-1/)] Bind vulnerabilities [01:00] {#usn-4399-1-bind-vulnerabilities-01-00}
 
 -   2 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-8619](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8619) <!-- medium -->
-    -   [CVE-2020-8618](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8618) <!-- medium -->
+    -   [CVE-2020-8619](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8619)
+    -   [CVE-2020-8618](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8618)
 -   2 DoS issues (resulting from the ability to crash BIND) - an
     authoritative nameserver which provides entries containing asterisks
     could change entries and cause BIND to crash, also an attacker who can
@@ -54,7 +54,7 @@ more.
 ### [[USN-4400-1](https://usn.ubuntu.com/4400-1/)] nfs-utils vulnerability [01:44] {#usn-4400-1-nfs-utils-vulnerability-01-44}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2019-3689](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3689) <!-- low -->
+    -   [CVE-2019-3689](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3689)
 -   /var/lib/nfs was writable by statd user - if this user were compromised
     could change then contents of this directory. This dir also contains
     files owned and managed by root (rmtab etc) - mountd uses rmtab and so
@@ -67,8 +67,8 @@ more.
 ### [[USN-4401-1](https://usn.ubuntu.com/4401-1/)] Mutt vulnerabilities [03:16] {#usn-4401-1-mutt-vulnerabilities-03-16}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-14154](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14154) <!-- low -->
-    -   [CVE-2020-14093](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14093) <!-- medium -->
+    -   [CVE-2020-14154](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14154)
+    -   [CVE-2020-14093](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14093)
 -   2 issues on handling of TLS connections for IMAP servers, could allow a
     middleperson attack since wouldn't properly do authentication of the
     network connection, and would proceed to connect even if a user chooses
@@ -79,8 +79,8 @@ more.
 ### [[USN-4402-1](https://usn.ubuntu.com/4402-1/)] curl vulnerabilities [04:06] {#usn-4402-1-curl-vulnerabilities-04-06}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-8177](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8177) <!-- medium -->
-    -   [CVE-2020-8169](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8169) <!-- medium -->
+    -   [CVE-2020-8177](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8177)
+    -   [CVE-2020-8169](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8169)
 -   Could be tricked to overwrite local files as
     specified by a malicious server when using the CLI arguments -i in
     combination with -J - -J is used to specify that the local filename

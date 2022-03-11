@@ -45,12 +45,12 @@ we cover some open positions on the Ubuntu Security team too.
 ### [[USN-4900-1](https://ubuntu.com/security/notices/USN-4900-1)] OpenEXR vulnerabilities [01:40] {#usn-4900-1-openexr-vulnerabilities-01-40}
 
 -   6 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-3479](https://ubuntu.com/security/CVE-2021-3479) <!-- medium -->
-    -   [CVE-2021-3478](https://ubuntu.com/security/CVE-2021-3478) <!-- medium -->
-    -   [CVE-2021-3477](https://ubuntu.com/security/CVE-2021-3477) <!-- low -->
-    -   [CVE-2021-3476](https://ubuntu.com/security/CVE-2021-3476) <!-- medium -->
-    -   [CVE-2021-3475](https://ubuntu.com/security/CVE-2021-3475) <!-- medium -->
-    -   [CVE-2021-3474](https://ubuntu.com/security/CVE-2021-3474) <!-- medium -->
+    -   [CVE-2021-3479](https://ubuntu.com/security/CVE-2021-3479)
+    -   [CVE-2021-3478](https://ubuntu.com/security/CVE-2021-3478)
+    -   [CVE-2021-3477](https://ubuntu.com/security/CVE-2021-3477)
+    -   [CVE-2021-3476](https://ubuntu.com/security/CVE-2021-3476)
+    -   [CVE-2021-3475](https://ubuntu.com/security/CVE-2021-3475)
+    -   [CVE-2021-3474](https://ubuntu.com/security/CVE-2021-3474)
 -   Usual mix of memory corruption vulns in this image processing library -
     DoS via memory consumption, integer overflow -> buffer overflow -> RCE
     etc from crafted image files
@@ -59,10 +59,10 @@ we cover some open positions on the Ubuntu Security team too.
 ### [[USN-4901-1](https://ubuntu.com/security/notices/USN-4901-1)] Linux kernel (Trusty HWE) vulnerabilities [02:24] {#usn-4901-1-linux-kernel--trusty-hwe--vulnerabilities-02-24}
 
 -   4 CVEs addressed in Precise ESM (12.04 ESM)
-    -   [CVE-2021-27364](https://ubuntu.com/security/CVE-2021-27364) <!-- medium -->
-    -   [CVE-2021-27363](https://ubuntu.com/security/CVE-2021-27363) <!-- medium -->
-    -   [CVE-2020-28374](https://ubuntu.com/security/CVE-2020-28374) <!-- high -->
-    -   [CVE-2021-27365](https://ubuntu.com/security/CVE-2021-27365) <!-- high -->
+    -   [CVE-2021-27364](https://ubuntu.com/security/CVE-2021-27364)
+    -   [CVE-2021-27363](https://ubuntu.com/security/CVE-2021-27363)
+    -   [CVE-2020-28374](https://ubuntu.com/security/CVE-2020-28374)
+    -   [CVE-2021-27365](https://ubuntu.com/security/CVE-2021-27365)
 -   3.13 kernel used as the HWE kernel from 14.04 backported to 12.04 ESM
 -   iSCSI issues from [Episode 109](https://ubuntusecuritypodcast.org/episode-109/) plus LIO SCSI XCOPY issue from [Episode 102](https://ubuntusecuritypodcast.org/episode-102/)
 
@@ -70,8 +70,8 @@ we cover some open positions on the Ubuntu Security team too.
 ### [[USN-4561-2](https://ubuntu.com/security/notices/USN-4561-2)] Rack vulnerabilities [03:27] {#usn-4561-2-rack-vulnerabilities-03-27}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-8184](https://ubuntu.com/security/CVE-2020-8184) <!-- medium -->
-    -   [CVE-2020-8161](https://ubuntu.com/security/CVE-2020-8161) <!-- low -->
+    -   [CVE-2020-8184](https://ubuntu.com/security/CVE-2020-8184)
+    -   [CVE-2020-8161](https://ubuntu.com/security/CVE-2020-8161)
 -   Modular Ruby webserver interface
 -   [Episode 93](https://ubuntusecuritypodcast.org/episode-93/) - 18.04 LTS - now provided for remaining releases
 
@@ -79,7 +79,7 @@ we cover some open positions on the Ubuntu Security team too.
 ### [[USN-4902-1](https://ubuntu.com/security/notices/USN-4902-1)] Django vulnerability [03:53] {#usn-4902-1-django-vulnerability-03-53}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-28658](https://ubuntu.com/security/CVE-2021-28658) <!-- low -->
+    -   [CVE-2021-28658](https://ubuntu.com/security/CVE-2021-28658)
 -   Potential directory traversal via uploaded files - if using a custom
     upload handler with the MultiPartParser from the django parsers
     framework, could have been vulnerable - didn't affect any of the built-in
@@ -134,13 +134,13 @@ we cover some open positions on the Ubuntu Security team too.
 #### Linux Cryptography and Security Engineer {#linux-cryptography-and-security-engineer}
 
 -   <https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote>
-    <!-- americas -->
+   
 
 
 #### Security Engineer - Ubuntu {#security-engineer-ubuntu}
 
 -   <https://canonical.com/careers/2925180/security-engineer-ubuntu-remote>
-    <!-- worldwide -->
+   
 
 
 ## Get in contact {#get-in-contact}

@@ -33,16 +33,16 @@ cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 ### [[USN-4720-2](https://ubuntu.com/security/notices/USN-4720-2)] Apport vulnerabilities [00:53] {#usn-4720-2-apport-vulnerabilities-00-53}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2021-25684](https://ubuntu.com/security/CVE-2021-25684) <!-- medium -->
-    -   [CVE-2021-25683](https://ubuntu.com/security/CVE-2021-25683) <!-- medium -->
-    -   [CVE-2021-25682](https://ubuntu.com/security/CVE-2021-25682) <!-- medium -->
+    -   [CVE-2021-25684](https://ubuntu.com/security/CVE-2021-25684)
+    -   [CVE-2021-25683](https://ubuntu.com/security/CVE-2021-25683)
+    -   [CVE-2021-25682](https://ubuntu.com/security/CVE-2021-25682)
 -   [Episode 102](https://ubuntusecuritypodcast.org/episode-102/)
 
 
 ### [[USN-4721-1](https://ubuntu.com/security/notices/USN-4721-1)] Flatpak vulnerability [01:06] {#usn-4721-1-flatpak-vulnerability-01-06}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-21261](https://ubuntu.com/security/CVE-2021-21261) <!-- medium -->
+    -   [CVE-2021-21261](https://ubuntu.com/security/CVE-2021-21261)
 -   Flatpak sandbox escape - Flatpak isolates applications inside their own
     mount / user / etc namespaces - allows sandboxed applications to
     communicate with the host via various portals - ie. open a file via a
@@ -60,8 +60,8 @@ cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 ### [[USN-4722-1](https://ubuntu.com/security/notices/USN-4722-1)] ReadyMedia (MiniDLNA) vulnerabilities [01:11] {#usn-4722-1-readymedia--minidlna--vulnerabilities-01-11}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-28926](https://ubuntu.com/security/CVE-2020-28926) <!-- medium -->
-    -   [CVE-2020-12695](https://ubuntu.com/security/CVE-2020-12695) <!-- medium -->
+    -   [CVE-2020-28926](https://ubuntu.com/security/CVE-2020-28926)
+    -   [CVE-2020-12695](https://ubuntu.com/security/CVE-2020-12695)
 -   Possible RCE via malicious UPnP requests - could send with chunked
     encoding, this would exploit a signdness bug leading to a heap buffer
     overflow
@@ -73,7 +73,7 @@ cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 ### [[USN-4723-1](https://ubuntu.com/security/notices/USN-4723-1)] PEAR vulnerability [02:30] {#usn-4723-1-pear-vulnerability-02-30}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-36193](https://ubuntu.com/security/CVE-2020-36193) <!-- medium -->
+    -   [CVE-2020-36193](https://ubuntu.com/security/CVE-2020-36193)
 -   Improper handling of symlinks in archives could result in arbitrary file
     overwrite via directory traversal - since PHP PEAR runs installer as
     root, could then overwrite arbitrary files as root and priv esc / code
@@ -83,28 +83,28 @@ cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 ### [[USN-4724-1](https://ubuntu.com/security/notices/USN-4724-1)] OpenLDAP vulnerabilities [03:14] {#usn-4724-1-openldap-vulnerabilities-03-14}
 
 -   10 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-36230](https://ubuntu.com/security/CVE-2020-36230) <!-- medium -->
-    -   [CVE-2020-36229](https://ubuntu.com/security/CVE-2020-36229) <!-- medium -->
-    -   [CVE-2020-36228](https://ubuntu.com/security/CVE-2020-36228) <!-- medium -->
-    -   [CVE-2020-36227](https://ubuntu.com/security/CVE-2020-36227) <!-- medium -->
-    -   [CVE-2020-36223](https://ubuntu.com/security/CVE-2020-36223) <!-- medium -->
-    -   [CVE-2020-36226](https://ubuntu.com/security/CVE-2020-36226) <!-- medium -->
-    -   [CVE-2020-36225](https://ubuntu.com/security/CVE-2020-36225) <!-- medium -->
-    -   [CVE-2020-36224](https://ubuntu.com/security/CVE-2020-36224) <!-- medium -->
-    -   [CVE-2020-36222](https://ubuntu.com/security/CVE-2020-36222) <!-- medium -->
-    -   [CVE-2020-36221](https://ubuntu.com/security/CVE-2020-36221) <!-- medium -->
+    -   [CVE-2020-36230](https://ubuntu.com/security/CVE-2020-36230)
+    -   [CVE-2020-36229](https://ubuntu.com/security/CVE-2020-36229)
+    -   [CVE-2020-36228](https://ubuntu.com/security/CVE-2020-36228)
+    -   [CVE-2020-36227](https://ubuntu.com/security/CVE-2020-36227)
+    -   [CVE-2020-36223](https://ubuntu.com/security/CVE-2020-36223)
+    -   [CVE-2020-36226](https://ubuntu.com/security/CVE-2020-36226)
+    -   [CVE-2020-36225](https://ubuntu.com/security/CVE-2020-36225)
+    -   [CVE-2020-36224](https://ubuntu.com/security/CVE-2020-36224)
+    -   [CVE-2020-36222](https://ubuntu.com/security/CVE-2020-36222)
+    -   [CVE-2020-36221](https://ubuntu.com/security/CVE-2020-36221)
 -   Various issues
 
 
 ### [[USN-4725-1](https://ubuntu.com/security/notices/USN-4725-1)] QEMU vulnerabilities [03:20] {#usn-4725-1-qemu-vulnerabilities-03-20}
 
 -   6 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-20181](https://ubuntu.com/security/CVE-2021-20181) <!-- medium -->
-    -   [CVE-2020-29443](https://ubuntu.com/security/CVE-2020-29443) <!-- medium -->
-    -   [CVE-2020-28916](https://ubuntu.com/security/CVE-2020-28916) <!-- medium -->
-    -   [CVE-2020-27821](https://ubuntu.com/security/CVE-2020-27821) <!-- medium -->
-    -   [CVE-2020-15859](https://ubuntu.com/security/CVE-2020-15859) <!-- medium -->
-    -   [CVE-2020-11947](https://ubuntu.com/security/CVE-2020-11947) <!-- medium -->
+    -   [CVE-2021-20181](https://ubuntu.com/security/CVE-2021-20181)
+    -   [CVE-2020-29443](https://ubuntu.com/security/CVE-2020-29443)
+    -   [CVE-2020-28916](https://ubuntu.com/security/CVE-2020-28916)
+    -   [CVE-2020-27821](https://ubuntu.com/security/CVE-2020-27821)
+    -   [CVE-2020-15859](https://ubuntu.com/security/CVE-2020-15859)
+    -   [CVE-2020-11947](https://ubuntu.com/security/CVE-2020-11947)
 -   Usual sorts of issues in device emulation etc resulting in info
     disclosure from host to guest or a crash of qemu host process etc
 
@@ -125,21 +125,21 @@ cover security updates for MiniDLNA, PHP-PEAR, the Linux kernel and more.
 ### [[USN-4713-2](https://ubuntu.com/security/notices/USN-4713-2)] Linux kernel vulnerability [04:22] {#usn-4713-2-linux-kernel-vulnerability-04-22}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2020-28374](https://ubuntu.com/security/CVE-2020-28374) <!-- high -->
+    -   [CVE-2020-28374](https://ubuntu.com/security/CVE-2020-28374)
 -   [Episode 102](https://ubuntusecuritypodcast.org/episode-102/) - LIO SCSI XCOPY issue
 
 
 ### [[USN-4727-1](https://ubuntu.com/security/notices/USN-4727-1)] Linux kernel vulnerability [04:36] {#usn-4727-1-linux-kernel-vulnerability-04-36}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-26708](https://ubuntu.com/security/CVE-2021-26708) <!-- high -->
+    -   [CVE-2021-26708](https://ubuntu.com/security/CVE-2021-26708)
 -   AF\_VSOCK race conditions - local user could get code execution as root via memory corruption
 
 
 ### [[USN-4728-1](https://ubuntu.com/security/notices/USN-4728-1)] snapd vulnerability [05:11] {#usn-4728-1-snapd-vulnerability-05-11}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-27352](https://ubuntu.com/security/CVE-2020-27352) <!-- high -->
+    -   [CVE-2020-27352](https://ubuntu.com/security/CVE-2020-27352)
 -   Gilad Reti & Nimrod Stoler from CyberArk
 -   Thanks to Ian Johnson from snapd team for working on the fix
 

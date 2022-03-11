@@ -38,10 +38,10 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   4 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM),
     Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14422](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14422) <!-- low -->
-    -   [CVE-2019-9674](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9674) <!-- low -->
-    -   [CVE-2019-20907](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20907) <!-- medium -->
-    -   [CVE-2019-17514](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17514) <!-- low -->
+    -   [CVE-2020-14422](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14422)
+    -   [CVE-2019-9674](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9674)
+    -   [CVE-2019-20907](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20907)
+    -   [CVE-2019-17514](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17514)
 -   CPU based DoS via infinite loop in parsing a crafted tar archive
 
 
@@ -49,15 +49,15 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04
     LTS)
-    -   [CVE-2020-13904](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13904) <!-- medium -->
-    -   [CVE-2020-12284](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12284) <!-- medium -->
-    -   [CVE-2019-17542](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17542) <!-- medium -->
-    -   [CVE-2019-17539](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17539) <!-- medium -->
-    -   [CVE-2019-13390](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13390) <!-- low -->
-    -   [CVE-2019-13312](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13312) <!-- medium -->
-    -   [CVE-2019-12730](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12730) <!-- medium -->
-    -   [CVE-2019-11338](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11338) <!-- low -->
-    -   [CVE-2018-15822](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15822) <!-- low -->
+    -   [CVE-2020-13904](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13904)
+    -   [CVE-2020-12284](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12284)
+    -   [CVE-2019-17542](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17542)
+    -   [CVE-2019-17539](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17539)
+    -   [CVE-2019-13390](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13390)
+    -   [CVE-2019-13312](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13312)
+    -   [CVE-2019-12730](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12730)
+    -   [CVE-2019-11338](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11338)
+    -   [CVE-2018-15822](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15822)
 -   UAF, use of uninitialised variables, heap buffer over-read, NULL pointer
     deref etc - most via oss-fuzz
 
@@ -65,25 +65,25 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 ### [[USN-4430-2](https://usn.ubuntu.com/4430-2/)] Pillow vulnerabilities [02:15] {#usn-4430-2-pillow-vulnerabilities-02-15}
 
 -   5 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-11538](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11538) <!-- low -->
-    -   [CVE-2020-10994](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10994) <!-- low -->
-    -   [CVE-2020-10379](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10379) <!-- medium -->
-    -   [CVE-2020-10378](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10378) <!-- low -->
-    -   [CVE-2020-10177](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10177) <!-- low -->
+    -   [CVE-2020-11538](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11538)
+    -   [CVE-2020-10994](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10994)
+    -   [CVE-2020-10379](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10379)
+    -   [CVE-2020-10378](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10378)
+    -   [CVE-2020-10177](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10177)
 -   2 buffer overflows in TIFF decoder
 
 
 ### [[USN-4433-1](https://usn.ubuntu.com/4433-1/)] OpenJDK vulnerabilities [02:33] {#usn-4433-1-openjdk-vulnerabilities-02-33}
 
 -   8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14621) <!-- medium -->
-    -   [CVE-2020-14593](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14593) <!-- medium -->
-    -   [CVE-2020-14583](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14583) <!-- medium -->
-    -   [CVE-2020-14581](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14581) <!-- medium -->
-    -   [CVE-2020-14577](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14577) <!-- medium -->
-    -   [CVE-2020-14573](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14573) <!-- medium -->
-    -   [CVE-2020-14562](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14562) <!-- medium -->
-    -   [CVE-2020-14556](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14556) <!-- medium -->
+    -   [CVE-2020-14621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14621)
+    -   [CVE-2020-14593](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14593)
+    -   [CVE-2020-14583](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14583)
+    -   [CVE-2020-14581](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14581)
+    -   [CVE-2020-14577](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14577)
+    -   [CVE-2020-14573](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14573)
+    -   [CVE-2020-14562](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14562)
+    -   [CVE-2020-14556](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14556)
 -   11.0.8 upstream release - thanks to Tiago from Foundations for preparing
     these
 -   Usual mix of issues for Java - possible sandbox escape, crash in TIFF
@@ -94,18 +94,18 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   12 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04
     LTS)
-    -   [CVE-2020-14405](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14405) <!-- medium -->
-    -   [CVE-2020-14404](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14404) <!-- medium -->
-    -   [CVE-2020-14403](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14403) <!-- medium -->
-    -   [CVE-2020-14402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14402) <!-- medium -->
-    -   [CVE-2020-14401](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14401) <!-- medium -->
-    -   [CVE-2020-14400](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14400) <!-- medium -->
-    -   [CVE-2020-14399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14399) <!-- medium -->
-    -   [CVE-2020-14398](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14398) <!-- medium -->
-    -   [CVE-2020-14397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14397) <!-- medium -->
-    -   [CVE-2020-14396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14396) <!-- medium -->
-    -   [CVE-2019-20840](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20840) <!-- medium -->
-    -   [CVE-2019-20839](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20839) <!-- medium -->
+    -   [CVE-2020-14405](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14405)
+    -   [CVE-2020-14404](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14404)
+    -   [CVE-2020-14403](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14403)
+    -   [CVE-2020-14402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14402)
+    -   [CVE-2020-14401](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14401)
+    -   [CVE-2020-14400](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14400)
+    -   [CVE-2020-14399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14399)
+    -   [CVE-2020-14398](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14398)
+    -   [CVE-2020-14397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14397)
+    -   [CVE-2020-14396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14396)
+    -   [CVE-2019-20840](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20840)
+    -   [CVE-2019-20839](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20839)
 -   2 NULL ptr deref, infinite loop -> DoS when closing connection,
     misaligned data access leading to possible crash, integer overflow, OOB
     read etc
@@ -115,9 +115,9 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   3 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM),
     Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-3481](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3481) <!-- medium -->
-    -   [CVE-2020-3350](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3350) <!-- medium -->
-    -   [CVE-2020-3327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3327) <!-- medium -->
+    -   [CVE-2020-3481](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3481)
+    -   [CVE-2020-3350](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3350)
+    -   [CVE-2020-3327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3327)
 -   0.102.4 release
 -   NULL ptr deref on crafted EGG, race condition where could replace target
     dir with a symlink and get clamscan to remove that target, OOB read in
@@ -127,8 +127,8 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 ### [[USN-4436-1](https://usn.ubuntu.com/4436-1/), [USN-4436-2](https://usn.ubuntu.com/4436-2/)] librsvg vulnerabilities / regression [04:55] {#usn-4436-1-usn-4436-2-librsvg-vulnerabilities-regression-04-55}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2019-20446](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20446) <!-- low -->
-    -   [CVE-2017-11464](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11464) <!-- low -->
+    -   [CVE-2019-20446](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20446)
+    -   [CVE-2017-11464](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11464)
 -   Update caused a regression since it removed a symbol - backed out,
     waiting for a more complete fix from upstream
 
@@ -136,7 +136,7 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 ### [[USN-4437-1](https://usn.ubuntu.com/4437-1/)] libslirp vulnerability [05:26] {#usn-4437-1-libslirp-vulnerability-05-26}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-10756](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10756) <!-- medium -->
+    -   [CVE-2020-10756](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10756)
 -   OOB read in icmp6 echo reply - guest leaks contents of host memory  ->
     info disclosure
 
@@ -144,45 +144,45 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 ### [[USN-4438-1](https://usn.ubuntu.com/4438-1/)] SQLite vulnerability [05:45] {#usn-4438-1-sqlite-vulnerability-05-45}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-15358](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15358) <!-- medium -->
+    -   [CVE-2020-15358](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15358)
 -   Heap buffer overflow
 
 
 ### [[USN-4439-1](https://usn.ubuntu.com/4439-1/)] Linux kernel vulnerabilities [05:51] {#usn-4439-1-linux-kernel-vulnerabilities-05-51}
 
 -   14 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-15780](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780) <!-- medium -->
-    -   [CVE-2019-20908](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908) <!-- medium -->
-    -   [CVE-2019-12380](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12380) <!-- negligible -->
-    -   [CVE-2020-13974](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974) <!-- low -->
-    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935) <!-- medium -->
-    -   [CVE-2020-10768](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768) <!-- medium -->
-    -   [CVE-2020-10767](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767) <!-- medium -->
-    -   [CVE-2020-10766](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766) <!-- medium -->
-    -   [CVE-2020-10757](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757) <!-- medium -->
-    -   [CVE-2020-10732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732) <!-- low -->
-    -   [CVE-2019-20810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810) <!-- low -->
-    -   [CVE-2019-19462](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19462) <!-- medium -->
-    -   [CVE-2019-19036](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19036) <!-- low -->
-    -   [CVE-2019-16089](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16089) <!-- low -->
+    -   [CVE-2020-15780](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780)
+    -   [CVE-2019-20908](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908)
+    -   [CVE-2019-12380](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12380)
+    -   [CVE-2020-13974](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974)
+    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935)
+    -   [CVE-2020-10768](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768)
+    -   [CVE-2020-10767](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767)
+    -   [CVE-2020-10766](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766)
+    -   [CVE-2020-10757](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757)
+    -   [CVE-2020-10732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732)
+    -   [CVE-2019-20810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810)
+    -   [CVE-2019-19462](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19462)
+    -   [CVE-2019-19036](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19036)
+    -   [CVE-2019-16089](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16089)
     -   5.0 (gke/oem)
 
 
 ### [[USN-4440-1](https://usn.ubuntu.com/4440-1/)] Linux kernel vulnerabilities [06:05] {#usn-4440-1-linux-kernel-vulnerabilities-06-05}
 
 -   12 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-15780](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780) <!-- medium -->
-    -   [CVE-2020-13974](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974) <!-- low -->
-    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935) <!-- medium -->
-    -   [CVE-2020-10768](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768) <!-- medium -->
-    -   [CVE-2020-10767](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767) <!-- medium -->
-    -   [CVE-2020-10766](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766) <!-- medium -->
-    -   [CVE-2020-10757](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757) <!-- medium -->
-    -   [CVE-2020-10732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732) <!-- low -->
-    -   [CVE-2019-20908](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908) <!-- medium -->
-    -   [CVE-2019-20810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810) <!-- low -->
-    -   [CVE-2019-19462](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19462) <!-- medium -->
-    -   [CVE-2019-16089](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16089) <!-- low -->
+    -   [CVE-2020-15780](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15780)
+    -   [CVE-2020-13974](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13974)
+    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935)
+    -   [CVE-2020-10768](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10768)
+    -   [CVE-2020-10767](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10767)
+    -   [CVE-2020-10766](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10766)
+    -   [CVE-2020-10757](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10757)
+    -   [CVE-2020-10732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10732)
+    -   [CVE-2019-20908](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20908)
+    -   [CVE-2019-20810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20810)
+    -   [CVE-2019-19462](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19462)
+    -   [CVE-2019-16089](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16089)
 -   5.3 (hwe / azure / gcp / gke / oracle)
 
 
@@ -190,36 +190,36 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   30 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04
     LTS)
-    -   [CVE-2020-14702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14702) <!-- medium -->
-    -   [CVE-2020-14697](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14697) <!-- medium -->
-    -   [CVE-2020-14680](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14680) <!-- medium -->
-    -   [CVE-2020-14678](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14678) <!-- medium -->
-    -   [CVE-2020-14663](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14663) <!-- medium -->
-    -   [CVE-2020-14656](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14656) <!-- medium -->
-    -   [CVE-2020-14654](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14654) <!-- medium -->
-    -   [CVE-2020-14651](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14651) <!-- medium -->
-    -   [CVE-2020-14643](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14643) <!-- medium -->
-    -   [CVE-2020-14641](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14641) <!-- medium -->
-    -   [CVE-2020-14634](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14634) <!-- medium -->
-    -   [CVE-2020-14633](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14633) <!-- medium -->
-    -   [CVE-2020-14632](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14632) <!-- medium -->
-    -   [CVE-2020-14631](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14631) <!-- medium -->
-    -   [CVE-2020-14624](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14624) <!-- medium -->
-    -   [CVE-2020-14623](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14623) <!-- medium -->
-    -   [CVE-2020-14620](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14620) <!-- medium -->
-    -   [CVE-2020-14619](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14619) <!-- medium -->
-    -   [CVE-2020-14597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14597) <!-- medium -->
-    -   [CVE-2020-14591](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14591) <!-- medium -->
-    -   [CVE-2020-14586](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14586) <!-- medium -->
-    -   [CVE-2020-14576](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14576) <!-- medium -->
-    -   [CVE-2020-14575](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14575) <!-- medium -->
-    -   [CVE-2020-14568](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14568) <!-- medium -->
-    -   [CVE-2020-14559](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14559) <!-- medium -->
-    -   [CVE-2020-14553](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14553) <!-- medium -->
-    -   [CVE-2020-14550](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14550) <!-- medium -->
-    -   [CVE-2020-14547](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14547) <!-- medium -->
-    -   [CVE-2020-14540](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14540) <!-- medium -->
-    -   [CVE-2020-14539](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14539) <!-- medium -->
+    -   [CVE-2020-14702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14702)
+    -   [CVE-2020-14697](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14697)
+    -   [CVE-2020-14680](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14680)
+    -   [CVE-2020-14678](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14678)
+    -   [CVE-2020-14663](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14663)
+    -   [CVE-2020-14656](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14656)
+    -   [CVE-2020-14654](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14654)
+    -   [CVE-2020-14651](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14651)
+    -   [CVE-2020-14643](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14643)
+    -   [CVE-2020-14641](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14641)
+    -   [CVE-2020-14634](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14634)
+    -   [CVE-2020-14633](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14633)
+    -   [CVE-2020-14632](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14632)
+    -   [CVE-2020-14631](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14631)
+    -   [CVE-2020-14624](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14624)
+    -   [CVE-2020-14623](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14623)
+    -   [CVE-2020-14620](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14620)
+    -   [CVE-2020-14619](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14619)
+    -   [CVE-2020-14597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14597)
+    -   [CVE-2020-14591](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14591)
+    -   [CVE-2020-14586](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14586)
+    -   [CVE-2020-14576](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14576)
+    -   [CVE-2020-14575](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14575)
+    -   [CVE-2020-14568](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14568)
+    -   [CVE-2020-14559](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14559)
+    -   [CVE-2020-14553](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14553)
+    -   [CVE-2020-14550](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14550)
+    -   [CVE-2020-14547](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14547)
+    -   [CVE-2020-14540](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14540)
+    -   [CVE-2020-14539](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14539)
 -   8.0.21 (focal)
 -   5.7.31 (bionic / xenial)
 
@@ -227,9 +227,9 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 ### [[USN-4442-1](https://usn.ubuntu.com/4442-1/)] Sympa vulnerabilities [06:54] {#usn-4442-1-sympa-vulnerabilities-06-54}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2020-10936](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10936) <!-- high -->
-    -   [CVE-2018-1000671](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000671) <!-- medium -->
-    -   [CVE-2018-1000550](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000550) <!-- medium -->
+    -   [CVE-2020-10936](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10936)
+    -   [CVE-2018-1000671](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000671)
+    -   [CVE-2018-1000550](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000550)
 -   Mailing list manager - possible privesc via injection of environment
     variables to run setuid wrappers arbitrary code
 
@@ -238,29 +238,29 @@ in FFmpeg, OpenJDK, LibVNCServer, ClamAV and more.
 
 -   9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04
     LTS)
-    -   [CVE-2020-15655](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15655) <!-- medium -->
-    -   [CVE-2020-15659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15659) <!-- medium -->
-    -   [CVE-2020-15658](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15658) <!-- low -->
-    -   [CVE-2020-15656](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15656) <!-- medium -->
-    -   [CVE-2020-15654](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15654) <!-- low -->
-    -   [CVE-2020-15653](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15653) <!-- medium -->
-    -   [CVE-2020-15652](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15652) <!-- medium -->
-    -   [CVE-2020-6514](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6514) <!-- medium -->
-    -   [CVE-2020-6463](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6463) <!-- medium -->
+    -   [CVE-2020-15655](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15655)
+    -   [CVE-2020-15659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15659)
+    -   [CVE-2020-15658](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15658)
+    -   [CVE-2020-15656](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15656)
+    -   [CVE-2020-15654](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15654)
+    -   [CVE-2020-15653](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15653)
+    -   [CVE-2020-15652](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15652)
+    -   [CVE-2020-6514](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6514)
+    -   [CVE-2020-6463](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6463)
 -   79.0
 
 
 ### [[USN-4432-1](https://usn.ubuntu.com/4432-1/)] GRUB 2 vulnerabilities [07:39] {#usn-4432-1-grub-2-vulnerabilities-07-39}
 
 -   8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15707](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15707) <!-- medium -->
-    -   [CVE-2020-15705](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15705) <!-- medium -->
-    -   [CVE-2020-14308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14308) <!-- high -->
-    -   [CVE-2020-14311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14311) <!-- high -->
-    -   [CVE-2020-14310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14310) <!-- high -->
-    -   [CVE-2020-14309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14309) <!-- high -->
-    -   [CVE-2020-15706](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15706) <!-- high -->
-    -   [CVE-2020-10713](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10713) <!-- high -->
+    -   [CVE-2020-15707](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15707)
+    -   [CVE-2020-15705](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15705)
+    -   [CVE-2020-14308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14308)
+    -   [CVE-2020-14311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14311)
+    -   [CVE-2020-14310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14310)
+    -   [CVE-2020-14309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14309)
+    -   [CVE-2020-15706](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15706)
+    -   [CVE-2020-10713](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10713)
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}

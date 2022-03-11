@@ -33,7 +33,7 @@ smart assistant connected devices.
 ### [[USN-4224-1](https://usn.ubuntu.com/4224-1/)] Django vulnerability [00:51] {#usn-4224-1-django-vulnerability-00-51}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-19844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19844) <!-- high -->
+    -   [CVE-2019-19844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19844)
 -   Account takeover via password reset - when comparing email addresses,
     would not do a proper unicode comparison - and so could specify an email
     address which appears equal to an existing users email address (after
@@ -49,28 +49,28 @@ smart assistant connected devices.
 
 -   5.3 kernel
 -   18 CVEs addressed in Bionic (Azure and GCP edge), Eoan
-    -   [CVE-2019-18813](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813) <!-- negligible -->
-    -   [CVE-2019-19807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807) <!-- medium -->
+    -   [CVE-2019-18813](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813)
+    -   [CVE-2019-19807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807)
         -   UAF in ALSA timer implementation - local user - crash (DoS) / ACE
-    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534) <!-- low -->
-    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529) <!-- low -->
-    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524) <!-- low -->
-    -   [CVE-2019-19072](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072) <!-- medium -->
+    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534)
+    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529)
+    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524)
+    -   [CVE-2019-19072](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072)
         -   Memory leak in tracing subsystem -> DoS
-    -   [CVE-2019-19055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055) <!-- low -->
-    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052) <!-- low -->
-    -   [CVE-2019-19051](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051) <!-- low -->
-    -   [CVE-2019-19047](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19047) <!-- low -->
-    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045) <!-- low -->
-    -   [CVE-2019-19044](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19044) <!-- low -->
-    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660) <!-- medium -->
+    -   [CVE-2019-19055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055)
+    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052)
+    -   [CVE-2019-19051](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19051)
+    -   [CVE-2019-19047](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19047)
+    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045)
+    -   [CVE-2019-19044](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19044)
+    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660)
         -   SpectreRSB mitigations not properly enforced on PPC
-    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231) <!-- low -->
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
+    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231)
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
         -   2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
         -   2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
 
 
@@ -78,41 +78,41 @@ smart assistant connected devices.
 
 -   5.0 kernel
 -   28 CVEs addressed in Bionic (AWS & Oracle Edge, Azure, GKE), Disco
-    -   [CVE-2019-18813](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813) <!-- negligible -->
-    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075) <!-- negligible -->
-    -   [CVE-2019-2214](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214) <!-- medium -->
+    -   [CVE-2019-18813](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18813)
+    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075)
+    -   [CVE-2019-2214](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214)
         -   Binder IPC OOB write - crash, ACE
-    -   [CVE-2019-19922](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19922) <!-- medium -->
-    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534) <!-- low -->
-    -   [CVE-2019-19532](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19532) <!-- low -->
-    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529) <!-- low -->
-    -   [CVE-2019-19526](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19526) <!-- low -->
-    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524) <!-- low -->
-    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083) <!-- low -->
-    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075) <!-- low -->
-    -   [CVE-2019-19072](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072) <!-- medium -->
+    -   [CVE-2019-19922](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19922)
+    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534)
+    -   [CVE-2019-19532](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19532)
+    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529)
+    -   [CVE-2019-19526](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19526)
+    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524)
+    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083)
+    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075)
+    -   [CVE-2019-19072](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19072)
         -   Memory leak in tracing subsystem -> DoS
-    -   [CVE-2019-19067](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067) <!-- low -->
-    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065) <!-- low -->
-    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060) <!-- low -->
-    -   [CVE-2019-19055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055) <!-- low -->
-    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052) <!-- low -->
-    -   [CVE-2019-19048](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048) <!-- medium -->
+    -   [CVE-2019-19067](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067)
+    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065)
+    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060)
+    -   [CVE-2019-19055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19055)
+    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052)
+    -   [CVE-2019-19048](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048)
         -   Memory leak in virtualbox guest driver -> DoS
-    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045) <!-- low -->
-    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660) <!-- medium -->
+    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045)
+    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660)
         -   SpectreRSB mitigations not properly enforced on PPC
-    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133) <!-- medium -->
+    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133)
         -   Wifi stack failed to validate SSID IE length - buffer overflow
-    -   [CVE-2019-16233](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233) <!-- low -->
-    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231) <!-- low -->
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
+    -   [CVE-2019-16233](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233)
+    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231)
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
         -   2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
         -   2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
-    -   [CVE-2019-10220](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10220) <!-- medium -->
+    -   [CVE-2019-10220](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10220)
         -   Kernel CIFS impl failed to sanitize paths returned from SMB server -
             malicious server could overwrite arbitrary files on the client
 
@@ -120,52 +120,52 @@ smart assistant connected devices.
 ### [[USN-4227-1](https://usn.ubuntu.com/4227-1/), [USN-4227-2](https://usn.ubuntu.com/4227-2/)] Linux kernel vulnerabilities [05:36] {#usn-4227-1-usn-4227-2-linux-kernel-vulnerabilities-05-36}
 
 -   14 CVEs addressed in Xenial, Bionic, Trusty ESM (Azure)
-    -   [CVE-2019-19807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807) <!-- medium -->
+    -   [CVE-2019-19807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19807)
         -   UAF in ALSA timer implementation - local user - crash (DoS) / ACE
-    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534) <!-- low -->
-    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529) <!-- low -->
-    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524) <!-- low -->
-    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083) <!-- low -->
-    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052) <!-- low -->
-    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045) <!-- low -->
-    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660) <!-- medium -->
+    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534)
+    -   [CVE-2019-19529](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19529)
+    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524)
+    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083)
+    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052)
+    -   [CVE-2019-19045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19045)
+    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660)
         -   SpectreRSB mitigations not properly enforced on PPC
-    -   [CVE-2019-16233](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233) <!-- low -->
-    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231) <!-- low -->
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
+    -   [CVE-2019-16233](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16233)
+    -   [CVE-2019-16231](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16231)
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
         -   2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
         -   2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
 
 
 ### [[USN-4228-1](https://usn.ubuntu.com/4228-1/), [USN-4228-2](https://usn.ubuntu.com/4228-2/)] Linux kernel vulnerabilities [06:17] {#usn-4228-1-usn-4228-2-linux-kernel-vulnerabilities-06-17}
 
 -   8 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
-    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534) <!-- low -->
-    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524) <!-- low -->
-    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052) <!-- low -->
-    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660) <!-- medium -->
+    -   [CVE-2019-19534](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19534)
+    -   [CVE-2019-19524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19524)
+    -   [CVE-2019-19052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19052)
+    -   [CVE-2019-18660](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18660)
         -   SpectreRSB mitigations not properly enforced on PPC
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
         -   2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
         -   2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
 
 
 ### [LSN-0061-1] Linux kernel vulnerability [06:38] {#lsn-0061-1-linux-kernel-vulnerability-06-38}
 
 -   5 CVEs addressed in Bionic & Xenial
-    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794) <!-- medium -->
+    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794)
         -   OverlayFS & ShiftFS reference counting issue - [Episode 55](https://ubuntusecuritypodcast.org/episode-55/)
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
         -   2 heap overflows in Marvell Wifi-Ex Driver - OTA - crash / ACE
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
         -   2 heap overflows in Marvell Libertas Wifi Driver - OTA - crash / ACE
 
 

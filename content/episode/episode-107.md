@@ -33,7 +33,7 @@ updates for GLib, zstd, Go, Git and more.
 ### [[USN-4757-2](https://ubuntu.com/security/notices/USN-4757-2)] wpa\_supplicant and hostapd vulnerability [00:45] {#usn-4757-2-wpa-supplicant-and-hostapd-vulnerability-00-45}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2021-27803](https://ubuntu.com/security/CVE-2021-27803) <!-- medium -->
+    -   [CVE-2021-27803](https://ubuntu.com/security/CVE-2021-27803)
 -   P2P/wifi direct UAF -> crash, RCE from [Episode 106](https://ubuntusecuritypodcast.org/episode-106/)
 
 
@@ -48,8 +48,8 @@ updates for GLib, zstd, Go, Git and more.
 ### [[USN-4759-1](https://ubuntu.com/security/notices/USN-4759-1)] GLib vulnerabilities [02:06] {#usn-4759-1-glib-vulnerabilities-02-06}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-27219](https://ubuntu.com/security/CVE-2021-27219) <!-- medium -->
-    -   [CVE-2021-27218](https://ubuntu.com/security/CVE-2021-27218) <!-- medium -->
+    -   [CVE-2021-27219](https://ubuntu.com/security/CVE-2021-27219)
+    -   [CVE-2021-27218](https://ubuntu.com/security/CVE-2021-27218)
 -   Possible integer overflow when allocation memory due to implicit cast
     from a 64-bit long to a 32-bit int when allocating memory - g\_memdup()
     function takes an 32-bit int argument but is called by g\_bytes\_new()
@@ -67,8 +67,8 @@ updates for GLib, zstd, Go, Git and more.
 ### [[USN-4760-1](https://ubuntu.com/security/notices/USN-4760-1)] libzstd vulnerabilities [04:44] {#usn-4760-1-libzstd-vulnerabilities-04-44}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-24032](https://ubuntu.com/security/CVE-2021-24032) <!-- medium -->
-    -   [CVE-2021-24031](https://ubuntu.com/security/CVE-2021-24031) <!-- medium -->
+    -   [CVE-2021-24032](https://ubuntu.com/security/CVE-2021-24032)
+    -   [CVE-2021-24031](https://ubuntu.com/security/CVE-2021-24031)
 -   Files created with default permissions - so was patched to chmod() so
     only owner could read/write them
 -   But this introduced a race condition where the file initially still has
@@ -82,7 +82,7 @@ updates for GLib, zstd, Go, Git and more.
 ### [[USN-4758-1](https://ubuntu.com/security/notices/USN-4758-1)] Go vulnerability [05:41] {#usn-4758-1-go-vulnerability-05-41}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-24553](https://ubuntu.com/security/CVE-2020-24553) <!-- low -->
+    -   [CVE-2020-24553](https://ubuntu.com/security/CVE-2020-24553)
 -   Possible XSS issue in CGI and FastCGI impl since go would treat non-HTML
     data as HTML and so would return a text/html content-type which would
     then be served as such by the webserver even if it had been uploaded with
@@ -94,7 +94,7 @@ updates for GLib, zstd, Go, Git and more.
 ### [[USN-4761-1](https://ubuntu.com/security/notices/USN-4761-1)] Git vulnerability [06:59] {#usn-4761-1-git-vulnerability-06-59}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-21300](https://ubuntu.com/security/CVE-2021-21300) <!-- medium -->
+    -   [CVE-2021-21300](https://ubuntu.com/security/CVE-2021-21300)
 -   Possible code execution by local git client when cloning a malicious
     remote repository - local client would need a git filter to be
     installed - like git LFS - and would have to be on a case-insensitive
@@ -124,7 +124,7 @@ updates for GLib, zstd, Go, Git and more.
 #### Ubuntu Security Engineer {#ubuntu-security-engineer}
 
 -   <https://canonical.com/careers/2612092/ubuntu-security-engineer-remote>
-    <!-- certifications -->
+   
 
 
 #### Security Engineer - Ubuntu {#security-engineer-ubuntu}

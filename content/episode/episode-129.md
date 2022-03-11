@@ -42,7 +42,7 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5052-1](https://ubuntu.com/security/notices/USN-5052-1)] MongoDB vulnerability [01:31] {#usn-5052-1-mongodb-vulnerability-01-31}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2019-2386](https://ubuntu.com/security/CVE-2019-2386) <!-- low -->
+    -   [CVE-2019-2386](https://ubuntu.com/security/CVE-2019-2386)
 -   Failed to invalidate existing sessions of users who are logged in and
     their account is then deleted - so if the account is recreated before
     they perform some action, the session gets reassociated with the new
@@ -52,14 +52,14 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5051-2](https://ubuntu.com/security/notices/USN-5051-2), [USN-5051-3](https://ubuntu.com/security/notices/USN-5051-3)] OpenSSL vulnerability [02:14] {#usn-5051-2-usn-5051-3-openssl-vulnerability-02-14}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712) <!-- medium -->
+    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712)
 -   [Episode 128](https://ubuntusecuritypodcast.org/episode-128/) - ASN.1 string handling vuln
 
 
 ### [[USN-5053-1](https://ubuntu.com/security/notices/USN-5053-1)] libssh vulnerability [02:42] {#usn-5053-1-libssh-vulnerability-02-42}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3634](https://ubuntu.com/security/CVE-2021-3634) <!-- medium -->
+    -   [CVE-2021-3634](https://ubuntu.com/security/CVE-2021-3634)
 -   Small SSH lib - used by libcurl, remmina and others
 -   Heap buffer overflow when re-keying - so a malicious client / server
     could cause crash / RCE on other side
@@ -68,7 +68,7 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5055-1](https://ubuntu.com/security/notices/USN-5055-1)] GNOME grilo vulnerability [03:22] {#usn-5055-1-gnome-grilo-vulnerability-03-22}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-39365](https://ubuntu.com/security/CVE-2021-39365) <!-- medium -->
+    -   [CVE-2021-39365](https://ubuntu.com/security/CVE-2021-39365)
 -   GNOME media discovery framework
 -   Failed to enable TLS certificate verification - so when connecting to a
     remote media source, an attacker could replace the TLS cert with their
@@ -81,7 +81,7 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5056-1](https://ubuntu.com/security/notices/USN-5056-1)] APR vulnerability [04:18] {#usn-5056-1-apr-vulnerability-04-18}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Hirsute (21.04)
-    -   [CVE-2021-35940](https://ubuntu.com/security/CVE-2021-35940) <!-- medium -->
+    -   [CVE-2021-35940](https://ubuntu.com/security/CVE-2021-35940)
 -   abstraction layer library across platform specific services / APIs
 -   used by apache2, subversion and others
 -   OOB read in time handling functions - would fail to validate parameters
@@ -92,7 +92,7 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5054-1](https://ubuntu.com/security/notices/USN-5054-1)] uWSGI vulnerability [05:38] {#usn-5054-1-uwsgi-vulnerability-05-38}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-11984](https://ubuntu.com/security/CVE-2020-11984) <!-- medium -->
+    -   [CVE-2020-11984](https://ubuntu.com/security/CVE-2020-11984)
 -   Buffer overflow in handling of large HTTP request headers - protocol
     represents header name/values and overall length in a uint16_t = so can
     only handle up to 16K headers so if more than that would cause an integer
@@ -103,7 +103,7 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5057-1](https://ubuntu.com/security/notices/USN-5057-1)] Squashfs-Tools vulnerability [06:34] {#usn-5057-1-squashfs-tools-vulnerability-06-34}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-40153](https://ubuntu.com/security/CVE-2021-40153) <!-- medium -->
+    -   [CVE-2021-40153](https://ubuntu.com/security/CVE-2021-40153)
 -   Failed to reject filenames in squashfs image containing relative path
     components - using a crafted mksquashfs could create such an image and
     then unsquashfs would happy create that file, outside of the extracted
@@ -113,16 +113,16 @@ Squashfs-Tools, Thunderbird and more.
 ### [[USN-5058-1](https://ubuntu.com/security/notices/USN-5058-1)] Thunderbird vulnerabilities [08:14] {#usn-5058-1-thunderbird-vulnerabilities-08-14}
 
 -   10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-30547](https://ubuntu.com/security/CVE-2021-30547) <!-- medium -->
-    -   [CVE-2021-29989](https://ubuntu.com/security/CVE-2021-29989) <!-- medium -->
-    -   [CVE-2021-29988](https://ubuntu.com/security/CVE-2021-29988) <!-- medium -->
-    -   [CVE-2021-29986](https://ubuntu.com/security/CVE-2021-29986) <!-- medium -->
-    -   [CVE-2021-29985](https://ubuntu.com/security/CVE-2021-29985) <!-- medium -->
-    -   [CVE-2021-29984](https://ubuntu.com/security/CVE-2021-29984) <!-- medium -->
-    -   [CVE-2021-29980](https://ubuntu.com/security/CVE-2021-29980) <!-- medium -->
-    -   [CVE-2021-29976](https://ubuntu.com/security/CVE-2021-29976) <!-- medium -->
-    -   [CVE-2021-29970](https://ubuntu.com/security/CVE-2021-29970) <!-- medium -->
-    -   [CVE-2021-29969](https://ubuntu.com/security/CVE-2021-29969) <!-- medium -->
+    -   [CVE-2021-30547](https://ubuntu.com/security/CVE-2021-30547)
+    -   [CVE-2021-29989](https://ubuntu.com/security/CVE-2021-29989)
+    -   [CVE-2021-29988](https://ubuntu.com/security/CVE-2021-29988)
+    -   [CVE-2021-29986](https://ubuntu.com/security/CVE-2021-29986)
+    -   [CVE-2021-29985](https://ubuntu.com/security/CVE-2021-29985)
+    -   [CVE-2021-29984](https://ubuntu.com/security/CVE-2021-29984)
+    -   [CVE-2021-29980](https://ubuntu.com/security/CVE-2021-29980)
+    -   [CVE-2021-29976](https://ubuntu.com/security/CVE-2021-29976)
+    -   [CVE-2021-29970](https://ubuntu.com/security/CVE-2021-29970)
+    -   [CVE-2021-29969](https://ubuntu.com/security/CVE-2021-29969)
 -   78.13
 -   STARTTLS vuln - would accept IMAP responses received before had finished
     STARTTLS handshake - PiTM inject content etc - plus various vulns from

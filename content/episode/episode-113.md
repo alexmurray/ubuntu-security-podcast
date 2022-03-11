@@ -33,8 +33,8 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4916-2](https://ubuntu.com/security/notices/USN-4916-2)] Linux kernel regression [00:48] {#usn-4916-2-linux-kernel-regression-00-48}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-29154](https://ubuntu.com/security/CVE-2021-29154) <!-- high -->
-    -   [CVE-2021-3493](https://ubuntu.com/security/CVE-2021-3493) <!-- high -->
+    -   [CVE-2021-29154](https://ubuntu.com/security/CVE-2021-29154)
+    -   [CVE-2021-3493](https://ubuntu.com/security/CVE-2021-3493)
 -   Possible memory leak introduced via fix for overlayfs priv esc vuln - so
     the fix effectively introduced a new vuln but only a DoS not priv esc
 
@@ -42,8 +42,8 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4924-1](https://ubuntu.com/security/notices/USN-4924-1)] Dnsmasq vulnerabilities [01:17] {#usn-4924-1-dnsmasq-vulnerabilities-01-17}
 
 -   2 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2019-14513](https://ubuntu.com/security/CVE-2019-14513) <!-- low -->
-    -   [CVE-2017-15107](https://ubuntu.com/security/CVE-2017-15107) <!-- low -->
+    -   [CVE-2019-14513](https://ubuntu.com/security/CVE-2019-14513)
+    -   [CVE-2017-15107](https://ubuntu.com/security/CVE-2017-15107)
 -   2 DoS issues, one possible OOB read -> crash, the other a trust issue
     where for DNSSEC configurations could end up having dnsmasq prove the
     non-existence of hostnames that actually exist - so again a DoS but not
@@ -53,7 +53,7 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4925-1](https://ubuntu.com/security/notices/USN-4925-1)] Shibboleth vulnerability [01:57] {#usn-4925-1-shibboleth-vulnerability-01-57}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-28963](https://ubuntu.com/security/CVE-2021-28963) <!-- medium -->
+    -   [CVE-2021-28963](https://ubuntu.com/security/CVE-2021-28963)
 -   SSO solution for InCommon Federation system
 -   Possible content injection bug in error or other pages since template
     generation would use attacker controlled inputs
@@ -62,18 +62,18 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4926-1](https://ubuntu.com/security/notices/USN-4926-1)] Firefox vulnerabilities [02:19] {#usn-4926-1-firefox-vulnerabilities-02-19}
 
 -   12 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Groovy (20.10), Focal (20.04 LTS)
-    -   [CVE-2021-24002](https://ubuntu.com/security/CVE-2021-24002) <!-- medium -->
-    -   [CVE-2021-23995](https://ubuntu.com/security/CVE-2021-23995) <!-- medium -->
-    -   [CVE-2021-29947](https://ubuntu.com/security/CVE-2021-29947) <!-- medium -->
-    -   [CVE-2021-29946](https://ubuntu.com/security/CVE-2021-29946) <!-- medium -->
-    -   [CVE-2021-29945](https://ubuntu.com/security/CVE-2021-29945) <!-- medium -->
-    -   [CVE-2021-24001](https://ubuntu.com/security/CVE-2021-24001) <!-- medium -->
-    -   [CVE-2021-24000](https://ubuntu.com/security/CVE-2021-24000) <!-- medium -->
-    -   [CVE-2021-23999](https://ubuntu.com/security/CVE-2021-23999) <!-- medium -->
-    -   [CVE-2021-23998](https://ubuntu.com/security/CVE-2021-23998) <!-- medium -->
-    -   [CVE-2021-23997](https://ubuntu.com/security/CVE-2021-23997) <!-- medium -->
-    -   [CVE-2021-23996](https://ubuntu.com/security/CVE-2021-23996) <!-- medium -->
-    -   [CVE-2021-23994](https://ubuntu.com/security/CVE-2021-23994) <!-- medium -->
+    -   [CVE-2021-24002](https://ubuntu.com/security/CVE-2021-24002)
+    -   [CVE-2021-23995](https://ubuntu.com/security/CVE-2021-23995)
+    -   [CVE-2021-29947](https://ubuntu.com/security/CVE-2021-29947)
+    -   [CVE-2021-29946](https://ubuntu.com/security/CVE-2021-29946)
+    -   [CVE-2021-29945](https://ubuntu.com/security/CVE-2021-29945)
+    -   [CVE-2021-24001](https://ubuntu.com/security/CVE-2021-24001)
+    -   [CVE-2021-24000](https://ubuntu.com/security/CVE-2021-24000)
+    -   [CVE-2021-23999](https://ubuntu.com/security/CVE-2021-23999)
+    -   [CVE-2021-23998](https://ubuntu.com/security/CVE-2021-23998)
+    -   [CVE-2021-23997](https://ubuntu.com/security/CVE-2021-23997)
+    -   [CVE-2021-23996](https://ubuntu.com/security/CVE-2021-23996)
+    -   [CVE-2021-23994](https://ubuntu.com/security/CVE-2021-23994)
 -   88.0
 -   Usual web issues plus a possible UAF in responsive design mode as well as
     an issue in FTP client where specially crafted FTP URL (ie one containing
@@ -86,7 +86,7 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4927-1](https://ubuntu.com/security/notices/USN-4927-1)] File Roller vulnerability [03:46] {#usn-4927-1-file-roller-vulnerability-03-46}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-36314](https://ubuntu.com/security/CVE-2020-36314) <!-- medium -->
+    -   [CVE-2020-36314](https://ubuntu.com/security/CVE-2020-36314)
 -   Incomplete fix for previous CVE-2020-11736 ([Episode 72](https://ubuntusecuritypodcast.org/episode-72/)) - directory
     traversal via symlink issue on extraction of archives
 
@@ -94,7 +94,7 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4892-1](https://ubuntu.com/security/notices/USN-4892-1)] OpenJDK vulnerability [04:15] {#usn-4892-1-openjdk-vulnerability-04-15}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-2163](https://ubuntu.com/security/CVE-2021-2163) <!-- medium -->
+    -   [CVE-2021-2163](https://ubuntu.com/security/CVE-2021-2163)
 -   Latest upstream point release to fix an issue where would fail to
     properly verify signatures on crafted JARs - could bypass security
     restrictions if a JAR is signed with an algorithm that is disabled
@@ -103,7 +103,7 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4922-2](https://ubuntu.com/security/notices/USN-4922-2)] Ruby vulnerability [04:35] {#usn-4922-2-ruby-vulnerability-04-35}
 
 -   1 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-28965](https://ubuntu.com/security/CVE-2021-28965) <!-- medium -->
+    -   [CVE-2021-28965](https://ubuntu.com/security/CVE-2021-28965)
 -   First USN for Hirsute \o/
 -   XML deserialisation issue
 
@@ -111,7 +111,7 @@ malicious commits in the upstream Linux kernel.
 ### [[USN-4913-2](https://ubuntu.com/security/notices/USN-4913-2)] Underscore vulnerability [04:49] {#usn-4913-2-underscore-vulnerability-04-49}
 
 -   1 CVEs addressed in 21.04
-    -   [CVE-2021-23358](https://ubuntu.com/security/CVE-2021-23358) <!-- medium -->
+    -   [CVE-2021-23358](https://ubuntu.com/security/CVE-2021-23358)
 -   Code injection via template function due to failure to properly handle
     untrusted input
 
@@ -189,13 +189,13 @@ malicious commits in the upstream Linux kernel.
 #### Linux Cryptography and Security Engineer {#linux-cryptography-and-security-engineer}
 
 -   <https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote>
-    <!-- americas -->
+   
 
 
 #### Security Engineer - Ubuntu {#security-engineer-ubuntu}
 
 -   <https://canonical.com/careers/2925180/security-engineer-ubuntu-remote>
-    <!-- worldwide -->
+   
 
 
 ## Get in contact {#get-in-contact}

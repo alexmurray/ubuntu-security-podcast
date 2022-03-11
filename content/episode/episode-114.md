@@ -33,17 +33,17 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4928-1](https://ubuntu.com/security/notices/USN-4928-1)] GStreamer Good Plugins vulnerabilities [00:40] {#usn-4928-1-gstreamer-good-plugins-vulnerabilities-00-40}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-3498](https://ubuntu.com/security/CVE-2021-3498) <!-- medium -->
-    -   [CVE-2021-3497](https://ubuntu.com/security/CVE-2021-3497) <!-- medium -->
+    -   [CVE-2021-3498](https://ubuntu.com/security/CVE-2021-3498)
+    -   [CVE-2021-3497](https://ubuntu.com/security/CVE-2021-3497)
 -   UAF or heap corruption when handling crafted Matroska files - crash / RCE
 
 
 ### [[USN-4929-1](https://ubuntu.com/security/notices/USN-4929-1)] Bind vulnerabilities [01:18] {#usn-4929-1-bind-vulnerabilities-01-18}
 
 -   3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-25216](https://ubuntu.com/security/CVE-2021-25216) <!-- medium -->
-    -   [CVE-2021-25215](https://ubuntu.com/security/CVE-2021-25215) <!-- medium -->
-    -   [CVE-2021-25214](https://ubuntu.com/security/CVE-2021-25214) <!-- medium -->
+    -   [CVE-2021-25216](https://ubuntu.com/security/CVE-2021-25216)
+    -   [CVE-2021-25215](https://ubuntu.com/security/CVE-2021-25215)
+    -   [CVE-2021-25214](https://ubuntu.com/security/CVE-2021-25214)
 -   2 possible crasher bugs (failed assertions) -> DoS, 1 buffer over-read or
     possible overflow -> crash / RCE
 
@@ -51,7 +51,7 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4930-1](https://ubuntu.com/security/notices/USN-4930-1)] Samba vulnerability [02:08] {#usn-4930-1-samba-vulnerability-02-08}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-20254](https://ubuntu.com/security/CVE-2021-20254) <!-- medium -->
+    -   [CVE-2021-20254](https://ubuntu.com/security/CVE-2021-20254)
 -   Failed to properly handle negative idmap cache entries - could then end
     up with incorrect group entries and as such could possibly allow a user
     to access / modify files they should not have access to
@@ -60,18 +60,18 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4931-1](https://ubuntu.com/security/notices/USN-4931-1)] Samba vulnerabilities [02:51] {#usn-4931-1-samba-vulnerabilities-02-51}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2021-20254](https://ubuntu.com/security/CVE-2021-20254) <!-- medium -->
-    -   [CVE-2020-14383](https://ubuntu.com/security/CVE-2020-14383) <!-- medium -->
-    -   [CVE-2020-14323](https://ubuntu.com/security/CVE-2020-14323) <!-- medium -->
-    -   [CVE-2020-14318](https://ubuntu.com/security/CVE-2020-14318) <!-- medium -->
+    -   [CVE-2021-20254](https://ubuntu.com/security/CVE-2021-20254)
+    -   [CVE-2020-14383](https://ubuntu.com/security/CVE-2020-14383)
+    -   [CVE-2020-14323](https://ubuntu.com/security/CVE-2020-14323)
+    -   [CVE-2020-14318](https://ubuntu.com/security/CVE-2020-14318)
 -   negative idmap cache entries issue plus some older vulns ([Episode 95](https://ubuntusecuritypodcast.org/episode-95/))
 
 
 ### [[LSN-0076-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2021-May/005996.html)] Linux kernel vulnerability [03:03] {#lsn-0076-1-linux-kernel-vulnerability-03-03}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-29154](https://ubuntu.com/security/CVE-2021-29154) <!-- high -->
-    -   [CVE-2021-3493](https://ubuntu.com/security/CVE-2021-3493) <!-- high -->
+    -   [CVE-2021-29154](https://ubuntu.com/security/CVE-2021-29154)
+    -   [CVE-2021-3493](https://ubuntu.com/security/CVE-2021-3493)
 -   2 local user privesc vulns fixed:
     -   BPF JIT branch displacement issue ([Episode 112](https://ubuntusecuritypodcast.org/episode-112/))
     -   Overlayfs / file system capabilities interaction
@@ -80,9 +80,9 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4918-3](https://ubuntu.com/security/notices/USN-4918-3)] ClamAV regression [03:52] {#usn-4918-3-clamav-regression-03-52}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-1405](https://ubuntu.com/security/CVE-2021-1405) <!-- medium -->
-    -   [CVE-2021-1404](https://ubuntu.com/security/CVE-2021-1404) <!-- medium -->
-    -   [CVE-2021-1252](https://ubuntu.com/security/CVE-2021-1252) <!-- medium -->
+    -   [CVE-2021-1405](https://ubuntu.com/security/CVE-2021-1405)
+    -   [CVE-2021-1404](https://ubuntu.com/security/CVE-2021-1404)
+    -   [CVE-2021-1252](https://ubuntu.com/security/CVE-2021-1252)
 -   Previous clamav update (back in April <!-- I was on leave so not covered
     in a podcast episode then -->) introduced a regression where clamdscan
     would crash if called with --multiscan and --fdpass AND you had an
@@ -93,15 +93,15 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4932-1](https://ubuntu.com/security/notices/USN-4932-1)] Django vulnerability [04:30] {#usn-4932-1-django-vulnerability-04-30}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-31542](https://ubuntu.com/security/CVE-2021-31542) <!-- medium -->
+    -   [CVE-2021-31542](https://ubuntu.com/security/CVE-2021-31542)
 -   Directory traversal via uploaded files with crafted names
 
 
 ### [[USN-4933-1](https://ubuntu.com/security/notices/USN-4933-1)] OpenVPN vulnerabilities [04:47] {#usn-4933-1-openvpn-vulnerabilities-04-47}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2020-15078](https://ubuntu.com/security/CVE-2020-15078) <!-- medium -->
-    -   [CVE-2020-11810](https://ubuntu.com/security/CVE-2020-11810) <!-- low -->
+    -   [CVE-2020-15078](https://ubuntu.com/security/CVE-2020-15078)
+    -   [CVE-2020-11810](https://ubuntu.com/security/CVE-2020-11810)
 -   Race condition in handling of data packets could allow an attacker to
     inject a packet using a victim's peer-id before the crypto channel is
     properly initialised - could cause the victim's connection to be dropped
@@ -112,27 +112,27 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4934-1](https://ubuntu.com/security/notices/USN-4934-1)] Exim vulnerabilities [05:39] {#usn-4934-1-exim-vulnerabilities-05-39}
 
 -   21 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-27216](https://ubuntu.com/security/CVE-2021-27216) <!-- medium -->
-    -   [CVE-2020-28026](https://ubuntu.com/security/CVE-2020-28026) <!-- medium -->
-    -   [CVE-2020-28025](https://ubuntu.com/security/CVE-2020-28025) <!-- medium -->
-    -   [CVE-2020-28024](https://ubuntu.com/security/CVE-2020-28024) <!-- medium -->
-    -   [CVE-2020-28023](https://ubuntu.com/security/CVE-2020-28023) <!-- medium -->
-    -   [CVE-2020-28022](https://ubuntu.com/security/CVE-2020-28022) <!-- medium -->
-    -   [CVE-2020-28021](https://ubuntu.com/security/CVE-2020-28021) <!-- medium -->
-    -   [CVE-2020-28020](https://ubuntu.com/security/CVE-2020-28020) <!-- medium -->
-    -   [CVE-2020-28019](https://ubuntu.com/security/CVE-2020-28019) <!-- medium -->
-    -   [CVE-2020-28018](https://ubuntu.com/security/CVE-2020-28018) <!-- medium -->
-    -   [CVE-2020-28017](https://ubuntu.com/security/CVE-2020-28017) <!-- medium -->
-    -   [CVE-2020-28016](https://ubuntu.com/security/CVE-2020-28016) <!-- medium -->
-    -   [CVE-2020-28015](https://ubuntu.com/security/CVE-2020-28015) <!-- medium -->
-    -   [CVE-2020-28014](https://ubuntu.com/security/CVE-2020-28014) <!-- medium -->
-    -   [CVE-2020-28013](https://ubuntu.com/security/CVE-2020-28013) <!-- medium -->
-    -   [CVE-2020-28012](https://ubuntu.com/security/CVE-2020-28012) <!-- medium -->
-    -   [CVE-2020-28011](https://ubuntu.com/security/CVE-2020-28011) <!-- medium -->
-    -   [CVE-2020-28010](https://ubuntu.com/security/CVE-2020-28010) <!-- medium -->
-    -   [CVE-2020-28009](https://ubuntu.com/security/CVE-2020-28009) <!-- medium -->
-    -   [CVE-2020-28008](https://ubuntu.com/security/CVE-2020-28008) <!-- medium -->
-    -   [CVE-2020-28007](https://ubuntu.com/security/CVE-2020-28007) <!-- medium -->
+    -   [CVE-2021-27216](https://ubuntu.com/security/CVE-2021-27216)
+    -   [CVE-2020-28026](https://ubuntu.com/security/CVE-2020-28026)
+    -   [CVE-2020-28025](https://ubuntu.com/security/CVE-2020-28025)
+    -   [CVE-2020-28024](https://ubuntu.com/security/CVE-2020-28024)
+    -   [CVE-2020-28023](https://ubuntu.com/security/CVE-2020-28023)
+    -   [CVE-2020-28022](https://ubuntu.com/security/CVE-2020-28022)
+    -   [CVE-2020-28021](https://ubuntu.com/security/CVE-2020-28021)
+    -   [CVE-2020-28020](https://ubuntu.com/security/CVE-2020-28020)
+    -   [CVE-2020-28019](https://ubuntu.com/security/CVE-2020-28019)
+    -   [CVE-2020-28018](https://ubuntu.com/security/CVE-2020-28018)
+    -   [CVE-2020-28017](https://ubuntu.com/security/CVE-2020-28017)
+    -   [CVE-2020-28016](https://ubuntu.com/security/CVE-2020-28016)
+    -   [CVE-2020-28015](https://ubuntu.com/security/CVE-2020-28015)
+    -   [CVE-2020-28014](https://ubuntu.com/security/CVE-2020-28014)
+    -   [CVE-2020-28013](https://ubuntu.com/security/CVE-2020-28013)
+    -   [CVE-2020-28012](https://ubuntu.com/security/CVE-2020-28012)
+    -   [CVE-2020-28011](https://ubuntu.com/security/CVE-2020-28011)
+    -   [CVE-2020-28010](https://ubuntu.com/security/CVE-2020-28010)
+    -   [CVE-2020-28009](https://ubuntu.com/security/CVE-2020-28009)
+    -   [CVE-2020-28008](https://ubuntu.com/security/CVE-2020-28008)
+    -   [CVE-2020-28007](https://ubuntu.com/security/CVE-2020-28007)
 -   Qualsys - [21Nails](https://blog.qualys.com/vulnerabilities-research/2021/05/04/21nails-multiple-vulnerabilities-in-exim-mail-server) - various vulns which could be chained together to get
     full remote unauthenticated RCE and root privesc
     -   [Full write-up](https://www.qualys.com/2021/05/04/21nails/21nails.txt)
@@ -147,8 +147,8 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 ### [[USN-4935-1](https://ubuntu.com/security/notices/USN-4935-1)] NVIDIA graphics drivers vulnerabilities [07:58] {#usn-4935-1-nvidia-graphics-drivers-vulnerabilities-07-58}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-1077](https://ubuntu.com/security/CVE-2021-1077) <!-- medium -->
-    -   [CVE-2021-1076](https://ubuntu.com/security/CVE-2021-1076) <!-- high -->
+    -   [CVE-2021-1077](https://ubuntu.com/security/CVE-2021-1077)
+    -   [CVE-2021-1076](https://ubuntu.com/security/CVE-2021-1076)
 -   Not much detail from NVIDIA
     -   improper access control -> DoS, infoleak or data corruption -> privesc etc
     -   incorrect use of reference counting -> DoS (crash?) (UAF?)
@@ -186,13 +186,13 @@ vulnerabilities as well as updates for Bind, Samba, OpenVPN and more.
 #### Linux Cryptography and Security Engineer {#linux-cryptography-and-security-engineer}
 
 -   <https://canonical.com/careers/2612092/linux-cryptography-and-security-engineer-remote>
-    <!-- americas -->
+   
 
 
 #### Security Engineer - Ubuntu {#security-engineer-ubuntu}
 
 -   <https://canonical.com/careers/2925180/security-engineer-ubuntu-remote>
-    <!-- worldwide -->
+   
 
 
 ## Get in contact {#get-in-contact}

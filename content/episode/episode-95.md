@@ -33,7 +33,7 @@ updates as well.
 ### [[USN-4552-3](https://usn.ubuntu.com/4552-3/)] Pam-python regression [00:40] {#usn-4552-3-pam-python-regression-00-40}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2019-16729](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16729) <!-- medium -->
+    -   [CVE-2019-16729](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16729)
 -   Original update ([Episode 92](https://ubuntusecuritypodcast.org/episode-92/) - bionic), ([Episode 94](https://ubuntusecuritypodcast.org/episode-94/) - xenial) caused was
     too restrictive and would disallow PAM modules written in python from
     importing python modules from site-specific directories
@@ -42,9 +42,9 @@ updates as well.
 ### [[USN-4609-1](https://usn.ubuntu.com/4609-1/)] GOsa vulnerabilities [01:18] {#usn-4609-1-gosa-vulnerabilities-01-18}
 
 -   3 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2018-1000528](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000528) <!-- medium -->
-    -   [CVE-2019-11187](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11187) <!-- low -->
-    -   [CVE-2019-14466](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14466) <!-- medium -->
+    -   [CVE-2018-1000528](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000528)
+    -   [CVE-2019-11187](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11187)
+    -   [CVE-2019-14466](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14466)
 -   PHP based LDAP user admin frontend
 -   XSS attacks via the change password form
 -   Could login to any account with a username containing "success" with any
@@ -56,7 +56,7 @@ updates as well.
 ### [[USN-4610-1](https://usn.ubuntu.com/4610-1/)] fastd vulnerability [02:11] {#usn-4610-1-fastd-vulnerability-02-11}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-27638](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27638) <!-- medium -->
+    -   [CVE-2020-27638](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27638)
 -   Fast & secure tunnelling daemon
 -   Failed to free rx buffers in certain circumstances - memory leak -> DoS
 
@@ -64,9 +64,9 @@ updates as well.
 ### [[USN-4611-1](https://usn.ubuntu.com/4611-1/)] Samba vulnerabilities [02:29] {#usn-4611-1-samba-vulnerabilities-02-29}
 
 -   3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-14383](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14383) <!-- medium -->
-    -   [CVE-2020-14323](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14323) <!-- medium -->
-    -   [CVE-2020-14318](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14318) <!-- medium -->
+    -   [CVE-2020-14383](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14383)
+    -   [CVE-2020-14323](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14323)
+    -   [CVE-2020-14318](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14318)
 -   2 different DoS issues - remote attacker could cause DNS server to crash
     by supplying invalid DNS records, or could cause winbind to crash via
     crafted winbind requests
@@ -78,7 +78,7 @@ updates as well.
 ### [[USN-4605-2](https://usn.ubuntu.com/4605-2/)] Blueman update [03:22] {#usn-4605-2-blueman-update-03-22}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-15238](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15238) <!-- medium -->
+    -   [CVE-2020-15238](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15238)
 -   [Episode 94](https://ubuntusecuritypodcast.org/episode-94/) - this includes additional fix so that on focal and groovy
     policykit is used to authenticate privileged actions
 
@@ -86,7 +86,7 @@ updates as well.
 ### [[USN-4614-1](https://usn.ubuntu.com/4614-1/)] GDM vulnerability [03:55] {#usn-4614-1-gdm-vulnerability-03-55}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-16125](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16125) <!-- medium -->
+    -   [CVE-2020-16125](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16125)
 -   Kevin Backhouse - discovered 3 vulnerabilities - one in GDM, 2 in
     AccountsService
 -   GDM incorrectly launched the initial setup tool if it could not reach the
@@ -100,9 +100,9 @@ updates as well.
 ### [[USN-4616-1](https://usn.ubuntu.com/4616-1/)] AccountsService vulnerabilities [05:00] {#usn-4616-1-accountsservice-vulnerabilities-05-00}
 
 -   3 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2018-14036](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14036) <!-- low -->
-    -   [CVE-2020-16127](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16127) <!-- medium -->
-    -   [CVE-2020-16126](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16126) <!-- medium -->
+    -   [CVE-2018-14036](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14036)
+    -   [CVE-2020-16127](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16127)
+    -   [CVE-2020-16126](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16126)
 -   Drops privileges for certain operations but does so where a local
     unprivileged user can send it SIGSTOP signal - is now unresponsive - so
     could allow the GDM attack above - or could cause it to crash (send
@@ -115,7 +115,7 @@ updates as well.
 ### [[USN-4613-1](https://usn.ubuntu.com/4613-1/)] python-cryptography vulnerability [06:34] {#usn-4613-1-python-cryptography-vulnerability-06-34}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-25659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25659) <!-- medium -->
+    -   [CVE-2020-25659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25659)
 -   Bleichenbacher timing oracle attack (form of an adaptive
     chosen-ciphertext attack) against RSA decryption could allow a remote
     attacker to infer the private key
@@ -125,18 +125,18 @@ updates as well.
 ### [[USN-4615-1](https://usn.ubuntu.com/4615-1/)] Yerase's TNEF vulnerabilities [07:23] {#usn-4615-1-yerase-s-tnef-vulnerabilities-07-23}
 
 -   12 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2017-6802](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6802) <!-- medium -->
-    -   [CVE-2017-6801](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6801) <!-- medium -->
-    -   [CVE-2017-6800](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6800) <!-- medium -->
-    -   [CVE-2017-6306](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6306) <!-- medium -->
-    -   [CVE-2017-6305](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6305) <!-- medium -->
-    -   [CVE-2017-6304](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6304) <!-- low -->
-    -   [CVE-2017-6303](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6303) <!-- medium -->
-    -   [CVE-2017-6302](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6302) <!-- medium -->
-    -   [CVE-2017-6301](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6301) <!-- low -->
-    -   [CVE-2017-6300](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6300) <!-- medium -->
-    -   [CVE-2017-6299](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6299) <!-- low -->
-    -   [CVE-2017-6298](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6298) <!-- low -->
+    -   [CVE-2017-6802](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6802)
+    -   [CVE-2017-6801](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6801)
+    -   [CVE-2017-6800](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6800)
+    -   [CVE-2017-6306](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6306)
+    -   [CVE-2017-6305](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6305)
+    -   [CVE-2017-6304](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6304)
+    -   [CVE-2017-6303](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6303)
+    -   [CVE-2017-6302](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6302)
+    -   [CVE-2017-6301](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6301)
+    -   [CVE-2017-6300](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6300)
+    -   [CVE-2017-6299](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6299)
+    -   [CVE-2017-6298](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6298)
 -   libtynef - TNEF stream reader library (proprietary format used by MS
     Outlook / Exchange Server for email attachments)
 -   Lots of issues - NULL ptr deref, infinite loop, buffer overflows, OOB

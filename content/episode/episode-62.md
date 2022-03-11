@@ -37,14 +37,14 @@ Security team.
 ### [[USN-4263-2](https://usn.ubuntu.com/4263-2/)] Sudo vulnerability [00:41] {#usn-4263-2-sudo-vulnerability-00-41}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2019-18634](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634) <!-- low -->
+    -   [CVE-2019-18634](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634)
 -   See [Episode 61](https://ubuntusecuritypodcast.org/episode-61/) and discussion later in episode
 
 
 ### [[USN-4268-1](https://usn.ubuntu.com/4268-1/)] OpenSMTPD vulnerability [01:02] {#usn-4268-1-opensmtpd-vulnerability-01-02}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-7247](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7247) <!-- high -->
+    -   [CVE-2020-7247](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7247)
 -   Logic bug caused existing sanity checks on MAIL FROM field to be skipped
     under certain scenarios - so by failing to perform this validation, could
     allow an attacker to input shell metacharacters to obtain command
@@ -55,11 +55,11 @@ Security team.
 ### [[USN-4269-1](https://usn.ubuntu.com/4269-1/)] systemd vulnerabilities [02:06] {#usn-4269-1-systemd-vulnerabilities-02-06}
 
 -   5 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-1712](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1712) <!-- medium -->
-    -   [CVE-2019-3844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3844) <!-- low -->
-    -   [CVE-2019-3843](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3843) <!-- low -->
-    -   [CVE-2019-20386](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20386) <!-- low -->
-    -   [CVE-2018-16888](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16888) <!-- low -->
+    -   [CVE-2020-1712](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1712)
+    -   [CVE-2019-3844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3844)
+    -   [CVE-2019-3843](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3843)
+    -   [CVE-2019-20386](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20386)
+    -   [CVE-2018-16888](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16888)
 -   Heap UAF when handing asynchronous policykit queries and dbus messages -
     could allow possible root privesc
 -   Possible sandbox escape through DynamicUser property on services via
@@ -77,11 +77,11 @@ Security team.
 ### [[USN-4267-1](https://usn.ubuntu.com/4267-1/)] ARM mbed TLS vulnerabilities [03:26] {#usn-4267-1-arm-mbed-tls-vulnerabilities-03-26}
 
 -   5 CVEs addressed in Xenial
-    -   [CVE-2018-0498](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0498) <!-- medium -->
-    -   [CVE-2018-0497](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0497) <!-- medium -->
-    -   [CVE-2018-0488](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0488) <!-- high -->
-    -   [CVE-2018-0487](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0487) <!-- high -->
-    -   [CVE-2017-18187](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18187) <!-- medium -->
+    -   [CVE-2018-0498](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0498)
+    -   [CVE-2018-0497](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0497)
+    -   [CVE-2018-0488](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0488)
+    -   [CVE-2018-0487](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0487)
+    -   [CVE-2017-18187](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18187)
 -   lightweight crypto / TLS library
 -   integer overflow -> heap overflow -> RCE / DoS
 -   read buffer overflow in handling of certificate chains -> DOS
@@ -92,14 +92,14 @@ Security team.
 ### [[USN-4270-1](https://usn.ubuntu.com/4270-1/)] Exiv2 vulnerability [04:22] {#usn-4270-1-exiv2-vulnerability-04-22}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2019-20421](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20421) <!-- medium -->
+    -   [CVE-2019-20421](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20421)
 -   Infinite loop in JP2 image metadata parser -> CPU DoS
 
 
 ### [[USN-4271-1](https://usn.ubuntu.com/4271-1/)] Mesa vulnerability [04:38] {#usn-4271-1-mesa-vulnerability-04-38}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2019-5068](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5068) <!-- medium -->
+    -   [CVE-2019-5068](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5068)
 -   Created a shared memory segment with world readable and writable
     permissions - so any local user could interfere with or access shared
     memory buffers which are often used for back buffers to improve
@@ -109,12 +109,12 @@ Security team.
 ### [[USN-4272-1](https://usn.ubuntu.com/4272-1/)] Pillow vulnerabilities [05:24] {#usn-4272-1-pillow-vulnerabilities-05-24}
 
 -   6 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2020-5313](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5313) <!-- medium -->
-    -   [CVE-2020-5311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5311) <!-- medium -->
-    -   [CVE-2020-5310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5310) <!-- medium -->
-    -   [CVE-2020-5312](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5312) <!-- medium -->
-    -   [CVE-2019-19911](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19911) <!-- low -->
-    -   [CVE-2019-16865](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16865) <!-- low -->
+    -   [CVE-2020-5313](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5313)
+    -   [CVE-2020-5311](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5311)
+    -   [CVE-2020-5310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5310)
+    -   [CVE-2020-5312](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5312)
+    -   [CVE-2019-19911](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19911)
+    -   [CVE-2019-16865](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16865)
 -   Python Image Library
 -   Various errors in handling image formats -> Crash -> DoS, RCE etc
 
@@ -122,7 +122,7 @@ Security team.
 ### [[USN-4273-1](https://usn.ubuntu.com/4273-1/)] ReportLab vulnerability [05:48] {#usn-4273-1-reportlab-vulnerability-05-48}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2019-17626](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17626) <!-- medium -->
+    -   [CVE-2019-17626](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17626)
 -   Python library used for creating PDFs
 -   RCE via a crafted XML document - would eval() an argument which comes
     from a document and so would execute arbitrary python code from the
@@ -132,7 +132,7 @@ Security team.
 ### [[USN-4250-2](https://usn.ubuntu.com/4250-2/)] MariaDB vulnerability [06:21] {#usn-4250-2-mariadb-vulnerability-06-21}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-2574](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2574) <!-- medium -->
+    -   [CVE-2020-2574](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2574)
 -   [Episode 60](https://ubuntusecuritypodcast.org/episode-60/) for MySQL - similar update for MariaDB - unfortunately no
     details from upstream
 
@@ -140,10 +140,10 @@ Security team.
 ### [[USN-4275-1](https://usn.ubuntu.com/4275-1/)] Qt vulnerabilities [06:45] {#usn-4275-1-qt-vulnerabilities-06-45}
 
 -   4 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-0570](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0570) <!-- medium -->
-    -   [CVE-2020-0569](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0569) <!-- medium -->
-    -   [CVE-2019-18281](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18281) <!-- medium -->
-    -   [CVE-2018-19872](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19872) <!-- low -->
+    -   [CVE-2020-0570](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0570)
+    -   [CVE-2020-0569](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0569)
+    -   [CVE-2019-18281](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18281)
+    -   [CVE-2018-19872](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19872)
 -   2 possible code execution bugs where Qt would search for plugins and
     libraries in incorrect locations, allowing a local attacker to get code
     execution
@@ -154,8 +154,8 @@ Security team.
 ### [[USN-4274-1](https://usn.ubuntu.com/4274-1/)] libxml2 vulnerabilities [07:20] {#usn-4274-1-libxml2-vulnerabilities-07-20}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2020-7595](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7595) <!-- medium -->
-    -   [CVE-2019-19956](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19956) <!-- low -->
+    -   [CVE-2020-7595](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7595)
+    -   [CVE-2019-19956](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19956)
 -   Infinite loop for crafted XML documents -> CPU DoS
 -   Memory leak
 
@@ -163,8 +163,8 @@ Security team.
 ### [[USN-4276-1](https://usn.ubuntu.com/4276-1/)] Yubico PIV Tool vulnerabilities [07:41] {#usn-4276-1-yubico-piv-tool-vulnerabilities-07-41}
 
 -   2 CVEs addressed in Bionic
-    -   [CVE-2018-14780](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14780) <!-- high -->
-    -   [CVE-2018-14779](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14779) <!-- high -->
+    -   [CVE-2018-14780](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14780)
+    -   [CVE-2018-14779](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14779)
 -   Yubico PIV (personal identity verificatiion) smart card driver - can be
     used with a Yubikey to do authentication
 -   2 different buffer overflows able to be triggered by a malicious USB
@@ -174,9 +174,9 @@ Security team.
 ### [[USN-4277-1](https://usn.ubuntu.com/4277-1/)] libexif vulnerabilities [08:14] {#usn-4277-1-libexif-vulnerabilities-08-14}
 
 -   3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2019-9278](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9278) <!-- medium -->
-    -   [CVE-2017-7544](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7544) <!-- low -->
-    -   [CVE-2016-6328](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6328) <!-- low -->
+    -   [CVE-2019-9278](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9278)
+    -   [CVE-2017-7544](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7544)
+    -   [CVE-2016-6328](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6328)
 -   Buffer overflow (crash or RCE) and 2 buffer over reads (crash / info
     disclosure)
 

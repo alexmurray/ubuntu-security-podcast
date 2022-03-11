@@ -31,7 +31,7 @@ updates for DjVuLibre, libuv, PHP and more.
 ### [[USN-4905-2](https://ubuntu.com/security/notices/USN-4905-2)] X.Org X Server vulnerability [00:42] {#usn-4905-2-x-dot-org-x-server-vulnerability-00-42}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2021-3472](https://ubuntu.com/security/CVE-2021-3472) <!-- medium -->
+    -   [CVE-2021-3472](https://ubuntu.com/security/CVE-2021-3472)
 -   [Episode 112](https://ubuntusecuritypodcast.org/episode-112/) - Local user (X client) could crash the server via Xinput
     extension and ChangeFeedbackControl request - integer underflow -> heap
     buffer overflow
@@ -40,14 +40,14 @@ updates for DjVuLibre, libuv, PHP and more.
 ### [[USN-5005-1](https://ubuntu.com/security/notices/USN-5005-1)] DjVuLibre vulnerability [01:26] {#usn-5005-1-djvulibre-vulnerability-01-26}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3630](https://ubuntu.com/security/CVE-2021-3630) <!-- medium -->
+    -   [CVE-2021-3630](https://ubuntu.com/security/CVE-2021-3630)
 -   OOB write via crafted djvu file -> crash -> DoS, RCE
 
 
 ### [[USN-5007-1](https://ubuntu.com/security/notices/USN-5007-1)] libuv vulnerability [01:53] {#usn-5007-1-libuv-vulnerability-01-53}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-22918](https://ubuntu.com/security/CVE-2021-22918) <!-- medium -->
+    -   [CVE-2021-22918](https://ubuntu.com/security/CVE-2021-22918)
 -   Async event handling library - used by nodejs and others - supports async
     handling TCP/UDP sockets, DNS resolution, file system operations etc
 -   OOB read when converting strings to ASCII -> can be triggered via calls
@@ -58,11 +58,11 @@ updates for DjVuLibre, libuv, PHP and more.
 ### [[USN-5006-1](https://ubuntu.com/security/notices/USN-5006-1)] PHP vulnerabilities [03:04] {#usn-5006-1-php-vulnerabilities-03-04}
 
 -   5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-21705](https://ubuntu.com/security/CVE-2021-21705) <!-- medium -->
-    -   [CVE-2021-21704](https://ubuntu.com/security/CVE-2021-21704) <!-- medium -->
-    -   [CVE-2021-21702](https://ubuntu.com/security/CVE-2021-21702) <!-- low -->
-    -   [CVE-2020-7071](https://ubuntu.com/security/CVE-2020-7071) <!-- low -->
-    -   [CVE-2020-7068](https://ubuntu.com/security/CVE-2020-7068) <!-- low -->
+    -   [CVE-2021-21705](https://ubuntu.com/security/CVE-2021-21705)
+    -   [CVE-2021-21704](https://ubuntu.com/security/CVE-2021-21704)
+    -   [CVE-2021-21702](https://ubuntu.com/security/CVE-2021-21702)
+    -   [CVE-2020-7071](https://ubuntu.com/security/CVE-2020-7071)
+    -   [CVE-2020-7068](https://ubuntu.com/security/CVE-2020-7068)
 -   UAF in PHAR archive handling - generally these are trusted so low impact
 -   mishandling of URLs with embedded passwords - unspecified impact but
     could misparse the URL and cause unwanted behaviour

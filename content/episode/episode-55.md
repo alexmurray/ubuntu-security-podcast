@@ -33,7 +33,7 @@ possible dangers of Smart TVs.
 ### [[USN-4203-1](https://usn.ubuntu.com/4203-1/), [USN-4203-2](https://usn.ubuntu.com/4203-2/)] NSS vulnerability [00:59] {#usn-4203-1-usn-4203-2-nss-vulnerability-00-59}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-11745](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745) <!-- medium -->
+    -   [CVE-2019-11745](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745)
 -   OOB write if using an output buffer smaller than the block size (since
     used block size instead of buffer size) when writing output for
     NSC\_EncryptUpdate()
@@ -42,7 +42,7 @@ possible dangers of Smart TVs.
 ### [[USN-4204-1](https://usn.ubuntu.com/4204-1/)] psutil vulnerability [02:05] {#usn-4204-1-psutil-vulnerability-02-05}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-18874](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18874) <!-- medium -->
+    -   [CVE-2019-18874](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18874)
 -   Double free due to mishandling of reference counting when handling errors
     during conversion of system data into Python objects - could be triggered
     when using a malicious disk partition label with an invalid character
@@ -53,12 +53,12 @@ possible dangers of Smart TVs.
 ### [[USN-4205-1](https://usn.ubuntu.com/4205-1/)] SQLite vulnerabilities [02:59] {#usn-4205-1-sqlite-vulnerabilities-02-59}
 
 -   6 CVEs addressed in Precise ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-5827](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5827) <!-- low -->
-    -   [CVE-2019-5018](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5018) <!-- low -->
-    -   [CVE-2019-19244](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19244) <!-- medium -->
-    -   [CVE-2019-19242](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19242) <!-- low -->
-    -   [CVE-2019-16168](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16168) <!-- low -->
-    -   [CVE-2018-8740](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740) <!-- low -->
+    -   [CVE-2019-5827](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5827)
+    -   [CVE-2019-5018](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5018)
+    -   [CVE-2019-19244](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19244)
+    -   [CVE-2019-19242](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19242)
+    -   [CVE-2019-16168](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16168)
+    -   [CVE-2018-8740](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740)
 -   Various robustness updates for SQLite related to CVEs from other
     applications that misuse SQLite - so this makes SQLite more tolerant if
     it is misused in the future - plus a fix of a possible crash (DoS) under
@@ -68,18 +68,18 @@ possible dangers of Smart TVs.
 ### [[USN-4208-1](https://usn.ubuntu.com/4208-1/)] Linux kernel vulnerabilities [03:42] {#usn-4208-1-linux-kernel-vulnerabilities-03-42}
 
 -   12 CVEs addressed in Bionic (gcp-edge), Eoan (5.3 kernel)
-    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075) <!-- negligible -->
-    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083) <!-- low -->
-    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075) <!-- low -->
-    -   [CVE-2019-19069](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19069) <!-- medium -->
-    -   [CVE-2019-19067](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067) <!-- low -->
-    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065) <!-- low -->
-    -   [CVE-2019-19061](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19061) <!-- low -->
-    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060) <!-- low -->
-    -   [CVE-2019-19048](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048) <!-- medium -->
-    -   [CVE-2019-18810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18810) <!-- low -->
-    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133) <!-- medium -->
-    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794) <!-- medium -->
+    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075)
+    -   [CVE-2019-19083](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19083)
+    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075)
+    -   [CVE-2019-19069](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19069)
+    -   [CVE-2019-19067](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19067)
+    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065)
+    -   [CVE-2019-19061](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19061)
+    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060)
+    -   [CVE-2019-19048](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19048)
+    -   [CVE-2019-18810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18810)
+    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133)
+    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794)
 -   Buffer overflow in wifi driver stack - able to be triggered by a remote
     user in wifi range
 -   Ubuntu specific OverlayFS and ShiftFS memory mapped reference counting
@@ -101,9 +101,9 @@ possible dangers of Smart TVs.
 ### [[USN-4209-1](https://usn.ubuntu.com/4209-1/)] Linux kernel vulnerabilities [06:07] {#usn-4209-1-linux-kernel-vulnerabilities-06-07}
 
 -   3 CVEs addressed in Bionic (HWE), Disco (5.0 kernel)
-    -   [CVE-2019-19076](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19076) <!-- low -->
-    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746) <!-- medium -->
-    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794) <!-- medium -->
+    -   [CVE-2019-19076](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19076)
+    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746)
+    -   [CVE-2019-15794](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15794)
 -   Memory leak in Netronome NFP4000/NFP6k000 driver
 -   Buffer overflow via 802.11 wifi config interface - local user onlu
 -   OverlayFS/ShiftFS issue above
@@ -112,12 +112,12 @@ possible dangers of Smart TVs.
 ### [[USN-4210-1](https://usn.ubuntu.com/4210-1/)] Linux kernel vulnerabilities [06:47] {#usn-4210-1-linux-kernel-vulnerabilities-06-47}
 
 -   6 CVEs addressed in Xenial (HWE), Bionic (4.15)
-    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075) <!-- negligible -->
-    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075) <!-- low -->
-    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065) <!-- low -->
-    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060) <!-- low -->
-    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133) <!-- medium -->
-    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746) <!-- medium -->
+    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075)
+    -   [CVE-2019-19075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19075)
+    -   [CVE-2019-19065](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19065)
+    -   [CVE-2019-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19060)
+    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133)
+    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746)
 -   See above:
     -   Wifi stack buffer overflow from remote user
     -   Wifi config buffer overflow from local user
@@ -130,9 +130,9 @@ possible dangers of Smart TVs.
 ### [[USN-4211-1](https://usn.ubuntu.com/4211-1/), [USN-4211-2](https://usn.ubuntu.com/4211-2/)] Linux kernel vulnerabilities [07:22] {#usn-4211-1-usn-4211-2-linux-kernel-vulnerabilities-07-22}
 
 -   3 CVEs addressed in Xenial, Trusty ESM (Xenial HWE)
-    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075) <!-- negligible -->
-    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133) <!-- medium -->
-    -   [CVE-2018-20784](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784) <!-- medium -->
+    -   [CVE-2019-17075](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17075)
+    -   [CVE-2019-17133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17133)
+    -   [CVE-2018-20784](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20784)
 -   Wifi stack remote user buffer overflow
 -   Infinite loop in the CFS scheduler able to be triggered by a local user
     -> DoS
@@ -141,16 +141,16 @@ possible dangers of Smart TVs.
 ### [[USN-4206-1](https://usn.ubuntu.com/4206-1/)] GraphicsMagick vulnerabilities [07:55] {#usn-4206-1-graphicsmagick-vulnerabilities-07-55}
 
 -   10 CVEs addressed in Xenial
-    -   [CVE-2017-6335](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6335) <!-- low -->
-    -   [CVE-2017-14042](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14042) <!-- medium -->
-    -   [CVE-2017-13147](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13147) <!-- medium -->
-    -   [CVE-2017-11637](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11637) <!-- medium -->
-    -   [CVE-2017-11636](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11636) <!-- medium -->
-    -   [CVE-2017-11403](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11403) <!-- medium -->
-    -   [CVE-2017-11140](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11140) <!-- low -->
-    -   [CVE-2017-11102](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11102) <!-- low -->
-    -   [CVE-2017-10799](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10799) <!-- medium -->
-    -   [CVE-2017-10794](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10794) <!-- medium -->
+    -   [CVE-2017-6335](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6335)
+    -   [CVE-2017-14042](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14042)
+    -   [CVE-2017-13147](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13147)
+    -   [CVE-2017-11637](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11637)
+    -   [CVE-2017-11636](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11636)
+    -   [CVE-2017-11403](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11403)
+    -   [CVE-2017-11140](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11140)
+    -   [CVE-2017-11102](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11102)
+    -   [CVE-2017-10799](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10799)
+    -   [CVE-2017-10794](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-10794)
 -   Usual sorts of memory mismanagement issues seen in large C codebases
     (most resulting in crash -> DoS)
     -   OOB read
@@ -166,33 +166,33 @@ possible dangers of Smart TVs.
 ### [[USN-4207-1](https://usn.ubuntu.com/4207-1/)] GraphicsMagick vulnerabilities [09:18] {#usn-4207-1-graphicsmagick-vulnerabilities-09-18}
 
 -   13 CVEs addressed in Bionic
-    -   [CVE-2019-11506](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11506) <!-- medium -->
-    -   [CVE-2019-11505](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11505) <!-- medium -->
-    -   [CVE-2019-11474](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11474) <!-- low -->
-    -   [CVE-2019-11473](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11473) <!-- low -->
-    -   [CVE-2019-11010](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11010) <!-- medium -->
-    -   [CVE-2019-11009](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11009) <!-- medium -->
-    -   [CVE-2019-11008](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11008) <!-- medium -->
-    -   [CVE-2019-11007](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11007) <!-- medium -->
-    -   [CVE-2019-11006](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11006) <!-- medium -->
-    -   [CVE-2019-11005](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11005) <!-- medium -->
-    -   [CVE-2018-20189](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20189) <!-- medium -->
-    -   [CVE-2018-20185](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20185) <!-- medium -->
-    -   [CVE-2018-20184](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20184) <!-- medium -->
+    -   [CVE-2019-11506](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11506)
+    -   [CVE-2019-11505](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11505)
+    -   [CVE-2019-11474](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11474)
+    -   [CVE-2019-11473](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11473)
+    -   [CVE-2019-11010](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11010)
+    -   [CVE-2019-11009](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11009)
+    -   [CVE-2019-11008](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11008)
+    -   [CVE-2019-11007](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11007)
+    -   [CVE-2019-11006](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11006)
+    -   [CVE-2019-11005](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11005)
+    -   [CVE-2018-20189](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20189)
+    -   [CVE-2018-20185](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20185)
+    -   [CVE-2018-20184](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20184)
 
 
 ### [[USN-4194-2](https://usn.ubuntu.com/4194-2/)] postgresql-common vulnerability [09:29] {#usn-4194-2-postgresql-common-vulnerability-09-29}
 
 -   1 CVEs addressed in Trusty ESM
-    -   [CVE-2019-3466](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3466) <!-- medium -->
+    -   [CVE-2019-3466](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3466)
 -   [Episode 54](https://ubuntusecuritypodcast.org/episode-54/) - Debian specific package - privesc
 
 
 ### [[USN-4182-3](https://usn.ubuntu.com/4182-3/), [USN-4182-4](https://usn.ubuntu.com/4182-4/)] Intel Microcode regression [09:44] {#usn-4182-3-usn-4182-4-intel-microcode-regression-09-44}
 
 -   2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-11139](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11139) <!-- medium -->
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135) <!-- high -->
+    -   [CVE-2019-11139](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11139)
+    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
 -   Previous microcode update resulted in some Skylake processors hanging on
     a warm reboot - not Ubuntu specific and is tracked upstream by Intel
     <https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/issues/21> -

@@ -35,8 +35,8 @@ Firefox, cryptsetup and more.
 ### [[USN-5279-1](https://ubuntu.com/security/notices/USN-5279-1)] util-linux vulnerabilities [00:59] {#usn-5279-1-util-linux-vulnerabilities-00-59}
 
 -   2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-3996](https://ubuntu.com/security/CVE-2021-3996) <!-- medium -->
-    -   [CVE-2021-3995](https://ubuntu.com/security/CVE-2021-3995) <!-- medium -->
+    -   [CVE-2021-3996](https://ubuntu.com/security/CVE-2021-3996)
+    -   [CVE-2021-3995](https://ubuntu.com/security/CVE-2021-3995)
 -   First 2 of number of vulns discovered by Qualys this week
 -   umount and fusermount are both setuid root
 -   An unprivileged user is allowed to unmount a FUSE filesystem which is
@@ -63,22 +63,22 @@ Firefox, cryptsetup and more.
 ### [[USN-5280-1](https://ubuntu.com/security/notices/USN-5280-1)] Speex vulnerability [04:41] {#usn-5280-1-speex-vulnerability-04-41}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2020-23903](https://ubuntu.com/security/CVE-2020-23903) <!-- medium -->
+    -   [CVE-2020-23903](https://ubuntu.com/security/CVE-2020-23903)
 -   Divide by zero from a crafted WAV file - trap - crash - DoS
 
 
 ### [[USN-5284-1](https://ubuntu.com/security/notices/USN-5284-1)] Firefox vulnerabilities [04:56] {#usn-5284-1-firefox-vulnerabilities-04-56}
 
 -   9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-22757](https://ubuntu.com/security/CVE-2022-22757) <!-- low -->
-    -   [CVE-2022-22756](https://ubuntu.com/security/CVE-2022-22756) <!-- medium -->
-    -   [CVE-2022-22754](https://ubuntu.com/security/CVE-2022-22754) <!-- medium -->
-    -   [CVE-2022-22764](https://ubuntu.com/security/CVE-2022-22764) <!-- medium -->
-    -   [CVE-2022-22761](https://ubuntu.com/security/CVE-2022-22761) <!-- medium -->
-    -   [CVE-2022-22760](https://ubuntu.com/security/CVE-2022-22760) <!-- medium -->
-    -   [CVE-2022-22759](https://ubuntu.com/security/CVE-2022-22759) <!-- medium -->
-    -   [CVE-2022-22755](https://ubuntu.com/security/CVE-2022-22755) <!-- medium -->
-    -   [CVE-2022-0511](https://ubuntu.com/security/CVE-2022-0511) <!-- medium -->
+    -   [CVE-2022-22757](https://ubuntu.com/security/CVE-2022-22757)
+    -   [CVE-2022-22756](https://ubuntu.com/security/CVE-2022-22756)
+    -   [CVE-2022-22754](https://ubuntu.com/security/CVE-2022-22754)
+    -   [CVE-2022-22764](https://ubuntu.com/security/CVE-2022-22764)
+    -   [CVE-2022-22761](https://ubuntu.com/security/CVE-2022-22761)
+    -   [CVE-2022-22760](https://ubuntu.com/security/CVE-2022-22760)
+    -   [CVE-2022-22759](https://ubuntu.com/security/CVE-2022-22759)
+    -   [CVE-2022-22755](https://ubuntu.com/security/CVE-2022-22755)
+    -   [CVE-2022-0511](https://ubuntu.com/security/CVE-2022-0511)
 -   97.0
 -   Extensions could bypass update prompt and auto-update itself with extra
     permissions
@@ -93,7 +93,7 @@ Firefox, cryptsetup and more.
 ### [[USN-5286-1](https://ubuntu.com/security/notices/USN-5286-1)] cryptsetup vulnerability [06:20] {#usn-5286-1-cryptsetup-vulnerability-06-20}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-4122](https://ubuntu.com/security/CVE-2021-4122) <!-- medium -->
+    -   [CVE-2021-4122](https://ubuntu.com/security/CVE-2021-4122)
 -   Failed to properly validate the device header - local attacker with
     physical access could modify this to trick cryptsetup to reencrypt the
     device on next mount - but reencrypt it with no encryption enabled -
@@ -104,9 +104,9 @@ Firefox, cryptsetup and more.
 ### [[USN-5267-3](https://ubuntu.com/security/notices/USN-5267-3)] Linux kernel (Raspberry Pi) vulnerabilities [07:11] {#usn-5267-3-linux-kernel--raspberry-pi--vulnerabilities-07-11}
 
 -   3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739) <!-- medium -->
-    -   [CVE-2021-3752](https://ubuntu.com/security/CVE-2021-3752) <!-- medium -->
-    -   [CVE-2021-3640](https://ubuntu.com/security/CVE-2021-3640) <!-- medium -->
+    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739)
+    -   [CVE-2021-3752](https://ubuntu.com/security/CVE-2021-3752)
+    -   [CVE-2021-3640](https://ubuntu.com/security/CVE-2021-3640)
 -   [Episode 148](https://ubuntusecuritypodcast.org/episode-148/) - 2 vulns in bluetooth and one in Firewire subsystems - local
     attacker crash / RCE - corresponding fixes for RPi on 20.04 or 18.04 with
     HWE
@@ -115,9 +115,9 @@ Firefox, cryptsetup and more.
 ### [[USN-5291-1](https://ubuntu.com/security/notices/USN-5291-1)] libarchive vulnerabilities [07:36] {#usn-5291-1-libarchive-vulnerabilities-07-36}
 
 -   3 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-36976](https://ubuntu.com/security/CVE-2021-36976) <!-- medium -->
-    -   [CVE-2021-31566](https://ubuntu.com/security/CVE-2021-31566) <!-- low -->
-    -   [CVE-2021-23177](https://ubuntu.com/security/CVE-2021-23177) <!-- low -->
+    -   [CVE-2021-36976](https://ubuntu.com/security/CVE-2021-36976)
+    -   [CVE-2021-31566](https://ubuntu.com/security/CVE-2021-31566)
+    -   [CVE-2021-23177](https://ubuntu.com/security/CVE-2021-23177)
 -   2 issues in symlink handling - would follow symlinks when changing
     modes/times/ACLs on files when extracting a crafted archive - could allow
     an attacker to modify these attributes on files outside of the archive
@@ -127,10 +127,10 @@ Firefox, cryptsetup and more.
 ### [[USN-5292-1](https://ubuntu.com/security/notices/USN-5292-1)] snapd vulnerabilities [08:27] {#usn-5292-1-snapd-vulnerabilities-08-27}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731) <!-- high -->
-    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730) <!-- high -->
-    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120) <!-- medium -->
-    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155) <!-- medium -->
+    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731)
+    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730)
+    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120)
+    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155)
 -   More Qualys issues in setuid root binary - snap-confine - plus 2 issues
     discovered by Canonical - 1 from Ian Johnson of the snapd team, and 1
     from James Troup of the BootStack team

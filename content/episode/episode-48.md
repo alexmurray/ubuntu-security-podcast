@@ -35,7 +35,7 @@ some recent concerns about the security of the Snap Store.
 ### [[USN-4142-1](https://usn.ubuntu.com/4142-1/), [USN-4142-2](https://usn.ubuntu.com/4142-2/)] e2fsprogs vulnerability [00:37] {#usn-4142-1-usn-4142-2-e2fsprogs-vulnerability-00-37}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-5094](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5094) <!-- medium -->
+    -   [CVE-2019-5094](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5094)
 -   Cisco TALOS - possible code execution via OOB write to the heap for code
     which handles quota support in ext4 - so possible to trigger via a
     specially crafted ext4 partition - could be triggered during an fsck on
@@ -45,11 +45,11 @@ some recent concerns about the security of the Snap Store.
 ### [[USN-4143-1](https://usn.ubuntu.com/4143-1/)] SDL 2.0 vulnerabilities [01:37] {#usn-4143-1-sdl-2-dot-0-vulnerabilities-01-37}
 
 -   5 CVEs addressed in Xenial, Bionic, Disco
-    -   [CVE-2019-7638](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638) <!-- medium -->
-    -   [CVE-2019-7637](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637) <!-- medium -->
-    -   [CVE-2019-7636](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636) <!-- medium -->
-    -   [CVE-2019-7635](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635) <!-- medium -->
-    -   [CVE-2017-2888](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2888) <!-- medium -->
+    -   [CVE-2019-7638](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7638)
+    -   [CVE-2019-7637](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7637)
+    -   [CVE-2019-7636](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7636)
+    -   [CVE-2019-7635](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7635)
+    -   [CVE-2017-2888](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-2888)
 -   3 different heap based buffer over-reads -> crash, DoS
 -   Heap based buffer over-write -> possible code execution or at least crash -> DoS
 -   Integer overflow -> small alloc -> heap based buffer overflow -> possible
@@ -59,24 +59,24 @@ some recent concerns about the security of the Snap Store.
 ### [[USN-4147-1](https://usn.ubuntu.com/4147-1/)] Linux kernel vulnerabilities [02:23] {#usn-4147-1-linux-kernel-vulnerabilities-02-23}
 
 -   18 CVEs addressed in Bionic (HWE), Disco
-    -   [CVE-2019-15223](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15223) <!-- negligible -->
-    -   [CVE-2019-15221](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221) <!-- negligible -->
-    -   [CVE-2019-15218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218) <!-- negligible -->
-    -   [CVE-2019-15217](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217) <!-- negligible -->
-    -   [CVE-2019-9506](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506) <!-- medium -->
-    -   [CVE-2019-15926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926) <!-- medium -->
-    -   [CVE-2019-15925](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15925) <!-- low -->
-    -   [CVE-2019-15538](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538) <!-- low -->
-    -   [CVE-2019-15220](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220) <!-- low -->
-    -   [CVE-2019-15215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215) <!-- low -->
-    -   [CVE-2019-15212](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212) <!-- low -->
-    -   [CVE-2019-15211](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211) <!-- low -->
-    -   [CVE-2019-15118](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15118) <!-- medium -->
-    -   [CVE-2019-15117](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15117) <!-- medium -->
-    -   [CVE-2019-15090](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090) <!-- medium -->
-    -   [CVE-2019-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631) <!-- low -->
-    -   [CVE-2019-10207](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207) <!-- medium -->
-    -   [CVE-2019-0136](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136) <!-- medium -->
+    -   [CVE-2019-15223](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15223)
+    -   [CVE-2019-15221](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15221)
+    -   [CVE-2019-15218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15218)
+    -   [CVE-2019-15217](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15217)
+    -   [CVE-2019-9506](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9506)
+    -   [CVE-2019-15926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926)
+    -   [CVE-2019-15925](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15925)
+    -   [CVE-2019-15538](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538)
+    -   [CVE-2019-15220](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15220)
+    -   [CVE-2019-15215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215)
+    -   [CVE-2019-15212](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15212)
+    -   [CVE-2019-15211](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211)
+    -   [CVE-2019-15118](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15118)
+    -   [CVE-2019-15117](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15117)
+    -   [CVE-2019-15090](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15090)
+    -   [CVE-2019-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631)
+    -   [CVE-2019-10207](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207)
+    -   [CVE-2019-0136](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136)
 -   OOB read in ath6kl driver - possible to trigger remotely from the network - crash, DoS
 -   Bluetooth KNOB attack
 -   Crashes from malicious USB audio devices:
@@ -96,8 +96,8 @@ some recent concerns about the security of the Snap Store.
 ### [[USN-4144-1](https://usn.ubuntu.com/4144-1/)] Linux kernel vulnerabilities [05:02] {#usn-4144-1-linux-kernel-vulnerabilities-05-02}
 
 -   2 CVEs addressed in Xenial (HWE), Bionic
-    -   [CVE-2019-15538](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538) <!-- low -->
-    -   [CVE-2018-20976](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976) <!-- medium -->
+    -   [CVE-2019-15538](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15538)
+    -   [CVE-2018-20976](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976)
 -   2 different XFS issues
     -   UAF triggered from a malicious XFS image -> code exection? -> crash, DoS
     -   CPU based DoS if can trigger a chgrp() error due to out-of-quota
@@ -106,25 +106,25 @@ some recent concerns about the security of the Snap Store.
 ### [[USN-4145-1](https://usn.ubuntu.com/4145-1/)] Linux kernel vulnerabilities [05:46] {#usn-4145-1-linux-kernel-vulnerabilities-05-46}
 
 -   11 CVEs addressed in Xenial
-    -   [CVE-2019-15926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926) <!-- medium -->
-    -   [CVE-2019-15215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215) <!-- low -->
-    -   [CVE-2019-15211](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211) <!-- low -->
-    -   [CVE-2019-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631) <!-- low -->
-    -   [CVE-2019-11487](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487) <!-- low -->
-    -   [CVE-2019-10207](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207) <!-- medium -->
-    -   [CVE-2019-0136](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136) <!-- medium -->
-    -   [CVE-2018-20976](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976) <!-- medium -->
-    -   [CVE-2018-20961](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20961) <!-- medium -->
-    -   [CVE-2017-18509](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18509) <!-- medium -->
-    -   [CVE-2016-10905](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10905) <!-- medium -->
+    -   [CVE-2019-15926](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15926)
+    -   [CVE-2019-15215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15215)
+    -   [CVE-2019-15211](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15211)
+    -   [CVE-2019-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13631)
+    -   [CVE-2019-11487](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11487)
+    -   [CVE-2019-10207](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10207)
+    -   [CVE-2019-0136](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0136)
+    -   [CVE-2018-20976](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20976)
+    -   [CVE-2018-20961](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20961)
+    -   [CVE-2017-18509](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18509)
+    -   [CVE-2016-10905](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10905)
 -   Most covered above
 
 
 ### [[USN-4146-1](https://usn.ubuntu.com/4146-1/), [USN-4146-2](https://usn.ubuntu.com/4146-2/)] ClamAV vulnerabilities [06:00] {#usn-4146-1-usn-4146-2-clamav-vulnerabilities-06-00}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-12900](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900) <!-- medium -->
-    -   [CVE-2019-12625](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12625) <!-- medium -->
+    -   [CVE-2019-12900](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900)
+    -   [CVE-2019-12625](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12625)
 -   Update to latest upstream version (0.101.4)
 -   OOB read when handling crafted BZIP2 and ZIP files - was covered for
     bzip2 itself in Ubuntu in [Episode 38](https://ubuntusecuritypodcast.org/episode-38/) - vendored in clamav

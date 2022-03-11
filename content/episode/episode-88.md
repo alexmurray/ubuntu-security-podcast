@@ -33,19 +33,19 @@ sane-backends and more.
 ### [[USN-4467-1](https://usn.ubuntu.com/4467-1/)] QEMU vulnerabilities [00:52] {#usn-4467-1-qemu-vulnerabilities-00-52}
 
 -   13 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-16092](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16092) <!-- low -->
-    -   [CVE-2020-15863](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15863) <!-- low -->
-    -   [CVE-2020-14415](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14415) <!-- low -->
-    -   [CVE-2020-13800](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13800) <!-- low -->
-    -   [CVE-2020-13765](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13765) <!-- medium -->
-    -   [CVE-2020-13754](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13754) <!-- medium -->
-    -   [CVE-2020-13659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13659) <!-- low -->
-    -   [CVE-2020-13362](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13362) <!-- low -->
-    -   [CVE-2020-13361](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13361) <!-- low -->
-    -   [CVE-2020-13253](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13253) <!-- low -->
-    -   [CVE-2020-12829](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12829) <!-- medium -->
-    -   [CVE-2020-10761](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10761) <!-- medium -->
-    -   [CVE-2020-10756](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10756) <!-- medium -->
+    -   [CVE-2020-16092](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16092)
+    -   [CVE-2020-15863](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15863)
+    -   [CVE-2020-14415](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14415)
+    -   [CVE-2020-13800](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13800)
+    -   [CVE-2020-13765](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13765)
+    -   [CVE-2020-13754](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13754)
+    -   [CVE-2020-13659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13659)
+    -   [CVE-2020-13362](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13362)
+    -   [CVE-2020-13361](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13361)
+    -   [CVE-2020-13253](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13253)
+    -   [CVE-2020-12829](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12829)
+    -   [CVE-2020-10761](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10761)
+    -   [CVE-2020-10756](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10756)
 -   OOB read in SLiRP networking implementation when replying to a ICMP ping
     echo request -> malicious guest could leak host memory -> info leak
 -   Network Block Device server assertion failure able to be triggered via a
@@ -57,7 +57,7 @@ sane-backends and more.
 ### [[USN-4466-2](https://usn.ubuntu.com/4466-2/)] curl vulnerability [01:58] {#usn-4466-2-curl-vulnerability-01-58}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2020-8231](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8231) <!-- low -->
+    -   [CVE-2020-8231](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8231)
 -   [Episode 87](https://ubuntusecuritypodcast.org/episode-87/) - connect\_only option -> could connect to wrong destination
     -> info leak
 
@@ -65,11 +65,11 @@ sane-backends and more.
 ### [[USN-4468-1](https://usn.ubuntu.com/4468-1/), [USN-4468-2](https://usn.ubuntu.com/4468-2/)] Bind vulnerabilities [02:16] {#usn-4468-1-usn-4468-2-bind-vulnerabilities-02-16}
 
 -   5 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-8624](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8624) <!-- low -->
-    -   [CVE-2020-8623](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8623) <!-- medium -->
-    -   [CVE-2020-8622](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8622) <!-- medium -->
-    -   [CVE-2020-8621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8621) <!-- medium -->
-    -   [CVE-2020-8620](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8620) <!-- medium -->
+    -   [CVE-2020-8624](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8624)
+    -   [CVE-2020-8623](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8623)
+    -   [CVE-2020-8622](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8622)
+    -   [CVE-2020-8621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8621)
+    -   [CVE-2020-8620](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8620)
 -   Assertion failures when handling:
     -   queries for zones signed by RSA signature
     -   truncated response to a TSIG-signed request
@@ -81,8 +81,8 @@ sane-backends and more.
 ### [[USN-4471-1](https://usn.ubuntu.com/4471-1/)] Net-SNMP vulnerabilities [03:10] {#usn-4471-1-net-snmp-vulnerabilities-03-10}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15862) <!-- medium -->
-    -   [CVE-2020-15861](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15861) <!-- medium -->
+    -   [CVE-2020-15862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15862)
+    -   [CVE-2020-15861](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15861)
 -   Would cache MIBs in a directory on the host - an attacker who has
     read-write access to the SNMP service could use the NET-SNMP-EXTEND-MIB
     extension to modify an existing MIB to add a command to be executed when
@@ -99,31 +99,31 @@ sane-backends and more.
 ### [[USN-4469-1](https://usn.ubuntu.com/4469-1/)] Ghostscript vulnerabilities [04:47] {#usn-4469-1-ghostscript-vulnerabilities-04-47}
 
 -   25 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-17538](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-17538) <!-- medium -->
-    -   [CVE-2020-16310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16310) <!-- medium -->
-    -   [CVE-2020-16309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16309) <!-- medium -->
-    -   [CVE-2020-16308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16308) <!-- medium -->
-    -   [CVE-2020-16307](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16307) <!-- medium -->
-    -   [CVE-2020-16306](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16306) <!-- medium -->
-    -   [CVE-2020-16305](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16305) <!-- medium -->
-    -   [CVE-2020-16304](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16304) <!-- medium -->
-    -   [CVE-2020-16303](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16303) <!-- medium -->
-    -   [CVE-2020-16302](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16302) <!-- medium -->
-    -   [CVE-2020-16301](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16301) <!-- medium -->
-    -   [CVE-2020-16300](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16300) <!-- medium -->
-    -   [CVE-2020-16299](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16299) <!-- medium -->
-    -   [CVE-2020-16298](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16298) <!-- medium -->
-    -   [CVE-2020-16297](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16297) <!-- medium -->
-    -   [CVE-2020-16296](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16296) <!-- medium -->
-    -   [CVE-2020-16295](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16295) <!-- medium -->
-    -   [CVE-2020-16294](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16294) <!-- medium -->
-    -   [CVE-2020-16293](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16293) <!-- medium -->
-    -   [CVE-2020-16292](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16292) <!-- medium -->
-    -   [CVE-2020-16291](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16291) <!-- medium -->
-    -   [CVE-2020-16290](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16290) <!-- medium -->
-    -   [CVE-2020-16289](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16289) <!-- medium -->
-    -   [CVE-2020-16288](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16288) <!-- medium -->
-    -   [CVE-2020-16287](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16287) <!-- medium -->
+    -   [CVE-2020-17538](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-17538)
+    -   [CVE-2020-16310](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16310)
+    -   [CVE-2020-16309](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16309)
+    -   [CVE-2020-16308](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16308)
+    -   [CVE-2020-16307](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16307)
+    -   [CVE-2020-16306](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16306)
+    -   [CVE-2020-16305](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16305)
+    -   [CVE-2020-16304](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16304)
+    -   [CVE-2020-16303](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16303)
+    -   [CVE-2020-16302](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16302)
+    -   [CVE-2020-16301](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16301)
+    -   [CVE-2020-16300](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16300)
+    -   [CVE-2020-16299](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16299)
+    -   [CVE-2020-16298](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16298)
+    -   [CVE-2020-16297](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16297)
+    -   [CVE-2020-16296](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16296)
+    -   [CVE-2020-16295](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16295)
+    -   [CVE-2020-16294](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16294)
+    -   [CVE-2020-16293](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16293)
+    -   [CVE-2020-16292](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16292)
+    -   [CVE-2020-16291](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16291)
+    -   [CVE-2020-16290](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16290)
+    -   [CVE-2020-16289](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16289)
+    -   [CVE-2020-16288](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16288)
+    -   [CVE-2020-16287](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16287)
 -   Fixes for various buffer overflows etc found via fuzzing with address
     sanitizer enabled - crafted PDF files -> crash / RCE
 
@@ -131,14 +131,14 @@ sane-backends and more.
 ### [[USN-4470-1](https://usn.ubuntu.com/4470-1/)] sane-backends vulnerabilities [05:17] {#usn-4470-1-sane-backends-vulnerabilities-05-17}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-12867](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12867) <!-- medium -->
-    -   [CVE-2020-12866](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12866) <!-- medium -->
-    -   [CVE-2020-12865](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12865) <!-- medium -->
-    -   [CVE-2020-12864](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12864) <!-- low -->
-    -   [CVE-2020-12863](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12863) <!-- low -->
-    -   [CVE-2020-12862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12862) <!-- low -->
-    -   [CVE-2020-12861](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12861) <!-- medium -->
-    -   [CVE-2017-6318](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6318) <!-- low -->
+    -   [CVE-2020-12867](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12867)
+    -   [CVE-2020-12866](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12866)
+    -   [CVE-2020-12865](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12865)
+    -   [CVE-2020-12864](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12864)
+    -   [CVE-2020-12863](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12863)
+    -   [CVE-2020-12862](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12862)
+    -   [CVE-2020-12861](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12861)
+    -   [CVE-2017-6318](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6318)
 -   Heap buffer overflows when accessing network attached scanners - could
     happen automatically when starting a scanning app which then scans the
     local network -> crash / code exec - found by GitHub security team
@@ -149,8 +149,8 @@ sane-backends and more.
 ### [[USN-4472-1](https://usn.ubuntu.com/4472-1/)] PostgreSQL vulnerabilities [06:25] {#usn-4472-1-postgresql-vulnerabilities-06-25}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14350](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14350) <!-- medium -->
-    -   [CVE-2020-14349](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14349) <!-- medium -->
+    -   [CVE-2020-14350](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14350)
+    -   [CVE-2020-14349](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14349)
 -   2 issues in the mishandling of the search path, allowing a remote
     attacker to execute arbitrary SQL code - one when using logical
     replication and the other with CREATE EXTENSION command.

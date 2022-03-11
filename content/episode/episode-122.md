@@ -33,8 +33,8 @@ RabbitMQ, Ceph, Thunderbird and more.
 ### [[USN-5004-1](https://ubuntu.com/security/notices/USN-5004-1)] RabbitMQ vulnerabilities [00:44] {#usn-5004-1-rabbitmq-vulnerabilities-00-44}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-22116](https://ubuntu.com/security/CVE-2021-22116) <!-- medium -->
-    -   [CVE-2019-11287](https://ubuntu.com/security/CVE-2019-11287) <!-- low -->
+    -   [CVE-2021-22116](https://ubuntu.com/security/CVE-2021-22116)
+    -   [CVE-2019-11287](https://ubuntu.com/security/CVE-2019-11287)
 -   AMQP server written in Erlang
 -   Possible to cause the server to consume excessive memory by sending large
     values in the X-Reason HTTP header - resource exhaustion - DoS
@@ -44,13 +44,13 @@ RabbitMQ, Ceph, Thunderbird and more.
 ### [[USN-4998-1](https://ubuntu.com/security/notices/USN-4998-1)] Ceph vulnerabilities [01:38] {#usn-4998-1-ceph-vulnerabilities-01-38}
 
 -   7 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-3531](https://ubuntu.com/security/CVE-2021-3531) <!-- medium -->
-    -   [CVE-2021-3524](https://ubuntu.com/security/CVE-2021-3524) <!-- medium -->
-    -   [CVE-2021-3509](https://ubuntu.com/security/CVE-2021-3509) <!-- medium -->
-    -   [CVE-2021-20288](https://ubuntu.com/security/CVE-2021-20288) <!-- medium -->
-    -   [CVE-2020-27839](https://ubuntu.com/security/CVE-2020-27839) <!-- medium -->
-    -   [CVE-2020-27781](https://ubuntu.com/security/CVE-2020-27781) <!-- medium -->
-    -   [CVE-2020-25678](https://ubuntu.com/security/CVE-2020-25678) <!-- low -->
+    -   [CVE-2021-3531](https://ubuntu.com/security/CVE-2021-3531)
+    -   [CVE-2021-3524](https://ubuntu.com/security/CVE-2021-3524)
+    -   [CVE-2021-3509](https://ubuntu.com/security/CVE-2021-3509)
+    -   [CVE-2021-20288](https://ubuntu.com/security/CVE-2021-20288)
+    -   [CVE-2020-27839](https://ubuntu.com/security/CVE-2020-27839)
+    -   [CVE-2020-27781](https://ubuntu.com/security/CVE-2020-27781)
+    -   [CVE-2020-25678](https://ubuntu.com/security/CVE-2020-25678)
 -   May log passwords in clear
 -   Exposure of user credentials to unprivileged users in particular
     configurations
@@ -63,26 +63,26 @@ RabbitMQ, Ceph, Thunderbird and more.
 ### [[USN-4995-2](https://ubuntu.com/security/notices/USN-4995-2)] Thunderbird vulnerabilities [02:22] {#usn-4995-2-thunderbird-vulnerabilities-02-22}
 
 -   20 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-29957](https://ubuntu.com/security/CVE-2021-29957) <!-- medium -->
-    -   [CVE-2021-29956](https://ubuntu.com/security/CVE-2021-29956) <!-- medium -->
-    -   [CVE-2021-29949](https://ubuntu.com/security/CVE-2021-29949) <!-- low -->
-    -   [CVE-2021-29948](https://ubuntu.com/security/CVE-2021-29948) <!-- low -->
-    -   [CVE-2021-24002](https://ubuntu.com/security/CVE-2021-24002) <!-- medium -->
-    -   [CVE-2021-23995](https://ubuntu.com/security/CVE-2021-23995) <!-- medium -->
-    -   [CVE-2021-23993](https://ubuntu.com/security/CVE-2021-23993) <!-- medium -->
-    -   [CVE-2021-23992](https://ubuntu.com/security/CVE-2021-23992) <!-- medium -->
-    -   [CVE-2021-23991](https://ubuntu.com/security/CVE-2021-23991) <!-- medium -->
-    -   [CVE-2021-23984](https://ubuntu.com/security/CVE-2021-23984) <!-- medium -->
-    -   [CVE-2021-29967](https://ubuntu.com/security/CVE-2021-29967) <!-- medium -->
-    -   [CVE-2021-29946](https://ubuntu.com/security/CVE-2021-29946) <!-- medium -->
-    -   [CVE-2021-29945](https://ubuntu.com/security/CVE-2021-29945) <!-- medium -->
-    -   [CVE-2021-23999](https://ubuntu.com/security/CVE-2021-23999) <!-- medium -->
-    -   [CVE-2021-23998](https://ubuntu.com/security/CVE-2021-23998) <!-- medium -->
-    -   [CVE-2021-23994](https://ubuntu.com/security/CVE-2021-23994) <!-- medium -->
-    -   [CVE-2021-23987](https://ubuntu.com/security/CVE-2021-23987) <!-- medium -->
-    -   [CVE-2021-23982](https://ubuntu.com/security/CVE-2021-23982) <!-- medium -->
-    -   [CVE-2021-23981](https://ubuntu.com/security/CVE-2021-23981) <!-- medium -->
-    -   [CVE-2021-23961](https://ubuntu.com/security/CVE-2021-23961) <!-- medium -->
+    -   [CVE-2021-29957](https://ubuntu.com/security/CVE-2021-29957)
+    -   [CVE-2021-29956](https://ubuntu.com/security/CVE-2021-29956)
+    -   [CVE-2021-29949](https://ubuntu.com/security/CVE-2021-29949)
+    -   [CVE-2021-29948](https://ubuntu.com/security/CVE-2021-29948)
+    -   [CVE-2021-24002](https://ubuntu.com/security/CVE-2021-24002)
+    -   [CVE-2021-23995](https://ubuntu.com/security/CVE-2021-23995)
+    -   [CVE-2021-23993](https://ubuntu.com/security/CVE-2021-23993)
+    -   [CVE-2021-23992](https://ubuntu.com/security/CVE-2021-23992)
+    -   [CVE-2021-23991](https://ubuntu.com/security/CVE-2021-23991)
+    -   [CVE-2021-23984](https://ubuntu.com/security/CVE-2021-23984)
+    -   [CVE-2021-29967](https://ubuntu.com/security/CVE-2021-29967)
+    -   [CVE-2021-29946](https://ubuntu.com/security/CVE-2021-29946)
+    -   [CVE-2021-29945](https://ubuntu.com/security/CVE-2021-29945)
+    -   [CVE-2021-23999](https://ubuntu.com/security/CVE-2021-23999)
+    -   [CVE-2021-23998](https://ubuntu.com/security/CVE-2021-23998)
+    -   [CVE-2021-23994](https://ubuntu.com/security/CVE-2021-23994)
+    -   [CVE-2021-23987](https://ubuntu.com/security/CVE-2021-23987)
+    -   [CVE-2021-23982](https://ubuntu.com/security/CVE-2021-23982)
+    -   [CVE-2021-23981](https://ubuntu.com/security/CVE-2021-23981)
+    -   [CVE-2021-23961](https://ubuntu.com/security/CVE-2021-23961)
 -   [Episode 121](https://ubuntusecuritypodcast.org/episode-121/)
 -   78.11.0
 
@@ -90,21 +90,21 @@ RabbitMQ, Ceph, Thunderbird and more.
 ### [[USN-5000-2](https://ubuntu.com/security/notices/USN-5000-2)] Linux kernel (KVM) vulnerabilities [02:48] {#usn-5000-2-linux-kernel--kvm--vulnerabilities-02-48}
 
 -   15 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-3506](https://ubuntu.com/security/CVE-2021-3506) <!-- medium -->
-    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034) <!-- medium -->
-    -   [CVE-2021-32399](https://ubuntu.com/security/CVE-2021-32399) <!-- medium -->
-    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829) <!-- medium -->
-    -   [CVE-2021-23134](https://ubuntu.com/security/CVE-2021-23134) <!-- medium -->
-    -   [CVE-2021-23133](https://ubuntu.com/security/CVE-2021-23133) <!-- medium -->
-    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147) <!-- medium -->
-    -   [CVE-2020-26145](https://ubuntu.com/security/CVE-2020-26145) <!-- medium -->
-    -   [CVE-2020-26141](https://ubuntu.com/security/CVE-2020-26141) <!-- medium -->
-    -   [CVE-2020-26139](https://ubuntu.com/security/CVE-2020-26139) <!-- medium -->
-    -   [CVE-2020-24588](https://ubuntu.com/security/CVE-2020-24588) <!-- medium -->
-    -   [CVE-2020-24587](https://ubuntu.com/security/CVE-2020-24587) <!-- medium -->
-    -   [CVE-2020-24586](https://ubuntu.com/security/CVE-2020-24586) <!-- medium -->
-    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200) <!-- high -->
-    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609) <!-- high -->
+    -   [CVE-2021-3506](https://ubuntu.com/security/CVE-2021-3506)
+    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034)
+    -   [CVE-2021-32399](https://ubuntu.com/security/CVE-2021-32399)
+    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829)
+    -   [CVE-2021-23134](https://ubuntu.com/security/CVE-2021-23134)
+    -   [CVE-2021-23133](https://ubuntu.com/security/CVE-2021-23133)
+    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147)
+    -   [CVE-2020-26145](https://ubuntu.com/security/CVE-2020-26145)
+    -   [CVE-2020-26141](https://ubuntu.com/security/CVE-2020-26141)
+    -   [CVE-2020-26139](https://ubuntu.com/security/CVE-2020-26139)
+    -   [CVE-2020-24588](https://ubuntu.com/security/CVE-2020-24588)
+    -   [CVE-2020-24587](https://ubuntu.com/security/CVE-2020-24587)
+    -   [CVE-2020-24586](https://ubuntu.com/security/CVE-2020-24586)
+    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200)
+    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609)
 -   [Episode 121](https://ubuntusecuritypodcast.org/episode-121/)
 -   KVM kernel for 20.04 LTS
 -   2 high priority privesc issues fixed - CAN BCM UAFs, eBPF OOB write -
@@ -114,23 +114,23 @@ RabbitMQ, Ceph, Thunderbird and more.
 ### [[USN-4997-2](https://ubuntu.com/security/notices/USN-4997-2)] Linux kernel (KVM) vulnerabilities {#usn-4997-2-linux-kernel--kvm--vulnerabilities}
 
 -   17 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-3543](https://ubuntu.com/security/CVE-2021-3543) <!-- medium -->
-    -   [CVE-2021-3506](https://ubuntu.com/security/CVE-2021-3506) <!-- medium -->
-    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034) <!-- medium -->
-    -   [CVE-2021-32399](https://ubuntu.com/security/CVE-2021-32399) <!-- medium -->
-    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829) <!-- medium -->
-    -   [CVE-2021-31440](https://ubuntu.com/security/CVE-2021-31440) <!-- medium -->
-    -   [CVE-2021-23134](https://ubuntu.com/security/CVE-2021-23134) <!-- medium -->
-    -   [CVE-2021-23133](https://ubuntu.com/security/CVE-2021-23133) <!-- medium -->
-    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147) <!-- medium -->
-    -   [CVE-2020-26145](https://ubuntu.com/security/CVE-2020-26145) <!-- medium -->
-    -   [CVE-2020-26141](https://ubuntu.com/security/CVE-2020-26141) <!-- medium -->
-    -   [CVE-2020-26139](https://ubuntu.com/security/CVE-2020-26139) <!-- medium -->
-    -   [CVE-2020-24588](https://ubuntu.com/security/CVE-2020-24588) <!-- medium -->
-    -   [CVE-2020-24587](https://ubuntu.com/security/CVE-2020-24587) <!-- medium -->
-    -   [CVE-2020-24586](https://ubuntu.com/security/CVE-2020-24586) <!-- medium -->
-    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200) <!-- high -->
-    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609) <!-- high -->
+    -   [CVE-2021-3543](https://ubuntu.com/security/CVE-2021-3543)
+    -   [CVE-2021-3506](https://ubuntu.com/security/CVE-2021-3506)
+    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034)
+    -   [CVE-2021-32399](https://ubuntu.com/security/CVE-2021-32399)
+    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829)
+    -   [CVE-2021-31440](https://ubuntu.com/security/CVE-2021-31440)
+    -   [CVE-2021-23134](https://ubuntu.com/security/CVE-2021-23134)
+    -   [CVE-2021-23133](https://ubuntu.com/security/CVE-2021-23133)
+    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147)
+    -   [CVE-2020-26145](https://ubuntu.com/security/CVE-2020-26145)
+    -   [CVE-2020-26141](https://ubuntu.com/security/CVE-2020-26141)
+    -   [CVE-2020-26139](https://ubuntu.com/security/CVE-2020-26139)
+    -   [CVE-2020-24588](https://ubuntu.com/security/CVE-2020-24588)
+    -   [CVE-2020-24587](https://ubuntu.com/security/CVE-2020-24587)
+    -   [CVE-2020-24586](https://ubuntu.com/security/CVE-2020-24586)
+    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200)
+    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609)
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}

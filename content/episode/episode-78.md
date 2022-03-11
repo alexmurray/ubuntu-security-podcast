@@ -35,28 +35,28 @@ threat modelling of software products.
 ### [[USN-4381-2](https://usn.ubuntu.com/4381-2/)] Django vulnerabilities [01:00] {#usn-4381-2-django-vulnerabilities-01-00}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2020-13596](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13596) <!-- medium -->
-    -   [CVE-2020-13254](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13254) <!-- medium -->
+    -   [CVE-2020-13596](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13596)
+    -   [CVE-2020-13254](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13254)
 -   [Episode 77](https://ubuntusecuritypodcast.org/episode-77/)
 
 
 ### [[USN-4382-1](https://usn.ubuntu.com/4382-1/)] FreeRDP vulnerabilities [01:28] {#usn-4382-1-freerdp-vulnerabilities-01-28}
 
 -   14 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-13398](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13398) <!-- medium -->
-    -   [CVE-2020-13397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13397) <!-- low -->
-    -   [CVE-2020-13396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13396) <!-- low -->
-    -   [CVE-2020-11526](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11526) <!-- low -->
-    -   [CVE-2020-11525](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11525) <!-- low -->
-    -   [CVE-2020-11523](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11523) <!-- low -->
-    -   [CVE-2020-11522](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11522) <!-- low -->
-    -   [CVE-2020-11521](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11521) <!-- low -->
-    -   [CVE-2020-11058](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11058) <!-- medium -->
-    -   [CVE-2020-11049](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11049) <!-- low -->
-    -   [CVE-2020-11048](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11048) <!-- medium -->
-    -   [CVE-2020-11046](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11046) <!-- medium -->
-    -   [CVE-2020-11045](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11045) <!-- medium -->
-    -   [CVE-2020-11042](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11042) <!-- medium -->
+    -   [CVE-2020-13398](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13398)
+    -   [CVE-2020-13397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13397)
+    -   [CVE-2020-13396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13396)
+    -   [CVE-2020-11526](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11526)
+    -   [CVE-2020-11525](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11525)
+    -   [CVE-2020-11523](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11523)
+    -   [CVE-2020-11522](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11522)
+    -   [CVE-2020-11521](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11521)
+    -   [CVE-2020-11058](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11058)
+    -   [CVE-2020-11049](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11049)
+    -   [CVE-2020-11048](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11048)
+    -   [CVE-2020-11046](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11046)
+    -   [CVE-2020-11045](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11045)
+    -   [CVE-2020-11042](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11042)
 -   [Episode 77](https://ubuntusecuritypodcast.org/episode-77/) covered a similar update for FreeRDP2 in 18.04 LTS, 19.10, 20.04 LTS
 -   This is the corresponding update for FreeRDP 1 in 16.04 LTS
 
@@ -64,21 +64,21 @@ threat modelling of software products.
 ### [[USN-4383-1](https://usn.ubuntu.com/4383-1/)] Firefox vulnerabilities [02:09] {#usn-4383-1-firefox-vulnerabilities-02-09}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399) <!-- medium -->
-    -   [CVE-2020-12411](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12411) <!-- medium -->
-    -   [CVE-2020-12410](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12410) <!-- medium -->
-    -   [CVE-2020-12409](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12409) <!-- low -->
-    -   [CVE-2020-12408](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12408) <!-- low -->
-    -   [CVE-2020-12407](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12407) <!-- medium -->
-    -   [CVE-2020-12406](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12406) <!-- medium -->
-    -   [CVE-2020-12405](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12405) <!-- medium -->
+    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399)
+    -   [CVE-2020-12411](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12411)
+    -   [CVE-2020-12410](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12410)
+    -   [CVE-2020-12409](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12409)
+    -   [CVE-2020-12408](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12408)
+    -   [CVE-2020-12407](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12407)
+    -   [CVE-2020-12406](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12406)
+    -   [CVE-2020-12405](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12405)
 -   77.0.1
 
 
 ### [[USN-4384-1](https://usn.ubuntu.com/4384-1/)] GnuTLS vulnerability [02:54] {#usn-4384-1-gnutls-vulnerability-02-54}
 
 -   1 CVEs addressed in Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-13777](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13777) <!-- high -->
+    -   [CVE-2020-13777](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13777)
 -   Rare Friday update - high priority GnuTLS vulnerability - would use an
     all-zero key for encrypting TLS session ticket
 -   TLS1.3 -> enables a middleperson attack against resumed sessions
@@ -89,16 +89,16 @@ threat modelling of software products.
 ### [[USN-4386-1](https://usn.ubuntu.com/4386-1/)] libjpeg-turbo vulnerability [04:19] {#usn-4386-1-libjpeg-turbo-vulnerability-04-19}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-13790](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13790) <!-- medium -->
+    -   [CVE-2020-13790](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13790)
     -   Heap buffer over-read via crafted PPM file -> info disclosure / crash
 
 
 ### [[USN-4385-1](https://usn.ubuntu.com/4385-1/)] Intel Microcode vulnerabilities [04:49] {#usn-4385-1-intel-microcode-vulnerabilities-04-49}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-0549](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549) <!-- medium -->
-    -   [CVE-2020-0548](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548) <!-- medium -->
-    -   [CVE-2020-0543](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543) <!-- medium -->
+    -   [CVE-2020-0549](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549)
+    -   [CVE-2020-0548](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548)
+    -   [CVE-2020-0543](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543)
 -   Latest Intel microarchitectural cache side-channel vulnerabilities - L1D
     cache, vector registers, special registers
 -   <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SRBDS>
@@ -129,7 +129,7 @@ threat modelling of software products.
 ### [[USN-4388-1](https://usn.ubuntu.com/4388-1/)] Linux kernel vulnerabilities [08:40] {#usn-4388-1-linux-kernel-vulnerabilities-08-40}
 
 -   6 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-1749](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749) <!-- medium -->
+    -   [CVE-2020-1749](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749)
     -   [CVE-2020-12659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659) <!-- low xdp oob write (CAP\_NET\_ADMIN) -->
     -   [CVE-2020-12464](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464) <!-- medium usb sg -->
     -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114) <!-- medium fs race -->
@@ -141,7 +141,7 @@ threat modelling of software products.
 ### [[USN-4389-1](https://usn.ubuntu.com/4389-1/)] Linux kernel vulnerabilities [08:54] {#usn-4389-1-linux-kernel-vulnerabilities-08-54}
 
 -   6 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751) <!-- negligible -->
+    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751)
     -   [CVE-2020-12659](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659) <!-- low xdp oob write (CAP\_NET\_ADMIN) -->
     -   [CVE-2020-12464](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464) <!-- medium usb sg -->
     -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114) <!-- medium fs race -->
@@ -153,7 +153,7 @@ threat modelling of software products.
 ### [[USN-4390-1](https://usn.ubuntu.com/4390-1/)] Linux kernel vulnerabilities [09:02] {#usn-4390-1-linux-kernel-vulnerabilities-09-02}
 
 -   6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751) <!-- negligible -->
+    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751)
     -   [CVE-2020-1749](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749) <!-- medium ipsec info leak -->
     -   [CVE-2020-12464](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464) <!-- medium usb sg -->
     -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114) <!-- medium fs race -->
@@ -167,14 +167,14 @@ threat modelling of software products.
 ### [[USN-4391-1](https://usn.ubuntu.com/4391-1/)] Linux kernel vulnerabilities [09:35] {#usn-4391-1-linux-kernel-vulnerabilities-09-35}
 
 -   8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
-    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751) <!-- negligible -->
+    -   [CVE-2020-10751](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751)
     -   [CVE-2020-1749](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749) <!-- medium ipsec info leak -->
     -   [CVE-2020-12826](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12826) <!-- medium signal integer overflow -->
-    -   [CVE-2020-12769](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12769) <!-- medium -->
+    -   [CVE-2020-12769](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12769)
     -   [CVE-2020-12464](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464) <!-- medium usb sg -->
     -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114) <!-- medium fs race -->
     -   [CVE-2020-0543](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543) <!-- medium srbds -->
-    -   [CVE-2019-19319](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19319) <!-- low -->
+    -   [CVE-2019-19319](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19319)
 -   4.4
 
 

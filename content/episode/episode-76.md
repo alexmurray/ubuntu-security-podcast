@@ -35,22 +35,22 @@ and more.
 ### [[USN-4365-2](https://usn.ubuntu.com/4365-2/)] Bind vulnerabilities [00:37] {#usn-4365-2-bind-vulnerabilities-00-37}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-8617](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8617) <!-- medium -->
-    -   [CVE-2020-8616](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8616) <!-- medium -->
+    -   [CVE-2020-8617](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8617)
+    -   [CVE-2020-8616](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8616)
 -   [Episode 75](https://ubuntusecuritypodcast.org/episode-75/) - <https://nxnsattack.com>
 
 
 ### [[USN-4369-1](https://usn.ubuntu.com/4369-1/)] Linux kernel vulnerabilities [01:11] {#usn-4369-1-linux-kernel-vulnerabilities-01-11}
 
 -   8 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
-    -   [CVE-2020-12657](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657) <!-- medium -->
-    -   [CVE-2020-11668](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668) <!-- medium -->
-    -   [CVE-2020-11609](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609) <!-- medium -->
-    -   [CVE-2020-11608](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608) <!-- medium -->
-    -   [CVE-2020-11565](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565) <!-- medium -->
-    -   [CVE-2020-11494](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494) <!-- medium -->
-    -   [CVE-2019-19769](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19769) <!-- medium -->
-    -   [CVE-2019-19377](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377) <!-- low -->
+    -   [CVE-2020-12657](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12657)
+    -   [CVE-2020-11668](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11668)
+    -   [CVE-2020-11609](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11609)
+    -   [CVE-2020-11608](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11608)
+    -   [CVE-2020-11565](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11565)
+    -   [CVE-2020-11494](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494)
+    -   [CVE-2019-19769](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19769)
+    -   [CVE-2019-19377](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19377)
 -   5.3 (19.10, 18.04 LTS HWE)
 -   [Episode 75](https://ubuntusecuritypodcast.org/episode-75/) for details
 
@@ -58,8 +58,8 @@ and more.
 ### [[USN-4370-1](https://usn.ubuntu.com/4370-1/), [USN-4370-2](https://usn.ubuntu.com/4370-2/)] ClamAV vulnerabilities [01:35] {#usn-4370-1-usn-4370-2-clamav-vulnerabilities-01-35}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-3341](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3341) <!-- medium -->
-    -   [CVE-2020-3327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3327) <!-- medium -->
+    -   [CVE-2020-3341](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3341)
+    -   [CVE-2020-3327](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3327)
 -   Stack and heap buffer over-reads in the PDF and ARJ (Archived by Rober
     Jung) file parsers -> crash -> DoS
 
@@ -67,8 +67,8 @@ and more.
 ### [[USN-4371-1](https://usn.ubuntu.com/4371-1/)] libvirt vulnerabilities [02:36] {#usn-4371-1-libvirt-vulnerabilities-02-36}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
-    -   [CVE-2020-12430](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12430) <!-- medium -->
-    -   [CVE-2020-10703](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10703) <!-- low -->
+    -   [CVE-2020-12430](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12430)
+    -   [CVE-2020-10703](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10703)
 -   Memory leak able to be triggered by local users with read-only qemu
     access when retrieving domain stats -> DoS
 
@@ -76,11 +76,11 @@ and more.
 ### [[USN-4372-1](https://usn.ubuntu.com/4372-1/)] QEMU vulnerabilities [03:08] {#usn-4372-1-qemu-vulnerabilities-03-08}
 
 -   5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-1983](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1983) <!-- medium -->
-    -   [CVE-2020-11869](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11869) <!-- medium -->
-    -   [CVE-2020-10702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10702) <!-- low -->
-    -   [CVE-2019-20382](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20382) <!-- low -->
-    -   [CVE-2019-15034](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15034) <!-- low -->
+    -   [CVE-2020-1983](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1983)
+    -   [CVE-2020-11869](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11869)
+    -   [CVE-2020-10702](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10702)
+    -   [CVE-2019-20382](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20382)
+    -   [CVE-2019-15034](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15034)
 -   UAF in libslirp
 -   Integer overflow in handling of ATI VGA emulation -> guest to host crash
 
@@ -88,11 +88,11 @@ and more.
 ### [[USN-4373-1](https://usn.ubuntu.com/4373-1/)] Thunderbird vulnerabilities [03:44] {#usn-4373-1-thunderbird-vulnerabilities-03-44}
 
 -   5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12397) <!-- low -->
-    -   [CVE-2020-12392](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12392) <!-- medium -->
-    -   [CVE-2020-12395](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12395) <!-- medium -->
-    -   [CVE-2020-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12387) <!-- medium -->
-    -   [CVE-2020-6831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6831) <!-- medium -->
+    -   [CVE-2020-12397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12397)
+    -   [CVE-2020-12392](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12392)
+    -   [CVE-2020-12395](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12395)
+    -   [CVE-2020-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12387)
+    -   [CVE-2020-6831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6831)
 -   68.8.0
 
 

@@ -33,19 +33,19 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5024-1](https://ubuntu.com/security/notices/USN-5024-1)] WebKitGTK vulnerabilities [00:57] {#usn-5024-1-webkitgtk-vulnerabilities-00-57}
 
 -   13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-30799](https://ubuntu.com/security/CVE-2021-30799) <!-- medium -->
-    -   [CVE-2021-30797](https://ubuntu.com/security/CVE-2021-30797) <!-- medium -->
-    -   [CVE-2021-30795](https://ubuntu.com/security/CVE-2021-30795) <!-- medium -->
-    -   [CVE-2021-30758](https://ubuntu.com/security/CVE-2021-30758) <!-- medium -->
-    -   [CVE-2021-30749](https://ubuntu.com/security/CVE-2021-30749) <!-- medium -->
-    -   [CVE-2021-30744](https://ubuntu.com/security/CVE-2021-30744) <!-- medium -->
-    -   [CVE-2021-30734](https://ubuntu.com/security/CVE-2021-30734) <!-- medium -->
-    -   [CVE-2021-30720](https://ubuntu.com/security/CVE-2021-30720) <!-- medium -->
-    -   [CVE-2021-30689](https://ubuntu.com/security/CVE-2021-30689) <!-- medium -->
-    -   [CVE-2021-30665](https://ubuntu.com/security/CVE-2021-30665) <!-- medium -->
-    -   [CVE-2021-30663](https://ubuntu.com/security/CVE-2021-30663) <!-- medium -->
-    -   [CVE-2021-21779](https://ubuntu.com/security/CVE-2021-21779) <!-- medium -->
-    -   [CVE-2021-21775](https://ubuntu.com/security/CVE-2021-21775) <!-- medium -->
+    -   [CVE-2021-30799](https://ubuntu.com/security/CVE-2021-30799)
+    -   [CVE-2021-30797](https://ubuntu.com/security/CVE-2021-30797)
+    -   [CVE-2021-30795](https://ubuntu.com/security/CVE-2021-30795)
+    -   [CVE-2021-30758](https://ubuntu.com/security/CVE-2021-30758)
+    -   [CVE-2021-30749](https://ubuntu.com/security/CVE-2021-30749)
+    -   [CVE-2021-30744](https://ubuntu.com/security/CVE-2021-30744)
+    -   [CVE-2021-30734](https://ubuntu.com/security/CVE-2021-30734)
+    -   [CVE-2021-30720](https://ubuntu.com/security/CVE-2021-30720)
+    -   [CVE-2021-30689](https://ubuntu.com/security/CVE-2021-30689)
+    -   [CVE-2021-30665](https://ubuntu.com/security/CVE-2021-30665)
+    -   [CVE-2021-30663](https://ubuntu.com/security/CVE-2021-30663)
+    -   [CVE-2021-21779](https://ubuntu.com/security/CVE-2021-21779)
+    -   [CVE-2021-21775](https://ubuntu.com/security/CVE-2021-21775)
 -   Every 5-10 weeks so time for another one
 -   Usual web / js engine issues - XSS, DoS, RCE etc
 
@@ -64,7 +64,7 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5025-1](https://ubuntu.com/security/notices/USN-5025-1), [USN-5025-2](https://ubuntu.com/security/notices/USN-5025-2)] libsndfile vulnerability [02:25] {#usn-5025-1-usn-5025-2-libsndfile-vulnerability-02-25}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3246](https://ubuntu.com/security/CVE-2021-3246) <!-- medium -->
+    -   [CVE-2021-3246](https://ubuntu.com/security/CVE-2021-3246)
 -   Heap buffer overflow in wav decoder - possible RCE / DoS - found by
     OSSFuzz
 
@@ -72,8 +72,8 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5026-1](https://ubuntu.com/security/notices/USN-5026-1), [USN-5026-2](https://ubuntu.com/security/notices/USN-5026-2)] QPDF vulnerabilities [02:58] {#usn-5026-1-usn-5026-2-qpdf-vulnerabilities-02-58}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-36978](https://ubuntu.com/security/CVE-2021-36978) <!-- medium -->
-    -   [CVE-2018-18020](https://ubuntu.com/security/CVE-2018-18020) <!-- low -->
+    -   [CVE-2021-36978](https://ubuntu.com/security/CVE-2021-36978)
+    -   [CVE-2018-18020](https://ubuntu.com/security/CVE-2018-18020)
 -   DoS due to recursive parsing in the face of errors - fixed to instead
     bail out if encounters too many successive errors as PDF is damaged in
     this case anyway
@@ -83,7 +83,7 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5027-1](https://ubuntu.com/security/notices/USN-5027-1), [USN-5027-2](https://ubuntu.com/security/notices/USN-5027-2)] PEAR vulnerability [03:50] {#usn-5027-1-usn-5027-2-pear-vulnerability-03-50}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-32610](https://ubuntu.com/security/CVE-2021-32610) <!-- medium -->
+    -   [CVE-2021-32610](https://ubuntu.com/security/CVE-2021-32610)
 -   Symlink path traversal in handling of tar archives in the Archive_Tar
     module - since PEAR uses this directly when handling archives, it was
     also vulnerable so could be made to overwrite arbitrary local files on
@@ -93,8 +93,8 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5029-1](https://ubuntu.com/security/notices/USN-5029-1)] GnuTLS vulnerabilities [04:22] {#usn-5029-1-gnutls-vulnerabilities-04-22}
 
 -   2 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-20232](https://ubuntu.com/security/CVE-2021-20232) <!-- low -->
-    -   [CVE-2021-20231](https://ubuntu.com/security/CVE-2021-20231) <!-- low -->
+    -   [CVE-2021-20232](https://ubuntu.com/security/CVE-2021-20232)
+    -   [CVE-2021-20231](https://ubuntu.com/security/CVE-2021-20231)
 -   2 possible UAF in certain scenarious - hard to exploit as need to be able
     to predict the behaviour of glibc's memory allocator as well as GnuTLS's
     own internal allocator but could possibly be used for RCE
@@ -103,7 +103,7 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5028-1](https://ubuntu.com/security/notices/USN-5028-1)] Exiv2 vulnerability [04:57] {#usn-5028-1-exiv2-vulnerability-04-57}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-31291](https://ubuntu.com/security/CVE-2021-31291) <!-- medium -->
+    -   [CVE-2021-31291](https://ubuntu.com/security/CVE-2021-31291)
 -   More exiv2 (last seen in [Episode 115](https://ubuntusecuritypodcast.org/episode-115/) and [Episode 117](https://ubuntusecuritypodcast.org/episode-117/))
 -   Heap buffer overflow in handling of jpeg image metadata - DoS / RCE
 
@@ -111,8 +111,8 @@ of security updates for WebKitGTK, libsndfile, GnuTLS, exiv2 and more.
 ### [[USN-5030-1](https://ubuntu.com/security/notices/USN-5030-1)] Perl DBI module vulnerabilities [05:24] {#usn-5030-1-perl-dbi-module-vulnerabilities-05-24}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14393](https://ubuntu.com/security/CVE-2020-14393) <!-- low -->
-    -   [CVE-2014-10402](https://ubuntu.com/security/CVE-2014-10402) <!-- medium -->
+    -   [CVE-2020-14393](https://ubuntu.com/security/CVE-2020-14393)
+    -   [CVE-2014-10402](https://ubuntu.com/security/CVE-2014-10402)
 -   Incomplete fix for previous Perl DBI [CVE-2014-10401](https://ubuntu.com/security/CVE-2014-10401) - would allow access
     to files outside the original data source directory - was still
     potentially vulnerable - fixed to parse attributes more strictly to avoid

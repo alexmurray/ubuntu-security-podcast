@@ -31,7 +31,7 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5069-2](https://ubuntu.com/security/notices/USN-5069-2)] mod-auth-mellon vulnerability [00:43] {#usn-5069-2-mod-auth-mellon-vulnerability-00-43}
 
 -   1 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-3639](https://ubuntu.com/security/CVE-2021-3639) <!-- medium -->
+    -   [CVE-2021-3639](https://ubuntu.com/security/CVE-2021-3639)
 -   [Episode 130](https://ubuntusecuritypodcast.org/episode-130/) - failed to properly handle crafted redirect links -> open
     redirect
 
@@ -39,43 +39,43 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5070-1](https://ubuntu.com/security/notices/USN-5070-1)] Linux kernel vulnerabilities {#usn-5070-1-linux-kernel-vulnerabilities}
 
 -   10 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38207](https://ubuntu.com/security/CVE-2021-38207) <!-- medium -->
-    -   [CVE-2021-38206](https://ubuntu.com/security/CVE-2021-38206) <!-- medium -->
-    -   [CVE-2021-38200](https://ubuntu.com/security/CVE-2021-38200) <!-- low -->
-    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198) <!-- medium -->
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
-    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541) <!-- medium -->
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
+    -   [CVE-2021-38207](https://ubuntu.com/security/CVE-2021-38207)
+    -   [CVE-2021-38206](https://ubuntu.com/security/CVE-2021-38206)
+    -   [CVE-2021-38200](https://ubuntu.com/security/CVE-2021-38200)
+    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198)
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
+    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541)
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
 
 
 ### [[USN-5071-1](https://ubuntu.com/security/notices/USN-5071-1)] Linux kernel vulnerabilities {#usn-5071-1-linux-kernel-vulnerabilities}
 
 -   5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
-    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311) <!-- medium -->
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
+    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311)
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
 
 
 ### [[USN-5072-1](https://ubuntu.com/security/notices/USN-5072-1)] Linux kernel vulnerabilities {#usn-5072-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
 
 
 ### [[USN-5073-1](https://ubuntu.com/security/notices/USN-5073-1)] Linux kernel vulnerabilities [00:56] {#usn-5073-1-linux-kernel-vulnerabilities-00-56}
 
 -   5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
 -   2 different AMD specific issue in KVM subsystem with nested
     virtualisation - 1 mentioned last week in [Episode 130](https://ubuntusecuritypodcast.org/episode-130/) - would fail to
     validate particular operations which could be performed by a guest VM -
@@ -90,10 +90,10 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[LSN-0081-1](https://ubuntu.com/security/notices/LSN-0081-1)] Linux kernel vulnerability [01:56] {#lsn-0081-1-linux-kernel-vulnerability-01-56}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-33909](https://ubuntu.com/security/CVE-2021-33909) <!-- high -->
-    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555) <!-- high -->
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
+    -   [CVE-2021-33909](https://ubuntu.com/security/CVE-2021-33909)
+    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555)
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
 -   ([Episode 124](https://ubuntusecuritypodcast.org/episode-124/)) seq_file vuln - this virt file-system contained an unsigned integer
     conversion error - would result in a local user being able to cause an
     OOB write and hence possible code-exec in the kernel -> privesc
@@ -104,9 +104,9 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5074-1](https://ubuntu.com/security/notices/USN-5074-1)] Firefox vulnerabilities [02:53] {#usn-5074-1-firefox-vulnerabilities-02-53}
 
 -   3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38494](https://ubuntu.com/security/CVE-2021-38494) <!-- medium -->
-    -   [CVE-2021-38493](https://ubuntu.com/security/CVE-2021-38493) <!-- medium -->
-    -   [CVE-2021-38491](https://ubuntu.com/security/CVE-2021-38491) <!-- medium -->
+    -   [CVE-2021-38494](https://ubuntu.com/security/CVE-2021-38494)
+    -   [CVE-2021-38493](https://ubuntu.com/security/CVE-2021-38493)
+    -   [CVE-2021-38491](https://ubuntu.com/security/CVE-2021-38491)
 -   Memory safety bugs -> possible memory corruption, possible bypass in
     mixed content blocking (ie http content on a https page)
 
@@ -114,7 +114,7 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5075-1](https://ubuntu.com/security/notices/USN-5075-1)] Ghostscript vulnerability [03:36] {#usn-5075-1-ghostscript-vulnerability-03-36}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3781](https://ubuntu.com/security/CVE-2021-3781) <!-- high -->
+    -   [CVE-2021-3781](https://ubuntu.com/security/CVE-2021-3781)
 -   Trivial bypass of sandbox - exploit was apparently known about since
     March and publicly available since end of August but only reported to GS
     upstream on 8th August - fix available since 9th, updates for Ubuntu
@@ -124,7 +124,7 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5076-1](https://ubuntu.com/security/notices/USN-5076-1)] Git vulnerability [04:55] {#usn-5076-1-git-vulnerability-04-55}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-40330](https://ubuntu.com/security/CVE-2021-40330) <!-- medium -->
+    -   [CVE-2021-40330](https://ubuntu.com/security/CVE-2021-40330)
 -   Possible cross-protocol requests by embedding a newline in the URL when
     cloning
 
@@ -132,8 +132,8 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5077-1](https://ubuntu.com/security/notices/USN-5077-1), [USN-5077-2](https://ubuntu.com/security/notices/USN-5077-2)] Apport vulnerabilities [05:34] {#usn-5077-1-usn-5077-2-apport-vulnerabilities-05-34}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3710](https://ubuntu.com/security/CVE-2021-3710) <!-- medium -->
-    -   [CVE-2021-3709](https://ubuntu.com/security/CVE-2021-3709) <!-- medium -->
+    -   [CVE-2021-3710](https://ubuntu.com/security/CVE-2021-3710)
+    -   [CVE-2021-3709](https://ubuntu.com/security/CVE-2021-3709)
 -   Arbitrary file reads in apport crash handling - reads certain file when
     apps crash, can be tricked to read other files and include these in the
     crash report which can then be seen by the user, uploaded to
@@ -143,7 +143,7 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5078-1](https://ubuntu.com/security/notices/USN-5078-1)] Squashfs-Tools vulnerability [06:46] {#usn-5078-1-squashfs-tools-vulnerability-06-46}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-41072](https://ubuntu.com/security/CVE-2021-41072) <!-- medium -->
+    -   [CVE-2021-41072](https://ubuntu.com/security/CVE-2021-41072)
 -   Similar to [Episode 129](https://ubuntusecuritypodcast.org/episode-129/) - symlink and file of same name - when unsquash,
     write out symlink, then write out file traversing the symlink ->
     arbitrary file overwrite
@@ -152,9 +152,9 @@ in the Linux kernel, Ghostscript, Git, curl and more.
 ### [[USN-5079-1](https://ubuntu.com/security/notices/USN-5079-1), [USN-5079-2](https://ubuntu.com/security/notices/USN-5079-2)] curl vulnerabilities [07:48] {#usn-5079-1-usn-5079-2-curl-vulnerabilities-07-48}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947) <!-- medium -->
-    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946) <!-- medium -->
-    -   [CVE-2021-22945](https://ubuntu.com/security/CVE-2021-22945) <!-- medium --> (non-ESM only)
+    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947)
+    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946)
+    -   [CVE-2021-22945](https://ubuntu.com/security/CVE-2021-22945) (non-ESM only)
 -   MQTT OOB write (malicious MQTT server) (non-ESM)
 -   Possible to cause to not upgrade to TLS even when specified -> info leak
 -   STARTTLS -> could inject responses / intercept comms etc

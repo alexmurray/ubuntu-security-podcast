@@ -33,7 +33,7 @@ drivers, Mailman and more.
 ### [[USN-4403-1](https://usn.ubuntu.com/4403-1/)] Mutt vulnerability and regression [00:40] {#usn-4403-1-mutt-vulnerability-and-regression-00-40}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-14954](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14954) <!-- medium -->
+    -   [CVE-2020-14954](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14954)
 -   When connecting to an IMAP/SMTP/POP3 server via STARTTLS, would read
     additional data after the clear-text command to begin TLS - if someone
     was able to intercept the connection they could inject content which
@@ -47,9 +47,9 @@ drivers, Mailman and more.
 ### [[USN-4404-1](https://usn.ubuntu.com/4404-1/), [USN-4404-2](https://usn.ubuntu.com/4404-2/)] NVIDIA graphics drivers & Linux kernel vulnerabilities [01:59] {#usn-4404-1-usn-4404-2-nvidia-graphics-drivers-and-linux-kernel-vulnerabilities-01-59}
 
 -   3 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-5973](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5973) <!-- medium -->
-    -   [CVE-2020-5967](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5967) <!-- medium -->
-    -   [CVE-2020-5963](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5963) <!-- medium -->
+    -   [CVE-2020-5973](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5973)
+    -   [CVE-2020-5967](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5967)
+    -   [CVE-2020-5963](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5963)
 -   CUDA driver failed to properly perform access control during IPC - could
     allow a local attacker to DoS/RCE
 -   UVM driver (Unified Virtual Memory - used with CUDA driver for better
@@ -62,7 +62,7 @@ drivers, Mailman and more.
 ### [[USN-4405-1](https://usn.ubuntu.com/4405-1/)] GLib Networking vulnerability [03:15] {#usn-4405-1-glib-networking-vulnerability-03-15}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-13645](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13645) <!-- medium -->
+    -   [CVE-2020-13645](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13645)
 -   glib-networking - additional library for glib/gio to provide TLS (ie
     links against gnutls etc.)
 -   Would fail to verify that the hostname of a server's TLS certificate
@@ -76,7 +76,7 @@ drivers, Mailman and more.
 ### [[USN-4406-1](https://usn.ubuntu.com/4406-1/)] Mailman vulnerability [04:48] {#usn-4406-1-mailman-vulnerability-04-48}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2020-15011](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15011) <!-- medium -->
+    -   [CVE-2020-15011](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15011)
 -   Failed to validate inputs to the private archive login page - would then
     echo these back inside the generated page and so provides arbitrary
     content injection from a crafted URL.

@@ -41,7 +41,7 @@ cvescan snap for vulnerability awareness.
 ### [LSN-0064-1] Linux kernel vulnerability [01:03] {#lsn-0064-1-linux-kernel-vulnerability-01-03}
 
 -   1 CVEs addressed in Xenial, Bionic
-    -   [CVE-2020-2732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732) <!-- medium -->
+    -   [CVE-2020-2732](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-2732)
 -   KVM nested virtualisation issue (L2 guest could access resources of L1
     parent) - [Episode 67](https://ubuntusecuritypodcast.org/episode-67/)
 
@@ -49,13 +49,13 @@ cvescan snap for vulnerability awareness.
 ### [[USN-4308-1](https://usn.ubuntu.com/4308-1/)] Twisted vulnerabilities [02:07] {#usn-4308-1-twisted-vulnerabilities-02-07}
 
 -   7 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-10109](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10109) <!-- medium -->
-    -   [CVE-2020-10108](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10108) <!-- medium -->
-    -   [CVE-2019-9515](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9515) <!-- medium -->
-    -   [CVE-2019-9514](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9514) <!-- medium -->
-    -   [CVE-2019-9512](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9512) <!-- medium -->
-    -   [CVE-2019-12855](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12855) <!-- low -->
-    -   [CVE-2019-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12387) <!-- low -->
+    -   [CVE-2020-10109](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10109)
+    -   [CVE-2020-10108](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10108)
+    -   [CVE-2019-9515](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9515)
+    -   [CVE-2019-9514](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9514)
+    -   [CVE-2019-9512](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9512)
+    -   [CVE-2019-12855](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12855)
+    -   [CVE-2019-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12387)
 -   2 variations of a HTTP request splitting / smuggling vuln ([Episode 52](https://ubuntusecuritypodcast.org/episode-52/))
 -   3 HTTP/2 DoS issues ([Episode 43](https://ubuntusecuritypodcast.org/episode-43/))
 -   MITM of XMPP TLS connections due to failure to verify certs
@@ -65,12 +65,12 @@ cvescan snap for vulnerability awareness.
 ### [[USN-4309-1](https://usn.ubuntu.com/4309-1/)] Vim vulnerabilities [03:53] {#usn-4309-1-vim-vulnerabilities-03-53}
 
 -   7 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2017-11109](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11109) <!-- low -->
-    -   [CVE-2017-6350](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6350) <!-- negligible -->
-    -   [CVE-2017-6349](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6349) <!-- negligible -->
-    -   [CVE-2019-20079](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20079) <!-- low -->
-    -   [CVE-2018-20786](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20786) <!-- low -->
-    -   [CVE-2017-5953](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953) <!-- low -->
+    -   [CVE-2017-11109](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11109)
+    -   [CVE-2017-6350](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6350)
+    -   [CVE-2017-6349](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6349)
+    -   [CVE-2019-20079](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20079)
+    -   [CVE-2018-20786](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20786)
+    -   [CVE-2017-5953](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953)
 -   All low / negligible since requires a user to use vim to source a crafted
     file (ie a list of commands / settings for vim) or crafted undo /
     spelling dictionary etc
@@ -80,7 +80,7 @@ cvescan snap for vulnerability awareness.
 ### [[USN-4134-3](https://usn.ubuntu.com/4134-3/)] IBus vulnerability [04:49] {#usn-4134-3-ibus-vulnerability-04-49}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2019-14822](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822) <!-- medium -->
+    -   [CVE-2019-14822](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14822)
 -   [Episode 47](https://ubuntusecuritypodcast.org/episode-47/) - implements it's own private DBus server which clients
     connect to - original vuln allowed any user who knew address of this bus
     to connect to it - update fixed this by checking the connecting user was

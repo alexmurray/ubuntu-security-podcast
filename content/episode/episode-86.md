@@ -35,14 +35,14 @@ NSS and more.
 ### [[USN-4453-1](https://usn.ubuntu.com/4453-1/)] OpenJDK 8 vulnerabilities [01:03] {#usn-4453-1-openjdk-8-vulnerabilities-01-03}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14621) <!-- medium -->
-    -   [CVE-2020-14593](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14593) <!-- medium -->
-    -   [CVE-2020-14583](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14583) <!-- medium -->
-    -   [CVE-2020-14581](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14581) <!-- medium -->
-    -   [CVE-2020-14579](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14579) <!-- medium -->
-    -   [CVE-2020-14578](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14578) <!-- medium -->
-    -   [CVE-2020-14577](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14577) <!-- medium -->
-    -   [CVE-2020-14556](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14556) <!-- medium -->
+    -   [CVE-2020-14621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14621)
+    -   [CVE-2020-14593](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14593)
+    -   [CVE-2020-14583](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14583)
+    -   [CVE-2020-14581](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14581)
+    -   [CVE-2020-14579](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14579)
+    -   [CVE-2020-14578](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14578)
+    -   [CVE-2020-14577](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14577)
+    -   [CVE-2020-14556](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14556)
 -   Usual mix of issues for a Java update - sandbox escape, DoS, information
     disclosure etc
 
@@ -50,7 +50,7 @@ NSS and more.
 ### [[USN-4451-2](https://usn.ubuntu.com/4451-2/)] ppp vulnerability [01:29] {#usn-4451-2-ppp-vulnerability-01-29}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-15704](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15704) <!-- medium -->
+    -   [CVE-2020-15704](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15704)
 -   [Episode 85](https://ubuntusecuritypodcast.org/episode-85/)
 
 
@@ -58,7 +58,7 @@ NSS and more.
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM),
     Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14303](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14303) <!-- medium -->
+    -   [CVE-2020-14303](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14303)
 -   A remote attacker could send a zero length UDP packet to Samba when
     acting as a AD DC with NetBIOS over TCP (NBT) enabled - would effectively
     enter an infinite loop -> CPU-based DoS
@@ -67,9 +67,9 @@ NSS and more.
 ### [[USN-4455-1](https://usn.ubuntu.com/4455-1/)] NSS vulnerabilities [02:41] {#usn-4455-1-nss-vulnerabilities-02-41}
 
 -   3 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-6829](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6829) <!-- medium -->
-    -   [CVE-2020-12401](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12401) <!-- medium -->
-    -   [CVE-2020-12400](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12400) <!-- medium -->
+    -   [CVE-2020-6829](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6829)
+    -   [CVE-2020-12401](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12401)
+    -   [CVE-2020-12400](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12400)
 -   Fixes for various side-channel attacks against elliptic curve crypto
     implementations - could allow an attacker to infer the private key
 

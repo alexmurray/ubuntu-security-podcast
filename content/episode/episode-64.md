@@ -33,11 +33,11 @@ current open positions.
 ### [[LSN-0063-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-February/005341.html)] Linux kernel vulnerability [00:43] {#lsn-0063-1-linux-kernel-vulnerability-00-43}
 
 -   5 CVEs addressed in Xenial, Bionic
-    -   [CVE-2020-7053](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053) <!-- medium -->
-    -   [CVE-2019-20096](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096) <!-- medium -->
-    -   [CVE-2019-19050](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050) <!-- medium -->
-    -   [CVE-2019-14615](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615) <!-- medium -->
-    -   [CVE-2019-5108](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108) <!-- medium -->
+    -   [CVE-2020-7053](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7053)
+    -   [CVE-2019-20096](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20096)
+    -   [CVE-2019-19050](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19050)
+    -   [CVE-2019-14615](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615)
+    -   [CVE-2019-5108](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5108)
 -   i915 UAF ([Episode 60](https://ubuntusecuritypodcast.org/episode-60/)), DCCP memory leak -> DoS ([Episode 63](https://ubuntusecuritypodcast.org/episode-63/)), crypto
     subsystem memory leaks ([Episode 60](https://ubuntusecuritypodcast.org/episode-60/)), i915 info leak ([Episode 60](https://ubuntusecuritypodcast.org/episode-60/), [Episode
     53](https://ubuntusecuritypodcast.org/episode-53/)), WiFi AP mode DoS ([Episode 53](https://ubuntusecuritypodcast.org/episode-53/))
@@ -46,9 +46,9 @@ current open positions.
 ### [[USN-4279-2](https://usn.ubuntu.com/4279-2/)] PHP regression [01:51] {#usn-4279-2-php-regression-01-51}
 
 -   3 CVEs addressed in Xenial
-    -   [CVE-2020-7060](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060) <!-- medium -->
-    -   [CVE-2020-7059](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059) <!-- medium -->
-    -   [CVE-2015-9253](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253) <!-- low -->
+    -   [CVE-2020-7060](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7060)
+    -   [CVE-2020-7059](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7059)
+    -   [CVE-2015-9253](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253)
 -   [Episode 63](https://ubuntusecuritypodcast.org/episode-63/) - Upstream fix for [CVE-2015-9253](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9253) contained a memory leak -
     this fix was backed-out in this update
 
@@ -56,7 +56,7 @@ current open positions.
 ### [[USN-4288-1](https://usn.ubuntu.com/4288-1/)] ppp vulnerability [02:16] {#usn-4288-1-ppp-vulnerability-02-16}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-8597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597) <!-- medium -->
+    -   [CVE-2020-8597](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8597)
 -   Included a check for possible buffer overflow a an rhostname but the
     check was incorrect :( so could still overflow - fixed by making the
     correct check
@@ -65,10 +65,10 @@ current open positions.
 ### [[USN-4289-1](https://usn.ubuntu.com/4289-1/)] Squid vulnerabilities [02:41] {#usn-4289-1-squid-vulnerabilities-02-41}
 
 -   4 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-8517](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8517) <!-- medium -->
-    -   [CVE-2020-8450](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8450) <!-- medium -->
-    -   [CVE-2020-8449](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8449) <!-- medium -->
-    -   [CVE-2019-12528](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12528) <!-- medium -->
+    -   [CVE-2020-8517](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8517)
+    -   [CVE-2020-8450](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8450)
+    -   [CVE-2020-8449](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8449)
+    -   [CVE-2019-12528](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12528)
 -   Buffer overflow in NTLM credentials parser - out-of-process so would just
     result in a DoS
 -   Buffer overflow when acting as a reverse proxy
@@ -81,14 +81,14 @@ current open positions.
 ### [[USN-4290-1](https://usn.ubuntu.com/4290-1/)] libpam-radius-auth vulnerability [03:26] {#usn-4290-1-libpam-radius-auth-vulnerability-03-26}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2015-9542](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542) <!-- medium -->
+    -   [CVE-2015-9542](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-9542)
 -   Stack overflow in password field handling -> crash, DoS
 
 
 ### [[USN-4291-1](https://usn.ubuntu.com/4291-1/)] mod-auth-mellon vulnerability [03:49] {#usn-4291-1-mod-auth-mellon-vulnerability-03-49}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2019-13038](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13038) <!-- medium -->
+    -   [CVE-2019-13038](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13038)
 -   SAML 2.0 authentication module for Apache
 -   Open redirect - didn't properly validate the ReturnTo substring of the
     login API endpoint - could allow to launch possible phishing attacks etc
@@ -98,10 +98,10 @@ current open positions.
 ### [[USN-4292-1](https://usn.ubuntu.com/4292-1/)] rsync vulnerabilities [04:33] {#usn-4292-1-rsync-vulnerabilities-04-33}
 
 -   4 CVEs addressed in Xenial, Bionic
-    -   [CVE-2016-9843](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9843) <!-- low -->
-    -   [CVE-2016-9842](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9842) <!-- low -->
-    -   [CVE-2016-9841](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9841) <!-- low -->
-    -   [CVE-2016-9840](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9840) <!-- low -->
+    -   [CVE-2016-9843](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9843)
+    -   [CVE-2016-9842](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9842)
+    -   [CVE-2016-9841](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9841)
+    -   [CVE-2016-9840](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9840)
 -   All issues with the vendored copy of zlib contained within rsync -
     various low-level memory management issues (discussed back in [Episode 60](https://ubuntusecuritypodcast.org/episode-60/)
     in the context of zlib - as a result of a security audit a few years ago

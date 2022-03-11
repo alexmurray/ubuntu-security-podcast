@@ -33,16 +33,16 @@ the team - come join us ☺
 ### [[USN-5037-1](https://ubuntu.com/security/notices/USN-5037-1)] Firefox vulnerabilities [00:39] {#usn-5037-1-firefox-vulnerabilities-00-39}
 
 -   10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-29990](https://ubuntu.com/security/CVE-2021-29990) <!-- medium -->
-    -   [CVE-2021-29989](https://ubuntu.com/security/CVE-2021-29989) <!-- medium -->
-    -   [CVE-2021-29988](https://ubuntu.com/security/CVE-2021-29988) <!-- medium -->
-    -   [CVE-2021-29987](https://ubuntu.com/security/CVE-2021-29987) <!-- medium -->
-    -   [CVE-2021-29986](https://ubuntu.com/security/CVE-2021-29986) <!-- medium -->
-    -   [CVE-2021-29985](https://ubuntu.com/security/CVE-2021-29985) <!-- medium -->
-    -   [CVE-2021-29984](https://ubuntu.com/security/CVE-2021-29984) <!-- medium -->
-    -   [CVE-2021-29982](https://ubuntu.com/security/CVE-2021-29982) <!-- low -->
-    -   [CVE-2021-29981](https://ubuntu.com/security/CVE-2021-29981) <!-- medium -->
-    -   [CVE-2021-29980](https://ubuntu.com/security/CVE-2021-29980) <!-- medium -->
+    -   [CVE-2021-29990](https://ubuntu.com/security/CVE-2021-29990)
+    -   [CVE-2021-29989](https://ubuntu.com/security/CVE-2021-29989)
+    -   [CVE-2021-29988](https://ubuntu.com/security/CVE-2021-29988)
+    -   [CVE-2021-29987](https://ubuntu.com/security/CVE-2021-29987)
+    -   [CVE-2021-29986](https://ubuntu.com/security/CVE-2021-29986)
+    -   [CVE-2021-29985](https://ubuntu.com/security/CVE-2021-29985)
+    -   [CVE-2021-29984](https://ubuntu.com/security/CVE-2021-29984)
+    -   [CVE-2021-29982](https://ubuntu.com/security/CVE-2021-29982)
+    -   [CVE-2021-29981](https://ubuntu.com/security/CVE-2021-29981)
+    -   [CVE-2021-29980](https://ubuntu.com/security/CVE-2021-29980)
 -   91.0
     -   Better support for clearing cookies to stop possible hidden data leaks as part of the Total Cookie Protection
     -   Private browsing to use attempt HTTPS by default than fallback to HTTP
@@ -58,8 +58,8 @@ the team - come join us ☺
 ### [[USN-3809-2](https://ubuntu.com/security/notices/USN-3809-2)] OpenSSH regression [02:54] {#usn-3809-2-openssh-regression-02-54}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2016-10708](https://ubuntu.com/security/CVE-2016-10708) <!-- low -->
-    -   [CVE-2018-15473](https://ubuntu.com/security/CVE-2018-15473) <!-- low -->
+    -   [CVE-2016-10708](https://ubuntu.com/security/CVE-2016-10708)
+    -   [CVE-2018-15473](https://ubuntu.com/security/CVE-2018-15473)
 -   [Episode 11](https://ubuntusecuritypodcast.org/episode-11/) - possible user enumeration since as a result of patching
     [CVE-2018-15473](https://ubuntu.com/security/CVE-2018-15473) the behaviour when trying to log in changed depending on
     whether the specific user account existed or not - due to a mistake made
@@ -69,8 +69,8 @@ the team - come join us ☺
 ### [[USN-5038-1](https://ubuntu.com/security/notices/USN-5038-1)] PostgreSQL vulnerabilities [03:38] {#usn-5038-1-postgresql-vulnerabilities-03-38}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3449](https://ubuntu.com/security/CVE-2021-3449) <!-- high -->
-    -   [CVE-2021-3677](https://ubuntu.com/security/CVE-2021-3677) <!-- medium -->
+    -   [CVE-2021-3449](https://ubuntu.com/security/CVE-2021-3449)
+    -   [CVE-2021-3677](https://ubuntu.com/security/CVE-2021-3677)
 -   2 possible remote crasher bugs - one through just sending a crafted TLS
     ClientHello message -> NULL ptr deref -> crash, the other via the planner
     which is used to try and optimise SQL queries - possible OOB read
@@ -79,8 +79,8 @@ the team - come join us ☺
 ### [[USN-5022-2](https://ubuntu.com/security/notices/USN-5022-2)] MariaDB vulnerabilities [04:19] {#usn-5022-2-mariadb-vulnerabilities-04-19}
 
 -   2 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-2389](https://ubuntu.com/security/CVE-2021-2389) <!-- medium -->
-    -   [CVE-2021-2372](https://ubuntu.com/security/CVE-2021-2372) <!-- medium -->
+    -   [CVE-2021-2389](https://ubuntu.com/security/CVE-2021-2389)
+    -   [CVE-2021-2372](https://ubuntu.com/security/CVE-2021-2372)
 -   [Episode 124](https://ubuntusecuritypodcast.org/episode-124/) in MySQL - only 2 of these also were relevant to MariaDB
 -   Like MySQL, update to latest point release in each series - 10.5.12 for
     hirsute, 10.3.31 for focal - includes both bug **and** security fixes
@@ -101,17 +101,17 @@ the team - come join us ☺
 ### [[USN-5043-1](https://ubuntu.com/security/notices/USN-5043-1)] Exiv2 vulnerabilities [06:04] {#usn-5043-1-exiv2-vulnerabilities-06-04}
 
 -   11 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-37623](https://ubuntu.com/security/CVE-2021-37623) <!-- medium -->
-    -   [CVE-2021-37621](https://ubuntu.com/security/CVE-2021-37621) <!-- medium -->
-    -   [CVE-2021-37619](https://ubuntu.com/security/CVE-2021-37619) <!-- medium -->
-    -   [CVE-2021-37618](https://ubuntu.com/security/CVE-2021-37618) <!-- medium -->
-    -   [CVE-2021-37616](https://ubuntu.com/security/CVE-2021-37616) <!-- medium -->
-    -   [CVE-2021-37615](https://ubuntu.com/security/CVE-2021-37615) <!-- medium -->
-    -   [CVE-2021-34335](https://ubuntu.com/security/CVE-2021-34335) <!-- medium -->
-    -   [CVE-2021-37622](https://ubuntu.com/security/CVE-2021-37622) <!-- medium -->
-    -   [CVE-2021-37620](https://ubuntu.com/security/CVE-2021-37620) <!-- medium -->
-    -   [CVE-2021-34334](https://ubuntu.com/security/CVE-2021-34334) <!-- medium -->
-    -   [CVE-2021-32815](https://ubuntu.com/security/CVE-2021-32815) <!-- medium -->
+    -   [CVE-2021-37623](https://ubuntu.com/security/CVE-2021-37623)
+    -   [CVE-2021-37621](https://ubuntu.com/security/CVE-2021-37621)
+    -   [CVE-2021-37619](https://ubuntu.com/security/CVE-2021-37619)
+    -   [CVE-2021-37618](https://ubuntu.com/security/CVE-2021-37618)
+    -   [CVE-2021-37616](https://ubuntu.com/security/CVE-2021-37616)
+    -   [CVE-2021-37615](https://ubuntu.com/security/CVE-2021-37615)
+    -   [CVE-2021-34335](https://ubuntu.com/security/CVE-2021-34335)
+    -   [CVE-2021-37622](https://ubuntu.com/security/CVE-2021-37622)
+    -   [CVE-2021-37620](https://ubuntu.com/security/CVE-2021-37620)
+    -   [CVE-2021-34334](https://ubuntu.com/security/CVE-2021-34334)
+    -   [CVE-2021-32815](https://ubuntu.com/security/CVE-2021-32815)
 -   Slew of issues discovered by Kevin Backhouse from Github security team
 -   C++ - so usual mix of issues - OOB read, NULL ptr deref, floating point
     exception (div/0), infinte loop, assertion failure - all DoS
@@ -120,22 +120,22 @@ the team - come join us ☺
 ### [[USN-5039-1](https://ubuntu.com/security/notices/USN-5039-1)] Linux kernel vulnerability [06:49] {#usn-5039-1-linux-kernel-vulnerability-06-49}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555) <!-- high -->
+    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555)
 -   netfilter setsockopt()
 
 
 ### [[LSN-0080-1](https://ubuntu.com/security/notices/LSN-0080-1)] Linux kernel vulnerability [07:08] {#lsn-0080-1-linux-kernel-vulnerability-07-08}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555) <!-- high -->
+    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555)
 
 
 ### [[USN-5044-1](https://ubuntu.com/security/notices/USN-5044-1)] Linux kernel vulnerabilities [07:39] {#usn-5044-1-linux-kernel-vulnerabilities-07-39}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587) <!-- medium -->
-    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573) <!-- medium -->
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
+    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587)
+    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573)
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
 -   4.15 bionic + ESM HWE
 -   2 bluetooth UAF and 1 NFC NULL ptr deref
 
@@ -143,10 +143,10 @@ the team - come join us ☺
 ### [[USN-5045-1](https://ubuntu.com/security/notices/USN-5045-1)] Linux kernel vulnerabilities [08:06] {#usn-5045-1-linux-kernel-vulnerabilities-08-06}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587) <!-- medium -->
-    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573) <!-- medium -->
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
+    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587)
+    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573)
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
 -   5.4 focal + bionic hwe
 -   same as above plus CAN BCM uninitialised memory - info leak to local
     attacker
@@ -155,12 +155,12 @@ the team - come join us ☺
 ### [[USN-5046-1](https://ubuntu.com/security/notices/USN-5046-1)] Linux kernel vulnerabilities [08:31] {#usn-5046-1-linux-kernel-vulnerabilities-08-31}
 
 -   6 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587) <!-- medium -->
-    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573) <!-- medium -->
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
-    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691) <!-- medium -->
-    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129) <!-- medium -->
-    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558) <!-- medium -->
+    -   [CVE-2021-3587](https://ubuntu.com/security/CVE-2021-3587)
+    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573)
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
+    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691)
+    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129)
+    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558)
 -   5.11 hirsute + focal hwe
 -   bluetooth UAF, NFC NULL ptr deref, access control issue in bluetooth -
     could allow a local attacker in range to expose info, xen PV issue -

@@ -31,29 +31,29 @@ updates for Linux kernel, nginx, Ardour and strongSwan.
 ### [[USN-5091-3](https://ubuntu.com/security/notices/USN-5091-3)] Linux kernel (Azure) regression {#usn-5091-3-linux-kernel--azure--regression}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
-    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199) <!-- medium -->
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
-    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576) <!-- medium -->
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
-    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624) <!-- medium -->
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
+    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199)
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
+    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576)
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
+    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624)
 
 
 ### [[USN-5092-3](https://ubuntu.com/security/notices/USN-5092-3)] Linux kernel (Azure) regression [00:50] {#usn-5092-3-linux-kernel--azure--regression-00-50}
 
 -   12 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205) <!-- low -->
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
-    -   [CVE-2021-38201](https://ubuntu.com/security/CVE-2021-38201) <!-- medium -->
-    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199) <!-- medium -->
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
-    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576) <!-- medium -->
-    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159) <!-- low -->
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
-    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477) <!-- medium -->
-    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556) <!-- medium -->
-    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624) <!-- medium -->
-    -   [CVE-2021-41073](https://ubuntu.com/security/CVE-2021-41073) <!-- high -->
+    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205)
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
+    -   [CVE-2021-38201](https://ubuntu.com/security/CVE-2021-38201)
+    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199)
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
+    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576)
+    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159)
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
+    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477)
+    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556)
+    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624)
+    -   [CVE-2021-41073](https://ubuntu.com/security/CVE-2021-41073)
 -   Failure to boot on large Azure instance types - caused by a patch that
     got backported to the 5.14 upstream stable kernel that was purported to
     head off possible future problems, but itself caused issues on say the
@@ -64,7 +64,7 @@ updates for Linux kernel, nginx, Ardour and strongSwan.
 ### [[USN-5109-1](https://ubuntu.com/security/notices/USN-5109-1)] nginx vulnerability [01:44] {#usn-5109-1-nginx-vulnerability-01-44}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2017-20005](https://ubuntu.com/security/CVE-2017-20005) <!-- medium -->
+    -   [CVE-2017-20005](https://ubuntu.com/security/CVE-2017-20005)
 -   Buffer overflow when handling files with modification dates a long time
     in the past - ie. 1969 or very far in the future - integer overflow in
     the autoindex module
@@ -73,7 +73,7 @@ updates for Linux kernel, nginx, Ardour and strongSwan.
 ### [[USN-5110-1](https://ubuntu.com/security/notices/USN-5110-1)] Ardour vulnerability [02:22] {#usn-5110-1-ardour-vulnerability-02-22}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-22617](https://ubuntu.com/security/CVE-2020-22617) <!-- medium -->
+    -   [CVE-2020-22617](https://ubuntu.com/security/CVE-2020-22617)
 -   UAF in handling of crafted XML files - if using attacker provided files
     could DoS / RCE
 
@@ -82,8 +82,8 @@ updates for Linux kernel, nginx, Ardour and strongSwan.
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-41991](https://ubuntu.com/security/CVE-2021-41991) <!-- medium -->
-    -   [CVE-2021-41990](https://ubuntu.com/security/CVE-2021-41990) <!-- medium --> <!-- LTS only, not ESM -->
+    -   [CVE-2021-41991](https://ubuntu.com/security/CVE-2021-41991)
+    -   [CVE-2021-41990](https://ubuntu.com/security/CVE-2021-41990) <!-- LTS only, not ESM -->
 -   Integer overflow when replacing certs in cache - if can send many
     requests with different certs can fill cache and then cause replacement
     of cache entries when gets full - LRU algorithm could then cause integer
@@ -95,14 +95,14 @@ updates for Linux kernel, nginx, Ardour and strongSwan.
 ### [[USN-5113-1](https://ubuntu.com/security/notices/USN-5113-1)] Linux kernel vulnerabilities [04:13] {#usn-5113-1-linux-kernel-vulnerabilities-04-13}
 
 -   8 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008) <!-- low -->
-    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490) <!-- medium -->
-    -   [CVE-2021-38166](https://ubuntu.com/security/CVE-2021-38166) <!-- medium -->
-    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753) <!-- medium -->
-    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743) <!-- medium -->
-    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739) <!-- low -->
-    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732) <!-- medium -->
-    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702) <!-- medium -->
+    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008)
+    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490)
+    -   [CVE-2021-38166](https://ubuntu.com/security/CVE-2021-38166)
+    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753)
+    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743)
+    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739)
+    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732)
+    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702)
 -   5.11 hirsute kernel (20.04 HWE)
 -   overlayfs perms handling issue, race condition -> OOB read in VT
     subsystem, integer overflow in hashtable implementation in BPF, ext4

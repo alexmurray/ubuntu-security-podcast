@@ -35,7 +35,7 @@ team.
 ### [[USN-4762-1](https://ubuntu.com/security/notices/USN-4762-1)] OpenSSH vulnerability [00:54] {#usn-4762-1-openssh-vulnerability-00-54}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-28041](https://ubuntu.com/security/CVE-2021-28041) <!-- medium -->
+    -   [CVE-2021-28041](https://ubuntu.com/security/CVE-2021-28041)
 -   Double free in ssh-agent - so only affects openssh-client and where the
     ssh-agent socket is able to be accessed by other users etc - on moderns
     systems the socket is only accessible by the owner so would need to have
@@ -46,14 +46,14 @@ team.
 ### [[USN-4763-1](https://ubuntu.com/security/notices/USN-4763-1)] Pillow vulnerabilities [01:50] {#usn-4763-1-pillow-vulnerabilities-01-50}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-27923](https://ubuntu.com/security/CVE-2021-27923) <!-- medium -->
-    -   [CVE-2021-27922](https://ubuntu.com/security/CVE-2021-27922) <!-- medium -->
-    -   [CVE-2021-27921](https://ubuntu.com/security/CVE-2021-27921) <!-- medium -->
-    -   [CVE-2021-25293](https://ubuntu.com/security/CVE-2021-25293) <!-- medium -->
-    -   [CVE-2021-25292](https://ubuntu.com/security/CVE-2021-25292) <!-- medium -->
-    -   [CVE-2021-25290](https://ubuntu.com/security/CVE-2021-25290) <!-- medium -->
-    -   [CVE-2021-25291](https://ubuntu.com/security/CVE-2021-25291) <!-- medium -->
-    -   [CVE-2021-25289](https://ubuntu.com/security/CVE-2021-25289) <!-- medium -->
+    -   [CVE-2021-27923](https://ubuntu.com/security/CVE-2021-27923)
+    -   [CVE-2021-27922](https://ubuntu.com/security/CVE-2021-27922)
+    -   [CVE-2021-27921](https://ubuntu.com/security/CVE-2021-27921)
+    -   [CVE-2021-25293](https://ubuntu.com/security/CVE-2021-25293)
+    -   [CVE-2021-25292](https://ubuntu.com/security/CVE-2021-25292)
+    -   [CVE-2021-25290](https://ubuntu.com/security/CVE-2021-25290)
+    -   [CVE-2021-25291](https://ubuntu.com/security/CVE-2021-25291)
+    -   [CVE-2021-25289](https://ubuntu.com/security/CVE-2021-25289)
 -   Python imaging library - uses C libraries like libjpeg for actual image
     handling so ends up with usual mix of C memory corruption issues - OOB
     read/write etc - crash, code exec
@@ -62,13 +62,13 @@ team.
 ### [[USN-4754-3](https://ubuntu.com/security/notices/USN-4754-3)] Python vulnerabilities [02:50] {#usn-4754-3-python-vulnerabilities-02-50}
 
 -   7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3177](https://ubuntu.com/security/CVE-2021-3177) <!-- medium -->
-    -   [CVE-2020-27619](https://ubuntu.com/security/CVE-2020-27619) <!-- low -->
-    -   [CVE-2020-26116](https://ubuntu.com/security/CVE-2020-26116) <!-- medium -->
-    -   [CVE-2020-8492](https://ubuntu.com/security/CVE-2020-8492) <!-- low -->
-    -   [CVE-2019-20907](https://ubuntu.com/security/CVE-2019-20907) <!-- medium -->
-    -   [CVE-2019-17514](https://ubuntu.com/security/CVE-2019-17514) <!-- negligible -->
-    -   [CVE-2019-9674](https://ubuntu.com/security/CVE-2019-9674) <!-- low -->
+    -   [CVE-2021-3177](https://ubuntu.com/security/CVE-2021-3177)
+    -   [CVE-2020-27619](https://ubuntu.com/security/CVE-2020-27619)
+    -   [CVE-2020-26116](https://ubuntu.com/security/CVE-2020-26116)
+    -   [CVE-2020-8492](https://ubuntu.com/security/CVE-2020-8492)
+    -   [CVE-2019-20907](https://ubuntu.com/security/CVE-2019-20907)
+    -   [CVE-2019-17514](https://ubuntu.com/security/CVE-2019-17514)
+    -   [CVE-2019-9674](https://ubuntu.com/security/CVE-2019-9674)
 -   Good illustration of main vs universe split - multiple python
     versions in different releases - 2.7 in main X+B, but universe in F+G,
     3.5 in X, 3.6 in B, 3.8 in F+G - but we still have 2.7 in universe on
@@ -79,7 +79,7 @@ team.
 ### [[USN-4764-1](https://ubuntu.com/security/notices/USN-4764-1)] GLib vulnerability [04:57] {#usn-4764-1-glib-vulnerability-04-57}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-28153](https://ubuntu.com/security/CVE-2021-28153) <!-- medium -->
+    -   [CVE-2021-28153](https://ubuntu.com/security/CVE-2021-28153)
 -   g\_file\_replace() on a dangling symlink would also create the target of
     the symlink as an empty file (but only if did not already exist)
 
@@ -87,35 +87,35 @@ team.
 ### [[USN-4876-1](https://ubuntu.com/security/notices/USN-4876-1)] Linux kernel vulnerabilities [05:49] {#usn-4876-1-linux-kernel-vulnerabilities-05-49}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
-    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178) <!-- negligible -->
-    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158) <!-- medium -->
-    -   [CVE-2020-29569](https://ubuntu.com/security/CVE-2020-29569) <!-- low -->
+    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178)
+    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158)
+    -   [CVE-2020-29569](https://ubuntu.com/security/CVE-2020-29569)
 -   4.4 (xenial + trusty esm)
 
 
 ### [[USN-4877-1](https://ubuntu.com/security/notices/USN-4877-1)] Linux kernel vulnerabilities {#usn-4877-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178) <!-- negligible -->
-    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158) <!-- medium -->
+    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178)
+    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158)
 -   4.15
 
 
 ### [[USN-4878-1](https://ubuntu.com/security/notices/USN-4878-1)] Linux kernel vulnerabilities {#usn-4878-1-linux-kernel-vulnerabilities}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178) <!-- negligible -->
-    -   [CVE-2021-3347](https://ubuntu.com/security/CVE-2021-3347) <!-- medium -->
-    -   [CVE-2021-20239](https://ubuntu.com/security/CVE-2021-20239) <!-- low -->
-    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158) <!-- medium -->
+    -   [CVE-2021-3178](https://ubuntu.com/security/CVE-2021-3178)
+    -   [CVE-2021-3347](https://ubuntu.com/security/CVE-2021-3347)
+    -   [CVE-2021-20239](https://ubuntu.com/security/CVE-2021-20239)
+    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158)
 -   5.4
 
 
 ### [[USN-4879-1](https://ubuntu.com/security/notices/USN-4879-1)] Linux kernel vulnerabilities {#usn-4879-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-20194](https://ubuntu.com/security/CVE-2021-20194) <!-- low -->
-    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158) <!-- medium -->
+    -   [CVE-2021-20194](https://ubuntu.com/security/CVE-2021-20194)
+    -   [CVE-2020-36158](https://ubuntu.com/security/CVE-2020-36158)
 -   5.8
 -   Marvell wifi driver buffer overflow - could be triggered by a malicious
     remote device sending a overly long ad-hoc SSID value - DoS, RCE
@@ -124,11 +124,11 @@ team.
 ### [[USN-4880-1](https://ubuntu.com/security/notices/USN-4880-1)] OpenJPEG vulnerabilities [07:00] {#usn-4880-1-openjpeg-vulnerabilities-07-00}
 
 -   5 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-27845](https://ubuntu.com/security/CVE-2020-27845) <!-- medium -->
-    -   [CVE-2020-27841](https://ubuntu.com/security/CVE-2020-27841) <!-- low -->
-    -   [CVE-2020-27824](https://ubuntu.com/security/CVE-2020-27824) <!-- medium -->
-    -   [CVE-2020-27823](https://ubuntu.com/security/CVE-2020-27823) <!-- medium -->
-    -   [CVE-2020-27814](https://ubuntu.com/security/CVE-2020-27814) <!-- medium -->
+    -   [CVE-2020-27845](https://ubuntu.com/security/CVE-2020-27845)
+    -   [CVE-2020-27841](https://ubuntu.com/security/CVE-2020-27841)
+    -   [CVE-2020-27824](https://ubuntu.com/security/CVE-2020-27824)
+    -   [CVE-2020-27823](https://ubuntu.com/security/CVE-2020-27823)
+    -   [CVE-2020-27814](https://ubuntu.com/security/CVE-2020-27814)
 -   Various memory corruption issues fixed in openjpeg - DoS, RCE etc
 
 
@@ -155,7 +155,7 @@ team.
 #### Ubuntu Security Engineer {#ubuntu-security-engineer}
 
 -   <https://canonical.com/careers/2612092/ubuntu-security-engineer-remote>
-    <!-- certifications -->
+   
 
 
 #### Security Engineer - Ubuntu {#security-engineer-ubuntu}

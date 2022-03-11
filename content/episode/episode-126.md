@@ -58,7 +58,7 @@ Docker, Perl, c-ares, GPSd and more.
 ### [[USN-5033-1](https://ubuntu.com/security/notices/USN-5033-1)] Perl vulnerability [03:32] {#usn-5033-1-perl-vulnerability-03-32}
 
 -   1 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-36770](https://ubuntu.com/security/CVE-2021-36770) <!-- medium -->
+    -   [CVE-2021-36770](https://ubuntu.com/security/CVE-2021-36770)
 -   Perl Encode library could end up running arbitrary Perl code from the
     current working directory - was introduced by a change in Encode 3.05 in
     perl 5.32/5.34 so only affected >= 21.04
@@ -67,7 +67,7 @@ Docker, Perl, c-ares, GPSd and more.
 ### [[USN-5034-1](https://ubuntu.com/security/notices/USN-5034-1), [USN-5034-2](https://ubuntu.com/security/notices/USN-5034-2)] c-ares vulnerability [03:59] {#usn-5034-1-usn-5034-2-c-ares-vulnerability-03-59}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3672](https://ubuntu.com/security/CVE-2021-3672) <!-- medium -->
+    -   [CVE-2021-3672](https://ubuntu.com/security/CVE-2021-3672)
 -   Lib for async name resolution
 -   Failed to properly validate certain hostnames returned from DNS servers -
     could allow a remote attacker to possibly perform domain hijacking

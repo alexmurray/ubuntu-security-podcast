@@ -33,7 +33,7 @@ Keystone, Sudo, Django and more.
 ### [[USN-4259-1](https://usn.ubuntu.com/4259-1/)] Apache Solr vulnerability [00:50] {#usn-4259-1-apache-solr-vulnerability-00-50}
 
 -   1 CVEs addressed in Xenial
-    -   [CVE-2017-12629](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12629) <!-- high -->
+    -   [CVE-2017-12629](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12629)
 -   Enterprise search server based on Lucene with XML/HTTP and JSON APIs
 -   Was vulnerable to an XML External Entity (XXE) attack - XML can include a
     reference to another XML resource which might then be fetched - this
@@ -45,9 +45,9 @@ Keystone, Sudo, Django and more.
 ### [[USN-4261-1](https://usn.ubuntu.com/4261-1/)] WebKitGTK+ vulnerabilities [01:44] {#usn-4261-1-webkitgtk-plus-vulnerabilities-01-44}
 
 -   3 CVEs addressed in Bionic, Eoan
-    -   [CVE-2019-8846](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8846) <!-- medium -->
-    -   [CVE-2019-8844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8844) <!-- medium -->
-    -   [CVE-2019-8835](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8835) <!-- medium -->
+    -   [CVE-2019-8846](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8846)
+    -   [CVE-2019-8844](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8844)
+    -   [CVE-2019-8835](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8835)
 -   Various memory management issues which could be triggered via a malicious
     websites - possible remote code execution as a result
 
@@ -55,7 +55,7 @@ Keystone, Sudo, Django and more.
 ### [[USN-4262-1](https://usn.ubuntu.com/4262-1/)] OpenStack Keystone vulnerability [02:13] {#usn-4262-1-openstack-keystone-vulnerability-02-13}
 
 -   1 CVEs addressed in Eoan
-    -   [CVE-2019-19687](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19687) <!-- medium -->
+    -   [CVE-2019-19687](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19687)
 -   Keystone provides identity services (client authentication etc) for
     OpenStack
 -   credentials API allowed any user with a role on a project to list all
@@ -68,13 +68,13 @@ Keystone, Sudo, Django and more.
 ### [LSN-0062-1] Linux kernel vulnerability [03:01] {#lsn-0062-1-linux-kernel-vulnerability-03-01}
 
 -   7 CVEs addressed in Xenial and Bionic
-    -   [CVE-2019-18885](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18885) <!-- low -->
-    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901) <!-- medium -->
-    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897) <!-- medium -->
-    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896) <!-- medium -->
-    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895) <!-- medium -->
-    -   [CVE-2019-14615](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615) <!-- medium -->
-    -   [CVE-2019-2214](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214) <!-- medium -->
+    -   [CVE-2019-18885](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18885)
+    -   [CVE-2019-14901](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14901)
+    -   [CVE-2019-14897](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14897)
+    -   [CVE-2019-14896](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14896)
+    -   [CVE-2019-14895](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14895)
+    -   [CVE-2019-14615](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14615)
+    -   [CVE-2019-2214](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2214)
 -   Heap and stack buffer overflows in Marvell Wifi drivers, Intel GPU info
     leak on context switch, binder IPC heap buffer overflow
 
@@ -82,7 +82,7 @@ Keystone, Sudo, Django and more.
 ### [[USN-4263-1](https://usn.ubuntu.com/4263-1/)] Sudo vulnerability [03:50] {#usn-4263-1-sudo-vulnerability-03-50}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2019-18634](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634) <!-- low -->
+    -   [CVE-2019-18634](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18634)
 -   Lots of press around this but most people would not be vulnerable since
     need to run in an non-default configuration
 -   When pwfeedback enabled in /etc/sudoers, stack buffer overflow able to be
@@ -93,7 +93,7 @@ Keystone, Sudo, Django and more.
 ### [[USN-4264-1](https://usn.ubuntu.com/4264-1/)] Django vulnerability [05:00] {#usn-4264-1-django-vulnerability-05-00}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-7471](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7471) <!-- medium -->
+    -   [CVE-2020-7471](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7471)
 -   Possible SQL injection via the PostgreSQL module if was using the
     StringAgg instance
 -   Fixed to sanitize the input before processing it
@@ -102,8 +102,8 @@ Keystone, Sudo, Django and more.
 ### [[USN-4265-1](https://usn.ubuntu.com/4265-1/), [USN-4265-2](https://usn.ubuntu.com/4265-2/)] SpamAssassin vulnerabilities [05:29] {#usn-4265-1-usn-4265-2-spamassassin-vulnerabilities-05-29}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2020-1931](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1931) <!-- medium -->
-    -   [CVE-2020-1930](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1930) <!-- medium -->
+    -   [CVE-2020-1931](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1931)
+    -   [CVE-2020-1930](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1930)
 -   [Episode 59](https://ubuntusecuritypodcast.org/episode-59/) - possible RCE via crafted CF file - 2 more similar
     vulnerabilities fixed - again upstream advise should only use trusted
     update channels or 3rd parted .cf files
@@ -112,13 +112,13 @@ Keystone, Sudo, Django and more.
 ### [[USN-4266-1](https://usn.ubuntu.com/4266-1/)] GraphicsMagick vulnerabilities [06:37] {#usn-4266-1-graphicsmagick-vulnerabilities-06-37}
 
 -   7 CVEs addressed in Xenial
-    -   [CVE-2017-18231](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18231) <!-- medium -->
-    -   [CVE-2017-18230](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18230) <!-- medium -->
-    -   [CVE-2017-18229](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18229) <!-- medium -->
-    -   [CVE-2017-18219](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18219) <!-- low -->
-    -   [CVE-2017-17915](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17915) <!-- medium -->
-    -   [CVE-2017-17913](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17913) <!-- medium -->
-    -   [CVE-2017-17912](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17912) <!-- medium -->
+    -   [CVE-2017-18231](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18231)
+    -   [CVE-2017-18230](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18230)
+    -   [CVE-2017-18229](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18229)
+    -   [CVE-2017-18219](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18219)
+    -   [CVE-2017-17915](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17915)
+    -   [CVE-2017-17913](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17913)
+    -   [CVE-2017-17912](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17912)
 -   [Episode 55](https://ubuntusecuritypodcast.org/episode-55/), [Episode 57](https://ubuntusecuritypodcast.org/episode-57/), [Episode 59](https://ubuntusecuritypodcast.org/episode-59/), [Episode 60](https://ubuntusecuritypodcast.org/episode-60/)
 -   NULL ptr dereferences -> crash, DoS
 -   Large memory allocation -> crash, DoS

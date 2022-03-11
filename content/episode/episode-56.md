@@ -33,7 +33,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4212-1](https://usn.ubuntu.com/4212-1/)] HAProxy vulnerability [00:50] {#usn-4212-1-haproxy-vulnerability-00-50}
 
 -   1 CVEs addressed in Bionic, Disco, Eoan
-    -   [CVE-2019-19330](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19330) <!-- medium -->
+    -   [CVE-2019-19330](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19330)
 -   Failed to treat malformed headers as invalid - HTTP/2 allows encoding
     headers as binary and these can then contain characters which would be
     invalid when converted to HTTP/1.1 - as such these should be treated as
@@ -45,13 +45,13 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4213-1](https://usn.ubuntu.com/4213-1/)] Squid vulnerabilities [01:37] {#usn-4213-1-squid-vulnerabilities-01-37}
 
 -   7 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-18679](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18679) <!-- medium -->
-    -   [CVE-2019-18678](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18678) <!-- medium -->
-    -   [CVE-2019-18677](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18677) <!-- medium -->
-    -   [CVE-2019-18676](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676) <!-- medium -->
-    -   [CVE-2019-12854](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12854) <!-- low -->
-    -   [CVE-2019-12526](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12526) <!-- medium -->
-    -   [CVE-2019-12523](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523) <!-- medium -->
+    -   [CVE-2019-18679](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18679)
+    -   [CVE-2019-18678](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18678)
+    -   [CVE-2019-18677](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18677)
+    -   [CVE-2019-18676](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18676)
+    -   [CVE-2019-12854](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12854)
+    -   [CVE-2019-12526](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12526)
+    -   [CVE-2019-12523](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12523)
 -   2 issues in URN handling (uniform resource name, globally unique
     identifier within a particular namespace - e.g. urn:ietf:rfc:2648):
     -   When handling URN requests Squid makes a corresponding HTTP request but
@@ -73,7 +73,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4214-1](https://usn.ubuntu.com/4214-1/)] RabbitMQ vulnerability [03:54] {#usn-4214-1-rabbitmq-vulnerability-03-54}
 
 -   1 CVEs addressed in Trusty ESM, Disco, Eoan
-    -   [CVE-2019-18609](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18609) <!-- medium -->
+    -   [CVE-2019-18609](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18609)
 -   Integer overflow if a client sent a frame of size close to UINT32\_MAX - a
     resulting size is calculated that could overflow, and then memory
     allocated with this overflowed (and hence small) size, resulting in a
@@ -84,7 +84,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4215-1](https://usn.ubuntu.com/4215-1/)] NSS vulnerability [04:38] {#usn-4215-1-nss-vulnerability-04-38}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-17007](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17007) <!-- medium -->
+    -   [CVE-2019-17007](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17007)
 -   NULL pointer dereference -> crash -> DoS when handling Netscape
     Certificate Sequences (a type of encoded certificate) handled by NSS
 
@@ -92,15 +92,15 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4216-1](https://usn.ubuntu.com/4216-1/)] Firefox vulnerabilities [05:07] {#usn-4216-1-firefox-vulnerabilities-05-07}
 
 -   9 CVEs addressed in Bionic, Disco, Eoan
-    -   [CVE-2019-17014](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17014) <!-- medium -->
-    -   [CVE-2019-17013](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17013) <!-- medium -->
-    -   [CVE-2019-17012](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17012) <!-- medium -->
-    -   [CVE-2019-17011](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17011) <!-- medium -->
-    -   [CVE-2019-17010](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17010) <!-- medium -->
-    -   [CVE-2019-17008](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17008) <!-- medium -->
-    -   [CVE-2019-17005](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17005) <!-- medium -->
-    -   [CVE-2019-11756](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11756) <!-- medium -->
-    -   [CVE-2019-11745](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745) <!-- medium -->
+    -   [CVE-2019-17014](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17014)
+    -   [CVE-2019-17013](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17013)
+    -   [CVE-2019-17012](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17012)
+    -   [CVE-2019-17011](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17011)
+    -   [CVE-2019-17010](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17010)
+    -   [CVE-2019-17008](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17008)
+    -   [CVE-2019-17005](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17005)
+    -   [CVE-2019-11756](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11756)
+    -   [CVE-2019-11745](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11745)
 -   Latest upstream firefox release (71.0)
     -   Includes fix for NSS issue discussed last week plus other sorts of issues:
         -   UAFs
@@ -111,8 +111,8 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4217-1](https://usn.ubuntu.com/4217-1/)] Samba vulnerabilities [05:45] {#usn-4217-1-samba-vulnerabilities-05-45}
 
 -   2 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-14870](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14870) <!-- medium -->
-    -   [CVE-2019-14861](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14861) <!-- medium -->
+    -   [CVE-2019-14870](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14870)
+    -   [CVE-2019-14861](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14861)
 -   Kerberos delegation allows to be configured as non-forwardable - but this
     would not be honored properly by the Samba AD DC - so could allow
     delegation to be forwarded by clients even when was disabled by config
@@ -123,7 +123,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4218-1](https://usn.ubuntu.com/4218-1/)] GNU C vulnerability [06:43] {#usn-4218-1-gnu-c-vulnerability-06-43}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2018-6485](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6485) <!-- medium -->
+    -   [CVE-2018-6485](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6485)
 -   eglibc was used as the standard libc in Ubuntu in older releases like
     Trusty/Precise etc - posix\_memalign integer overflow - allocates memory
     of a given size aligned to a certain size - could return a smaller area
@@ -133,7 +133,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4219-1](https://usn.ubuntu.com/4219-1/)] libssh vulnerability [07:30] {#usn-4219-1-libssh-vulnerability-07-30}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-14889](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14889) <!-- medium -->
+    -   [CVE-2019-14889](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14889)
 -   libssh ssh\_scp\_new() function takes a 3rd argument - if this could be
     attacker influenced then could possible inject arbitrary commands which
     will then be run on the server - so requires the API to be used in a
@@ -144,15 +144,15 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4220-1](https://usn.ubuntu.com/4220-1/)] Git vulnerabilities [08:16] {#usn-4220-1-git-vulnerabilities-08-16}
 
 -   9 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-19604](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19604) <!-- medium -->
-    -   [CVE-2019-1387](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1387) <!-- low -->
-    -   [CVE-2019-1354](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1354) <!-- low -->
-    -   [CVE-2019-1353](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1353) <!-- medium -->
-    -   [CVE-2019-1352](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1352) <!-- medium -->
-    -   [CVE-2019-1351](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1351) <!-- medium -->
-    -   [CVE-2019-1350](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1350) <!-- medium -->
-    -   [CVE-2019-1349](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1349) <!-- low -->
-    -   [CVE-2019-1348](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1348) <!-- medium -->
+    -   [CVE-2019-19604](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19604)
+    -   [CVE-2019-1387](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1387)
+    -   [CVE-2019-1354](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1354)
+    -   [CVE-2019-1353](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1353)
+    -   [CVE-2019-1352](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1352)
+    -   [CVE-2019-1351](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1351)
+    -   [CVE-2019-1350](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1350)
+    -   [CVE-2019-1349](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1349)
+    -   [CVE-2019-1348](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-1348)
 -   RCE if clone a malicious repo with a crafted .gitmodules file (used to
     specify git submodules for the parent repo)
 -   Mishandling of CLI arguments during cloning of repos via SSH URLs allowed
@@ -176,16 +176,16 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4202-2](https://usn.ubuntu.com/4202-2/)] Thunderbird regression [10:15] {#usn-4202-2-thunderbird-regression-10-15}
 
 -   10 CVEs addressed in Bionic, Eoan
-    -   [CVE-2019-15903](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903) <!-- medium -->
-    -   [CVE-2019-11764](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764) <!-- medium -->
-    -   [CVE-2019-11763](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763) <!-- medium -->
-    -   [CVE-2019-11762](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762) <!-- medium -->
-    -   [CVE-2019-11761](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761) <!-- medium -->
-    -   [CVE-2019-11760](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760) <!-- medium -->
-    -   [CVE-2019-11759](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759) <!-- medium -->
-    -   [CVE-2019-11758](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11758) <!-- medium -->
-    -   [CVE-2019-11757](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757) <!-- medium -->
-    -   [CVE-2019-11755](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11755) <!-- medium -->
+    -   [CVE-2019-15903](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903)
+    -   [CVE-2019-11764](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764)
+    -   [CVE-2019-11763](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763)
+    -   [CVE-2019-11762](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762)
+    -   [CVE-2019-11761](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761)
+    -   [CVE-2019-11760](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760)
+    -   [CVE-2019-11759](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759)
+    -   [CVE-2019-11758](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11758)
+    -   [CVE-2019-11757](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757)
+    -   [CVE-2019-11755](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11755)
 -   Upstream regression - previous update 68.2.1 could result in a new
     profile being created for some users so would appear to lose settings etc
 
@@ -193,7 +193,7 @@ hacker indictments, unsecured AWS S3 buckets and more.
 ### [[USN-4221-1](https://usn.ubuntu.com/4221-1/)] libpcap vulnerability [10:37] {#usn-4221-1-libpcap-vulnerability-10-37}
 
 -   1 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-15165](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15165) <!-- medium -->
+    -   [CVE-2019-15165](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15165)
 -   Possible buffer overflow when handling PHB headers - confusion upstream
     about which commit fixes which part but have included all the various
     commits from upstream - thanks Steve for taking the time to dig into this

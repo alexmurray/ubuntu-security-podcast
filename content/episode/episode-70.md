@@ -33,8 +33,8 @@ the Linux kernel and more.
 ### [[USN-4315-1](https://usn.ubuntu.com/4315-1/)] Apport vulnerabilities [00:32] {#usn-4315-1-apport-vulnerabilities-00-32}
 
 -   2 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-8833](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833) <!-- medium -->
-    -   [CVE-2020-8831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831) <!-- high -->
+    -   [CVE-2020-8833](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833)
+    -   [CVE-2020-8831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831)
 -   Apport creates it's lock file as world writable in a world-writable
     location - so a local attacker could create a symlink in it's place to a
     non-existant file in a root-owned location and Apport would end up
@@ -52,8 +52,8 @@ the Linux kernel and more.
 ### [[USN-4316-1](https://usn.ubuntu.com/4316-1/), [USN-4316-2](https://usn.ubuntu.com/4316-2/)] GD Graphics Library vulnerabilities [02:46] {#usn-4316-1-usn-4316-2-gd-graphics-library-vulnerabilities-02-46}
 
 -   2 CVEs addressed in Trusty ESM, Xenial, Bionic, Eoan
-    -   [CVE-2019-11038](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11038) <!-- low -->
-    -   [CVE-2018-14553](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14553) <!-- low -->
+    -   [CVE-2019-11038](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11038)
+    -   [CVE-2018-14553](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14553)
 -   Used by php for image handling
 -   Use of an uninitialized variable during
     image creation -> info leak or possible memory corruption
@@ -63,8 +63,8 @@ the Linux kernel and more.
 ### [[USN-4317-1](https://usn.ubuntu.com/4317-1/)] Firefox vulnerabilities [03:10] {#usn-4317-1-firefox-vulnerabilities-03-10}
 
 -   2 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-6820](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820) <!-- high -->
-    -   [CVE-2020-6819](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819) <!-- high -->
+    -   [CVE-2020-6820](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820)
+    -   [CVE-2020-6819](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819)
 -   74.0.1 - reports of two issues being used to exploit Firefox in the
     wild - <https://www.mozilla.org/en-US/security/advisories/mfsa2020-11/>
 -   2 use-after-free  -> remote code execution
@@ -73,7 +73,7 @@ the Linux kernel and more.
 ### [[USN-4321-1](https://usn.ubuntu.com/4321-1/)] HAProxy vulnerability [03:56] {#usn-4321-1-haproxy-vulnerability-03-56}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-11100](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11100) <!-- medium -->
+    -   [CVE-2020-11100](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11100)
 -   Arbitrary heap memory write in HPACK decoder (HTTP/2 header
     compression) -> crash, DoS or possible RCE
 
@@ -81,7 +81,7 @@ the Linux kernel and more.
 ### [[USN-4322-1](https://usn.ubuntu.com/4322-1/)] GnuTLS vulnerability [04:35] {#usn-4322-1-gnutls-vulnerability-04-35}
 
 -   1 CVEs addressed in Eoan
-    -   [CVE-2020-11501](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11501) <!-- medium -->
+    -   [CVE-2020-11501](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11501)
 -   Used all zeros instead of a random 32-byte value for key negotiation as a
     DTLS client - so breaks the security guarantees of DTLS
     (datagram-TLS). Introduced in a code change which changed a boolean OR to
@@ -91,12 +91,12 @@ the Linux kernel and more.
 ### [[USN-4323-1](https://usn.ubuntu.com/4323-1/)] Firefox vulnerabilities [05:28] {#usn-4323-1-firefox-vulnerabilities-05-28}
 
 -   6 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-6823](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6823) <!-- medium -->
-    -   [CVE-2020-6826](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6826) <!-- medium -->
-    -   [CVE-2020-6825](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825) <!-- medium -->
-    -   [CVE-2020-6824](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6824) <!-- medium -->
-    -   [CVE-2020-6822](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822) <!-- medium -->
-    -   [CVE-2020-6821](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821) <!-- medium -->
+    -   [CVE-2020-6823](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6823)
+    -   [CVE-2020-6826](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6826)
+    -   [CVE-2020-6825](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825)
+    -   [CVE-2020-6824](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6824)
+    -   [CVE-2020-6822](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822)
+    -   [CVE-2020-6821](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821)
 -   75.0
 -   Malicious extension could possibly steal auth codes from OAuth login
     sequences
@@ -106,9 +106,9 @@ the Linux kernel and more.
 ### [[USN-4318-1](https://usn.ubuntu.com/4318-1/)] Linux kernel vulnerabilities [06:18] {#usn-4318-1-linux-kernel-vulnerabilities-06-18}
 
 -   3 CVEs addressed in Xenial, Bionic
-    -   [CVE-2020-8992](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992) <!-- low -->
-    -   [CVE-2020-8834](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8834) <!-- medium -->
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
+    -   [CVE-2020-8992](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992)
+    -   [CVE-2020-8834](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8834)
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
 -   4.15 bionic kernel (xenial hwe)
 -   3 DoS issues:
     -   Use-after-free in VFS layer -> crash / info-leak
@@ -120,8 +120,8 @@ the Linux kernel and more.
 ### [[USN-4319-1](https://usn.ubuntu.com/4319-1/), [USN-4325-1](https://usn.ubuntu.com/4325-1/)] Linux kernel vulnerabilities [07:22] {#usn-4319-1-usn-4325-1-linux-kernel-vulnerabilities-07-22}
 
 -   2 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
-    -   [CVE-2019-19046](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046) <!-- low -->
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
+    -   [CVE-2019-19046](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046)
 -   5.3 eoan kernel (bionic hwe), 5.0 bionic clouds kernel
 -   VFS UAF from above
 -   Memory leak in IPMI handler -> DoS via memory exhaustion
@@ -130,7 +130,7 @@ the Linux kernel and more.
 ### [[USN-4320-1](https://usn.ubuntu.com/4320-1/)] Linux kernel vulnerability [08:08] {#usn-4320-1-linux-kernel-vulnerability-08-08}
 
 -   1 CVEs addressed in Trusty ESM, Xenial
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
 -   4.4 xenial kernel (trusty hwe)
 -   VFS UAF
 
@@ -138,8 +138,8 @@ the Linux kernel and more.
 ### [[USN-4324-1](https://usn.ubuntu.com/4324-1/)] Linux kernel vulnerabilities [08:33] {#usn-4324-1-linux-kernel-vulnerabilities-08-33}
 
 -   2 CVEs addressed in Trusty ESM, Xenial, Bionic
-    -   [CVE-2020-8992](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992) <!-- low -->
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
+    -   [CVE-2020-8992](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8992)
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
 -   4.15 rapsi, snapdragon, gke, aws etc - bionic, xenial hwe, trusty esm hwe
 -   VFS UAF
 -   Ext4 soft-lockup issue

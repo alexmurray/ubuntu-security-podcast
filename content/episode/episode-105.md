@@ -33,7 +33,7 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4737-1](https://ubuntu.com/security/notices/USN-4737-1)] Bind vulnerability [00:45] {#usn-4737-1-bind-vulnerability-00-45}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-8625](https://ubuntu.com/security/CVE-2020-8625) <!-- medium -->
+    -   [CVE-2020-8625](https://ubuntu.com/security/CVE-2020-8625)
 -   If using GSS-TSIG could be vulnerable to a DoS or possible RCE - this
     option is not enabled by default BUT is often used when bind is
     integrated with Samba or with a AD-DC. In Ubuntu we confine BIND with an
@@ -52,8 +52,8 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4738-1](https://ubuntu.com/security/notices/USN-4738-1)] OpenSSL vulnerabilities [02:13] {#usn-4738-1-openssl-vulnerabilities-02-13}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-23841](https://ubuntu.com/security/CVE-2021-23841) <!-- medium -->
-    -   [CVE-2021-23840](https://ubuntu.com/security/CVE-2021-23840) <!-- low -->
+    -   [CVE-2021-23841](https://ubuntu.com/security/CVE-2021-23841)
+    -   [CVE-2021-23840](https://ubuntu.com/security/CVE-2021-23840)
 -   NULL ptr deref when parsing malicious issuer fields in X509
     certificates - crash, DoS
 -   Possible buffer overflow if some library functions were used in an
@@ -65,8 +65,8 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4745-1](https://ubuntu.com/security/notices/USN-4745-1)] OpenSSL vulnerabilities [02:56] {#usn-4745-1-openssl-vulnerabilities-02-56}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2021-23841](https://ubuntu.com/security/CVE-2021-23841) <!-- medium -->
-    -   [CVE-2020-1971](https://ubuntu.com/security/CVE-2020-1971) <!-- high -->
+    -   [CVE-2021-23841](https://ubuntu.com/security/CVE-2021-23841)
+    -   [CVE-2020-1971](https://ubuntu.com/security/CVE-2020-1971)
 -   NULL ptr deref above plus separate NULL pointer deref in handling of
     EDIPartyNames as discussed in [Episode 100](https://ubuntusecuritypodcast.org/episode-100/)
 
@@ -74,7 +74,7 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4739-1](https://ubuntu.com/security/notices/USN-4739-1)] WebKitGTK vulnerability [03:25] {#usn-4739-1-webkitgtk-vulnerability-03-25}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-13558](https://ubuntu.com/security/CVE-2020-13558) <!-- medium -->
+    -   [CVE-2020-13558](https://ubuntu.com/security/CVE-2020-13558)
 -   UAF in audio handling - specially crafted webpage could cause an RCE on
     local machine
 
@@ -82,9 +82,9 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4741-1](https://ubuntu.com/security/notices/USN-4741-1)] Jackson vulnerabilities [03:40] {#usn-4741-1-jackson-vulnerabilities-03-40}
 
 -   3 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2019-10172](https://ubuntu.com/security/CVE-2019-10172) <!-- medium -->
-    -   [CVE-2017-7525](https://ubuntu.com/security/CVE-2017-7525) <!-- medium -->
-    -   [CVE-2017-15095](https://ubuntu.com/security/CVE-2017-15095) <!-- medium -->
+    -   [CVE-2019-10172](https://ubuntu.com/security/CVE-2019-10172)
+    -   [CVE-2017-7525](https://ubuntu.com/security/CVE-2017-7525)
+    -   [CVE-2017-15095](https://ubuntu.com/security/CVE-2017-15095)
 -   JSON processor for Java - allows to map JSON to Java objects
 -   Flaws in (de)serialization could expose various classes to being mapped
     to the resulting input and hence allow a remote code execution attack -
@@ -95,8 +95,8 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4740-1](https://ubuntu.com/security/notices/USN-4740-1)] Apache Shiro vulnerabilities [04:20] {#usn-4740-1-apache-shiro-vulnerabilities-04-20}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-1957](https://ubuntu.com/security/CVE-2020-1957) <!-- medium -->
-    -   [CVE-2020-11989](https://ubuntu.com/security/CVE-2020-11989) <!-- medium -->
+    -   [CVE-2020-1957](https://ubuntu.com/security/CVE-2020-1957)
+    -   [CVE-2020-11989](https://ubuntu.com/security/CVE-2020-11989)
 -   2 different possible authentication bypass issues when using with Spring
     dynamic controllers
 
@@ -104,7 +104,7 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4742-1](https://ubuntu.com/security/notices/USN-4742-1)] Django vulnerability [04:33] {#usn-4742-1-django-vulnerability-04-33}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-23336](https://ubuntu.com/security/CVE-2021-23336) <!-- medium -->
+    -   [CVE-2021-23336](https://ubuntu.com/security/CVE-2021-23336)
 -   Possible web-cache poisoning attack - due to difference in handling of
     requests between the proxy and the server - malicious requests can be
     cached as they look like safe ones due to difference in interpretation
@@ -113,21 +113,21 @@ OpenSSL, Jackson, OpenLDAP and more.
 ### [[USN-4743-1](https://ubuntu.com/security/notices/USN-4743-1)] GDK-PixBuf vulnerability [05:06] {#usn-4743-1-gdk-pixbuf-vulnerability-05-06}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-20240](https://ubuntu.com/security/CVE-2021-20240) <!-- medium -->
+    -   [CVE-2021-20240](https://ubuntu.com/security/CVE-2021-20240)
 -   Integer underflow in GIF loader - code execution?
 
 
 ### [[USN-4744-1](https://ubuntu.com/security/notices/USN-4744-1)] OpenLDAP vulnerability [05:27] {#usn-4744-1-openldap-vulnerability-05-27}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-27212](https://ubuntu.com/security/CVE-2021-27212) <!-- medium -->
+    -   [CVE-2021-27212](https://ubuntu.com/security/CVE-2021-27212)
 -   Assertion failure could be triggered by crafted timestamp content -> crash, DoS
 
 
 ### [[USN-4467-3](https://ubuntu.com/security/notices/USN-4467-3)] QEMU regression [05:46] {#usn-4467-3-qemu-regression-05-46}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-13754](https://ubuntu.com/security/CVE-2020-13754) <!-- medium -->
+    -   [CVE-2020-13754](https://ubuntu.com/security/CVE-2020-13754)
 -   In patching previous vulnerabilities in QEMU, we backported various
     patches but missed some related to riscv emulation so would cause a
     possible crash in this case - fixed to add missing patches to resolve

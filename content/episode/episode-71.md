@@ -35,8 +35,8 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[USN-4325-1](https://usn.ubuntu.com/4325-1/)] Linux kernel vulnerabilities [00:59] {#usn-4325-1-linux-kernel-vulnerabilities-00-59}
 
 -   2 CVEs addressed in Bionic
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
-    -   [CVE-2019-19046](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046) <!-- low -->
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
+    -   [CVE-2019-19046](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19046)
 -   5.0 (bionic clouds / oem - oracle, gke, gcp, azure, etc)
 -   VFS UAF and IPMI memory leak - [Episode 70](https://ubuntusecuritypodcast.org/episode-70/)
 
@@ -44,20 +44,20 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[USN-4326-1](https://usn.ubuntu.com/4326-1/)] libiberty vulnerabilities [01:46] {#usn-4326-1-libiberty-vulnerabilities-01-46}
 
 -   14 CVEs addressed in Xenial, Bionic
-    -   [CVE-2019-9071](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9071) <!-- low -->
-    -   [CVE-2019-9070](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9070) <!-- low -->
-    -   [CVE-2019-14250](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14250) <!-- medium -->
-    -   [CVE-2018-9138](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9138) <!-- low -->
-    -   [CVE-2018-18701](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18701) <!-- low -->
-    -   [CVE-2018-18700](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18700) <!-- low -->
-    -   [CVE-2018-18484](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18484) <!-- low -->
-    -   [CVE-2018-18483](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18483) <!-- low -->
-    -   [CVE-2018-17985](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17985) <!-- low -->
-    -   [CVE-2018-17794](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17794) <!-- low -->
-    -   [CVE-2018-12934](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12934) <!-- low -->
-    -   [CVE-2018-12698](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12698) <!-- low -->
-    -   [CVE-2018-12697](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12697) <!-- low -->
-    -   [CVE-2018-12641](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12641) <!-- low -->
+    -   [CVE-2019-9071](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9071)
+    -   [CVE-2019-9070](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9070)
+    -   [CVE-2019-14250](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14250)
+    -   [CVE-2018-9138](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9138)
+    -   [CVE-2018-18701](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18701)
+    -   [CVE-2018-18700](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18700)
+    -   [CVE-2018-18484](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18484)
+    -   [CVE-2018-18483](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18483)
+    -   [CVE-2018-17985](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17985)
+    -   [CVE-2018-17794](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17794)
+    -   [CVE-2018-12934](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12934)
+    -   [CVE-2018-12698](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12698)
+    -   [CVE-2018-12697](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12697)
+    -   [CVE-2018-12641](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12641)
 -   libib - collection of subroutines used by other libraries / applications
     -   primarily binutils for parsing binary formats (ELF executables etc)
 -   Mostly low priority issues (DoS via memory leak / NULL ptr dereference in
@@ -69,7 +69,7 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[USN-4327-1](https://usn.ubuntu.com/4327-1/)] libssh vulnerability [02:57] {#usn-4327-1-libssh-vulnerability-02-57}
 
 -   1 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-1730](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1730) <!-- medium -->
+    -   [CVE-2020-1730](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1730)
 -   Malicious client / server could crash other end when using AES-CTR
     ciphers - error in memory handling on cleanup of cipher context when
     closing the connection -> DoS
@@ -78,9 +78,9 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[LSN-0065-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-April/005391.html)] Linux kernel vulnerability [03:41] {#lsn-0065-1-linux-kernel-vulnerability-03-41}
 
 -   3 CVEs addressed in Xenial, Bionic
-    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428) <!-- medium -->
-    -   [CVE-2019-3016](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3016) <!-- medium -->
-    -   [CVE-2013-1798](https://people.canonical.com/~ubuntu-security/cve/CVE-2013-1798) <!-- medium -->
+    -   [CVE-2020-8428](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8428)
+    -   [CVE-2019-3016](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3016)
+    -   [CVE-2013-1798](https://people.canonical.com/~ubuntu-security/cve/CVE-2013-1798)
 -   Livepatch for VFS UAF, fix a possible SpectreV1/L1TF gadget introduced
     back in 2013 for a KVM IOAPIC issue, KVM TLB flush ([Episode 67](https://ubuntusecuritypodcast.org/episode-67/))
 
@@ -88,24 +88,24 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[USN-4328-1](https://usn.ubuntu.com/4328-1/)] Thunderbird vulnerabilities [04:31] {#usn-4328-1-thunderbird-vulnerabilities-04-31}
 
 -   18 CVEs addressed in Bionic, Eoan
-    -   [CVE-2020-6811](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6811) <!-- medium -->
-    -   [CVE-2020-6825](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825) <!-- medium -->
-    -   [CVE-2020-6821](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821) <!-- medium -->
-    -   [CVE-2020-6820](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820) <!-- high -->
-    -   [CVE-2020-6819](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819) <!-- high -->
-    -   [CVE-2020-6814](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6814) <!-- medium -->
-    -   [CVE-2020-6812](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6812) <!-- low -->
-    -   [CVE-2020-6807](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6807) <!-- medium -->
-    -   [CVE-2020-6806](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6806) <!-- medium -->
-    -   [CVE-2020-6805](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6805) <!-- medium -->
-    -   [CVE-2020-6800](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800) <!-- medium -->
-    -   [CVE-2020-6798](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798) <!-- medium -->
-    -   [CVE-2019-20503](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20503) <!-- medium -->
-    -   [CVE-2020-6794](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6794) <!-- medium -->
-    -   [CVE-2020-6822](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822) <!-- medium -->
-    -   [CVE-2020-6795](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6795) <!-- medium -->
-    -   [CVE-2020-6793](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6793) <!-- medium -->
-    -   [CVE-2020-6792](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6792) <!-- low -->
+    -   [CVE-2020-6811](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6811)
+    -   [CVE-2020-6825](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6825)
+    -   [CVE-2020-6821](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6821)
+    -   [CVE-2020-6820](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6820)
+    -   [CVE-2020-6819](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6819)
+    -   [CVE-2020-6814](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6814)
+    -   [CVE-2020-6812](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6812)
+    -   [CVE-2020-6807](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6807)
+    -   [CVE-2020-6806](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6806)
+    -   [CVE-2020-6805](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6805)
+    -   [CVE-2020-6800](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6800)
+    -   [CVE-2020-6798](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6798)
+    -   [CVE-2019-20503](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20503)
+    -   [CVE-2020-6794](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6794)
+    -   [CVE-2020-6822](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6822)
+    -   [CVE-2020-6795](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6795)
+    -   [CVE-2020-6793](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6793)
+    -   [CVE-2020-6792](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6792)
 -   68.7.0
 -   Includes various fixes for issues previously covered in Firefox updates
 
@@ -113,7 +113,7 @@ Thunderbird, Git and a kernel Livepatch.
 ### [[USN-4329-1](https://usn.ubuntu.com/4329-1/)] Git vulnerability [05:11] {#usn-4329-1-git-vulnerability-05-11}
 
 -   1 CVEs addressed in Xenial, Bionic, Eoan
-    -   [CVE-2020-5260](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5260) <!-- medium -->
+    -   [CVE-2020-5260](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5260)
 -   Would not properly handle URLs that include newlines - and would possibly
     send credentials to the wrong host as a result - fixed by forbidding a
     newline in any part of credential handling

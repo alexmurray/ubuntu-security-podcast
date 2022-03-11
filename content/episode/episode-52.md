@@ -35,18 +35,18 @@ program.
 ### [[USN-4171-2](https://usn.ubuntu.com/4171-2/)] Apport vulnerabilities [00:44] {#usn-4171-2-apport-vulnerabilities-00-44}
 
 -   5 CVEs addressed in Trusty ESM
-    -   [CVE-2019-15790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790) <!-- medium -->
-    -   [CVE-2019-11485](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485) <!-- medium -->
-    -   [CVE-2019-11483](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483) <!-- medium -->
-    -   [CVE-2019-11482](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482) <!-- medium -->
-    -   [CVE-2019-11481](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481) <!-- low -->
+    -   [CVE-2019-15790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790)
+    -   [CVE-2019-11485](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485)
+    -   [CVE-2019-11483](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483)
+    -   [CVE-2019-11482](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482)
+    -   [CVE-2019-11481](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481)
 -   [Episode 51](https://ubuntusecuritypodcast.org/episode-51/)
 
 
 ### [[USN-4172-1](https://usn.ubuntu.com/4172-1/), [USN-4172-2](https://usn.ubuntu.com/4172-2/)] file vulnerability [00:58] {#usn-4172-1-usn-4172-2-file-vulnerability-00-58}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-18218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18218) <!-- medium -->
+    -   [CVE-2019-18218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18218)
 -   OSS-Fuzz using libFuzzer - heap based buffer overflow of up to 4 bytes in
     the CDF parser when handing vector elements - Composite Document File -
     used in MS Office prior to new zipped XML format - ie. the old .doc /
@@ -56,7 +56,7 @@ program.
 ### [[USN-4173-1](https://usn.ubuntu.com/4173-1/)] FreeTDS vulnerability [01:48] {#usn-4173-1-freetds-vulnerability-01-48}
 
 -   1 CVEs addressed in Bionic, Disco, Eoan
-    -   [CVE-2019-13508](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13508) <!-- medium -->
+    -   [CVE-2019-13508](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13508)
 -   Felix Wilhelm for Google Security Team - if a server were to downgrade
     the protocol to version 5 and send a UDT type to the client, would cause
     a heap buffer overflow due to mismatch in size - fixed by forcing the
@@ -76,11 +76,11 @@ program.
 ### [[USN-4171-3](https://usn.ubuntu.com/4171-3/), [USN-4171-4](https://usn.ubuntu.com/4171-4/)] Apport regression [04:07] {#usn-4171-3-usn-4171-4-apport-regression-04-07}
 
 -   5 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-15790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790) <!-- medium -->
-    -   [CVE-2019-11485](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485) <!-- medium -->
-    -   [CVE-2019-11483](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483) <!-- medium -->
-    -   [CVE-2019-11482](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482) <!-- medium -->
-    -   [CVE-2019-11481](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481) <!-- low -->
+    -   [CVE-2019-15790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790)
+    -   [CVE-2019-11485](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485)
+    -   [CVE-2019-11483](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483)
+    -   [CVE-2019-11482](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482)
+    -   [CVE-2019-11481](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481)
 -   [Episode 51](https://ubuntusecuritypodcast.org/episode-51/) - regression due to missing change to python code to handle
     new internal API - fixed by updating the API to be backwards compatible
 
@@ -88,7 +88,7 @@ program.
 ### [[USN-4174-1](https://usn.ubuntu.com/4174-1/)] HAproxy vulnerability [04:55] {#usn-4174-1-haproxy-vulnerability-04-55}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-18277](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18277) <!-- medium -->
+    -   [CVE-2019-18277](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18277)
 -   HTTP Request Smuggling attack
     -   <https://nathandavison.com/blog/haproxy-http-request-smuggling>
 -   Wouldn't reject messages that specified transfer-encoding without
@@ -102,7 +102,7 @@ program.
 ### [[USN-4175-1](https://usn.ubuntu.com/4175-1/)] Nokogiri vulnerability [06:36] {#usn-4175-1-nokogiri-vulnerability-06-36}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-5477](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5477) <!-- medium -->
+    -   [CVE-2019-5477](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-5477)
 -   Ruby based parser for HTML/XML/SAS etc with XPath & CSS selector support
     etc
 -   Command-injection vulnerability - due to use of the Rexical gem - and

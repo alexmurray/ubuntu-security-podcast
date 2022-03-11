@@ -33,15 +33,15 @@ more.
 ### [[USN-4394-1](https://usn.ubuntu.com/4394-1/)] SQLite vulnerabilities [00:56] {#usn-4394-1-sqlite-vulnerabilities-00-56}
 
 -   9 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-13632](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13632) <!-- medium -->
-    -   [CVE-2020-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13631) <!-- low -->
-    -   [CVE-2020-13630](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13630) <!-- medium -->
-    -   [CVE-2020-13435](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13435) <!-- medium -->
-    -   [CVE-2020-13434](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13434) <!-- medium -->
-    -   [CVE-2020-11655](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11655) <!-- low -->
-    -   [CVE-2019-19645](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19645) <!-- low -->
-    -   [CVE-2019-19603](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19603) <!-- low -->
-    -   [CVE-2018-8740](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740) <!-- low -->
+    -   [CVE-2020-13632](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13632)
+    -   [CVE-2020-13631](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13631)
+    -   [CVE-2020-13630](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13630)
+    -   [CVE-2020-13435](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13435)
+    -   [CVE-2020-13434](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13434)
+    -   [CVE-2020-11655](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11655)
+    -   [CVE-2019-19645](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19645)
+    -   [CVE-2019-19603](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19603)
+    -   [CVE-2018-8740](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8740)
 -   NULL ptr deref via crafted query, UAF, OOB read, integer overflow when
     printing high precision floating point numbers, various minor issues when
     handling crafted databases
@@ -50,9 +50,9 @@ more.
 ### [[USN-4385-2](https://usn.ubuntu.com/4385-2/)] Intel Microcode regression [01:43] {#usn-4385-2-intel-microcode-regression-01-43}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-0549](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549) <!-- medium -->
-    -   [CVE-2020-0548](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548) <!-- medium -->
-    -   [CVE-2020-0543](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543) <!-- medium -->
+    -   [CVE-2020-0549](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0549)
+    -   [CVE-2020-0548](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0548)
+    -   [CVE-2020-0543](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543)
 -   [Episode 78](https://ubuntusecuritypodcast.org/episode-78/) - SRBDS etc - microcode is specific to processors, and is
     identified by the triplet of CPU Family, Model and Stepping - this is
     listed in /proc/cpuinfo - mine say is 6, 142, 10 - in hex - 06-8E-0A -
@@ -64,7 +64,7 @@ more.
 ### [[USN-4395-1](https://usn.ubuntu.com/4395-1/)] fwupd vulnerability [03:39] {#usn-4395-1-fwupd-vulnerability-03-39}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-10759](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10759) <!-- medium -->
+    -   [CVE-2020-10759](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10759)
 -   A crafted firmware update file could bypass signature verification - in
     general not an issue since would need to be able to get in the middle of
     firmware updates (which come from LVFS via HTTPS) - so either would need
@@ -76,20 +76,20 @@ more.
 ### [[USN-4315-2](https://usn.ubuntu.com/4315-2/)] Apport vulnerabilities [06:11] {#usn-4315-2-apport-vulnerabilities-06-11}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2020-8833](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833) <!-- medium -->
-    -   [CVE-2020-8831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831) <!-- high -->
+    -   [CVE-2020-8833](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8833)
+    -   [CVE-2020-8831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8831)
 -   [Episode 70](https://ubuntusecuritypodcast.org/episode-70/)
 
 
 ### [[USN-4396-1](//usn.ubuntu.com/4396-1/)] libexif vulnerabilities [06:24] {#usn-4396-1--usn-dot-ubuntu-dot-com-4396-1--libexif-vulnerabilities-06-24}
 
 -   6 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-13114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13114) <!-- low -->
-    -   [CVE-2020-13113](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13113) <!-- medium -->
-    -   [CVE-2020-13112](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13112) <!-- medium -->
-    -   [CVE-2020-0198](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0198) <!-- medium -->
-    -   [CVE-2020-0182](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0182) <!-- medium -->
-    -   [CVE-2020-0093](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0093) <!-- low -->
+    -   [CVE-2020-13114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13114)
+    -   [CVE-2020-13113](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13113)
+    -   [CVE-2020-13112](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-13112)
+    -   [CVE-2020-0198](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0198)
+    -   [CVE-2020-0182](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0182)
+    -   [CVE-2020-0093](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0093)
 -   UAF due to uninitialised memory, various buffer over-reads, integer
     overflow, etc
 
@@ -97,8 +97,8 @@ more.
 ### [[USN-4397-1](https://usn.ubuntu.com/4397-1/)] NSS vulnerabilities [07:24] {#usn-4397-1-nss-vulnerabilities-07-24}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399) <!-- medium -->
-    -   [CVE-2019-17023](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17023) <!-- low -->
+    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399)
+    -   [CVE-2019-17023](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17023)
 -   Possible timing side-channel attack during DSA key generation - due to
     the difference in time of various operations (dependent on the contents
     of the private key) - the key value could be inferred by an attacker
@@ -107,7 +107,7 @@ more.
 ### [[USN-4398-1](https://usn.ubuntu.com/4398-1/), [USN-4398-2](https://usn.ubuntu.com/4398-2/)] DBus vulnerability [08:01] {#usn-4398-1-usn-4398-2-dbus-vulnerability-08-01}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12049](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12049) <!-- medium -->
+    -   [CVE-2020-12049](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12049)
 -   DBus can be used to send file-descriptors - client sends to server via
     the dbus daemon - daemon will validate that messages only contain a
     certain number of file-descriptors - if too may, will reject BUT fail to

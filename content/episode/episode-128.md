@@ -33,7 +33,7 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
 ### [[USN-5048-1](https://ubuntu.com/security/notices/USN-5048-1)] Inetutils vulnerability [00:45] {#usn-5048-1-inetutils-vulnerability-00-45}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-10188](https://ubuntu.com/security/CVE-2020-10188) <!-- medium -->
+    -   [CVE-2020-10188](https://ubuntu.com/security/CVE-2020-10188)
 -   Buffer overflow in inetutils telnetd - originally CVE was found in netkit
     telnetd - but subsequently the GNU inetutils version was also found to
     contain basically the same vulnerable function. Very detailed blog post
@@ -45,12 +45,12 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
 ### [[USN-5050-1](https://ubuntu.com/security/notices/USN-5050-1)] Linux kernel vulnerabilities [02:03] {#usn-5050-1-linux-kernel-vulnerabilities-02-03}
 
 -   6 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-38208](https://ubuntu.com/security/CVE-2021-38208) <!-- medium -->
-    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573) <!-- medium -->
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
-    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691) <!-- medium -->
-    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129) <!-- medium -->
-    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558) <!-- medium -->
+    -   [CVE-2021-38208](https://ubuntu.com/security/CVE-2021-38208)
+    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573)
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
+    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691)
+    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129)
+    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558)
 -   2 bluetooth HCI UAFs, NFC NULL ptr deref, Xen PV UAF from guest->host, 2
     other bluetooth vulns - info leak - all covered in previous episodes
 
@@ -58,8 +58,8 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
 ### [[USN-5051-1](https://ubuntu.com/security/notices/USN-5051-1)] OpenSSL vulnerabilities [02:49] {#usn-5051-1-openssl-vulnerabilities-02-49}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712) <!-- medium -->
-    -   [CVE-2021-3711](https://ubuntu.com/security/CVE-2021-3711) <!-- high -->
+    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712)
+    -   [CVE-2021-3711](https://ubuntu.com/security/CVE-2021-3711)
 -   High profile vuln in SM2 algorithm impl in openssl - (Chinese and later
     ISO standard elliptic curve algo used for both signature and encryption)
     -   Usual scheme is to call the API function `EVP_PKEY_decrypt()` twice - call

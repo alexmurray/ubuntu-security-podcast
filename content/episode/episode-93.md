@@ -37,7 +37,7 @@ Groovy Gorilla.
 ### [[USN-4559-1](https://usn.ubuntu.com/4559-1/)] Samba update [01:04] {#usn-4559-1-samba-update-01-04}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-1472](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1472) <!-- medium -->
+    -   [CVE-2020-1472](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1472)
 -   Follow up to [USN-4510-1](https://usn.ubuntu.com/4510-1/) for "ZeroLogon" - that updated changed default to
     enable secure channel - this one adds support for specifying per-machine
     insecure netlogon usage plus additional hardening to check for possible
@@ -48,8 +48,8 @@ Groovy Gorilla.
 ### [[USN-4563-1](https://usn.ubuntu.com/4563-1/)] NTP vulnerability [01:48] {#usn-4563-1-ntp-vulnerability-01-48}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-8936](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8936) <!-- medium -->
-    -   [CVE-2018-7182](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7182) <!-- medium -->
+    -   [CVE-2019-8936](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8936)
+    -   [CVE-2018-7182](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7182)
 -   Fix for previous [CVE-2018-7182](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7182) introduced a possible NULL ptr deref that
     could be triggered by a malicious client -> DoS
 
@@ -57,7 +57,7 @@ Groovy Gorilla.
 ### [[USN-4568-1](https://usn.ubuntu.com/4568-1/)] Brotli vulnerability [02:12] {#usn-4568-1-brotli-vulnerability-02-12}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-8927](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8927) <!-- medium -->
+    -   [CVE-2020-8927](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8927)
 -   Compression library / tool from Google designed for text compression,
     especially for web fonts etc
 -   Buffer overflow due to an integer overflow when using the one-shot
@@ -67,7 +67,7 @@ Groovy Gorilla.
 ### [[USN-4570-1](https://usn.ubuntu.com/4570-1/)] urllib3 vulnerability [03:00] {#usn-4570-1-urllib3-vulnerability-03-00}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-26137](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26137) <!-- medium -->
+    -   [CVE-2020-26137](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26137)
 -   Possible CRLF injection if an attacker can control the request method
     used in a call to urllib3 - can specify additional parameters such as
     Host and Remainder after an injected CRLF to cause the request to
@@ -77,7 +77,7 @@ Groovy Gorilla.
 ### [[USN-4572-1](https://usn.ubuntu.com/4572-1/), [USN-4572-2](https://usn.ubuntu.com/4572-2/)] Spice vulnerability [03:41] {#usn-4572-1-usn-4572-2-spice-vulnerability-03-41}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14355](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14355) <!-- medium -->
+    -   [CVE-2020-14355](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14355)
 -   Protocol for doing remote VM access - multiple buffer overflows in
     decoding of QUIC image compression algorithm - and this affected both the
     client and server side - DoS, RCE etc
@@ -86,46 +86,46 @@ Groovy Gorilla.
 ### [[USN-4576-1](https://usn.ubuntu.com/4576-1/)] Linux kernel vulnerabilities [04:36] {#usn-4576-1-linux-kernel-vulnerabilities-04-36}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-25641](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25641) <!-- medium -->
-    -   [CVE-2020-25285](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25285) <!-- low -->
-    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120) <!-- medium -->
-    -   [CVE-2020-14385](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14385) <!-- low -->
-    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314) <!-- medium -->
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
+    -   [CVE-2020-25641](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25641)
+    -   [CVE-2020-25285](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25285)
+    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120)
+    -   [CVE-2020-14385](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14385)
+    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314)
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
 
 
 ### [[USN-4577-1](https://usn.ubuntu.com/4577-1/)] Linux kernel vulnerabilities {#usn-4577-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120) <!-- medium -->
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
+    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120)
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
 
 
 ### [[USN-4578-1](https://usn.ubuntu.com/4578-1/)] Linux kernel vulnerabilities {#usn-4578-1-linux-kernel-vulnerabilities}
 
 -   7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2020-26088](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26088) <!-- medium -->
-    -   [CVE-2020-25212](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25212) <!-- medium -->
-    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120) <!-- medium -->
-    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314) <!-- medium -->
-    -   [CVE-2019-19448](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19448) <!-- low -->
-    -   [CVE-2018-10322](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10322) <!-- low -->
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
+    -   [CVE-2020-26088](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26088)
+    -   [CVE-2020-25212](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25212)
+    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120)
+    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314)
+    -   [CVE-2019-19448](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19448)
+    -   [CVE-2018-10322](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10322)
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
 
 
 ### [[USN-4579-1](https://usn.ubuntu.com/4579-1/)] Linux kernel vulnerabilities {#usn-4579-1-linux-kernel-vulnerabilities}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
-    -   [CVE-2020-25285](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25285) <!-- low -->
-    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314) <!-- medium -->
-    -   [CVE-2018-10322](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10322) <!-- low -->
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
+    -   [CVE-2020-25285](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25285)
+    -   [CVE-2020-14314](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14314)
+    -   [CVE-2018-10322](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10322)
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
 
 
 ### [[USN-4580-1](https://usn.ubuntu.com/4580-1/)] Linux kernel vulnerability {#usn-4580-1-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
 
 -   DCCP protocol mishandled reuse of sockets, leading to a UAF - since can
     be done by a local user could lead to root code execution, priv esc etc -
@@ -136,13 +136,13 @@ Groovy Gorilla.
 ### [[LSN-0072-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2020-October/005694.html)] Linux kernel vulnerability {#lsn-0072-1-linux-kernel-vulnerability}
 
 -   7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120) <!-- medium -->
-    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119) <!-- high -->
-    -   [CVE-2020-14386](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14386) <!-- high -->
-    -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114) <!-- medium -->
-    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935) <!-- medium -->
-    -   [CVE-2020-11494](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494) <!-- medium -->
-    -   [CVE-2020-0067](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067) <!-- medium -->
+    -   [CVE-2020-16120](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16120)
+    -   [CVE-2020-16119](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16119)
+    -   [CVE-2020-14386](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14386)
+    -   [CVE-2020-12114](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114)
+    -   [CVE-2020-11935](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11935)
+    -   [CVE-2020-11494](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11494)
+    -   [CVE-2020-0067](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067)
 -   DCCP UAF
 -   AF\_PACKET buffer overflow ([Episode 90](https://ubuntusecuritypodcast.org/episode-90/))
 -   Livepatched in the following kernels:
@@ -174,16 +174,16 @@ Groovy Gorilla.
 ### [[USN-4591-1](https://usn.ubuntu.com/4591-1/)] Linux kernel vulnerabilities [06:20] {#usn-4591-1-linux-kernel-vulnerabilities-06-20}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-12352](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12352) <!-- medium -->
-    -   [CVE-2020-12351](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12351) <!-- high -->
+    -   [CVE-2020-12352](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12352)
+    -   [CVE-2020-12351](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12351)
 
 
 ### [[USN-4592-1](https://usn.ubuntu.com/4592-1/)] Linux kernel vulnerabilities {#usn-4592-1-linux-kernel-vulnerabilities}
 
 -   3 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-24490](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24490) <!-- medium -->
-    -   [CVE-2020-12352](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12352) <!-- medium -->
-    -   [CVE-2020-12351](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12351) <!-- high -->
+    -   [CVE-2020-24490](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24490)
+    -   [CVE-2020-12352](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12352)
+    -   [CVE-2020-12351](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12351)
 -   BleedingTooth vulnerability
 -   Announced by Intel, discovered by a security researcher at Google - not
     much heads up to distros, kernel team worked quickly to respin affected
@@ -196,7 +196,7 @@ Groovy Gorilla.
 ### [[USN-4593-1](https://usn.ubuntu.com/4593-1/)] FreeType vulnerability [07:30] {#usn-4593-1-freetype-vulnerability-07-30}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15999](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15999) <!-- high -->
+    -   [CVE-2020-15999](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15999)
 -   Integer overflow -> heap buffer overflow
 -   Reported by Google to Freetype upstream with the comment that it was
     being exploited in the wild
@@ -210,146 +210,146 @@ Groovy Gorilla.
 ### [[USN-4558-1](https://usn.ubuntu.com/4558-1/)] libapreq2 vulnerabilities {#usn-4558-1-libapreq2-vulnerabilities}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-12412](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12412) <!-- medium -->
+    -   [CVE-2019-12412](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12412)
 
 
 ### [[USN-4557-1](https://usn.ubuntu.com/4557-1/)] Tomcat vulnerabilities {#usn-4557-1-tomcat-vulnerabilities}
 
 -   7 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2016-8735](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-8735) <!-- low -->
-    -   [CVE-2016-6816](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6816) <!-- medium -->
-    -   [CVE-2016-6797](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6797) <!-- low -->
-    -   [CVE-2016-6796](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6796) <!-- low -->
-    -   [CVE-2016-6794](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6794) <!-- low -->
-    -   [CVE-2016-5018](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5018) <!-- medium -->
-    -   [CVE-2016-0762](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-0762) <!-- low -->
+    -   [CVE-2016-8735](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-8735)
+    -   [CVE-2016-6816](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6816)
+    -   [CVE-2016-6797](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6797)
+    -   [CVE-2016-6796](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6796)
+    -   [CVE-2016-6794](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-6794)
+    -   [CVE-2016-5018](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-5018)
+    -   [CVE-2016-0762](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-0762)
 
 
 ### [[USN-4560-1](https://usn.ubuntu.com/4560-1/)] Gon gem vulnerability {#usn-4560-1-gon-gem-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-25739](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25739) <!-- medium -->
+    -   [CVE-2020-25739](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25739)
 
 
 ### [[USN-4561-1](https://usn.ubuntu.com/4561-1/)] Rack vulnerabilities {#usn-4561-1-rack-vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-8184](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8184) <!-- medium -->
-    -   [CVE-2020-8161](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8161) <!-- low -->
+    -   [CVE-2020-8184](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8184)
+    -   [CVE-2020-8161](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8161)
 
 
 ### [[USN-4562-1](https://usn.ubuntu.com/4562-1/)] kramdown vulnerability {#usn-4562-1-kramdown-vulnerability}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-14001](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14001) <!-- medium -->
+    -   [CVE-2020-14001](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14001)
 
 
 ### [[USN-4569-1](https://usn.ubuntu.com/4569-1/)] Yaws vulnerabilities {#usn-4569-1-yaws-vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-24916](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24916) <!-- medium -->
-    -   [CVE-2020-24379](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24379) <!-- medium -->
+    -   [CVE-2020-24916](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24916)
+    -   [CVE-2020-24379](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-24379)
 
 
 ### [[USN-4571-1](https://usn.ubuntu.com/4571-1/)] rack-cors vulnerability {#usn-4571-1-rack-cors-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2019-18978](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18978) <!-- medium -->
+    -   [CVE-2019-18978](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18978)
 
 
 ### [[USN-4564-1](https://usn.ubuntu.com/4564-1/)] Apache Tika vulnerabilities {#usn-4564-1-apache-tika-vulnerabilities}
 
 -   2 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-1951](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1951) <!-- low -->
-    -   [CVE-2020-1950](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1950) <!-- medium -->
+    -   [CVE-2020-1951](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1951)
+    -   [CVE-2020-1950](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1950)
 
 
 ### [[USN-4565-1](https://usn.ubuntu.com/4565-1/)] OpenConnect vulnerability {#usn-4565-1-openconnect-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-16239](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16239) <!-- medium -->
+    -   [CVE-2019-16239](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16239)
 
 
 ### [[USN-4566-1](https://usn.ubuntu.com/4566-1/)] Cyrus IMAP Server vulnerabilities {#usn-4566-1-cyrus-imap-server-vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-19783](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19783) <!-- medium -->
-    -   [CVE-2019-11356](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11356) <!-- medium -->
+    -   [CVE-2019-19783](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19783)
+    -   [CVE-2019-11356](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11356)
 
 
 ### [[USN-4567-1](https://usn.ubuntu.com/4567-1/)] OpenDMARC vulnerability {#usn-4567-1-opendmarc-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-16378](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16378) <!-- medium -->
+    -   [CVE-2019-16378](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16378)
 
 
 ### [[USN-4573-1](https://usn.ubuntu.com/4573-1/)] Vino vulnerabilities {#usn-4573-1-vino-vulnerabilities}
 
 -   7 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14404](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14404) <!-- medium -->
-    -   [CVE-2020-14403](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14403) <!-- medium -->
-    -   [CVE-2020-14402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14402) <!-- medium -->
-    -   [CVE-2020-14397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14397) <!-- medium -->
-    -   [CVE-2019-15681](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15681) <!-- low -->
-    -   [CVE-2018-7225](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7225) <!-- medium -->
-    -   [CVE-2014-6053](https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6053) <!-- medium -->
+    -   [CVE-2020-14404](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14404)
+    -   [CVE-2020-14403](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14403)
+    -   [CVE-2020-14402](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14402)
+    -   [CVE-2020-14397](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14397)
+    -   [CVE-2019-15681](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15681)
+    -   [CVE-2018-7225](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7225)
+    -   [CVE-2014-6053](https://people.canonical.com/~ubuntu-security/cve/CVE-2014-6053)
 
 
 ### [[USN-4574-1](https://usn.ubuntu.com/4574-1/)] libseccomp-golang vulnerability {#usn-4574-1-libseccomp-golang-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2017-18367](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18367) <!-- medium -->
+    -   [CVE-2017-18367](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18367)
 
 
 ### [[USN-4575-1](https://usn.ubuntu.com/4575-1/)] dom4j vulnerability {#usn-4575-1-dom4j-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-10683](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10683) <!-- medium -->
+    -   [CVE-2020-10683](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10683)
 
 
 ### [[USN-4581-1](https://usn.ubuntu.com/4581-1/)] Python vulnerability {#usn-4581-1-python-vulnerability}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2020-26116](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26116) <!-- medium -->
+    -   [CVE-2020-26116](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26116)
 
 
 ### [[USN-4582-1](https://usn.ubuntu.com/4582-1/)] Vim vulnerabilities {#usn-4582-1-vim-vulnerabilities}
 
 -   2 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2019-20807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20807) <!-- low -->
-    -   [CVE-2017-17087](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17087) <!-- low -->
+    -   [CVE-2019-20807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20807)
+    -   [CVE-2017-17087](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17087)
 
 
 ### [[USN-4583-1](https://usn.ubuntu.com/4583-1/)] PHP vulnerabilities {#usn-4583-1-php-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-7070](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7070) <!-- medium -->
-    -   [CVE-2020-7069](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7069) <!-- medium -->
+    -   [CVE-2020-7070](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7070)
+    -   [CVE-2020-7069](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7069)
 
 
 ### [[USN-4589-1](https://usn.ubuntu.com/4589-1/)] containerd vulnerability {#usn-4589-1-containerd-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-15157](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15157) <!-- medium -->
+    -   [CVE-2020-15157](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15157)
 
 
 ### [[USN-4589-2](https://usn.ubuntu.com/4589-2/)] Docker vulnerability {#usn-4589-2-docker-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-15157](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15157) <!-- medium -->
+    -   [CVE-2020-15157](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15157)
 
 
 ### [[USN-4585-1](https://usn.ubuntu.com/4585-1/)] Newsbeuter vulnerabilities {#usn-4585-1-newsbeuter-vulnerabilities}
 
 -   2 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2017-14500](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14500) <!-- medium -->
-    -   [CVE-2017-12904](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12904) <!-- medium -->
+    -   [CVE-2017-14500](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14500)
+    -   [CVE-2017-12904](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12904)
 
 
 ### [[USN-4584-1](https://usn.ubuntu.com/4584-1/)] HtmlUnit vulnerability {#usn-4584-1-htmlunit-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2020-5529](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5529) <!-- medium -->
+    -   [CVE-2020-5529](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-5529)
 
 
 ### [[USN-4546-2](https://usn.ubuntu.com/4546-2/)] Firefox regressions {#usn-4546-2-firefox-regressions}
@@ -360,26 +360,26 @@ Groovy Gorilla.
 ### [[USN-4590-1](https://usn.ubuntu.com/4590-1/)] Collabtive vulnerability {#usn-4590-1-collabtive-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2015-0258](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-0258) <!-- medium -->
+    -   [CVE-2015-0258](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-0258)
 
 
 ### [[USN-4586-1](https://usn.ubuntu.com/4586-1/)] PHP ImageMagick vulnerability {#usn-4586-1-php-imagemagick-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-11037](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11037) <!-- medium -->
+    -   [CVE-2019-11037](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11037)
 
 
 ### [[USN-4594-1](https://usn.ubuntu.com/4594-1/)] Quassel vulnerabilities {#usn-4594-1-quassel-vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2018-1000179](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000179) <!-- low -->
-    -   [CVE-2018-1000178](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000178) <!-- medium -->
+    -   [CVE-2018-1000179](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000179)
+    -   [CVE-2018-1000178](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000178)
 
 
 ### [[USN-4595-1](https://usn.ubuntu.com/4595-1/)] Grunt vulnerability {#usn-4595-1-grunt-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-7729](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7729) <!-- medium -->
+    -   [CVE-2020-7729](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-7729)
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
