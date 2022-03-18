@@ -133,14 +133,14 @@
   "Generate summary details for USNs from dates START to END."
   (with-temp-buffer
     (shell-command (concat "notmuch search --format=sexp "
-                           "list:ubuntu-security-announce.lists.ubuntu.com "
+                           "tag:lists/ubuntu-security-announce "
                            (format "date:%s..%s"
                                    (string-replace "-" "" start)
                                    (string-replace "-" "" end)))
                    (current-buffer))
     (goto-char (point-min))
-    (usp-parse-usn-messages
-     (read (current-buffer)))))
+    (let ((msgs (read (current-buffer))))
+      (usp-parse-usn-messages msgs))))
 
 (defun usp-get-unique-cves (details)
   "Get the unique CVEs from all DETAILS."
