@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 18 Mar 2022 13:35:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 25 Mar 2022 15:56:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,803 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 154</title>
+          <link>https://ubuntusecuritypodcast.org/episode-154/</link>
+          <pubDate>Fri, 25 Mar 2022 15:56:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>59f79b936afb00295267d32e518ed58734b858a7dfe5b010f73bc75d7841f1795a672c2320022a7476a09dd89296b1ca7530e2cd0f015c4e3c57ea19df0fd66f</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 154</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          It&#39;s PIE🥧 for everyone this week as Python finally becomes a position
+  independent executable for Ubuntu 22.04, plus Camila brings you the third
+  part in her Ubuntu server hardening guide and we cover security updates for
+  FUSE, Bind,...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  It&#39;s PIE🥧 for everyone this week as Python finally becomes a position
+  independent executable for Ubuntu 22.04, plus Camila brings you the third
+  part in her Ubuntu server hardening guide and we cover security updates for
+  FUSE, Bind, Apache, the Linux kernel and more.
+  </itunes:summary>
+        <description>  It&#39;s PIE🥧 for everyone this week as Python finally becomes a position
+  independent executable for Ubuntu 22.04, plus Camila brings you the third
+  part in her Ubuntu server hardening guide and we cover security updates for
+  FUSE, Bind, Apache, the Linux kernel and more.
+  </description>
+        <googleplay:description>  It&#39;s PIE🥧 for everyone this week as Python finally becomes a position
+  independent executable for Ubuntu 22.04, plus Camila brings you the third
+  part in her Ubuntu server hardening guide and we cover security updates for
+  FUSE, Bind, Apache, the Linux kernel and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>It&rsquo;s PIE🥧 for everyone this week as Python finally becomes a position
+independent executable for Ubuntu 22.04, plus Camila brings you the third
+part in her Ubuntu server hardening guide and we cover security updates for
+FUSE, Bind, Apache, the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>105 unique CVEs addressed</p>
+<h3 id="usn-5326-1-fuse-vulnerability-00-49">[<a href="https://ubuntu.com/security/notices/USN-5326-1">USN-5326-1</a>] FUSE vulnerability [00:49]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-10906">CVE-2018-10906</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When using SELinux on Ubuntu, possible to bypass regular restrictions
+that would normally prevent non-root users from mounting a FUSE fs with
+the <code>allow_other</code> mount option - this option specifies all users can access
+files from the FUSE fs whereas normally FUSE enforces on the user which
+mounted the file has access</li>
+<li>Could trick another user into then accessing files from the FUSE fs</li>
+</ul>
+<h3 id="usn-5334-1-man-db-vulnerability-02-22">[<a href="https://ubuntu.com/security/notices/USN-5334-1">USN-5334-1</a>] man-db vulnerability [02:22]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2015-1336">CVE-2015-1336</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>daily cron job could allow a local user to access the man user account</li>
+</ul>
+<h3 id="usn-5321-2-firefox-vulnerabilities-02-57">[<a href="https://ubuntu.com/security/notices/USN-5321-2">USN-5321-2</a>] Firefox vulnerabilities [02:57]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26387">CVE-2022-26387</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26385">CVE-2022-26385</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26384">CVE-2022-26384</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26383">CVE-2022-26383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26382">CVE-2022-26382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26381">CVE-2022-26381</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0843">CVE-2022-0843</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>arm64 binaries for Firefox 98.0.1 <a href="https://ubuntusecuritypodcast.org/episode-153/">Episode 153</a></li>
+</ul>
+<h3 id="usn-5332-1-usn-5332-2-bind-vulnerabilities-03-25">[<a href="https://ubuntu.com/security/notices/USN-5332-1">USN-5332-1</a>, <a href="https://ubuntu.com/security/notices/USN-5332-2">USN-5332-2</a>] Bind vulnerabilities [03:25]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0396">CVE-2022-0396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-25220">CVE-2021-25220</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-25220">CVE-2021-25220</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible cache poisoning attack via forwarded NS records</li>
+<li>fd exhaustion if client could trick bind into keeping connection in
+<code>CLOSE_WAIT</code> status for an indefinite period, after connection was closed -
+DoS</li>
+</ul>
+<h3 id="usn-5333-1-usn-5333-2-apache-http-server-vulnerabilities-04-11">[<a href="https://ubuntu.com/security/notices/USN-5333-1">USN-5333-1</a>, <a href="https://ubuntu.com/security/notices/USN-5333-2">USN-5333-2</a>] Apache HTTP Server vulnerabilities [04:11]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23943">CVE-2022-23943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22721">CVE-2022-22721</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22720">CVE-2022-22720</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22719">CVE-2022-22719</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>heap OOB r/w via <code>mod_sed</code> -&gt; crash, RCE</li>
+<li>OOB read from crafted request via <code>mod_lua</code> - crash -&gt; DoS</li>
+<li>Possible HTTP request smuggling attack since failed to close an inbound
+connection when an error was encountered which caused the request body to
+be discarded</li>
+<li>Possible integer overflow on 32-bit systems if had changed default
+<code>LimitXMLRequestBody</code> to &gt; 350MB (is 1MB by default) -&gt; OOB write -&gt; crash,
+RCE</li>
+</ul>
+<h3 id="usn-5335-1-imagemagick-vulnerabilities-05-51">[<a href="https://ubuntu.com/security/notices/USN-5335-1">USN-5335-1</a>] ImageMagick vulnerabilities [05:51]</h3>
+<ul>
+<li>15 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20243">CVE-2021-20243</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20241">CVE-2021-20241</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20176">CVE-2021-20176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27770">CVE-2020-27770</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27766">CVE-2020-27766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27762">CVE-2020-27762</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27760">CVE-2020-27760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27750">CVE-2020-27750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25676">CVE-2020-25676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-27753">CVE-2020-27753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25674">CVE-2020-25674</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25665">CVE-2020-25665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25664">CVE-2020-25664</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13144">CVE-2017-13144</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19667">CVE-2020-19667</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read/write/NULL ptr deref, div by 0 etc when processing crafted image
+files</li>
+</ul>
+<h3 id="usn-5337-1-linux-kernel-vulnerabilities-06-23">[<a href="https://ubuntu.com/security/notices/USN-5337-1">USN-5337-1</a>] Linux kernel vulnerabilities [06:23]</h3>
+<ul>
+<li>21 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0742">CVE-2022-0742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0516">CVE-2022-0516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0382">CVE-2022-0382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0264">CVE-2022-0264</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45480">CVE-2021-45480</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45402">CVE-2021-45402</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44733">CVE-2021-44733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4135">CVE-2021-4135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39698">CVE-2021-39698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28715">CVE-2021-28715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28714">CVE-2021-28714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23222">CVE-2022-23222</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.13 (impish, 20.04 HWE)</li>
+<li>BPF verifier could possibly allow pointer arithmetic in BPF operations -
+OOB read / write -&gt; crash (DoS) or privesc</li>
+<li>cgroups v1 <code>release_agent</code> not properly restricted -&gt; privesc</li>
+</ul>
+<h3 id="usn-5338-1-linux-kernel-vulnerabilities-07-31">[<a href="https://ubuntu.com/security/notices/USN-5338-1">USN-5338-1</a>] Linux kernel vulnerabilities [07:31]</h3>
+<ul>
+<li>13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0516">CVE-2022-0516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45480">CVE-2021-45480</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44733">CVE-2021-44733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4135">CVE-2021-4135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28715">CVE-2021-28715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28714">CVE-2021-28714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 (focal, bionic HWE)</li>
+</ul>
+<h3 id="usn-5339-1-linux-kernel-vulnerabilities-07-43">[<a href="https://ubuntu.com/security/notices/USN-5339-1">USN-5339-1</a>] Linux kernel vulnerabilities [07:43]</h3>
+<ul>
+<li>6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44733">CVE-2021-44733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3506">CVE-2021-3506</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 (bionic, xenial ESM, trusty ESM - azure)</li>
+</ul>
+<h3 id="usn-5343-1-linux-kernel-vulnerabilities-08-00">[<a href="https://ubuntu.com/security/notices/USN-5343-1">USN-5343-1</a>] Linux kernel vulnerabilities [08:00]</h3>
+<ul>
+<li>45 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-5995">CVE-2018-5995</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45485">CVE-2021-45485</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45469">CVE-2021-45469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43389">CVE-2021-43389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-42008">CVE-2021-42008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40490">CVE-2021-40490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39648">CVE-2021-39648</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38208">CVE-2021-38208</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38204">CVE-2021-38204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38198">CVE-2021-38198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38160">CVE-2021-38160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3679">CVE-2021-3679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3612">CVE-2021-3612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3573">CVE-2021-3573</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3564">CVE-2021-3564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3506">CVE-2021-3506</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3483">CVE-2021-3483</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-34693">CVE-2021-34693</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33098">CVE-2021-33098</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33034">CVE-2021-33034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33033">CVE-2021-33033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32399">CVE-2021-32399</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-29650">CVE-2021-29650</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28972">CVE-2021-28972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28688">CVE-2021-28688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23134">CVE-2021-23134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20317">CVE-2021-20317</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20292">CVE-2021-20292</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36385">CVE-2020-36385</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36322">CVE-2020-36322</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0129">CVE-2021-0129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26558">CVE-2020-26558</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26555">CVE-2020-26555</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26147">CVE-2020-26147</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-26139">CVE-2020-26139</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25673">CVE-2020-25673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25672">CVE-2020-25672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25671">CVE-2020-25671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25670">CVE-2020-25670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12655">CVE-2020-12655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-19449">CVE-2019-19449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-2854">CVE-2016-2854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-2853">CVE-2016-2853</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 (xenial ESM, trusty ESM)</li>
+</ul>
+<h3 id="lsn-0085-1-linux-kernel-vulnerability-08-15">[<a href="https://ubuntu.com/security/notices/LSN-0085-1">LSN-0085-1</a>] Linux kernel vulnerability [08:15]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-25636">CVE-2022-25636</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Livepatch</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>KERNEL TYPE</th>
+<th>20.04</th>
+<th>18.04</th>
+<th>16.04</th>
+<th>14.04</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aws</td>
+<td>85.1</td>
+<td>85.1</td>
+<td>85.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure</td>
+<td>85.1</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure-4.15</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-4.15</td>
+<td>—</td>
+<td>85.1</td>
+<td>85.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-4.4</td>
+<td>—</td>
+<td>—</td>
+<td>85.1</td>
+<td>85.1</td>
+</tr>
+<tr>
+<td>generic-5.4</td>
+<td>85.2</td>
+<td>85.2</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke-4.15</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke-5.4</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gkeop</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gkeop-5.4</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm-5.4</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-4.15</td>
+<td>—</td>
+<td>85.1</td>
+<td>85.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-4.4</td>
+<td>—</td>
+<td>—</td>
+<td>85.1</td>
+<td>85.1</td>
+</tr>
+<tr>
+<td>lowlatency-5.4</td>
+<td>85.2</td>
+<td>85.2</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>oem</td>
+<td>—</td>
+<td>85.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usn-5341-1-gnu-binutils-vulnerabilities-09-04">[<a href="https://ubuntu.com/security/notices/USN-5341-1">USN-5341-1</a>] GNU binutils vulnerabilities [09:04]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-45078">CVE-2021-45078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3487">CVE-2021-3487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-17122">CVE-2017-17122</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read, OOB write and memory leak when handling crafted files -
+binutils is not generally expected to operate on untrusted data so
+upstream and our team do not usually consider vulns in binutils to be
+high impact</li>
+</ul>
+<h3 id="usn-5340-1-ckeditor-vulnerabilities-09-50">[<a href="https://ubuntu.com/security/notices/USN-5340-1">USN-5340-1</a>] CKEditor vulnerabilities [09:50]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-37695">CVE-2021-37695</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33829">CVE-2021-33829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32809">CVE-2021-32809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32808">CVE-2021-32808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-9281">CVE-2020-9281</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-9861">CVE-2018-9861</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>JS rich text editor to be embedded in web pages - often used by django
+and other projects</li>
+<li>3x XSS, 3xJS RCE</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="camila-discusses-ubuntu-hardening--part-3--10-23">Camila discusses Ubuntu hardening (part 3) [10:23]</h3>
+<ul>
+<li>In the third part of this series on hardening a Ubuntu machine against
+external attack, Camila looks at steps you can take to secure your
+applications once deployed on your hardened Ubuntu system. This includes
+steps towards reducing your attack surface, using MAC to provide POLA and
+other good security hygiene practices. Listen on to find out more.</li>
+</ul>
+<p>Hello listener! Welcome back to our Ubuntu hardening podcast mini-series,
+where in three episodes, released across several weeks, we have been
+discussing how to build a network service in an Ubuntu operating system,
+but not just any Ubuntu operating system, and instead, a HARDENED one. Up
+until this point, we went from nothing to digital big bang, which was the
+equivalent of our system install; to years of chemical, geological, and
+climatic transformations, which were actually a few weeks maybe of setting
+up basic security measures after our initial install; to, at last, the
+point where we are ready to finally have our server be born, just as life
+once did in our beautiful planet Earth. We reach the next stage in our
+evolution and prepare ourselves to now finally install our server. Don&rsquo;t be
+a cheater though, and don&rsquo;t skip any steps: if you haven&rsquo;t listened to the
+other episodes, go do that before you move on here. Earth did not become
+what it did in a day, so&hellip;you can spare a few minutes to listen to the
+other episodes before continuing with this one. Other listeners might have
+waited a few weeks, and poor Earth waited billions of years! Lucky you that
+hardening your Ubuntu system is slightly easier than creating an entire
+planet, and even an entire universe from scratch. Introductions made, lets
+jump right in to finally getting our service and all related software up
+and running in our already hardened machine. And let&rsquo;s harden it even more,
+shall we?</p>
+<p>I will start this off by just saying: no installing of services that don&rsquo;t
+use cryptography. HTTP? Gone! FTP? Next! Telnet? Please no. Don&rsquo;t even joke
+about that. Just don&rsquo;t, or I might actually just start crying unencrypted
+tears of anger. Encryption technology should be here to stay, and if you
+are sending sensitive data over the wire, give that data a reason to feel
+safe and protected during its digital travel. Add that S to the end of the
+network protocol names. Level up your HTTP and make it HTTPS. Configure
+your Apache or Nginx server to use TLS. Not SSL. SSL is deprecated. TLS
+version 1.2 or above. Another important thing to consider when installing
+the entire stack of applications, libraries and frameworks you might need
+to run your system: less is more. I actually saw this in a cooking show,
+and I agree with this statement. I know we sometimes might get amazed at
+the huge amount of possibilities we have whenever installing software. The
+human mind has created the most incredible utilities, and we have the power
+to simply install all of them with one simple command. But just because you
+have a wide variety of ingredients, it doesn&rsquo;t mean you have to use
+them. Some people might like french fries with ice cream. That does not
+imply you need a french fry library to get your sundae application to be
+delicious. Sometimes a little chocolate sauce drizzle is all you
+need. Chef&rsquo;s kiss! The point here is: install the minimum necessary to run
+your application. Don&rsquo;t increase the attack surface. The more you have
+running in your system, the more possibilities of entry an attacker will
+have. Keep it short and sweet and avoid getting lost in a sea of files,
+users and processes that you don&rsquo;t know how they really work or what they
+really do. And while we are at it&hellip;if you do have the chance, try to
+install only one or two network services per system/device. Don&rsquo;t have your
+server simultaneously be a web server, a mail server, a file server, a
+database server, and an ice cream server, because why not, right? Don&rsquo;t,
+though. This limits the number of services that can be compromised if a
+compromise ends up happening. It limits the exposure for a single
+device. Plus, when installing the applications necessary to run these
+services, remember that a lot of applications like Apache, Nginx, MySQL,
+PHP…they all have security settings. They know they are the regular targets
+of attacks, so they provide the user with the tools to perform a secure
+install or set secure post install configuration values. If it is provided
+to you, use it! Harden your application as well, after all, it is this
+application that will most likely be the point of entry into your
+system. So divide, secure and conquer!</p>
+<p>We did it, friends. We have a device providing a service over the
+network. One would think that after 6 days of work creating a digital
+ecosystem we would be able to rest on the 7th day, as done by some mighty
+entities before us, however&hellip;people concerned with cyber security don&rsquo;t
+sleep. Or stop. Ever! Cyber security is a continuous effort, so post
+application setup measures must be taken as well if you want your server to
+keep securely thriving. We have got to ensure the evolution of the species
+and keep our metaphorical Earth safe and in tiptop shape in order to
+guarantee the best chances of, not only, survival, but growth and
+prosperity. Who needs sleep when you can have the joy of knowing that you
+set up your device for execution success and longevity in the grueling
+environment that is the Internet! Let&rsquo;s start then by disabling unnecessary
+open ports and stopping the execution of unwanted services. You set up your
+application using the minimum necessary, which is great. Sometimes,
+however, during install, or even during configuration, applications will
+open ports and setup services you might not need. Heck, we are talking
+about this in the post application install and setup phase of our process,
+however, this could also be done in the post installation of the operating
+system phase of the process. Checking out which ports are unnecessarily
+open, and closing these ports will reduce the attack surface area in your
+system, as an attacker has less points of entry to choose from. A house
+with one door and one door only provides one single point of entry to an
+external entity. Of course this external entity could manufacture a new
+entry point using mechanical tools, but I then digress from the real
+intention of this analogy, so let&rsquo;s stick to the basics of the idea here,
+shall we? An example of an unnecessary open port might be a database
+port. Sure, you have set up a host based firewall as we have already
+suggested, and no internet traffic which would have this service as a
+destination is allowed through, but still&hellip;layers!!! When we talk about
+security we talk about having various and various layers that will protect
+you in case the previous one has somehow been cracked. So&hellip;trust your
+firewall without trusting it completely. If you don&rsquo;t need the database
+port open to the entire Internet, only to localhost, then leave it open
+just for localhost. If you don&rsquo;t want to do it for yourself, then do it for
+me? Please? It makes me a lot less nervous knowing that a multitude of
+unused open ports are being closed and removed from harm&rsquo;s way. The
+Internet can be a brutal place, you know? Use a tool such as &rsquo;netstat&rsquo;,
+check your open ports and disable Internet access for those that don&rsquo;t need
+it through the related application&rsquo;s configuration file or other available
+resources. It&rsquo;ll be quicker than you think, and will provide you with long
+term peace of mind. Bonus points for the fact that you will know something
+weird might be happening when you see that some port that should not be
+accessible through cyberspace is being used to send some data to some shady
+IP address in a remote country. Syslog mail incoming!</p>
+<p>This same idea applies to unwanted services or unwanted daemons. Check out
+what is set to run automatically or in the background of your system, check
+your &lsquo;cron&rsquo; files, and make sure that these background programs that might
+be a risk are not just there executing with the sole purpose of being
+exploited. Only the bare minimum necessary! Let&rsquo;s not be digital gluttons
+here, after all, gluttony is one of the seven deadly sins. Deadly for your
+poor server which will have that background daemon cleaning files in a
+directory that did exist in the system, but doesn&rsquo;t anymore, and is now
+completely useless. Yeah, that server gets exploited by an attacker that
+was able to leverage an unpatched zero-day in your Internet facing
+application. No, you might not have been able to defend yourself against
+the zero-day, but you definitely would’ve been able to avoid a more
+sophisticated attack against your device had you not let an unnecessary
+vulnerability prone daemon execute in your system just for the fun of
+it. The attacker gets in through an issue that is not your fault, but gets
+to stay and cause more problems because you were too software hungry to
+delete something that was no longer needed by the system. More software,
+more vulnerabilities. Another important thing to note here: this is a
+continuous effort, remember? Yes, we are talking about post application
+installation and setup security measures that be applied to your system in
+order for it to be hardened, however, since the application environment
+will change together with the application, it is necessary to maintain the
+system and reanalyze all that has been setup in order to update the
+hardening in case it is necessary. Your hardening needs to evolve together
+with your software and your application.</p>
+<p>We haven&rsquo;t yet talked about or dove deep into the elephant in the room
+subject that is system files. We surrounded the subject, got close to it
+here and there, but we still have not faced it head on, so let&rsquo;s go for it
+now. Files contain the data which we analyze, which we process, which we
+use to perform our computing, since even execution of a program begins with
+the file containing the code that is to be executed. In Linux, and
+consequently in Ubuntu, everything is a file. This essentially means files
+will contain everything an attacker needs to compromise a system. They
+might want to just read a file and steal its data, they might want to edit
+a text configuration file and change the behavior of an application, or
+they might want to create a file from scratch which will be a program that,
+when run, will do malicious things in the system. The possibilities with
+files are endless, and that is why file permissions must be treated with
+the utmost care. We must protect the bricks that make up our operating
+system. You have your server running. You have everything you need on the
+system and you won&rsquo;t be performing any further install or making any
+further changes critical to the service any time in the near future. So why
+not spend some time checking your application files and your system files
+to make sure they do not have any suspicious or possibly harmful
+permissions? What files in the system contain sensitive data that shouldn&rsquo;t
+be accessed by every user? Which files can be read by all, but should have
+their editing permissions restricted only to the system administrator?
+Which executables are allowed to be executed by a specific group of users
+but not by any other user in the system due to dangerous commands being a
+part of the compiled code? This analysis must be made and sometimes default
+permissions must be questioned, since the idea is that you tailor your
+environment to your needs. Use &lsquo;chmod&rsquo; and &lsquo;chown&rsquo; to get your permissions
+right and protect your files.</p>
+<p>An additional point of concern: &lsquo;suid&rsquo; and &lsquo;sgid&rsquo; binaries that might be
+available in the system. It is interesting to disable files for which this
+permission is unwanted, possibly because it can easily be exploited by an
+attacker for privilege escalation or even worse. For those unaware, a
+&lsquo;setuid&rsquo; or &lsquo;setgid&rsquo; binary will allow a user to execute the program that
+is this binary considering privileges that are not necessarily the ones set
+for this user. The execution will happen with the privileges of the file
+owner or the file group instead. Think about the &lsquo;ping&rsquo; program, for
+example. Our old friend, &lsquo;ping&rsquo;. &lsquo;Ping&rsquo; is a &lsquo;setuid&rsquo; binary owned by
+&lsquo;root&rsquo;. Whenever a user executes the &lsquo;ping&rsquo; program, they run it with
+&lsquo;root&rsquo; privileges, and this is generally necessary, since &lsquo;ping&rsquo; requires
+the opening of a socket and this is not an operation that can be initiated
+by any random user in the system. However, since &lsquo;ping&rsquo;, IN THEORY, is
+pretty harmless, letting a user acquire the temporary privilege to open the
+socket and get &lsquo;ping&rsquo; to run is a solution. Let&rsquo;s consider, however, a
+situation where the &lsquo;ping&rsquo; file&rsquo;s permissions are changed to allow any user
+to edit it, so, writing to the file is available to everyone who wishes to
+do it. Makes me nervous just thinking about it…A user with little
+privileges in the system is then able to edit the file and change its
+contents to that of a program that runs &lsquo;ping&rsquo;, but at the end also opens a
+new shell. When this new &lsquo;ping&rsquo; is executed with &lsquo;root&rsquo; privileges, the new
+shell that is opened can be opened with &lsquo;root&rsquo; privileges as well. See the
+problem here? Of course this is an example, and default permissions for the
+&lsquo;ping&rsquo; executable do not allow any user to write to the file, the only user
+allowed to do that being &lsquo;root&rsquo;. The point here is to show the dangers of
+the &lsquo;setuid&rsquo; and &lsquo;setgid&rsquo; binaries and encourage you to look at your system
+and disable these permission bits for files where this is not necessary,
+where setting them is not needed. Maybe you don&rsquo;t need your users to run
+&lsquo;ping&rsquo; at all, so why not let just those with &lsquo;sudo&rsquo; privileges involving
+network access be allowed to actually run it? Disable the &lsquo;setuid&rsquo; bit and
+limit usage of &lsquo;ping&rsquo; to those who really need it. The same goes to any
+other &lsquo;setuid&rsquo; binary any fresh software install might have created. Or
+even files you have created and set permissions to yourself. &lsquo;Setuid&rsquo; and
+&lsquo;setgid&rsquo; binaries are very commonly leveraged by attackers to exploit a
+system, so having less of them is a good measure to apply in order to
+reduce your attack surface. Also&hellip;let&rsquo;s continue doing continuous work
+here, and always check permissions and &lsquo;suid&rsquo; or &lsquo;sgid&rsquo; for new files that
+are welcomed into our system, or old ones that are updated.</p>
+<p>What&rsquo;s next then? We seem to have covered all of our bases, securing every
+part of our system. Go us! However, some say that teamwork is the best kind
+of work, so let&rsquo;s increase our hardening by going beyond our lonely manual
+configurations and implementations and use some security software to help
+us. You are not alone in the digital world. You are not the only one trying
+to make your device more secure and trying to protect it against Internet
+predators. A lot of people have developed a lot of software to help us
+strengthen our defenses and better manage security in our devices. So here
+are a few to consider: &lsquo;fail2ban&rsquo;, which is an intrusion detection and
+prevention system that will analyze your log files and block suspicious
+activity through your firewall should any suspicious activity be
+detected. Other open source software out there like Snort and Suricata can
+also be used to achieve similar things to this; also consider installing
+malware detecting software with ClamAV or exploit detecting software with
+RootkitHunter; 2FA is highly recommended nowadays to anyone that wishes to
+use authentication in a secure manner, so why not implement it directly in
+your Ubuntu OS? Through Google&rsquo;s PAM package, for example, it is possible
+to set 2FA for users logging into your machine, using &lsquo;sudo&rsquo;, doing
+everything in the system that requires a password! NO, don&rsquo;t even think
+about considering the use of a less strong password because of this, but do
+see it as another layer added to the various others we have been building
+up here to keep your system secure; another authentication alternative is
+considering the usage of a centralized authentication system, where your
+users are not authenticated locally, but instead in a remote server
+dedicated to this type of service. Of course, do not forget that usually, a
+service providing device, such as your own server, will have local
+application-only users that do not need to be authenticated with this other
+centralized authentication unit in order to run their activities in the
+device, so do configure those properly. However, for users that are a part
+of your organization layout, it might be interesting to consider
+outsourcing your authentication needs to this extra server. Keep in mind,
+however, that this increases the attack surface for your infrastructure in
+general, since you add to it an entirely new service device, and apply it
+only if the pay-off is worth it to you and you entire structure; and last
+but not least, do consider using software that enforces Mandatory Access
+Control, such as SELinux, and of course, the one and only AppArmor.</p>
+<p>Mandatory Access Control, or MAC, for short, is the counterpart to DAC, or
+Discretionary Access Control. In DAC we have that access control is
+performed in such a way that access is allowed to resources based on the
+identity of a user and what the resource owners allow or not for that user
+in that resource. Here, all the OS can do is enforce permissions based on
+identity limits set by this resource owner. On the other hand, MAC is the
+type of access control where a policy administrator, which is usually the
+&lsquo;root&rsquo; user, but can be another administrative user, is the one to
+establish access permissions to a resource, no matter the owner of that
+resource. The policy administrator is able to make such choices not only
+based on the resource but also based on the entity which will access it as
+well, this entity possibly being a user, or even a program, and resources
+being files, network devices and other programs. The operating system can
+then enforce access beyond the one set by the resource owner and
+considering more than just the identity of the entity that wishes to access
+the resource. In DAC, permissions for a specific resource can be easily
+changed by the user that owns it. The Linux file system permissions are an
+example of DAC. Changes to these permissions, as simple as they may be, can
+result in programs or users being able to interact with resources they
+normally shouldn&rsquo;t, and the ever untrustworthy user is the only one
+standing in the way of that. On the other hand, in MAC, with permissions or
+sets of permissions being defined by a policy administrator only, a random
+user can no longer change the ones associated with a resource just because
+they own it. Well, they can, through DAC, but changing overall resource
+permissions will no longer be as easy as just running &lsquo;chmod&rsquo;. That is
+because, as an additional layer to the checks performed to the DAC set, MAC
+will give more granularity to the access control process, and, based on the
+rules set by the policy administrator, define in an owner independent
+manner, what users or programs can access in the system based on who they
+are, and based on what permissions they have assigned to them regarding
+each specific resource. And if some shady entity wants to maybe bypass
+that, they will have to go through the dead body of the kernel of the
+operating system, which is a much harder beast to face. Even though DAC
+might be a more flexible way to set resource permissions, MAC is usually
+considered the more secure alternative and it can even be used as a
+complimentary measure on top of DAC to add more security to your
+system. You can do this, for example, by activating the AppArmor kernel
+security model in your Ubuntu OS, and it will allow you to restrict actions
+that running processes can take and resources they can access. AppArmor,
+therefore, will bind programs, and confine them, reducing the range of
+harmful operations a program might be able to execute in your system. Each
+program will have a profile associated with it, and these will contain
+access rules which, when broken, can have the related attempt simply
+reported, or instead blocked. An example would be disallowing access to a
+certain directory for the process that is your web server. The web server
+should only access web server related directories and files and AppArmor
+can be set up to guarantee that. Joining DAC and MAC in your system will
+allow you to build up your security layers very efficiently, so do consider
+learning more about software that allows this to happen, as it will bring
+you closer to the hardened utopia we all look forward to achieving.</p>
+<p>We did it. We created an inhabitable and secure ecosystem. Just like Earth
+after the many, many, MANY years that came after the big bang. Thankfully
+it didn&rsquo;t take us that long, although it wasn&rsquo;t a walk in the park getting
+all that hardening done. Our job, however, is never complete, as cyber
+security is a continuous effort. Have I already mentioned this? I can&rsquo;t
+remember. Anyway, the idea is to keep hardening even after all is set and
+done to run your service. How can this be achieved?</p>
+<p>Well, for starters, keep your Ubuntu system updated and install patched
+package versions when possible. Yes, sometimes updating breaks the system,
+but between spending time to maybe adjust to changes, and spending a lot of
+nights awake having to choo away an attacker instead, which one would you
+rather do? Another thing that needs to be done, always, is maintenance of
+users, groups and files in the system. I already mentioned this, but I am
+bringing it up again because it is very important. Your server is now a
+living entity, working to provide data and utilities to users all across
+the Internet. Seasons will change, updates will happen, files will
+transform, users will come and go, but you will stay. You will stay and
+update user and file permissions according to what is applicable to your
+ever changing system for that point in time. Don&rsquo;t assume that your initial
+configuration of users and files will apply forever. What is forever though
+is your effort to monitor and manage this system you have brought to
+life. Pretty words to live by, and what we should actually be doing with
+our planet, you know&hellip;taking care of it&hellip;but I once again digress. And
+just as a last tip&hellip;to end this suggestion list in a very random and
+abrupt manner: shred your files, don&rsquo;t just remove them from a
+system. Deleting a file simply removes the reference to it in a filesystem,
+meaning someone can still dig it up from the disk should they be determined
+enough to do it. Get rid of sensitive data the correct way and overwrite in
+disk that which will no longer be used in your server.</p>
+<p>We finally reach the end my friends, and the key takeaway here is: every
+system is unique, and every service will have its own infrastructure and
+needs. Do not apply all of the changes suggested here if they don&rsquo;t bring
+any benefits to you. Mom used to tell you to eat your vegetables, but if
+you are allergic to one of them, I am sure she wouldn&rsquo;t encourage you to do
+it, especially if you don&rsquo;t like eating it! What I mean here is: all we
+have here are suggestions, some which might be amazing and super useful to
+you, some that won&rsquo;t work. Know your system and you will definitely know
+what will work best for you. This might even be my actual last tip, if I
+haven&rsquo;t made this clear enough with all I have said previously: know your
+IT infrastructure well, and you will better know how to manage it and how
+to defend it. Hardening might prevent a lot from happening, keeping you
+safe from various intended attacks, however, creativity has always been the
+evolution of man, and creative hackers are plenty out there, so it might be
+that your hardening sometimes might fail you. If you know your system well,
+though, you might just be the last layer of hardening the system needs to
+kick out that hacker that was able to worm their way into the network. Keep
+your planet orbiting around the sun, keep your ecosystem alive and well,
+and do it by knowing how it works and by taking care of it when what used
+to work might not anymore.</p>
+<p>That is all for today&rsquo;s listeners! I hope you enjoyed all of the hardening
+suggestions we had for you in this and in the two previous episodes, and I
+hope you get to use them in your own systems to make them more secure! As
+always, do feel free to share your thoughts in our social media channels,
+and for now, I bid you all farewell and until next time! Bye!</p>
+<h3 id="python3-dot-10-has-pie-enabled-for-ubuntu-22-dot-04-lts-----38-16">Python3.10 has PIE enabled for Ubuntu 22.04 LTS (🥧) [38:16]</h3>
+<ul>
+<li><a href="https://ubuntusecuritypodcast.org/episode-151/">Episode 151</a></li>
+<li>Thanks to Foundations team, in particular Matthias Klose (doko)</li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/python2.7/+bug/1452115">https://bugs.launchpad.net/ubuntu/+source/python2.7/+bug/1452115</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E154.mp3" length="26904834" type="audio/mpeg" /><itunes:duration>2454</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 153</title>
           <link>https://ubuntusecuritypodcast.org/episode-153/</link>
@@ -566,247 +1363,6 @@ media platforms and I will see you all next week for the grand finale! Bye!</p>
           <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E153.mp3" length="24720270" type="audio/mpeg" /><itunes:duration>2239</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
-          <title>Episode 152</title>
-          <link>https://ubuntusecuritypodcast.org/episode-152/</link>
-          <pubDate>Fri, 11 Mar 2022 14:19:00 +1030 </pubDate>
-          <dc:creator></dc:creator>
-          <guid>7911dd66f88917a50ea3ec6c6515b11c8313f155c05f8b049f75620b3ffa149d0d74dfb503b868f08237916267a8eb0b65aca16b2855fcf17345ebdba5aeaacd</guid>
-          <itunes:author>Ubuntu Security Team</itunes:author>
-          
-        <itunes:title>Episode 152</itunes:title>
-        <itunes:subtitle><![CDATA[
-        
-          It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
-  and fixes for the latest microarchitectural side channel issues, plus we
-  bring you the first in a 3 part series on hardening your Ubuntu systems
-  against...
-        
-        ]]></itunes:subtitle>
-        <itunes:summary>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
-  and fixes for the latest microarchitectural side channel issues, plus we
-  bring you the first in a 3 part series on hardening your Ubuntu systems
-  against malicious attackers.
-  </itunes:summary>
-        <description>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
-  and fixes for the latest microarchitectural side channel issues, plus we
-  bring you the first in a 3 part series on hardening your Ubuntu systems
-  against malicious attackers.
-  </description>
-        <googleplay:description>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
-  and fixes for the latest microarchitectural side channel issues, plus we
-  bring you the first in a 3 part series on hardening your Ubuntu systems
-  against malicious attackers.
-  </googleplay:description>
-        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>It&rsquo;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
-and fixes for the latest microarchitectural side channel issues, plus we
-bring you the first in a 3 part series on hardening your Ubuntu systems
-against malicious attackers.</p>
-<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-<p>34 unique CVEs addressed</p>
-<h3 id="usn-5312-1-haproxy-vulnerability-00-46">[<a href="https://ubuntu.com/security/notices/USN-5312-1">USN-5312-1</a>] HAProxy vulnerability [00:46]</h3>
-<ul>
-<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0711">CVE-2022-0711</a></li>
-</ul>
-</li>
-<li>CPU based DoS via the <code>Set-Cookie2</code> header - obsolete HTTP response header
-used to send cookies from the server to the user - possible infinite loop
-when parsing responses which contained this header</li>
-</ul>
-<h3 id="usn-5300-2-usn-5300-3-php-vulnerabilities-01-24">[<a href="https://ubuntu.com/security/notices/USN-5300-2">USN-5300-2</a>, <a href="https://ubuntu.com/security/notices/USN-5300-3">USN-5300-3</a>] PHP vulnerabilities [01:24]</h3>
-<ul>
-<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2021-21707">CVE-2021-21707</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-9119">CVE-2017-9119</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-9120">CVE-2017-9120</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-9118">CVE-2017-9118</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-8923">CVE-2017-8923</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2015-9253">CVE-2015-9253</a></li>
-</ul>
-</li>
-<li><a href="https://ubuntusecuritypodcast.org/episode-150/">Episode 150</a></li>
-</ul>
-<h3 id="usn-5311-1-containerd-vulnerability-01-41">[<a href="https://ubuntu.com/security/notices/USN-5311-1">USN-5311-1</a>] containerd vulnerability [01:41]</h3>
-<ul>
-<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-23648">CVE-2022-23648</a></li>
-</ul>
-</li>
-<li>Able to access read-only copies of files from the host via specially
-crafted container image</li>
-</ul>
-<h3 id="usn-5314-1-firefox-vulnerabilities-02-11">[<a href="https://ubuntu.com/security/notices/USN-5314-1">USN-5314-1</a>] Firefox vulnerabilities [02:11]</h3>
-<ul>
-<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-26486">CVE-2022-26486</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-26485">CVE-2022-26485</a></li>
-</ul>
-</li>
-<li>2 critical impact (as defined by Mozilla) vulns - both UAFs</li>
-<li>Mozilla reported seeing reports of both being exploited in the wild</li>
-</ul>
-<h3 id="usn-5313-1-openjdk-vulnerabilities-02-36">[<a href="https://ubuntu.com/security/notices/USN-5313-1">USN-5313-1</a>] OpenJDK vulnerabilities [02:36]</h3>
-<ul>
-<li>15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-21365">CVE-2022-21365</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21366">CVE-2022-21366</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21360">CVE-2022-21360</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21341">CVE-2022-21341</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21340">CVE-2022-21340</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21305">CVE-2022-21305</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21299">CVE-2022-21299</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21296">CVE-2022-21296</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21294">CVE-2022-21294</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21293">CVE-2022-21293</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21291">CVE-2022-21291</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21283">CVE-2022-21283</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21282">CVE-2022-21282</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21277">CVE-2022-21277</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21248">CVE-2022-21248</a></li>
-</ul>
-</li>
-<li>Thanks to Matthias Klose from the Ubuntu Foundations team for preparing
-these updates - latest upstream point releases</li>
-<li>17.0.2 + 11.0.14</li>
-</ul>
-<h3 id="usn-5310-2-gnu-c-library-vulnerabilities-02-56">[<a href="https://ubuntu.com/security/notices/USN-5310-2">USN-5310-2</a>] GNU C Library vulnerabilities [02:56]</h3>
-<ul>
-<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-23219">CVE-2022-23219</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-23218">CVE-2022-23218</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3999">CVE-2021-3999</a></li>
-</ul>
-</li>
-<li><a href="https://ubuntusecuritypodcast.org/episode-151/">Episode 151</a> - this update is a subset of those</li>
-</ul>
-<h3 id="usn-5316-1-redis-vulnerability-03-09">[<a href="https://ubuntu.com/security/notices/USN-5316-1">USN-5316-1</a>] Redis vulnerability [03:09]</h3>
-<ul>
-<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0543">CVE-2022-0543</a></li>
-</ul>
-</li>
-<li>Redis contains a scripting interface using Lua and implements a sandbox
-for this to try and avoid scripts running arbitrary Lua code</li>
-<li>Upstream has a vendored copy of lua but in Ubuntu + Debian the redis
-package links against the system installed liblua
-<ul>
-<li>this is a good thing as it means that when say a vuln appears in Lua
-itself we only have to patch Lua to fix other applications like redis
-whereas otherwise we would also have to patch the embedded/vendored
-copy of lua in redis and release a redis update for every Lua
-vulnerability as well</li>
-</ul>
-</li>
-<li>As such we also want it to use the system lua libs of cjson and bitop</li>
-<li>Included a small custom piece of code to have it load those instead of
-the ones that would usually be shipped in redis itself</li>
-<li>Discovered that this shim code failed to set the <code>package</code> variable and as
-such left this global variable uninitialised - an attacker with the
-ability to execute a Lua script could then cause Lua to load the full
-system liblua unsandboxed and hence then use this to execute other
-arbitrary commands on the host</li>
-<li>Note in general it doesn&rsquo;t look like upstream Redis consider the existing
-sandbox to be a security boundary so recommend to only give trusted users
-the permission to EVAL Lua in redis</li>
-</ul>
-<h3 id="usn-5317-1-linux-kernel-vulnerabilities-05-34">[<a href="https://ubuntu.com/security/notices/USN-5317-1">USN-5317-1</a>] Linux kernel vulnerabilities [05:34]</h3>
-<ul>
-<li>5 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0847">CVE-2022-0847</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-23960">CVE-2022-23960</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-25636">CVE-2022-25636</a></li>
-</ul>
-</li>
-<li>Thanks to Thadeu Cascardo from the kernel team for coordinating all the
-work on these fixes</li>
-<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/DirtyPipe">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/DirtyPipe</a>
-<ul>
-<li><a href="https://dirtypipe.cm4all.com/">https://dirtypipe.cm4all.com/</a></li>
-<li>Similar to &ldquo;Dirty Cow&rdquo; but easier to exploit - one of the more high
-profile vulnerabilities in recent times - due to mishandling of the
-page cache within the Linux kernel, a malicious process could abuse the
-<code>pipe</code> and <code>splice</code> system calls to cause the kernel to overwrite contents
-of arbitrary files even when a user had no write permission to the
-particular file (even on immutable and RO-filesystems)</li>
-<li>Very simple error due to the failure to initialize the flags element
-within a pipe buffer when handling pipe data within the kernel - fix is
-2 lines of code to initialise this to 0</li>
-<li>Flaw exists back to 4.9 but this is thought only to be exploitable
-since the 5.8 kernel which refactored this code</li>
-<li>As such for now have patched for the 5.13 kernels in 21.10 + 20.04 LTS
-but will also patch in the future during regular development cycle for
-the older kernels like 5.4 in 20.04 LTS as well as an additional
-hardening measure</li>
-</ul>
-</li>
-<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/BHI">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/BHI</a>
-<ul>
-<li>Latest set of hardware microarchitectural issues - in the same vein as
-the original Spectre flaws from Jan 2018 (4 years ago!)</li>
-<li>Set of vulnerabilities affecting both Intel and ARM processors which
-can allow unprivileged user to leak (read) memory from kernel / other
-applications</li>
-<li>Requires the ability to execute a &ldquo;gadget&rdquo; in the kernel to do the
-speculative execution - and the only way known to get one of these is
-to inject it as BPF code</li>
-<li>As a result this update also disabled unprivileged eBPF loading as well
-to close off this attack vector</li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5318-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5318-1">USN-5318-1</a>] Linux kernel vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-23960">CVE-2022-23960</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-25636">CVE-2022-25636</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5319-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5319-1">USN-5319-1</a>] Linux kernel vulnerabilities</h3>
-<ul>
-<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-<h3 id="camila-discusses-ubuntu-hardening--part-1--10-20">Camila discusses Ubuntu hardening (part 1) [10:20]</h3>
-<ul>
-<li>In response to a topic on discourse.ubuntu.com re <a href="https://discourse.ubuntu.com/t/basic-security-advice-for-running-your-own-server/26786">Basic security advice
-for running your own server</a> - Camila has prepared a 3 part series on
-steps you can take to harden your Ubuntu machines against attack - part 1
-focuses on hardening at install time, part 2 is post install steps and
-part 3 looks at additional measures you can take once the machine is
-deployed - today we bring you the first part in this series</li>
-</ul>
-<h2 id="get-in-contact">Get in contact</h2>
-<ul>
-<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
-<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
-<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
-<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
-<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
-</ul>
-]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E152.mp3" length="18275840" type="audio/mpeg" /><itunes:duration>1685</itunes:duration><itunes:explicit>no</itunes:explicit>
-          <googleplay:explicit>no</googleplay:explicit></item>
-        <item>
           <title>Episode 151</title>
           <link>https://ubuntusecuritypodcast.org/episode-151/</link>
           <pubDate>Fri, 04 Mar 2022 15:31:00 +1030 </pubDate>
@@ -878,16 +1434,16 @@ restarted by systemd so impact is low</li>
 <ul>
 <li>10 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-24052">CVE-2022-24052</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24051">CVE-2022-24051</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24050">CVE-2022-24050</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24048">CVE-2022-24048</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46668">CVE-2021-46668</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46665">CVE-2021-46665</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46664">CVE-2021-46664</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46663">CVE-2021-46663</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46661">CVE-2021-46661</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-46659">CVE-2021-46659</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24052">CVE-2022-24052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24051">CVE-2022-24051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24050">CVE-2022-24050</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24048">CVE-2022-24048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46668">CVE-2021-46668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46665">CVE-2021-46665</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46664">CVE-2021-46664</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46663">CVE-2021-46663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46661">CVE-2021-46661</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46659">CVE-2021-46659</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>Several security issues - latest upstream point releases</li>
@@ -898,9 +1454,9 @@ restarted by systemd so impact is low</li>
 <ul>
 <li>3 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-22592">CVE-2022-22592</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22590">CVE-2022-22590</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22589">CVE-2022-22589</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22592">CVE-2022-22592</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22590">CVE-2022-22590</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22589">CVE-2022-22589</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>Various issues in webkit fixed</li>
@@ -909,8 +1465,8 @@ restarted by systemd so impact is low</li>
 <ul>
 <li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0358">CVE-2022-0358</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-4158">CVE-2021-4158</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0358">CVE-2022-0358</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4158">CVE-2021-4158</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-3930">CVE-2021-3930</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-3748">CVE-2021-3748</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-3713">CVE-2021-3713</a></li>
@@ -930,8 +1486,8 @@ redirector device emulation etc</li>
 <ul>
 <li>2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-0175">CVE-2022-0175</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0135">CVE-2022-0135</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0175">CVE-2022-0175</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0135">CVE-2022-0135</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>Virtual GPU for KVM</li>
@@ -941,10 +1497,10 @@ redirector device emulation etc</li>
 <ul>
 <li>12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-23219">CVE-2022-23219</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2022-23218">CVE-2022-23218</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3999">CVE-2021-3999</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3998">CVE-2021-3998</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23219">CVE-2022-23219</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23218">CVE-2022-23218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3999">CVE-2021-3999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3998">CVE-2021-3998</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-35942">CVE-2021-35942</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-27645">CVE-2021-27645</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2020-6096">CVE-2020-6096</a></li>
@@ -2142,7 +2698,7 @@ when handling XFS extended attributes or tmpfs ACLs - local privesc</li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22739">CVE-2022-22739</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22738">CVE-2022-22738</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22737">CVE-2022-22737</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-43656">CVE-2021-43656</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43656">CVE-2021-43656</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43545">CVE-2021-43545</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43543">CVE-2021-43543</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43542">CVE-2021-43542</a></li>
@@ -2188,7 +2744,7 @@ whole message as valid</li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22739">CVE-2022-22739</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22738">CVE-2022-22738</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2022-22737">CVE-2022-22737</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-43656">CVE-2021-43656</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43656">CVE-2021-43656</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43545">CVE-2021-43545</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43543">CVE-2021-43543</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-43542">CVE-2021-43542</a></li>
@@ -4750,7 +5306,7 @@ could DoS / RCE</li>
 <li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
 <ul>
 <li><a href="https://ubuntu.com/security/CVE-2021-41991">CVE-2021-41991</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-41990">CVE-2021-41990</a> &lt;!&ndash; LTS only, not ESM &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-41990">CVE-2021-41990</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>Integer overflow when replacing certs in cache - if can send many
@@ -5230,8 +5786,8 @@ LetsEncrypt&rsquo;s own root cert is used to do the validation</li>
 <li><a href="https://ubuntu.com/security/CVE-2021-40438">CVE-2021-40438</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-39275">CVE-2021-39275</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-34798">CVE-2021-34798</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-36160">CVE-2021-36160</a> &lt;!&ndash; medium, not esm &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-33193">CVE-2021-33193</a> &lt;!&ndash; medium, not esm &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36160">CVE-2021-36160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33193">CVE-2021-33193</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>HTTP/2 specific issue - crafted method would bypass validation and be
@@ -6028,7 +6584,7 @@ the redirect process</li>
 <ul>
 <li><a href="https://ubuntu.com/security/CVE-2021-38115">CVE-2021-38115</a></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-40145">CVE-2021-40145</a></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-381">CVE-2021-381</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-381">CVE-2021-381</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2017-6363">CVE-2017-6363</a></li>
 </ul>
 </li>
@@ -8854,8 +9410,8 @@ impersonate those other users.</li>
 <ul>
 <li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2021-33571">CVE-2021-33571</a> &lt;!&ndash;  &ndash;&gt;</li>
-<li><a href="https://ubuntu.com/security/CVE-2021-33203">CVE-2021-33203</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33571">CVE-2021-33571</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33203">CVE-2021-33203</a> <!-- raw HTML omitted --></li>
 <li><a href="https://ubuntu.com/security/CVE-2021-32052">CVE-2021-32052</a></li>
 </ul>
 </li>
@@ -10448,7 +11004,7 @@ we cover some open positions on the Ubuntu Security team too.</p>
 <ul>
 <li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-1946">CVE-2020-1946</a> &lt;!&ndash; - &ndash;&gt;</li>
+<li><a href="https://ubuntu.com/security/CVE-2020-1946">CVE-2020-1946</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>Damian Lukowski - remote code execution in configuration file parser for
@@ -15541,7 +16097,7 @@ case</li>
 <li>5 CVEs addressed in Xenial (16.04 LTS)
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20024">CVE-2018-20024</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2024">CVE-2018-2024</a> &lt;!&ndash;  &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-2024">CVE-2018-2024</a> <!-- raw HTML omitted --></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20022">CVE-2018-20022</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20021">CVE-2018-20021</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20020">CVE-2018-20020</a></li>
@@ -16087,7 +16643,7 @@ this</li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4032">CVE-2020-4032</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4031">CVE-2020-4031</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-4030">CVE-2020-4030</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15103">CVE-2020-15103</a> &lt;!&ndash; - &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15103">CVE-2020-15103</a> <!-- raw HTML omitted --></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11099">CVE-2020-11099</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11098">CVE-2020-11098</a></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11097">CVE-2020-11097</a></li>
@@ -18416,11 +18972,11 @@ disable this mitigation</li>
 <ul>
 <li>5 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10)
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> &lt;!&ndash; low xdp oob write (CAP_NET_ADMIN) &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> &lt;!&ndash; medium usb sg &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> &lt;!&ndash; medium f2fs &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>5.3</li>
@@ -18435,11 +18991,11 @@ CAP_NET_ADMIN</li>
 <li>6 CVEs addressed in Bionic (18.04 LTS)
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749">CVE-2020-1749</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> &lt;!&ndash; low xdp oob write (CAP_NET_ADMIN) &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> &lt;!&ndash; medium usb sg &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> &lt;!&ndash; medium f2fs &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>5.0 gke &amp; oem</li>
@@ -18449,11 +19005,11 @@ CAP_NET_ADMIN</li>
 <li>6 CVEs addressed in Focal (20.04 LTS)
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751">CVE-2020-10751</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> &lt;!&ndash; low xdp oob write (CAP_NET_ADMIN) &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> &lt;!&ndash; medium usb sg &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> &lt;!&ndash; medium f2fs &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12659">CVE-2020-12659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>5.4</li>
@@ -18463,11 +19019,11 @@ CAP_NET_ADMIN</li>
 <li>6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751">CVE-2020-10751</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749">CVE-2020-1749</a> &lt;!&ndash; medium ipsec info leak &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> &lt;!&ndash; medium usb sg &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> &lt;!&ndash; medium f2fs &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749">CVE-2020-1749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0067">CVE-2020-0067</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>4.15 (14.04 ESM azure, 16.04 LTS - hwe, 18.04 LTS
@@ -18479,12 +19035,12 @@ all)</li>
 <li>8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS)
 <ul>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-10751">CVE-2020-10751</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749">CVE-2020-1749</a> &lt;!&ndash; medium ipsec info leak &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12826">CVE-2020-12826</a> &lt;!&ndash; medium signal integer overflow &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-1749">CVE-2020-1749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12826">CVE-2020-12826</a> <!-- raw HTML omitted --></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12769">CVE-2020-12769</a></li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> &lt;!&ndash; medium usb sg &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12464">CVE-2020-12464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
 <li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2019-19319">CVE-2019-19319</a></li>
 </ul>
 </li>
@@ -18494,9 +19050,9 @@ all)</li>
 <ul>
 <li>3 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> &lt;!&ndash; medium fs race &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12654">CVE-2020-12654</a> &lt;!&ndash; high marvel wifi buffer overflow &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12114">CVE-2020-12114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12654">CVE-2020-12654</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>3.13</li>
@@ -18505,8 +19061,8 @@ all)</li>
 <ul>
 <li>2 CVEs addressed in Precise ESM (12.04 ESM)
 <ul>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> &lt;!&ndash; medium srbds &ndash;&gt;</li>
-<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12654">CVE-2020-12654</a> &lt;!&ndash; high marvel wifi buffer overflow &ndash;&gt;</li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12654">CVE-2020-12654</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
 <li>3.2</li>
@@ -19280,6 +19836,459 @@ on Rust in Ubuntu to win a copy</li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
           <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E074.mp3" length="44084780" type="audio/mpeg" /><itunes:duration>45:55</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
+          <title>Episode 152</title>
+          <link>https://ubuntusecuritypodcast.org/episode-152/</link>
+          <pubDate>Fri, 11 Mar 2022 14:19:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>7911dd66f88917a50ea3ec6c6515b11c8313f155c05f8b049f75620b3ffa149d0d74dfb503b868f08237916267a8eb0b65aca16b2855fcf17345ebdba5aeaacd</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 152</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
+  and fixes for the latest microarchitectural side channel issues, plus we
+  bring you the first in a 3 part series on hardening your Ubuntu systems
+  against...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
+  and fixes for the latest microarchitectural side channel issues, plus we
+  bring you the first in a 3 part series on hardening your Ubuntu systems
+  against malicious attackers.
+  </itunes:summary>
+        <description>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
+  and fixes for the latest microarchitectural side channel issues, plus we
+  bring you the first in a 3 part series on hardening your Ubuntu systems
+  against malicious attackers.
+  </description>
+        <googleplay:description>  It&#39;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
+  and fixes for the latest microarchitectural side channel issues, plus we
+  bring you the first in a 3 part series on hardening your Ubuntu systems
+  against malicious attackers.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>It&rsquo;s a big week for kernel security vulnerabilities - we cover Dirty Pipe
+and fixes for the latest microarchitectural side channel issues, plus we
+bring you the first in a 3 part series on hardening your Ubuntu systems
+against malicious attackers.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>34 unique CVEs addressed</p>
+<h3 id="usn-5312-1-haproxy-vulnerability-00-46">[<a href="https://ubuntu.com/security/notices/USN-5312-1">USN-5312-1</a>] HAProxy vulnerability [00:46]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0711">CVE-2022-0711</a></li>
+</ul>
+</li>
+<li>CPU based DoS via the <code>Set-Cookie2</code> header - obsolete HTTP response header
+used to send cookies from the server to the user - possible infinite loop
+when parsing responses which contained this header</li>
+</ul>
+<h3 id="usn-5300-2-usn-5300-3-php-vulnerabilities-01-24">[<a href="https://ubuntu.com/security/notices/USN-5300-2">USN-5300-2</a>, <a href="https://ubuntu.com/security/notices/USN-5300-3">USN-5300-3</a>] PHP vulnerabilities [01:24]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21707">CVE-2021-21707</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9119">CVE-2017-9119</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9120">CVE-2017-9120</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9118">CVE-2017-9118</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-8923">CVE-2017-8923</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2015-9253">CVE-2015-9253</a></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-150/">Episode 150</a></li>
+</ul>
+<h3 id="usn-5311-1-containerd-vulnerability-01-41">[<a href="https://ubuntu.com/security/notices/USN-5311-1">USN-5311-1</a>] containerd vulnerability [01:41]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23648">CVE-2022-23648</a></li>
+</ul>
+</li>
+<li>Able to access read-only copies of files from the host via specially
+crafted container image</li>
+</ul>
+<h3 id="usn-5314-1-firefox-vulnerabilities-02-11">[<a href="https://ubuntu.com/security/notices/USN-5314-1">USN-5314-1</a>] Firefox vulnerabilities [02:11]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26486">CVE-2022-26486</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26485">CVE-2022-26485</a></li>
+</ul>
+</li>
+<li>2 critical impact (as defined by Mozilla) vulns - both UAFs</li>
+<li>Mozilla reported seeing reports of both being exploited in the wild</li>
+</ul>
+<h3 id="usn-5313-1-openjdk-vulnerabilities-02-36">[<a href="https://ubuntu.com/security/notices/USN-5313-1">USN-5313-1</a>] OpenJDK vulnerabilities [02:36]</h3>
+<ul>
+<li>15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21365">CVE-2022-21365</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21366">CVE-2022-21366</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21360">CVE-2022-21360</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21341">CVE-2022-21341</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21340">CVE-2022-21340</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21305">CVE-2022-21305</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21299">CVE-2022-21299</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21296">CVE-2022-21296</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21294">CVE-2022-21294</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21293">CVE-2022-21293</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21291">CVE-2022-21291</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21283">CVE-2022-21283</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21282">CVE-2022-21282</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21277">CVE-2022-21277</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21248">CVE-2022-21248</a></li>
+</ul>
+</li>
+<li>Thanks to Matthias Klose from the Ubuntu Foundations team for preparing
+these updates - latest upstream point releases</li>
+<li>17.0.2 + 11.0.14</li>
+</ul>
+<h3 id="usn-5310-2-gnu-c-library-vulnerabilities-02-56">[<a href="https://ubuntu.com/security/notices/USN-5310-2">USN-5310-2</a>] GNU C Library vulnerabilities [02:56]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23219">CVE-2022-23219</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23218">CVE-2022-23218</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3999">CVE-2021-3999</a></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-151/">Episode 151</a> - this update is a subset of those</li>
+</ul>
+<h3 id="usn-5316-1-redis-vulnerability-03-09">[<a href="https://ubuntu.com/security/notices/USN-5316-1">USN-5316-1</a>] Redis vulnerability [03:09]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0543">CVE-2022-0543</a></li>
+</ul>
+</li>
+<li>Redis contains a scripting interface using Lua and implements a sandbox
+for this to try and avoid scripts running arbitrary Lua code</li>
+<li>Upstream has a vendored copy of lua but in Ubuntu + Debian the redis
+package links against the system installed liblua
+<ul>
+<li>this is a good thing as it means that when say a vuln appears in Lua
+itself we only have to patch Lua to fix other applications like redis
+whereas otherwise we would also have to patch the embedded/vendored
+copy of lua in redis and release a redis update for every Lua
+vulnerability as well</li>
+</ul>
+</li>
+<li>As such we also want it to use the system lua libs of cjson and bitop</li>
+<li>Included a small custom piece of code to have it load those instead of
+the ones that would usually be shipped in redis itself</li>
+<li>Discovered that this shim code failed to set the <code>package</code> variable and as
+such left this global variable uninitialised - an attacker with the
+ability to execute a Lua script could then cause Lua to load the full
+system liblua unsandboxed and hence then use this to execute other
+arbitrary commands on the host</li>
+<li>Note in general it doesn&rsquo;t look like upstream Redis consider the existing
+sandbox to be a security boundary so recommend to only give trusted users
+the permission to EVAL Lua in redis</li>
+</ul>
+<h3 id="usn-5317-1-linux-kernel-vulnerabilities-05-34">[<a href="https://ubuntu.com/security/notices/USN-5317-1">USN-5317-1</a>] Linux kernel vulnerabilities [05:34]</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0847">CVE-2022-0847</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23960">CVE-2022-23960</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25636">CVE-2022-25636</a></li>
+</ul>
+</li>
+<li>Thanks to Thadeu Cascardo from the kernel team for coordinating all the
+work on these fixes</li>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/DirtyPipe">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/DirtyPipe</a>
+<ul>
+<li><a href="https://dirtypipe.cm4all.com/">https://dirtypipe.cm4all.com/</a></li>
+<li>Similar to &ldquo;Dirty Cow&rdquo; but easier to exploit - one of the more high
+profile vulnerabilities in recent times - due to mishandling of the
+page cache within the Linux kernel, a malicious process could abuse the
+<code>pipe</code> and <code>splice</code> system calls to cause the kernel to overwrite contents
+of arbitrary files even when a user had no write permission to the
+particular file (even on immutable and RO-filesystems)</li>
+<li>Very simple error due to the failure to initialize the flags element
+within a pipe buffer when handling pipe data within the kernel - fix is
+2 lines of code to initialise this to 0</li>
+<li>Flaw exists back to 4.9 but this is thought only to be exploitable
+since the 5.8 kernel which refactored this code</li>
+<li>As such for now have patched for the 5.13 kernels in 21.10 + 20.04 LTS
+but will also patch in the future during regular development cycle for
+the older kernels like 5.4 in 20.04 LTS as well as an additional
+hardening measure</li>
+</ul>
+</li>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/BHI">https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/BHI</a>
+<ul>
+<li>Latest set of hardware microarchitectural issues - in the same vein as
+the original Spectre flaws from Jan 2018 (4 years ago!)</li>
+<li>Set of vulnerabilities affecting both Intel and ARM processors which
+can allow unprivileged user to leak (read) memory from kernel / other
+applications</li>
+<li>Requires the ability to execute a &ldquo;gadget&rdquo; in the kernel to do the
+speculative execution - and the only way known to get one of these is
+to inject it as BPF code</li>
+<li>As a result this update also disabled unprivileged eBPF loading as well
+to close off this attack vector</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5318-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5318-1">USN-5318-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23960">CVE-2022-23960</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25636">CVE-2022-25636</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5319-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5319-1">USN-5319-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0002">CVE-2022-0002</a></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0001">CVE-2022-0001</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="camila-discusses-ubuntu-hardening--part-1--10-20">Camila discusses Ubuntu hardening (part 1) [10:20]</h3>
+<ul>
+<li>In response to a topic on discourse.ubuntu.com re <a href="https://discourse.ubuntu.com/t/basic-security-advice-for-running-your-own-server/26786">Basic security advice
+for running your own server</a> - Camila has prepared a 3 part series on
+steps you can take to harden your Ubuntu machines against attack - part 1
+focuses on hardening at install time, part 2 is post install steps and
+part 3 looks at additional measures you can take once the machine is
+deployed - today we bring you the first part in this series</li>
+</ul>
+<h4 id="transcript">Transcript</h4>
+<p>Hello listener! Welcome to another episode of the Ubuntu Security Podcast
+where I, Camila, will be talking to you all more about one subject or
+another involving the Ubuntu Linux distribution and cyber security in
+general. Today&rsquo;s episode is a response to a request. A request from someone
+that wants to learn more about how it is possible to create an Ubuntu
+system, which will be running some type of service, in a secure
+manner. After all, we do live in times where threats that were only
+physical have migrated to the digital world as well, so just having a
+server set up with all ports open and no access control set is no longer an
+option for those that wish to use the almighty Internet to provide some
+type of service. Heck! The concern should exist even if you don&rsquo;t wish to
+have an Internet facing server, but simply if you own a computer&hellip;or a
+smartphone&hellip;or a smart TV&hellip;or a car. Or anything really. We are all
+connected by our WiFis, whether we want it or not, so taking care of our
+own digital perimeter has become something essential, and something that we
+all should be applying to not get spammed nor scammed in the days of
+today. So, since I do love me some lists, let&rsquo;s talk about, in a
+chronological list format, what measures you can apply to your Ubuntu OS
+and what tools can you use in this same OS to make it safer, hardened
+against the cold and harsh wave of 0&rsquo;s and 1&rsquo;s that might be traveling out
+there through fiber optics cables just waiting to hack into your system.</p>
+<p>Let&rsquo;s start with the basics and talk about what can be done with the tools
+that you already have when you have an Ubuntu Linux coming fresh out of the
+bootable USB stick you used to format your computer. Actually, if we are
+indeed doing this, let&rsquo;s do it for real: we will go back even further, and
+talk about the basics that can be done not only after a fresh install, but
+also, while you are installing your system. Let&rsquo;s get prepared for the
+Ubuntu big bang and talk about what needs to happen before our binary
+universe can start to exist and securely function inside our CPUs and hard
+drives.</p>
+<p>During an Ubuntu install you will make a few choices, such as whether or
+not you want to encrypt data in your disk. If you are not the one
+installing your own system, and you have an already running basic Ubuntu
+system in a cloud service platform, for example, this might not be
+something possible for you. However, if you do have the chance to apply
+this, it is a hardening measure that can be used to protect all data being
+saved in your hard drive. Of course, we need to consider that not all
+situations might fit well with this, as, for example, a server that forces
+the system to reboot frequently would require a password every time at
+system startup, something that one might not want to do, or be available to
+do, every single time, specially considering a situation where a completely
+automated system is the main goal to be achieved here. It is also important
+to consider that encrypting your hard drive might affect general file I/O
+performance, since data being read from the disk needs to be decrypted
+everytime, before being presented to the user or to the system for further
+processing, and data that will be written to the system needs to be
+encrypted before it is sent permanently to the hard drive. However, if none
+of those cases concerns you at all, the question here might be: why NOT
+encrypt your hard drive?  If your hardware allows it, making the process
+fast, it might even be worth it despite the delay you can have due to the
+necessary encryption and decryption operations being performed. Either way,
+your data can be protected from those that might want to access it without
+authorization. Do not kid yourself by thinking that hackers will always
+stay behind a screen, as there are the very bold who might just think that
+by stealing your hard drive they will get what they need. Without a
+password, though, hackers can connect the disk to whatever computer they
+like, but the data will remain encoded and unreadable. Remember though,
+full disk encryption will NOT protect data in transit, also known as data
+you sent through the wires or through the air, via the World Wide Web, to
+other devices around the world. Disk encryption, as the name suggests, is
+local to the disk which is associated with your own device. Oh, also do be
+aware that the password that is used to encrypt the disk cannot be lost or
+else, you might be your own worst enemy and lose your data which becomes
+nearly impossible to crack cipher text.</p>
+<p>Still talking about disk configurations during the installation process, do
+consider creating a swap partition when setting up your system. The swap
+partition is essentially used by the Ubuntu System as if it were
+RAM. Therefore, if your RAM is filled up completely, the swap partition,
+which is actually a part of the hard drive, will be used rather than the
+RAM memory space to perform operations. necessary A swap partition can also
+be used to make more RAM space available during a certain point in
+processing time, said space being provided for data that is more relevant
+or is being used more frequently. Data that is being less used, less
+referenced, can therefore be moved to swap space instead of being left in
+the ever busy, constantly used RAM. The swap will act as an extension of
+your RAM, but do note, it is not as efficient as RAM, since it is actually
+your hard drive pretending to be something that it is not: a volatile
+memory device. Setting up a swap partition, however, can be very useful to
+increase performance in your server. As previously mentioned, swap space
+can be used to store data that is not all that frequently accessed, opening
+up space in RAM for more regularly accessed information. Since data in the
+swap is not being used constantly, the delay you would have when performing
+I/O operations on it becomes less of an issue, and you essentially gain
+more RAM space to process whatever your server needs to process. And, you
+know, even if people do forget it sometimes, remembering about it only when
+they suffer a massive DoS attack, availability is one of the 3 pillars of
+cyber security, so preparing for that in order to guarantee a system with
+better performance is valuable. Another big advantage of having swap lies
+in the fact that you as a system administrator might have more time to
+react to possible memory issues when your server is facing them. When you
+run out of memory and you don&rsquo;t have swap, you risk having your system
+suddenly crash and not only losing all data that was in RAM, but having
+your service be out of reach for whoever knows how long. You can also have
+OOM killer go and kill your most important process because you
+are&hellip;running out of memory…and it doesn&rsquo;t even have the courtesy of asking
+you if you are ok with it. Just rude! If you set up your swap space to at
+least the size of your largest process though and you monitor your system,
+you are able to detect possible issues by analyzing swap space usage, and
+then you can most likely avoid many undesired service and system
+crashes. However, do not forget: setting swap can boost your system
+performance, as it can hinder it if you don&rsquo;t implement things
+correctly. Your main volatile memory source should be your RAM, and the
+swap partition will not be a substitute for it. Therefore, if you have
+little RAM and over encumber your system, you won&rsquo;t make it any faster by
+using swap, as the hard drive will be used to process that overflowing
+amount of data that should be being processed primarily by your RAM.  The
+idea is to use swap as a complimentary performance measure to your
+appropriate RAM sized system. If using swap memory, don&rsquo;t forget to
+configure how this extra memory space will be used together with your RAM,
+by setting the &lsquo;swapiness&rsquo; metric, for example, which will tell the kernel
+how aggressively it will swap memory pages in the system when
+necessary. Once again, setting too much of a high value might make your
+system inefficient as you start making your kernel believe that the
+harddrive is actually RAM - the perfect disguise - but setting a low value
+might also not give you the best performance possible. Each case will be
+its own, so know your system and your needs, and act accordingly.</p>
+<p>Our install happens on our disk, so, unfortunately I must tell you that
+once again we will be checking out disk settings we can consider when
+creating our hardened Ubuntu server. Cheers to our disks! Installing all of
+the system in one single partition tends to be a lot easier and a lot
+faster. However, we are not looking for easy here, we are looking for
+secure, so let&rsquo;s get out of the one single partition and out of our comfort
+zones and possibly separate our system directories into different
+partitions. Having /boot in a separate partition is useful to avoid not
+being able to log into a system after the current kernel image has run
+across issues. The backup kernel images will be available and you might be
+able to do a quicker recovery that won&rsquo;t require connecting an external
+device in, or removing your own in order to fix what has been broken in the
+OS. In case you encrypt your / (root) partition, you will need to perform
+this regardless, or else, your OS won&rsquo;t boot. Encrypted code might be cool
+looking but it&rsquo;s not exactly functional considering a situation where you
+need to know what are the basic instructions that will allow you to get the
+operating system up and running. Encrypting /boot together with / (root)
+would be the same as hearing the &ldquo;ready, set, go&rdquo; at a car race and staying
+stuck in place because you just remembered you put a boot in your
+wheel. The locked boot is stopping you from moving the car forward and
+getting it where you need it to be, and, considering /boot outside of the
+analogy, it&rsquo;s stopping you from getting your computer to execute your
+operating system because it’s encrypted. Therefore, if you encrypt your
+hard drive, as previously suggested, you already get to escape from the old
+boring one partition scheme. That being said with this very convenient
+analogy, let&rsquo;s get back to it and discuss the other partitioning options
+you might have and that you can apply to your system in order to make it
+more efficient and more secure, options which include, for example, putting
+/tmp in a separate partition. This is most likely a good call, especially
+considering that world-writable /tmp is a common target for
+attackers. Servers that might use /tmp for storage of, as the name
+suggests, temporary files could cause a self DoS in case this directory is
+filled up with various large files. If the directory is in a different
+partition, however, only that specific partition will fill up and not the
+entire system storage instead. Other processes using other directories in
+your system are unaffected and only the process filling up /tmp is
+terminated. It is also a lot easier to manage a filled up /tmp partition
+than it is the entire system. Plus, different permissions can be set for
+this specific partition later on, but we will discuss this soon enough,
+albeit not now. Separating the /home and the /var directories from the rest
+of the system also shares these advantages. Leaving these directories in
+their own separate &ldquo;drawers&rdquo; inside the closet that is our hard drive might
+be an interesting choice in order to avoid necessary space to be taken up
+by a file that might not be essential for the workings of the server. The
+/home directory will contain user files, and we don&rsquo;t trust users, and the
+/var directory might get filled up completely with a huge amount of logs,
+for example. Filling up the logs might be an attack of choice made by some
+hacker out there, but if you created a separate partition, you were
+prepared for it. Having smaller partitions also makes for faster file
+searches in the system, which might be a valid performance boost for your
+IT infrastructure. If you plan to share resources through the network, have
+these resources be connected to a directory mounted in a separate
+partition, as you can have more permissive access control rules in the
+shared partition, but keep the rigorous one in all others that might
+contain sensitive information, which is in itself another advantage:
+different partitions, different permissions during mount time. However, we
+will go into more detail about this later on, as I already mentioned. The
+point here is: separate partitions are separate filesystems, and,
+therefore, the OS will not behave in the same way as it would if all data
+were to be stored under a single partition…a single filesystem. All of that
+being said, it will require more management than a system that has only one
+partition, and space usage might not be the most efficient when you
+establish limits to each directory. However, if it is feasible for your
+needs, it might be a good way to avoid some issues…security issues.</p>
+<p>Up next, I say this everytime and I will never get tired of saying it:
+strong passwords, people! Strong passwords! Whenever creating the first
+user for your Ubuntu system, which will happen during the install process,
+do not use your birthday as your password. Or your dog&rsquo;s name&hellip;or any 6
+letter word followed by the digits that are the current year. Easy to
+remember, easy to hack. The first step to avoid being hacked is not wanting
+to be hacked, and forgive you me if I am being too blunt, but setting up
+lazy passwords and not expecting it to be a problem is like eating rotten
+food and expecting to not get sick: you can wish all you want, but the
+outcome will not be positive for you, my friend&hellip;and to your closest loved
+ones involved. So&hellip;strong passwords, please, and non-expired food.</p>
+<p>Our system is installed. BIG. BANG. Our Ubuntu OS universe now exists after
+we set everything up so that it looks just right for our security
+needs. All is not done, however, since after the big-bang, the galaxy and
+more specifically Earth, had to go through a lot of steps before it was
+ready to host life, which is our main goal here: host life in the form of
+executable, network service providing code. We now have galaxies, stars,
+planets, and all necessary to maybe create life in the future, but first
+things first, we need our huge ball of fire to be tweaked a little bit,
+since life as we know it will not be born in such an unsafe, or might I
+say, insecure environment. Let&rsquo;s then make it secure so that we can start
+thinking about giving it some life, or, in our case, installing some
+software, developing customized code, setting up frameworks, all that good
+stuff that makes developers go crazy with excitement.</p>
+<p>I will, however, keep you on your toes, and continue talking more about
+this subject in another episode only! So stay tuned to the podcast to
+continue on this Ubuntu hardening journey with me, and while you wait for
+what is to come, feel free to share your thoughts in any of our social
+media platforms, as your opinion is always welcome! I await your return to
+the podcast in the following weeks so that we can once again share
+information, but for now I bid you all farewell and until next time! Bye!</p>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E152.mp3" length="18275840" type="audio/mpeg" /><itunes:duration>1685</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 73</title>
@@ -24701,7 +25710,7 @@ priority issues (buffer over-reads in WAV handling etc)</li>
 </ul>
 <h3 id="feedback-on-desired-features-for-20-dot-04-18-53">Feedback on desired features for 20.04 [18:53]</h3>
 <ul>
-<li><a href="https://discourse.ubuntu.com/t/ubuntu-security-podcast-ep-48-feedback/12922">cafzo on discourse.ubuntu.com</a> &lt;!&ndash; bring up this link during recording to talk about it directly &ndash;&gt;
+<li><a href="https://discourse.ubuntu.com/t/ubuntu-security-podcast-ep-48-feedback/12922">cafzo on discourse.ubuntu.com</a> <!-- raw HTML omitted -->
 <ul>
 <li>encrypted home directories</li>
 <li>guest-accounts</li>
