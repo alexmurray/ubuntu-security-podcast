@@ -51,28 +51,28 @@
         <itunes:title>Episode 156</itunes:title>
         <itunes:subtitle><![CDATA[
         
-          This week we bring you the TL;DL version of Camila&#39;s 4-part Ubuntu
-  hardening series, plus we look at security updates for Twisted, rsync, the
-  Linux kernel, DOSBox, Tomcat and more.
+          This week we bring you the TL;DL (too-long, didn&#39;t listen 😉) version of
+  Camila&#39;s recent 4-part Ubuntu hardening series, plus we look at security
+  updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.
   
         
         ]]></itunes:subtitle>
-        <itunes:summary>  This week we bring you the TL;DL version of Camila&#39;s 4-part Ubuntu
-  hardening series, plus we look at security updates for Twisted, rsync, the
-  Linux kernel, DOSBox, Tomcat and more.
+        <itunes:summary>  This week we bring you the TL;DL (too-long, didn&#39;t listen 😉) version of
+  Camila&#39;s recent 4-part Ubuntu hardening series, plus we look at security
+  updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.
   </itunes:summary>
-        <description>  This week we bring you the TL;DL version of Camila&#39;s 4-part Ubuntu
-  hardening series, plus we look at security updates for Twisted, rsync, the
-  Linux kernel, DOSBox, Tomcat and more.
+        <description>  This week we bring you the TL;DL (too-long, didn&#39;t listen 😉) version of
+  Camila&#39;s recent 4-part Ubuntu hardening series, plus we look at security
+  updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.
   </description>
-        <googleplay:description>  This week we bring you the TL;DL version of Camila&#39;s 4-part Ubuntu
-  hardening series, plus we look at security updates for Twisted, rsync, the
-  Linux kernel, DOSBox, Tomcat and more.
+        <googleplay:description>  This week we bring you the TL;DL (too-long, didn&#39;t listen 😉) version of
+  Camila&#39;s recent 4-part Ubuntu hardening series, plus we look at security
+  updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>This week we bring you the TL;DL version of Camila&rsquo;s 4-part Ubuntu
-hardening series, plus we look at security updates for Twisted, rsync, the
-Linux kernel, DOSBox, Tomcat and more.</p>
+<p>This week we bring you the TL;DL (too-long, didn&rsquo;t listen 😉) version of
+Camila&rsquo;s recent 4-part Ubuntu hardening series, plus we look at security
+updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>48 unique CVEs addressed</p>
 <h3 id="usn-5354-1-twisted-vulnerabilities-00-47">[<a href="https://ubuntu.com/security/notices/USN-5354-1">USN-5354-1</a>] Twisted vulnerabilities [00:47]</h3>
