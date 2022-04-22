@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 8 Apr 2022 15:52:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 22 Apr 2022 11:33:00 &#43;1000</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,338 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 157</title>
+          <link>https://ubuntusecuritypodcast.org/episode-157/</link>
+          <pubDate>Fri, 22 Apr 2022 11:33:00 +1000 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>520ab5eda515d6b3d50f0f54a2e02f1adaaa9e6d5ff115a0e98141bd445e46dcc4105fd19c5f8e027223dd814aef24163803f1858143ff7ce9d05e8ebe0393a5</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 157</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          Ubuntu 22.04 LTS (Jammy Jellyfish) is officially released 🎉 and so this
+  week we take a quick look at the new features and enhancements, with a
+  particular focus on security, plus we cover security updates for the Linux
+  kernel, Firefox,...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Ubuntu 22.04 LTS (Jammy Jellyfish) is officially released 🎉 and so this
+  week we take a quick look at the new features and enhancements, with a
+  particular focus on security, plus we cover security updates for the Linux
+  kernel, Firefox, Django, Git, Gzip and more.
+  </itunes:summary>
+        <description>  Ubuntu 22.04 LTS (Jammy Jellyfish) is officially released 🎉 and so this
+  week we take a quick look at the new features and enhancements, with a
+  particular focus on security, plus we cover security updates for the Linux
+  kernel, Firefox, Django, Git, Gzip and more.
+  </description>
+        <googleplay:description>  Ubuntu 22.04 LTS (Jammy Jellyfish) is officially released 🎉 and so this
+  week we take a quick look at the new features and enhancements, with a
+  particular focus on security, plus we cover security updates for the Linux
+  kernel, Firefox, Django, Git, Gzip and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Ubuntu 22.04 LTS (Jammy Jellyfish) is officially released 🎉 and so this
+week we take a quick look at the new features and enhancements, with a
+particular focus on security, plus we cover security updates for the Linux
+kernel, Firefox, Django, Git, Gzip and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>58 unique CVEs addressed</p>
+<h3 id="usn-5368-1-linux-kernel-vulnerabilities-00-51">[<a href="https://ubuntu.com/security/notices/USN-5368-1">USN-5368-1</a>] Linux kernel vulnerabilities [00:51]</h3>
+<ul>
+<li>23 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-27666">CVE-2022-27666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0742">CVE-2022-0742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0516">CVE-2022-0516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0382">CVE-2022-0382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0264">CVE-2022-0264</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45480">CVE-2021-45480</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45402">CVE-2021-45402</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44733">CVE-2021-44733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4135">CVE-2021-4135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39698">CVE-2021-39698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28715">CVE-2021-28715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28714">CVE-2021-28714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1055">CVE-2022-1055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23222">CVE-2022-23222</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.13 azure/oracle for 20.04 LTS</li>
+<li>BPF verifier could possibly allow pointer arithmetic in BPF operations -
+OOB read / write -&gt; crash (DoS) or privesc</li>
+<li>cgroups v1 <code>release_agent</code> not properly restricted -&gt; privesc</li>
+<li>UAF in network traffic control - DoS/crash</li>
+</ul>
+<h3 id="usn-5377-1-linux-kernel--bluefield--vulnerabilities-01-52">[<a href="https://ubuntu.com/security/notices/USN-5377-1">USN-5377-1</a>] Linux kernel (BlueField) vulnerabilities [01:52]</h3>
+<ul>
+<li>15 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-27666">CVE-2022-27666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0435">CVE-2022-0435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45480">CVE-2021-45480</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45469">CVE-2021-45469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45095">CVE-2021-45095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44733">CVE-2021-44733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4135">CVE-2021-4135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28715">CVE-2021-28715</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28714">CVE-2021-28714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1055">CVE-2022-1055</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>BPF verifier could possibly allow pointer arithmetic in BPF operations -
+OOB read / write -&gt; crash (DoS) or privesc</li>
+<li>cgroups v1 <code>release_agent</code> not properly restricted -&gt; privesc</li>
+</ul>
+<h3 id="usn-5366-1-fribidi-vulnerabilities-02-07">[<a href="https://ubuntu.com/security/notices/USN-5366-1">USN-5366-1</a>] FriBidi vulnerabilities [02:07]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-25310">CVE-2022-25310</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25309">CVE-2022-25309</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25308">CVE-2022-25308</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption vulns in library for handling unicode
+bidirectional text</li>
+</ul>
+<h3 id="usn-5369-1-oslo-dot-utils-vulnerability-02-21">[<a href="https://ubuntu.com/security/notices/USN-5369-1">USN-5369-1</a>] oslo.utils vulnerability [02:21]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0718">CVE-2022-0718</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python utility functions for OpenStack</li>
+<li>Passwords which contained a double-quote would not be properly masked in
+debug logs in which case the part of the password following the double
+quote would be exposed</li>
+</ul>
+<h3 id="usn-5370-1-firefox-vulnerabilities-02-50">[<a href="https://ubuntu.com/security/notices/USN-5370-1">USN-5370-1</a>] Firefox vulnerabilities [02:50]</h3>
+<ul>
+<li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28287">CVE-2022-28287</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28283">CVE-2022-28283</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28289">CVE-2022-28289</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28288">CVE-2022-28288</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28286">CVE-2022-28286</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28285">CVE-2022-28285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28284">CVE-2022-28284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28282">CVE-2022-28282</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28281">CVE-2022-28281</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24713">CVE-2022-24713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1097">CVE-2022-1097</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>99.0</li>
+<li>Including an issue where just selecting text could be enough to cause a
+memory corruption in text selection cache and cause firefox to crash</li>
+</ul>
+<h3 id="usn-5331-2-tcpdump-vulnerabilities-03-34">[<a href="https://ubuntu.com/security/notices/USN-5331-2">USN-5331-2</a>] tcpdump vulnerabilities [03:34]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8037">CVE-2020-8037</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-16301">CVE-2018-16301</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-153/">Episode 153</a> for xenial - now same updates for bionic + focal</li>
+</ul>
+<h3 id="usn-5373-1-usn-5373-2-django-vulnerabilities-03-47">[<a href="https://ubuntu.com/security/notices/USN-5373-1">USN-5373-1</a>, <a href="https://ubuntu.com/security/notices/USN-5373-2">USN-5373-2</a>] Django vulnerabilities [03:47]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-32052">CVE-2021-32052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28347">CVE-2022-28347</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28346">CVE-2022-28346</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different SQL injection attacks and 1 header in injection attack</li>
+</ul>
+<h3 id="usn-5374-1-libarchive-vulnerability-04-07">[<a href="https://ubuntu.com/security/notices/USN-5374-1">USN-5374-1</a>] libarchive vulnerability [04:07]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26280">CVE-2022-26280</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB when handling crafted LZMA archives -&gt; DoS</li>
+</ul>
+<h3 id="usn-5372-1-subversion-vulnerabilities-04-24">[<a href="https://ubuntu.com/security/notices/USN-5372-1">USN-5372-1</a>] Subversion vulnerabilities [04:24]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24070">CVE-2022-24070</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28544">CVE-2021-28544</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 vulns in svn server - both in handling of path based auth rules - 1 as
+logic error could then allow an attacker to bypass these and info about
+private paths</li>
+<li>other as a UAF -&gt; crash/RCE</li>
+</ul>
+<h3 id="usn-5376-1-git-vulnerability-05-13">[<a href="https://ubuntu.com/security/notices/USN-5376-1">USN-5376-1</a>] Git vulnerability [05:13]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24765">CVE-2022-24765</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible local RCE if another user creates a .git directory in the system
+root and specifies arbitrary commands in that git config</li>
+</ul>
+<h3 id="usn-5371-1-nginx-vulnerabilities-05-55">[<a href="https://ubuntu.com/security/notices/USN-5371-1">USN-5371-1</a>] nginx vulnerabilities [05:55]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3618">CVE-2021-3618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36309">CVE-2020-36309</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11724">CVE-2020-11724</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP req smuggling</li>
+</ul>
+<h3 id="usn-5378-1-usn-5378-2-usn-5378-3-usn-5378-4-gzip-and-xz-utils-vulnerability-06-05">[<a href="https://ubuntu.com/security/notices/USN-5378-1">USN-5378-1</a>, <a href="https://ubuntu.com/security/notices/USN-5378-2">USN-5378-2</a>, <a href="https://ubuntu.com/security/notices/USN-5378-3">USN-5378-3</a>, <a href="https://ubuntu.com/security/notices/USN-5378-4">USN-5378-4</a>] Gzip &amp; XZ Utils vulnerability [06:05]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1271">CVE-2022-1271</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>xzgrep/zgrep with crafted filenames -&gt; local file overwrite</li>
+</ul>
+<h3 id="usn-5379-1-klibc-vulnerabilities-06-27">[<a href="https://ubuntu.com/security/notices/USN-5379-1">USN-5379-1</a>] klibc vulnerabilities [06:27]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-31873">CVE-2021-31873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31872">CVE-2021-31872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31871">CVE-2021-31871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31870">CVE-2021-31870</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various integer overflows and other bugs leading to memory corruption -&gt;
+RCE in these low-level tools (designed for use in initramfs/embedded
+systems etc - cat/dd/dmesg/gzip/ipconfig/mv/readlink and more)</li>
+</ul>
+<h3 id="usn-5380-1-bash-vulnerability-07-12">[<a href="https://ubuntu.com/security/notices/USN-5380-1">USN-5380-1</a>] Bash vulnerability [07:12]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-18276">CVE-2019-18276</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Incorrect handling of setuid binaries - didn&rsquo;t drop privileges correctly,
+so could allow a user who could cause bash to load their own crafted
+builtin module to then escalate privileges by then restoring the saved
+UID</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-22-dot-04-lts-release-08-02">Ubuntu 22.04 LTS Release! [08:02]</h3>
+<ul>
+<li>By the time you read / hear this will likely already be out</li>
+<li>LTS - 5 years of standard support, plus 5 years of ESM support - 10 years
+of security support in total</li>
+<li><a href="https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668">https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668</a></li>
+<li>Multiple kernels depending on which product you install
+<ul>
+<li>Desktop
+<ul>
+<li>5.17 on OEM certified devices</li>
+<li>Rolling HWE kernel for other hardware (currently 5.15)</li>
+</ul>
+</li>
+<li>Server
+<ul>
+<li>Non-rolling LTS kernel (5.15)</li>
+</ul>
+</li>
+<li>Cloud
+<ul>
+<li>Use optimised kernels in collaboration with partners (currently 5.15+
+with additional backports / features)</li>
+</ul>
+</li>
+<li>As always these are just the defaults and you can change as you desired
+(ie could enable rolling HWE kernel on server if required)</li>
+</ul>
+</li>
+<li>UDP disabled for NFS mounts</li>
+<li>Toolchain upgrades
+<ul>
+<li>GCC 11.2.0, Python 3.10 (with PIE🥧), LLVM 14, Golang 1.18.x, rustc 1.58</li>
+<li>OpenJDK 18 provided (but not default and not in main, still default to
+openjdk-11 in main and supported)</li>
+</ul>
+</li>
+<li>systemd-oomd enabled by default on Ubuntu desktop</li>
+<li>OpenSSL 3.0
+<ul>
+<li>Disables various legacy algorithms (SHA1/MD5 for certificate hashes)</li>
+</ul>
+</li>
+<li>nftables default backend for firewall
+<ul>
+<li>Still ship legacy iptables tools which will use the xtables backend but
+not by default - sysadmins need to ensure all applications which
+configure firewall rules use the same backend (e.g. if using docker
+snap need to switch to legacy xtables backend until the snap is updated
+to detect and use the new nftables backend)</li>
+</ul>
+</li>
+<li>ssh-rsa with sha-1 signatures disabled by default in openssh</li>
+<li>scp supports a new -s option to use sftp instead of scp which is safer
+(see <a href="https://usn.ubuntu.com/3885-1/">USN-3885-1</a> etc)</li>
+<li>Firefox is a snap
+<ul>
+<li>Maintained and published directly by Mozilla - faster access to newer
+versions</li>
+<li>Sandboxed for improved security hardening</li>
+</ul>
+</li>
+<li>Lots of changes for server too (new BIND, Apache, PostgreSQL, Django,
+MySQL, Samba)</li>
+<li>Qemu 6.2.0 (massively improved RISC-V support)</li>
+<li>Libvirt + swtpm for TPM emulation
+<ul>
+<li>virt-manager will then enable a TPM OOTB for UEFI boot of VMs</li>
+</ul>
+</li>
+<li>wireguard is now in main \o/</li>
+<li>First LTS release for Ubuntu Desktop on RPi</li>
+</ul>
+<h3 id="ubuntu-security-podcast-on-break-for-1-week">Ubuntu Security Podcast on break for 1 week</h3>
+<ul>
+<li>Returning end of the first week of May 2022</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E157.mp3" length="14667692" type="audio/mpeg" /><itunes:duration>1130</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 156</title>
           <link>https://ubuntusecuritypodcast.org/episode-156/</link>
