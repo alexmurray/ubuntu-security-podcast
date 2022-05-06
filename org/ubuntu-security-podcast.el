@@ -39,7 +39,8 @@
     ("20.04" "Focal (20.04 LTS)")
     ("20.10" "Groovy (20.10)")
     ("21.04" "Hirsute (21.04)")
-    ("21.10" "Impish (21.10)")))
+    ("21.10" "Impish (21.10)")
+    ("22.04" "Jammy (22.04 LTS)")))
 
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
