@@ -7,9 +7,9 @@ description = """
   Ubuntu 22.04 LTS release.
   """
 date = 2022-05-06T16:46:00+09:30
-lastmod = 2022-05-06T16:48:03+09:30
+lastmod = 2022-05-15T17:32:56+09:30
 draft = false
-weight = 1001
+weight = 1002
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E158.mp3"
@@ -335,7 +335,7 @@ Ubuntu 22.04 LTS release.
     another brief panic scenario
 
 
-### What's new in Ubuntu 22.04 LTS (part 1) [08:05] {#what-s-new-in-ubuntu-22-dot-04-lts--part-1--08-05}
+### What's new in security in Ubuntu 22.04 LTS (part 1) [08:05] {#what-s-new-in-security-in-ubuntu-22-dot-04-lts--part-1--08-05}
 
 -   Preview of the first half of blog post which will be published in the
     coming weeks on the various security features which are included in
