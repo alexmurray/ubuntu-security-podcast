@@ -6,10 +6,10 @@ description = """
   particular focus on security, plus we cover security updates for the Linux
   kernel, Firefox, Django, Git, Gzip and more.
   """
-date = 2022-04-22T11:33:00+10:00
-lastmod = 2022-04-22T12:09:07+10:00
+date = 2022-04-22T11:33:00+09:30
+lastmod = 2022-05-15T18:05:36+09:30
 draft = false
-weight = 1001
+weight = 1003
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E157.mp3"

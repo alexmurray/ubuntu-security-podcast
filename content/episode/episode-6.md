@@ -2,9 +2,9 @@
 title = "Episode 6"
 description = "This week we look at some details of the 17 unique CVEs addressed across the supported Ubuntu releases and more."
 date = 2018-10-02
-lastmod = 2020-05-15T16:40:57+09:30
+lastmod = 2022-05-15T18:07:33+09:30
 draft = false
-weight = 1069
+weight = 1154
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E006.mp3"
@@ -26,10 +26,10 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 ### [[USN-3771-1](https://usn.ubuntu.com/3771-1/)] strongSwan vulnerabilities {#usn-3771-1-strongswan-vulnerabilities}
 
 -   4 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-5388](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5388)
-    -   [CVE-2018-16152](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16152)
-    -   [CVE-2018-16151](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16151)
-    -   [CVE-2018-10811](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10811)
+    -   [CVE-2018-5388](https://ubuntu.com/security/CVE-2018-5388)
+    -   [CVE-2018-16152](https://ubuntu.com/security/CVE-2018-16152)
+    -   [CVE-2018-16151](https://ubuntu.com/security/CVE-2018-16151)
+    -   [CVE-2018-10811](https://ubuntu.com/security/CVE-2018-10811)
 -   2 CVEs: flaws in RSA implementation allow Bleichenbacher-style attacks in parsing of the ASN.1 encoded digestInfo
 -   strongSwan implementation was too lenient and would allow arbitrary random data to be contained following various elements in the ASN.1
 -   Also would not check the correct amount of padding had been used
@@ -40,7 +40,7 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 ### [[USN-3772-1](https://usn.ubuntu.com/3772-1/)] UDisks vulnerability {#usn-3772-1-udisks-vulnerability}
 
 -   1 CVEs addressed in Bionic
-    -   [CVE-2018-17336](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17336)
+    -   [CVE-2018-17336](https://ubuntu.com/security/CVE-2018-17336)
 -   Format string vulnerability which could be exploited via specially crafted disk label
 -   udisks prints volume label via printf() passing the label as part of the format string
     -   Simple fix to replace the label with a %s directive and then pass the label to that
@@ -50,18 +50,18 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 ### [[USN-3719-3](https://usn.ubuntu.com/3719-3/)] Mutt vulnerabilities {#usn-3719-3-mutt-vulnerabilities}
 
 -   12 CVEs addressed in Xenial
-    -   [CVE-2018-14349](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14349)
-    -   [CVE-2018-14362](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14362)
-    -   [CVE-2018-14351](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14351)
-    -   [CVE-2018-14356](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14356)
-    -   [CVE-2018-14355](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14355)
-    -   [CVE-2018-14357](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14357)
-    -   [CVE-2018-14353](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14353)
-    -   [CVE-2018-14358](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14358)
-    -   [CVE-2018-14359](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14359)
-    -   [CVE-2018-14354](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14354)
-    -   [CVE-2018-14352](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14352)
-    -   [CVE-2018-14350](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14350)
+    -   [CVE-2018-14349](https://ubuntu.com/security/CVE-2018-14349)
+    -   [CVE-2018-14362](https://ubuntu.com/security/CVE-2018-14362)
+    -   [CVE-2018-14351](https://ubuntu.com/security/CVE-2018-14351)
+    -   [CVE-2018-14356](https://ubuntu.com/security/CVE-2018-14356)
+    -   [CVE-2018-14355](https://ubuntu.com/security/CVE-2018-14355)
+    -   [CVE-2018-14357](https://ubuntu.com/security/CVE-2018-14357)
+    -   [CVE-2018-14353](https://ubuntu.com/security/CVE-2018-14353)
+    -   [CVE-2018-14358](https://ubuntu.com/security/CVE-2018-14358)
+    -   [CVE-2018-14359](https://ubuntu.com/security/CVE-2018-14359)
+    -   [CVE-2018-14354](https://ubuntu.com/security/CVE-2018-14354)
+    -   [CVE-2018-14352](https://ubuntu.com/security/CVE-2018-14352)
+    -   [CVE-2018-14350](https://ubuntu.com/security/CVE-2018-14350)
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -102,5 +102,5 @@ This week we look at some details of the 17 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

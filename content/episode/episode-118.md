@@ -5,9 +5,9 @@ description = """
   updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
   """
 date = 2021-06-04T15:04:00+09:30
-lastmod = 2021-06-04T15:05:21+09:30
+lastmod = 2022-05-15T18:06:06+09:30
 draft = false
-weight = 1001
+weight = 1042
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E118.mp3"
@@ -31,7 +31,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4967-1](https://ubuntu.com/security/notices/USN-4967-1), [USN-4967-2](https://ubuntu.com/security/notices/USN-4967-2)] nginx vulnerability [00:50] {#usn-4967-1-usn-4967-2-nginx-vulnerability-00-50}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-23017](https://ubuntu.com/security/CVE-2021-23017)
+    -   [CVE-2021-23017](https://ubuntu.com/security/CVE-2021-23017) <!-- medium -->
 -   1 byte buffer overflow, able to be trigged by a crafted DNS response -
     UDP so could possibly be more easily forged than TCP (less state) -
     crash, RCE
@@ -40,14 +40,14 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4968-1](https://ubuntu.com/security/notices/USN-4968-1), [USN-4968-2](https://ubuntu.com/security/notices/USN-4968-2)] LZ4 vulnerability [01:27] {#usn-4968-1-usn-4968-2-lz4-vulnerability-01-27}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-3520](https://ubuntu.com/security/CVE-2021-3520)
--   integer overflow -> OOB write -> crash, RCE - crafted lz4 archive
+    -   [CVE-2021-3520](https://ubuntu.com/security/CVE-2021-3520) <!-- medium -->
+-   integer overflow -&gt; OOB write -&gt; crash, RCE - crafted lz4 archive
 
 
 ### [[USN-4969-1](https://ubuntu.com/security/notices/USN-4969-1), [USN-4969-2](https://ubuntu.com/security/notices/USN-4969-2)] DHCP vulnerability [01:52] {#usn-4969-1-usn-4969-2-dhcp-vulnerability-01-52}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-25217](https://ubuntu.com/security/CVE-2021-25217)
+    -   [CVE-2021-25217](https://ubuntu.com/security/CVE-2021-25217) <!-- medium -->
 -   Crafted lease file could trigger an OOB read - could be triggered against
     both dhclient and dhcpd - DoS. In case of dhcpd could also cause that
     lease to be deleted (and the one that follows it in the lease database).
@@ -59,7 +59,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4970-1](https://ubuntu.com/security/notices/USN-4970-1)] GUPnP vulnerability [03:15] {#usn-4970-1-gupnp-vulnerability-03-15}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-33516](https://ubuntu.com/security/CVE-2021-33516)
+    -   [CVE-2021-33516](https://ubuntu.com/security/CVE-2021-33516) <!-- medium -->
 -   DNS rebinding attack - able to be exploited by a remote web server -
     cause the local web browser into triggering actions against local UPnP
     services that use gupnp library as it would not check that the Host
@@ -72,17 +72,17 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4971-1](https://ubuntu.com/security/notices/USN-4971-1)] libwebp vulnerabilities [04:11] {#usn-4971-1-libwebp-vulnerabilities-04-11}
 
 -   11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2020-36332](https://ubuntu.com/security/CVE-2020-36332)
-    -   [CVE-2020-36331](https://ubuntu.com/security/CVE-2020-36331)
-    -   [CVE-2020-36330](https://ubuntu.com/security/CVE-2020-36330)
-    -   [CVE-2020-36329](https://ubuntu.com/security/CVE-2020-36329)
-    -   [CVE-2020-36328](https://ubuntu.com/security/CVE-2020-36328)
-    -   [CVE-2018-25014](https://ubuntu.com/security/CVE-2018-25014)
-    -   [CVE-2018-25013](https://ubuntu.com/security/CVE-2018-25013)
-    -   [CVE-2018-25012](https://ubuntu.com/security/CVE-2018-25012)
-    -   [CVE-2018-25011](https://ubuntu.com/security/CVE-2018-25011)
-    -   [CVE-2018-25010](https://ubuntu.com/security/CVE-2018-25010)
-    -   [CVE-2018-25009](https://ubuntu.com/security/CVE-2018-25009)
+    -   [CVE-2020-36332](https://ubuntu.com/security/CVE-2020-36332) <!-- medium -->
+    -   [CVE-2020-36331](https://ubuntu.com/security/CVE-2020-36331) <!-- medium -->
+    -   [CVE-2020-36330](https://ubuntu.com/security/CVE-2020-36330) <!-- medium -->
+    -   [CVE-2020-36329](https://ubuntu.com/security/CVE-2020-36329) <!-- medium -->
+    -   [CVE-2020-36328](https://ubuntu.com/security/CVE-2020-36328) <!-- medium -->
+    -   [CVE-2018-25014](https://ubuntu.com/security/CVE-2018-25014) <!-- medium -->
+    -   [CVE-2018-25013](https://ubuntu.com/security/CVE-2018-25013) <!-- medium -->
+    -   [CVE-2018-25012](https://ubuntu.com/security/CVE-2018-25012) <!-- medium -->
+    -   [CVE-2018-25011](https://ubuntu.com/security/CVE-2018-25011) <!-- medium -->
+    -   [CVE-2018-25010](https://ubuntu.com/security/CVE-2018-25010) <!-- medium -->
+    -   [CVE-2018-25009](https://ubuntu.com/security/CVE-2018-25009) <!-- medium -->
 -   Google's image format to relace both jpg/png and be faster (like vp8
     video codec using predictive encoding - uses neighboring pixels to
     predict values in a block and then encodes only the difference)
@@ -94,9 +94,9 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4972-1](https://ubuntu.com/security/notices/USN-4972-1)] PostgreSQL vulnerabilities [05:05] {#usn-4972-1-postgresql-vulnerabilities-05-05}
 
 -   3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-32029](https://ubuntu.com/security/CVE-2021-32029)
-    -   [CVE-2021-32028](https://ubuntu.com/security/CVE-2021-32028)
-    -   [CVE-2021-32027](https://ubuntu.com/security/CVE-2021-32027)
+    -   [CVE-2021-32029](https://ubuntu.com/security/CVE-2021-32029) <!-- medium -->
+    -   [CVE-2021-32028](https://ubuntu.com/security/CVE-2021-32028) <!-- medium -->
+    -   [CVE-2021-32027](https://ubuntu.com/security/CVE-2021-32027) <!-- medium -->
 -   Thanks to Christian Ehrhardt from the Ubuntu Server team for preparing
     these updates
 -   Latest upstream point-releases
@@ -108,7 +108,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4973-1](https://ubuntu.com/security/notices/USN-4973-1)] Python vulnerability [05:44] {#usn-4973-1-python-vulnerability-05-44}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-29921](https://ubuntu.com/security/CVE-2021-29921)
+    -   [CVE-2021-29921](https://ubuntu.com/security/CVE-2021-29921) <!-- medium -->
 -   ipaddress library in the python stdlib mishandled leading zero characters
     in octets of an IP address - could allow bypass of access controls that
     are based on IP addresses. Now treats leading zeros as invalid input
@@ -119,7 +119,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4974-1](https://ubuntu.com/security/notices/USN-4974-1)] Lasso vulnerability [06:40] {#usn-4974-1-lasso-vulnerability-06-40}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-28091](https://ubuntu.com/security/CVE-2021-28091)
+    -   [CVE-2021-28091](https://ubuntu.com/security/CVE-2021-28091) <!-- medium -->
 -   SAML protocol library
 -   Reported by Akamai (uses Lasso in their Enterprise Application Access
     product) - and coordinated between affected distros and vendors etc
@@ -139,7 +139,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 -   3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
     -   [CVE-2021-33571](https://ubuntu.com/security/CVE-2021-33571) <!--  -->
     -   [CVE-2021-33203](https://ubuntu.com/security/CVE-2021-33203) <!--  -->
-    -   [CVE-2021-32052](https://ubuntu.com/security/CVE-2021-32052)
+    -   [CVE-2021-32052](https://ubuntu.com/security/CVE-2021-32052) <!-- medium -->
 -   URLValidator failed to properly handle newlines, tabs - could be used to
     inject other headers into responses etc
 -   Paths not properly sanitized in the admindocs module - could be used to
@@ -151,7 +151,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 ### [[USN-4976-1](https://ubuntu.com/security/notices/USN-4976-1)] Dnsmasq vulnerability [08:56] {#usn-4976-1-dnsmasq-vulnerability-08-56}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-3448](https://ubuntu.com/security/CVE-2021-3448)
+    -   [CVE-2021-3448](https://ubuntu.com/security/CVE-2021-3448) <!-- medium -->
 -   Failed to properly randomise source port (ie used a fixed port) when
     forwarding queries when configured to use a specific server for a given
     network interface - could then allow a remote attacker to more easily
@@ -169,7 +169,7 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 
 -   Last week was [reported](https://torrentfreak.com/comcast-subscriber-receives-dmca-notice-for-downloading-ubuntu-210526/) that a user downloading Ubuntu 20.04.2 iso via
     bittorrent received a DMCA violation notice from their ISP (Comcast)
--   Clearly absurd given Ubuntu is free (beer & freedom/libre)
+-   Clearly absurd given Ubuntu is free (beer &amp; freedom/libre)
 -   Also the hash of the iso in question was legit too
 -   Sent by "OpSec Online Antipiracy" not Canonical
 -   OpSec [responded](https://torrentfreak.com/opsec-says-dmca-notice-system-was-spoofed-to-target-ubuntu-download-210527/) saying their notice sending program was "spoofed" by
@@ -194,4 +194,4 @@ updates for nginx, DHCP, Lasso, Django, Dnsmasq and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

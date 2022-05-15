@@ -7,7 +7,7 @@ description = """
   Ubuntu 22.04 LTS release.
   """
 date = 2022-05-06T16:46:00+09:30
-lastmod = 2022-05-15T17:32:56+09:30
+lastmod = 2022-05-15T18:05:36+09:30
 draft = false
 weight = 1002
 episode_image = "img/usp_logo_500.png"

@@ -2,9 +2,9 @@
 title = "Episode 8"
 description = "This week we look at some details of the 15 unique CVEs addressed across the supported Ubuntu releases and discuss some of the security relevant changes in Ubuntu 18.10, plus a refresh of the Ubuntu CVE tracker and more."
 date = 2018-10-22
-lastmod = 2020-05-15T16:40:52+09:30
+lastmod = 2022-05-15T18:07:31+09:30
 draft = false
-weight = 1067
+weight = 1152
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E008.mp3"
@@ -26,25 +26,25 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ### [[USN-3790-1](https://usn.ubuntu.com/3790-1/)] Requests vulnerability {#usn-3790-1-requests-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-18074](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18074)
--   Requests library could end up sending credentials in clear text if server is configured with a https -> http redirect
+    -   [CVE-2018-18074](https://ubuntu.com/security/CVE-2018-18074)
+-   Requests library could end up sending credentials in clear text if server is configured with a https -&gt; http redirect
 
 
 ### [[USN-3792-1](https://usn.ubuntu.com/3792-1/), [USN-3792-2](https://usn.ubuntu.com/3792-2/)] Net-SNMP vulnerability {#usn-3792-1-usn-3792-2-net-snmp-vulnerability}
 
--   1 CVEs addressed in Trusty, Xenial, Bionic & Precise ESM
-    -   [CVE-2018-18065](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18065)
+-   1 CVEs addressed in Trusty, Xenial, Bionic &amp; Precise ESM
+    -   [CVE-2018-18065](https://ubuntu.com/security/CVE-2018-18065)
 -   Remote DoS via a NULL pointer dereference from an **authenticated** attacker
 
 
 ### [[USN-3793-1](https://usn.ubuntu.com/3793-1/)] Thunderbird vulnerabilities {#usn-3793-1-thunderbird-vulnerabilities}
 
 -   5 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-12385](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12385)
-    -   [CVE-2018-12383](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12383)
-    -   [CVE-2018-12378](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12378)
-    -   [CVE-2018-12377](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12377)
-    -   [CVE-2018-12376](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12376)
+    -   [CVE-2018-12385](https://ubuntu.com/security/CVE-2018-12385)
+    -   [CVE-2018-12383](https://ubuntu.com/security/CVE-2018-12383)
+    -   [CVE-2018-12378](https://ubuntu.com/security/CVE-2018-12378)
+    -   [CVE-2018-12377](https://ubuntu.com/security/CVE-2018-12377)
+    -   [CVE-2018-12376](https://ubuntu.com/security/CVE-2018-12376)
 -   New Thunderbird version (60) containing 5 fixes
 -   Interestingly **all** of these were also vulnerabilities in Firefox - in
     particular CVE-2018-12383 was discussed in Episode 4 for Firefox
@@ -53,18 +53,18 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ### [[USN-3794-1](https://usn.ubuntu.com/3794-1/)] MoinMoin vulnerability {#usn-3794-1-moinmoin-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2017-5934](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5934)
+    -   [CVE-2017-5934](https://ubuntu.com/security/CVE-2017-5934)
 -   XSS in link editor dialog allow injection of arbitrary web content (HTML, scripts etc)
 
 
 ### [[USN-3789-2](https://usn.ubuntu.com/3789-2/)] ClamAV vulnerabilities {#usn-3789-2-clamav-vulnerabilities}
 
 -   5 CVEs addressed in Precise ESM
-    -   [CVE-2018-15378](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15378)
-    -   [CVE-2018-14682](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14682)
-    -   [CVE-2018-14681](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14681)
-    -   [CVE-2018-14680](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14680)
-    -   [CVE-2018-14679](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14679)
+    -   [CVE-2018-15378](https://ubuntu.com/security/CVE-2018-15378)
+    -   [CVE-2018-14682](https://ubuntu.com/security/CVE-2018-14682)
+    -   [CVE-2018-14681](https://ubuntu.com/security/CVE-2018-14681)
+    -   [CVE-2018-14680](https://ubuntu.com/security/CVE-2018-14680)
+    -   [CVE-2018-14679](https://ubuntu.com/security/CVE-2018-14679)
 -   Corresponding fix for Precise ESM from ClamAV which we discussed in Episode 7
 -   Also rolls in fixes for 4 other vulnerabilities in the embedded mspack library
     -   In trusty and precise we used the embedded libmspack, newer releases use
@@ -74,9 +74,9 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ### [[USN-3795-1](https://usn.ubuntu.com/3795-1/)] libssh vulnerability {#usn-3795-1-libssh-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-10933](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10933)
+    -   [CVE-2018-10933](https://ubuntu.com/security/CVE-2018-10933)
 -   Embedded SSH server and client implementation
--   Allows bypass of authentication by remote attackers if they send a SSH2\_MSG\_USERAUTH\_SUCCESS message instead of the SSH2\_MSG\_USERAUTH\_REQUEST message to initiate the authentication process
+-   Allows bypass of authentication by remote attackers if they send a SSH2_MSG_USERAUTH_SUCCESS message instead of the SSH2_MSG_USERAUTH_REQUEST message to initiate the authentication process
 -   This message is meant to be sent from the server to the client but in this case are sending it **to the server**
 -   State machine on server-side then jumps straight to 'Authenticated'
 -   Only affects applications which use libssh as a server
@@ -84,10 +84,10 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 
 ### [[USN-3796-1](https://usn.ubuntu.com/3796-1/), USN-3796-2] Paramiko vulnerability {#usn-3796-1-usn-3796-2-paramiko-vulnerability}
 
--   1 CVEs addressed in Trusty, Xenial, Bionic & Precise ESM
-    -   [CVE-2018-1000805](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000805)
+-   1 CVEs addressed in Trusty, Xenial, Bionic &amp; Precise ESM
+    -   [CVE-2018-1000805](https://ubuntu.com/security/CVE-2018-1000805)
 -   Python SSH library for both servers and clients
--   Very similar to CVE-2018-10933 for libssh - remote authentication bypass by presenting SSH2\_MSG\_USERAUTH\_SUCCESS in place of SSH2\_MSG\_USERAUTH\_REQUEST
+-   Very similar to CVE-2018-10933 for libssh - remote authentication bypass by presenting SSH2_MSG_USERAUTH_SUCCESS in place of SSH2_MSG_USERAUTH_REQUEST
 -   Due to code-reuse between client and server implementations
 -   On server side, runs the normal client side code to be used when receiving this authentication success from the server, and flips the 'authenticated' flag - which is shared by both the server and client code
 
@@ -106,7 +106,7 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ### Ubuntu CVE Tracker facelift {#ubuntu-cve-tracker-facelift}
 
 -   Refreshed look and feel via bootstrap
--   <https://people.canonical.com/~ubuntu-security/cve/>
+-   <https://ubuntu.com/security/>
 
 
 ### Hiring {#hiring}
@@ -120,5 +120,5 @@ This week we look at some details of the 15 unique CVEs addressed across the sup
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

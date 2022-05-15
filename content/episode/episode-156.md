@@ -6,9 +6,9 @@ description = """
   updates for Twisted, rsync, the Linux kernel, DOSBox, Tomcat and more.
   """
 date = 2022-04-08T15:52:00+09:30
-lastmod = 2022-04-08T16:03:31+09:30
+lastmod = 2022-05-15T18:05:37+09:30
 draft = false
-weight = 1001
+weight = 1004
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E156.mp3"

@@ -6,9 +6,9 @@ description = """
   Autoar and more.
   """
 date = 2021-02-19T22:44:00+10:30
-lastmod = 2021-02-19T22:44:55+10:30
+lastmod = 2022-05-15T18:06:17+09:30
 draft = false
-weight = 1001
+weight = 1056
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E104.mp3"
@@ -33,7 +33,7 @@ Autoar and more.
 ### [[USN-4729-1](https://ubuntu.com/security/notices/USN-4729-1)] Open vSwitch vulnerability [00:55] {#usn-4729-1-open-vswitch-vulnerability-00-55}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-35498](https://ubuntu.com/security/CVE-2020-35498)
+    -   [CVE-2020-35498](https://ubuntu.com/security/CVE-2020-35498) <!-- medium -->
 -   Most convoluted CVE description: A vulnerability was found in
     openvswitch. A limitation in the implementation of userspace packet
     parsing can allow a malicious user to send a specially crafted packet
@@ -45,18 +45,18 @@ Autoar and more.
 ### [[USN-4731-1](https://ubuntu.com/security/notices/USN-4731-1)] JUnit 4 vulnerability [02:05] {#usn-4731-1-junit-4-vulnerability-02-05}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-15250](https://ubuntu.com/security/CVE-2020-15250)
+    -   [CVE-2020-15250](https://ubuntu.com/security/CVE-2020-15250) <!-- medium -->
 -   Tests that used rule TemporaryFolder would use /tmp which is world
     accessible - so contents could be read by other users - so if tests were
     writing API keys or passwords these would be able to be read by others
-    users -> info disclosure. Fixed to create temp directory with permissions
+    users -&gt; info disclosure. Fixed to create temp directory with permissions
     so it is only readable by the owner.
 
 
 ### [[USN-4730-1](https://ubuntu.com/security/notices/USN-4730-1)] PostSRSd vulnerability [02:57] {#usn-4730-1-postsrsd-vulnerability-02-57}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2020-35573](https://ubuntu.com/security/CVE-2020-35573)
+    -   [CVE-2020-35573](https://ubuntu.com/security/CVE-2020-35573) <!-- medium -->
 -   Postfix Sender Rewriter Scheme Daemon - Used for rewriting sender email
     addresses when forwarding emails from hosts that use SPF - rewrites the
     address to appear to come from your hosts address and allows you to do
@@ -70,7 +70,7 @@ Autoar and more.
 ### [[USN-4732-1](https://ubuntu.com/security/notices/USN-4732-1)] SQLite vulnerability [04:20] {#usn-4732-1-sqlite-vulnerability-04-20}
 
 -   1 CVEs addressed in Groovy (20.10)
-    -   [CVE-2021-20227](https://ubuntu.com/security/CVE-2021-20227)
+    -   [CVE-2021-20227](https://ubuntu.com/security/CVE-2021-20227) <!-- medium -->
 -   Only affected more recent releases of sqlite - could cause a crash on
     particular query constructs
 
@@ -78,7 +78,7 @@ Autoar and more.
 ### [[USN-4733-1](https://ubuntu.com/security/notices/USN-4733-1)] GNOME Autoar vulnerability [04:42] {#usn-4733-1-gnome-autoar-vulnerability-04-42}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-36241](https://ubuntu.com/security/CVE-2020-36241)
+    -   [CVE-2020-36241](https://ubuntu.com/security/CVE-2020-36241) <!-- medium -->
 -   Another archive extraction symlink traversal issue - gnome-autoar is a
     library used by nautilus and other gnome components when handling
     archives - ie right click an archive in nautilus and select "extract
@@ -90,11 +90,11 @@ Autoar and more.
     relative path and reject in that case
 
 
-### [[USN-4734-1](https://ubuntu.com/security/notices/USN-4734-1), [USN-4734-2](https://ubuntu.com/security/notices/USN-4734-2)] wpa\_supplicant and hostapd vulnerabilities [06:01] {#usn-4734-1-usn-4734-2-wpa-supplicant-and-hostapd-vulnerabilities-06-01}
+### [[USN-4734-1](https://ubuntu.com/security/notices/USN-4734-1), [USN-4734-2](https://ubuntu.com/security/notices/USN-4734-2)] wpa_supplicant and hostapd vulnerabilities [06:01] {#usn-4734-1-usn-4734-2-wpa-supplicant-and-hostapd-vulnerabilities-06-01}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-12695](https://ubuntu.com/security/CVE-2020-12695)
-    -   [CVE-2021-0326](https://ubuntu.com/security/CVE-2021-0326)
+    -   [CVE-2020-12695](https://ubuntu.com/security/CVE-2020-12695) <!-- medium -->
+    -   [CVE-2021-0326](https://ubuntu.com/security/CVE-2021-0326) <!-- high -->
 -   Possible OOB write when doing a wifi-direct / p2p search - so an attacker
     just has to be in radio range when the victim performs a P2P discovery
     aka wifi direct search - discovered by Google's OSS-Fuzz project
@@ -104,7 +104,7 @@ Autoar and more.
 ### [[USN-4735-1](https://ubuntu.com/security/notices/USN-4735-1)] PostgreSQL vulnerability [07:23] {#usn-4735-1-postgresql-vulnerability-07-23}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-3393](https://ubuntu.com/security/CVE-2021-3393)
+    -   [CVE-2021-3393](https://ubuntu.com/security/CVE-2021-3393) <!-- medium -->
 -   Latest upstream 12.6 release to fix a possible info leak which could
     occur when handling particular errors - if a user had the permission to
     UPDATE on a partitioned table but not the SELECT privilege on some column
@@ -117,12 +117,12 @@ Autoar and more.
 ### [[USN-4736-1](https://ubuntu.com/security/notices/USN-4736-1)] Thunderbird vulnerabilities [08:18] {#usn-4736-1-thunderbird-vulnerabilities-08-18}
 
 -   6 CVEs addressed in Groovy (20.10)
-    -   [CVE-2020-15685](https://ubuntu.com/security/CVE-2020-15685)
-    -   [CVE-2021-23964](https://ubuntu.com/security/CVE-2021-23964)
-    -   [CVE-2021-23960](https://ubuntu.com/security/CVE-2021-23960)
-    -   [CVE-2021-23954](https://ubuntu.com/security/CVE-2021-23954)
-    -   [CVE-2021-23953](https://ubuntu.com/security/CVE-2021-23953)
-    -   [CVE-2020-26976](https://ubuntu.com/security/CVE-2020-26976)
+    -   [CVE-2020-15685](https://ubuntu.com/security/CVE-2020-15685) <!-- medium -->
+    -   [CVE-2021-23964](https://ubuntu.com/security/CVE-2021-23964) <!-- medium -->
+    -   [CVE-2021-23960](https://ubuntu.com/security/CVE-2021-23960) <!-- medium -->
+    -   [CVE-2021-23954](https://ubuntu.com/security/CVE-2021-23954) <!-- medium -->
+    -   [CVE-2021-23953](https://ubuntu.com/security/CVE-2021-23953) <!-- medium -->
+    -   [CVE-2020-26976](https://ubuntu.com/security/CVE-2020-26976) <!-- medium -->
 -   Update to latest upstream release 78.7, usual spread of issues for TB
     (derived from firefox) - DoS, info leak, RCE. Also possible response
     injection attack from a person-in-the-middle during STARTTLS connection
@@ -160,7 +160,7 @@ Autoar and more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -6,9 +6,9 @@ description = """
   PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
   """
 date = 2019-07-09T14:52:00+09:30
-lastmod = 2020-05-15T16:39:38+09:30
+lastmod = 2022-05-15T18:07:07+09:30
 draft = false
-weight = 1036
+weight = 1121
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E039.mp3"
@@ -32,8 +32,8 @@ PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
 ### [[USN-4043-1](https://usn.ubuntu.com/4043-1/)] Django vulnerabilities {#usn-4043-1-django-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12781](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12781)
-    -   [CVE-2019-12308](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12308)
+    -   [CVE-2019-12781](https://ubuntu.com/security/CVE-2019-12781)
+    -   [CVE-2019-12308](https://ubuntu.com/security/CVE-2019-12308)
 -   If using django via a reverse proxy, which itself would connect to django
     over HTTPS, if accessing HTTP resources they would not be redirected to
     HTTPS even if configured to do so on the django server.
@@ -46,8 +46,8 @@ PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
 ### [[USN-4045-1](https://usn.ubuntu.com/4045-1/)] Thunderbird vulnerabilities {#usn-4045-1-thunderbird-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11708](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708)
-    -   [CVE-2019-11707](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11707)
+    -   [CVE-2019-11708](https://ubuntu.com/security/CVE-2019-11708)
+    -   [CVE-2019-11707](https://ubuntu.com/security/CVE-2019-11707)
 -   Latest upstream 60.7.2 release
 -   Mentioned in the context of Firefox in [Episode 37](https://ubuntusecuritypodcast.org/episode-37/) and [Episode 38](https://ubuntusecuritypodcast.org/episode-38/) (sandbox
     escape and RCE)
@@ -57,7 +57,7 @@ PGP keyservers under attack and Ubuntu 18.10 Cosmic Cuttlefish reaches EOL.
 ### [[USN-4044-1](https://usn.ubuntu.com/4044-1/)] ZNC vulnerability {#usn-4044-1-znc-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12816](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12816)
+    -   [CVE-2019-12816](https://ubuntu.com/security/CVE-2019-12816)
 -   ZNC provides support for plugin modules
 -   These can be loaded by autenticated, non-admin users
 
@@ -81,8 +81,8 @@ i  - The name of this is checked in various places to ensure control
 ### [[USN-4046-1](https://usn.ubuntu.com/4046-1/)] Irssi vulnerabilities {#usn-4046-1-irssi-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-13045](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13045)
-    -   [CVE-2018-7054](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7054)
+    -   [CVE-2019-13045](https://ubuntu.com/security/CVE-2019-13045)
+    -   [CVE-2018-7054](https://ubuntu.com/security/CVE-2018-7054)
 -   2 different UAF's due to mismanagement of data structures:
     -   One on SASL code-paths - so only affected if using SASL
         authentication - would reuse provided username and password
@@ -114,7 +114,7 @@ i  - The name of this is checked in various places to ensure control
     -   No code has been altered or PII accessed (nor is any PII stored there)
 -   Account has been removed from the CanonicaLtd organisation, investigation
     is still on-going, we will release more details as they become available
--   <https://twitter.com/ubuntu%5Fsec/status/1147675201632473088>
+-   <https://twitter.com/ubuntu_sec/status/1147675201632473088>
 
 
 ### SKS keyserver certificate spamming {#sks-keyserver-certificate-spamming}
@@ -143,5 +143,5 @@ i  - The name of this is checked in various places to ensure control
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

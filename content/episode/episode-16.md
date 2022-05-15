@@ -1,10 +1,10 @@
 +++
 title = "Episode 16"
-description = "Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP & more, plus we discuss the security of home routers as evaluated by C-ITL."
+description = "Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL."
 date = 2018-12-17
-lastmod = 2020-05-15T16:40:33+09:30
+lastmod = 2022-05-15T18:07:25+09:30
 draft = false
-weight = 1059
+weight = 1144
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E016.mp3"
@@ -15,7 +15,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-16/"
 
 ## Overview {#overview}
 
-Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP & more, plus we discuss the security of home routers as evaluated by C-ITL.
+Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP &amp; more, plus we discuss the security of home routers as evaluated by C-ITL.
 
 
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
@@ -26,7 +26,7 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3841-1](https://usn.ubuntu.com/3841-1/), [USN-3841-2](https://usn.ubuntu.com/3841-2/)] lxml vulnerability {#usn-3841-1-usn-3841-2-lxml-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic
-    -   [CVE-2018-19787](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19787)
+    -   [CVE-2018-19787](https://ubuntu.com/security/CVE-2018-19787)
 -   Popular XML/HTML parser for Python
 -   Tries to remove clean input document and remove links (to say embedded
     javascript code) - but doesn't account for links containing escaped
@@ -39,7 +39,7 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3842-1](https://usn.ubuntu.com/3842-1/)] CUPS vulnerability {#usn-3842-1-cups-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-4700](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4700)
+    -   [CVE-2018-4700](https://ubuntu.com/security/CVE-2018-4700)
 -   Session cookies used for authentication to CUPS web interface used only the
     current time **in seconds** as a seed for the relatively predictable PRNG
     -   Easy to bruteforce / guess
@@ -50,8 +50,8 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3837-2](https://usn.ubuntu.com/3837-2/)] poppler regression {#usn-3837-2-poppler-regression}
 
 -   2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-19149](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19149)
-    -   [CVE-2018-16646](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16646)
+    -   [CVE-2018-19149](https://ubuntu.com/security/CVE-2018-19149)
+    -   [CVE-2018-16646](https://ubuntu.com/security/CVE-2018-16646)
 -   Previous poppler update (Episode 15) - fix missed a previous commit and so
     regressed (crash on opening certain PDF files)
 
@@ -59,7 +59,7 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3843-1](https://usn.ubuntu.com/3843-1/), [USN-3843-2](https://usn.ubuntu.com/3843-2/)] pixman vulnerability {#usn-3843-1-usn-3843-2-pixman-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty
-    -   [CVE-2015-5297](https://people.canonical.com/~ubuntu-security/cve/CVE-2015-5297)
+    -   [CVE-2015-5297](https://ubuntu.com/security/CVE-2015-5297)
 -   Low level library for pixel manipulation (used by X, Wayland, Qemu etc)
 -   Pointer overflow leading to stack-based buffer overflow in computing bounds of pixel buffers
     -   Did include a check to see if was inside bounds, BUT didn't account for
@@ -70,16 +70,16 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3844-1](https://usn.ubuntu.com/3844-1/)] Firefox vulnerabilities {#usn-3844-1-firefox-vulnerabilities}
 
 -   10 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-18497](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18497)
-    -   [CVE-2018-18495](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18495)
-    -   [CVE-2018-18498](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18498)
-    -   [CVE-2018-18494](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18494)
-    -   [CVE-2018-18493](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18493)
-    -   [CVE-2018-18492](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18492)
-    -   [CVE-2018-17466](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17466)
-    -   [CVE-2018-12407](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12407)
-    -   [CVE-2018-12406](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12406)
-    -   [CVE-2018-12405](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12405)
+    -   [CVE-2018-18497](https://ubuntu.com/security/CVE-2018-18497)
+    -   [CVE-2018-18495](https://ubuntu.com/security/CVE-2018-18495)
+    -   [CVE-2018-18498](https://ubuntu.com/security/CVE-2018-18498)
+    -   [CVE-2018-18494](https://ubuntu.com/security/CVE-2018-18494)
+    -   [CVE-2018-18493](https://ubuntu.com/security/CVE-2018-18493)
+    -   [CVE-2018-18492](https://ubuntu.com/security/CVE-2018-18492)
+    -   [CVE-2018-17466](https://ubuntu.com/security/CVE-2018-17466)
+    -   [CVE-2018-12407](https://ubuntu.com/security/CVE-2018-12407)
+    -   [CVE-2018-12406](https://ubuntu.com/security/CVE-2018-12406)
+    -   [CVE-2018-12405](https://ubuntu.com/security/CVE-2018-12405)
 -   Firefox 64 - multiple security vulnerabilities fixed
     -   Buffer overflows, UAFs, same-origin-policy violation, webextensions able to
         violate restrictions, various memory safety / corruption bugs
@@ -89,15 +89,15 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ### [[USN-3845-1](https://usn.ubuntu.com/3845-1/)] FreeRDP vulnerabilities {#usn-3845-1-freerdp-vulnerabilities}
 
 -   6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-8789](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8789)
-    -   [CVE-2018-8788](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8788)
-    -   [CVE-2018-8787](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8787)
-    -   [CVE-2018-8786](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8786)
-    -   [CVE-2018-8785](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8785)
-    -   [CVE-2018-8784](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-8784)
+    -   [CVE-2018-8789](https://ubuntu.com/security/CVE-2018-8789)
+    -   [CVE-2018-8788](https://ubuntu.com/security/CVE-2018-8788)
+    -   [CVE-2018-8787](https://ubuntu.com/security/CVE-2018-8787)
+    -   [CVE-2018-8786](https://ubuntu.com/security/CVE-2018-8786)
+    -   [CVE-2018-8785](https://ubuntu.com/security/CVE-2018-8785)
+    -   [CVE-2018-8784](https://ubuntu.com/security/CVE-2018-8784)
 -   Eyal Itkin discovered multiple vulnerabilities in FreeRDP - not all affect all releases (some too old to contain affected code)
--   Various heap-based buffer overflows (crash -> DoS / RCE?)
--   Out-of-bounds read (crash -> DoS)
+-   Various heap-based buffer overflows (crash -&gt; DoS / RCE?)
+-   Out-of-bounds read (crash -&gt; DoS)
 
 
 ## Goings on in Linux Security Community {#goings-on-in-linux-security-community}
@@ -108,9 +108,9 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 -   Cyber-ITL (Independent Testing Lab) analysed a number of home routers for basic security hardening features
     -   ASLR, DEP (non-executable stack), RELRO
     -   Mix of MIPS and ARM devices
-    -   Compared against Ubuntu 16.04 LTS x86\_64 (general hardening)
+    -   Compared against Ubuntu 16.04 LTS x86_64 (general hardening)
     -   Most found to have minimal hardening features enabled
-    -   <https://cyber-itl.org/assets/papers/2018/build%5Fsafety%5Fof%5Fsoftware%5Fin%5F28%5Fpopular%5Fhome%5Frouters.pdf>
+    -   <https://cyber-itl.org/assets/papers/2018/build_safety_of_software_in_28_popular_home_routers.pdf>
     -   Also found Linux kernel on MIPS either has executable stack (until 2016)
         due to FP emulation code, or since then has no executable stack but has a
         RWX segment at a fixed location, which can be used to bypass DEP / ASLR
@@ -126,5 +126,5 @@ Last episode for 2018! This week we look at CVEs in lxml, CUPS, pixman, FreeRDP 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

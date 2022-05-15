@@ -6,9 +6,9 @@ description = """
   c3p0, Cyrus SASL and more.
   """
 date = 2022-02-25T14:40:00+10:30
-lastmod = 2022-02-25T14:41:02+10:30
+lastmod = 2022-05-15T18:05:42+09:30
 draft = false
-weight = 1001
+weight = 1010
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E150.mp3"
@@ -33,24 +33,24 @@ c3p0, Cyrus SASL and more.
 ### [[USN-5292-2](https://ubuntu.com/security/notices/USN-5292-2), [USN-5292-3](https://ubuntu.com/security/notices/USN-5292-3)] snapd vulnerabilities [00:44] {#usn-5292-2-usn-5292-3-snapd-vulnerabilities-00-44}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Focal (20.04 LTS)
-    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731)
-    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730)
-    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120)
-    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155)
+    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731) <!-- high -->
+    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730) <!-- high -->
+    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120) <!-- medium -->
+    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155) <!-- medium -->
 -   [Episode 149](https://ubuntusecuritypodcast.org/episode-149/)
 
 
 ### [[USN-5294-1](https://ubuntu.com/security/notices/USN-5294-1), [USN-5294-2](https://ubuntu.com/security/notices/USN-5294-2)] Linux kernel vulnerabilities [01:38] {#usn-5294-1-usn-5294-2-linux-kernel-vulnerabilities-01-38}
 
 -   8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942)
-    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330)
-    -   [CVE-2021-43975](https://ubuntu.com/security/CVE-2021-43975)
-    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202)
-    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155)
-    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083)
-    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685)
-    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600)
+    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942) <!-- medium -->
+    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330) <!-- medium -->
+    -   [CVE-2021-43975](https://ubuntu.com/security/CVE-2021-43975) <!-- medium -->
+    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202) <!-- medium -->
+    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155) <!-- medium -->
+    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083) <!-- medium -->
+    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685) <!-- medium -->
+    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600) <!-- medium -->
 -   5.4 - focal GA + clouds
 -   Usual sorts of issues - double-free (UAF) in packet network protocol, OOB
     R/W in USB Gadget, race condition in Unix domain sockets - UAF, XFS info
@@ -62,91 +62,91 @@ c3p0, Cyrus SASL and more.
 ### [[USN-5295-1](https://ubuntu.com/security/notices/USN-5295-1), [USN-5295-2](https://ubuntu.com/security/notices/USN-5295-2)] Linux kernel (HWE) vulnerabilities [02:57] {#usn-5295-1-usn-5295-2-linux-kernel--hwe--vulnerabilities-02-57}
 
 -   5 CVEs addressed in Impish (21.10), Focal (20.04 LTS)
-    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942)
-    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330)
-    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155)
-    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083)
-    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600)
+    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942) <!-- medium -->
+    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330) <!-- medium -->
+    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155) <!-- medium -->
+    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083) <!-- medium -->
+    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600) <!-- medium -->
 -   5.13 - impish GA + focal HWE
 
 
 ### [[USN-5297-1](https://ubuntu.com/security/notices/USN-5297-1)] Linux kernel (GKE) vulnerabilities [03:17] {#usn-5297-1-linux-kernel--gke--vulnerabilities-03-17}
 
 -   7 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942)
-    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330)
-    -   [CVE-2021-43975](https://ubuntu.com/security/CVE-2021-43975)
-    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202)
-    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155)
-    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083)
-    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685)
+    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942) <!-- medium -->
+    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330) <!-- medium -->
+    -   [CVE-2021-43975](https://ubuntu.com/security/CVE-2021-43975) <!-- medium -->
+    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202) <!-- medium -->
+    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155) <!-- medium -->
+    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083) <!-- medium -->
+    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685) <!-- medium -->
 -   5.4 gke specific kernel - focal + bionic
 
 
 ### [[USN-5298-1](https://ubuntu.com/security/notices/USN-5298-1)] Linux kernel vulnerabilities [03:29] {#usn-5298-1-linux-kernel-vulnerabilities-03-29}
 
 -   12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942)
-    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330)
-    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202)
-    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155)
-    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083)
-    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685)
-    -   [CVE-2021-28715](https://ubuntu.com/security/CVE-2021-28715)
-    -   [CVE-2021-28714](https://ubuntu.com/security/CVE-2021-28714)
-    -   [CVE-2021-28713](https://ubuntu.com/security/CVE-2021-28713)
-    -   [CVE-2021-28712](https://ubuntu.com/security/CVE-2021-28712)
-    -   [CVE-2021-28711](https://ubuntu.com/security/CVE-2021-28711)
-    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600)
+    -   [CVE-2022-22942](https://ubuntu.com/security/CVE-2022-22942) <!-- medium -->
+    -   [CVE-2022-0330](https://ubuntu.com/security/CVE-2022-0330) <!-- medium -->
+    -   [CVE-2021-4202](https://ubuntu.com/security/CVE-2021-4202) <!-- medium -->
+    -   [CVE-2021-4155](https://ubuntu.com/security/CVE-2021-4155) <!-- medium -->
+    -   [CVE-2021-4083](https://ubuntu.com/security/CVE-2021-4083) <!-- medium -->
+    -   [CVE-2021-39685](https://ubuntu.com/security/CVE-2021-39685) <!-- medium -->
+    -   [CVE-2021-28715](https://ubuntu.com/security/CVE-2021-28715) <!-- medium -->
+    -   [CVE-2021-28714](https://ubuntu.com/security/CVE-2021-28714) <!-- medium -->
+    -   [CVE-2021-28713](https://ubuntu.com/security/CVE-2021-28713) <!-- low -->
+    -   [CVE-2021-28712](https://ubuntu.com/security/CVE-2021-28712) <!-- low -->
+    -   [CVE-2021-28711](https://ubuntu.com/security/CVE-2021-28711) <!-- low -->
+    -   [CVE-2021-22600](https://ubuntu.com/security/CVE-2021-22600) <!-- medium -->
 -   4.15 bionic GA + xenial HWE + trusty azure
 
 
 ### [[USN-5299-1](https://ubuntu.com/security/notices/USN-5299-1)] Linux kernel vulnerabilities [03:46] {#usn-5299-1-linux-kernel-vulnerabilities-03-46}
 
 -   13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-45485](https://ubuntu.com/security/CVE-2021-45485)
-    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
-    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483)
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
-    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034)
-    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972)
-    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129)
-    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558)
-    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147)
+    -   [CVE-2021-45485](https://ubuntu.com/security/CVE-2021-45485) <!-- medium -->
+    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008) <!-- low -->
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
+    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483) <!-- medium -->
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
+    -   [CVE-2021-33034](https://ubuntu.com/security/CVE-2021-33034) <!-- medium -->
+    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972) <!-- medium -->
+    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129) <!-- medium -->
+    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558) <!-- medium -->
+    -   [CVE-2020-26147](https://ubuntu.com/security/CVE-2020-26147) <!-- medium -->
 -   4.4 - xenial GA + trusty ESM
 
 
 ### [[USN-5302-1](https://ubuntu.com/security/notices/USN-5302-1)] Linux kernel (OEM) vulnerabilities [03:57] {#usn-5302-1-linux-kernel--oem--vulnerabilities-03-57}
 
 -   6 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2022-24959](https://ubuntu.com/security/CVE-2022-24959)
-        -   [CVE-2022-24448](https://ubuntu.com/security/CVE-2022-24448)
-    -   [CVE-2022-0435](https://ubuntu.com/security/CVE-2022-0435)
-    -   [CVE-2021-44879](https://ubuntu.com/security/CVE-2021-44879)
-    -   [CVE-2021-43976](https://ubuntu.com/security/CVE-2021-43976)
-    -   [CVE-2022-0492](https://ubuntu.com/security/CVE-2022-0492)
+    -   [CVE-2022-24959](https://ubuntu.com/security/CVE-2022-24959) <!-- negligible -->
+        -   [CVE-2022-24448](https://ubuntu.com/security/CVE-2022-24448) <!-- medium -->
+    -   [CVE-2022-0435](https://ubuntu.com/security/CVE-2022-0435) <!-- medium -->
+    -   [CVE-2021-44879](https://ubuntu.com/security/CVE-2021-44879) <!-- medium -->
+    -   [CVE-2021-43976](https://ubuntu.com/security/CVE-2021-43976) <!-- low -->
+    -   [CVE-2022-0492](https://ubuntu.com/security/CVE-2022-0492) <!-- high -->
 -   5.14 - focal OEM
 
 
 ### [[USN-5288-1](https://ubuntu.com/security/notices/USN-5288-1)] Expat vulnerabilities [04:12] {#usn-5288-1-expat-vulnerabilities-04-12}
 
 -   12 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-25236](https://ubuntu.com/security/CVE-2022-25236)
-    -   [CVE-2022-25235](https://ubuntu.com/security/CVE-2022-25235)
-    -   [CVE-2022-23990](https://ubuntu.com/security/CVE-2022-23990)
-    -   [CVE-2022-23852](https://ubuntu.com/security/CVE-2022-23852)
-    -   [CVE-2022-22827](https://ubuntu.com/security/CVE-2022-22827)
-    -   [CVE-2022-22826](https://ubuntu.com/security/CVE-2022-22826)
-    -   [CVE-2022-22825](https://ubuntu.com/security/CVE-2022-22825)
-    -   [CVE-2022-22824](https://ubuntu.com/security/CVE-2022-22824)
-    -   [CVE-2022-22823](https://ubuntu.com/security/CVE-2022-22823)
-    -   [CVE-2022-22822](https://ubuntu.com/security/CVE-2022-22822)
-    -   [CVE-2021-46143](https://ubuntu.com/security/CVE-2021-46143)
-    -   [CVE-2021-45960](https://ubuntu.com/security/CVE-2021-45960)
+    -   [CVE-2022-25236](https://ubuntu.com/security/CVE-2022-25236) <!-- high -->
+    -   [CVE-2022-25235](https://ubuntu.com/security/CVE-2022-25235) <!-- high -->
+    -   [CVE-2022-23990](https://ubuntu.com/security/CVE-2022-23990) <!-- medium -->
+    -   [CVE-2022-23852](https://ubuntu.com/security/CVE-2022-23852) <!-- medium -->
+    -   [CVE-2022-22827](https://ubuntu.com/security/CVE-2022-22827) <!-- medium -->
+    -   [CVE-2022-22826](https://ubuntu.com/security/CVE-2022-22826) <!-- medium -->
+    -   [CVE-2022-22825](https://ubuntu.com/security/CVE-2022-22825) <!-- medium -->
+    -   [CVE-2022-22824](https://ubuntu.com/security/CVE-2022-22824) <!-- medium -->
+    -   [CVE-2022-22823](https://ubuntu.com/security/CVE-2022-22823) <!-- medium -->
+    -   [CVE-2022-22822](https://ubuntu.com/security/CVE-2022-22822) <!-- medium -->
+    -   [CVE-2021-46143](https://ubuntu.com/security/CVE-2021-46143) <!-- medium -->
+    -   [CVE-2021-45960](https://ubuntu.com/security/CVE-2021-45960) <!-- low -->
 -   XML parser written in C - used by a huge number of other applications
     from audacity, avahi, ceph, dbus, gdb, git, fontconfig, python, mesa,
     squid and a lot more
@@ -164,7 +164,7 @@ c3p0, Cyrus SASL and more.
 ### [[USN-5293-1](https://ubuntu.com/security/notices/USN-5293-1)] c3p0 vulnerability [05:41] {#usn-5293-1-c3p0-vulnerability-05-41}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2019-5427](https://ubuntu.com/security/CVE-2019-5427)
+    -   [CVE-2019-5427](https://ubuntu.com/security/CVE-2019-5427) <!-- medium -->
 -   JDBC connection pooling library
 -   billion laughs attack (aka XML bomb) when parsing XML config via
     recursive XML entity expansion - have one entity defined as 10 of the
@@ -178,7 +178,7 @@ c3p0, Cyrus SASL and more.
 ### [[USN-5301-1](https://ubuntu.com/security/notices/USN-5301-1), [USN-5301-2](https://ubuntu.com/security/notices/USN-5301-2)] Cyrus SASL vulnerability [06:44] {#usn-5301-1-usn-5301-2-cyrus-sasl-vulnerability-06-44}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-24407](https://ubuntu.com/security/CVE-2022-24407)
+    -   [CVE-2022-24407](https://ubuntu.com/security/CVE-2022-24407) <!-- high -->
 -   SASL implementation for Cyrus IMAP server, used also by exim, ldap-utils,
     mutt, php, postfix and others
 -   SQL plugin failed to properly validate input - SQL injection
@@ -187,12 +187,12 @@ c3p0, Cyrus SASL and more.
 ### [[USN-5300-1](https://ubuntu.com/security/notices/USN-5300-1)] PHP vulnerabilities [07:23] {#usn-5300-1-php-vulnerabilities-07-23}
 
 -   6 CVEs addressed in Xenial ESM (16.04 ESM)
-    -   [CVE-2021-21707](https://ubuntu.com/security/CVE-2021-21707)
-    -   [CVE-2017-9119](https://ubuntu.com/security/CVE-2017-9119)
-    -   [CVE-2017-9120](https://ubuntu.com/security/CVE-2017-9120)
-    -   [CVE-2017-9118](https://ubuntu.com/security/CVE-2017-9118)
-    -   [CVE-2017-8923](https://ubuntu.com/security/CVE-2017-8923)
-    -   [CVE-2015-9253](https://ubuntu.com/security/CVE-2015-9253)
+    -   [CVE-2021-21707](https://ubuntu.com/security/CVE-2021-21707) <!-- low -->
+    -   [CVE-2017-9119](https://ubuntu.com/security/CVE-2017-9119) <!-- low -->
+    -   [CVE-2017-9120](https://ubuntu.com/security/CVE-2017-9120) <!-- medium -->
+    -   [CVE-2017-9118](https://ubuntu.com/security/CVE-2017-9118) <!-- medium -->
+    -   [CVE-2017-8923](https://ubuntu.com/security/CVE-2017-8923) <!-- low -->
+    -   [CVE-2015-9253](https://ubuntu.com/security/CVE-2015-9253) <!-- low -->
 -   php 7 - 4 different DoS vulns, 1 memory corruption - crash/RCE and one
     info leak
 

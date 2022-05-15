@@ -6,9 +6,9 @@ description = """
   in the Snap Store and some of the mechanics behind snap confinement.
   """
 date = 2021-06-11T10:53:00+09:30
-lastmod = 2021-06-11T10:53:42+09:30
+lastmod = 2022-05-15T18:06:05+09:30
 draft = false
-weight = 1001
+weight = 1041
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E119.mp3"
@@ -33,22 +33,22 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4979-1](https://ubuntu.com/security/notices/USN-4979-1)] Linux kernel vulnerabilities [01:04] {#usn-4979-1-linux-kernel-vulnerabilities-01-04}
 
 -   13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483)
-    -   [CVE-2021-3428](https://ubuntu.com/security/CVE-2021-3428)
-    -   [CVE-2021-33033](https://ubuntu.com/security/CVE-2021-33033)
-    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916)
-    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647)
-    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972)
-    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971)
-    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964)
-    -   [CVE-2021-28660](https://ubuntu.com/security/CVE-2021-28660)
-    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673)
-    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672)
-    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671)
-    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670)
+    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483) <!-- medium -->
+    -   [CVE-2021-3428](https://ubuntu.com/security/CVE-2021-3428) <!-- low -->
+    -   [CVE-2021-33033](https://ubuntu.com/security/CVE-2021-33033) <!-- medium -->
+    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916) <!-- medium -->
+    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647) <!-- low -->
+    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972) <!-- medium -->
+    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971) <!-- medium -->
+    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964) <!-- medium -->
+    -   [CVE-2021-28660](https://ubuntu.com/security/CVE-2021-28660) <!-- medium -->
+    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673) <!-- medium -->
+    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672) <!-- medium -->
+    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671) <!-- medium -->
+    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670) <!-- medium -->
 -   4.15 based kernel
--   integer overflow in ext4 extent handling -> could be triggered by
-    mounting an malicious ext4 image -> crash (DoS)
+-   integer overflow in ext4 extent handling -&gt; could be triggered by
+    mounting an malicious ext4 image -&gt; crash (DoS)
 -   reference counting error in firewire packet sniffer driver - UAF
 -   NFC LLCP issues above
 
@@ -56,82 +56,82 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4982-1](https://ubuntu.com/security/notices/USN-4982-1)] Linux kernel vulnerabilities [02:23] {#usn-4982-1-linux-kernel-vulnerabilities-02-23}
 
 -   13 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483)
-    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916)
-    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647)
-    -   [CVE-2021-29264](https://ubuntu.com/security/CVE-2021-29264)
-    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972)
-    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971)
-    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964)
-    -   [CVE-2021-28950](https://ubuntu.com/security/CVE-2021-28950)
-    -   [CVE-2021-28688](https://ubuntu.com/security/CVE-2021-28688)
-    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673)
-    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672)
-    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671)
-    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670)
+    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483) <!-- medium -->
+    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916) <!-- medium -->
+    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647) <!-- low -->
+    -   [CVE-2021-29264](https://ubuntu.com/security/CVE-2021-29264) <!-- medium -->
+    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972) <!-- medium -->
+    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971) <!-- medium -->
+    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964) <!-- medium -->
+    -   [CVE-2021-28950](https://ubuntu.com/security/CVE-2021-28950) <!-- medium -->
+    -   [CVE-2021-28688](https://ubuntu.com/security/CVE-2021-28688) <!-- low -->
+    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673) <!-- medium -->
+    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672) <!-- medium -->
+    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671) <!-- medium -->
+    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670) <!-- medium -->
 -   5.4 based kernel
 
 
 ### [[USN-4984-1](https://ubuntu.com/security/notices/USN-4984-1)] Linux kernel vulnerabilities [02:39] {#usn-4984-1-linux-kernel-vulnerabilities-02-39}
 
 -   13 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483)
-    -   [CVE-2021-33033](https://ubuntu.com/security/CVE-2021-33033)
-    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916)
-    -   [CVE-2021-30002](https://ubuntu.com/security/CVE-2021-30002)
-    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647)
-    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972)
-    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971)
-    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964)
-    -   [CVE-2021-28952](https://ubuntu.com/security/CVE-2021-28952)
-    -   [CVE-2021-28950](https://ubuntu.com/security/CVE-2021-28950)
-    -   [CVE-2021-28688](https://ubuntu.com/security/CVE-2021-28688)
-    -   [CVE-2021-28660](https://ubuntu.com/security/CVE-2021-28660)
-    -   [CVE-2021-28038](https://ubuntu.com/security/CVE-2021-28038)
+    -   [CVE-2021-3483](https://ubuntu.com/security/CVE-2021-3483) <!-- medium -->
+    -   [CVE-2021-33033](https://ubuntu.com/security/CVE-2021-33033) <!-- medium -->
+    -   [CVE-2021-31916](https://ubuntu.com/security/CVE-2021-31916) <!-- medium -->
+    -   [CVE-2021-30002](https://ubuntu.com/security/CVE-2021-30002) <!-- medium -->
+    -   [CVE-2021-29647](https://ubuntu.com/security/CVE-2021-29647) <!-- low -->
+    -   [CVE-2021-28972](https://ubuntu.com/security/CVE-2021-28972) <!-- medium -->
+    -   [CVE-2021-28971](https://ubuntu.com/security/CVE-2021-28971) <!-- medium -->
+    -   [CVE-2021-28964](https://ubuntu.com/security/CVE-2021-28964) <!-- medium -->
+    -   [CVE-2021-28952](https://ubuntu.com/security/CVE-2021-28952) <!-- low -->
+    -   [CVE-2021-28950](https://ubuntu.com/security/CVE-2021-28950) <!-- medium -->
+    -   [CVE-2021-28688](https://ubuntu.com/security/CVE-2021-28688) <!-- low -->
+    -   [CVE-2021-28660](https://ubuntu.com/security/CVE-2021-28660) <!-- medium -->
+    -   [CVE-2021-28038](https://ubuntu.com/security/CVE-2021-28038) <!-- medium -->
 -   5.8 based kernel
 
 
 ### [[USN-4977-1](https://ubuntu.com/security/notices/USN-4977-1)] Linux kernel vulnerabilities {#usn-4977-1-linux-kernel-vulnerabilities}
 
 -   6 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-3501](https://ubuntu.com/security/CVE-2021-3501)
-    -   [CVE-2021-29155](https://ubuntu.com/security/CVE-2021-29155)
-    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673)
-    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672)
-    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671)
-    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670)
+    -   [CVE-2021-3501](https://ubuntu.com/security/CVE-2021-3501) <!-- medium -->
+    -   [CVE-2021-29155](https://ubuntu.com/security/CVE-2021-29155) <!-- medium -->
+    -   [CVE-2020-25673](https://ubuntu.com/security/CVE-2020-25673) <!-- medium -->
+    -   [CVE-2020-25672](https://ubuntu.com/security/CVE-2020-25672) <!-- medium -->
+    -   [CVE-2020-25671](https://ubuntu.com/security/CVE-2020-25671) <!-- medium -->
+    -   [CVE-2020-25670](https://ubuntu.com/security/CVE-2020-25670) <!-- medium -->
 -   5.11 based kernel
--   OOB write in KVM VMX implementation (crash -> DoS, RCE)
+-   OOB write in KVM VMX implementation (crash -&gt; DoS, RCE)
 -   eBPF Spectre side-channel attack - info leak
 -   NFC LLCP (logical link control protocol) - allows to multiplex a single
     connection between two NFC devices
-    -   infinite loop on error condition -> DoS
+    -   infinite loop on error condition -&gt; DoS
     -   memory leak
-    -   reference count mishandling -> crash -> DoS
+    -   reference count mishandling -&gt; crash -&gt; DoS
 
 
 ### [[USN-4983-1](https://ubuntu.com/security/notices/USN-4983-1)] Linux kernel (OEM) vulnerabilities [03:32] {#usn-4983-1-linux-kernel--oem--vulnerabilities-03-32}
 
 -   4 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-3501](https://ubuntu.com/security/CVE-2021-3501)
-    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829)
-    -   [CVE-2021-29155](https://ubuntu.com/security/CVE-2021-29155)
-    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200)
+    -   [CVE-2021-3501](https://ubuntu.com/security/CVE-2021-3501) <!-- medium -->
+    -   [CVE-2021-31829](https://ubuntu.com/security/CVE-2021-31829) <!-- medium -->
+    -   [CVE-2021-29155](https://ubuntu.com/security/CVE-2021-29155) <!-- medium -->
+    -   [CVE-2021-33200](https://ubuntu.com/security/CVE-2021-33200) <!-- high -->
 -   5.10 based kernel
--   OOB write in KVM VMX implementation (crash -> DoS, RCE)
+-   OOB write in KVM VMX implementation (crash -&gt; DoS, RCE)
 -   eBPF Spectre side-channel attacks - verifier fails to stop loading of eBPF
-    programs which could cause speculative loads -> info leak
+    programs which could cause speculative loads -&gt; info leak
 -   eBPF pointer limit error - OOB read/write - crash / RCE
 
 
 ### [[USN-4978-1](https://ubuntu.com/security/notices/USN-4978-1)] Firefox vulnerabilities [03:40] {#usn-4978-1-firefox-vulnerabilities-03-40}
 
 -   5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-29960](https://ubuntu.com/security/CVE-2021-29960)
-    -   [CVE-2021-29967](https://ubuntu.com/security/CVE-2021-29967)
-    -   [CVE-2021-29966](https://ubuntu.com/security/CVE-2021-29966)
-    -   [CVE-2021-29961](https://ubuntu.com/security/CVE-2021-29961)
-    -   [CVE-2021-29959](https://ubuntu.com/security/CVE-2021-29959)
+    -   [CVE-2021-29960](https://ubuntu.com/security/CVE-2021-29960) <!-- medium -->
+    -   [CVE-2021-29967](https://ubuntu.com/security/CVE-2021-29967) <!-- medium -->
+    -   [CVE-2021-29966](https://ubuntu.com/security/CVE-2021-29966) <!-- medium -->
+    -   [CVE-2021-29961](https://ubuntu.com/security/CVE-2021-29961) <!-- medium -->
+    -   [CVE-2021-29959](https://ubuntu.com/security/CVE-2021-29959) <!-- medium -->
 -   89.0 upstream release
     -   not only the new visual UI PLUS enhanced private browsing mode via
         "Total Cookie Protection" - confines cookies to the site where they
@@ -145,7 +145,7 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4980-1](https://ubuntu.com/security/notices/USN-4980-1)] polkit vulnerability [04:43] {#usn-4980-1-polkit-vulnerability-04-43}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-3560](https://ubuntu.com/security/CVE-2021-3560)
+    -   [CVE-2021-3560](https://ubuntu.com/security/CVE-2021-3560) <!-- high -->
 -   Daemons often use policykit to ask whether a user's application is
     permitted to perform an action - to do this, they send the DBus name of
     the process to polkit and it looks up the resulting uid/pid via an
@@ -162,13 +162,13 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4981-1](https://ubuntu.com/security/notices/USN-4981-1)] Squid vulnerabilities [06:11] {#usn-4981-1-squid-vulnerabilities-06-11}
 
 -   7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-33620](https://ubuntu.com/security/CVE-2021-33620)
-    -   [CVE-2021-31808](https://ubuntu.com/security/CVE-2021-31808)
-    -   [CVE-2021-31807](https://ubuntu.com/security/CVE-2021-31807)
-    -   [CVE-2021-31806](https://ubuntu.com/security/CVE-2021-31806)
-    -   [CVE-2021-28662](https://ubuntu.com/security/CVE-2021-28662)
-    -   [CVE-2021-28652](https://ubuntu.com/security/CVE-2021-28652)
-    -   [CVE-2021-28651](https://ubuntu.com/security/CVE-2021-28651)
+    -   [CVE-2021-33620](https://ubuntu.com/security/CVE-2021-33620) <!-- medium -->
+    -   [CVE-2021-31808](https://ubuntu.com/security/CVE-2021-31808) <!-- medium -->
+    -   [CVE-2021-31807](https://ubuntu.com/security/CVE-2021-31807) <!-- medium -->
+    -   [CVE-2021-31806](https://ubuntu.com/security/CVE-2021-31806) <!-- medium -->
+    -   [CVE-2021-28662](https://ubuntu.com/security/CVE-2021-28662) <!-- medium -->
+    -   [CVE-2021-28652](https://ubuntu.com/security/CVE-2021-28652) <!-- low -->
+    -   [CVE-2021-28651](https://ubuntu.com/security/CVE-2021-28651) <!-- medium -->
 -   All DoS issues - memory leaks, OOB reads etc, able to be triggered by
     remote attackers
 
@@ -198,11 +198,11 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4985-1](https://ubuntu.com/security/notices/USN-4985-1)] Intel Microcode vulnerabilities [07:48] {#usn-4985-1-intel-microcode-vulnerabilities-07-48}
 
 -   5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2020-24513](https://ubuntu.com/security/CVE-2020-24513)
-    -   [CVE-2020-24512](https://ubuntu.com/security/CVE-2020-24512)
-    -   [CVE-2020-24511](https://ubuntu.com/security/CVE-2020-24511)
-    -   [CVE-2017-5715](https://ubuntu.com/security/CVE-2017-5715)
-    -   [CVE-2021-24489](https://ubuntu.com/security/CVE-2021-24489)
+    -   [CVE-2020-24513](https://ubuntu.com/security/CVE-2020-24513) <!-- medium -->
+    -   [CVE-2020-24512](https://ubuntu.com/security/CVE-2020-24512) <!-- medium -->
+    -   [CVE-2020-24511](https://ubuntu.com/security/CVE-2020-24511) <!-- medium -->
+    -   [CVE-2017-5715](https://ubuntu.com/security/CVE-2017-5715) <!-- high -->
+    -   [CVE-2021-24489](https://ubuntu.com/security/CVE-2021-24489) <!-- high -->
 -   Latest intel-microcode release from upstream, fixes a number of security
     issues for particular processors PLUS potential stability issues that
     have been seen in previous microcode releases (processor would hang if
@@ -217,7 +217,7 @@ in the Snap Store and some of the mechanics behind snap confinement.
 ### [[USN-4986-1](https://ubuntu.com/security/notices/USN-4986-1)] rpcbind vulnerability [09:02] {#usn-4986-1-rpcbind-vulnerability-09-02}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2017-8779](https://ubuntu.com/security/CVE-2017-8779)
+    -   [CVE-2017-8779](https://ubuntu.com/security/CVE-2017-8779) <!-- low -->
 -   DoS since would fail to free memory allocated during particular
     requests - could then be made to crash by allocating too much memory
 
@@ -241,4 +241,4 @@ in the Snap Store and some of the mechanics behind snap confinement.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

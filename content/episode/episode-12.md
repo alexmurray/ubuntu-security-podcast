@@ -2,9 +2,9 @@
 title = "Episode 12"
 description = "This week we look at some details of the 33 unique CVEs addressed across the supported Ubuntu releases, including some significant updates for systemd and the kernel, plus we talk about even more Intel side-channel vulnerabilities and more."
 date = 2018-11-19
-lastmod = 2020-05-15T16:40:43+09:30
+lastmod = 2022-05-15T18:07:28+09:30
 draft = false
-weight = 1063
+weight = 1148
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E012.mp3"
@@ -29,26 +29,26 @@ more.
 ### [[USN-3814-1](https://usn.ubuntu.com/3814-1/)] libmspack vulnerabilities {#usn-3814-1-libmspack-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2018-18585](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18585)
-    -   [CVE-2018-18584](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18584)
--   Out of bounds write of 1 byte when a CAB file uses the maximum Quantum block size - buffer overflow, DoS -> crash, possible code execution
--   Failure to validate filenames properly - could accept a filename with embedded NUL bytes - possible DoS -> crash
+    -   [CVE-2018-18585](https://ubuntu.com/security/CVE-2018-18585)
+    -   [CVE-2018-18584](https://ubuntu.com/security/CVE-2018-18584)
+-   Out of bounds write of 1 byte when a CAB file uses the maximum Quantum block size - buffer overflow, DoS -&gt; crash, possible code execution
+-   Failure to validate filenames properly - could accept a filename with embedded NUL bytes - possible DoS -&gt; crash
 
 
 ### [[USN-3815-1](https://usn.ubuntu.com/3815-1/), [USN-3815-2](https://usn.ubuntu.com/3815-2/)] gettext vulnerability {#usn-3815-1-usn-3815-2-gettext-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-18751](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18751)
--   Double free for specially crafted translations file, DoS -> crash, possible code execution via heap corruption etc.
+    -   [CVE-2018-18751](https://ubuntu.com/security/CVE-2018-18751)
+-   Double free for specially crafted translations file, DoS -&gt; crash, possible code execution via heap corruption etc.
     -   PoC's on github
 
 
 ### [[USN-3816-1](https://usn.ubuntu.com/3816-1/)] systemd vulnerabilities {#usn-3816-1-systemd-vulnerabilities}
 
 -   3 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2018-6954](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6954)
-    -   [CVE-2018-15687](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15687)
-    -   [CVE-2018-15686](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15686)
+    -   [CVE-2018-6954](https://ubuntu.com/security/CVE-2018-6954)
+    -   [CVE-2018-15687](https://ubuntu.com/security/CVE-2018-15687)
+    -   [CVE-2018-15686](https://ubuntu.com/security/CVE-2018-15686)
 -   Large backport of multiple patch series
 -   Jann Horn (GPZ) reported two issues to Ubuntu regarding systemd
     -   possible to inject / alter state across re-execution of systemd itself (since serialized state) - but fails to deserialize it correctly
@@ -68,32 +68,32 @@ more.
 
 ### [[USN-3814-2](https://usn.ubuntu.com/3814-2/), USN-3814-3] ClamAV vulnerabilities {#usn-3814-2-usn-3814-3-clamav-vulnerabilities}
 
--   2 CVEs addressed in Precise ESM & Trusty
-    -   [CVE-2018-18585](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18585)
-    -   [CVE-2018-18584](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18584)
+-   2 CVEs addressed in Precise ESM &amp; Trusty
+    -   [CVE-2018-18585](https://ubuntu.com/security/CVE-2018-18585)
+    -   [CVE-2018-18584](https://ubuntu.com/security/CVE-2018-18584)
 -   Same issues as for libmspack earlier (since clamav in Trusty and Precise ESM embeds libmspack, later releases use the system libmspack package instead)
 
 
 ### [[USN-3811-2](https://usn.ubuntu.com/3811-2/)] SpamAssassin vulnerability {#usn-3811-2-spamassassin-vulnerability}
 
 -   1 CVEs addressed in Precise ESM
-    -   [CVE-2017-15705](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-15705)
+    -   [CVE-2017-15705](https://ubuntu.com/security/CVE-2017-15705)
 -   One of the CVEs for SpamAssassin in Episode 7
 
 
 ### [[USN-3817-1](https://usn.ubuntu.com/3817-1/), USN-3817-2] Python vulnerabilities {#usn-3817-1-usn-3817-2-python-vulnerabilities}
 
 -   5 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic
-    -   [CVE-2018-14647](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14647)
-    -   [CVE-2018-1061](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1061)
-    -   [CVE-2018-1060](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1060)
-    -   [CVE-2018-1000802](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000802)
-    -   [CVE-2018-1000030](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000030)
+    -   [CVE-2018-14647](https://ubuntu.com/security/CVE-2018-14647)
+    -   [CVE-2018-1061](https://ubuntu.com/security/CVE-2018-1061)
+    -   [CVE-2018-1060](https://ubuntu.com/security/CVE-2018-1060)
+    -   [CVE-2018-1000802](https://ubuntu.com/security/CVE-2018-1000802)
+    -   [CVE-2018-1000030](https://ubuntu.com/security/CVE-2018-1000030)
 -   Failure to initialize hash salt for PRNG in hash tables for elementtree (XML parser)
     -   Could relatively easily cause hash-collisions on specially crafted document
-    -   High CPU and memory usage -> DoS
+    -   High CPU and memory usage -&gt; DoS
 -   Possible command injection when using Python to create a ZIP file archive
-    -   Used spawn() which is vulnerable to shell command injection -> subprocess()
+    -   Used spawn() which is vulnerable to shell command injection -&gt; subprocess()
 -   3 lower priority issues
     -   Race condition in when reading from multiple threads on same file - possible heap buffer overflow or UAF
     -   DoS via CPU usage due to regexes in mail server response handling with backtracking - could be triggered by a malicious mail server
@@ -103,7 +103,7 @@ more.
 ### [[USN-3818-1](https://usn.ubuntu.com/3818-1/)] PostgreSQL vulnerability {#usn-3818-1-postgresql-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic
-    -   [CVE-2018-16850](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16850)
+    -   [CVE-2018-16850](https://ubuntu.com/security/CVE-2018-16850)
 -   Possible to inject arbitrary SQL with superuser privileges during dump/restore cycle
 -   Can be triggered by regular users in default config since they can trigger as have CREATE privilege on the public schema
 
@@ -111,34 +111,34 @@ more.
 ### [[USN-3819-1](https://usn.ubuntu.com/3819-1/)] Linux kernel vulnerability {#usn-3819-1-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Cosmic
-    -   [CVE-2018-15471](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15471)
+    -   [CVE-2018-15471](https://ubuntu.com/security/CVE-2018-15471)
 
 
 ### [[USN-3820-1](https://usn.ubuntu.com/3820-1/), USN-3820-2, USN-3820-3] Linux kernel vulnerabilities {#usn-3820-1-usn-3820-2-usn-3820-3-linux-kernel-vulnerabilities}
 
 -   4 CVEs addressed in Bionic, Xenial (Bionic HWE kernel) and Trusty (Azure)
-    -   [CVE-2018-9363](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9363)
-    -   [CVE-2018-16658](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16658)
-    -   [CVE-2017-13168](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13168)
-    -   [CVE-2018-15471](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15471)
+    -   [CVE-2018-9363](https://ubuntu.com/security/CVE-2018-9363)
+    -   [CVE-2018-16658](https://ubuntu.com/security/CVE-2018-16658)
+    -   [CVE-2017-13168](https://ubuntu.com/security/CVE-2017-13168)
+    -   [CVE-2018-15471](https://ubuntu.com/security/CVE-2018-15471)
 -   Bluetooth HID integer overflow and info leak in CDROM ioctl (covered in Episode 9 for Xenial kernel)
 -   Possible privilege escalation via SCSI subsystem
--   Xen virtual network driver didn't check supplied parameters -> integer overflow -> OOB read -> possible OOB write -> privilege escalation, DoS etc
+-   Xen virtual network driver didn't check supplied parameters -&gt; integer overflow -&gt; OOB read -&gt; possible OOB write -&gt; privilege escalation, DoS etc
 
 
 ### [[USN-3821-1](https://usn.ubuntu.com/3821-1/)] Linux kernel vulnerabilities {#usn-3821-1-linux-kernel-vulnerabilities}
 
 -   7 CVEs addressed in Xenial and Trusty (Xenial HWE kernel)
-    -   [CVE-2018-18021](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18021)
-    -   [CVE-2018-17972](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972)
-    -   [CVE-2018-14617](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14617)
-    -   [CVE-2018-14609](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14609)
-    -   [CVE-2018-13096](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13096)
-    -   [CVE-2018-13053](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13053)
-    -   [CVE-2018-10880](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10880)
+    -   [CVE-2018-18021](https://ubuntu.com/security/CVE-2018-18021)
+    -   [CVE-2018-17972](https://ubuntu.com/security/CVE-2018-17972)
+    -   [CVE-2018-14617](https://ubuntu.com/security/CVE-2018-14617)
+    -   [CVE-2018-14609](https://ubuntu.com/security/CVE-2018-14609)
+    -   [CVE-2018-13096](https://ubuntu.com/security/CVE-2018-13096)
+    -   [CVE-2018-13053](https://ubuntu.com/security/CVE-2018-13053)
+    -   [CVE-2018-10880](https://ubuntu.com/security/CVE-2018-10880)
 -   Potential host system crash / code execution from malicious guest for KVM on ARM64
 -   Stack unwinding in procfs didn't check caller was root - anyone could race stack unwinder to read stack of arbitrary kernel processes
--   NULL pointer dereferences in various file-system drivers -> triggered by mounting malicious fs image
+-   NULL pointer dereferences in various file-system drivers -&gt; triggered by mounting malicious fs image
     -   HFS+, btrfs, f2fs
 -   OOB stack write in ext4 with malicious image
 -   Integer overflow in alarmtimer handling
@@ -147,11 +147,11 @@ more.
 ### [[USN-3822-1](https://usn.ubuntu.com/3822-1/)] Linux kernel vulnerabilities {#usn-3822-1-linux-kernel-vulnerabilities}
 
 -   5 CVEs addressed in Trusty and Precise ESM (Trusty HWE kernel)
-    -   [CVE-2018-9363](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9363)
-    -   [CVE-2018-16658](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16658)
-    -   [CVE-2017-16649](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16649)
-    -   [CVE-2017-13168](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-13168)
-    -   [CVE-2016-9588](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9588)
+    -   [CVE-2018-9363](https://ubuntu.com/security/CVE-2018-9363)
+    -   [CVE-2018-16658](https://ubuntu.com/security/CVE-2018-16658)
+    -   [CVE-2017-16649](https://ubuntu.com/security/CVE-2017-16649)
+    -   [CVE-2017-13168](https://ubuntu.com/security/CVE-2017-13168)
+    -   [CVE-2016-9588](https://ubuntu.com/security/CVE-2016-9588)
 -   Same bluetooth HID, CDROM and SCSI vulns as for Bionic earlier
 -   Possible divide by zero in CDC USB ethernet driver for specially crafted device
 -   KVM guest user could cause guest OS crash due to mismanagement of emulated exception handling
@@ -160,8 +160,8 @@ more.
 ### [[USN-3823-1](https://usn.ubuntu.com/3823-1/)] Linux kernel vulnerabilities {#usn-3823-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM
-    -   [CVE-2018-3620](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3620)
-    -   [CVE-2018-3646](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3646)
+    -   [CVE-2018-3620](https://ubuntu.com/security/CVE-2018-3620)
+    -   [CVE-2018-3646](https://ubuntu.com/security/CVE-2018-3646)
 -   [L1TF](http://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/L1TF) fixes for Precise ESM (see Episode 1 for more details)
 
 
@@ -169,20 +169,20 @@ more.
 
 -   Live patch covering Bionic, Xenial and Trusty
     -   CVE-2017-13168
-    -   [CVE-2018-10880](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10880)
-    -   [CVE-2018-9363](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-9363)
-    -   [CVE-2018-16658](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16658)
+    -   [CVE-2018-10880](https://ubuntu.com/security/CVE-2018-10880)
+    -   [CVE-2018-9363](https://ubuntu.com/security/CVE-2018-9363)
+    -   [CVE-2018-16658](https://ubuntu.com/security/CVE-2018-16658)
 -   Same bluetooth HID, CDROM, SCSI and ext4 vulnerabilities mentioned earlier
 
 
 ### [[USN-3824-1](https://usn.ubuntu.com/3824-1/)] OpenJDK 7 vulnerabilities {#usn-3824-1-openjdk-7-vulnerabilities}
 
 -   5 CVEs addressed in Trusty
-    -   [CVE-2018-3180](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3180)
-    -   [CVE-2018-3169](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3169)
-    -   [CVE-2018-3149](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3149)
-    -   [CVE-2018-3139](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3139)
-    -   [CVE-2018-3136](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3136)
+    -   [CVE-2018-3180](https://ubuntu.com/security/CVE-2018-3180)
+    -   [CVE-2018-3169](https://ubuntu.com/security/CVE-2018-3169)
+    -   [CVE-2018-3149](https://ubuntu.com/security/CVE-2018-3149)
+    -   [CVE-2018-3139](https://ubuntu.com/security/CVE-2018-3139)
+    -   [CVE-2018-3136](https://ubuntu.com/security/CVE-2018-3136)
 -   All covered in the previous openjdk-8 update in Episode 10 (that included
     more as this is just those fixes which also apply to openjdk-7)
 
@@ -218,5 +218,5 @@ more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

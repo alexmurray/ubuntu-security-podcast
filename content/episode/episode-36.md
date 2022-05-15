@@ -2,9 +2,9 @@
 title = "Episode 36"
 description = "Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look at another npm package hijack as well as some wider discussions around the big vim RCE of this week."
 date = 2019-06-17
-lastmod = 2020-05-15T16:39:45+09:30
+lastmod = 2022-05-15T18:07:09+09:30
 draft = false
-weight = 1039
+weight = 1124
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E036.mp3"
@@ -26,16 +26,16 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ### [[USN-4012-1](https://usn.ubuntu.com/4012-1/)] elfutils vulnerabilities {#usn-4012-1-elfutils-vulnerabilities}
 
 -   9 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-7665](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7665)
-    -   [CVE-2019-7150](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7150)
-    -   [CVE-2019-7149](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7149)
-    -   [CVE-2018-18521](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18521)
-    -   [CVE-2018-18520](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18520)
-    -   [CVE-2018-18310](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18310)
-    -   [CVE-2018-16403](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16403)
-    -   [CVE-2018-16402](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16402)
-    -   [CVE-2018-16062](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16062)
--   Mix of issues found via fuzzing with ASAN - all resulting in crash -> DoS
+    -   [CVE-2019-7665](https://ubuntu.com/security/CVE-2019-7665)
+    -   [CVE-2019-7150](https://ubuntu.com/security/CVE-2019-7150)
+    -   [CVE-2019-7149](https://ubuntu.com/security/CVE-2019-7149)
+    -   [CVE-2018-18521](https://ubuntu.com/security/CVE-2018-18521)
+    -   [CVE-2018-18520](https://ubuntu.com/security/CVE-2018-18520)
+    -   [CVE-2018-18310](https://ubuntu.com/security/CVE-2018-18310)
+    -   [CVE-2018-16403](https://ubuntu.com/security/CVE-2018-16403)
+    -   [CVE-2018-16402](https://ubuntu.com/security/CVE-2018-16402)
+    -   [CVE-2018-16062](https://ubuntu.com/security/CVE-2018-16062)
+-   Mix of issues found via fuzzing with ASAN - all resulting in crash -&gt; DoS
     from crafted input files
     -   multiple heap-based buffer over-reads in various libraries (libelf,
         libdw) on crafted ELF input
@@ -48,30 +48,30 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ### [[USN-4013-1](https://usn.ubuntu.com/4013-1/)] libsndfile vulnerabilities {#usn-4013-1-libsndfile-vulnerabilities}
 
 -   13 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-3832](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3832)
-    -   [CVE-2018-19758](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19758)
-    -   [CVE-2018-19662](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19662)
-    -   [CVE-2018-19661](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19661)
-    -   [CVE-2018-19432](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19432)
-    -   [CVE-2018-13139](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-13139)
-    -   [CVE-2017-6892](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-6892)
-    -   [CVE-2017-17457](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17457)
-    -   [CVE-2017-17456](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17456)
-    -   [CVE-2017-16942](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16942)
-    -   [CVE-2017-14634](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14634)
-    -   [CVE-2017-14246](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14246)
-    -   [CVE-2017-14245](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14245)
+    -   [CVE-2019-3832](https://ubuntu.com/security/CVE-2019-3832)
+    -   [CVE-2018-19758](https://ubuntu.com/security/CVE-2018-19758)
+    -   [CVE-2018-19662](https://ubuntu.com/security/CVE-2018-19662)
+    -   [CVE-2018-19661](https://ubuntu.com/security/CVE-2018-19661)
+    -   [CVE-2018-19432](https://ubuntu.com/security/CVE-2018-19432)
+    -   [CVE-2018-13139](https://ubuntu.com/security/CVE-2018-13139)
+    -   [CVE-2017-6892](https://ubuntu.com/security/CVE-2017-6892)
+    -   [CVE-2017-17457](https://ubuntu.com/security/CVE-2017-17457)
+    -   [CVE-2017-17456](https://ubuntu.com/security/CVE-2017-17456)
+    -   [CVE-2017-16942](https://ubuntu.com/security/CVE-2017-16942)
+    -   [CVE-2017-14634](https://ubuntu.com/security/CVE-2017-14634)
+    -   [CVE-2017-14246](https://ubuntu.com/security/CVE-2017-14246)
+    -   [CVE-2017-14245](https://ubuntu.com/security/CVE-2017-14245)
 -   Range of issues from crashes (DoS) to possible RCE again found via fuzzing with ASAN
     -   Multiple heap-based buffer over-reads on crafted audio files (WAV, ALAW, AIFF) files
     -   NULL pointer dereference
-    -   Stack-based buffer overflow - crash -> DoS or possible RCE on crafted
+    -   Stack-based buffer overflow - crash -&gt; DoS or possible RCE on crafted
     -   Divide by zeros
 
 
 ### [[USN-4014-1](https://usn.ubuntu.com/4014-1/), [USN-4014-2](https://usn.ubuntu.com/4014-2/)] GLib vulnerability {#usn-4014-1-usn-4014-2-glib-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12450](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12450)
+    -   [CVE-2019-12450](https://ubuntu.com/security/CVE-2019-12450)
 -   GLib contains GIO which is library to abstract file-IO operations
 -   During file copying, would create the new file with default permissions
     and then once copy was done would then set the correct permissions (based
@@ -84,11 +84,11 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ### [[USN-4015-1](https://usn.ubuntu.com/4015-1/), [USN-4015-2](https://usn.ubuntu.com/4015-2/)] DBus vulnerability {#usn-4015-1-usn-4015-2-dbus-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12749](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12749)
+    -   [CVE-2019-12749](https://ubuntu.com/security/CVE-2019-12749)
 -   DBus includes multiple authentication mechanisms - usually would just use
     credentials passed via UNIX sockets (is secure as is enforced by the
     kernel), but this is not supported on all platforms (Windows etc)
--   So includes another authentication mechanism - DBUS\_COOKIE\_SHA1
+-   So includes another authentication mechanism - DBUS_COOKIE_SHA1
     -   In this case, the authenticating user has to prove they are who they
         say by being able to read and provide a magic value from a keyring file
         which dbus drops in the user's home directory
@@ -99,7 +99,7 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
         and cause DBus to eventually confuse the local user's authentication to
         the bus as that of the root user and so allow an unprivileged user to
         authenticate as root and so then perform operations as root via DBus
--   Fixed by simply only allowing DBUS\_COOKIE\_SHA1 to authenticate as the
+-   Fixed by simply only allowing DBUS_COOKIE_SHA1 to authenticate as the
     same user as the DBus server owner - ie. if running DBus as root you can
     only authenticate as root, not as your local user (since this use-case is
     not actually used in practice)
@@ -108,11 +108,11 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ### [[USN-4016-1](https://usn.ubuntu.com/4016-1/)] Vim vulnerabilities {#usn-4016-1-vim-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12735](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12735)
-    -   [CVE-2017-5953](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-5953)
+    -   [CVE-2019-12735](https://ubuntu.com/security/CVE-2019-12735)
+    -   [CVE-2017-5953](https://ubuntu.com/security/CVE-2017-5953)
 -   Most over-hyped bug of the week
     -   <https://threatpost.com/linux-command-line-editors-high-severity-bug/145569/>
-    -   <https://www.reddit.com/r/netsec/comments/bwrjrx/vimneovim%5Farbitrary%5Fcode%5Fexecution%5Fvia%5Fmodelines/>
+    -   <https://www.reddit.com/r/netsec/comments/bwrjrx/vimneovim_arbitrary_code_execution_via_modelines/>
 -   Will discuss with Joe later in the episode, but briefly:
     -   Vim includes support for 'modelines'
         -   This allows files to include custom settings such as indentation, file
@@ -139,30 +139,30 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ### [[USN-4016-2](https://usn.ubuntu.com/4016-2/)] Neovim vulnerability {#usn-4016-2-neovim-vulnerability}
 
 -   1 CVEs addressed in Cosmic, Disco
-    -   [CVE-2019-12735](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12735)
+    -   [CVE-2019-12735](https://ubuntu.com/security/CVE-2019-12735)
 -   See above from vim :)
 
 
 ### [[USN-3991-3](https://usn.ubuntu.com/3991-3/)] Firefox regression {#usn-3991-3-firefox-regression}
 
 -   17 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-9816](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816)
-    -   [CVE-2019-11698](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698)
-    -   [CVE-2019-11697](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11697)
-    -   [CVE-2019-9821](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9821)
-    -   [CVE-2019-9820](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820)
-    -   [CVE-2019-9819](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819)
-    -   [CVE-2019-9817](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817)
-    -   [CVE-2019-9814](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9814)
-    -   [CVE-2019-9800](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800)
-    -   [CVE-2019-7317](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317)
-    -   [CVE-2019-11701](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11701)
-    -   [CVE-2019-11699](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11699)
-    -   [CVE-2019-11696](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11696)
-    -   [CVE-2019-11695](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11695)
-    -   [CVE-2019-11693](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693)
-    -   [CVE-2019-11692](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692)
-    -   [CVE-2019-11691](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691)
+    -   [CVE-2019-9816](https://ubuntu.com/security/CVE-2019-9816)
+    -   [CVE-2019-11698](https://ubuntu.com/security/CVE-2019-11698)
+    -   [CVE-2019-11697](https://ubuntu.com/security/CVE-2019-11697)
+    -   [CVE-2019-9821](https://ubuntu.com/security/CVE-2019-9821)
+    -   [CVE-2019-9820](https://ubuntu.com/security/CVE-2019-9820)
+    -   [CVE-2019-9819](https://ubuntu.com/security/CVE-2019-9819)
+    -   [CVE-2019-9817](https://ubuntu.com/security/CVE-2019-9817)
+    -   [CVE-2019-9814](https://ubuntu.com/security/CVE-2019-9814)
+    -   [CVE-2019-9800](https://ubuntu.com/security/CVE-2019-9800)
+    -   [CVE-2019-7317](https://ubuntu.com/security/CVE-2019-7317)
+    -   [CVE-2019-11701](https://ubuntu.com/security/CVE-2019-11701)
+    -   [CVE-2019-11699](https://ubuntu.com/security/CVE-2019-11699)
+    -   [CVE-2019-11696](https://ubuntu.com/security/CVE-2019-11696)
+    -   [CVE-2019-11695](https://ubuntu.com/security/CVE-2019-11695)
+    -   [CVE-2019-11693](https://ubuntu.com/security/CVE-2019-11693)
+    -   [CVE-2019-11692](https://ubuntu.com/security/CVE-2019-11692)
+    -   [CVE-2019-11691](https://ubuntu.com/security/CVE-2019-11691)
 -   [Episode 33](https://ubuntusecuritypodcast.org/episode-33/) - Firefox update to version 67.0 - contained a regression so
     updated to 67.0.1 ([Episode 35](https://ubuntusecuritypodcast.org/episode-35/)) - this also contained another regression
     where Firefox would fail to load correctly if run in safe-mode. So
@@ -188,5 +188,5 @@ Security updates for DBus, vim, elfutils, GLib and more, plus Joe and Alex look 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

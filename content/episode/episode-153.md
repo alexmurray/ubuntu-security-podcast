@@ -6,9 +6,9 @@ description = """
   LibreOffice and more.
   """
 date = 2022-03-18T13:35:00+10:30
-lastmod = 2022-03-18T13:36:20+10:30
+lastmod = 2022-05-15T18:05:39+09:30
 draft = false
-weight = 1001
+weight = 1007
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E153.mp3"
@@ -33,10 +33,10 @@ LibreOffice and more.
 ### [[USN-5320-1](https://ubuntu.com/security/notices/USN-5320-1)] Expat vulnerabilities and regression [00:45] {#usn-5320-1-expat-vulnerabilities-and-regression-00-45}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-25315](https://ubuntu.com/security/CVE-2022-25315)
-    -   [CVE-2022-25314](https://ubuntu.com/security/CVE-2022-25314)
-    -   [CVE-2022-25313](https://ubuntu.com/security/CVE-2022-25313)
-    -   [CVE-2022-25236](https://ubuntu.com/security/CVE-2022-25236)
+    -   [CVE-2022-25315](https://ubuntu.com/security/CVE-2022-25315) <!-- medium -->
+    -   [CVE-2022-25314](https://ubuntu.com/security/CVE-2022-25314) <!-- medium -->
+    -   [CVE-2022-25313](https://ubuntu.com/security/CVE-2022-25313) <!-- medium -->
+    -   [CVE-2022-25236](https://ubuntu.com/security/CVE-2022-25236) <!-- high -->
 -   Includes a fix for a regression from the previous Expat update in
     [USN-5288-1](https://ubuntu.com/security/notices/USN-5288-1) ([Episode 150](https://ubuntusecuritypodcast.org/episode-150/)) ([CVE-2022-25236](https://ubuntu.com/security/CVE-2022-25236)) - plus fixes for 3 additional
     CVEs
@@ -48,13 +48,13 @@ LibreOffice and more.
 ### [[USN-5321-1](https://ubuntu.com/security/notices/USN-5321-1)] Firefox vulnerabilities [01:45] {#usn-5321-1-firefox-vulnerabilities-01-45}
 
 -   7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-26387](https://ubuntu.com/security/CVE-2022-26387)
-    -   [CVE-2022-26385](https://ubuntu.com/security/CVE-2022-26385)
-    -   [CVE-2022-26384](https://ubuntu.com/security/CVE-2022-26384)
-    -   [CVE-2022-26383](https://ubuntu.com/security/CVE-2022-26383)
-    -   [CVE-2022-26382](https://ubuntu.com/security/CVE-2022-26382)
-    -   [CVE-2022-26381](https://ubuntu.com/security/CVE-2022-26381)
-    -   [CVE-2022-0843](https://ubuntu.com/security/CVE-2022-0843)
+    -   [CVE-2022-26387](https://ubuntu.com/security/CVE-2022-26387) <!-- medium -->
+    -   [CVE-2022-26385](https://ubuntu.com/security/CVE-2022-26385) <!-- medium -->
+    -   [CVE-2022-26384](https://ubuntu.com/security/CVE-2022-26384) <!-- medium -->
+    -   [CVE-2022-26383](https://ubuntu.com/security/CVE-2022-26383) <!-- medium -->
+    -   [CVE-2022-26382](https://ubuntu.com/security/CVE-2022-26382) <!-- medium -->
+    -   [CVE-2022-26381](https://ubuntu.com/security/CVE-2022-26381) <!-- medium -->
+    -   [CVE-2022-0843](https://ubuntu.com/security/CVE-2022-0843) <!-- medium -->
 -   98.0 - usual web issues plus possible signature verification bypass when
     installing addons / extensions - TOCTOU issue allowing a local user to
     trick another user into installing an addon with an invalid signature -
@@ -66,8 +66,8 @@ LibreOffice and more.
 ### [[USN-5323-1](https://ubuntu.com/security/notices/USN-5323-1)] NBD vulnerabilities [02:59] {#usn-5323-1-nbd-vulnerabilities-02-59}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-26496](https://ubuntu.com/security/CVE-2022-26496)
-    -   [CVE-2022-26495](https://ubuntu.com/security/CVE-2022-26495)
+    -   [CVE-2022-26496](https://ubuntu.com/security/CVE-2022-26496) <!-- medium -->
+    -   [CVE-2022-26495](https://ubuntu.com/security/CVE-2022-26495) <!-- medium -->
 -   Stack buffer overflow in nbd-server via a crafted message with a large
     name value - crash / RCE?
 
@@ -75,7 +75,7 @@ LibreOffice and more.
 ### [[USN-5324-1](https://ubuntu.com/security/notices/USN-5324-1)] libxml2 vulnerability [03:33] {#usn-5324-1-libxml2-vulnerability-03-33}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-23308](https://ubuntu.com/security/CVE-2022-23308)
+    -   [CVE-2022-23308](https://ubuntu.com/security/CVE-2022-23308) <!-- medium -->
 -   UAF depending on semantics of application using libxml2 - `xmlGetID()`
     returns a pointer to just-freed memory - so if application has not done
     other memory modification etc then likely is fine - although is UB and
@@ -85,8 +85,8 @@ LibreOffice and more.
 ### [[USN-5325-1](https://ubuntu.com/security/notices/USN-5325-1)] Zsh vulnerabilities [04:28] {#usn-5325-1-zsh-vulnerabilities-04-28}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-45444](https://ubuntu.com/security/CVE-2021-45444)
-    -   [CVE-2019-20044](https://ubuntu.com/security/CVE-2019-20044)
+    -   [CVE-2021-45444](https://ubuntu.com/security/CVE-2021-45444) <!-- low -->
+    -   [CVE-2019-20044](https://ubuntu.com/security/CVE-2019-20044) <!-- low -->
 -   Possible to regain privileges even after zsh has dropped privileges (via
     the `--no-privileged` option) by loading a crafted module that then calls
     setuid()
@@ -98,7 +98,7 @@ LibreOffice and more.
 ### [[USN-5327-1](https://ubuntu.com/security/notices/USN-5327-1)] rsh vulnerability [05:31] {#usn-5327-1-rsh-vulnerability-05-31}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-7282](https://ubuntu.com/security/CVE-2019-7282)
+    -   [CVE-2019-7282](https://ubuntu.com/security/CVE-2019-7282) <!-- medium -->
 -   Possible for a malicious server to bypass intended access restrictions in
     a client through a crafted filename - can then get the client to modify
     permissions of a target directory on the client
@@ -108,7 +108,7 @@ LibreOffice and more.
 ### [[USN-5328-1](https://ubuntu.com/security/notices/USN-5328-1), [USN-5328-2](https://ubuntu.com/security/notices/USN-5328-2)] OpenSSL vulnerability [06:20] {#usn-5328-1-usn-5328-2-openssl-vulnerability-06-20}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-0778](https://ubuntu.com/security/CVE-2022-0778)
+    -   [CVE-2022-0778](https://ubuntu.com/security/CVE-2022-0778) <!-- high -->
 -   taviso - possible infinite loop when parsing crafted cerificates - can
     allow a malicious client/server to DoS the other side
 
@@ -116,7 +116,7 @@ LibreOffice and more.
 ### [[USN-5330-1](https://ubuntu.com/security/notices/USN-5330-1)] LibreOffice vulnerability [06:56] {#usn-5330-1-libreoffice-vulnerability-06-56}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-25636](https://ubuntu.com/security/CVE-2021-25636)
+    -   [CVE-2021-25636](https://ubuntu.com/security/CVE-2021-25636) <!-- medium -->
 -   Crafted document could cause Libreoffice to be confused and to present UI
     to the user indicating a document was correctly signed and had not been
     altered when in fact this was not the case - essentially 2 related fields
@@ -127,7 +127,7 @@ LibreOffice and more.
 ### [[USN-5329-1](https://ubuntu.com/security/notices/USN-5329-1)] tar vulnerability [07:42] {#usn-5329-1-tar-vulnerability-07-42}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-20193](https://ubuntu.com/security/CVE-2021-20193)
+    -   [CVE-2021-20193](https://ubuntu.com/security/CVE-2021-20193) <!-- low -->
 -   Crafted tar file could cause tar to consume an unbounded amount of memory
     -&gt; crash -&gt; DoS
 
@@ -135,8 +135,8 @@ LibreOffice and more.
 ### [[USN-5331-1](https://ubuntu.com/security/notices/USN-5331-1)] tcpdump vulnerabilities [08:12] {#usn-5331-1-tcpdump-vulnerabilities-08-12}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM)
-    -   [CVE-2020-8037](https://ubuntu.com/security/CVE-2020-8037)
-    -   [CVE-2018-16301](https://ubuntu.com/security/CVE-2018-16301)
+    -   [CVE-2020-8037](https://ubuntu.com/security/CVE-2020-8037) <!-- low -->
+    -   [CVE-2018-16301](https://ubuntu.com/security/CVE-2018-16301) <!-- low -->
 -   Buffer overflow in command-line argument parser - local attacker who can
     create a 4GB file and cause tcpdump to use this via the `-F` argument could
     cause a possible crash / RCE

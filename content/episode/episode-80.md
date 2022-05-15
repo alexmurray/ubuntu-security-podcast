@@ -7,9 +7,9 @@ description = """
   more.
   """
 date = 2020-06-25T15:21:00+09:30
-lastmod = 2020-06-25T15:36:48+09:30
+lastmod = 2022-05-15T18:06:35+09:30
 draft = false
-weight = 1001
+weight = 1080
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E080.mp3"
@@ -35,31 +35,31 @@ more.
 ### [[USN-4397-2](https://usn.ubuntu.com/4397-2/)] NSS vulnerability [00:40] {#usn-4397-2-nss-vulnerability-00-40}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-12399](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12399)
+    -   [CVE-2020-12399](https://ubuntu.com/security/CVE-2020-12399) <!-- medium -->
 -   [Episode 79](https://ubuntusecuritypodcast.org/episode-79/) - timing side-channel attack during DSA key generation
 
 
 ### [[USN-4399-1](https://usn.ubuntu.com/4399-1/)] Bind vulnerabilities [01:00] {#usn-4399-1-bind-vulnerabilities-01-00}
 
 -   2 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-8619](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8619)
-    -   [CVE-2020-8618](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8618)
+    -   [CVE-2020-8619](https://ubuntu.com/security/CVE-2020-8619) <!-- medium -->
+    -   [CVE-2020-8618](https://ubuntu.com/security/CVE-2020-8618) <!-- medium -->
 -   2 DoS issues (resulting from the ability to crash BIND) - an
     authoritative nameserver which provides entries containing asterisks
     could change entries and cause BIND to crash, also an attacker who can
     send crafted zone data to cause a zone transfer could trigger an
-    assertion failure -> crash
+    assertion failure -&gt; crash
 
 
 ### [[USN-4400-1](https://usn.ubuntu.com/4400-1/)] nfs-utils vulnerability [01:44] {#usn-4400-1-nfs-utils-vulnerability-01-44}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2019-3689](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3689)
+    -   [CVE-2019-3689](https://ubuntu.com/security/CVE-2019-3689) <!-- low -->
 -   /var/lib/nfs was writable by statd user - if this user were compromised
     could change then contents of this directory. This dir also contains
     files owned and managed by root (rmtab etc) - mountd uses rmtab and so
     since statd user can change this files contents, they could make mountd
-    create or overwrite other files on the system as root -> and so escalate
+    create or overwrite other files on the system as root -&gt; and so escalate
     privileges. Fixed to just make the few specific subdirectories owned by
     statd.
 
@@ -67,8 +67,8 @@ more.
 ### [[USN-4401-1](https://usn.ubuntu.com/4401-1/)] Mutt vulnerabilities [03:16] {#usn-4401-1-mutt-vulnerabilities-03-16}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-14154](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14154)
-    -   [CVE-2020-14093](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14093)
+    -   [CVE-2020-14154](https://ubuntu.com/security/CVE-2020-14154) <!-- low -->
+    -   [CVE-2020-14093](https://ubuntu.com/security/CVE-2020-14093) <!-- medium -->
 -   2 issues on handling of TLS connections for IMAP servers, could allow a
     middleperson attack since wouldn't properly do authentication of the
     network connection, and would proceed to connect even if a user chooses
@@ -79,8 +79,8 @@ more.
 ### [[USN-4402-1](https://usn.ubuntu.com/4402-1/)] curl vulnerabilities [04:06] {#usn-4402-1-curl-vulnerabilities-04-06}
 
 -   2 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-8177](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8177)
-    -   [CVE-2020-8169](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8169)
+    -   [CVE-2020-8177](https://ubuntu.com/security/CVE-2020-8177) <!-- medium -->
+    -   [CVE-2020-8169](https://ubuntu.com/security/CVE-2020-8169) <!-- medium -->
 -   Could be tricked to overwrite local files as
     specified by a malicious server when using the CLI arguments -i in
     combination with -J - -J is used to specify that the local filename
@@ -105,7 +105,7 @@ more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

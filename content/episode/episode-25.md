@@ -2,9 +2,9 @@
 title = "Episode 25"
 description = "Ghostscript is back to haunt us for another week, plus we look at vulnerabilities in ntfs-3g, snapd, firefox and more."
 date = 2019-03-25
-lastmod = 2020-05-15T16:40:12+09:30
+lastmod = 2022-05-15T18:07:18+09:30
 draft = false
-weight = 1050
+weight = 1135
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E025.mp3"
@@ -26,10 +26,10 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3911-1](https://usn.ubuntu.com/3911-1/)] file vulnerabilities {#usn-3911-1-file-vulnerabilities}
 
 -   4 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-8907](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8907)
-    -   [CVE-2019-8906](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8906)
-    -   [CVE-2019-8905](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8905)
-    -   [CVE-2019-8904](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8904)
+    -   [CVE-2019-8907](https://ubuntu.com/security/CVE-2019-8907)
+    -   [CVE-2019-8906](https://ubuntu.com/security/CVE-2019-8906)
+    -   [CVE-2019-8905](https://ubuntu.com/security/CVE-2019-8905)
+    -   [CVE-2019-8904](https://ubuntu.com/security/CVE-2019-8904)
 -   4 DoS (crash) found via fuzzing:
     -   Stack overflow in readelf
     -   2 different OOB read due to failure to NULL terminate a string before processing it
@@ -39,14 +39,14 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3906-2](https://usn.ubuntu.com/3906-2/)] LibTIFF vulnerabilities {#usn-3906-2-libtiff-vulnerabilities}
 
 -   8 CVEs addressed in Precise ESM
-    -   [CVE-2019-7663](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7663)
-    -   [CVE-2019-6128](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6128)
-    -   [CVE-2018-18557](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18557)
-    -   [CVE-2018-17101](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17101)
-    -   [CVE-2018-17100](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17100)
-    -   [CVE-2018-1710](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1710)
-    -   [CVE-2018-12900](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12900)
-    -   [CVE-2018-10779](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10779)
+    -   [CVE-2019-7663](https://ubuntu.com/security/CVE-2019-7663)
+    -   [CVE-2019-6128](https://ubuntu.com/security/CVE-2019-6128)
+    -   [CVE-2018-18557](https://ubuntu.com/security/CVE-2018-18557)
+    -   [CVE-2018-17101](https://ubuntu.com/security/CVE-2018-17101)
+    -   [CVE-2018-17100](https://ubuntu.com/security/CVE-2018-17100)
+    -   [CVE-2018-1710](https://ubuntu.com/security/CVE-2018-1710)
+    -   [CVE-2018-12900](https://ubuntu.com/security/CVE-2018-12900)
+    -   [CVE-2018-10779](https://ubuntu.com/security/CVE-2018-10779)
 -   Covered in [Episode 18](https://ubuntusecuritypodcast.org/episode-18/) and [Episode 24](https://ubuntusecuritypodcast.org/episode-24/) for standard Ubuntu releases (not
     all CVEs covered in those updates applicable to Precise ESM)
 
@@ -54,7 +54,7 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3912-1](https://usn.ubuntu.com/3912-1/)] GDK-PixBuf vulnerability {#usn-3912-1-gdk-pixbuf-vulnerability}
 
 -   1 CVEs addressed in Xenial
-    -   [CVE-2017-12447](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12447)
+    -   [CVE-2017-12447](https://ubuntu.com/security/CVE-2017-12447)
 -   Failure to properly validate BMP image palette parameters - leading to
     OOB when decoding colormap later on
 
@@ -62,13 +62,13 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3914-1](https://usn.ubuntu.com/3914-1/)] NTFS-3G vulnerability {#usn-3914-1-ntfs-3g-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-9755](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9755)
+    -   [CVE-2019-9755](https://ubuntu.com/security/CVE-2019-9755)
 -   Discovered recently by Chris Coulson during code-audit of ntfs-3g -
     actually had been fixed upstream late last year but no CVE assigned
 -   Heap buffer overflow able to be triggered when mounting a filesystem
-    onto a mount point with path name greater than PATH\_MAX, and from a
+    onto a mount point with path name greater than PATH_MAX, and from a
     current working directory which has a path name also greater than
-    PATH\_MAX
+    PATH_MAX
 -   Contents of buffers is attacker controlled so heap can be overflown
     with attacker controlled input - likely to leverage into arbitrary
     code execution
@@ -85,8 +85,8 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3915-1](https://usn.ubuntu.com/3915-1/)] Ghostscript vulnerabilities {#usn-3915-1-ghostscript-vulnerabilities}
 
 -   2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-3838](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3838)
-    -   [CVE-2019-3835](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3835)
+    -   [CVE-2019-3838](https://ubuntu.com/security/CVE-2019-3838)
+    -   [CVE-2019-3835](https://ubuntu.com/security/CVE-2019-3835)
 -   Similar to previous CVE, forceput operator could be extracted from the
     DefineResource method to allow access to the file-system outside of
     the -dSAFER sandbox
@@ -98,32 +98,32 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3913-1](https://usn.ubuntu.com/3913-1/)] P7ZIP vulnerabilities {#usn-3913-1-p7zip-vulnerabilities}
 
 -   2 CVEs addressed in Xenial
-    -   [CVE-2017-17969](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-17969)
-    -   [CVE-2016-2335](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-2335)
--   Heap based OOB write when decompressing a crafted ZIP file (crash -> DoS, possible code execution)
+    -   [CVE-2017-17969](https://ubuntu.com/security/CVE-2017-17969)
+    -   [CVE-2016-2335](https://ubuntu.com/security/CVE-2016-2335)
+-   Heap based OOB write when decompressing a crafted ZIP file (crash -&gt; DoS, possible code execution)
 -   Heap based OOB read when decompressing a UDF file (universal disk format - used for DVD images) - crash, DoS
 
 
 ### [[USN-3918-1](https://usn.ubuntu.com/3918-1/)] Firefox vulnerabilities {#usn-3918-1-firefox-vulnerabilities}
 
 -   17 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-9803](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803)
-    -   [CVE-2019-9793](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793)
-    -   [CVE-2019-9809](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809)
-    -   [CVE-2019-9808](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808)
-    -   [CVE-2019-9807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807)
-    -   [CVE-2019-9806](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806)
-    -   [CVE-2019-9805](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805)
-    -   [CVE-2019-9802](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802)
-    -   [CVE-2019-9799](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799)
-    -   [CVE-2019-9797](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797)
-    -   [CVE-2019-9796](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796)
-    -   [CVE-2019-9795](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795)
-    -   [CVE-2019-9792](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792)
-    -   [CVE-2019-9791](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791)
-    -   [CVE-2019-9790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790)
-    -   [CVE-2019-9789](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789)
-    -   [CVE-2019-9788](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788)
+    -   [CVE-2019-9803](https://ubuntu.com/security/CVE-2019-9803)
+    -   [CVE-2019-9793](https://ubuntu.com/security/CVE-2019-9793)
+    -   [CVE-2019-9809](https://ubuntu.com/security/CVE-2019-9809)
+    -   [CVE-2019-9808](https://ubuntu.com/security/CVE-2019-9808)
+    -   [CVE-2019-9807](https://ubuntu.com/security/CVE-2019-9807)
+    -   [CVE-2019-9806](https://ubuntu.com/security/CVE-2019-9806)
+    -   [CVE-2019-9805](https://ubuntu.com/security/CVE-2019-9805)
+    -   [CVE-2019-9802](https://ubuntu.com/security/CVE-2019-9802)
+    -   [CVE-2019-9799](https://ubuntu.com/security/CVE-2019-9799)
+    -   [CVE-2019-9797](https://ubuntu.com/security/CVE-2019-9797)
+    -   [CVE-2019-9796](https://ubuntu.com/security/CVE-2019-9796)
+    -   [CVE-2019-9795](https://ubuntu.com/security/CVE-2019-9795)
+    -   [CVE-2019-9792](https://ubuntu.com/security/CVE-2019-9792)
+    -   [CVE-2019-9791](https://ubuntu.com/security/CVE-2019-9791)
+    -   [CVE-2019-9790](https://ubuntu.com/security/CVE-2019-9790)
+    -   [CVE-2019-9789](https://ubuntu.com/security/CVE-2019-9789)
+    -   [CVE-2019-9788](https://ubuntu.com/security/CVE-2019-9788)
 -   Almost latest Firefox release (this is 66, 66.0.1 was released Friday after Pwn2Own
     last week so expect another Firefox update today or tomorrow)
     -   Multiple memory safety issues fixed, possible code execution as a result
@@ -131,7 +131,7 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
         successive dialogs, or conduct social engineering attacks against
         the user
     -   Possible information leak from parent to child process via IPC channels
-    -   Various UAFs, type-confusion etc -> memory corruption -> possible code execution
+    -   Various UAFs, type-confusion etc -&gt; memory corruption -&gt; possible code execution
     -   Incorrect bounds checking on JS objects IF Spectre mitigations
         disabled (these are enabled by default so user would have to
         explicitly disable them)
@@ -141,7 +141,7 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3917-1](https://usn.ubuntu.com/3917-1/)] snapd vulnerability {#usn-3917-1-snapd-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-7303](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7303)
+    -   [CVE-2019-7303](https://ubuntu.com/security/CVE-2019-7303)
 -   Jann Horn reported the seccomp blacklist for TIOCSTI can be bypassed
 -   snapd creates a seccomp filter for each snap which is designed to
     block TIOCSTI (as this can be used to fake input to other processes
@@ -164,13 +164,13 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ### [[USN-3916-1](https://usn.ubuntu.com/3916-1/)] libsolv vulnerabilities {#usn-3916-1-libsolv-vulnerabilities}
 
 -   3 CVEs addressed in Cosmic
-    -   [CVE-2018-20534](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20534)
-    -   [CVE-2018-20533](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20533)
-    -   [CVE-2018-20532](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20532)
+    -   [CVE-2018-20534](https://ubuntu.com/security/CVE-2018-20534)
+    -   [CVE-2018-20533](https://ubuntu.com/security/CVE-2018-20533)
+    -   [CVE-2018-20532](https://ubuntu.com/security/CVE-2018-20532)
 -   Dependency solver used by packaging systems to resolve dependencies
     between packages etc
 -   2 NULL pointer dereferences and 1 invalid memory read due to
-    mishandling of variable length function arguments - all crash -> DoS
+    mishandling of variable length function arguments - all crash -&gt; DoS
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -192,5 +192,5 @@ Ghostscript is back to haunt us for another week, plus we look at vulnerabilitie
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

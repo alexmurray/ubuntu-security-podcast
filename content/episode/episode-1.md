@@ -2,9 +2,9 @@
 title = "Episode 1"
 description = "Another week, another speculative execution vulnerablity... and more!"
 date = 2018-08-20
-lastmod = 2020-05-15T16:41:10+09:30
+lastmod = 2022-05-15T18:07:37+09:30
 draft = false
-weight = 1074
+weight = 1159
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E001.mp3"
@@ -21,7 +21,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
 
 
-### GDM ([USN-3737-1](https://usn.ubuntu.com/3737-1/)) ([CVE-2018-14424](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14424)) {#gdm--usn-3737-1----cve-2018-14424}
+### GDM ([USN-3737-1](https://usn.ubuntu.com/3737-1/)) ([CVE-2018-14424](https://ubuntu.com/security/CVE-2018-14424)) {#gdm--usn-3737-1----cve-2018-14424}
 
 -   Found by Ubuntu Security Team member Chris Coulson during audit of gdm3 source code
 -   Local user can exploit via DBus to crash GDM via use-after-free (create a transient display which is automatically cleaned up, then try to query info for the previously created display)
@@ -31,22 +31,22 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 ### libarchive ([USN-3736-1](https://usn.ubuntu.com/3736-1/)) {#libarchive--usn-3736-1}
 
 -   6 CVEs addressed across Bionic, Xenial and Trusty
-    -   [CVE-2016-10209](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10209)
-    -   [CVE-2016-10349](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10349)
-    -   [CVE-2016-10350](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10350)
-    -   [CVE-2017-14166](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14166)
-    -   [CVE-2017-14501](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14501)
-    -   [CVE-2017-14503](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-14503)
+    -   [CVE-2016-10209](https://ubuntu.com/security/CVE-2016-10209)
+    -   [CVE-2016-10349](https://ubuntu.com/security/CVE-2016-10349)
+    -   [CVE-2016-10350](https://ubuntu.com/security/CVE-2016-10350)
+    -   [CVE-2017-14166](https://ubuntu.com/security/CVE-2017-14166)
+    -   [CVE-2017-14501](https://ubuntu.com/security/CVE-2017-14501)
+    -   [CVE-2017-14503](https://ubuntu.com/security/CVE-2017-14503)
 -   All local crashes / DoS / unspecified impact via specially crafted archives in various formats
 
 
 ### Samba ([USN-3738-1](https://usn.ubuntu.com/3738-1/)) {#samba--usn-3738-1}
 
 -   4 CVEs addressed across Bionic, Xenial and Trusty
-    -   [CVE-2018-10858](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10858)
-    -   [CVE-2018-10918](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10918)
-    -   [CVE-2018-10919](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10919)
-    -   [CVE-2018-1139](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1139)
+    -   [CVE-2018-10858](https://ubuntu.com/security/CVE-2018-10858)
+    -   [CVE-2018-10918](https://ubuntu.com/security/CVE-2018-10918)
+    -   [CVE-2018-10919](https://ubuntu.com/security/CVE-2018-10919)
+    -   [CVE-2018-1139](https://ubuntu.com/security/CVE-2018-1139)
 -   Includes vulnerabilities in both the samba client and server
     -   Likely to affect most Ubuntu users
 
@@ -56,18 +56,18 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 -   XML parsing library used across lots of different software packages
 -   5 CVEs fixed across releases for Bionic, Xenial and Trusty
     -   2 CVEs fixed for Precise ESM
-    -   [CVE-2016-9318](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-9318)
-    -   [CVE-2017-16932](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-16932)
-    -   [CVE-2017-18258](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18258)
-    -   [CVE-2018-14404](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14404)
-    -   [CVE-2018-14567](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14567)
+    -   [CVE-2016-9318](https://ubuntu.com/security/CVE-2016-9318)
+    -   [CVE-2017-16932](https://ubuntu.com/security/CVE-2017-16932)
+    -   [CVE-2017-18258](https://ubuntu.com/security/CVE-2017-18258)
+    -   [CVE-2018-14404](https://ubuntu.com/security/CVE-2018-14404)
+    -   [CVE-2018-14567](https://ubuntu.com/security/CVE-2018-14567)
 -   Includes information disclosure and DoS
 
 
 ### L1TF and FragmentSmack vulnerabilities in Linux Kernel ([USN-3740-1](https://usn.ubuntu.com/3740-1/)) ([USN-3740-2](https://usn.ubuntu.com/3740-2/)) ([USN-3741-1](https://usn.ubuntu.com/3741-1/)) ([USN-3741-2](https://usn.ubuntu.com/3741-2/)) ([USN-3742-1](https://usn.ubuntu.com/3742-1/)) ([USN-3742-2](https://usn.ubuntu.com/3742-2/)) {#l1tf-and-fragmentsmack-vulnerabilities-in-linux-kernel--usn-3740-1----usn-3740-2----usn-3741-1----usn-3741-2----usn-3742-1----usn-3742-2}
 
 
-#### L1TF ([CVE-2018-3620](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3620)) ([CVE-2018-3646](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-3646)) {#l1tf--cve-2018-3620----cve-2018-3646}
+#### L1TF ([CVE-2018-3620](https://ubuntu.com/security/CVE-2018-3620)) ([CVE-2018-3646](https://ubuntu.com/security/CVE-2018-3646)) {#l1tf--cve-2018-3620----cve-2018-3646}
 
 -   Latest speculative execution cache side channel attack affecting Intel processors
 -   Allows to access contents from L1 Data Cache via speculative execution,  can then be read by cache side channel
@@ -86,14 +86,14 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 -   So if have different trust domains on sibling hyper-threads may have to disable HT in certain circumstances
 
 
-#### FragmentSmack ([CVE-2018-5391](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5391)) {#fragmentsmack--cve-2018-5391}
+#### FragmentSmack ([CVE-2018-5391](https://ubuntu.com/security/CVE-2018-5391)) {#fragmentsmack--cve-2018-5391}
 
 -   Last week was SegmentSmack in TCP fragment reassembly, this week is FragmentSmack
 -   Similar but for IP fragmentation reassembly
     -   Exploiting high algorithmic complexity of IP fragment reassembly code paths to cause DoS
 
 
-### GnuPG ([USN-3733-2](https://usn.ubuntu.com/3733-2/)) ([CVE-2017-7526](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526)) {#gnupg--usn-3733-2----cve-2017-7526}
+### GnuPG ([USN-3733-2](https://usn.ubuntu.com/3733-2/)) ([CVE-2017-7526](https://ubuntu.com/security/CVE-2017-7526)) {#gnupg--usn-3733-2----cve-2017-7526}
 
 -   Last week GnuPG was fixed for Xenial and Trusty for RSA cache side-channel issue
 -   This is corresponding fix for Precise ESM
@@ -102,24 +102,24 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 ### WebKitGTK+ vulnerabilities ([USN-3743-1](https://usn.ubuntu.com/3743-1/)) {#webkitgtk-plus-vulnerabilities--usn-3743-1}
 
 -   14 CVEs fixed in web content renderer used in many desktop apps
-    -   [CVE-2018-12911](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12911)
-    -   [CVE-2018-4246](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4246)
-    -   [CVE-2018-4261](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4261)
-    -   [CVE-2018-4262](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4262)
-    -   [CVE-2018-4263](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4263)
-    -   [CVE-2018-4264](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4264)
-    -   [CVE-2018-4265](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4265)
-    -   [CVE-2018-4266](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4266)
-    -   [CVE-2018-4267](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4267)
-    -   [CVE-2018-4270](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4270)
-    -   [CVE-2018-4272](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4272)
-    -   [CVE-2018-4273](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4273)
-    -   [CVE-2018-4278](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4278)
-    -   [CVE-2018-4284](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-4284)
+    -   [CVE-2018-12911](https://ubuntu.com/security/CVE-2018-12911)
+    -   [CVE-2018-4246](https://ubuntu.com/security/CVE-2018-4246)
+    -   [CVE-2018-4261](https://ubuntu.com/security/CVE-2018-4261)
+    -   [CVE-2018-4262](https://ubuntu.com/security/CVE-2018-4262)
+    -   [CVE-2018-4263](https://ubuntu.com/security/CVE-2018-4263)
+    -   [CVE-2018-4264](https://ubuntu.com/security/CVE-2018-4264)
+    -   [CVE-2018-4265](https://ubuntu.com/security/CVE-2018-4265)
+    -   [CVE-2018-4266](https://ubuntu.com/security/CVE-2018-4266)
+    -   [CVE-2018-4267](https://ubuntu.com/security/CVE-2018-4267)
+    -   [CVE-2018-4270](https://ubuntu.com/security/CVE-2018-4270)
+    -   [CVE-2018-4272](https://ubuntu.com/security/CVE-2018-4272)
+    -   [CVE-2018-4273](https://ubuntu.com/security/CVE-2018-4273)
+    -   [CVE-2018-4278](https://ubuntu.com/security/CVE-2018-4278)
+    -   [CVE-2018-4284](https://ubuntu.com/security/CVE-2018-4284)
 -   Fixes for Bionic and Xenial
 
 
-### PostgreSQL ([USN-3744-1](https://usn.ubuntu.com/3744-1/)) ([CVE-2018-10915](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10915)) ([CVE-2018-10925](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10925)) {#postgresql--usn-3744-1----cve-2018-10915----cve-2018-10925}
+### PostgreSQL ([USN-3744-1](https://usn.ubuntu.com/3744-1/)) ([CVE-2018-10915](https://ubuntu.com/security/CVE-2018-10915)) ([CVE-2018-10925](https://ubuntu.com/security/CVE-2018-10925)) {#postgresql--usn-3744-1----cve-2018-10915----cve-2018-10925}
 
 -   2 CVEs fixed in popular relational database across Bionic, Xenial and Trusty
 
@@ -127,9 +127,9 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 ### procps-ng ([USN-3658-3](https://usn.ubuntu.com/3658-3/)) {#procps-ng--usn-3658-3}
 
 -   3 CVEs fixed in Precise ESM procps-ng package
-    -   [CVE-2018-1122](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1122)
-    -   [CVE-2018-1123](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1123)
-    -   [CVE-2018-1125](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1125)
+    -   [CVE-2018-1122](https://ubuntu.com/security/CVE-2018-1122)
+    -   [CVE-2018-1123](https://ubuntu.com/security/CVE-2018-1123)
+    -   [CVE-2018-1125](https://ubuntu.com/security/CVE-2018-1125)
 
 
 ### Linux kernel livepatch (LSN-0042-1) {#linux-kernel-livepatch--lsn-0042-1}
@@ -156,8 +156,8 @@ permalink = "https://ubuntusecuritypodcast.org/episode-1/"
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)
 
 
 ## Special thanks {#special-thanks}

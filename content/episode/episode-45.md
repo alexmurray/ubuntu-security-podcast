@@ -2,9 +2,9 @@
 title = "Episode 45"
 description = "This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more."
 date = 2019-09-04T21:25:00+09:30
-lastmod = 2020-05-15T16:39:23+09:30
+lastmod = 2022-05-15T18:07:02+09:30
 draft = false
-weight = 1030
+weight = 1115
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E045.mp3"
@@ -27,7 +27,7 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[USN-4110-1](https://usn.ubuntu.com/4110-1/), [USN-4110-2](https://usn.ubuntu.com/4110-2/)] Dovecot vulnerability [00:52] {#usn-4110-1-usn-4110-2-dovecot-vulnerability-00-52}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-11500](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11500)
+    -   [CVE-2019-11500](https://ubuntu.com/security/CVE-2019-11500)
 -   IMAP and ManageSieve protocol parsers would not check for embedded NUL bytes in strings
     -   When parsing these strings, would return indexes outside the normal
         string bounds as the first character which needed unescaping
@@ -42,7 +42,7 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[USN-4110-3](https://usn.ubuntu.com/4110-3/), USN-4110-4] Dovecot regression [02:08] {#usn-4110-3-usn-4110-4-dovecot-regression-02-08}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-11500](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11500)
+    -   [CVE-2019-11500](https://ubuntu.com/security/CVE-2019-11500)
 -   Original patch used pre-release version of the fix from upstream which
     contained an error such that the checking of NUL bytes was skipped -
     re-released with correct final upstream fix
@@ -51,15 +51,15 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[LSN-0054-1](https://lists.ubuntu.com/archives/ubuntu-security-announce/2019-August/005085.html)] Linux kernel vulnerability [02:38] {#lsn-0054-1-linux-kernel-vulnerability-02-38}
 
 -   9 CVEs addressed in Xenial, Bionic
-    -   [CVE-2018-1129](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1129)
-    -   [CVE-2019-13272](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-13272)
-    -   [CVE-2019-12984](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12984)
-    -   [CVE-2019-12819](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12819)
-    -   [CVE-2019-12818](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12818)
-    -   [CVE-2019-12614](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12614)
-    -   [CVE-2019-10126](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10126)
-    -   [CVE-2019-3846](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3846)
-    -   [CVE-2019-2101](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2101)
+    -   [CVE-2018-1129](https://ubuntu.com/security/CVE-2018-1129)
+    -   [CVE-2019-13272](https://ubuntu.com/security/CVE-2019-13272)
+    -   [CVE-2019-12984](https://ubuntu.com/security/CVE-2019-12984)
+    -   [CVE-2019-12819](https://ubuntu.com/security/CVE-2019-12819)
+    -   [CVE-2019-12818](https://ubuntu.com/security/CVE-2019-12818)
+    -   [CVE-2019-12614](https://ubuntu.com/security/CVE-2019-12614)
+    -   [CVE-2019-10126](https://ubuntu.com/security/CVE-2019-10126)
+    -   [CVE-2019-3846](https://ubuntu.com/security/CVE-2019-3846)
+    -   [CVE-2019-2101](https://ubuntu.com/security/CVE-2019-2101)
 -   Livepatch for CVEs addressed in regular kernel updates ([Episode 43](https://ubuntusecuritypodcast.org/episode-43/))
     -   ptrace credentials race, Marvell Wifi heap-buffer overflows, NULL
         pointer dereferences
@@ -68,10 +68,10 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[USN-4111-1](https://usn.ubuntu.com/4111-1/)] Ghostscript vulnerabilities [03:20] {#usn-4111-1-ghostscript-vulnerabilities-03-20}
 
 -   4 CVEs addressed in Xenial, Bionic, Disco
-    -   [CVE-2019-14817](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14817)
-    -   [CVE-2019-14813](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14813)
-    -   [CVE-2019-14812](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14812)
-    -   [CVE-2019-14811](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14811)
+    -   [CVE-2019-14817](https://ubuntu.com/security/CVE-2019-14817)
+    -   [CVE-2019-14813](https://ubuntu.com/security/CVE-2019-14813)
+    -   [CVE-2019-14812](https://ubuntu.com/security/CVE-2019-14812)
+    -   [CVE-2019-14811](https://ubuntu.com/security/CVE-2019-14811)
 -   Four more -dSAFER sandbox bypasses (see [Episode 43](https://ubuntusecuritypodcast.org/episode-43/) for the last one)
 -   All variations on the theme of using the .forceput operator to escape the
     sandbox
@@ -80,7 +80,7 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[USN-4112-1](https://usn.ubuntu.com/4112-1/)] Ceph vulnerability [04:01] {#usn-4112-1-ceph-vulnerability-04-01}
 
 -   1 CVEs addressed in Bionic, Disco
-    -   [CVE-2019-10222](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10222)
+    -   [CVE-2019-10222](https://ubuntu.com/security/CVE-2019-10222)
 -   DoS - unauthenticated clients can crash the rados gateway by
     disconnecting at certain time (triggering a NULL pointer deference when
     looking up the remote address for a connected client)
@@ -92,19 +92,19 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ### [[USN-4113-1](https://usn.ubuntu.com/4113-1/)] Apache HTTP Server vulnerabilities [04:41] {#usn-4113-1-apache-http-server-vulnerabilities-04-41}
 
 -   7 CVEs addressed in Xenial, Bionic, Disco
-    -   [CVE-2019-9517](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9517)
-    -   [CVE-2019-10098](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10098)
-    -   [CVE-2019-10097](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10097)
-    -   [CVE-2019-10092](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10092)
-    -   [CVE-2019-10082](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10082)
-    -   [CVE-2019-10081](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10081)
-    -   [CVE-2019-0197](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0197)
+    -   [CVE-2019-9517](https://ubuntu.com/security/CVE-2019-9517)
+    -   [CVE-2019-10098](https://ubuntu.com/security/CVE-2019-10098)
+    -   [CVE-2019-10097](https://ubuntu.com/security/CVE-2019-10097)
+    -   [CVE-2019-10092](https://ubuntu.com/security/CVE-2019-10092)
+    -   [CVE-2019-10082](https://ubuntu.com/security/CVE-2019-10082)
+    -   [CVE-2019-10081](https://ubuntu.com/security/CVE-2019-10081)
+    -   [CVE-2019-0197](https://ubuntu.com/security/CVE-2019-0197)
 
 -   HTTP/2 DoS issue (Internal Data Buffering) - [Episode 43](https://ubuntusecuritypodcast.org/episode-43/) for nginx
     -   <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/http2>
--   Open redirect in mod\_rewrite if have self-referential redirects
--   Stack buffer overflow + NULL pointer dereference in mod\_remoteip
--   Possible XSS in mod\_proxy where the link shown on error pages could be
+-   Open redirect in mod_rewrite if have self-referential redirects
+-   Stack buffer overflow + NULL pointer dereference in mod_remoteip
+-   Possible XSS in mod_proxy where the link shown on error pages could be
     controlled by an attacker - but only possible where configured with
     proxying enable but misconfigured so that Proxy Error page is shown.
 -   UAF (read) during HTTP/2 connection shutdown
@@ -136,5 +136,5 @@ This week we look at security updates for Dovecot, Ghostscript, a livepatch upda
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -6,9 +6,9 @@ description = """
   mod-auth-mellon and more.
   """
 date = 2021-09-10T14:21:00+09:30
-lastmod = 2021-09-10T14:22:09+09:30
+lastmod = 2022-05-15T18:05:57+09:30
 draft = false
-weight = 1001
+weight = 1030
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E130.mp3"
@@ -33,7 +33,7 @@ mod-auth-mellon and more.
 ### [[USN-5051-4](https://ubuntu.com/security/notices/USN-5051-4)] OpenSSL regression [00:51] {#usn-5051-4-openssl-regression-00-51}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712)
+    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712) <!-- medium -->
 -   [Episode 129](https://ubuntusecuritypodcast.org/episode-129/)
 -   Original backport of patch contained a typo which introduced a regression
     where ASN1_STRINGs would fail to print in some cases
@@ -42,18 +42,18 @@ mod-auth-mellon and more.
 ### [[USN-5062-1](https://ubuntu.com/security/notices/USN-5062-1)] Linux kernel vulnerability [01:20] {#usn-5062-1-linux-kernel-vulnerability-01-20}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
 -   AMD specific issue in KVM subsystem with nested virtualisation - would
     fail to validate particular operations which could be performed by a
     guest VM - in this case would allow a guest to enable the Advanced
     Virtual Interrupt Controller for a nested VM (ie L2 VM) - this would then
-    allow the L2 VM to write to host memory -> code execution on the host
+    allow the L2 VM to write to host memory -&gt; code execution on the host
 
 
 ### [[USN-5063-1](https://ubuntu.com/security/notices/USN-5063-1)] HAProxy vulnerabilities [02:40] {#usn-5063-1-haproxy-vulnerabilities-02-40}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-40346](https://ubuntu.com/security/CVE-2021-40346)
+    -   [CVE-2021-40346](https://ubuntu.com/security/CVE-2021-40346) <!-- medium -->
 -   Integer overflow in handling of header name lengths - most significant
     bit of header **name** length could slip into the LSB of header **value**
     length - could then craft a valid request that would inject a dummy
@@ -66,8 +66,8 @@ mod-auth-mellon and more.
 ### [[USN-5064-1](https://ubuntu.com/security/notices/USN-5064-1)] GNU cpio vulnerability [04:13] {#usn-5064-1-gnu-cpio-vulnerability-04-13}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38185](https://ubuntu.com/security/CVE-2021-38185)
--   Integer overflow -> heap buffer overflow in the handling of pattern
+    -   [CVE-2021-38185](https://ubuntu.com/security/CVE-2021-38185) <!-- medium -->
+-   Integer overflow -&gt; heap buffer overflow in the handling of pattern
     files - this allows to specify a file which contains a list of patterns
     to match against filenames in the cpio archive which should be
     extracted - is not clear if can easily abuse this as a remote attacker
@@ -78,15 +78,15 @@ mod-auth-mellon and more.
 ### [[USN-5065-1](https://ubuntu.com/security/notices/USN-5065-1)] Open vSwitch vulnerability [05:08] {#usn-5065-1-open-vswitch-vulnerability-05-08}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-36980](https://ubuntu.com/security/CVE-2021-36980)
--   UAF in decoding of RAW_ENCAP actions - remote attacker could craft one ->
+    -   [CVE-2021-36980](https://ubuntu.com/security/CVE-2021-36980) <!-- medium -->
+-   UAF in decoding of RAW_ENCAP actions - remote attacker could craft one -&gt;
     crash / RCE..?
 
 
 ### [[USN-5066-1](https://ubuntu.com/security/notices/USN-5066-1), [USN-5066-2](https://ubuntu.com/security/notices/USN-5066-2)] PySAML2 vulnerability [05:39] {#usn-5066-1-usn-5066-2-pysaml2-vulnerability-05-39}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-21239](https://ubuntu.com/security/CVE-2021-21239)
+    -   [CVE-2021-21239](https://ubuntu.com/security/CVE-2021-21239) <!-- medium -->
 -   pysaml2 uses xmlsec1 binary to validate cryptographic signatures on SAML
     documents
 -   By default xmlsec will accept any type of key found in the document to
@@ -100,10 +100,10 @@ mod-auth-mellon and more.
 ### [[USN-5067-1](https://ubuntu.com/security/notices/USN-5067-1)] SSSD vulnerabilities [07:06] {#usn-5067-1-sssd-vulnerabilities-07-06}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3621](https://ubuntu.com/security/CVE-2021-3621)
-    -   [CVE-2019-3811](https://ubuntu.com/security/CVE-2019-3811)
-    -   [CVE-2018-16838](https://ubuntu.com/security/CVE-2018-16838)
-    -   [CVE-2018-10852](https://ubuntu.com/security/CVE-2018-10852)
+    -   [CVE-2021-3621](https://ubuntu.com/security/CVE-2021-3621) <!-- medium -->
+    -   [CVE-2019-3811](https://ubuntu.com/security/CVE-2019-3811) <!-- low -->
+    -   [CVE-2018-16838](https://ubuntu.com/security/CVE-2018-16838) <!-- low -->
+    -   [CVE-2018-10852](https://ubuntu.com/security/CVE-2018-10852) <!-- low -->
 -   Possible shell command injection via the sssctl binary using the
     logs-fetch and cache-expire subcommands - if could trick root into
     running crafted commands could then get root... - was as a result of
@@ -118,7 +118,7 @@ mod-auth-mellon and more.
 ### [[USN-5069-1](https://ubuntu.com/security/notices/USN-5069-1)] mod-auth-mellon vulnerability [08:54] {#usn-5069-1-mod-auth-mellon-vulnerability-08-54}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3639](https://ubuntu.com/security/CVE-2021-3639)
+    -   [CVE-2021-3639](https://ubuntu.com/security/CVE-2021-3639) <!-- medium -->
 -   SAML2 auth module for Apache
 -   Failed to filter URLS that start with `///` - an attacker could craft a URL
     that specified a particular URL via the `ReturnTo` parameter and this would
@@ -138,11 +138,11 @@ mod-auth-mellon and more.
 ### [[USN-5068-1](https://ubuntu.com/security/notices/USN-5068-1)] GD library vulnerabilities [10:24] {#usn-5068-1-gd-library-vulnerabilities-10-24}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38115](https://ubuntu.com/security/CVE-2021-38115)
-    -   [CVE-2021-40145](https://ubuntu.com/security/CVE-2021-40145)
+    -   [CVE-2021-38115](https://ubuntu.com/security/CVE-2021-38115) <!-- low -->
+    -   [CVE-2021-40145](https://ubuntu.com/security/CVE-2021-40145) <!-- medium -->
     -   [CVE-2021-381](https://ubuntu.com/security/CVE-2021-381) <!--  -->
-    -   [CVE-2017-6363](https://ubuntu.com/security/CVE-2017-6363)
--   Crafted image files -> OOB read / write - crash / code exec
+    -   [CVE-2017-6363](https://ubuntu.com/security/CVE-2017-6363) <!-- low -->
+-   Crafted image files -&gt; OOB read / write - crash / code exec
 -   One in TGA handling but others in the proprietary GD/GD2 formats which
     upstream say is now deprecated so shouldn't get a CVE - recommend if you
     are processing GD/GD2 image files from untrusted sources that you stop as
@@ -204,4 +204,4 @@ mod-auth-mellon and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

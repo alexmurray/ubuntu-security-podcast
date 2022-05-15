@@ -6,9 +6,9 @@ description = """
   Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
   """
 date = 2019-03-19
-lastmod = 2020-05-15T16:40:14+09:30
+lastmod = 2022-05-15T18:07:19+09:30
 draft = false
-weight = 1051
+weight = 1136
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E024.mp3"
@@ -32,22 +32,22 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ### [[USN-3905-1](https://usn.ubuntu.com/3905-1/)] poppler vulnerability {#usn-3905-1-poppler-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-9200](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9200)
+    -   [CVE-2019-9200](https://ubuntu.com/security/CVE-2019-9200)
 -   Heap-based buffer underwrite (index into array using negative index) -
     write into heap memory which preceeds the intended buffer - heap
-    corruption - crash -> DoS, possible code execution
+    corruption - crash -&gt; DoS, possible code execution
 -   Found by fuzzing and AddressSanitizer in clang
 
 
 ### [[USN-3906-1](https://usn.ubuntu.com/3906-1/)] LibTIFF vulnerabilities {#usn-3906-1-libtiff-vulnerabilities}
 
 -   6 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-7663](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7663)
-    -   [CVE-2019-6128](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6128)
-    -   [CVE-2018-19210](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19210)
-    -   [CVE-2018-17000](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17000)
-    -   [CVE-2018-12900](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12900)
-    -   [CVE-2018-10779](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-10779)
+    -   [CVE-2019-7663](https://ubuntu.com/security/CVE-2019-7663)
+    -   [CVE-2019-6128](https://ubuntu.com/security/CVE-2019-6128)
+    -   [CVE-2018-19210](https://ubuntu.com/security/CVE-2018-19210)
+    -   [CVE-2018-17000](https://ubuntu.com/security/CVE-2018-17000)
+    -   [CVE-2018-12900](https://ubuntu.com/security/CVE-2018-12900)
+    -   [CVE-2018-10779](https://ubuntu.com/security/CVE-2018-10779)
 -   All DoS, one possible code-execution:
     -   Dereference of an invalid address (read from invalid memory location)
     -   Heap buffer overread
@@ -59,7 +59,7 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ### [[USN-3907-1](https://usn.ubuntu.com/3907-1/)] WALinuxAgent vulnerability {#usn-3907-1-walinuxagent-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-0804](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0804)
+    -   [CVE-2019-0804](https://ubuntu.com/security/CVE-2019-0804)
 -   WALinuxAgent used to manage instances of Ubuntu (and other Linux
     distributions) running on Azure
 -   Can be used to configure swap space for a given image
@@ -73,10 +73,10 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ### [[USN-3902-2](https://usn.ubuntu.com/3902-2/)] PHP vulnerabilities {#usn-3902-2-php-vulnerabilities}
 
 -   4 CVEs addressed in Precise ESM
-    -   [CVE-2019-9023](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9023)
-    -   [CVE-2019-9021](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9021)
-    -   [CVE-2019-9024](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9024)
-    -   [CVE-2019-9020](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9020)
+    -   [CVE-2019-9023](https://ubuntu.com/security/CVE-2019-9023)
+    -   [CVE-2019-9021](https://ubuntu.com/security/CVE-2019-9021)
+    -   [CVE-2019-9024](https://ubuntu.com/security/CVE-2019-9024)
+    -   [CVE-2019-9020](https://ubuntu.com/security/CVE-2019-9020)
 -   See last week's [Episode 23](https://ubuntusecuritypodcast.org/episode-23/) - discussed for Xenial and Trusty - fixed
     now for Precise ESM as well
 
@@ -84,28 +84,28 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ### [[USN-3910-1](https://usn.ubuntu.com/3910-1/), [USN-3910-2](https://usn.ubuntu.com/3910-2/)] Linux kernel vulnerabilities {#usn-3910-1-usn-3910-2-linux-kernel-vulnerabilities}
 
 -   5 CVEs addressed in Xenial and Trusty (Xenial HWE)
-    -   [CVE-2019-6133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133)
-    -   [CVE-2018-7740](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-7740)
-    -   [CVE-2018-19985](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19985)
-    -   [CVE-2018-1120](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1120)
-    -   [CVE-2017-18241](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-18241)
+    -   [CVE-2019-6133](https://ubuntu.com/security/CVE-2019-6133)
+    -   [CVE-2018-7740](https://ubuntu.com/security/CVE-2018-7740)
+    -   [CVE-2018-19985](https://ubuntu.com/security/CVE-2018-19985)
+    -   [CVE-2018-1120](https://ubuntu.com/security/CVE-2018-1120)
+    -   [CVE-2017-18241](https://ubuntu.com/security/CVE-2017-18241)
 -   2 of these discussed in previous episodes [Episode 23](https://ubuntusecuritypodcast.org/episode-23/) (PolicyKit start
     time, DoS via mmaping a FUSE-backed file into processes memory
     containing command-line args)
--   Trigger of BUG\_ON() in kernel (like assert() for kernel code) due to
-    integer overflow from large pgoff parameter to remap\_file\_pages() when
-    used in conjuction with an existing mmap() -> crash -> DoS
+-   Trigger of BUG_ON() in kernel (like assert() for kernel code) due to
+    integer overflow from large pgoff parameter to remap_file_pages() when
+    used in conjuction with an existing mmap() -&gt; crash -&gt; DoS
 -   OOB read in USB driver for Option High Speed mobile devices - would
     read a descriptor from the USB device as a u8 and then index into an
     array with this without checking whether it fell within the array
--   NULL pointer dereference in f2fs driver via use of noflush\_merge mount
+-   NULL pointer dereference in f2fs driver via use of noflush_merge mount
     option
 
 
 ### [[USN-3908-1](https://usn.ubuntu.com/3908-1/), [USN-3908-2](https://usn.ubuntu.com/3908-2/)] Linux kernel vulnerability {#usn-3908-1-usn-3908-2-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Trusty and Precise ESM (Trusty HWE)
-    -   [CVE-2019-6133](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6133)
+    -   [CVE-2019-6133](https://ubuntu.com/security/CVE-2019-6133)
 -   See last week's [Episode 23](https://ubuntusecuritypodcast.org/episode-23/) - discussed for Bionic kernel - now for
     Trusty kernel (and the Trusty HWE kernel backported to Precise ESM)
     -   PolicyKit start time issue, fixed in kernel
@@ -114,9 +114,9 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ### [[USN-3909-1](https://usn.ubuntu.com/3909-1/)] libvirt vulnerability {#usn-3909-1-libvirt-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-3840](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3840)
+    -   [CVE-2019-3840](https://ubuntu.com/security/CVE-2019-3840)
 -   NULL pointer dereference in libvirt if agent does not reply in time
-    (say guest is being shutdown) - crash host libvirt -> DoS
+    (say guest is being shutdown) - crash host libvirt -&gt; DoS
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -157,5 +157,5 @@ Ubuntu hardening and the launch of Ubuntu 14.04 ESM.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

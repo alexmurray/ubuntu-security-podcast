@@ -2,9 +2,9 @@
 title = "Episode 38"
 description = "This week we look at the latest security updates for the Linux kernel, Firefox, ImageMagick, OpenStack and more, plus we have a special guest, the maintainer and lead developer of the AppArmor project, John Johansen, to talk about the project and some of the upcoming features."
 date = 2019-07-02T17:00:00+09:30
-lastmod = 2020-05-15T16:39:40+09:30
+lastmod = 2022-05-15T18:07:08+09:30
 draft = false
-weight = 1037
+weight = 1122
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E038.mp3"
@@ -26,7 +26,7 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4031-1](https://usn.ubuntu.com/4031-1/)] Linux kernel vulnerability {#usn-4031-1-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-12817](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12817)
+    -   [CVE-2019-12817](https://ubuntu.com/security/CVE-2019-12817)
 -   64-bit PowerPC (ppc64el) memory management issue - introduced in the 4.17
     kernel - so only affects Cosmic/Disco or Bionic when using the HWE kernel
 -   Different processes might be able to read / write to each others virtual
@@ -53,7 +53,7 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4032-1](https://usn.ubuntu.com/4032-1/)] Firefox vulnerability {#usn-4032-1-firefox-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11708](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11708)
+    -   [CVE-2019-11708](https://ubuntu.com/security/CVE-2019-11708)
 -   Firefox 67.0.4 - latest upstream release
 -   Possible for a sandboxed child process to escape the sandbox by using IPC
     to send a Prompt:Open message to the parent which would then process
@@ -66,47 +66,47 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4033-1](https://usn.ubuntu.com/4033-1/)] libmysofa vulnerability {#usn-4033-1-libmysofa-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-10672](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10672)
+    -   [CVE-2019-10672](https://ubuntu.com/security/CVE-2019-10672)
 -   C library to read SOFA (Spatially Oriented Format for Acoustics) files
     -   Used by lots of different applications that handle audio, like
         gstreamer, ffmpeg, smplayer, blender etc
--   Integer overflow leading to buffer overflow - crash -> DoS or possible
+-   Integer overflow leading to buffer overflow - crash -&gt; DoS or possible
     code-execution
 
 
 ### [[USN-4034-1](https://usn.ubuntu.com/4034-1/)] ImageMagick vulnerabilities {#usn-4034-1-imagemagick-vulnerabilities}
 
 -   30 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-9956](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9956)
-    -   [CVE-2019-7398](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7398)
-    -   [CVE-2019-7397](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7397)
-    -   [CVE-2019-7396](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7396)
-    -   [CVE-2019-7395](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7395)
-    -   [CVE-2019-7175](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7175)
-    -   [CVE-2019-11598](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11598)
-    -   [CVE-2019-11597](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11597)
-    -   [CVE-2019-11472](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11472)
-    -   [CVE-2019-11470](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11470)
-    -   [CVE-2019-10650](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10650)
-    -   [CVE-2019-10649](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10649)
-    -   [CVE-2019-10131](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10131)
-    -   [CVE-2018-20467](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20467)
-    -   [CVE-2018-18544](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18544)
-    -   [CVE-2018-18025](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18025)
-    -   [CVE-2018-18024](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18024)
-    -   [CVE-2018-18023](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18023)
-    -   [CVE-2018-18016](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18016)
-    -   [CVE-2018-17966](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17966)
-    -   [CVE-2018-17965](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17965)
-    -   [CVE-2018-16645](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16645)
-    -   [CVE-2018-16644](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16644)
-    -   [CVE-2018-16413](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16413)
-    -   [CVE-2018-16412](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16412)
-    -   [CVE-2018-16323](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16323)
-    -   [CVE-2018-15607](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15607)
-    -   [CVE-2018-14434](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14434)
-    -   [CVE-2017-12806](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12806)
-    -   [CVE-2017-12805](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-12805)
+    -   [CVE-2019-9956](https://ubuntu.com/security/CVE-2019-9956)
+    -   [CVE-2019-7398](https://ubuntu.com/security/CVE-2019-7398)
+    -   [CVE-2019-7397](https://ubuntu.com/security/CVE-2019-7397)
+    -   [CVE-2019-7396](https://ubuntu.com/security/CVE-2019-7396)
+    -   [CVE-2019-7395](https://ubuntu.com/security/CVE-2019-7395)
+    -   [CVE-2019-7175](https://ubuntu.com/security/CVE-2019-7175)
+    -   [CVE-2019-11598](https://ubuntu.com/security/CVE-2019-11598)
+    -   [CVE-2019-11597](https://ubuntu.com/security/CVE-2019-11597)
+    -   [CVE-2019-11472](https://ubuntu.com/security/CVE-2019-11472)
+    -   [CVE-2019-11470](https://ubuntu.com/security/CVE-2019-11470)
+    -   [CVE-2019-10650](https://ubuntu.com/security/CVE-2019-10650)
+    -   [CVE-2019-10649](https://ubuntu.com/security/CVE-2019-10649)
+    -   [CVE-2019-10131](https://ubuntu.com/security/CVE-2019-10131)
+    -   [CVE-2018-20467](https://ubuntu.com/security/CVE-2018-20467)
+    -   [CVE-2018-18544](https://ubuntu.com/security/CVE-2018-18544)
+    -   [CVE-2018-18025](https://ubuntu.com/security/CVE-2018-18025)
+    -   [CVE-2018-18024](https://ubuntu.com/security/CVE-2018-18024)
+    -   [CVE-2018-18023](https://ubuntu.com/security/CVE-2018-18023)
+    -   [CVE-2018-18016](https://ubuntu.com/security/CVE-2018-18016)
+    -   [CVE-2018-17966](https://ubuntu.com/security/CVE-2018-17966)
+    -   [CVE-2018-17965](https://ubuntu.com/security/CVE-2018-17965)
+    -   [CVE-2018-16645](https://ubuntu.com/security/CVE-2018-16645)
+    -   [CVE-2018-16644](https://ubuntu.com/security/CVE-2018-16644)
+    -   [CVE-2018-16413](https://ubuntu.com/security/CVE-2018-16413)
+    -   [CVE-2018-16412](https://ubuntu.com/security/CVE-2018-16412)
+    -   [CVE-2018-16323](https://ubuntu.com/security/CVE-2018-16323)
+    -   [CVE-2018-15607](https://ubuntu.com/security/CVE-2018-15607)
+    -   [CVE-2018-14434](https://ubuntu.com/security/CVE-2018-14434)
+    -   [CVE-2017-12806](https://ubuntu.com/security/CVE-2017-12806)
+    -   [CVE-2017-12805](https://ubuntu.com/security/CVE-2017-12805)
 -   Used by many automated systems for image processing etc
 -   Many memory corruption issues fixed - most able to cause at least a crash
     (DoS) but might be possible to also get RCE
@@ -119,10 +119,10 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4035-1](https://usn.ubuntu.com/4035-1/)] Ceph vulnerabilities {#usn-4035-1-ceph-vulnerabilities}
 
 -   4 CVEs addressed in Xenial, Cosmic, Disco
-    -   [CVE-2019-3821](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3821)
-    -   [CVE-2018-16889](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16889)
-    -   [CVE-2018-16846](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16846)
-    -   [CVE-2018-14662](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14662)
+    -   [CVE-2019-3821](https://ubuntu.com/security/CVE-2019-3821)
+    -   [CVE-2018-16889](https://ubuntu.com/security/CVE-2018-16889)
+    -   [CVE-2018-16846](https://ubuntu.com/security/CVE-2018-16846)
+    -   [CVE-2018-14662](https://ubuntu.com/security/CVE-2018-14662)
 -   2 CVEs affect ceph in Xenial
     -   dm-crypt disk encryption keys were able to be read by users with
         read-only permissions - fixed to ensure need an explicit permission to
@@ -146,7 +146,7 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4036-1](https://usn.ubuntu.com/4036-1/)] OpenStack Neutron vulnerability {#usn-4036-1-openstack-neutron-vulnerability}
 
 -   1 CVEs addressed in Xenial, Cosmic
-    -   [CVE-2019-9735](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9735)
+    -   [CVE-2019-9735](https://ubuntu.com/security/CVE-2019-9735)
 -   Networking abstraction layer of OpenStack
 -   Allows to define security groups with rules which then get executed by a
     driver using a particular underlying technology
@@ -173,8 +173,8 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4038-1](https://usn.ubuntu.com/4038-1/), [USN-4038-2](https://usn.ubuntu.com/4038-2/)] bzip2 vulnerabilities {#usn-4038-1-usn-4038-2-bzip2-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-12900](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12900)
-    -   [CVE-2016-3189](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-3189)
+    -   [CVE-2019-12900](https://ubuntu.com/security/CVE-2019-12900)
+    -   [CVE-2016-3189](https://ubuntu.com/security/CVE-2016-3189)
 -   UAF via crafted bzip2 file - crash, DoS
 -   OOB write from crafted bzip2 which contains too many selectors - possible
     RCE
@@ -186,7 +186,7 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4040-1](https://usn.ubuntu.com/4040-1/), [USN-4040-2](https://usn.ubuntu.com/4040-2/)] Expat vulnerability {#usn-4040-1-usn-4040-2-expat-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2018-20843](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20843)
+    -   [CVE-2018-20843](https://ubuntu.com/security/CVE-2018-20843)
 -   CPU DoS if XML names contained large number of colons (used to specify
     namespace prefix)
 
@@ -194,22 +194,22 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4042-1](https://usn.ubuntu.com/4042-1/)] poppler vulnerabilities {#usn-4042-1-poppler-vulnerabilities}
 
 -   13 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-9903](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9903)
-    -   [CVE-2019-9631](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9631)
-    -   [CVE-2019-9200](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9200)
-    -   [CVE-2019-12293](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12293)
-    -   [CVE-2019-10873](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10873)
-    -   [CVE-2019-10872](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10872)
-    -   [CVE-2019-10023](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10023)
-    -   [CVE-2019-10021](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10021)
-    -   [CVE-2019-10019](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10019)
-    -   [CVE-2019-10018](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10018)
-    -   [CVE-2018-20662](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-20662)
-    -   [CVE-2018-18897](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18897)
-    -   [CVE-2017-9865](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-9865)
+    -   [CVE-2019-9903](https://ubuntu.com/security/CVE-2019-9903)
+    -   [CVE-2019-9631](https://ubuntu.com/security/CVE-2019-9631)
+    -   [CVE-2019-9200](https://ubuntu.com/security/CVE-2019-9200)
+    -   [CVE-2019-12293](https://ubuntu.com/security/CVE-2019-12293)
+    -   [CVE-2019-10873](https://ubuntu.com/security/CVE-2019-10873)
+    -   [CVE-2019-10872](https://ubuntu.com/security/CVE-2019-10872)
+    -   [CVE-2019-10023](https://ubuntu.com/security/CVE-2019-10023)
+    -   [CVE-2019-10021](https://ubuntu.com/security/CVE-2019-10021)
+    -   [CVE-2019-10019](https://ubuntu.com/security/CVE-2019-10019)
+    -   [CVE-2019-10018](https://ubuntu.com/security/CVE-2019-10018)
+    -   [CVE-2018-20662](https://ubuntu.com/security/CVE-2018-20662)
+    -   [CVE-2018-18897](https://ubuntu.com/security/CVE-2018-18897)
+    -   [CVE-2017-9865](https://ubuntu.com/security/CVE-2017-9865)
 -   Usual mix of issues
     -   Memory leak
-    -   Stack exhaustion -> crash, DoS
+    -   Stack exhaustion -&gt; crash, DoS
     -   3\*Heap-based buffer over-reads
     -   NULL pointer dereference
     -   Various floating point exception issues
@@ -222,7 +222,7 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ### [[USN-4041-1](https://usn.ubuntu.com/4041-1/), [USN-4041-2](https://usn.ubuntu.com/4041-2/)] Linux kernel update {#usn-4041-1-usn-4041-2-linux-kernel-update}
 
 -   1 CVEs addressed in Trusty ESM (HWE), Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11479](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11479)
+    -   [CVE-2019-11479](https://ubuntu.com/security/CVE-2019-11479)
 -   Final SACK Panic issue ([Episode 37](https://ubuntusecuritypodcast.org/episode-37/)) - added sysctl to easily set MSS (is
     usually hard-coded to 48) - so can be increased to avoid this DoS issue
 
@@ -252,5 +252,5 @@ This week we look at the latest security updates for the Linux kernel, Firefox, 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

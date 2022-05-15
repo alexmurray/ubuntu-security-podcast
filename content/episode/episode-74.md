@@ -6,9 +6,9 @@ description = """
   PulseAudio, Squid and more.
   """
 date = 2020-05-15T16:36:00+09:30
-lastmod = 2020-05-15T16:38:14+09:30
+lastmod = 2022-05-15T18:06:40+09:30
 draft = false
-weight = 1001
+weight = 1086
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E074.mp3"
@@ -33,7 +33,7 @@ PulseAudio, Squid and more.
 ### [[USN-4351-1](https://usn.ubuntu.com/4351-1/)] Linux firmware vulnerability [01:03] {#usn-4351-1-linux-firmware-vulnerability-01-03}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2018-5383](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5383)
+    -   [CVE-2018-5383](https://ubuntu.com/security/CVE-2018-5383) <!-- medium -->
 -   Bluetooth devices failed to properly validate elliptic curve parameters
     used in key exchange - remote attacker could possibly force a weak key to
     be used and hence obtain the encryption key. Required changes to both the
@@ -45,7 +45,7 @@ PulseAudio, Squid and more.
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM),
     Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12243](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12243)
+    -   [CVE-2020-12243](https://ubuntu.com/security/CVE-2020-12243) <!-- medium -->
 -   A search filter with a large number of nested boolean expressions could
     cause slapd daemon to crash via deep stack recursion - add a hard coded
     limit to resolve this
@@ -54,14 +54,14 @@ PulseAudio, Squid and more.
 ### [[USN-4353-1](https://usn.ubuntu.com/4353-1/)] Firefox vulnerabilities [02:46] {#usn-4353-1-firefox-vulnerabilities-02-46}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12392](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12392)
-    -   [CVE-2020-12396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12396)
-    -   [CVE-2020-12395](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12395)
-    -   [CVE-2020-12394](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12394)
-    -   [CVE-2020-12391](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12391)
-    -   [CVE-2020-12390](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12390)
-    -   [CVE-2020-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12387)
-    -   [CVE-2020-6831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6831)
+    -   [CVE-2020-12392](https://ubuntu.com/security/CVE-2020-12392) <!-- medium -->
+    -   [CVE-2020-12396](https://ubuntu.com/security/CVE-2020-12396) <!-- medium -->
+    -   [CVE-2020-12395](https://ubuntu.com/security/CVE-2020-12395) <!-- medium -->
+    -   [CVE-2020-12394](https://ubuntu.com/security/CVE-2020-12394) <!-- medium -->
+    -   [CVE-2020-12391](https://ubuntu.com/security/CVE-2020-12391) <!-- medium -->
+    -   [CVE-2020-12390](https://ubuntu.com/security/CVE-2020-12390) <!-- medium -->
+    -   [CVE-2020-12387](https://ubuntu.com/security/CVE-2020-12387) <!-- medium -->
+    -   [CVE-2020-6831](https://ubuntu.com/security/CVE-2020-6831) <!-- medium -->
 -   76.0
 -   Displays alerts for breached passwords stored in Lockwise
 -   Usual UAF, sandbox escape, buffer overflows, content security policy
@@ -72,14 +72,14 @@ PulseAudio, Squid and more.
 ### [[USN-4353-2](https://usn.ubuntu.com/4353-2/)] Firefox regression [03:34] {#usn-4353-2-firefox-regression-03-34}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-12392](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12392)
-    -   [CVE-2020-12396](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12396)
-    -   [CVE-2020-12395](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12395)
-    -   [CVE-2020-12394](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12394)
-    -   [CVE-2020-12391](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12391)
-    -   [CVE-2020-12390](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12390)
-    -   [CVE-2020-12387](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12387)
-    -   [CVE-2020-6831](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6831)
+    -   [CVE-2020-12392](https://ubuntu.com/security/CVE-2020-12392) <!-- medium -->
+    -   [CVE-2020-12396](https://ubuntu.com/security/CVE-2020-12396) <!-- medium -->
+    -   [CVE-2020-12395](https://ubuntu.com/security/CVE-2020-12395) <!-- medium -->
+    -   [CVE-2020-12394](https://ubuntu.com/security/CVE-2020-12394) <!-- medium -->
+    -   [CVE-2020-12391](https://ubuntu.com/security/CVE-2020-12391) <!-- medium -->
+    -   [CVE-2020-12390](https://ubuntu.com/security/CVE-2020-12390) <!-- medium -->
+    -   [CVE-2020-12387](https://ubuntu.com/security/CVE-2020-12387) <!-- medium -->
+    -   [CVE-2020-6831](https://ubuntu.com/security/CVE-2020-6831) <!-- medium -->
 -   76.0.1
 -   Regression in behaviour related to addons - could impair their
     functionality
@@ -90,7 +90,7 @@ PulseAudio, Squid and more.
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
 
-    -   [CVE-2020-12108](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12108)
+    -   [CVE-2020-12108](https://ubuntu.com/security/CVE-2020-12108) <!-- medium -->
     -   Arbitrary content injection via options login page - if the submitted
 
     email address looking invalid it would be echo'd back to the user - and
@@ -100,7 +100,7 @@ PulseAudio, Squid and more.
 ### [[USN-4355-1](https://usn.ubuntu.com/4355-1/)] PulseAudio vulnerability [04:23] {#usn-4355-1-pulseaudio-vulnerability-04-23}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-11931](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11931)
+    -   [CVE-2020-11931](https://ubuntu.com/security/CVE-2020-11931) <!-- medium -->
 -   Snap policy module for pulseaudio - only exists in Ubuntu - is designed
     to allow snapd to mediate access to pulseaudio for snaps - so if plug
     pulseaudio (or audio-playback / record) interface(s) can talk to
@@ -114,21 +114,21 @@ PulseAudio, Squid and more.
 ### [[USN-4357-1](https://usn.ubuntu.com/4357-1/)] IPRoute vulnerability [05:39] {#usn-4357-1-iproute-vulnerability-05-39}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-20795](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-20795)
+    -   [CVE-2019-20795](https://ubuntu.com/security/CVE-2019-20795) <!-- medium -->
 -   UAF when listing network namespaces (ip netns list)
 
 
 ### [[USN-4356-1](https://usn.ubuntu.com/4356-1/)] Squid vulnerabilities [05:59] {#usn-4356-1-squid-vulnerabilities-05-59}
 
 -   4 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-    -   [CVE-2020-11945](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-11945)
-    -   [CVE-2019-18860](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18860)
-    -   [CVE-2019-12521](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12521)
-    -   [CVE-2019-12519](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12519)
+    -   [CVE-2020-11945](https://ubuntu.com/security/CVE-2020-11945) <!-- medium -->
+    -   [CVE-2019-18860](https://ubuntu.com/security/CVE-2019-18860) <!-- low -->
+    -   [CVE-2019-12521](https://ubuntu.com/security/CVE-2019-12521) <!-- medium -->
+    -   [CVE-2019-12519](https://ubuntu.com/security/CVE-2019-12519) <!-- medium -->
 -   Possible cache poisoning, crash or RE from malicious remote servers via
     Edge Side Includes
 -   Failure to properly validate hostname in cachemanager for certain
-    browsers -> HTML injection
+    browsers -&gt; HTML injection
 -   Nonce reply due to failure to properly validate Digest Authentication
     nonce values
 
@@ -160,7 +160,7 @@ PulseAudio, Squid and more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

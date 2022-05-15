@@ -6,9 +6,9 @@ description = """
   microcode, plus Bash, cpio, FriBidi and more.
   """
 date = 2019-11-15T18:21:00+10:30
-lastmod = 2020-05-15T16:39:04+09:30
+lastmod = 2022-05-15T18:06:56+09:30
 draft = false
-weight = 1022
+weight = 1107
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E053.mp3"
@@ -33,7 +33,7 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4176-1](https://usn.ubuntu.com/4176-1/)] GNU cpio vulnerability [01:00] {#usn-4176-1-gnu-cpio-vulnerability-01-00}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-14866](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14866)
+    -   [CVE-2019-14866](https://ubuntu.com/security/CVE-2019-14866) <!-- medium -->
 -   cpio wouldn't validate values written to headers of TAR archives - could
     use cpio to create a TAR containing another TAR with a big size and will
     use wrong context values (ie uses inner TAR values in header) - this
@@ -56,23 +56,23 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4178-1](https://usn.ubuntu.com/4178-1/)] WebKitGTK+ vulnerabilities [03:34] {#usn-4178-1-webkitgtk-plus-vulnerabilities-03-34}
 
 -   4 CVEs addressed in Bionic, Disco
-    -   [CVE-2019-8771](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8771)
-    -   [CVE-2019-8769](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8769)
-    -   [CVE-2019-8720](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8720)
-    -   [CVE-2019-8625](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8625)
+    -   [CVE-2019-8771](https://ubuntu.com/security/CVE-2019-8771) <!-- medium -->
+    -   [CVE-2019-8769](https://ubuntu.com/security/CVE-2019-8769) <!-- medium -->
+    -   [CVE-2019-8720](https://ubuntu.com/security/CVE-2019-8720) <!-- medium -->
+    -   [CVE-2019-8625](https://ubuntu.com/security/CVE-2019-8625) <!-- medium -->
 
 
 ### [[USN-4181-1](https://usn.ubuntu.com/4181-1/)] WebKitGTK+ vulnerabilities [03:34] {#usn-4181-1-webkitgtk-plus-vulnerabilities-03-34}
 
 -   2 CVEs addressed in Bionic, Disco, Eoan
-    -   [CVE-2019-8814](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8814)
-    -   [CVE-2019-8812](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8812)
+    -   [CVE-2019-8814](https://ubuntu.com/security/CVE-2019-8814) <!-- medium -->
+    -   [CVE-2019-8812](https://ubuntu.com/security/CVE-2019-8812) <!-- medium -->
 
 
 ### [[USN-4179-1](https://usn.ubuntu.com/4179-1/)] FriBidi vulnerability [04:00] {#usn-4179-1-fribidi-vulnerability-04-00}
 
 -   1 CVEs addressed in Disco, Eoan
-    -   [CVE-2019-18397](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18397)
+    -   [CVE-2019-18397](https://ubuntu.com/security/CVE-2019-18397) <!-- medium -->
 -   Issue reported about unicode isolated handling in Qt - turns out affected
     GTK applications as well - entirely different code with very similar
     flaw - stack buffer overflow since didn't check bounds of a fixed array
@@ -83,7 +83,7 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4180-1](https://usn.ubuntu.com/4180-1/)] Bash vulnerability [05:38] {#usn-4180-1-bash-vulnerability-05-38}
 
 -   1 CVEs addressed in Precise ESM
-    -   [CVE-2012-6711](https://people.canonical.com/~ubuntu-security/cve/CVE-2012-6711)
+    -   [CVE-2012-6711](https://ubuntu.com/security/CVE-2012-6711) <!-- medium -->
 -   Recently announced vuln (heap-based buffer overflow) in bash affecting
     old versions - so most releases unaffected except Precise - can trigger
     by printing wide characters via echo -e
@@ -92,12 +92,12 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4182-1](https://usn.ubuntu.com/4182-1/), USN-4182-2] Intel Microcode update [06:12] {#usn-4182-1-usn-4182-2-intel-microcode-update-06-12}
 
 -   2 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-11139](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11139)
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
+    -   [CVE-2019-11139](https://ubuntu.com/security/CVE-2019-11139) <!-- medium -->
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
 -   Voltage modulation able to be performed by a local privileged user -
     disabled via microcode
 -   TSX Asynchronous Abort (TAA) -
-    <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/TAA%5FMCEPSC%5Fi915>
+    <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/TAA_MCEPSC_i915>
     -   Another variant of MDS but only affects processsors with Transational
         Synchronization Extensions (TSX)
     -   MDS mitigations also can mitigate this - but needs microcode update -
@@ -107,18 +107,18 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4183-1](//usn.ubuntu.com/4183-1/)] Linux kernel vulnerabilities [07:58] {#usn-4183-1--usn-dot-ubuntu-dot-com-4183-1--linux-kernel-vulnerabilities-07-58}
 
 -   9 CVEs addressed in Eoan
-    -   [CVE-2019-17666](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17666)
-    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746)
-    -   [CVE-2019-15793](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15793)
-    -   [CVE-2019-15792](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15792)
-    -   [CVE-2019-15791](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15791)
-    -   [CVE-2019-0154](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0154)
-    -   [CVE-2018-12207](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207)
-    -   [CVE-2019-0155](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0155)
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
--   MCEPSC -   <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/TAA%5FMCEPSC%5Fi915>
+    -   [CVE-2019-17666](https://ubuntu.com/security/CVE-2019-17666) <!-- medium -->
+    -   [CVE-2019-16746](https://ubuntu.com/security/CVE-2019-16746) <!-- medium -->
+    -   [CVE-2019-15793](https://ubuntu.com/security/CVE-2019-15793) <!-- medium -->
+    -   [CVE-2019-15792](https://ubuntu.com/security/CVE-2019-15792) <!-- medium -->
+    -   [CVE-2019-15791](https://ubuntu.com/security/CVE-2019-15791) <!-- medium -->
+    -   [CVE-2019-0154](https://ubuntu.com/security/CVE-2019-0154) <!-- medium -->
+    -   [CVE-2018-12207](https://ubuntu.com/security/CVE-2018-12207) <!-- high -->
+    -   [CVE-2019-0155](https://ubuntu.com/security/CVE-2019-0155) <!-- high -->
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
+-   MCEPSC -   <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/TAA_MCEPSC_i915>
     -   trigger a MCE from a guest by changing page size in a particular way
-        within the guest -> MCE on host kernel -> DoS
+        within the guest -&gt; MCE on host kernel -&gt; DoS
 -   i915 graphics - userspace can modify PTE via writes to MMIO from blitter
     command streamer or expose kernel memory - privesc
 -   TAA
@@ -128,52 +128,52 @@ microcode, plus Bash, cpio, FriBidi and more.
     -   Buffer overflow in nl80211 config interface (local user) - crash / code exec
     -   Jann Horn - shiftfs issues
         -   UID/GID confusion when namespace of lower file-system is not
-            init\_user\_ns - DAC bypass
-        -   type confusion -> buffer overflow
-        -   reference count underflow -> UAF
+            init_user_ns - DAC bypass
+        -   type confusion -&gt; buffer overflow
+        -   reference count underflow -&gt; UAF
             -   local user crash / code exec
-    -   i915 graphics - userspace read on GT MMIO -> hang -> DoS (low power state)
+    -   i915 graphics - userspace read on GT MMIO -&gt; hang -&gt; DoS (low power state)
 
 
 ### [[USN-4184-1](https://usn.ubuntu.com/4184-1/)] Linux kernel vulnerabilities [11:09] {#usn-4184-1-linux-kernel-vulnerabilities-11-09}
 
 -   14 CVEs addressed in Bionic (HWE), Disco
-    -   [CVE-2019-17666](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17666)
-    -   [CVE-2019-17056](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17056)
-    -   [CVE-2019-17055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17055)
-    -   [CVE-2019-17054](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17054)
-    -   [CVE-2019-17053](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17053)
-    -   [CVE-2019-17052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17052)
-    -   [CVE-2019-15793](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15793)
-    -   [CVE-2019-15792](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15792)
-    -   [CVE-2019-15791](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15791)
-    -   [CVE-2019-15098](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15098)
-    -   [CVE-2019-0154](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0154)
-    -   [CVE-2018-12207](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207)
-    -   [CVE-2019-0155](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0155)
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
+    -   [CVE-2019-17666](https://ubuntu.com/security/CVE-2019-17666) <!-- medium -->
+    -   [CVE-2019-17056](https://ubuntu.com/security/CVE-2019-17056) <!-- medium -->
+    -   [CVE-2019-17055](https://ubuntu.com/security/CVE-2019-17055) <!-- medium -->
+    -   [CVE-2019-17054](https://ubuntu.com/security/CVE-2019-17054) <!-- medium -->
+    -   [CVE-2019-17053](https://ubuntu.com/security/CVE-2019-17053) <!-- medium -->
+    -   [CVE-2019-17052](https://ubuntu.com/security/CVE-2019-17052) <!-- medium -->
+    -   [CVE-2019-15793](https://ubuntu.com/security/CVE-2019-15793) <!-- medium -->
+    -   [CVE-2019-15792](https://ubuntu.com/security/CVE-2019-15792) <!-- medium -->
+    -   [CVE-2019-15791](https://ubuntu.com/security/CVE-2019-15791) <!-- medium -->
+    -   [CVE-2019-15098](https://ubuntu.com/security/CVE-2019-15098) <!-- medium -->
+    -   [CVE-2019-0154](https://ubuntu.com/security/CVE-2019-0154) <!-- medium -->
+    -   [CVE-2018-12207](https://ubuntu.com/security/CVE-2018-12207) <!-- high -->
+    -   [CVE-2019-0155](https://ubuntu.com/security/CVE-2019-0155) <!-- high -->
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
 -   See above plus
-    -   Various network based subsystems failed to enforce CAP\_NET\_RAW for raw
+    -   Various network based subsystems failed to enforce CAP_NET_RAW for raw
         socket creation
-        -   AF\_NFC, AF\_ISDN, AF\_APPLETALK, AF\_IEEE802154 (low-rate wireless
-            network), AF\_AX25
+        -   AF_NFC, AF_ISDN, AF_APPLETALK, AF_IEEE802154 (low-rate wireless
+            network), AF_AX25
 
 
 ### [[USN-4185-1](//usn.ubuntu.com/4185-1/), [USN-4185-2](https://usn.ubuntu.com/4185-2/)] Linux kernel vulnerabilities [12:06] {#usn-4185-1--usn-dot-ubuntu-dot-com-4185-1--usn-4185-2-linux-kernel-vulnerabilities-12-06}
 
 -   11 CVEs addressed in Trusty ESM (Azure), Xenial (HWE), Bionic
-    -   [CVE-2019-17666](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17666)
-    -   [CVE-2019-17056](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17056)
-    -   [CVE-2019-17055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17055)
-    -   [CVE-2019-17054](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17054)
-    -   [CVE-2019-17053](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17053)
-    -   [CVE-2019-17052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17052)
-    -   [CVE-2019-15098](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15098)
-    -   [CVE-2019-0154](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0154)
-    -   [CVE-2018-12207](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207)
-    -   [CVE-2019-0155](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0155)
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
--   realtek wifi buffer overflow, AF\_XXX CAP\_NET\_RAW, NULL pointer
+    -   [CVE-2019-17666](https://ubuntu.com/security/CVE-2019-17666) <!-- medium -->
+    -   [CVE-2019-17056](https://ubuntu.com/security/CVE-2019-17056) <!-- medium -->
+    -   [CVE-2019-17055](https://ubuntu.com/security/CVE-2019-17055) <!-- medium -->
+    -   [CVE-2019-17054](https://ubuntu.com/security/CVE-2019-17054) <!-- medium -->
+    -   [CVE-2019-17053](https://ubuntu.com/security/CVE-2019-17053) <!-- medium -->
+    -   [CVE-2019-17052](https://ubuntu.com/security/CVE-2019-17052) <!-- medium -->
+    -   [CVE-2019-15098](https://ubuntu.com/security/CVE-2019-15098) <!-- medium -->
+    -   [CVE-2019-0154](https://ubuntu.com/security/CVE-2019-0154) <!-- medium -->
+    -   [CVE-2018-12207](https://ubuntu.com/security/CVE-2018-12207) <!-- high -->
+    -   [CVE-2019-0155](https://ubuntu.com/security/CVE-2019-0155) <!-- high -->
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
+-   realtek wifi buffer overflow, AF_XXX CAP_NET_RAW, NULL pointer
     dereference in Atheros USB Wifi Driver, Intel hardware issues (2xi915 +
     TAA + MCEPSC)
 
@@ -181,46 +181,46 @@ microcode, plus Bash, cpio, FriBidi and more.
 ### [[USN-4186-1](https://usn.ubuntu.com/4186-1/), [USN-4186-2](https://usn.ubuntu.com/4186-2/)] Linux kernel vulnerabilities [12:47] {#usn-4186-1-usn-4186-2-linux-kernel-vulnerabilities-12-47}
 
 -   13 CVEs addressed in Trusty ESM (HWE), Xenial
-    -   [CVE-2019-2215](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2215)
-    -   [CVE-2019-17666](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17666)
-    -   [CVE-2019-17056](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17056)
-    -   [CVE-2019-17055](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17055)
-    -   [CVE-2019-17054](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17054)
-    -   [CVE-2019-17053](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17053)
-    -   [CVE-2019-17052](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17052)
-    -   [CVE-2019-16746](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-16746)
-    -   [CVE-2019-15098](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15098)
-    -   [CVE-2019-0154](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0154)
-    -   [CVE-2018-12207](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207)
-    -   [CVE-2019-0155](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0155)
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
--   Binder UAF -> crash, DoS -> code exec (CONFIG\_DEBUG\_LIST mitigates this -
+    -   [CVE-2019-2215](https://ubuntu.com/security/CVE-2019-2215) <!-- medium -->
+    -   [CVE-2019-17666](https://ubuntu.com/security/CVE-2019-17666) <!-- medium -->
+    -   [CVE-2019-17056](https://ubuntu.com/security/CVE-2019-17056) <!-- medium -->
+    -   [CVE-2019-17055](https://ubuntu.com/security/CVE-2019-17055) <!-- medium -->
+    -   [CVE-2019-17054](https://ubuntu.com/security/CVE-2019-17054) <!-- medium -->
+    -   [CVE-2019-17053](https://ubuntu.com/security/CVE-2019-17053) <!-- medium -->
+    -   [CVE-2019-17052](https://ubuntu.com/security/CVE-2019-17052) <!-- medium -->
+    -   [CVE-2019-16746](https://ubuntu.com/security/CVE-2019-16746) <!-- medium -->
+    -   [CVE-2019-15098](https://ubuntu.com/security/CVE-2019-15098) <!-- medium -->
+    -   [CVE-2019-0154](https://ubuntu.com/security/CVE-2019-0154) <!-- medium -->
+    -   [CVE-2018-12207](https://ubuntu.com/security/CVE-2018-12207) <!-- high -->
+    -   [CVE-2019-0155](https://ubuntu.com/security/CVE-2019-0155) <!-- high -->
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
+-   Binder UAF -&gt; crash, DoS -&gt; code exec (CONFIG_DEBUG_LIST mitigates this -
     looking to add this in future kernels like 20.04)
--   realtek wifi, CAP\_NET\_RAW, nl80211 config buffer overflow, Intel hardware
+-   realtek wifi, CAP_NET_RAW, nl80211 config buffer overflow, Intel hardware
     issues
 
 
 ### [[USN-4187-1](https://usn.ubuntu.com/4187-1/)] Linux kernel vulnerability [13:48] {#usn-4187-1-linux-kernel-vulnerability-13-48}
 
 -   1 CVEs addressed in Trusty ESM
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
 -   TAA
 
 
 ### [[USN-4188-1](https://usn.ubuntu.com/4188-1/)] Linux kernel vulnerability [13:48] {#usn-4188-1-linux-kernel-vulnerability-13-48}
 
 -   1 CVEs addressed in Precise ESM
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
 -   TAA
 
 
 ### [LSN-0059-1] Linux kernel vulnerability [14:05] {#lsn-0059-1-linux-kernel-vulnerability-14-05}
 
 -   4 CVEs addressed in Xenial and Bionic
-    -   [CVE-2019-11135](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11135)
-    -   [CVE-2019-0155](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0155)
-    -   [CVE-2019-0154](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-0154)
-    -   [CVE-2018-12207](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12207)
+    -   [CVE-2019-11135](https://ubuntu.com/security/CVE-2019-11135) <!-- high -->
+    -   [CVE-2019-0155](https://ubuntu.com/security/CVE-2019-0155) <!-- high -->
+    -   [CVE-2019-0154](https://ubuntu.com/security/CVE-2019-0154) <!-- medium -->
+    -   [CVE-2018-12207](https://ubuntu.com/security/CVE-2018-12207) <!-- high -->
 -   Intel hardware issues - CAN'T BE LIVEPATCHED - need to update kernel and reboot
 
 
@@ -233,7 +233,7 @@ microcode, plus Bash, cpio, FriBidi and more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -7,9 +7,9 @@ description = """
   NSS and more.
   """
 date = 2020-08-13T15:05:00+09:30
-lastmod = 2020-08-13T15:06:30+09:30
+lastmod = 2022-05-15T18:06:31+09:30
 draft = false
-weight = 1001
+weight = 1074
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E086.mp3"
@@ -35,14 +35,14 @@ NSS and more.
 ### [[USN-4453-1](https://usn.ubuntu.com/4453-1/)] OpenJDK 8 vulnerabilities [01:03] {#usn-4453-1-openjdk-8-vulnerabilities-01-03}
 
 -   8 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14621](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14621)
-    -   [CVE-2020-14593](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14593)
-    -   [CVE-2020-14583](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14583)
-    -   [CVE-2020-14581](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14581)
-    -   [CVE-2020-14579](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14579)
-    -   [CVE-2020-14578](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14578)
-    -   [CVE-2020-14577](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14577)
-    -   [CVE-2020-14556](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14556)
+    -   [CVE-2020-14621](https://ubuntu.com/security/CVE-2020-14621) <!-- medium -->
+    -   [CVE-2020-14593](https://ubuntu.com/security/CVE-2020-14593) <!-- medium -->
+    -   [CVE-2020-14583](https://ubuntu.com/security/CVE-2020-14583) <!-- medium -->
+    -   [CVE-2020-14581](https://ubuntu.com/security/CVE-2020-14581) <!-- medium -->
+    -   [CVE-2020-14579](https://ubuntu.com/security/CVE-2020-14579) <!-- medium -->
+    -   [CVE-2020-14578](https://ubuntu.com/security/CVE-2020-14578) <!-- medium -->
+    -   [CVE-2020-14577](https://ubuntu.com/security/CVE-2020-14577) <!-- medium -->
+    -   [CVE-2020-14556](https://ubuntu.com/security/CVE-2020-14556) <!-- medium -->
 -   Usual mix of issues for a Java update - sandbox escape, DoS, information
     disclosure etc
 
@@ -50,7 +50,7 @@ NSS and more.
 ### [[USN-4451-2](https://usn.ubuntu.com/4451-2/)] ppp vulnerability [01:29] {#usn-4451-2-ppp-vulnerability-01-29}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM)
-    -   [CVE-2020-15704](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-15704)
+    -   [CVE-2020-15704](https://ubuntu.com/security/CVE-2020-15704) <!-- medium -->
 -   [Episode 85](https://ubuntusecuritypodcast.org/episode-85/)
 
 
@@ -58,18 +58,18 @@ NSS and more.
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM),
     Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-14303](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-14303)
+    -   [CVE-2020-14303](https://ubuntu.com/security/CVE-2020-14303) <!-- medium -->
 -   A remote attacker could send a zero length UDP packet to Samba when
     acting as a AD DC with NetBIOS over TCP (NBT) enabled - would effectively
-    enter an infinite loop -> CPU-based DoS
+    enter an infinite loop -&gt; CPU-based DoS
 
 
 ### [[USN-4455-1](https://usn.ubuntu.com/4455-1/)] NSS vulnerabilities [02:41] {#usn-4455-1-nss-vulnerabilities-02-41}
 
 -   3 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-6829](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-6829)
-    -   [CVE-2020-12401](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12401)
-    -   [CVE-2020-12400](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-12400)
+    -   [CVE-2020-6829](https://ubuntu.com/security/CVE-2020-6829) <!-- medium -->
+    -   [CVE-2020-12401](https://ubuntu.com/security/CVE-2020-12401) <!-- medium -->
+    -   [CVE-2020-12400](https://ubuntu.com/security/CVE-2020-12400) <!-- medium -->
 -   Fixes for various side-channel attacks against elliptic curve crypto
     implementations - could allow an attacker to infer the private key
 
@@ -101,7 +101,7 @@ NSS and more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

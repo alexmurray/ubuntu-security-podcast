@@ -6,9 +6,9 @@ description = """
   Whoopsie, Apport and more.
   """
 date = 2019-10-31T18:00:00+10:30
-lastmod = 2020-05-15T16:39:08+09:30
+lastmod = 2022-05-15T18:06:58+09:30
 draft = false
-weight = 1024
+weight = 1109
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E051.mp3"
@@ -33,19 +33,19 @@ Whoopsie, Apport and more.
 ### [[USN-4165-1](https://usn.ubuntu.com/4165-1/)] Firefox vulnerabilities [00:46] {#usn-4165-1-firefox-vulnerabilities-00-46}
 
 -   13 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-17002](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17002)
-    -   [CVE-2019-17001](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17001)
-    -   [CVE-2019-17000](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-17000)
-    -   [CVE-2019-15903](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15903)
-    -   [CVE-2019-11765](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11765)
-    -   [CVE-2019-11764](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11764)
-    -   [CVE-2019-11763](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11763)
-    -   [CVE-2019-11762](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11762)
-    -   [CVE-2019-11761](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11761)
-    -   [CVE-2019-11760](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11760)
-    -   [CVE-2019-11759](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11759)
-    -   [CVE-2019-11757](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11757)
-    -   [CVE-2018-6156](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6156)
+    -   [CVE-2019-17002](https://ubuntu.com/security/CVE-2019-17002) <!-- low -->
+    -   [CVE-2019-17001](https://ubuntu.com/security/CVE-2019-17001) <!-- medium -->
+    -   [CVE-2019-17000](https://ubuntu.com/security/CVE-2019-17000) <!-- medium -->
+    -   [CVE-2019-15903](https://ubuntu.com/security/CVE-2019-15903) <!-- medium -->
+    -   [CVE-2019-11765](https://ubuntu.com/security/CVE-2019-11765) <!-- medium -->
+    -   [CVE-2019-11764](https://ubuntu.com/security/CVE-2019-11764) <!-- medium -->
+    -   [CVE-2019-11763](https://ubuntu.com/security/CVE-2019-11763) <!-- medium -->
+    -   [CVE-2019-11762](https://ubuntu.com/security/CVE-2019-11762) <!-- medium -->
+    -   [CVE-2019-11761](https://ubuntu.com/security/CVE-2019-11761) <!-- medium -->
+    -   [CVE-2019-11760](https://ubuntu.com/security/CVE-2019-11760) <!-- medium -->
+    -   [CVE-2019-11759](https://ubuntu.com/security/CVE-2019-11759) <!-- medium -->
+    -   [CVE-2019-11757](https://ubuntu.com/security/CVE-2019-11757) <!-- medium -->
+    -   [CVE-2018-6156](https://ubuntu.com/security/CVE-2018-6156) <!-- high -->
 -   1 high priority, 11 medium and 1 low
     -   Heap buffer overflow via a crafted WebRTC video - originally for
         Chromium and was fixed for that last year - Firefox suffered similarly
@@ -58,7 +58,7 @@ Whoopsie, Apport and more.
 ### [[USN-4166-1](https://usn.ubuntu.com/4166-1/), [USN-4166-2](https://usn.ubuntu.com/4166-2/)] PHP vulnerability [02:10] {#usn-4166-1-usn-4166-2-php-vulnerability-02-10}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-11043](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11043)
+    -   [CVE-2019-11043](https://ubuntu.com/security/CVE-2019-11043) <!-- medium -->
 -   RCE in PHP (FPM - FastCGI Process Manager) - possible to cause the FPM
     module to write past allocated buffers - and so ends up also writing into the FCGI
     protocol data buffers - which can then create a chance for RCE
@@ -69,9 +69,9 @@ Whoopsie, Apport and more.
 ### [[USN-4167-1](https://usn.ubuntu.com/4167-1/), [USN-4167-2](https://usn.ubuntu.com/4167-2/)] Samba vulnerabilities [03:11] {#usn-4167-1-usn-4167-2-samba-vulnerabilities-03-11}
 
 -   3 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-14847](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14847)
-    -   [CVE-2019-14833](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-14833)
-    -   [CVE-2019-10218](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10218)
+    -   [CVE-2019-14847](https://ubuntu.com/security/CVE-2019-14847) <!-- medium -->
+    -   [CVE-2019-14833](https://ubuntu.com/security/CVE-2019-14833) <!-- medium -->
+    -   [CVE-2019-10218](https://ubuntu.com/security/CVE-2019-10218) <!-- medium -->
 -   DoS from a user with "get changes" permissions - could crash an AD DC
     LDAP server due to a NULL pointer deref when using dirsync with ranged results
 -   Can configure AD DC to call out to a custom command to verify password
@@ -91,8 +91,8 @@ Whoopsie, Apport and more.
 ### [[USN-4168-1](https://usn.ubuntu.com/4168-1/)] Libidn2 vulnerabilities [05:15] {#usn-4168-1-libidn2-vulnerabilities-05-15}
 
 -   2 CVEs addressed in Bionic, Disco
-    -   [CVE-2019-18224](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18224)
-    -   [CVE-2019-12290](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-12290)
+    -   [CVE-2019-18224](https://ubuntu.com/security/CVE-2019-18224) <!-- medium -->
+    -   [CVE-2019-12290](https://ubuntu.com/security/CVE-2019-12290) <!-- medium -->
 -   Library for handling internationalised domain names
 -   Heap based buffer overflow via a too-long domain name (greater than 63
     characters - in library, caller passes a buffer that is specified to be a
@@ -105,31 +105,31 @@ Whoopsie, Apport and more.
 ### [[USN-4169-1](https://usn.ubuntu.com/4169-1/)] libarchive vulnerability [06:32] {#usn-4169-1-libarchive-vulnerability-06-32}
 
 -   1 CVEs addressed in Trusty ESM, Xenial, Bionic, Disco
-    -   [CVE-2019-18408](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-18408)
+    -   [CVE-2019-18408](https://ubuntu.com/security/CVE-2019-18408) <!-- medium -->
 -   UAF in certain failure conditions when handling RAR archives
 
 
 ### [[USN-4170-1](https://usn.ubuntu.com/4170-1/)] Whoopsie vulnerability [06:52] {#usn-4170-1-whoopsie-vulnerability-06-52}
 
 -   1 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-11484](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11484)
--   Kevin Backhouse from Semmle Security Research Team - integer oveflow ->
-    heap based buffer overflow -> code executions a whoopsie user
+    -   [CVE-2019-11484](https://ubuntu.com/security/CVE-2019-11484) <!-- medium -->
+-   Kevin Backhouse from Semmle Security Research Team - integer oveflow -&gt;
+    heap based buffer overflow -&gt; code executions a whoopsie user
 
 
 ### [[USN-4171-1](https://usn.ubuntu.com/4171-1/)] Apport vulnerabilities [07:51] {#usn-4171-1-apport-vulnerabilities-07-51}
 
 -   5 CVEs addressed in Xenial, Bionic, Disco, Eoan
-    -   [CVE-2019-15790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-15790)
-    -   [CVE-2019-11485](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11485)
-    -   [CVE-2019-11483](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11483)
-    -   [CVE-2019-11482](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11482)
-    -   [CVE-2019-11481](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11481)
+    -   [CVE-2019-15790](https://ubuntu.com/security/CVE-2019-15790) <!-- medium -->
+    -   [CVE-2019-11485](https://ubuntu.com/security/CVE-2019-11485) <!-- medium -->
+    -   [CVE-2019-11483](https://ubuntu.com/security/CVE-2019-11483) <!-- medium -->
+    -   [CVE-2019-11482](https://ubuntu.com/security/CVE-2019-11482) <!-- medium -->
+    -   [CVE-2019-11481](https://ubuntu.com/security/CVE-2019-11481) <!-- low -->
 -   Kevin Backhouse from Semmle Security Research Team
     -   reads /proc/PID files as root - so if can race on process ID reuse
         could cause Apport to generate a crash dump of a privileged process
         that is readable by a normal user (so starts dumping an unprivileged
-        process, then PID race, new PID as privileged user -> this crashes ->
+        process, then PID race, new PID as privileged user -&gt; this crashes -&gt;
         Apport starts writing out the crash report for the first process but
         using the details of the new privileged process - since this was
         originally an unprivileged process, the crash dump is then unprivileged
@@ -173,7 +173,7 @@ Whoopsie, Apport and more.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

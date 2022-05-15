@@ -6,9 +6,9 @@ description = """
   Docker, Perl, c-ares, GPSd and more.
   """
 date = 2021-08-13T15:04:00+09:30
-lastmod = 2021-08-13T15:04:56+09:30
+lastmod = 2022-05-15T18:06:00+09:30
 draft = false
-weight = 1001
+weight = 1034
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E126.mp3"
@@ -58,16 +58,16 @@ Docker, Perl, c-ares, GPSd and more.
 ### [[USN-5033-1](https://ubuntu.com/security/notices/USN-5033-1)] Perl vulnerability [03:32] {#usn-5033-1-perl-vulnerability-03-32}
 
 -   1 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-36770](https://ubuntu.com/security/CVE-2021-36770)
+    -   [CVE-2021-36770](https://ubuntu.com/security/CVE-2021-36770) <!-- medium -->
 -   Perl Encode library could end up running arbitrary Perl code from the
     current working directory - was introduced by a change in Encode 3.05 in
-    perl 5.32/5.34 so only affected >= 21.04
+    perl 5.32/5.34 so only affected &gt;= 21.04
 
 
 ### [[USN-5034-1](https://ubuntu.com/security/notices/USN-5034-1), [USN-5034-2](https://ubuntu.com/security/notices/USN-5034-2)] c-ares vulnerability [03:59] {#usn-5034-1-usn-5034-2-c-ares-vulnerability-03-59}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3672](https://ubuntu.com/security/CVE-2021-3672)
+    -   [CVE-2021-3672](https://ubuntu.com/security/CVE-2021-3672) <!-- medium -->
 -   Lib for async name resolution
 -   Failed to properly validate certain hostnames returned from DNS servers -
     could allow a remote attacker to possibly perform domain hijacking
@@ -83,7 +83,7 @@ Docker, Perl, c-ares, GPSd and more.
     pervasive gpsd is used for handling GPS receivers which are often used
     for high precision timing or positioning systems (self-driving cars?) -
     this could have real-world security implications
--   Backported the fix from upstream - note this only affected gpsd >= 3.20
+-   Backported the fix from upstream - note this only affected gpsd &gt;= 3.20
     so older versions in 18.04 LTS etc were not affected
 -   <https://lwn.net/Articles/865044/>
 
@@ -97,8 +97,8 @@ Docker, Perl, c-ares, GPSd and more.
     things like PHP 8, widevine DRM in firefox, support reading of crypto
     policies for SSL-using applications
 -   Expected to land 3.0.3 for Ubuntu 21.10 (impish) before FF next week
--   <https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.2>
--   <https://gitlab.com/apparmor/apparmor/-/wikis/Release%5FNotes%5F3.0.3>
+-   <https://gitlab.com/apparmor/apparmor/-/wikis/Release_Notes_3.0.2>
+-   <https://gitlab.com/apparmor/apparmor/-/wikis/Release_Notes_3.0.3>
 
 
 ### FIPS 140-2 certification for Ubuntu 20.04 LTS! [07:44] {#fips-140-2-certification-for-ubuntu-20-dot-04-lts-07-44}
@@ -161,4 +161,4 @@ Docker, Perl, c-ares, GPSd and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

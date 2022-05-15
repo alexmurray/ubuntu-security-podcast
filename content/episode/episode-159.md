@@ -6,7 +6,7 @@ description = """
   DPDK, OpenSSL, Cron, RSyslog, Curl and more.
   """
 date = 2022-05-15T17:31:00+09:30
-lastmod = 2022-05-15T17:33:08+09:30
+lastmod = 2022-05-15T18:05:35+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"

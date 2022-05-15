@@ -7,9 +7,9 @@ description = """
   against malicious attackers.
   """
 date = 2022-03-11T14:19:00+10:30
-lastmod = 2022-03-18T13:38:36+10:30
+lastmod = 2022-05-15T18:05:40+09:30
 draft = false
-weight = 1002
+weight = 1008
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E152.mp3"
@@ -35,7 +35,7 @@ against malicious attackers.
 ### [[USN-5312-1](https://ubuntu.com/security/notices/USN-5312-1)] HAProxy vulnerability [00:46] {#usn-5312-1-haproxy-vulnerability-00-46}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-0711](https://ubuntu.com/security/CVE-2022-0711)
+    -   [CVE-2022-0711](https://ubuntu.com/security/CVE-2022-0711) <!-- medium -->
 -   CPU based DoS via the `Set-Cookie2` header - obsolete HTTP response header
     used to send cookies from the server to the user - possible infinite loop
     when parsing responses which contained this header
@@ -44,19 +44,19 @@ against malicious attackers.
 ### [[USN-5300-2](https://ubuntu.com/security/notices/USN-5300-2), [USN-5300-3](https://ubuntu.com/security/notices/USN-5300-3)] PHP vulnerabilities [01:24] {#usn-5300-2-usn-5300-3-php-vulnerabilities-01-24}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-21707](https://ubuntu.com/security/CVE-2021-21707)
-    -   [CVE-2017-9119](https://ubuntu.com/security/CVE-2017-9119)
-    -   [CVE-2017-9120](https://ubuntu.com/security/CVE-2017-9120)
-    -   [CVE-2017-9118](https://ubuntu.com/security/CVE-2017-9118)
-    -   [CVE-2017-8923](https://ubuntu.com/security/CVE-2017-8923)
-    -   [CVE-2015-9253](https://ubuntu.com/security/CVE-2015-9253)
+    -   [CVE-2021-21707](https://ubuntu.com/security/CVE-2021-21707) <!-- low -->
+    -   [CVE-2017-9119](https://ubuntu.com/security/CVE-2017-9119) <!-- low -->
+    -   [CVE-2017-9120](https://ubuntu.com/security/CVE-2017-9120) <!-- medium -->
+    -   [CVE-2017-9118](https://ubuntu.com/security/CVE-2017-9118) <!-- medium -->
+    -   [CVE-2017-8923](https://ubuntu.com/security/CVE-2017-8923) <!-- low -->
+    -   [CVE-2015-9253](https://ubuntu.com/security/CVE-2015-9253) <!-- low -->
 -   [Episode 150](https://ubuntusecuritypodcast.org/episode-150/)
 
 
 ### [[USN-5311-1](https://ubuntu.com/security/notices/USN-5311-1)] containerd vulnerability [01:41] {#usn-5311-1-containerd-vulnerability-01-41}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-23648](https://ubuntu.com/security/CVE-2022-23648)
+    -   [CVE-2022-23648](https://ubuntu.com/security/CVE-2022-23648) <!-- medium -->
 -   Able to access read-only copies of files from the host via specially
     crafted container image
 
@@ -64,8 +64,8 @@ against malicious attackers.
 ### [[USN-5314-1](https://ubuntu.com/security/notices/USN-5314-1)] Firefox vulnerabilities [02:11] {#usn-5314-1-firefox-vulnerabilities-02-11}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-26486](https://ubuntu.com/security/CVE-2022-26486)
-    -   [CVE-2022-26485](https://ubuntu.com/security/CVE-2022-26485)
+    -   [CVE-2022-26486](https://ubuntu.com/security/CVE-2022-26486) <!-- high -->
+    -   [CVE-2022-26485](https://ubuntu.com/security/CVE-2022-26485) <!-- high -->
 -   2 critical impact (as defined by Mozilla) vulns - both UAFs
 -   Mozilla reported seeing reports of both being exploited in the wild
 
@@ -73,21 +73,21 @@ against malicious attackers.
 ### [[USN-5313-1](https://ubuntu.com/security/notices/USN-5313-1)] OpenJDK vulnerabilities [02:36] {#usn-5313-1-openjdk-vulnerabilities-02-36}
 
 -   15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-21365](https://ubuntu.com/security/CVE-2022-21365)
-    -   [CVE-2022-21366](https://ubuntu.com/security/CVE-2022-21366)
-    -   [CVE-2022-21360](https://ubuntu.com/security/CVE-2022-21360)
-    -   [CVE-2022-21341](https://ubuntu.com/security/CVE-2022-21341)
-    -   [CVE-2022-21340](https://ubuntu.com/security/CVE-2022-21340)
-    -   [CVE-2022-21305](https://ubuntu.com/security/CVE-2022-21305)
-    -   [CVE-2022-21299](https://ubuntu.com/security/CVE-2022-21299)
-    -   [CVE-2022-21296](https://ubuntu.com/security/CVE-2022-21296)
-    -   [CVE-2022-21294](https://ubuntu.com/security/CVE-2022-21294)
-    -   [CVE-2022-21293](https://ubuntu.com/security/CVE-2022-21293)
-    -   [CVE-2022-21291](https://ubuntu.com/security/CVE-2022-21291)
-    -   [CVE-2022-21283](https://ubuntu.com/security/CVE-2022-21283)
-    -   [CVE-2022-21282](https://ubuntu.com/security/CVE-2022-21282)
-    -   [CVE-2022-21277](https://ubuntu.com/security/CVE-2022-21277)
-    -   [CVE-2022-21248](https://ubuntu.com/security/CVE-2022-21248)
+    -   [CVE-2022-21365](https://ubuntu.com/security/CVE-2022-21365) <!-- medium -->
+    -   [CVE-2022-21366](https://ubuntu.com/security/CVE-2022-21366) <!-- medium -->
+    -   [CVE-2022-21360](https://ubuntu.com/security/CVE-2022-21360) <!-- medium -->
+    -   [CVE-2022-21341](https://ubuntu.com/security/CVE-2022-21341) <!-- medium -->
+    -   [CVE-2022-21340](https://ubuntu.com/security/CVE-2022-21340) <!-- medium -->
+    -   [CVE-2022-21305](https://ubuntu.com/security/CVE-2022-21305) <!-- medium -->
+    -   [CVE-2022-21299](https://ubuntu.com/security/CVE-2022-21299) <!-- medium -->
+    -   [CVE-2022-21296](https://ubuntu.com/security/CVE-2022-21296) <!-- medium -->
+    -   [CVE-2022-21294](https://ubuntu.com/security/CVE-2022-21294) <!-- medium -->
+    -   [CVE-2022-21293](https://ubuntu.com/security/CVE-2022-21293) <!-- medium -->
+    -   [CVE-2022-21291](https://ubuntu.com/security/CVE-2022-21291) <!-- medium -->
+    -   [CVE-2022-21283](https://ubuntu.com/security/CVE-2022-21283) <!-- medium -->
+    -   [CVE-2022-21282](https://ubuntu.com/security/CVE-2022-21282) <!-- medium -->
+    -   [CVE-2022-21277](https://ubuntu.com/security/CVE-2022-21277) <!-- medium -->
+    -   [CVE-2022-21248](https://ubuntu.com/security/CVE-2022-21248) <!-- medium -->
 -   Thanks to Matthias Klose from the Ubuntu Foundations team for preparing
     these updates - latest upstream point releases
 -   17.0.2 + 11.0.14
@@ -96,16 +96,16 @@ against malicious attackers.
 ### [[USN-5310-2](https://ubuntu.com/security/notices/USN-5310-2)] GNU C Library vulnerabilities [02:56] {#usn-5310-2-gnu-c-library-vulnerabilities-02-56}
 
 -   3 CVEs addressed in Xenial ESM (16.04 ESM)
-    -   [CVE-2022-23219](https://ubuntu.com/security/CVE-2022-23219)
-    -   [CVE-2022-23218](https://ubuntu.com/security/CVE-2022-23218)
-    -   [CVE-2021-3999](https://ubuntu.com/security/CVE-2021-3999)
+    -   [CVE-2022-23219](https://ubuntu.com/security/CVE-2022-23219) <!-- low -->
+    -   [CVE-2022-23218](https://ubuntu.com/security/CVE-2022-23218) <!-- low -->
+    -   [CVE-2021-3999](https://ubuntu.com/security/CVE-2021-3999) <!-- medium -->
 -   [Episode 151](https://ubuntusecuritypodcast.org/episode-151/) - this update is a subset of those
 
 
 ### [[USN-5316-1](https://ubuntu.com/security/notices/USN-5316-1)] Redis vulnerability [03:09] {#usn-5316-1-redis-vulnerability-03-09}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-0543](https://ubuntu.com/security/CVE-2022-0543)
+    -   [CVE-2022-0543](https://ubuntu.com/security/CVE-2022-0543) <!-- medium -->
 -   Redis contains a scripting interface using Lua and implements a sandbox
     for this to try and avoid scripts running arbitrary Lua code
 -   Upstream has a vendored copy of lua but in Ubuntu + Debian the redis
@@ -131,11 +131,11 @@ against malicious attackers.
 ### [[USN-5317-1](https://ubuntu.com/security/notices/USN-5317-1)] Linux kernel vulnerabilities [05:34] {#usn-5317-1-linux-kernel-vulnerabilities-05-34}
 
 -   5 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002)
-    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001)
-    -   [CVE-2022-0847](https://ubuntu.com/security/CVE-2022-0847)
-    -   [CVE-2022-23960](https://ubuntu.com/security/CVE-2022-23960)
-    -   [CVE-2022-25636](https://ubuntu.com/security/CVE-2022-25636)
+    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002) <!-- high -->
+    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001) <!-- high -->
+    -   [CVE-2022-0847](https://ubuntu.com/security/CVE-2022-0847) <!-- high -->
+    -   [CVE-2022-23960](https://ubuntu.com/security/CVE-2022-23960) <!-- high -->
+    -   [CVE-2022-25636](https://ubuntu.com/security/CVE-2022-25636) <!-- high -->
 -   Thanks to Thadeu Cascardo from the kernel team for coordinating all the
     work on these fixes
 -   <https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/DirtyPipe>
@@ -171,17 +171,17 @@ against malicious attackers.
 ### [[USN-5318-1](https://ubuntu.com/security/notices/USN-5318-1)] Linux kernel vulnerabilities {#usn-5318-1-linux-kernel-vulnerabilities}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002)
-    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001)
-    -   [CVE-2022-23960](https://ubuntu.com/security/CVE-2022-23960)
-    -   [CVE-2022-25636](https://ubuntu.com/security/CVE-2022-25636)
+    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002) <!-- high -->
+    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001) <!-- high -->
+    -   [CVE-2022-23960](https://ubuntu.com/security/CVE-2022-23960) <!-- high -->
+    -   [CVE-2022-25636](https://ubuntu.com/security/CVE-2022-25636) <!-- high -->
 
 
 ### [[USN-5319-1](https://ubuntu.com/security/notices/USN-5319-1)] Linux kernel vulnerabilities {#usn-5319-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002)
-    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001)
+    -   [CVE-2022-0002](https://ubuntu.com/security/CVE-2022-0002) <!-- high -->
+    -   [CVE-2022-0001](https://ubuntu.com/security/CVE-2022-0001) <!-- high -->
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}

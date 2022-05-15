@@ -2,9 +2,9 @@
 title = "Episode 0"
 description = "The first ever episode of the Ubuntu Security Podcast!"
 date = 2018-08-14
-lastmod = 2020-05-15T16:41:12+09:30
+lastmod = 2022-05-15T18:07:37+09:30
 draft = false
-weight = 1075
+weight = 1160
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E000.mp3"
@@ -30,7 +30,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 
 -   DoS via expensive algorithmic computation in TCP stream reassembly
 -   Requires attacker to have an existing TCP session
--   Affecting kernel >= 4.9
+-   Affecting kernel &gt;= 4.9
 -   Fixed in Bionic and Xenial for HWE
 -   No known exploits in the wild
 
@@ -45,7 +45,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
         -   Originally reported by Jann Horn in relation to whoopsie / apport in Ubuntu
     -   DoS / crash via specially crafted xfs filesystem ([CVE-2018-13094](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-13094))
     -   SegmentSmack fix ([CVE-2018-5390](http://people.canonical.com/~ubuntu-security/cve/CVE-2018-5390))
--   generic & lowlatency kernels for Trusty, Xenial and Bionic
+-   generic &amp; lowlatency kernels for Trusty, Xenial and Bionic
 
 
 ### gnupg ([CVE-2017-7526](http://people.canonical.com/~ubuntu-security/cve/CVE-2017-7526)) ([USN-3733-1](https://usn.ubuntu.com/3733-1/)) {#gnupg--cve-2017-7526----usn-3733-1}
@@ -69,7 +69,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 
 -   Allows opening (but not reading) of arbitrary files
     -   Information disclosure / DoS since could open pseudoterminals or other kernel devices and cause exhausting of resources
--   For lxc >=2.0 - bionic, xenial-backports
+-   For lxc &gt;=2.0 - bionic, xenial-backports
 
 
 ### libxcursor ([CVE-2015-9262](http://people.canonical.com/~ubuntu-security/cve/CVE-2015-9262)) ([USN-3729-1](https://usn.ubuntu.com/3729-1/)) {#libxcursor--cve-2015-9262----usn-3729-1}
@@ -86,7 +86,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 -   Command-line FTP / HTTP / BitTorrent clients
 -   Does not properly validate filenames from server when mirroring locally
     -   Could allow a malicious server to remove all files in PWD
--   Fixed in Bionic, Xenial, Trusty & **Precise ESM**
+-   Fixed in Bionic, Xenial, Trusty &amp; **Precise ESM**
 
 
 ### Subscribe to ubuntu-security-announce mailing list {#subscribe-to-ubuntu-security-announce-mailing-list}
@@ -119,7 +119,7 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 -   Overview of AppArmor with brief history and walkthough of main features
 -   Efforts to enable AppArmor by default in Debian Buster (10)
 -   Ongoing work to upstream the latest AppArmor changes
-    -   Course-grained network mediation (AF\_INET / AF\_IET6)
+    -   Course-grained network mediation (AF_INET / AF_IET6)
     -   DBus mediation
         -   Almost all are now in Linux kernel 4.19
     -   Some remain for 4.20
@@ -150,5 +150,5 @@ permalink = "https://ubuntusecuritypodcast.org/episode-0/"
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

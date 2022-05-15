@@ -6,9 +6,9 @@ description = """
   the top cyber threats faced during the holidays.
   """
 date = 2021-12-25T09:40:00+10:30
-lastmod = 2021-12-25T09:42:22+10:30
+lastmod = 2022-05-15T18:05:47+09:30
 draft = false
-weight = 1001
+weight = 1017
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E143.mp3"
@@ -31,4 +31,4 @@ the top cyber threats faced during the holidays.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

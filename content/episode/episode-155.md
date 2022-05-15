@@ -6,9 +6,9 @@ description = """
   for Thunderbird, OpenVPN, Python, Paramiko and more.
   """
 date = 2022-04-01T15:36:00+10:30
-lastmod = 2022-04-01T15:36:50+10:30
+lastmod = 2022-05-15T18:05:38+09:30
 draft = false
-weight = 1001
+weight = 1005
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E155.mp3"

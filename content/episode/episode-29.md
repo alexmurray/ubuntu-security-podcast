@@ -8,9 +8,9 @@ description = """
   Trusty Tahr to Extended Security Maintenance.
   """
 date = 2019-04-30
-lastmod = 2020-05-15T16:40:02+09:30
+lastmod = 2022-05-15T18:07:15+09:30
 draft = false
-weight = 1046
+weight = 1131
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E029.mp3"
@@ -36,7 +36,7 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3947-1](https://usn.ubuntu.com/3947-1/), USN-3947-2] Libxslt vulnerability {#usn-3947-1-usn-3947-2-libxslt-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-11068](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11068)
+    -   [CVE-2019-11068](https://ubuntu.com/security/CVE-2019-11068)
 -   Library to transform XML via XML definitions
 -   Includes a security framework since XSLT can define operations to
     fetch/read/write files and resources etc
@@ -52,20 +52,20 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3948-1](https://usn.ubuntu.com/3948-1/)] WebKitGTK+ vulnerabilities {#usn-3948-1-webkitgtk-plus-vulnerabilities}
 
 -   14 CVEs addressed in Bionic, Cosmic
-    -   [CVE-2019-8563](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8563)
-    -   [CVE-2019-8559](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8559)
-    -   [CVE-2019-8558](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8558)
-    -   [CVE-2019-8551](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8551)
-    -   [CVE-2019-8544](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8544)
-    -   [CVE-2019-8536](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8536)
-    -   [CVE-2019-8535](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8535)
-    -   [CVE-2019-8524](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8524)
-    -   [CVE-2019-8523](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8523)
-    -   [CVE-2019-8518](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8518)
-    -   [CVE-2019-8506](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8506)
-    -   [CVE-2019-8375](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8375)
-    -   [CVE-2019-6251](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6251)
-    -   [CVE-2019-11070](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11070)
+    -   [CVE-2019-8563](https://ubuntu.com/security/CVE-2019-8563)
+    -   [CVE-2019-8559](https://ubuntu.com/security/CVE-2019-8559)
+    -   [CVE-2019-8558](https://ubuntu.com/security/CVE-2019-8558)
+    -   [CVE-2019-8551](https://ubuntu.com/security/CVE-2019-8551)
+    -   [CVE-2019-8544](https://ubuntu.com/security/CVE-2019-8544)
+    -   [CVE-2019-8536](https://ubuntu.com/security/CVE-2019-8536)
+    -   [CVE-2019-8535](https://ubuntu.com/security/CVE-2019-8535)
+    -   [CVE-2019-8524](https://ubuntu.com/security/CVE-2019-8524)
+    -   [CVE-2019-8523](https://ubuntu.com/security/CVE-2019-8523)
+    -   [CVE-2019-8518](https://ubuntu.com/security/CVE-2019-8518)
+    -   [CVE-2019-8506](https://ubuntu.com/security/CVE-2019-8506)
+    -   [CVE-2019-8375](https://ubuntu.com/security/CVE-2019-8375)
+    -   [CVE-2019-6251](https://ubuntu.com/security/CVE-2019-6251)
+    -   [CVE-2019-11070](https://ubuntu.com/security/CVE-2019-11070)
 -   Wide mix of issues fixed including XSS and DoS attacks or possible
     arbitrary code execution if visiting a malicious website
 
@@ -73,7 +73,7 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3949-1](https://usn.ubuntu.com/3949-1/)] OpenJDK 11 vulnerability {#usn-3949-1-openjdk-11-vulnerability}
 
 -   1 CVEs addressed in Bionic
-    -   [CVE-2019-2422](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2422)
+    -   [CVE-2019-2422](https://ubuntu.com/security/CVE-2019-2422)
 -   Backport of openjdk-11 from Disco to Bionic, includes a minor security
     fix to memory disclosure vulnerablity which could enable an attacker to
     bypass sandbox
@@ -82,23 +82,23 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3918-4](https://usn.ubuntu.com/3918-4/)] Firefox regressions {#usn-3918-4-firefox-regressions}
 
 -   17 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2019-9803](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9803)
-    -   [CVE-2019-9793](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9793)
-    -   [CVE-2019-9809](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9809)
-    -   [CVE-2019-9808](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9808)
-    -   [CVE-2019-9807](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9807)
-    -   [CVE-2019-9806](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9806)
-    -   [CVE-2019-9805](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9805)
-    -   [CVE-2019-9802](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9802)
-    -   [CVE-2019-9799](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9799)
-    -   [CVE-2019-9797](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9797)
-    -   [CVE-2019-9796](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9796)
-    -   [CVE-2019-9795](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9795)
-    -   [CVE-2019-9792](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9792)
-    -   [CVE-2019-9791](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9791)
-    -   [CVE-2019-9790](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9790)
-    -   [CVE-2019-9789](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9789)
-    -   [CVE-2019-9788](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9788)
+    -   [CVE-2019-9803](https://ubuntu.com/security/CVE-2019-9803)
+    -   [CVE-2019-9793](https://ubuntu.com/security/CVE-2019-9793)
+    -   [CVE-2019-9809](https://ubuntu.com/security/CVE-2019-9809)
+    -   [CVE-2019-9808](https://ubuntu.com/security/CVE-2019-9808)
+    -   [CVE-2019-9807](https://ubuntu.com/security/CVE-2019-9807)
+    -   [CVE-2019-9806](https://ubuntu.com/security/CVE-2019-9806)
+    -   [CVE-2019-9805](https://ubuntu.com/security/CVE-2019-9805)
+    -   [CVE-2019-9802](https://ubuntu.com/security/CVE-2019-9802)
+    -   [CVE-2019-9799](https://ubuntu.com/security/CVE-2019-9799)
+    -   [CVE-2019-9797](https://ubuntu.com/security/CVE-2019-9797)
+    -   [CVE-2019-9796](https://ubuntu.com/security/CVE-2019-9796)
+    -   [CVE-2019-9795](https://ubuntu.com/security/CVE-2019-9795)
+    -   [CVE-2019-9792](https://ubuntu.com/security/CVE-2019-9792)
+    -   [CVE-2019-9791](https://ubuntu.com/security/CVE-2019-9791)
+    -   [CVE-2019-9790](https://ubuntu.com/security/CVE-2019-9790)
+    -   [CVE-2019-9789](https://ubuntu.com/security/CVE-2019-9789)
+    -   [CVE-2019-9788](https://ubuntu.com/security/CVE-2019-9788)
 -   [Episode 26](https://ubuntusecuritypodcast.org/episode-26/) covered 66.0.2 regression - this is now 66.0.3 to fix further
     regressions in keyboard handling as discussed previously
 
@@ -116,8 +116,8 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3950-1](https://usn.ubuntu.com/3950-1/)] ZNC vulnerability {#usn-3950-1-znc-vulnerability}
 
 -   1 CVEs addressed in Cosmic
-    -   [CVE-2019-9917](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9917)
--   crash -> DoS due to improper handling of character encoding - if a remote
+    -   [CVE-2019-9917](https://ubuntu.com/security/CVE-2019-9917)
+-   crash -&gt; DoS due to improper handling of character encoding - if a remote
     user specified an invalid encoding it could cause znc to crash
 -   Fixed to fallback to utf-8 if unknown encoding specified
 
@@ -125,7 +125,7 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3951-1](https://usn.ubuntu.com/3951-1/)] Dovecot vulnerability {#usn-3951-1-dovecot-vulnerability}
 
 -   1 CVEs addressed in Cosmic, Disco
-    -   [CVE-2019-10691](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10691)
+    -   [CVE-2019-10691](https://ubuntu.com/security/CVE-2019-10691)
 -   Only affects Dovecot 2.3 and hence only Cosmic, Disco, Eoan etc
 -   Improper handling of invalid utf-8 username in JSON encoding could cause
     the authentication service to crash
@@ -134,9 +134,9 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3952-1](https://usn.ubuntu.com/3952-1/)] Pacemaker vulnerabilities {#usn-3952-1-pacemaker-vulnerabilities}
 
 -   3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-3885](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3885)
-    -   [CVE-2018-16878](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16878)
-    -   [CVE-2018-16877](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16877)
+    -   [CVE-2019-3885](https://ubuntu.com/security/CVE-2019-3885)
+    -   [CVE-2018-16878](https://ubuntu.com/security/CVE-2018-16878)
+    -   [CVE-2018-16877](https://ubuntu.com/security/CVE-2018-16877)
 -   Cluster resource manager - high availability and load balancing for OpenStack
 -   All discovered by Jan Pokorný - local attacker could possibly escalate
     privileges or cause a denial of service or to cause sensitive information
@@ -146,56 +146,56 @@ Trusty Tahr to Extended Security Maintenance.
 ### [[USN-3953-1](https://usn.ubuntu.com/3953-1/)] PHP vulnerabilities {#usn-3953-1-php-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11035](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11035)
-    -   [CVE-2019-11034](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11034)
+    -   [CVE-2019-11035](https://ubuntu.com/security/CVE-2019-11035)
+    -   [CVE-2019-11034](https://ubuntu.com/security/CVE-2019-11034)
 -   php7.2 and php7.0
 -   Buffer over-read when processing certain EXIF tags - possible information
-    disclosure or crash -> DoS
+    disclosure or crash -&gt; DoS
 
 
 ### [[USN-3922-2](https://usn.ubuntu.com/3922-2/), USN-3922-3] PHP vulnerabilities {#usn-3922-2-usn-3922-3-php-vulnerabilities}
 
 -   7 CVEs addressed in Precise ESM, Trusty
-    -   [CVE-2019-9641](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9641)
-    -   [CVE-2019-9640](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9640)
-    -   [CVE-2019-9639](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9639)
-    -   [CVE-2019-9638](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9638)
-    -   [CVE-2019-9637](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9637)
-    -   [CVE-2019-9675](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9675)
-    -   [CVE-2019-9022](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9022)
+    -   [CVE-2019-9641](https://ubuntu.com/security/CVE-2019-9641)
+    -   [CVE-2019-9640](https://ubuntu.com/security/CVE-2019-9640)
+    -   [CVE-2019-9639](https://ubuntu.com/security/CVE-2019-9639)
+    -   [CVE-2019-9638](https://ubuntu.com/security/CVE-2019-9638)
+    -   [CVE-2019-9637](https://ubuntu.com/security/CVE-2019-9637)
+    -   [CVE-2019-9675](https://ubuntu.com/security/CVE-2019-9675)
+    -   [CVE-2019-9022](https://ubuntu.com/security/CVE-2019-9022)
 -   Most covered back in [Episode 26](https://ubuntusecuritypodcast.org/episode-26/)
 
 
 ### [[USN-3936-2](https://usn.ubuntu.com/3936-2/)] AdvanceCOMP vulnerability {#usn-3936-2-advancecomp-vulnerability}
 
 -   1 CVEs addressed in Disco
-    -   [CVE-2019-9210](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9210)
+    -   [CVE-2019-9210](https://ubuntu.com/security/CVE-2019-9210)
 -   Corresponding update for Disco - covered in [Episode 27](https://ubuntusecuritypodcast.org/episode-27/)
 
 
 ### [[USN-3954-1](https://usn.ubuntu.com/3954-1/)] FreeRADIUS vulnerabilities {#usn-3954-1-freeradius-vulnerabilities}
 
 -   2 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-11235](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11235)
-    -   [CVE-2019-11234](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11234)
+    -   [CVE-2019-11235](https://ubuntu.com/security/CVE-2019-11235)
+    -   [CVE-2019-11234](https://ubuntu.com/security/CVE-2019-11234)
 -   2 possible "Dragonblood" authentication bypass issues - mentioned back in
-    [Episode 28](https://ubuntusecuritypodcast.org/episode-28/) in the context of wpa\_supplicant and hostapd - similar issue
+    [Episode 28](https://ubuntusecuritypodcast.org/episode-28/) in the context of wpa_supplicant and hostapd - similar issue
     for FreeRADIUS
 
 
 ### [[USN-3955-1](https://usn.ubuntu.com/3955-1/)] tcpflow vulnerabilities {#usn-3955-1-tcpflow-vulnerabilities}
 
 -   2 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2018-18409](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18409)
-    -   [CVE-2018-14938](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14938)
--   Stack based buffer overflow and an integer overflow -> usual effects
-    (crash -> DoS / information disclosure)
+    -   [CVE-2018-18409](https://ubuntu.com/security/CVE-2018-18409)
+    -   [CVE-2018-14938](https://ubuntu.com/security/CVE-2018-14938)
+-   Stack based buffer overflow and an integer overflow -&gt; usual effects
+    (crash -&gt; DoS / information disclosure)
 
 
 ### [[USN-3956-1](https://usn.ubuntu.com/3956-1/)] Bind vulnerability {#usn-3956-1-bind-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2018-5743](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5743)
+    -   [CVE-2018-5743](https://ubuntu.com/security/CVE-2018-5743)
 -   DoS - possible to bypass bind's limits on simultaneous TCP clients and so
     cause a DoS via excessive resource usage
 
@@ -242,5 +242,5 @@ Trusty Tahr to Extended Security Maintenance.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

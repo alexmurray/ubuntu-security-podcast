@@ -2,9 +2,9 @@
 title = "Episode 117"
 description = "This week we're talking about moving IRC networks plus security updates for Pillow, Babel, Apport, X11 and more."
 date = 2021-05-28T17:21:00+09:30
-lastmod = 2021-05-28T17:24:23+09:30
+lastmod = 2022-05-15T18:06:07+09:30
 draft = false
-weight = 1001
+weight = 1043
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E117.mp3"
@@ -27,12 +27,12 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ### [[USN-4963-1](https://ubuntu.com/security/notices/USN-4963-1)] Pillow vulnerabilities [00:55] {#usn-4963-1-pillow-vulnerabilities-00-55}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-28678](https://ubuntu.com/security/CVE-2021-28678)
-    -   [CVE-2021-28677](https://ubuntu.com/security/CVE-2021-28677)
-    -   [CVE-2021-28676](https://ubuntu.com/security/CVE-2021-28676)
-    -   [CVE-2021-28675](https://ubuntu.com/security/CVE-2021-28675)
-    -   [CVE-2021-25288](https://ubuntu.com/security/CVE-2021-25288)
-    -   [CVE-2021-25287](https://ubuntu.com/security/CVE-2021-25287)
+    -   [CVE-2021-28678](https://ubuntu.com/security/CVE-2021-28678) <!-- low -->
+    -   [CVE-2021-28677](https://ubuntu.com/security/CVE-2021-28677) <!-- low -->
+    -   [CVE-2021-28676](https://ubuntu.com/security/CVE-2021-28676) <!-- low -->
+    -   [CVE-2021-28675](https://ubuntu.com/security/CVE-2021-28675) <!-- low -->
+    -   [CVE-2021-25288](https://ubuntu.com/security/CVE-2021-25288) <!-- low -->
+    -   [CVE-2021-25287](https://ubuntu.com/security/CVE-2021-25287) <!-- low -->
 -   Python image handling library - used by many other packages for their
     image handling
 -   All DoS issues via OOB read and similar so not critical
@@ -41,7 +41,7 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ### [[USN-4962-1](https://ubuntu.com/security/notices/USN-4962-1)] Babel vulnerability [01:31] {#usn-4962-1-babel-vulnerability-01-31}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-20095](https://ubuntu.com/security/CVE-2021-20095)
+    -   [CVE-2021-20095](https://ubuntu.com/security/CVE-2021-20095) <!-- medium -->
 -   Internationalisation handling for python apps
 -   Directory traversal flaw - could be exploited to load arbitrary locale
     .dat files - these contain serialized Python objects - so hence can get
@@ -53,11 +53,11 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ### [[USN-4964-1](https://ubuntu.com/security/notices/USN-4964-1)] Exiv2 vulnerabilities [02:25] {#usn-4964-1-exiv2-vulnerabilities-02-25}
 
 -   5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-29623](https://ubuntu.com/security/CVE-2021-29623)
-    -   [CVE-2021-32617](https://ubuntu.com/security/CVE-2021-32617)
-    -   [CVE-2021-29473](https://ubuntu.com/security/CVE-2021-29473)
-    -   [CVE-2021-29464](https://ubuntu.com/security/CVE-2021-29464)
-    -   [CVE-2021-29463](https://ubuntu.com/security/CVE-2021-29463)
+    -   [CVE-2021-29623](https://ubuntu.com/security/CVE-2021-29623) <!-- low -->
+    -   [CVE-2021-32617](https://ubuntu.com/security/CVE-2021-32617) <!-- low -->
+    -   [CVE-2021-29473](https://ubuntu.com/security/CVE-2021-29473) <!-- medium -->
+    -   [CVE-2021-29464](https://ubuntu.com/security/CVE-2021-29464) <!-- low -->
+    -   [CVE-2021-29463](https://ubuntu.com/security/CVE-2021-29463) <!-- low -->
 -   CLI util and library (C++) for reading+modifying metadata in image
     files - more exiv2 - last only in [Episode 115](https://ubuntusecuritypodcast.org/episode-115/)
 -   OOB reads on metadata write
@@ -69,17 +69,17 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ### [[USN-4965-1](https://ubuntu.com/security/notices/USN-4965-1), [USN-4965-2](https://ubuntu.com/security/notices/USN-4965-2)] Apport vulnerabilities [03:19] {#usn-4965-1-usn-4965-2-apport-vulnerabilities-03-19}
 
 -   11 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-32557](https://ubuntu.com/security/CVE-2021-32557)
-    -   [CVE-2021-32556](https://ubuntu.com/security/CVE-2021-32556)
-    -   [CVE-2021-32555](https://ubuntu.com/security/CVE-2021-32555)
-    -   [CVE-2021-32554](https://ubuntu.com/security/CVE-2021-32554)
-    -   [CVE-2021-32553](https://ubuntu.com/security/CVE-2021-32553)
-    -   [CVE-2021-32552](https://ubuntu.com/security/CVE-2021-32552)
-    -   [CVE-2021-32551](https://ubuntu.com/security/CVE-2021-32551)
-    -   [CVE-2021-32550](https://ubuntu.com/security/CVE-2021-32550)
-    -   [CVE-2021-32549](https://ubuntu.com/security/CVE-2021-32549)
-    -   [CVE-2021-32548](https://ubuntu.com/security/CVE-2021-32548)
-    -   [CVE-2021-32547](https://ubuntu.com/security/CVE-2021-32547)
+    -   [CVE-2021-32557](https://ubuntu.com/security/CVE-2021-32557) <!-- medium -->
+    -   [CVE-2021-32556](https://ubuntu.com/security/CVE-2021-32556) <!-- medium -->
+    -   [CVE-2021-32555](https://ubuntu.com/security/CVE-2021-32555) <!-- medium -->
+    -   [CVE-2021-32554](https://ubuntu.com/security/CVE-2021-32554) <!-- medium -->
+    -   [CVE-2021-32553](https://ubuntu.com/security/CVE-2021-32553) <!-- medium -->
+    -   [CVE-2021-32552](https://ubuntu.com/security/CVE-2021-32552) <!-- medium -->
+    -   [CVE-2021-32551](https://ubuntu.com/security/CVE-2021-32551) <!-- medium -->
+    -   [CVE-2021-32550](https://ubuntu.com/security/CVE-2021-32550) <!-- medium -->
+    -   [CVE-2021-32549](https://ubuntu.com/security/CVE-2021-32549) <!-- medium -->
+    -   [CVE-2021-32548](https://ubuntu.com/security/CVE-2021-32548) <!-- medium -->
+    -   [CVE-2021-32547](https://ubuntu.com/security/CVE-2021-32547) <!-- medium -->
 -   Seems it's time for more Apport vulns - every quarter or so
 -   Arbitrary file read / write vulns discovered by Maik Münch
 -   Apport parses various details out of /proc and some of these can be
@@ -99,7 +99,7 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ### [[USN-4966-1](https://ubuntu.com/security/notices/USN-4966-1), [USN-4966-2](https://ubuntu.com/security/notices/USN-4966-2)] libx11 vulnerability [05:57] {#usn-4966-1-usn-4966-2-libx11-vulnerability-05-57}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10), Hirsute (21.04)
-    -   [CVE-2021-31535](https://ubuntu.com/security/CVE-2021-31535)
+    -   [CVE-2021-31535](https://ubuntu.com/security/CVE-2021-31535) <!-- medium -->
 -   When looking up a color, failed to properly validate it - app could then
     get extra X protocol requests sent to the X server - ie. could then
     disable X server authorisation etc so remote attackers could connect to
@@ -109,7 +109,7 @@ This week we're talking about moving IRC networks plus security updates for Pill
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
 
 
-### #ubuntu-hardened -> #ubuntu-security on Libera.Chat [06:45] {#ubuntu-hardened-ubuntu-security-on-libera-dot-chat-06-45}
+### #ubuntu-hardened -&gt; #ubuntu-security on Libera.Chat [06:45] {#ubuntu-hardened-ubuntu-security-on-libera-dot-chat-06-45}
 
 -   LWN writeup <https://lwn.net/Articles/857140/>
 -   Volunteer staff resigned en masse after network was taken over by tech
@@ -131,4 +131,4 @@ This week we're talking about moving IRC networks plus security updates for Pill
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

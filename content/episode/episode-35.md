@@ -2,9 +2,9 @@
 title = "Episode 35"
 description = "We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, Qt and more, plus Joe and Alex discuss some recent malware campaigns including Hiddenwasp, and we cover some open positions too."
 date = 2019-06-11
-lastmod = 2020-05-15T16:39:47+09:30
+lastmod = 2022-05-15T18:07:10+09:30
 draft = false
-weight = 1040
+weight = 1125
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E035.mp3"
@@ -26,7 +26,7 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4002-1](https://usn.ubuntu.com/4002-1/)] Doxygen vulnerability {#usn-4002-1-doxygen-vulnerability}
 
 -   1 CVEs addressed in Xenial
-    -   [CVE-2016-10245](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10245)
+    -   [CVE-2016-10245](https://ubuntu.com/security/CVE-2016-10245)
 -   Generates HTML code documentation from code comments
 -   Includes a field to search across the documentation
 -   Doesn't treat this as untrusted input and blindly displays the input in resulting pages
@@ -37,9 +37,9 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4003-1](https://usn.ubuntu.com/4003-1/)] Qt vulnerabilities {#usn-4003-1-qt-vulnerabilities}
 
 -   3 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2018-19873](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19873)
-    -   [CVE-2018-19870](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19870)
-    -   [CVE-2018-15518](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15518)
+    -   [CVE-2018-19873](https://ubuntu.com/security/CVE-2018-19873)
+    -   [CVE-2018-19870](https://ubuntu.com/security/CVE-2018-19870)
+    -   [CVE-2018-15518](https://ubuntu.com/security/CVE-2018-15518)
 -   3 likely DoS issues:
     -   Buffer overflow when handling invalid BMP images - didn't check for valid
         / sensible width or height parameters
@@ -51,7 +51,7 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4004-1](https://usn.ubuntu.com/4004-1/), [USN-4004-2](https://usn.ubuntu.com/4004-2/)] Berkeley DB vulnerability {#usn-4004-1-usn-4004-2-berkeley-db-vulnerability}
 
 -   1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-8457](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-8457)
+    -   [CVE-2019-8457](https://ubuntu.com/security/CVE-2019-8457)
 -   Contains an embedded copy of sqlite which was vulnerable to a heap-based
     out-of-bounds read when handling invalid rtree tables
 
@@ -59,8 +59,8 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4005-1](https://usn.ubuntu.com/4005-1/)] Linux kernel vulnerabilities {#usn-4005-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Disco
-    -   [CVE-2019-11815](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815)
-    -   [CVE-2019-11810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810)
+    -   [CVE-2019-11815](https://ubuntu.com/security/CVE-2019-11815)
+    -   [CVE-2019-11810](https://ubuntu.com/security/CVE-2019-11810)
 -   Reliable Datagram Sockets (RDS) module was vulnerable to a race-condition
     during network namespace cleanup that could lead to a UAF.
     -   RDS is blacklisted by default in Ubuntu AND this is only able to be
@@ -70,8 +70,8 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 
 ### [[USN-4006-1](https://usn.ubuntu.com/4006-1/), [USN-4006-2](https://usn.ubuntu.com/4006-2/)] Linux kernel vulnerability {#usn-4006-1-usn-4006-2-linux-kernel-vulnerability}
 
--   1 CVEs addressed in Cosmic & Bionic HWE
-    -   [CVE-2019-11191](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191)
+-   1 CVEs addressed in Cosmic &amp; Bionic HWE
+    -   [CVE-2019-11191](https://ubuntu.com/security/CVE-2019-11191)
 -   Old a.out binary format for 32-bit platforms - so only affects i386
     kernel users, and only affects setuid a.out binaries (none in archive)
 -   Kernel would not setup permissions early enough and so could allow ASLR
@@ -83,18 +83,18 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 
 ### [[USN-4007-1](https://usn.ubuntu.com/4007-1/), [USN-4007-2](https://usn.ubuntu.com/4007-2/)] Linux kernel vulnerability {#usn-4007-1-usn-4007-2-linux-kernel-vulnerability}
 
--   1 CVEs addressed in Bionic & Xenial HWE
-    -   [CVE-2019-11191](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191)
+-   1 CVEs addressed in Bionic &amp; Xenial HWE
+    -   [CVE-2019-11191](https://ubuntu.com/security/CVE-2019-11191)
 -   Same a.out issue
 
 
 ### [[USN-4008-1](https://usn.ubuntu.com/4008-1/), [USN-4008-3](https://usn.ubuntu.com/4008-3/)] Linux kernel vulnerabilities {#usn-4008-1-usn-4008-3-linux-kernel-vulnerabilities}
 
 -   4 CVEs addressed in Xenial, Trusty ESM (HWE)
-    -   [CVE-2019-11191](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191)
-    -   [CVE-2019-11815](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815)
-    -   [CVE-2019-11810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810)
-    -   [CVE-2019-11190](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11190)
+    -   [CVE-2019-11191](https://ubuntu.com/security/CVE-2019-11191)
+    -   [CVE-2019-11815](https://ubuntu.com/security/CVE-2019-11815)
+    -   [CVE-2019-11810](https://ubuntu.com/security/CVE-2019-11810)
+    -   [CVE-2019-11190](https://ubuntu.com/security/CVE-2019-11190)
 -   a.out issue, plus RDS and MegaRAID NULL ptr dereference
 -   Similar to a.out issue, in general ASLR could be bypassed on setuid
     binaries due to a similar race-condition
@@ -104,10 +104,10 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4008-2](https://usn.ubuntu.com/4008-2/)] AppArmor update {#usn-4008-2-apparmor-update}
 
 -   4 CVEs addressed in Xenial
-    -   [CVE-2019-11191](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11191)
-    -   [CVE-2019-11815](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11815)
-    -   [CVE-2019-11810](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11810)
-    -   [CVE-2019-11190](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11190)
+    -   [CVE-2019-11191](https://ubuntu.com/security/CVE-2019-11191)
+    -   [CVE-2019-11815](https://ubuntu.com/security/CVE-2019-11815)
+    -   [CVE-2019-11810](https://ubuntu.com/security/CVE-2019-11810)
+    -   [CVE-2019-11190](https://ubuntu.com/security/CVE-2019-11190)
 -   Updated AppArmor profiles to handle new kernel behavoiur as a result of
     the fix for CVE-2019-11190 (ASLR bypass on setuid executables).
 -   When executing a binary, will then appear to require mmap privileges of
@@ -119,21 +119,21 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM
 -   3 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11040](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11040)
-    -   [CVE-2019-11039](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11039)
-    -   [CVE-2019-11036](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11036)
+    -   [CVE-2019-11040](https://ubuntu.com/security/CVE-2019-11040)
+    -   [CVE-2019-11039](https://ubuntu.com/security/CVE-2019-11039)
+    -   [CVE-2019-11036](https://ubuntu.com/security/CVE-2019-11036)
 -   Heap buffer overflow in handling crafted JPEG files
 -   Integer overflow, leading to possible OOB read when handling crafted mime
     encoded data
 -   (Xenial, Bionic, Cosmic and Disco only) - OOB read when handling crafted
-    EXIF data -> crash, DoS or possible information disclosure form other
+    EXIF data -&gt; crash, DoS or possible information disclosure form other
     memory
 
 
 ### [[USN-4010-1](https://usn.ubuntu.com/4010-1/)] Exim vulnerability {#usn-4010-1-exim-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic
-    -   [CVE-2019-10149](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10149)
+    -   [CVE-2019-10149](https://ubuntu.com/security/CVE-2019-10149)
 -   Possible remote exploit of popular MTA
 -   Embargo broke early - was expected to be public 11th June - as a
     consequence, we released our update once the details were publicly known
@@ -146,8 +146,8 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-3957-3](https://usn.ubuntu.com/3957-3/)] MariaDB vulnerabilities {#usn-3957-3-mariadb-vulnerabilities}
 
 -   2 CVEs addressed in Bionic
-    -   [CVE-2019-2627](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627)
-    -   [CVE-2019-2614](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614)
+    -   [CVE-2019-2627](https://ubuntu.com/security/CVE-2019-2627)
+    -   [CVE-2019-2614](https://ubuntu.com/security/CVE-2019-2614)
 -   Corresponding fixes for flaws originally reported in MySQL - fixed in
     MariaDB (community maintained fork of MySQL) - [Episode 30](https://ubuntusecuritypodcast.org/episode-30/)
 
@@ -155,36 +155,36 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ### [[USN-4011-1](https://usn.ubuntu.com/4011-1/), [USN-4011-2](https://usn.ubuntu.com/4011-2/)] Jinja2 vulnerabilities {#usn-4011-1-usn-4011-2-jinja2-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-10906](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-10906)
-    -   [CVE-2016-10745](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-10745)
+    -   [CVE-2019-10906](https://ubuntu.com/security/CVE-2019-10906)
+    -   [CVE-2016-10745](https://ubuntu.com/security/CVE-2016-10745)
 -   Sandbox is used when rendering user-provided templates (ie untrusted)
 -   Possible to escape the sandbox by reading arbitrary python objects via
     Python's internal string format method (by referencing the <span class="underline"><span class="underline">globals</span></span>
     array)
 -   Was originally fixed in 2016 for the str.format method - but at the time
-    missed the similar str.format\_map method - so both fixed in this update
+    missed the similar str.format_map method - so both fixed in this update
 
 
 ### [[USN-3991-2](https://usn.ubuntu.com/3991-2/)] Firefox regression {#usn-3991-2-firefox-regression}
 
 -   17 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-9816](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9816)
-    -   [CVE-2019-11698](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11698)
-    -   [CVE-2019-11697](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11697)
-    -   [CVE-2019-9821](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9821)
-    -   [CVE-2019-9820](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9820)
-    -   [CVE-2019-9819](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9819)
-    -   [CVE-2019-9817](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9817)
-    -   [CVE-2019-9814](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9814)
-    -   [CVE-2019-9800](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9800)
-    -   [CVE-2019-7317](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317)
-    -   [CVE-2019-11701](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11701)
-    -   [CVE-2019-11699](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11699)
-    -   [CVE-2019-11696](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11696)
-    -   [CVE-2019-11695](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11695)
-    -   [CVE-2019-11693](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11693)
-    -   [CVE-2019-11692](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11692)
-    -   [CVE-2019-11691](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11691)
+    -   [CVE-2019-9816](https://ubuntu.com/security/CVE-2019-9816)
+    -   [CVE-2019-11698](https://ubuntu.com/security/CVE-2019-11698)
+    -   [CVE-2019-11697](https://ubuntu.com/security/CVE-2019-11697)
+    -   [CVE-2019-9821](https://ubuntu.com/security/CVE-2019-9821)
+    -   [CVE-2019-9820](https://ubuntu.com/security/CVE-2019-9820)
+    -   [CVE-2019-9819](https://ubuntu.com/security/CVE-2019-9819)
+    -   [CVE-2019-9817](https://ubuntu.com/security/CVE-2019-9817)
+    -   [CVE-2019-9814](https://ubuntu.com/security/CVE-2019-9814)
+    -   [CVE-2019-9800](https://ubuntu.com/security/CVE-2019-9800)
+    -   [CVE-2019-7317](https://ubuntu.com/security/CVE-2019-7317)
+    -   [CVE-2019-11701](https://ubuntu.com/security/CVE-2019-11701)
+    -   [CVE-2019-11699](https://ubuntu.com/security/CVE-2019-11699)
+    -   [CVE-2019-11696](https://ubuntu.com/security/CVE-2019-11696)
+    -   [CVE-2019-11695](https://ubuntu.com/security/CVE-2019-11695)
+    -   [CVE-2019-11693](https://ubuntu.com/security/CVE-2019-11693)
+    -   [CVE-2019-11692](https://ubuntu.com/security/CVE-2019-11692)
+    -   [CVE-2019-11691](https://ubuntu.com/security/CVE-2019-11691)
 -   Previous FF 67.0 had broken code for checking versions on upgrades, and
     could potentially think you had downgraded the browser when it was in
     fact upgraded and therefore think the old profile data was invalid
@@ -215,5 +215,5 @@ We look at vulnerabilities and updates for Exim, the Linux kernel, Berkeley DB, 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -7,9 +7,9 @@ description = """
   Flatpak and more.
   """
 date = 2021-12-16T17:23:00+10:30
-lastmod = 2021-12-16T17:28:20+10:30
+lastmod = 2022-05-15T18:05:48+09:30
 draft = false
-weight = 1001
+weight = 1018
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E142.mp3"
@@ -35,7 +35,7 @@ Flatpak and more.
 ### [[USN-5183-1](https://ubuntu.com/security/notices/USN-5183-1)] BlueZ vulnerability [00:48] {#usn-5183-1-bluez-vulnerability-00-48}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2019-8922](https://ubuntu.com/security/CVE-2019-8922)
+    -   [CVE-2019-8922](https://ubuntu.com/security/CVE-2019-8922) <!-- medium -->
 -   Heap based buffer overflow when handling overly large SDP requests -
     crash / possible code execution as a result
 
@@ -43,23 +43,23 @@ Flatpak and more.
 ### [[USN-5186-1](https://ubuntu.com/security/notices/USN-5186-1)] Firefox vulnerabilities [01:08] {#usn-5186-1-firefox-vulnerabilities-01-08}
 
 -   10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-43540](https://ubuntu.com/security/CVE-2021-43540)
-    -   [CVE-2021-43546](https://ubuntu.com/security/CVE-2021-43546)
-    -   [CVE-2021-43545](https://ubuntu.com/security/CVE-2021-43545)
-    -   [CVE-2021-43543](https://ubuntu.com/security/CVE-2021-43543)
-    -   [CVE-2021-43542](https://ubuntu.com/security/CVE-2021-43542)
-    -   [CVE-2021-43541](https://ubuntu.com/security/CVE-2021-43541)
-    -   [CVE-2021-43539](https://ubuntu.com/security/CVE-2021-43539)
-    -   [CVE-2021-43538](https://ubuntu.com/security/CVE-2021-43538)
-    -   [CVE-2021-43537](https://ubuntu.com/security/CVE-2021-43537)
-    -   [CVE-2021-43536](https://ubuntu.com/security/CVE-2021-43536)
+    -   [CVE-2021-43540](https://ubuntu.com/security/CVE-2021-43540) <!-- medium -->
+    -   [CVE-2021-43546](https://ubuntu.com/security/CVE-2021-43546) <!-- medium -->
+    -   [CVE-2021-43545](https://ubuntu.com/security/CVE-2021-43545) <!-- medium -->
+    -   [CVE-2021-43543](https://ubuntu.com/security/CVE-2021-43543) <!-- medium -->
+    -   [CVE-2021-43542](https://ubuntu.com/security/CVE-2021-43542) <!-- medium -->
+    -   [CVE-2021-43541](https://ubuntu.com/security/CVE-2021-43541) <!-- medium -->
+    -   [CVE-2021-43539](https://ubuntu.com/security/CVE-2021-43539) <!-- medium -->
+    -   [CVE-2021-43538](https://ubuntu.com/security/CVE-2021-43538) <!-- medium -->
+    -   [CVE-2021-43537](https://ubuntu.com/security/CVE-2021-43537) <!-- medium -->
+    -   [CVE-2021-43536](https://ubuntu.com/security/CVE-2021-43536) <!-- medium -->
 -   95.0
 
 
 ### [[USN-5189-1](https://ubuntu.com/security/notices/USN-5189-1)] GLib vulnerability [01:34] {#usn-5189-1-glib-vulnerability-01-34}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3800](https://ubuntu.com/security/CVE-2021-3800)
+    -   [CVE-2021-3800](https://ubuntu.com/security/CVE-2021-3800) <!-- medium -->
 -   By setting the `GLIB_CHARSETALIAS_DIR` env var, could then possibly exploit
     setuid binaries like `pkexec` which are linked against glib to possibly
     read root-owned files - fixed to just have glib not read and use this
@@ -69,15 +69,15 @@ Flatpak and more.
 ### [[USN-5142-3](https://ubuntu.com/security/notices/USN-5142-3)] Samba regression [02:29] {#usn-5142-3-samba-regression-02-29}
 
 -   9 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671)
-    -   [CVE-2021-3738](https://ubuntu.com/security/CVE-2021-3738)
-    -   [CVE-2021-23192](https://ubuntu.com/security/CVE-2021-23192)
-    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722)
-    -   [CVE-2020-25721](https://ubuntu.com/security/CVE-2020-25721)
-    -   [CVE-2020-25719](https://ubuntu.com/security/CVE-2020-25719)
-    -   [CVE-2020-25718](https://ubuntu.com/security/CVE-2020-25718)
-    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717)
-    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124)
+    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671) <!-- low -->
+    -   [CVE-2021-3738](https://ubuntu.com/security/CVE-2021-3738) <!-- medium -->
+    -   [CVE-2021-23192](https://ubuntu.com/security/CVE-2021-23192) <!-- medium -->
+    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722) <!-- medium -->
+    -   [CVE-2020-25721](https://ubuntu.com/security/CVE-2020-25721) <!-- medium -->
+    -   [CVE-2020-25719](https://ubuntu.com/security/CVE-2020-25719) <!-- medium -->
+    -   [CVE-2020-25718](https://ubuntu.com/security/CVE-2020-25718) <!-- medium -->
+    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717) <!-- medium -->
+    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124) <!-- medium -->
 -   [Episode 138](https://ubuntusecuritypodcast.org/episode-138/), [Episode 141](https://ubuntusecuritypodcast.org/episode-141/) - yet another upstream regression in Samba due
     to the most recent set of security updates which we discussed a month ago
     in episode 138
@@ -86,16 +86,16 @@ Flatpak and more.
 ### [[USN-5174-2](https://ubuntu.com/security/notices/USN-5174-2)] Samba regression {#usn-5174-2-samba-regression}
 
 -   4 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671)
-    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722)
-    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717)
-    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124)
+    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671) <!-- low -->
+    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722) <!-- medium -->
+    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717) <!-- medium -->
+    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124) <!-- medium -->
 
 
 ### [[USN-5191-1](https://ubuntu.com/security/notices/USN-5191-1)] Flatpak vulnerability [02:48] {#usn-5191-1-flatpak-vulnerability-02-48}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-41133](https://ubuntu.com/security/CVE-2021-41133)
+    -   [CVE-2021-41133](https://ubuntu.com/security/CVE-2021-41133) <!-- medium -->
 -   Possible to escape the flatpak sandbox by tricking services running on
     the host that they were not in fact communicating with a flatpak
     sandboxed application but with a regular unconfined application. As such
@@ -107,10 +107,10 @@ Flatpak and more.
 ### [[USN-5193-1](https://ubuntu.com/security/notices/USN-5193-1)] X.Org X Server vulnerabilities [03:26] {#usn-5193-1-x-dot-org-x-server-vulnerabilities-03-26}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-4011](https://ubuntu.com/security/CVE-2021-4011)
-    -   [CVE-2021-4010](https://ubuntu.com/security/CVE-2021-4010)
-    -   [CVE-2021-4009](https://ubuntu.com/security/CVE-2021-4009)
-    -   [CVE-2021-4008](https://ubuntu.com/security/CVE-2021-4008)
+    -   [CVE-2021-4011](https://ubuntu.com/security/CVE-2021-4011) <!-- medium -->
+    -   [CVE-2021-4010](https://ubuntu.com/security/CVE-2021-4010) <!-- medium -->
+    -   [CVE-2021-4009](https://ubuntu.com/security/CVE-2021-4009) <!-- medium -->
+    -   [CVE-2021-4008](https://ubuntu.com/security/CVE-2021-4008) <!-- medium -->
 -   4 different OOB writes that could be triggered by X clients - could then
     cause the X server to crash or possible code execution etc
 -   In more recent releases, X runs as a regular user so impact is limited,
@@ -121,13 +121,13 @@ Flatpak and more.
 ### [[USN-5192-1](https://ubuntu.com/security/notices/USN-5192-1)] Apache Log4j 2 vulnerability [04:12] {#usn-5192-1-apache-log4j-2-vulnerability-04-12}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-44228](https://ubuntu.com/security/CVE-2021-44228)
+    -   [CVE-2021-44228](https://ubuntu.com/security/CVE-2021-44228) <!-- high -->
 
 
 ### [[USN-5197-1](https://ubuntu.com/security/notices/USN-5197-1)] Apache Log4j 2 vulnerability {#usn-5197-1-apache-log4j-2-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-45046](https://ubuntu.com/security/CVE-2021-45046)
+    -   [CVE-2021-45046](https://ubuntu.com/security/CVE-2021-45046) <!-- high -->
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -230,4 +230,4 @@ Flatpak and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

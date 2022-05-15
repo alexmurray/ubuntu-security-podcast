@@ -2,9 +2,9 @@
 title = "Episode 30"
 description = "Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and others, plus we talk to Joe McManus about the recent iLnkP2P IoT hack and the compromise of DockerHub's credentials database and more."
 date = 2019-05-06
-lastmod = 2020-05-15T16:39:59+09:30
+lastmod = 2022-05-15T18:07:14+09:30
 draft = false
-weight = 1045
+weight = 1130
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E030.mp3"
@@ -26,14 +26,14 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3957-1](https://usn.ubuntu.com/3957-1/)] MySQL vulnerabilities {#usn-3957-1-mysql-vulnerabilities}
 
 -   8 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-2683](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2683)
-    -   [CVE-2019-2632](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2632)
-    -   [CVE-2019-2628](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2628)
-    -   [CVE-2019-2627](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2627)
-    -   [CVE-2019-2614](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2614)
-    -   [CVE-2019-2592](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2592)
-    -   [CVE-2019-2581](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2581)
-    -   [CVE-2019-2566](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-2566)
+    -   [CVE-2019-2683](https://ubuntu.com/security/CVE-2019-2683)
+    -   [CVE-2019-2632](https://ubuntu.com/security/CVE-2019-2632)
+    -   [CVE-2019-2628](https://ubuntu.com/security/CVE-2019-2628)
+    -   [CVE-2019-2627](https://ubuntu.com/security/CVE-2019-2627)
+    -   [CVE-2019-2614](https://ubuntu.com/security/CVE-2019-2614)
+    -   [CVE-2019-2592](https://ubuntu.com/security/CVE-2019-2592)
+    -   [CVE-2019-2581](https://ubuntu.com/security/CVE-2019-2581)
+    -   [CVE-2019-2566](https://ubuntu.com/security/CVE-2019-2566)
 -   Latest upstream version 5.7.26 includes fixes for 8 different issues including:
     -   Unauthenticated remote attacker could gain complete access to all MySQL server data
     -   Multiple versions of privileged attacker could hang / crash MySQL server
@@ -42,7 +42,7 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3958-1](https://usn.ubuntu.com/3958-1/)] GStreamer Base Plugins vulnerability {#usn-3958-1-gstreamer-base-plugins-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic
-    -   [CVE-2019-9928](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9928)
+    -   [CVE-2019-9928](https://ubuntu.com/security/CVE-2019-9928)
 -   Heap based buffer overflow in RTSP connection parser - could allow a
     malicious server to gain remote code execution on the client - session id
     can contain attributes separated by semi-colons - would assume when
@@ -57,7 +57,7 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3959-1](https://usn.ubuntu.com/3959-1/)] Evince vulnerability {#usn-3959-1-evince-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11459](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11459)
+    -   [CVE-2019-11459](https://ubuntu.com/security/CVE-2019-11459)
 -   Failed to check return values when calling functions for libTIFF - these
     return the pixel data from an embedded TIFF image - on failure would end
     up rendering uninitialised memory rather than the TIFF image - fixed to
@@ -67,7 +67,7 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3960-1](https://usn.ubuntu.com/3960-1/)] WavPack vulnerability {#usn-3960-1-wavpack-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-11498](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11498)
+    -   [CVE-2019-11498](https://ubuntu.com/security/CVE-2019-11498)
 -   Fuzzing via valgrind - found if no sample rate was specified then a stack
     declared but uninitialized value would be used - could cause a crash etc
     since could be anything - fixed to initialise it to 0 and to check if
@@ -77,8 +77,8 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3961-1](https://usn.ubuntu.com/3961-1/)] Dovecot vulnerabilities {#usn-3961-1-dovecot-vulnerabilities}
 
 -   2 CVEs addressed in Cosmic, Disco
-    -   [CVE-2019-11499](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11499)
-    -   [CVE-2019-11494](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11494)
+    -   [CVE-2019-11499](https://ubuntu.com/security/CVE-2019-11499)
+    -   [CVE-2019-11494](https://ubuntu.com/security/CVE-2019-11494)
 -   Two issues related to authentication in recent versions of dovecot - if
     client aborts authentication the serer could crash due to a NULL pointer
     dereference, and if using TLS but send an invalid authentication message
@@ -88,18 +88,18 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3962-1](https://usn.ubuntu.com/3962-1/)] libpng vulnerability {#usn-3962-1-libpng-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic
-    -   [CVE-2019-7317](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-7317)
+    -   [CVE-2019-7317](https://ubuntu.com/security/CVE-2019-7317)
 -   Use after free in png image cleanup - originally was called under
-    png\_safe\_execute() - this is an internal function which itself calls
-    png\_image\_free() - so after freeing the image would free it a second time
+    png_safe_execute() - this is an internal function which itself calls
+    png_image_free() - so after freeing the image would free it a second time
     in certain conditions - changed to just call the free function directly
-    rather than via png\_safe\_execute()
+    rather than via png_safe_execute()
 
 
 ### [[USN-3963-1](https://usn.ubuntu.com/3963-1/)] Memcached vulnerability {#usn-3963-1-memcached-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-11596](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11596)
+    -   [CVE-2019-11596](https://ubuntu.com/security/CVE-2019-11596)
 -   Possible NULL pointer dereference via local command interface due to
     insufficient checks when parsing input - commands require 4 input tokens
     but only checked for 3 (off-by-one) - could allow an attacker with access
@@ -109,8 +109,8 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3953-2](https://usn.ubuntu.com/3953-2/)] PHP vulnerabilities {#usn-3953-2-php-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2019-11035](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11035)
-    -   [CVE-2019-11034](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11034)
+    -   [CVE-2019-11035](https://ubuntu.com/security/CVE-2019-11035)
+    -   [CVE-2019-11034](https://ubuntu.com/security/CVE-2019-11034)
 -   [Episode 29](https://ubuntusecuritypodcast.org/episode-29/) covered these for standard supported releases - this update is
     for the ESM releases - two bugs in EXIF tag handling
 
@@ -118,8 +118,8 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ### [[USN-3964-1](https://usn.ubuntu.com/3964-1/)] python-gnupg vulnerabilities {#usn-3964-1-python-gnupg-vulnerabilities}
 
 -   2 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-6690](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6690)
-    -   [CVE-2018-12020](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12020)
+    -   [CVE-2019-6690](https://ubuntu.com/security/CVE-2019-6690)
+    -   [CVE-2018-12020](https://ubuntu.com/security/CVE-2018-12020)
 -   Possible to trick gnupg to decrypt ciphertext other than the intended one
     when an attacker can control the passphrase to gnupg and the ciphertext
     is assumed trusted - this uses the command-interface of gnupg and passes
@@ -154,5 +154,5 @@ Fixes for 19 different vulnerabilities across MySQL, Dovecot, Memcached and othe
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

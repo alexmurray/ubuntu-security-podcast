@@ -6,9 +6,9 @@ description = """
   libgcrypt, the Linux kernel, Python, and more.
   """
 date = 2021-09-24T15:05:00+09:30
-lastmod = 2021-09-24T15:05:59+09:30
+lastmod = 2022-05-15T18:05:55+09:30
 draft = false
-weight = 1001
+weight = 1028
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E132.mp3"
@@ -33,16 +33,16 @@ libgcrypt, the Linux kernel, Python, and more.
 ### [[USN-5078-2](https://ubuntu.com/security/notices/USN-5078-2)] Squashfs-Tools vulnerabilities [01:02] {#usn-5078-2-squashfs-tools-vulnerabilities-01-02}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM)
-    -   [CVE-2021-41072](https://ubuntu.com/security/CVE-2021-41072)
-    -   [CVE-2021-40153](https://ubuntu.com/security/CVE-2021-40153)
+    -   [CVE-2021-41072](https://ubuntu.com/security/CVE-2021-41072) <!-- medium -->
+    -   [CVE-2021-40153](https://ubuntu.com/security/CVE-2021-40153) <!-- medium -->
 -   [Episode 131](https://ubuntusecuritypodcast.org/episode-131/)
 
 
 ### [[USN-5080-1](https://ubuntu.com/security/notices/USN-5080-1), [USN-5080-2](https://ubuntu.com/security/notices/USN-5080-2)] Libgcrypt vulnerabilities [01:43] {#usn-5080-1-usn-5080-2-libgcrypt-vulnerabilities-01-43}
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-40528](https://ubuntu.com/security/CVE-2021-40528)
-    -   [CVE-2021-33560](https://ubuntu.com/security/CVE-2021-33560)
+    -   [CVE-2021-40528](https://ubuntu.com/security/CVE-2021-40528) <!-- medium -->
+    -   [CVE-2021-33560](https://ubuntu.com/security/CVE-2021-33560) <!-- low -->
 -   Side-channel attacks against the various ElGamal implementations in
     OpenPGP - <https://eprint.iacr.org/2021/923> - researchers from IBM
     Research Europe
@@ -62,11 +62,11 @@ libgcrypt, the Linux kernel, Python, and more.
 ### [[USN-5071-2](https://ubuntu.com/security/notices/USN-5071-2)] Linux kernel (HWE) vulnerabilities [04:11] {#usn-5071-2-linux-kernel--hwe--vulnerabilities-04-11}
 
 -   5 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
-    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
+    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311) <!-- medium -->
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
 -   AMD nested virtualisation vulns ([Episode 130](https://ubuntusecuritypodcast.org/episode-130/), [Episode 131](https://ubuntusecuritypodcast.org/episode-131/))
 -   2 other KVM vulns - UAF
 -   OOB write in joystick subsystem via a malicious `ioctl()`
@@ -77,61 +77,61 @@ libgcrypt, the Linux kernel, Python, and more.
 ### [[USN-5071-3](https://ubuntu.com/security/notices/USN-5071-3)] Linux kernel (Raspberry Pi) vulnerabilities {#usn-5071-3-linux-kernel--raspberry-pi--vulnerabilities}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
 
 
 ### [[USN-5082-1](https://ubuntu.com/security/notices/USN-5082-1)] Linux kernel (OEM) vulnerabilities {#usn-5082-1-linux-kernel--oem--vulnerabilities}
 
 -   3 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
+    -   [CVE-2021-3609](https://ubuntu.com/security/CVE-2021-3609) <!-- high -->
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
 -   CAN BCM UAF ([Episode 121](https://ubuntusecuritypodcast.org/episode-121/)), AMD nested virtualisation
 
 
 ### [[USN-5073-2](https://ubuntu.com/security/notices/USN-5073-2)] Linux kernel (GCP) vulnerabilities {#usn-5073-2-linux-kernel--gcp--vulnerabilities}
 
 -   5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
-    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656)
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
+    -   [CVE-2021-3656](https://ubuntu.com/security/CVE-2021-3656) <!-- high -->
 
 
 ### [[USN-5073-3](https://ubuntu.com/security/notices/USN-5073-3)] Linux kernel (Raspberry Pi) vulnerabilities {#usn-5073-3-linux-kernel--raspberry-pi--vulnerabilities}
 
 -   3 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693)
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-34693](https://ubuntu.com/security/CVE-2021-34693) <!-- low -->
 
 
 ### [[USN-5079-3](https://ubuntu.com/security/notices/USN-5079-3)] curl vulnerabilities [06:34] {#usn-5079-3-curl-vulnerabilities-06-34}
 
 -   3 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947)
-    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946)
-    -   [CVE-2021-22945](https://ubuntu.com/security/CVE-2021-22945)
+    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947) <!-- medium -->
+    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946) <!-- medium -->
+    -   [CVE-2021-22945](https://ubuntu.com/security/CVE-2021-22945) <!-- medium -->
 -   [Episode 131](https://ubuntusecuritypodcast.org/episode-131/)
 
 
 ### [[USN-5081-1](https://ubuntu.com/security/notices/USN-5081-1)] Qt vulnerabilities [06:49] {#usn-5081-1-qt-vulnerabilities-06-49}
 
 -   2 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2021-38593](https://ubuntu.com/security/CVE-2021-38593)
-    -   [CVE-2020-17507](https://ubuntu.com/security/CVE-2020-17507)
+    -   [CVE-2021-38593](https://ubuntu.com/security/CVE-2021-38593) <!-- medium -->
+    -   [CVE-2020-17507](https://ubuntu.com/security/CVE-2020-17507) <!-- low -->
 -   2 issues in graphics / image handling
-    -   crafted XBM trigger OOB read -> crash
+    -   crafted XBM trigger OOB read -&gt; crash
     -   OOB write when rendering SVG or other crafted vector content
 
 
 ### [[USN-5083-1](https://ubuntu.com/security/notices/USN-5083-1)] Python vulnerabilities [07:22] {#usn-5083-1-python-vulnerabilities-07-22}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-3737](https://ubuntu.com/security/CVE-2021-3737)
-    -   [CVE-2021-3733](https://ubuntu.com/security/CVE-2021-3733)
+    -   [CVE-2021-3737](https://ubuntu.com/security/CVE-2021-3737) <!-- medium -->
+    -   [CVE-2021-3733](https://ubuntu.com/security/CVE-2021-3733) <!-- medium -->
 -   ReDOS - a malicious HTTP server which would send a crafted response for
     BasicAuth which would cause high CPU usage in trying to match the header
     value via a regex - fixed to use a simpler regex
@@ -144,15 +144,15 @@ libgcrypt, the Linux kernel, Python, and more.
 ### [[USN-5084-1](https://ubuntu.com/security/notices/USN-5084-1)] LibTIFF vulnerability [08:32] {#usn-5084-1-libtiff-vulnerability-08-32}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2020-19143](https://ubuntu.com/security/CVE-2020-19143)
+    -   [CVE-2020-19143](https://ubuntu.com/security/CVE-2020-19143) <!-- medium -->
 -   Buffer overflow via crafted TIFF file
 
 
 ### [[USN-5079-4](https://ubuntu.com/security/notices/USN-5079-4)] curl regression [08:42] {#usn-5079-4-curl-regression-08-42}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947)
-    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946)
+    -   [CVE-2021-22947](https://ubuntu.com/security/CVE-2021-22947) <!-- medium -->
+    -   [CVE-2021-22946](https://ubuntu.com/security/CVE-2021-22946) <!-- medium -->
 -   Mistake in backporting patch would cause STARTTLS to fail when used for
     SMTP only - thanks for tuaris for metioning this on
     <https://ubuntuforums.org/showthread.php?t=2467177> but next time please
@@ -214,4 +214,4 @@ libgcrypt, the Linux kernel, Python, and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

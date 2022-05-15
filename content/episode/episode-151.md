@@ -6,9 +6,9 @@ description = """
   preview some upcoming content on Ubuntu system hardening as well.
   """
 date = 2022-03-04T15:31:00+10:30
-lastmod = 2022-03-04T15:32:31+10:30
+lastmod = 2022-05-15T18:05:41+09:30
 draft = false
-weight = 1001
+weight = 1009
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E151.mp3"
@@ -33,17 +33,17 @@ preview some upcoming content on Ubuntu system hardening as well.
 ### [[USN-5292-4](https://ubuntu.com/security/notices/USN-5292-4)] snapd regression [00:52] {#usn-5292-4-snapd-regression-00-52}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731)
-    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730)
-    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120)
-    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155)
+    -   [CVE-2021-44731](https://ubuntu.com/security/CVE-2021-44731) <!-- high -->
+    -   [CVE-2021-44730](https://ubuntu.com/security/CVE-2021-44730) <!-- high -->
+    -   [CVE-2021-4120](https://ubuntu.com/security/CVE-2021-4120) <!-- medium -->
+    -   [CVE-2021-3155](https://ubuntu.com/security/CVE-2021-3155) <!-- medium -->
 -   [Episode 149](https://ubuntusecuritypodcast.org/episode-149/) - another regression with fish shell
 
 
 ### [[USN-5303-1](https://ubuntu.com/security/notices/USN-5303-1)] PHP vulnerability [01:20] {#usn-5303-1-php-vulnerability-01-20}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-21708](https://ubuntu.com/security/CVE-2021-21708)
+    -   [CVE-2021-21708](https://ubuntu.com/security/CVE-2021-21708) <!-- medium -->
 -   UAF - PoC exists which shows the ability to crash PHP interpreter via a
     crafted database query - possible RCE as well
 
@@ -51,7 +51,7 @@ preview some upcoming content on Ubuntu system hardening as well.
 ### [[USN-5304-1](https://ubuntu.com/security/notices/USN-5304-1)] PolicyKit vulnerability [01:40] {#usn-5304-1-policykit-vulnerability-01-40}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-4115](https://ubuntu.com/security/CVE-2021-4115)
+    -   [CVE-2021-4115](https://ubuntu.com/security/CVE-2021-4115) <!-- medium -->
 -   fd exhaustion - send 2 requests and cause the first one to fail - leaks
     the fd - eventually polkit runs out of fds and crashes - will be
     restarted by systemd so impact is low
@@ -89,15 +89,15 @@ preview some upcoming content on Ubuntu system hardening as well.
 -   11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
     -   [CVE-2022-0358](https://ubuntu.com/security/CVE-2022-0358) <!--  -->
     -   [CVE-2021-4158](https://ubuntu.com/security/CVE-2021-4158) <!--  -->
-    -   [CVE-2021-3930](https://ubuntu.com/security/CVE-2021-3930)
-    -   [CVE-2021-3748](https://ubuntu.com/security/CVE-2021-3748)
-    -   [CVE-2021-3713](https://ubuntu.com/security/CVE-2021-3713)
-    -   [CVE-2021-3682](https://ubuntu.com/security/CVE-2021-3682)
-    -   [CVE-2021-3546](https://ubuntu.com/security/CVE-2021-3546)
-    -   [CVE-2021-3545](https://ubuntu.com/security/CVE-2021-3545)
-    -   [CVE-2021-3544](https://ubuntu.com/security/CVE-2021-3544)
-    -   [CVE-2021-20203](https://ubuntu.com/security/CVE-2021-20203)
-    -   [CVE-2021-20196](https://ubuntu.com/security/CVE-2021-20196)
+    -   [CVE-2021-3930](https://ubuntu.com/security/CVE-2021-3930) <!-- low -->
+    -   [CVE-2021-3748](https://ubuntu.com/security/CVE-2021-3748) <!-- medium -->
+    -   [CVE-2021-3713](https://ubuntu.com/security/CVE-2021-3713) <!-- low -->
+    -   [CVE-2021-3682](https://ubuntu.com/security/CVE-2021-3682) <!-- medium -->
+    -   [CVE-2021-3546](https://ubuntu.com/security/CVE-2021-3546) <!-- medium -->
+    -   [CVE-2021-3545](https://ubuntu.com/security/CVE-2021-3545) <!-- low -->
+    -   [CVE-2021-3544](https://ubuntu.com/security/CVE-2021-3544) <!-- low -->
+    -   [CVE-2021-20203](https://ubuntu.com/security/CVE-2021-20203) <!-- low -->
+    -   [CVE-2021-20196](https://ubuntu.com/security/CVE-2021-20196) <!-- low -->
 -   Various issues - integer overflow, NULL ptr derefs, memory leaks and
     disclosures in vhost-user GPU driver, crash or possible code-exec in USB
     redirector device emulation etc
@@ -119,14 +119,14 @@ preview some upcoming content on Ubuntu system hardening as well.
     -   [CVE-2022-23218](https://ubuntu.com/security/CVE-2022-23218) <!--  -->
     -   [CVE-2021-3999](https://ubuntu.com/security/CVE-2021-3999) <!--  -->
     -   [CVE-2021-3998](https://ubuntu.com/security/CVE-2021-3998) <!--  -->
-    -   [CVE-2021-35942](https://ubuntu.com/security/CVE-2021-35942)
-    -   [CVE-2021-27645](https://ubuntu.com/security/CVE-2021-27645)
-    -   [CVE-2020-6096](https://ubuntu.com/security/CVE-2020-6096)
-    -   [CVE-2021-3326](https://ubuntu.com/security/CVE-2021-3326)
-    -   [CVE-2020-29562](https://ubuntu.com/security/CVE-2020-29562)
-    -   [CVE-2020-27618](https://ubuntu.com/security/CVE-2020-27618)
-    -   [CVE-2019-25013](https://ubuntu.com/security/CVE-2019-25013)
-    -   [CVE-2016-10228](https://ubuntu.com/security/CVE-2016-10228)
+    -   [CVE-2021-35942](https://ubuntu.com/security/CVE-2021-35942) <!-- medium -->
+    -   [CVE-2021-27645](https://ubuntu.com/security/CVE-2021-27645) <!-- low -->
+    -   [CVE-2020-6096](https://ubuntu.com/security/CVE-2020-6096) <!-- low -->
+    -   [CVE-2021-3326](https://ubuntu.com/security/CVE-2021-3326) <!-- low -->
+    -   [CVE-2020-29562](https://ubuntu.com/security/CVE-2020-29562) <!-- low -->
+    -   [CVE-2020-27618](https://ubuntu.com/security/CVE-2020-27618) <!-- low -->
+    -   [CVE-2019-25013](https://ubuntu.com/security/CVE-2019-25013) <!-- low -->
+    -   [CVE-2016-10228](https://ubuntu.com/security/CVE-2016-10228) <!-- negligible -->
 -   Usual mix of issues in libc - OOB read / writes - crash / possible code
     execution - in various modules - character encoding handling in iconv,
     netgroup lookups via nscd daemon, `wordexp()` / `realpath()` / `getcwd()`

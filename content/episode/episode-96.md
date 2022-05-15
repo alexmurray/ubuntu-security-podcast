@@ -6,9 +6,9 @@ description = """
   vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episode-95/) and more.
   """
 date = 2020-11-13T12:35:00+10:30
-lastmod = 2020-11-13T12:35:46+10:30
+lastmod = 2022-05-15T18:06:23+09:30
 draft = false
-weight = 1001
+weight = 1064
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E096.mp3"
@@ -37,7 +37,7 @@ vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episod
     root code exec on host - by Xiao Wei from 360 ESG Vuln Research Institute
     who has previously found lots of QEMU bugs - $60k
 -   Still waiting on upstream qemu / docker to release details - Firefox
-    already patched in [CVE-2020-26950](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26950)
+    already patched in [CVE-2020-26950](https://ubuntu.com/security/CVE-2020-26950)
 
 
 ### Github writeup of GDM/accountsservice vulnerabilities [02:53] {#github-writeup-of-gdm-accountsservice-vulnerabilities-02-53}
@@ -64,29 +64,29 @@ vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episod
 ### [[USN-4617-1](https://ubuntu.com/security/notices/USN-4617-1)] SPICE vdagent vulnerabilities {#usn-4617-1-spice-vdagent-vulnerabilities}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-25653](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25653)
-    -   [CVE-2020-25652](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25652)
-    -   [CVE-2020-25651](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25651)
-    -   [CVE-2020-25650](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25650)
+    -   [CVE-2020-25653](https://ubuntu.com/security/CVE-2020-25653) <!-- low -->
+    -   [CVE-2020-25652](https://ubuntu.com/security/CVE-2020-25652) <!-- low -->
+    -   [CVE-2020-25651](https://ubuntu.com/security/CVE-2020-25651) <!-- low -->
+    -   [CVE-2020-25650](https://ubuntu.com/security/CVE-2020-25650) <!-- low -->
 
 
 ### [[USN-4616-2](https://ubuntu.com/security/notices/USN-4616-2)] AccountsService vulnerabilities {#usn-4616-2-accountsservice-vulnerabilities}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM)
-    -   [CVE-2018-14036](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14036)
-    -   [CVE-2020-16126](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-16126)
+    -   [CVE-2018-14036](https://ubuntu.com/security/CVE-2018-14036) <!-- low -->
+    -   [CVE-2020-16126](https://ubuntu.com/security/CVE-2020-16126) <!-- medium -->
 
 
 ### [[USN-4618-1](https://ubuntu.com/security/notices/USN-4618-1)] tmux vulnerability {#usn-4618-1-tmux-vulnerability}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-27347](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27347)
+    -   [CVE-2020-27347](https://ubuntu.com/security/CVE-2020-27347) <!-- medium -->
 
 
 ### [[USN-4619-1](https://ubuntu.com/security/notices/USN-4619-1)] dom4j vulnerability {#usn-4619-1-dom4j-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS)
-    -   [CVE-2018-1000632](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-1000632)
+    -   [CVE-2018-1000632](https://ubuntu.com/security/CVE-2018-1000632) <!-- low -->
 
 
 ### [[USN-4599-3](https://ubuntu.com/security/notices/USN-4599-3)] Firefox regressions {#usn-4599-3-firefox-regressions}
@@ -98,68 +98,68 @@ vulnerabilities covered in [Episode 95](https://ubuntusecuritypodcast.org/episod
 ### [[USN-4620-1](https://ubuntu.com/security/notices/USN-4620-1)] phpLDAPadmin vulnerability {#usn-4620-1-phpldapadmin-vulnerability}
 
 -   1 CVEs addressed in Bionic (18.04 LTS)
-    -   [CVE-2017-11107](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-11107)
+    -   [CVE-2017-11107](https://ubuntu.com/security/CVE-2017-11107) <!-- low -->
 
 
 ### [[USN-4621-1](https://ubuntu.com/security/notices/USN-4621-1)] netqmail vulnerabilities {#usn-4621-1-netqmail-vulnerabilities}
 
 -   5 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-    -   [CVE-2020-3812](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3812)
-    -   [CVE-2020-3811](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-3811)
-    -   [CVE-2005-1515](https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1515)
-    -   [CVE-2005-1514](https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1514)
-    -   [CVE-2005-1513](https://people.canonical.com/~ubuntu-security/cve/CVE-2005-1513)
+    -   [CVE-2020-3812](https://ubuntu.com/security/CVE-2020-3812) <!-- medium -->
+    -   [CVE-2020-3811](https://ubuntu.com/security/CVE-2020-3811) <!-- medium -->
+    -   [CVE-2005-1515](https://ubuntu.com/security/CVE-2005-1515) <!-- medium -->
+    -   [CVE-2005-1514](https://ubuntu.com/security/CVE-2005-1514) <!-- medium -->
+    -   [CVE-2005-1513](https://ubuntu.com/security/CVE-2005-1513) <!-- medium -->
 
 
 ### [[USN-4622-1](https://ubuntu.com/security/notices/USN-4622-1)] OpenLDAP vulnerability {#usn-4622-1-openldap-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-25692](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25692)
+    -   [CVE-2020-25692](https://ubuntu.com/security/CVE-2020-25692) <!-- medium -->
 
 
 ### [[USN-4623-1](https://ubuntu.com/security/notices/USN-4623-1)] Pacemaker vulnerability {#usn-4623-1-pacemaker-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-25654](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-25654)
+    -   [CVE-2020-25654](https://ubuntu.com/security/CVE-2020-25654) <!-- medium -->
 
 
 ### [[USN-4624-1](https://ubuntu.com/security/notices/USN-4624-1)] libexif vulnerability {#usn-4624-1-libexif-vulnerability}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-0452](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-0452)
+    -   [CVE-2020-0452](https://ubuntu.com/security/CVE-2020-0452) <!-- medium -->
 
 
 ### [[USN-4625-1](https://ubuntu.com/security/notices/USN-4625-1)] Firefox vulnerability {#usn-4625-1-firefox-vulnerability}
 
 -   1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-26950](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-26950)
+    -   [CVE-2020-26950](https://ubuntu.com/security/CVE-2020-26950) <!-- high -->
 
 
 ### [[USN-4626-1](https://ubuntu.com/security/notices/USN-4626-1)] Linux kernel vulnerabilities {#usn-4626-1-linux-kernel-vulnerabilities}
 
 -   2 CVEs addressed in Groovy (20.10)
-    -   [CVE-2020-8694](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8694)
-    -   [CVE-2020-27194](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-27194)
+    -   [CVE-2020-8694](https://ubuntu.com/security/CVE-2020-8694) <!-- medium -->
+    -   [CVE-2020-27194](https://ubuntu.com/security/CVE-2020-27194) <!-- high -->
 
 
 ### [[USN-4627-1](https://ubuntu.com/security/notices/USN-4627-1)] Linux kernel vulnerability {#usn-4627-1-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Precise ESM (12.04 ESM), Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-8694](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8694)
+    -   [CVE-2020-8694](https://ubuntu.com/security/CVE-2020-8694) <!-- medium -->
 
 
 ### [[USN-4628-1](https://ubuntu.com/security/notices/USN-4628-1)] Intel Microcode vulnerabilities {#usn-4628-1-intel-microcode-vulnerabilities}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Focal (20.04 LTS), Groovy (20.10)
-    -   [CVE-2020-8698](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8698)
-    -   [CVE-2020-8696](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8696)
-    -   [CVE-2020-8695](https://people.canonical.com/~ubuntu-security/cve/CVE-2020-8695)
+    -   [CVE-2020-8698](https://ubuntu.com/security/CVE-2020-8698) <!-- medium -->
+    -   [CVE-2020-8696](https://ubuntu.com/security/CVE-2020-8696) <!-- low -->
+    -   [CVE-2020-8695](https://ubuntu.com/security/CVE-2020-8695) <!-- medium -->
 
 
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

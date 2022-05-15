@@ -2,9 +2,9 @@
 title = "Episode 146"
 description = "Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux kernel, Apache httpd2 + Log4j2, Ghostscript and more."
 date = 2022-01-14T17:54:00+10:30
-lastmod = 2022-01-14T17:54:50+10:30
+lastmod = 2022-05-15T18:05:45+09:30
 draft = false
-weight = 1001
+weight = 1014
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E146.mp3"
@@ -27,9 +27,9 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5204-1](https://ubuntu.com/security/notices/USN-5204-1)] Django vulnerabilities [00:45] {#usn-5204-1-django-vulnerabilities-00-45}
 
 -   3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-45452](https://ubuntu.com/security/CVE-2021-45452)
-    -   [CVE-2021-45116](https://ubuntu.com/security/CVE-2021-45116)
-    -   [CVE-2021-45115](https://ubuntu.com/security/CVE-2021-45115)
+    -   [CVE-2021-45452](https://ubuntu.com/security/CVE-2021-45452) <!-- low -->
+    -   [CVE-2021-45116](https://ubuntu.com/security/CVE-2021-45116) <!-- low -->
+    -   [CVE-2021-45115](https://ubuntu.com/security/CVE-2021-45115) <!-- medium -->
 -   Possible to write to arbitrary locations **if** a plugin etc would call
     `Storage.save()` with crafted file names
 -   Also possible to use the `dictsort` template filter to disclose info or
@@ -44,7 +44,7 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5206-1](https://ubuntu.com/security/notices/USN-5206-1)] Linux kernel (OEM) vulnerability [02:08] {#usn-5206-1-linux-kernel--oem--vulnerability-02-08}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   5.14 OEM kernel for Ubuntu 20.04 LTS
 -   hugetlb would not always flush TLBs under certain conditions - since
     don't get flushed, a local attacker could then possibly read or alter
@@ -60,10 +60,10 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5207-1](https://ubuntu.com/security/notices/USN-5207-1)] Linux kernel (OEM) vulnerabilities [04:26] {#usn-5207-1-linux-kernel--oem--vulnerabilities-04-26}
 
 -   4 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267)
-    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739)
-    -   [CVE-2021-4001](https://ubuntu.com/security/CVE-2021-4001)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267) <!-- medium -->
+    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739) <!-- medium -->
+    -   [CVE-2021-4001](https://ubuntu.com/security/CVE-2021-4001) <!-- medium -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   5.10 OEM kernel for Ubuntu 20.04 LTS
 -   huge pages tlb flushing issue above
 -   Race-condition in handling of read-only maps in eBPF - could allow a
@@ -76,13 +76,13 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5208-1](https://ubuntu.com/security/notices/USN-5208-1)] Linux kernel vulnerabilities [06:01] {#usn-5208-1-linux-kernel-vulnerabilities-06-01}
 
 -   7 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267)
-    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
-    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267) <!-- medium -->
+    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056) <!-- medium -->
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
+    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321) <!-- medium -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   5.13 kernel series for Ubuntu 21.10, 5.11 kernel series for Ubuntu 21.04,
     5.11 HWE kernel series for Ubuntu 20.04 LTS
 -   As above plus
@@ -94,12 +94,12 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5209-1](https://ubuntu.com/security/notices/USN-5209-1)] Linux kernel vulnerabilities [06:38] {#usn-5209-1-linux-kernel-vulnerabilities-06-38}
 
 -   6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
-    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321)
-    -   [CVE-2021-20317](https://ubuntu.com/security/CVE-2021-20317)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
+    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321) <!-- medium -->
+    -   [CVE-2021-20317](https://ubuntu.com/security/CVE-2021-20317) <!-- low -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   4.15 kernel series for Ubuntu 20.04 LTS, 4.15 HWE kernel series for
     Ubuntu 16.04 ESM, 4.15 kernel for Ubuntu 14.04 ESM on Azure
 -   A bunch of the previously mentioned CVEs, plus:
@@ -109,13 +109,13 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5210-1](https://ubuntu.com/security/notices/USN-5210-1)] Linux kernel vulnerabilities {#usn-5210-1-linux-kernel-vulnerabilities}
 
 -   7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
-    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321)
-    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056) <!-- medium -->
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
+    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321) <!-- medium -->
+    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541) <!-- medium -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   5.4 kernel series for Ubuntu 20.04 LTS, 5.4 HWE kernel series for Ubuntu
     18.04 LTS
 -   As above
@@ -124,7 +124,7 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5211-1](https://ubuntu.com/security/notices/USN-5211-1)] Linux kernel vulnerability {#usn-5211-1-linux-kernel-vulnerability}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   4.4 kernel series for Ubuntu 16.04 ESM, 3.13 kernel series for Ubuntu
     14.04 ESM
 
@@ -140,7 +140,7 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5217-1](https://ubuntu.com/security/notices/USN-5217-1)] Linux kernel (OEM) vulnerabilities {#usn-5217-1-linux-kernel--oem--vulnerabilities}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-4090](https://ubuntu.com/security/CVE-2021-4090)
+    -   [CVE-2021-4090](https://ubuntu.com/security/CVE-2021-4090) <!-- medium -->
 -   NFS OOB write -&gt; local attacker -&gt; DoS / RCE
 -   eBPF ringbuf OOB write
     -   same impact
@@ -149,24 +149,24 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5218-1](https://ubuntu.com/security/notices/USN-5218-1)] Linux kernel (OEM) vulnerabilities {#usn-5218-1-linux-kernel--oem--vulnerabilities}
 
 -   7 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267)
-    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
-    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267) <!-- medium -->
+    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056) <!-- medium -->
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
+    -   [CVE-2021-20321](https://ubuntu.com/security/CVE-2021-20321) <!-- medium -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
 -   5.13 OEM kernel series for Ubuntu 20.04 LTS
 
 
 ### [[LSN-0083-1](https://ubuntu.com/security/notices/LSN-0083-1)] Linux kernel vulnerability [07:33] {#lsn-0083-1-linux-kernel-vulnerability-07-33}
 
 -   5 CVEs addressed in Ubuntu 20.04 LTS, 18.04 LTS and 16.04 ESM
-    -   [CVE-2021-33909](https://ubuntu.com/security/CVE-2021-33909)
-    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555)
-    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002)
-    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653)
-    -   [CVE-2018-25020](https://ubuntu.com/security/CVE-2018-25020)
+    -   [CVE-2021-33909](https://ubuntu.com/security/CVE-2021-33909) <!-- high -->
+    -   [CVE-2021-22555](https://ubuntu.com/security/CVE-2021-22555) <!-- high -->
+    -   [CVE-2021-4002](https://ubuntu.com/security/CVE-2021-4002) <!-- high -->
+    -   [CVE-2021-3653](https://ubuntu.com/security/CVE-2021-3653) <!-- high -->
+    -   [CVE-2018-25020](https://ubuntu.com/security/CVE-2018-25020) <!-- medium -->
 -   Various recent high priority CVEs now available as a livepatch
     -   Including hugepages issue above as well as
     -   eBPF verifier issue
@@ -180,8 +180,8 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5212-1](https://ubuntu.com/security/notices/USN-5212-1), [USN-5212-2](https://ubuntu.com/security/notices/USN-5212-2)] Apache HTTP Server vulnerabilities [08:54] {#usn-5212-1-usn-5212-2-apache-http-server-vulnerabilities-08-54}
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-44790](https://ubuntu.com/security/CVE-2021-44790)
-    -   [CVE-2021-44224](https://ubuntu.com/security/CVE-2021-44224)
+    -   [CVE-2021-44790](https://ubuntu.com/security/CVE-2021-44790) <!-- medium -->
+    -   [CVE-2021-44224](https://ubuntu.com/security/CVE-2021-44224) <!-- medium -->
 -   Possible NULL ptr deref when configured as a forward proxy (`ProxyRequests on`)
 -   Possible SSRF when configured as both a forward and reverse proxy
 
@@ -189,8 +189,8 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5213-1](https://ubuntu.com/security/notices/USN-5213-1)] WebKitGTK vulnerabilities [09:37] {#usn-5213-1-webkitgtk-vulnerabilities-09-37}
 
 -   2 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-30890](https://ubuntu.com/security/CVE-2021-30890)
-    -   [CVE-2021-30887](https://ubuntu.com/security/CVE-2021-30887)
+    -   [CVE-2021-30890](https://ubuntu.com/security/CVE-2021-30890) <!-- medium -->
+    -   [CVE-2021-30887](https://ubuntu.com/security/CVE-2021-30887) <!-- medium -->
 -   "Universal" XSS and Content Security Policy bypass
     -   both come from upstream webkit
 
@@ -198,7 +198,7 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5043-2](https://ubuntu.com/security/notices/USN-5043-2)] Exiv2 regression [10:10] {#usn-5043-2-exiv2-regression-10-10}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-37620](https://ubuntu.com/security/CVE-2021-37620)
+    -   [CVE-2021-37620](https://ubuntu.com/security/CVE-2021-37620) <!-- medium -->
 -   Gwenview crash when opening images exported by darktable
     -   gwenview uses exiv2 for metadata handling
     -   recent security update for exiv2 introduced a regression
@@ -209,8 +209,8 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5222-1](https://ubuntu.com/security/notices/USN-5222-1)] Apache Log4j 2 vulnerabilities [11:06] {#usn-5222-1-apache-log4j-2-vulnerabilities-11-06}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-45105](https://ubuntu.com/security/CVE-2021-45105)
-    -   [CVE-2021-44832](https://ubuntu.com/security/CVE-2021-44832)
+    -   [CVE-2021-45105](https://ubuntu.com/security/CVE-2021-45105) <!-- medium -->
+    -   [CVE-2021-44832](https://ubuntu.com/security/CVE-2021-44832) <!-- medium -->
 -   Moar log4j2
     -   Another instance of JNDI RCE but this time needed to have configured to
         use a JDBC appender - ie configured to write event logs to a relational
@@ -223,8 +223,8 @@ Ubuntu 21.04 goes EOL soon, plus we cover security updates for Django, the Linux
 ### [[USN-5224-1](https://ubuntu.com/security/notices/USN-5224-1)] Ghostscript vulnerabilities [12:21] {#usn-5224-1-ghostscript-vulnerabilities-12-21}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-45949](https://ubuntu.com/security/CVE-2021-45949)
-    -   [CVE-2021-45944](https://ubuntu.com/security/CVE-2021-45944)
+    -   [CVE-2021-45949](https://ubuntu.com/security/CVE-2021-45949) <!-- medium -->
+    -   [CVE-2021-45944](https://ubuntu.com/security/CVE-2021-45944) <!-- medium -->
 -   Hello Ghostscript my old friend!
 -   2 issues discovered by oss-fuzz (used to be all Tavis Ormandy, but those
     were more logic bugs in the sandbox etc) - in this case a UAF and a heap

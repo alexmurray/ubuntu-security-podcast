@@ -6,9 +6,9 @@ description = """
   sure you always have the latest security updates by using unattended-upgrades.
   """
 date = 2018-12-10
-lastmod = 2020-05-15T16:40:36+09:30
+lastmod = 2022-05-15T18:07:26+09:30
 draft = false
-weight = 1060
+weight = 1145
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E015.mp3"
@@ -32,10 +32,10 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3834-1](https://usn.ubuntu.com/3834-1/), USN-3834-2] Perl vulnerabilities {#usn-3834-1-usn-3834-2-perl-vulnerabilities}
 
 -   4 CVEs addressed in Precise ESM, Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-18314](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18314)
-    -   [CVE-2018-18313](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18313)
-    -   [CVE-2018-18312](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18312)
-    -   [CVE-2018-18311](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18311)
+    -   [CVE-2018-18314](https://ubuntu.com/security/CVE-2018-18314)
+    -   [CVE-2018-18313](https://ubuntu.com/security/CVE-2018-18313)
+    -   [CVE-2018-18312](https://ubuntu.com/security/CVE-2018-18312)
+    -   [CVE-2018-18311](https://ubuntu.com/security/CVE-2018-18311)
 -   Perl regex engine fuzzed with valgrind to detect memory errors
     -   2 different heap based buffer overflow in regex engine
     -   Heap-based read past end of buffer in regex engine
@@ -47,12 +47,12 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3835-1](https://usn.ubuntu.com/3835-1/), [USN-3836-1](https://usn.ubuntu.com/3836-1/), [USN-3836-2](https://usn.ubuntu.com/3836-2/)] Linux kernel vulnerabilities {#usn-3835-1-usn-3836-1-usn-3836-2-linux-kernel-vulnerabilities}
 
 -   6 CVEs addressed in Cosmic, 2 in Bionic and Xenial
-    -   [CVE-2018-6559](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-6559)
-    -   [CVE-2018-18955](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18955)
-    -   [CVE-2018-18653](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18653)
-    -   [CVE-2018-18445](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18445)
-    -   [CVE-2018-18281](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-18281)
-    -   [CVE-2018-17972](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-17972)
+    -   [CVE-2018-6559](https://ubuntu.com/security/CVE-2018-6559)
+    -   [CVE-2018-18955](https://ubuntu.com/security/CVE-2018-18955)
+    -   [CVE-2018-18653](https://ubuntu.com/security/CVE-2018-18653)
+    -   [CVE-2018-18445](https://ubuntu.com/security/CVE-2018-18445)
+    -   [CVE-2018-18281](https://ubuntu.com/security/CVE-2018-18281)
+    -   [CVE-2018-17972](https://ubuntu.com/security/CVE-2018-17972)
 
 -   Episode 14 covered CVE-2018-6559 (overlayfs / user namespace directory names disclosure)
     -   Also fixed for Bionic and Xenial
@@ -67,7 +67,7 @@ sure you always have the latest security updates by using unattended-upgrades.
         Jann, introduced a new vulnerability which would allow BPF programs to
         access memory out-of-bounds
     -   Nested user namespaces with more than 5 UID or GID mappings could allow
-        processes with CAP\_SYS\_ADMIN within the namespace to access resources
+        processes with CAP_SYS_ADMIN within the namespace to access resources
         outside the namespace as the kernel would get confused on which UID to
         check against outside the namespace
         -   Also fixed in Bionic and Xenial
@@ -87,12 +87,12 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3837-1](https://usn.ubuntu.com/3837-1/)] poppler vulnerabilities {#usn-3837-1-poppler-vulnerabilities}
 
 -   5 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-19149](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19149)
-    -   [CVE-2018-19060](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19060)
-    -   [CVE-2018-19059](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19059)
-    -   [CVE-2018-19058](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19058)
-    -   [CVE-2018-16646](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16646)
--   NULL pointer dereference when PDF references an embedded file that does not actually exist (crash -> DoS)
+    -   [CVE-2018-19149](https://ubuntu.com/security/CVE-2018-19149)
+    -   [CVE-2018-19060](https://ubuntu.com/security/CVE-2018-19060)
+    -   [CVE-2018-19059](https://ubuntu.com/security/CVE-2018-19059)
+    -   [CVE-2018-19058](https://ubuntu.com/security/CVE-2018-19058)
+    -   [CVE-2018-16646](https://ubuntu.com/security/CVE-2018-16646)
+-   NULL pointer dereference when PDF references an embedded file that does not actually exist (crash -&gt; DoS)
 -   Possible infinite recursion - DoS
 -   Exit on abort - DoS
 -   2 for pdfdetach - CLI util to list / extract embedded files from PDFs
@@ -103,8 +103,8 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3811-3](https://usn.ubuntu.com/3811-3/)] SpamAssassin vulnerabilities {#usn-3811-3-spamassassin-vulnerabilities}
 
 -   2 CVEs addressed in Precise ESM
-    -   [CVE-2018-11781](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11781)
-    -   [CVE-2018-11780](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-11780)
+    -   [CVE-2018-11781](https://ubuntu.com/security/CVE-2018-11781)
+    -   [CVE-2018-11780](https://ubuntu.com/security/CVE-2018-11780)
 -   SpamAssassin was updated to latest version for Trusty, Xenial and Bionic previously (Episode 11)
 -   This is the corresponding update for Precise ESM
 
@@ -112,35 +112,35 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3838-1](https://usn.ubuntu.com/3838-1/)] LibRaw vulnerabilities {#usn-3838-1-libraw-vulnerabilities}
 
 -   7 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-5816](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5816)
-    -   [CVE-2018-5815](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5815)
-    -   [CVE-2018-5813](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5813)
-    -   [CVE-2018-5812](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5812)
-    -   [CVE-2018-5811](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5811)
-    -   [CVE-2018-5810](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5810)
-    -   [CVE-2018-5807](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5807)
--   Few OOB read -> crash -> DoS
--   NULL pointer dereference -> crash -> DoS
--   Integer overflow -> infinite loop -> DoS
--   Integer overflow -> divide by zero -> crash -> DoS
--   Heap-based buffer overflow -> crash -> DoS (possible code execution?)
+    -   [CVE-2018-5816](https://ubuntu.com/security/CVE-2018-5816)
+    -   [CVE-2018-5815](https://ubuntu.com/security/CVE-2018-5815)
+    -   [CVE-2018-5813](https://ubuntu.com/security/CVE-2018-5813)
+    -   [CVE-2018-5812](https://ubuntu.com/security/CVE-2018-5812)
+    -   [CVE-2018-5811](https://ubuntu.com/security/CVE-2018-5811)
+    -   [CVE-2018-5810](https://ubuntu.com/security/CVE-2018-5810)
+    -   [CVE-2018-5807](https://ubuntu.com/security/CVE-2018-5807)
+-   Few OOB read -&gt; crash -&gt; DoS
+-   NULL pointer dereference -&gt; crash -&gt; DoS
+-   Integer overflow -&gt; infinite loop -&gt; DoS
+-   Integer overflow -&gt; divide by zero -&gt; crash -&gt; DoS
+-   Heap-based buffer overflow -&gt; crash -&gt; DoS (possible code execution?)
 
 
 ### [[USN-3839-1](https://usn.ubuntu.com/3839-1/)] WavPack vulnerabilities {#usn-3839-1-wavpack-vulnerabilities}
 
 -   2 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-19841](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19841)
-    -   [CVE-2018-19840](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-19840)
+    -   [CVE-2018-19841](https://ubuntu.com/security/CVE-2018-19841)
+    -   [CVE-2018-19840](https://ubuntu.com/security/CVE-2018-19840)
 -   Infinite loop if WAV file specifies a sample rate of 0 - DoS
--   OOB read of heap allocated buffer - crash -> DoS
+-   OOB read of heap allocated buffer - crash -&gt; DoS
 
 
 ### [[USN-3840-1](https://usn.ubuntu.com/3840-1/)] OpenSSL vulnerabilities {#usn-3840-1-openssl-vulnerabilities}
 
 -   3 CVEs addressed in Trusty, Xenial, Bionic, Cosmic
-    -   [CVE-2018-5407](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5407)
-    -   [CVE-2018-0735](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0735)
-    -   [CVE-2018-0734](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-0734)
+    -   [CVE-2018-5407](https://ubuntu.com/security/CVE-2018-5407)
+    -   [CVE-2018-0735](https://ubuntu.com/security/CVE-2018-0735)
+    -   [CVE-2018-0734](https://ubuntu.com/security/CVE-2018-0734)
 -   PortSmash (Episode 11) - purported new Intel CPU side-channel vulnerability -
     but really more an issue in OpenSSL due to needing crypto code to be both
     constant time **and** execution flow independent of secret key
@@ -151,7 +151,7 @@ sure you always have the latest security updates by using unattended-upgrades.
 ### [[USN-3831-2](https://usn.ubuntu.com/3831-2/)] Ghostscript regression {#usn-3831-2-ghostscript-regression}
 
 -   Affecting Trusty, Xenial, Bionic, Cosmic
--   Latest GS updates (Episode 14) -> regression
+-   Latest GS updates (Episode 14) -&gt; regression
     -   when converting PDFs via ghostscript, would crash when using FirstPage and LastPage options
     -   used by imagemagick (convert) util and others
     -   backported addition fix from upstream to resolve this regression
@@ -178,5 +178,5 @@ sure you always have the latest security updates by using unattended-upgrades.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

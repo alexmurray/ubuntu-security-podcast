@@ -6,9 +6,9 @@ description = """
   updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
   """
 date = 2021-11-19T14:21:00+10:30
-lastmod = 2021-11-19T14:23:45+10:30
+lastmod = 2022-05-15T18:05:51+09:30
 draft = false
-weight = 1001
+weight = 1022
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E138.mp3"
@@ -33,7 +33,7 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5138-1](https://ubuntu.com/security/notices/USN-5138-1)] python-py vulnerability [00:38] {#usn-5138-1-python-py-vulnerability-00-38}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-29651](https://ubuntu.com/security/CVE-2020-29651)
+    -   [CVE-2020-29651](https://ubuntu.com/security/CVE-2020-29651) <!-- medium -->
 -   Python library providing path handling, config file parsing and other
     features which are now in standard lib or other packages - has been
     deprecated
@@ -43,16 +43,16 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5139-1](https://ubuntu.com/security/notices/USN-5139-1)] Linux kernel (OEM 5.10) vulnerabilities [01:25] {#usn-5139-1-linux-kernel--oem-5-dot-10--vulnerabilities-01-25}
 
 -   7 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
-    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655)
--   Power8 specific KVM issue -> guest can crash host -> DoS
--   AMD cryptographic coprocessor driver memory leaks -> DoS
--   eBPF integer overflow -> DoS / code-exec
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056) <!-- medium -->
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655) <!-- medium -->
+-   Power8 specific KVM issue -&gt; guest can crash host -&gt; DoS
+-   AMD cryptographic coprocessor driver memory leaks -&gt; DoS
+-   eBPF integer overflow -&gt; DoS / code-exec
 -   NFC UAF
 -   SCTP info leak
 
@@ -60,44 +60,44 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5140-1](https://ubuntu.com/security/notices/USN-5140-1)] Linux kernel (OEM 5.14) vulnerabilities [02:12] {#usn-5140-1-linux-kernel--oem-5-dot-14--vulnerabilities-02-12}
 
 -   3 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
--   eBPF integer overflow -> DoS / code-exec
--   AMD cryptographic coprocessor driver memory leaks -> DoS
+    -   [CVE-2021-41864](https://ubuntu.com/security/CVE-2021-41864) <!-- low -->
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+-   eBPF integer overflow -&gt; DoS / code-exec
+-   AMD cryptographic coprocessor driver memory leaks -&gt; DoS
 
 
 ### [[USN-5137-2](https://ubuntu.com/security/notices/USN-5137-2)] Linux kernel vulnerabilities [02:33] {#usn-5137-2-linux-kernel-vulnerabilities-02-33}
 
 -   9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759)
-    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753)
-    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743)
-    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739)
-    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477)
-    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556)
-    -   [CVE-2021-3428](https://ubuntu.com/security/CVE-2021-3428)
-    -   [CVE-2020-36385](https://ubuntu.com/security/CVE-2020-36385)
-    -   [CVE-2019-19449](https://ubuntu.com/security/CVE-2019-19449)
+    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759) <!-- medium -->
+    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753) <!-- medium -->
+    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743) <!-- medium -->
+    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739) <!-- low -->
+    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477) <!-- medium -->
+    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556) <!-- medium -->
+    -   [CVE-2021-3428](https://ubuntu.com/security/CVE-2021-3428) <!-- low -->
+    -   [CVE-2020-36385](https://ubuntu.com/security/CVE-2020-36385) <!-- medium -->
+    -   [CVE-2019-19449](https://ubuntu.com/security/CVE-2019-19449) <!-- low -->
 -   5.4 (focal bluefield / oracle, bionic oracle / gke)
 
 
 ### [[LSN-0082-1](https://ubuntu.com/security/notices/LSN-0082-1)] Linux kernel vulnerability [03:05] {#lsn-0082-1-linux-kernel-vulnerability-03-05}
 
 -   4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3715](https://ubuntu.com/security/CVE-2021-3715)
-    -   [CVE-2021-3444](https://ubuntu.com/security/CVE-2021-3444)
-    -   [CVE-2020-29661](https://ubuntu.com/security/CVE-2020-29661)
-    -   [CVE-2020-29660](https://ubuntu.com/security/CVE-2020-29660)
+    -   [CVE-2021-3715](https://ubuntu.com/security/CVE-2021-3715) <!-- high -->
+    -   [CVE-2021-3444](https://ubuntu.com/security/CVE-2021-3444) <!-- high -->
+    -   [CVE-2020-29661](https://ubuntu.com/security/CVE-2020-29661) <!-- high -->
+    -   [CVE-2020-29660](https://ubuntu.com/security/CVE-2020-29660) <!-- medium -->
 -   2 high priority vulns from GPZ ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/)) in tty subsystem and 1 in
-    BPF verifier - code-exec -> privesc
+    BPF verifier - code-exec -&gt; privesc
 -   UAF in IPv4 networking routing handling
 
 
 ### [[USN-5141-1](https://ubuntu.com/security/notices/USN-5141-1)] Firejail vulnerability [03:48] {#usn-5141-1-firejail-vulnerability-03-48}
 
 -   1 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-26910](https://ubuntu.com/security/CVE-2021-26910)
+    -   [CVE-2021-26910](https://ubuntu.com/security/CVE-2021-26910) <!-- medium -->
 -   TOCTOU race condition in handling of overlayfs - decided to drop support
     for overlayfs since was deemed - thanks to Reiner Herrmann for providing
     this update
@@ -106,15 +106,15 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5142-1](https://ubuntu.com/security/notices/USN-5142-1)] Samba vulnerabilities [04:43] {#usn-5142-1-samba-vulnerabilities-04-43}
 
 -   9 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671)
-    -   [CVE-2021-3738](https://ubuntu.com/security/CVE-2021-3738)
-    -   [CVE-2021-23192](https://ubuntu.com/security/CVE-2021-23192)
-    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722)
-    -   [CVE-2020-25721](https://ubuntu.com/security/CVE-2020-25721)
-    -   [CVE-2020-25719](https://ubuntu.com/security/CVE-2020-25719)
-    -   [CVE-2020-25718](https://ubuntu.com/security/CVE-2020-25718)
-    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717)
-    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124)
+    -   [CVE-2021-3671](https://ubuntu.com/security/CVE-2021-3671) <!-- low -->
+    -   [CVE-2021-3738](https://ubuntu.com/security/CVE-2021-3738) <!-- medium -->
+    -   [CVE-2021-23192](https://ubuntu.com/security/CVE-2021-23192) <!-- medium -->
+    -   [CVE-2020-25722](https://ubuntu.com/security/CVE-2020-25722) <!-- medium -->
+    -   [CVE-2020-25721](https://ubuntu.com/security/CVE-2020-25721) <!-- medium -->
+    -   [CVE-2020-25719](https://ubuntu.com/security/CVE-2020-25719) <!-- medium -->
+    -   [CVE-2020-25718](https://ubuntu.com/security/CVE-2020-25718) <!-- medium -->
+    -   [CVE-2020-25717](https://ubuntu.com/security/CVE-2020-25717) <!-- medium -->
+    -   [CVE-2016-2124](https://ubuntu.com/security/CVE-2016-2124) <!-- medium -->
 -   Raft of issues including unauthenticated users able to become root on
     domain members since Samba might incorrectly map local users to domain
     members, plus incorrect handling of Kerberos tickets such that delegated
@@ -132,15 +132,15 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5144-1](https://ubuntu.com/security/notices/USN-5144-1)] OpenEXR vulnerability [05:55] {#usn-5144-1-openexr-vulnerability-05-55}
 
 -   1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3933](https://ubuntu.com/security/CVE-2021-3933)
--   Integer overflow -> buffer overflow -> crash / RCE
+    -   [CVE-2021-3933](https://ubuntu.com/security/CVE-2021-3933) <!-- medium -->
+-   Integer overflow -&gt; buffer overflow -&gt; crash / RCE
 
 
 ### [[USN-5145-1](https://ubuntu.com/security/notices/USN-5145-1)] PostgreSQL vulnerabilities [06:08] {#usn-5145-1-postgresql-vulnerabilities-06-08}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-23222](https://ubuntu.com/security/CVE-2021-23222)
-    -   [CVE-2021-23214](https://ubuntu.com/security/CVE-2021-23214)
+    -   [CVE-2021-23222](https://ubuntu.com/security/CVE-2021-23222) <!-- medium -->
+    -   [CVE-2021-23214](https://ubuntu.com/security/CVE-2021-23214) <!-- medium -->
 -   Incorrect handling of SSL cert verification - could allow a remote
     attacker to inject arbitrary SQL queries on the initial connection
     establishment (similar to various STARTTLS vulns which have been seen
@@ -153,12 +153,12 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5147-1](https://ubuntu.com/security/notices/USN-5147-1)] Vim vulnerabilities [07:13] {#usn-5147-1-vim-vulnerabilities-07-13}
 
 -   6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-3928](https://ubuntu.com/security/CVE-2021-3928)
-    -   [CVE-2021-3927](https://ubuntu.com/security/CVE-2021-3927)
-    -   [CVE-2021-3903](https://ubuntu.com/security/CVE-2021-3903)
-    -   [CVE-2021-3872](https://ubuntu.com/security/CVE-2021-3872)
-    -   [CVE-2019-20807](https://ubuntu.com/security/CVE-2019-20807)
-    -   [CVE-2017-17087](https://ubuntu.com/security/CVE-2017-17087)
+    -   [CVE-2021-3928](https://ubuntu.com/security/CVE-2021-3928) <!-- medium -->
+    -   [CVE-2021-3927](https://ubuntu.com/security/CVE-2021-3927) <!-- medium -->
+    -   [CVE-2021-3903](https://ubuntu.com/security/CVE-2021-3903) <!-- low -->
+    -   [CVE-2021-3872](https://ubuntu.com/security/CVE-2021-3872) <!-- medium -->
+    -   [CVE-2019-20807](https://ubuntu.com/security/CVE-2019-20807) <!-- low -->
+    -   [CVE-2017-17087](https://ubuntu.com/security/CVE-2017-17087) <!-- low -->
 -   Swap file permissions handling, restricted mode bypass (shouldn't be
     considered a real security mechanism), various memory corruption issues
     too
@@ -167,7 +167,7 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5149-1](https://ubuntu.com/security/notices/USN-5149-1)] AccountsService vulnerability [08:01] {#usn-5149-1-accountsservice-vulnerability-08-01}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-3939](https://ubuntu.com/security/CVE-2021-3939)
+    -   [CVE-2021-3939](https://ubuntu.com/security/CVE-2021-3939) <!-- high -->
 -   Double free in SetLanguage() DBus method - memory corruption in root
     daemon which can be triggered by an unprivileged user - is due to a
     Ubuntu specific patch which we include so that when the user selects a
@@ -181,9 +181,9 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 ### [[USN-5148-1](https://ubuntu.com/security/notices/USN-5148-1)] hivex vulnerability [09:24] {#usn-5148-1-hivex-vulnerability-09-24}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-3504](https://ubuntu.com/security/CVE-2021-3504)
+    -   [CVE-2021-3504](https://ubuntu.com/security/CVE-2021-3504) <!-- medium -->
 -   Tools for handling Windows Registry hive files
--   OOB read with specially crafted input file -> crash -> DoS
+-   OOB read with specially crafted input file -&gt; crash -&gt; DoS
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -231,4 +231,4 @@ updates for the Linux kernel, Firejail, Samba, PostgreSQL and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

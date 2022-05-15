@@ -6,9 +6,9 @@ description = """
   various hardening guides for Ubuntu.
   """
 date = 2018-09-10
-lastmod = 2020-05-15T16:41:02+09:30
+lastmod = 2022-05-15T18:07:34+09:30
 draft = false
-weight = 1071
+weight = 1156
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E004.mp3"
@@ -32,9 +32,9 @@ various hardening guides for Ubuntu.
 ### [[USN-3759-1](https://usn.ubuntu.com/3759-1/)] libtirpc vulnerabilities {#usn-3759-1-libtirpc-vulnerabilities}
 
 -   3 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2017-8779](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-8779)
-    -   [CVE-2018-14622](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14622)
-    -   [CVE-2016-4429](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-4429)
+    -   [CVE-2017-8779](https://ubuntu.com/security/CVE-2017-8779)
+    -   [CVE-2018-14622](https://ubuntu.com/security/CVE-2018-14622)
+    -   [CVE-2016-4429](https://ubuntu.com/security/CVE-2016-4429)
 -   Transport Independent RPC Library, used by NFS
 -   1 medium priority issue:
     -   Crash from NULL pointer dereference when run out of file descriptions (failure to check return value) - a remote attacker could cause crash by flooding with new connections
@@ -47,16 +47,16 @@ various hardening guides for Ubuntu.
 ### [[USN-3759-2](https://usn.ubuntu.com/3759-2/)] libtirpc vulnerabilities {#usn-3759-2-libtirpc-vulnerabilities}
 
 -   3 CVEs addressed in Precise ESM
-    -   [CVE-2017-8779](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-8779)
-    -   [CVE-2018-14622](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-14622)
-    -   [CVE-2016-4429](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-4429)
+    -   [CVE-2017-8779](https://ubuntu.com/security/CVE-2017-8779)
+    -   [CVE-2018-14622](https://ubuntu.com/security/CVE-2018-14622)
+    -   [CVE-2016-4429](https://ubuntu.com/security/CVE-2016-4429)
 -   Same as above for the Precise Extended Security Maintenence release
 
 
 ### [[USN-3760-1](https://usn.ubuntu.com/3760-1/)] transfig vulnerability {#usn-3760-1-transfig-vulnerability}
 
 -   1 CVEs addressed in Trusty, Xenial
-    -   [CVE-2018-16140](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-16140)
+    -   [CVE-2018-16140](https://ubuntu.com/security/CVE-2018-16140)
 -   transfig / fig2dev - utilities for converting XFig files
 -   Fixes an error which allows memory corruption when handling specially crafted files
 
@@ -64,11 +64,11 @@ various hardening guides for Ubuntu.
 ### [[USN-3761-1](https://usn.ubuntu.com/3761-1/)] Firefox vulnerabilities {#usn-3761-1-firefox-vulnerabilities}
 
 -   5 CVEs addressed in Trusty, Xenial, Bionic
-    -   [CVE-2018-12383](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12383)
-    -   [CVE-2018-12378](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12378)
-    -   [CVE-2018-12377](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12377)
-    -   [CVE-2018-12376](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12376)
-    -   [CVE-2018-12375](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-12375)
+    -   [CVE-2018-12383](https://ubuntu.com/security/CVE-2018-12383)
+    -   [CVE-2018-12378](https://ubuntu.com/security/CVE-2018-12378)
+    -   [CVE-2018-12377](https://ubuntu.com/security/CVE-2018-12377)
+    -   [CVE-2018-12376](https://ubuntu.com/security/CVE-2018-12376)
+    -   [CVE-2018-12375](https://ubuntu.com/security/CVE-2018-12375)
 -   Latest firefox release (62) fixing a number of issues including DoS and RCE
 -   One interesting one is CVE-2018-12383 - in Firefox 58 the password storage
     format was changed (was sqlite, then was changed to json). When user sets a
@@ -85,7 +85,7 @@ various hardening guides for Ubuntu.
 
 -   A number of 'best practices' guides exist for hardening Ubuntu installations from reputable organisations
     -   [NCSC](https://www.ncsc.gov.uk/guidance/eud-security-guidance-ubuntu-1804-lts)
-    -   [CIS Benchmarks](https://www.cisecurity.org/benchmark/ubuntu%5Flinux/)
+    -   [CIS Benchmarks](https://www.cisecurity.org/benchmark/ubuntu_linux/)
     -   many others
 -   In general these have similar recommendations:
     -   Use UEFI Secure Boot
@@ -117,5 +117,5 @@ various hardening guides for Ubuntu.
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

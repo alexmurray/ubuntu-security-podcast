@@ -5,9 +5,9 @@ description = """
   ICU, the Linux kernel and ImageMagick as well.
   """
 date = 2021-12-03T11:57:00+10:30
-lastmod = 2021-12-03T11:58:08+10:30
+lastmod = 2022-05-15T18:05:49+09:30
 draft = false
-weight = 1001
+weight = 1020
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E140.mp3"
@@ -31,92 +31,92 @@ ICU, the Linux kernel and ImageMagick as well.
 ### [[USN-5156-1](https://ubuntu.com/security/notices/USN-5156-1)] ICU vulnerability [00:40] {#usn-5156-1-icu-vulnerability-00-40}
 
 -   1 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-30535](https://ubuntu.com/security/CVE-2021-30535)
+    -   [CVE-2021-30535](https://ubuntu.com/security/CVE-2021-30535) <!-- medium -->
 -   Double free - originally reported in chromium but is actually in embedded
     copy of icu - able to be triggered on crafted content to icu, in the case
     of chromium this could be via a crafted webpage or similar so not too
-    dissimilar to usual web handling issues - memory corruption -> code
+    dissimilar to usual web handling issues - memory corruption -&gt; code
     execution (but within chromium sandbox in that case)
 
 
 ### [[USN-5158-1](https://ubuntu.com/security/notices/USN-5158-1)] ImageMagick vulnerabilities [01:25] {#usn-5158-1-imagemagick-vulnerabilities-01-25}
 
 -   5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-20313](https://ubuntu.com/security/CVE-2021-20313)
-    -   [CVE-2021-20312](https://ubuntu.com/security/CVE-2021-20312)
-    -   [CVE-2021-20309](https://ubuntu.com/security/CVE-2021-20309)
-    -   [CVE-2021-20246](https://ubuntu.com/security/CVE-2021-20246)
-    -   [CVE-2021-20244](https://ubuntu.com/security/CVE-2021-20244)
--   DoS vulns from untrusted inputs -> most all result in a divide by zero ->
-    exception -> application crash
+    -   [CVE-2021-20313](https://ubuntu.com/security/CVE-2021-20313) <!-- low -->
+    -   [CVE-2021-20312](https://ubuntu.com/security/CVE-2021-20312) <!-- low -->
+    -   [CVE-2021-20309](https://ubuntu.com/security/CVE-2021-20309) <!-- low -->
+    -   [CVE-2021-20246](https://ubuntu.com/security/CVE-2021-20246) <!-- low -->
+    -   [CVE-2021-20244](https://ubuntu.com/security/CVE-2021-20244) <!-- low -->
+-   DoS vulns from untrusted inputs -&gt; most all result in a divide by zero -&gt;
+    exception -&gt; application crash
 
 
 ### [[USN-5161-1](https://ubuntu.com/security/notices/USN-5161-1)] Linux kernel vulnerabilities [01:55] {#usn-5161-1-linux-kernel-vulnerabilities-01-55}
 
 -   4 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-42252](https://ubuntu.com/security/CVE-2021-42252)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
-    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655)
+    -   [CVE-2021-42252](https://ubuntu.com/security/CVE-2021-42252) <!-- medium -->
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655) <!-- medium -->
 -   5.11 kernel (generic hirsute + clouds, raspi, focal hwe etc)
 -   armhf specific issue (Aspeed LPC bus controller) - local user OOB write
-    -> crash / code-exec
--   AMD cryptographic coprocessor driver memory leaks -> DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
+    -&gt; crash / code-exec
+-   AMD cryptographic coprocessor driver memory leaks -&gt; DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
 -   SCTP OOB read - incoming packets
 
 
 ### [[USN-5162-1](https://ubuntu.com/security/notices/USN-5162-1)] Linux kernel vulnerabilities [03:13] {#usn-5162-1-linux-kernel-vulnerabilities-03-13}
 
 -   5 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-    -   [CVE-2021-43057](https://ubuntu.com/security/CVE-2021-43057)
-    -   [CVE-2021-42252](https://ubuntu.com/security/CVE-2021-42252)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
-    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655)
+    -   [CVE-2021-43057](https://ubuntu.com/security/CVE-2021-43057) <!-- low -->
+    -   [CVE-2021-42252](https://ubuntu.com/security/CVE-2021-42252) <!-- medium -->
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655) <!-- medium -->
 -   5.13 (impish, focal OEM)
 -   same as above plus SELinux specific issue around handling of task
-    credentials -> UAF -> memory corruption -> crash / code execution (Jann
+    credentials -&gt; UAF -&gt; memory corruption -&gt; crash / code execution (Jann
     Horn @ GPZ)
 
 
 ### [[USN-5163-1](https://ubuntu.com/security/notices/USN-5163-1)] Linux kernel vulnerabilities [03:59] {#usn-5163-1-linux-kernel-vulnerabilities-03-59}
 
 -   4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
-    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159)
-    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655)
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159) <!-- low -->
+    -   [CVE-2021-3655](https://ubuntu.com/security/CVE-2021-3655) <!-- medium -->
 -   5.4 (focal, bionic HWE)
--   AMD cryptographic coprocessor driver memory leaks -> DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
+-   AMD cryptographic coprocessor driver memory leaks -&gt; DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
 -   SCTP OOB read - incoming packets
--   USB Option High Speed Mobile driver -> UAF if unplug device before fully
+-   USB Option High Speed Mobile driver -&gt; UAF if unplug device before fully
     registered - local attacker could trigger - crash / code-exec
 
 
 ### [[USN-5164-1](https://ubuntu.com/security/notices/USN-5164-1)] Linux kernel vulnerabilities [04:50] {#usn-5164-1-linux-kernel-vulnerabilities-04-50}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764)
-    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744)
-    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159)
+    -   [CVE-2021-3764](https://ubuntu.com/security/CVE-2021-3764) <!-- medium -->
+    -   [CVE-2021-3744](https://ubuntu.com/security/CVE-2021-3744) <!-- low -->
+    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159) <!-- low -->
 -   4.15 (bionic, xenial ESM, trusty ESM - azure)
--   AMD cryptographic coprocessor driver memory leaks -> DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
+-   AMD cryptographic coprocessor driver memory leaks -&gt; DoS ([Episode 138](https://ubuntusecuritypodcast.org/episode-138/))
 -   SCTP OOB read - incoming packets
 
 
 ### [[USN-5165-1](https://ubuntu.com/security/notices/USN-5165-1)] Linux kernel (OEM) vulnerabilities [05:13] {#usn-5165-1-linux-kernel--oem--vulnerabilities-05-13}
 
 -   7 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389)
-    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267)
-    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056)
-    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739)
-    -   [CVE-2021-42327](https://ubuntu.com/security/CVE-2021-42327)
-    -   [CVE-2021-3772](https://ubuntu.com/security/CVE-2021-3772)
-    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760)
+    -   [CVE-2021-43389](https://ubuntu.com/security/CVE-2021-43389) <!-- low -->
+    -   [CVE-2021-43267](https://ubuntu.com/security/CVE-2021-43267) <!-- medium -->
+    -   [CVE-2021-43056](https://ubuntu.com/security/CVE-2021-43056) <!-- medium -->
+    -   [CVE-2021-42739](https://ubuntu.com/security/CVE-2021-42739) <!-- medium -->
+    -   [CVE-2021-42327](https://ubuntu.com/security/CVE-2021-42327) <!-- low -->
+    -   [CVE-2021-3772](https://ubuntu.com/security/CVE-2021-3772) <!-- low -->
+    -   [CVE-2021-3760](https://ubuntu.com/security/CVE-2021-3760) <!-- medium -->
 -   Mix of vulns in various drivers
     -   UAF in NFC, DoS due to SCTP logic error, OOB in AMD GPU debugfs (need
-        root), FireDTV Firewire OOB write, POWER8 specific KVM issue (guest ->
+        root), FireDTV Firewire OOB write, POWER8 specific KVM issue (guest -&gt;
         host crash), Transparent Inter-Process Communication (TIPC) OOB write,
         ISDN CAPI subsystem OOB write
 
@@ -124,7 +124,7 @@ ICU, the Linux kernel and ImageMagick as well.
 ### [[USN-5168-1](https://ubuntu.com/security/notices/USN-5168-1), [USN-5168-2](https://ubuntu.com/security/notices/USN-5168-2), [USN-5168-3](https://ubuntu.com/security/notices/USN-5168-3)] NSS and Thunderbird vulnerability [06:08] {#usn-5168-1-usn-5168-2-usn-5168-3-nss-and-thunderbird-vulnerability-06-08}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-43527](https://ubuntu.com/security/CVE-2021-43527)
+    -   [CVE-2021-43527](https://ubuntu.com/security/CVE-2021-43527) <!-- high -->
 
 
 ## New NSS vulnerability ([CVE-2021-43527](https://ubuntu.com/security/CVE-2021-43527)) discussion [06:17] {#new-nss-vulnerability--cve-2021-43527--discussion-06-17}
@@ -163,4 +163,4 @@ ICU, the Linux kernel and ImageMagick as well.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -2,9 +2,9 @@
 title = "Episode 31"
 description = "This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and others, and we talk to Joe McManus about malicious Dockerhub images, Git repos being ransomed more."
 date = 2019-05-13
-lastmod = 2020-05-15T16:39:57+09:30
+lastmod = 2022-05-15T18:07:13+09:30
 draft = false
-weight = 1044
+weight = 1129
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E031.mp3"
@@ -26,7 +26,7 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3966-1](https://usn.ubuntu.com/3966-1/)] GNOME Shell vulnerability {#usn-3966-1-gnome-shell-vulnerability}
 
 -   1 CVEs addressed in Bionic, Cosmic
-    -   [CVE-2019-3820](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3820)
+    -   [CVE-2019-3820](https://ubuntu.com/security/CVE-2019-3820)
 -   Local user could potentially bypass various restrictions of the lock
     screen - menu items can be activated by keyboard combinations - these
     could then be used to take screenshots (and fill up disk space), close
@@ -38,7 +38,7 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3965-1](https://usn.ubuntu.com/3965-1/)] aria2 vulnerability {#usn-3965-1-aria2-vulnerability}
 
 -   1 CVEs addressed in Cosmic, Disco
-    -   [CVE-2019-3500](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3500)
+    -   [CVE-2019-3500](https://ubuntu.com/security/CVE-2019-3500)
 -   CLI download tool (akin to curl / wget but can also do bittorrent and others)
 -   When logging would store credentials in log file which could be read by other users
 -   Fixed by masking out credentials
@@ -47,11 +47,11 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3967-1](https://usn.ubuntu.com/3967-1/)] FFmpeg vulnerabilities {#usn-3967-1-ffmpeg-vulnerabilities}
 
 -   5 CVEs addressed in Bionic, Cosmic, Disco
-    -   [CVE-2019-9721](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9721)
-    -   [CVE-2019-9718](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-9718)
-    -   [CVE-2019-11339](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11339)
-    -   [CVE-2019-11338](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11338)
-    -   [CVE-2018-15822](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-15822)
+    -   [CVE-2019-9721](https://ubuntu.com/security/CVE-2019-9721)
+    -   [CVE-2019-9718](https://ubuntu.com/security/CVE-2019-9718)
+    -   [CVE-2019-11339](https://ubuntu.com/security/CVE-2019-11339)
+    -   [CVE-2019-11338](https://ubuntu.com/security/CVE-2019-11338)
+    -   [CVE-2018-15822](https://ubuntu.com/security/CVE-2018-15822)
 -   CPU DoS in Matroska and HTML subtitle decoding
 -   Various issues discovered by Google's oss-fuzz project:
     -   2 x OOB read found by Google's clusterfuzz / oss-fuzz project in MPEG-4 decoder
@@ -62,8 +62,8 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3968-1](https://usn.ubuntu.com/3968-1/)] Sudo vulnerabilities {#usn-3968-1-sudo-vulnerabilities}
 
 -   2 CVEs addressed in Xenial
-    -   [CVE-2017-1000368](https://people.canonical.com/~ubuntu-security/cve/CVE-2017-1000368)
-    -   [CVE-2016-7076](https://people.canonical.com/~ubuntu-security/cve/CVE-2016-7076)
+    -   [CVE-2017-1000368](https://ubuntu.com/security/CVE-2017-1000368)
+    -   [CVE-2016-7076](https://ubuntu.com/security/CVE-2016-7076)
 -   Fails to properly parse /proc/PID/stat - this is used to determine the
     controlling tty - this name could contain newlines - sudo would only read
     one line of input and so would get a truncated name - when sudo is used
@@ -73,20 +73,20 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 -   Fixed by ensuring to parse the full name including any newlines
 -   sudo contains the ability to restrict users with sudo access to running
     further commands via the NOEXEC tag
-    -   Does this by LD\_PRELOAD to replace exec() and other functions with
+    -   Does this by LD_PRELOAD to replace exec() and other functions with
         versions that return an error
     -   wordexp() performs shell expansion on a string and so can contain shell
         directives to run a command and get the output $(foo) - this can run
-        commands and so would not be stopped by LD\_PRELOAD lib - so a user can
+        commands and so would not be stopped by LD_PRELOAD lib - so a user can
         run a binary which does wordexp() they could bypass this restriction
-    -   Fixed by adding wordexp() to the LD\_PRELOAD wrapper AND by adding a
+    -   Fixed by adding wordexp() to the LD_PRELOAD wrapper AND by adding a
         seccomp filter to stop all execve() entirely
 
 
-### [[USN-3969-1](https://usn.ubuntu.com/3969-1/), USN-3969-2] wpa\_supplicant and hostapd vulnerability {#usn-3969-1-usn-3969-2-wpa-supplicant-and-hostapd-vulnerability}
+### [[USN-3969-1](https://usn.ubuntu.com/3969-1/), USN-3969-2] wpa_supplicant and hostapd vulnerability {#usn-3969-1-usn-3969-2-wpa-supplicant-and-hostapd-vulnerability}
 
 -   1 CVEs addressed in Trusty ESM, Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-11555](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11555)
+    -   [CVE-2019-11555](https://ubuntu.com/security/CVE-2019-11555)
 -   Possible NULL pointer dereference if an attacker could construct out of
     sequence EAP message fragments
 -   Fixed by validating and rejecting invalid fragments on both the peer and
@@ -96,8 +96,8 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3970-1](https://usn.ubuntu.com/3970-1/)] Ghostscript vulnerability {#usn-3970-1-ghostscript-vulnerability}
 
 -   1 CVEs addressed in Xenial, Bionic, Cosmic, Disco
-    -   [CVE-2019-3839](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-3839)
--   Follow up to [CVE-2019-6116](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-6116) ([Episode 18](https://ubuntusecuritypodcast.org/episode-18/))
+    -   [CVE-2019-3839](https://ubuntu.com/security/CVE-2019-3839)
+-   Follow up to [CVE-2019-6116](https://ubuntu.com/security/CVE-2019-6116) ([Episode 18](https://ubuntusecuritypodcast.org/episode-18/))
     -   GS sandbox allowed access to system operators which allowed arbitrary code execution
     -   Missed some protections for pdf related operations which could also allow code execution
 
@@ -105,8 +105,8 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3971-1](https://usn.ubuntu.com/3971-1/)] Monit vulnerabilities {#usn-3971-1-monit-vulnerabilities}
 
 -   2 CVEs addressed in Cosmic, Disco
-    -   [CVE-2019-11455](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11455)
-    -   [CVE-2019-11454](https://people.canonical.com/~ubuntu-security/cve/CVE-2019-11454)
+    -   [CVE-2019-11455](https://ubuntu.com/security/CVE-2019-11455)
+    -   [CVE-2019-11454](https://ubuntu.com/security/CVE-2019-11454)
 -   Buffer over-read when decoding URLs could allow a remote authenticated
     attacker to read other memory - information disclosure but could also
     cause a crash via reading from an invalid memory location
@@ -119,7 +119,7 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ### [[USN-3956-2](https://usn.ubuntu.com/3956-2/)] Bind vulnerability {#usn-3956-2-bind-vulnerability}
 
 -   1 CVEs addressed in Precise ESM, Trusty ESM
-    -   [CVE-2018-5743](https://people.canonical.com/~ubuntu-security/cve/CVE-2018-5743)
+    -   [CVE-2018-5743](https://ubuntu.com/security/CVE-2018-5743)
 -   [Episode 29](https://ubuntusecuritypodcast.org/episode-29/) covered for standard support releases - now fixed in ESM
 
 
@@ -145,5 +145,5 @@ This week we cover security fixes for GNOME Shell, FFmpeg, Sudo, Ghostscript and
 ## Get in contact {#get-in-contact}
 
 -   [security@ubuntu.com](mailto:security@ubuntu.com)
--   [#ubuntu-hardened on the Freenode IRC network](http://webchat.freenode.net/#ubuntu-hardened)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

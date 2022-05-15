@@ -7,9 +7,9 @@ description = """
   FUSE, Bind, Apache, the Linux kernel and more.
   """
 date = 2022-03-25T15:56:00+10:30
-lastmod = 2022-03-25T15:59:50+10:30
+lastmod = 2022-05-15T18:05:39+09:30
 draft = false
-weight = 1001
+weight = 1006
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E154.mp3"

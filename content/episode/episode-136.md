@@ -6,9 +6,9 @@ description = """
   Apport, PHP, Bind and more.
   """
 date = 2021-11-05T15:22:00+10:30
-lastmod = 2021-11-05T15:24:00+10:30
+lastmod = 2022-05-15T18:05:52+09:30
 draft = false
-weight = 1001
+weight = 1024
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E136.mp3"
@@ -33,36 +33,36 @@ Apport, PHP, Bind and more.
 ### [[USN-5114-1](https://ubuntu.com/security/notices/USN-5114-1)] Linux kernel vulnerabilities [01:15] {#usn-5114-1-linux-kernel-vulnerabilities-01-15}
 
 -   4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008)
-    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490)
-    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198)
-    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702)
+    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008) <!-- low -->
+    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490) <!-- medium -->
+    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198) <!-- medium -->
+    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702) <!-- medium -->
 -   4.15 + HWE on ESM
--   Race in ath9k -> could fail to properly encrypt traffic -> info leak
--   KVM shadow pages perms -> local user DoS
+-   Race in ath9k -&gt; could fail to properly encrypt traffic -&gt; info leak
+-   KVM shadow pages perms -&gt; local user DoS
 -   ext4 race in xattr handling - local DoS / priv-esc
--   6pack driver validation failure -> DoS / code-exec
+-   6pack driver validation failure -&gt; DoS / code-exec
 
 
 ### [[USN-5115-1](https://ubuntu.com/security/notices/USN-5115-1)] Linux kernel (OEM) vulnerabilities [02:19] {#usn-5115-1-linux-kernel--oem--vulnerabilities-02-19}
 
 -   16 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008)
-    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490)
-    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
-    -   [CVE-2021-38166](https://ubuntu.com/security/CVE-2021-38166)
-    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759)
-    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753)
-    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743)
-    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739)
-    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732)
-    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159)
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
-    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477)
-    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556)
-    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624)
-    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702)
+    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008) <!-- low -->
+    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490) <!-- medium -->
+    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205) <!-- low -->
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
+    -   [CVE-2021-38166](https://ubuntu.com/security/CVE-2021-38166) <!-- medium -->
+    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759) <!-- medium -->
+    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753) <!-- medium -->
+    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743) <!-- medium -->
+    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739) <!-- low -->
+    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732) <!-- medium -->
+    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159) <!-- low -->
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
+    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477) <!-- medium -->
+    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556) <!-- medium -->
+    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624) <!-- medium -->
+    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702) <!-- medium -->
 -   5.10 OEM
 -   As above plus various BPF hardening fixes against spectre-like attacks,
     fixes for security issues in tracing subsystem, overlayfs, btrfs,
@@ -72,27 +72,27 @@ Apport, PHP, Bind and more.
 ### [[USN-5116-1](https://ubuntu.com/security/notices/USN-5116-1), [USN-5116-2](https://ubuntu.com/security/notices/USN-5116-2)] Linux kernel vulnerabilities [02:55] {#usn-5116-1-usn-5116-2-linux-kernel-vulnerabilities-02-55}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008)
-    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490)
-    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205)
-    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198)
-    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732)
-    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702)
+    -   [CVE-2021-42008](https://ubuntu.com/security/CVE-2021-42008) <!-- low -->
+    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490) <!-- medium -->
+    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205) <!-- low -->
+    -   [CVE-2021-38198](https://ubuntu.com/security/CVE-2021-38198) <!-- medium -->
+    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732) <!-- medium -->
+    -   [CVE-2020-3702](https://ubuntu.com/security/CVE-2020-3702) <!-- medium -->
 -   5.4 + KVM + bionic HWE + clouds (AWS, Azure, GCP, GKE, IBM, Oracle + RPi)
--   Race in ath9k -> could fail to properly encrypt traffic -> info leak
--   KVM shadow pages perms -> local user DoS
+-   Race in ath9k -&gt; could fail to properly encrypt traffic -&gt; info leak
+-   KVM shadow pages perms -&gt; local user DoS
 -   ext4 race in xattr handling - local DoS / priv-esc
--   6pack driver validation failure -> DoS / code-exec
+-   6pack driver validation failure -&gt; DoS / code-exec
 -   overlayfs + xilinx
 
 
 ### [[USN-5117-1](https://ubuntu.com/security/notices/USN-5117-1)] Linux kernel (OEM) vulnerabilities [03:29] {#usn-5117-1-linux-kernel--oem--vulnerabilities-03-29}
 
 -   4 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759)
-    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753)
-    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743)
-    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739)
+    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759) <!-- medium -->
+    -   [CVE-2021-3753](https://ubuntu.com/security/CVE-2021-3753) <!-- medium -->
+    -   [CVE-2021-3743](https://ubuntu.com/security/CVE-2021-3743) <!-- medium -->
+    -   [CVE-2021-3739](https://ubuntu.com/security/CVE-2021-3739) <!-- low -->
 -   5.13 OEM
 -   btrfs, qualcomm IPC, VT IOCTL handling, memory leak in IPC object
     handling
@@ -101,15 +101,15 @@ Apport, PHP, Bind and more.
 ### [[USN-5120-1](https://ubuntu.com/security/notices/USN-5120-1)] Linux kernel (Azure) vulnerabilities [03:40] {#usn-5120-1-linux-kernel--azure--vulnerabilities-03-40}
 
 -   9 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490)
-    -   [CVE-2021-38207](https://ubuntu.com/security/CVE-2021-38207)
-    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199)
-    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759)
-    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612)
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
-    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311)
-    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541)
-    -   [CVE-2019-19449](https://ubuntu.com/security/CVE-2019-19449)
+    -   [CVE-2021-40490](https://ubuntu.com/security/CVE-2021-40490) <!-- medium -->
+    -   [CVE-2021-38207](https://ubuntu.com/security/CVE-2021-38207) <!-- medium -->
+    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199) <!-- medium -->
+    -   [CVE-2021-3759](https://ubuntu.com/security/CVE-2021-3759) <!-- medium -->
+    -   [CVE-2021-3612](https://ubuntu.com/security/CVE-2021-3612) <!-- medium -->
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
+    -   [CVE-2020-36311](https://ubuntu.com/security/CVE-2020-36311) <!-- medium -->
+    -   [CVE-2020-26541](https://ubuntu.com/security/CVE-2020-26541) <!-- medium -->
+    -   [CVE-2019-19449](https://ubuntu.com/security/CVE-2019-19449) <!-- low -->
 -   5.8 Azure
 
 
@@ -117,10 +117,10 @@ Apport, PHP, Bind and more.
 
 -   2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
     Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-30499](https://ubuntu.com/security/CVE-2021-30499)
-    -   [CVE-2021-30498](https://ubuntu.com/security/CVE-2021-30498)
+    -   [CVE-2021-30499](https://ubuntu.com/security/CVE-2021-30499) <!-- medium -->
+    -   [CVE-2021-30498](https://ubuntu.com/security/CVE-2021-30498) <!-- medium -->
 -   text mode graphics handling library
--   2 buffer overflows -> crash / code exec in handling of TGA images and
+-   2 buffer overflows -&gt; crash / code exec in handling of TGA images and
     when exporting to troff format
 
 
@@ -128,11 +128,11 @@ Apport, PHP, Bind and more.
 
 -   2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), 5 CVEs
     addressed in Focal (20.04 LTS)
-    -   [CVE-2021-42096](https://ubuntu.com/security/CVE-2021-42096)
-    -   [CVE-2021-42097](https://ubuntu.com/security/CVE-2021-42097)
-    -   [CVE-2020-12137](https://ubuntu.com/security/CVE-2020-12137) (20.04 LTS only)
-    -   [CVE-2020-15011](https://ubuntu.com/security/CVE-2020-15011) (20.04 LTS only)
-    -   [CVE-2020-12108](https://ubuntu.com/security/CVE-2020-12108) (20.04 LTS only)
+    -   [CVE-2021-42096](https://ubuntu.com/security/CVE-2021-42096) <!-- high -->
+    -   [CVE-2021-42097](https://ubuntu.com/security/CVE-2021-42097) <!-- high -->
+    -   [CVE-2020-12137](https://ubuntu.com/security/CVE-2020-12137) (20.04 LTS only) <!-- medium -->
+    -   [CVE-2020-15011](https://ubuntu.com/security/CVE-2020-15011) (20.04 LTS only) <!-- medium -->
+    -   [CVE-2020-12108](https://ubuntu.com/security/CVE-2020-12108) (20.04 LTS only) <!-- medium -->
 -   2 different CSRF attacks against mailman - in first, failed to properly
     associate CSRF tokens with accounts - could be used to take over
     another account
@@ -166,49 +166,49 @@ Apport, PHP, Bind and more.
 
 -   43 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal
     (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-35648](https://ubuntu.com/security/CVE-2021-35648)
-    -   [CVE-2021-35647](https://ubuntu.com/security/CVE-2021-35647)
-    -   [CVE-2021-35646](https://ubuntu.com/security/CVE-2021-35646)
-    -   [CVE-2021-35645](https://ubuntu.com/security/CVE-2021-35645)
-    -   [CVE-2021-35644](https://ubuntu.com/security/CVE-2021-35644)
-    -   [CVE-2021-35643](https://ubuntu.com/security/CVE-2021-35643)
-    -   [CVE-2021-35642](https://ubuntu.com/security/CVE-2021-35642)
-    -   [CVE-2021-35641](https://ubuntu.com/security/CVE-2021-35641)
-    -   [CVE-2021-35640](https://ubuntu.com/security/CVE-2021-35640)
-    -   [CVE-2021-35639](https://ubuntu.com/security/CVE-2021-35639)
-    -   [CVE-2021-35638](https://ubuntu.com/security/CVE-2021-35638)
-    -   [CVE-2021-35637](https://ubuntu.com/security/CVE-2021-35637)
-    -   [CVE-2021-35636](https://ubuntu.com/security/CVE-2021-35636)
-    -   [CVE-2021-35635](https://ubuntu.com/security/CVE-2021-35635)
-    -   [CVE-2021-35634](https://ubuntu.com/security/CVE-2021-35634)
-    -   [CVE-2021-35633](https://ubuntu.com/security/CVE-2021-35633)
-    -   [CVE-2021-35632](https://ubuntu.com/security/CVE-2021-35632)
-    -   [CVE-2021-35631](https://ubuntu.com/security/CVE-2021-35631)
-    -   [CVE-2021-35630](https://ubuntu.com/security/CVE-2021-35630)
-    -   [CVE-2021-35628](https://ubuntu.com/security/CVE-2021-35628)
-    -   [CVE-2021-35627](https://ubuntu.com/security/CVE-2021-35627)
-    -   [CVE-2021-35626](https://ubuntu.com/security/CVE-2021-35626)
-    -   [CVE-2021-35625](https://ubuntu.com/security/CVE-2021-35625)
-    -   [CVE-2021-35624](https://ubuntu.com/security/CVE-2021-35624)
-    -   [CVE-2021-35623](https://ubuntu.com/security/CVE-2021-35623)
-    -   [CVE-2021-35622](https://ubuntu.com/security/CVE-2021-35622)
-    -   [CVE-2021-35613](https://ubuntu.com/security/CVE-2021-35613)
-    -   [CVE-2021-35612](https://ubuntu.com/security/CVE-2021-35612)
-    -   [CVE-2021-35610](https://ubuntu.com/security/CVE-2021-35610)
-    -   [CVE-2021-35608](https://ubuntu.com/security/CVE-2021-35608)
-    -   [CVE-2021-35607](https://ubuntu.com/security/CVE-2021-35607)
-    -   [CVE-2021-35604](https://ubuntu.com/security/CVE-2021-35604)
-    -   [CVE-2021-35602](https://ubuntu.com/security/CVE-2021-35602)
-    -   [CVE-2021-35597](https://ubuntu.com/security/CVE-2021-35597)
-    -   [CVE-2021-35596](https://ubuntu.com/security/CVE-2021-35596)
-    -   [CVE-2021-35591](https://ubuntu.com/security/CVE-2021-35591)
-    -   [CVE-2021-35584](https://ubuntu.com/security/CVE-2021-35584)
-    -   [CVE-2021-35577](https://ubuntu.com/security/CVE-2021-35577)
-    -   [CVE-2021-35575](https://ubuntu.com/security/CVE-2021-35575)
-    -   [CVE-2021-35546](https://ubuntu.com/security/CVE-2021-35546)
-    -   [CVE-2021-2481](https://ubuntu.com/security/CVE-2021-2481)
-    -   [CVE-2021-2479](https://ubuntu.com/security/CVE-2021-2479)
-    -   [CVE-2021-2478](https://ubuntu.com/security/CVE-2021-2478)
+    -   [CVE-2021-35648](https://ubuntu.com/security/CVE-2021-35648) <!-- medium -->
+    -   [CVE-2021-35647](https://ubuntu.com/security/CVE-2021-35647) <!-- medium -->
+    -   [CVE-2021-35646](https://ubuntu.com/security/CVE-2021-35646) <!-- medium -->
+    -   [CVE-2021-35645](https://ubuntu.com/security/CVE-2021-35645) <!-- medium -->
+    -   [CVE-2021-35644](https://ubuntu.com/security/CVE-2021-35644) <!-- medium -->
+    -   [CVE-2021-35643](https://ubuntu.com/security/CVE-2021-35643) <!-- medium -->
+    -   [CVE-2021-35642](https://ubuntu.com/security/CVE-2021-35642) <!-- medium -->
+    -   [CVE-2021-35641](https://ubuntu.com/security/CVE-2021-35641) <!-- medium -->
+    -   [CVE-2021-35640](https://ubuntu.com/security/CVE-2021-35640) <!-- medium -->
+    -   [CVE-2021-35639](https://ubuntu.com/security/CVE-2021-35639) <!-- medium -->
+    -   [CVE-2021-35638](https://ubuntu.com/security/CVE-2021-35638) <!-- medium -->
+    -   [CVE-2021-35637](https://ubuntu.com/security/CVE-2021-35637) <!-- medium -->
+    -   [CVE-2021-35636](https://ubuntu.com/security/CVE-2021-35636) <!-- medium -->
+    -   [CVE-2021-35635](https://ubuntu.com/security/CVE-2021-35635) <!-- medium -->
+    -   [CVE-2021-35634](https://ubuntu.com/security/CVE-2021-35634) <!-- medium -->
+    -   [CVE-2021-35633](https://ubuntu.com/security/CVE-2021-35633) <!-- medium -->
+    -   [CVE-2021-35632](https://ubuntu.com/security/CVE-2021-35632) <!-- medium -->
+    -   [CVE-2021-35631](https://ubuntu.com/security/CVE-2021-35631) <!-- medium -->
+    -   [CVE-2021-35630](https://ubuntu.com/security/CVE-2021-35630) <!-- medium -->
+    -   [CVE-2021-35628](https://ubuntu.com/security/CVE-2021-35628) <!-- medium -->
+    -   [CVE-2021-35627](https://ubuntu.com/security/CVE-2021-35627) <!-- medium -->
+    -   [CVE-2021-35626](https://ubuntu.com/security/CVE-2021-35626) <!-- medium -->
+    -   [CVE-2021-35625](https://ubuntu.com/security/CVE-2021-35625) <!-- medium -->
+    -   [CVE-2021-35624](https://ubuntu.com/security/CVE-2021-35624) <!-- medium -->
+    -   [CVE-2021-35623](https://ubuntu.com/security/CVE-2021-35623) <!-- medium -->
+    -   [CVE-2021-35622](https://ubuntu.com/security/CVE-2021-35622) <!-- medium -->
+    -   [CVE-2021-35613](https://ubuntu.com/security/CVE-2021-35613) <!-- medium -->
+    -   [CVE-2021-35612](https://ubuntu.com/security/CVE-2021-35612) <!-- medium -->
+    -   [CVE-2021-35610](https://ubuntu.com/security/CVE-2021-35610) <!-- medium -->
+    -   [CVE-2021-35608](https://ubuntu.com/security/CVE-2021-35608) <!-- medium -->
+    -   [CVE-2021-35607](https://ubuntu.com/security/CVE-2021-35607) <!-- medium -->
+    -   [CVE-2021-35604](https://ubuntu.com/security/CVE-2021-35604) <!-- medium -->
+    -   [CVE-2021-35602](https://ubuntu.com/security/CVE-2021-35602) <!-- medium -->
+    -   [CVE-2021-35597](https://ubuntu.com/security/CVE-2021-35597) <!-- medium -->
+    -   [CVE-2021-35596](https://ubuntu.com/security/CVE-2021-35596) <!-- medium -->
+    -   [CVE-2021-35591](https://ubuntu.com/security/CVE-2021-35591) <!-- medium -->
+    -   [CVE-2021-35584](https://ubuntu.com/security/CVE-2021-35584) <!-- medium -->
+    -   [CVE-2021-35577](https://ubuntu.com/security/CVE-2021-35577) <!-- medium -->
+    -   [CVE-2021-35575](https://ubuntu.com/security/CVE-2021-35575) <!-- medium -->
+    -   [CVE-2021-35546](https://ubuntu.com/security/CVE-2021-35546) <!-- medium -->
+    -   [CVE-2021-2481](https://ubuntu.com/security/CVE-2021-2481) <!-- medium -->
+    -   [CVE-2021-2479](https://ubuntu.com/security/CVE-2021-2479) <!-- medium -->
+    -   [CVE-2021-2478](https://ubuntu.com/security/CVE-2021-2478) <!-- medium -->
 -   [8.0.27](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-27.html) in Ubuntu 20.04 LTS, Ubuntu 21.04 and Ubuntu 21.10
 -   [5.7.36](https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-36.html) in Ubuntu 18.04 LTS, Ubuntu 16.04 ESM
 -   <https://www.oracle.com/security-alerts/cpuoct2021.html>
@@ -217,8 +217,8 @@ Apport, PHP, Bind and more.
 ### [[USN-5124-1](https://ubuntu.com/security/notices/USN-5124-1)] GNU binutils vulnerabilities [06:53] {#usn-5124-1-gnu-binutils-vulnerabilities-06-53}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-3487](https://ubuntu.com/security/CVE-2021-3487)
-    -   [CVE-2020-16592](https://ubuntu.com/security/CVE-2020-16592)
+    -   [CVE-2021-3487](https://ubuntu.com/security/CVE-2021-3487) <!-- low -->
+    -   [CVE-2020-16592](https://ubuntu.com/security/CVE-2020-16592) <!-- low -->
 -   2 issues in libbfd (binary file descriptor) - can be triggered by crafted
     files
     -   UAF in when using hash table impl
@@ -228,12 +228,12 @@ Apport, PHP, Bind and more.
 ### [[USN-5009-2](https://ubuntu.com/security/notices/USN-5009-2)] libslirp vulnerabilities [07:30] {#usn-5009-2-libslirp-vulnerabilities-07-30}
 
 -   6 CVEs addressed in Impish (21.10)
-    -   [CVE-2021-3595](https://ubuntu.com/security/CVE-2021-3595)
-    -   [CVE-2021-3594](https://ubuntu.com/security/CVE-2021-3594)
-    -   [CVE-2021-3593](https://ubuntu.com/security/CVE-2021-3593)
-    -   [CVE-2021-3592](https://ubuntu.com/security/CVE-2021-3592)
-    -   [CVE-2020-29130](https://ubuntu.com/security/CVE-2020-29130)
-    -   [CVE-2020-29129](https://ubuntu.com/security/CVE-2020-29129)
+    -   [CVE-2021-3595](https://ubuntu.com/security/CVE-2021-3595) <!-- low -->
+    -   [CVE-2021-3594](https://ubuntu.com/security/CVE-2021-3594) <!-- low -->
+    -   [CVE-2021-3593](https://ubuntu.com/security/CVE-2021-3593) <!-- low -->
+    -   [CVE-2021-3592](https://ubuntu.com/security/CVE-2021-3592) <!-- low -->
+    -   [CVE-2020-29130](https://ubuntu.com/security/CVE-2020-29130) <!-- low -->
+    -   [CVE-2020-29129](https://ubuntu.com/security/CVE-2020-29129) <!-- low -->
 -   [Episode 124](https://ubuntusecuritypodcast.org/episode-124/)
 
 
@@ -241,17 +241,17 @@ Apport, PHP, Bind and more.
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
     Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-21703](https://ubuntu.com/security/CVE-2021-21703)
+    -   [CVE-2021-21703](https://ubuntu.com/security/CVE-2021-21703) <!-- high -->
 -   Root code exec in PHP-FPM - uses a privileged root level process and
     unpriv child worker processes but child could access shared memory with
-    parent and cause it to do OOB R/W -> code execution in parent -> priv-esc
+    parent and cause it to do OOB R/W -&gt; code execution in parent -&gt; priv-esc
 
 
 ### [[USN-5126-1](https://ubuntu.com/security/notices/USN-5126-1), [USN-5126-2](https://ubuntu.com/security/notices/USN-5126-2)] Bind vulnerability [08:33] {#usn-5126-1-usn-5126-2-bind-vulnerability-08-33}
 
 -   1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM),
     Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-25219](https://ubuntu.com/security/CVE-2021-25219)
+    -   [CVE-2021-25219](https://ubuntu.com/security/CVE-2021-25219) <!-- medium -->
 -   Possible cache poisoning could lead to DoS via excessive entries in the
     cache causing slow lookup performance
 
@@ -259,9 +259,9 @@ Apport, PHP, Bind and more.
 ### [[USN-5127-1](https://ubuntu.com/security/notices/USN-5127-1)] WebKitGTK vulnerabilities [08:55] {#usn-5127-1-webkitgtk-vulnerabilities-08-55}
 
 -   3 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04), Impish (21.10)
-    -   [CVE-2021-42762](https://ubuntu.com/security/CVE-2021-42762)
-    -   [CVE-2021-30851](https://ubuntu.com/security/CVE-2021-30851)
-    -   [CVE-2021-30846](https://ubuntu.com/security/CVE-2021-30846)
+    -   [CVE-2021-42762](https://ubuntu.com/security/CVE-2021-42762) <!-- medium -->
+    -   [CVE-2021-30851](https://ubuntu.com/security/CVE-2021-30851) <!-- medium -->
+    -   [CVE-2021-30846](https://ubuntu.com/security/CVE-2021-30846) <!-- medium -->
 -   Usual web engine vulns - plus one in the bubblewrap launcher which allows
     a limited sandbox bypass - could trick host processors into believing a
     sandboxed process was not and hence could potentially escalate privs
@@ -270,11 +270,11 @@ Apport, PHP, Bind and more.
 ### [[USN-5128-1](https://ubuntu.com/security/notices/USN-5128-1)] Ceph vulnerabilities [09:35] {#usn-5128-1-ceph-vulnerabilities-09-35}
 
 -   5 CVEs addressed in Bionic (18.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3531](https://ubuntu.com/security/CVE-2021-3531)
-    -   [CVE-2021-3524](https://ubuntu.com/security/CVE-2021-3524)
-    -   [CVE-2021-3509](https://ubuntu.com/security/CVE-2021-3509)
-    -   [CVE-2021-20288](https://ubuntu.com/security/CVE-2021-20288)
-    -   [CVE-2020-27781](https://ubuntu.com/security/CVE-2020-27781)
+    -   [CVE-2021-3531](https://ubuntu.com/security/CVE-2021-3531) <!-- medium -->
+    -   [CVE-2021-3524](https://ubuntu.com/security/CVE-2021-3524) <!-- medium -->
+    -   [CVE-2021-3509](https://ubuntu.com/security/CVE-2021-3509) <!-- medium -->
+    -   [CVE-2021-20288](https://ubuntu.com/security/CVE-2021-20288) <!-- medium -->
+    -   [CVE-2020-27781](https://ubuntu.com/security/CVE-2020-27781) <!-- medium -->
 
 
 ## Goings on in Ubuntu Security Community {#goings-on-in-ubuntu-security-community}
@@ -335,4 +335,4 @@ Apport, PHP, Bind and more.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

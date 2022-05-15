@@ -6,9 +6,9 @@ description = """
   Inetutils telnetd, the Linux kernel and OpenSSL.
   """
 date = 2021-08-27T12:23:00+09:30
-lastmod = 2021-08-27T12:27:07+09:30
+lastmod = 2022-05-15T18:05:58+09:30
 draft = false
-weight = 1001
+weight = 1032
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E128.mp3"
@@ -33,33 +33,33 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
 ### [[USN-5048-1](https://ubuntu.com/security/notices/USN-5048-1)] Inetutils vulnerability [00:45] {#usn-5048-1-inetutils-vulnerability-00-45}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2020-10188](https://ubuntu.com/security/CVE-2020-10188)
+    -   [CVE-2020-10188](https://ubuntu.com/security/CVE-2020-10188) <!-- medium -->
 -   Buffer overflow in inetutils telnetd - originally CVE was found in netkit
     telnetd - but subsequently the GNU inetutils version was also found to
     contain basically the same vulnerable function. Very detailed blog post
     re exploiting this on Fedora, great example if you are interested in vuln
     hunting etc - patched but why run telnetd?
--   <https://appgateresearch.blogspot.com/2020/02/bravestarr-fedora-31-netkit-telnetd%5F28.html>
+-   <https://appgateresearch.blogspot.com/2020/02/bravestarr-fedora-31-netkit-telnetd_28.html>
 
 
 ### [[USN-5050-1](https://ubuntu.com/security/notices/USN-5050-1)] Linux kernel vulnerabilities [02:03] {#usn-5050-1-linux-kernel-vulnerabilities-02-03}
 
 -   6 CVEs addressed in Focal (20.04 LTS)
-    -   [CVE-2021-38208](https://ubuntu.com/security/CVE-2021-38208)
-    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573)
-    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564)
-    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691)
-    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129)
-    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558)
--   2 bluetooth HCI UAFs, NFC NULL ptr deref, Xen PV UAF from guest->host, 2
+    -   [CVE-2021-38208](https://ubuntu.com/security/CVE-2021-38208) <!-- medium -->
+    -   [CVE-2021-3573](https://ubuntu.com/security/CVE-2021-3573) <!-- medium -->
+    -   [CVE-2021-3564](https://ubuntu.com/security/CVE-2021-3564) <!-- medium -->
+    -   [CVE-2021-28691](https://ubuntu.com/security/CVE-2021-28691) <!-- medium -->
+    -   [CVE-2021-0129](https://ubuntu.com/security/CVE-2021-0129) <!-- medium -->
+    -   [CVE-2020-26558](https://ubuntu.com/security/CVE-2020-26558) <!-- medium -->
+-   2 bluetooth HCI UAFs, NFC NULL ptr deref, Xen PV UAF from guest-&gt;host, 2
     other bluetooth vulns - info leak - all covered in previous episodes
 
 
 ### [[USN-5051-1](https://ubuntu.com/security/notices/USN-5051-1)] OpenSSL vulnerabilities [02:49] {#usn-5051-1-openssl-vulnerabilities-02-49}
 
 -   2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712)
-    -   [CVE-2021-3711](https://ubuntu.com/security/CVE-2021-3711)
+    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712) <!-- medium -->
+    -   [CVE-2021-3711](https://ubuntu.com/security/CVE-2021-3711) <!-- high -->
 -   High profile vuln in SM2 algorithm impl in openssl - (Chinese and later
     ISO standard elliptic curve algo used for both signature and encryption)
     -   Usual scheme is to call the API function `EVP_PKEY_decrypt()` twice - call
@@ -67,7 +67,7 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
         plaintext - second time to do the actual decryption passing a buffer of
         the specified length to hold the result
     -   Bug meant the returned length in first call would be smaller than
-        required -> up to 62 byte buffer overflow using attacker controlled data
+        required -&gt; up to 62 byte buffer overflow using attacker controlled data
     -   Depending on application, could be heap or stack buffer
     -   Possible RCE
 -   Buffer overread in handling of ASN.1 strings
@@ -156,4 +156,4 @@ Inetutils telnetd, the Linux kernel and OpenSSL.
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)

@@ -5,9 +5,9 @@ description = """
   updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
   """
 date = 2021-10-01T15:10:00+09:30
-lastmod = 2021-10-01T15:44:55+09:30
+lastmod = 2022-05-15T18:05:55+09:30
 draft = false
-weight = 1001
+weight = 1027
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E133.mp3"
@@ -37,7 +37,7 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5085-1](https://ubuntu.com/security/notices/USN-5085-1)] SQL parse vulnerability [01:33] {#usn-5085-1-sql-parse-vulnerability-01-33}
 
 -   1 CVEs addressed in Hirsute (21.04)
-    -   [CVE-2021-32839](https://ubuntu.com/security/CVE-2021-32839)
+    -   [CVE-2021-32839](https://ubuntu.com/security/CVE-2021-32839) <!-- medium -->
 -   ReDoS via exponential backtracking with a large amount of
     carriage-return, newline combinations
 
@@ -45,7 +45,7 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5087-1](https://ubuntu.com/security/notices/USN-5087-1)] WebKitGTK vulnerabilities [02:18] {#usn-5087-1-webkitgtk-vulnerabilities-02-18}
 
 -   1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-30858](https://ubuntu.com/security/CVE-2021-30858)
+    -   [CVE-2021-30858](https://ubuntu.com/security/CVE-2021-30858) <!-- medium -->
 -   UAF in underlying webkit - originally reported by Apple against their
     various operating systems - not actually against webkit directly...
 
@@ -53,10 +53,10 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5088-1](https://ubuntu.com/security/notices/USN-5088-1)] EDK II vulnerabilities [02:46] {#usn-5088-1-edk-ii-vulnerabilities-02-46}
 
 -   4 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38575](https://ubuntu.com/security/CVE-2021-38575)
-    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712)
-    -   [CVE-2021-23840](https://ubuntu.com/security/CVE-2021-23840)
-    -   [CVE-2019-11098](https://ubuntu.com/security/CVE-2019-11098)
+    -   [CVE-2021-38575](https://ubuntu.com/security/CVE-2021-38575) <!-- medium -->
+    -   [CVE-2021-3712](https://ubuntu.com/security/CVE-2021-3712) <!-- medium -->
+    -   [CVE-2021-23840](https://ubuntu.com/security/CVE-2021-23840) <!-- low -->
+    -   [CVE-2019-11098](https://ubuntu.com/security/CVE-2019-11098) <!-- low -->
 -   mix of issues in the embedded openssl in EDK-II plus 2 issues specific to
     EDK-II itself - one in the handling of Intel Boot Guard which is designed
     to detect attacks against the static root of trust, in particualr
@@ -96,9 +96,9 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5090-1](https://ubuntu.com/security/notices/USN-5090-1), [USN-5090-2](https://ubuntu.com/security/notices/USN-5090-2), USN-5090-3, [USN-5090-4](https://ubuntu.com/security/notices/USN-5090-4)] Apache HTTP Server vulnerabilities + regression [07:41] {#usn-5090-1-usn-5090-2-usn-5090-3-usn-5090-4-apache-http-server-vulnerabilities-plus-regression-07-41}
 
 -   5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-40438](https://ubuntu.com/security/CVE-2021-40438)
-    -   [CVE-2021-39275](https://ubuntu.com/security/CVE-2021-39275)
-    -   [CVE-2021-34798](https://ubuntu.com/security/CVE-2021-34798)
+    -   [CVE-2021-40438](https://ubuntu.com/security/CVE-2021-40438) <!-- medium -->
+    -   [CVE-2021-39275](https://ubuntu.com/security/CVE-2021-39275) <!-- medium -->
+    -   [CVE-2021-34798](https://ubuntu.com/security/CVE-2021-34798) <!-- medium -->
     -   [CVE-2021-36160](https://ubuntu.com/security/CVE-2021-36160) <!-- medium, not esm -->
     -   [CVE-2021-33193](https://ubuntu.com/security/CVE-2021-33193) <!-- medium, not esm -->
 -   HTTP/2 specific issue - crafted method would bypass validation and be
@@ -121,30 +121,30 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5091-1](https://ubuntu.com/security/notices/USN-5091-1)] Linux kernel vulnerabilities [09:44] {#usn-5091-1-linux-kernel-vulnerabilities-09-44}
 
 -   6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
-    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199)
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
-    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576)
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
-    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624)
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
+    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199) <!-- medium -->
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
+    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576) <!-- medium -->
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
+    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624) <!-- medium -->
 -   5.4 (focal / bionic hwe)
 
 
 ### [[USN-5092-1](https://ubuntu.com/security/notices/USN-5092-1), [USN-5092-2](https://ubuntu.com/security/notices/USN-5092-2)] Linux kernel vulnerabilities [09:56] {#usn-5092-1-usn-5092-2-linux-kernel-vulnerabilities-09-56}
 
 -   12 CVEs addressed in Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
-    -   [CVE-2021-38201](https://ubuntu.com/security/CVE-2021-38201)
-    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199)
-    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160)
-    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576)
-    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159)
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
-    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477)
-    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556)
-    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624)
-    -   [CVE-2021-41073](https://ubuntu.com/security/CVE-2021-41073)
+    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205) <!-- low -->
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
+    -   [CVE-2021-38201](https://ubuntu.com/security/CVE-2021-38201) <!-- medium -->
+    -   [CVE-2021-38199](https://ubuntu.com/security/CVE-2021-38199) <!-- medium -->
+    -   [CVE-2021-38160](https://ubuntu.com/security/CVE-2021-38160) <!-- medium -->
+    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576) <!-- medium -->
+    -   [CVE-2021-37159](https://ubuntu.com/security/CVE-2021-37159) <!-- low -->
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
+    -   [CVE-2021-35477](https://ubuntu.com/security/CVE-2021-35477) <!-- medium -->
+    -   [CVE-2021-34556](https://ubuntu.com/security/CVE-2021-34556) <!-- medium -->
+    -   [CVE-2021-33624](https://ubuntu.com/security/CVE-2021-33624) <!-- medium -->
+    -   [CVE-2021-41073](https://ubuntu.com/security/CVE-2021-41073) <!-- high -->
 -   5.11 (hirsute, focal hwe)
 -   `io_uring` (5.1) - unprivileged user - trigger free of other kernel
     memory - code execution
@@ -156,21 +156,21 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 ### [[USN-5094-1](https://ubuntu.com/security/notices/USN-5094-1)] Linux kernel vulnerabilities [10:39] {#usn-5094-1-linux-kernel-vulnerabilities-10-39}
 
 -   6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205)
-    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204)
-    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576)
-    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732)
-    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679)
-    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543)
+    -   [CVE-2021-38205](https://ubuntu.com/security/CVE-2021-38205) <!-- low -->
+    -   [CVE-2021-38204](https://ubuntu.com/security/CVE-2021-38204) <!-- low -->
+    -   [CVE-2021-37576](https://ubuntu.com/security/CVE-2021-37576) <!-- medium -->
+    -   [CVE-2021-3732](https://ubuntu.com/security/CVE-2021-3732) <!-- medium -->
+    -   [CVE-2021-3679](https://ubuntu.com/security/CVE-2021-3679) <!-- low -->
+    -   [CVE-2021-22543](https://ubuntu.com/security/CVE-2021-22543) <!-- medium -->
 -   4.15 (bionic, xenial hwe, trusty azure)
 
 
 ### [[USN-5093-1](https://ubuntu.com/security/notices/USN-5093-1)] Vim vulnerabilities [10:57] {#usn-5093-1-vim-vulnerabilities-10-57}
 
 -   3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Hirsute (21.04)
-    -   [CVE-2021-3796](https://ubuntu.com/security/CVE-2021-3796)
-    -   [CVE-2021-3778](https://ubuntu.com/security/CVE-2021-3778)
-    -   [CVE-2021-3770](https://ubuntu.com/security/CVE-2021-3770)
+    -   [CVE-2021-3796](https://ubuntu.com/security/CVE-2021-3796) <!-- medium -->
+    -   [CVE-2021-3778](https://ubuntu.com/security/CVE-2021-3778) <!-- medium -->
+    -   [CVE-2021-3770](https://ubuntu.com/security/CVE-2021-3770) <!-- medium -->
 -   Possible code-execution through 2 different heap buffer overflows and 1
     UAF
 
@@ -234,4 +234,4 @@ updates for ca-certificates, EDK II, Apache, the Linux kernel and even vim!
 -   [#ubuntu-security on the Libera.Chat IRC network](https://libera.chat)
 -   [ubuntu-hardened mailing list](https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened)
 -   [Security section on discourse.ubuntu.com](https://discourse.ubuntu.com/c/security)
--   [@ubuntu\_sec on twitter](https://twitter.com/ubuntu%5Fsec)
+-   [@ubuntu_sec on twitter](https://twitter.com/ubuntu_sec)
