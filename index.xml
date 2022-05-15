@@ -6,16 +6,16 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 16:46:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 17:31:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Episode 158</title>
-      <link>https://ubuntusecuritypodcast.org/episode-158/</link>
-      <pubDate>Fri, 06 May 2022 16:46:00 +0930</pubDate>
+      <title>Episode 159</title>
+      <link>https://ubuntusecuritypodcast.org/episode-159/</link>
+      <pubDate>Sun, 15 May 2022 17:31:00 +0930</pubDate>
       
-      <guid>https://ubuntusecuritypodcast.org/episode-158/</guid>
-      <description>Overview Microsoft&amp;rsquo;s Nimbuspwn sets the Linux security media ablaze but where there&amp;rsquo;s smoke there&amp;rsquo;s not always fire, plus we bring you the first part of a 2 part series looking at some of the security features in the latest Ubuntu 22.04 LTS release.
-This week in Ubuntu Security Updates 92 unique CVEs addressed
-[USN-5381-1] Linux kernel (OEM) vulnerabilities  11 CVEs addressed in Focal (20.04 LTS)  CVE-2022-28356  CVE-2022-27223  CVE-2022-26966  CVE-2022-26490  CVE-2022-24958  CVE-2022-1048  CVE-2022-1016  CVE-2022-1011  CVE-2022-0854  CVE-2022-0494  CVE-2022-1015     [USN-5383-1] Linux kernel vulnerabilities  8 CVEs addressed in Focal (20.</description>
+      <guid>https://ubuntusecuritypodcast.org/episode-159/</guid>
+      <description>Overview This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS release and what&amp;rsquo;s in it for security, plus we cover security updates for DPDK, OpenSSL, Cron, RSyslog, Curl and more.
+This week in Ubuntu Security Updates 37 unique CVEs addressed
+[USN-5401-1] DPDK vulnerabilities [00:54]  2 CVEs addressed in Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)  CVE-2022-0669  CVE-2021-3839    Data-plane development kit (provides TCP offloading to userspace to accelerate package processing workloads) Used by openvswitch for OpenStack software defined networking OOB write due to missing check on queue length in vhost comms - could allow a malicious guest to crash or get code execution on the host Also fixed a possible DoS attack between a malicious vhost-user primary and secondary where the primary can spam the secondary with with a huge number of open file-descriptors which eventually leads the secondary to exhaust it&amp;rsquo;s fd limit and hence DoS  [USN-5402-1] OpenSSL vulnerabilities [01:36]  4 CVEs addressed in Bionic (18.</description>
     </item>
     
     <item>
@@ -935,6 +935,17 @@ This week in Ubuntu Security Updates 26 unique CVEs addressed
       <description>Overview Special guest, Tim McNamara, author of Rust In Action talks all things Rust plus we look at security updates for Linux bluetooth firmware, OpenLDAP, PulseAudio, Squid and more.
 This week in Ubuntu Security Updates 17 unique CVEs addressed
 [USN-4351-1] Linux firmware vulnerability [01:03]  1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)  CVE-2018-5383   Bluetooth devices failed to properly validate elliptic curve parameters used in key exchange - remote attacker could possibly force a weak key to be used and hence obtain the encryption key.</description>
+    </item>
+    
+    <item>
+      <title>Episode 158</title>
+      <link>https://ubuntusecuritypodcast.org/episode-158/</link>
+      <pubDate>Fri, 06 May 2022 16:46:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-158/</guid>
+      <description>Overview Microsoft&amp;rsquo;s Nimbuspwn sets the Linux security media ablaze but where there&amp;rsquo;s smoke there&amp;rsquo;s not always fire, plus we bring you the first part of a 2 part series looking at some of the security features in the latest Ubuntu 22.04 LTS release.
+This week in Ubuntu Security Updates 92 unique CVEs addressed
+[USN-5381-1] Linux kernel (OEM) vulnerabilities  11 CVEs addressed in Focal (20.04 LTS)  CVE-2022-28356  CVE-2022-27223  CVE-2022-26966  CVE-2022-26490  CVE-2022-24958  CVE-2022-1048  CVE-2022-1016  CVE-2022-1011  CVE-2022-0854  CVE-2022-0494  CVE-2022-1015     [USN-5383-1] Linux kernel vulnerabilities  8 CVEs addressed in Focal (20.</description>
     </item>
     
     <item>

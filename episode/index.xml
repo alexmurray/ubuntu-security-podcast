@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 6 May 2022 16:46:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2022 17:31:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -41,232 +41,92 @@
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
         <item>
-          <title>Episode 158</title>
-          <link>https://ubuntusecuritypodcast.org/episode-158/</link>
-          <pubDate>Fri, 06 May 2022 16:46:00 +0930 </pubDate>
+          <title>Episode 159</title>
+          <link>https://ubuntusecuritypodcast.org/episode-159/</link>
+          <pubDate>Sun, 15 May 2022 17:31:00 +0930 </pubDate>
           <dc:creator></dc:creator>
-          <guid>836608c25bd99f0c47f32c21cd7cd01fe44f01f7c56caab27fc7af02df27b3be53c185fb29188c7cf8612cde2df601a1520449a8e60fc6c576306542e78a9642</guid>
+          <guid>ff91aae365d281753f772bda601156f2df3509650a25570e838b8518c31a1a3e397997a66e8eb30e61f7c6ffa1939d0634f715c8f652be67782557608b096996</guid>
           <itunes:author>Ubuntu Security Team</itunes:author>
           
-        <itunes:title>Episode 158</itunes:title>
+        <itunes:title>Episode 159</itunes:title>
         <itunes:subtitle><![CDATA[
         
-          Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
-  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
-  a 2 part series looking at some of the security features in the latest
-  Ubuntu 22.04 LTS...
+          This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS
+  release and what&#39;s in it for security, plus we cover security updates for
+  DPDK, OpenSSL, Cron, RSyslog, Curl and more.
+  
         
         ]]></itunes:subtitle>
-        <itunes:summary>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
-  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
-  a 2 part series looking at some of the security features in the latest
-  Ubuntu 22.04 LTS release.
+        <itunes:summary>  This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS
+  release and what&#39;s in it for security, plus we cover security updates for
+  DPDK, OpenSSL, Cron, RSyslog, Curl and more.
   </itunes:summary>
-        <description>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
-  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
-  a 2 part series looking at some of the security features in the latest
-  Ubuntu 22.04 LTS release.
+        <description>  This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS
+  release and what&#39;s in it for security, plus we cover security updates for
+  DPDK, OpenSSL, Cron, RSyslog, Curl and more.
   </description>
-        <googleplay:description>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
-  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
-  a 2 part series looking at some of the security features in the latest
-  Ubuntu 22.04 LTS release.
+        <googleplay:description>  This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS
+  release and what&#39;s in it for security, plus we cover security updates for
+  DPDK, OpenSSL, Cron, RSyslog, Curl and more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>Microsoft&rsquo;s Nimbuspwn sets the Linux security media ablaze but where
-there&rsquo;s smoke there&rsquo;s not always fire, plus we bring you the first part of
-a 2 part series looking at some of the security features in the latest
-Ubuntu 22.04 LTS release.</p>
+<p>This week we bring you part 2 of our look at the new Ubuntu 22.04 LTS
+release and what&rsquo;s in it for security, plus we cover security updates for
+DPDK, OpenSSL, Cron, RSyslog, Curl and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-<p>92 unique CVEs addressed</p>
-<h3 id="usn-5381-1-linux-kernel--oem--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5381-1">USN-5381-1</a>] Linux kernel (OEM) vulnerabilities</h3>
+<p>37 unique CVEs addressed</p>
+<h3 id="usn-5401-1-dpdk-vulnerabilities-00-54">[<a href="https://ubuntu.com/security/notices/USN-5401-1">USN-5401-1</a>] DPDK vulnerabilities [00:54]</h3>
 <ul>
-<li>11 CVEs addressed in Focal (20.04 LTS)
+<li>2 CVEs addressed in Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-27223">CVE-2022-27223</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-26966">CVE-2022-26966</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24958">CVE-2022-24958</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1048">CVE-2022-1048</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1011">CVE-2022-1011</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0854">CVE-2022-0854</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0494">CVE-2022-0494</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0669">CVE-2022-0669</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3839">CVE-2021-3839</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li>Data-plane development kit (provides TCP offloading to userspace to
+accelerate package processing workloads)</li>
+<li>Used by openvswitch for OpenStack software defined networking</li>
+<li>OOB write due to missing check on queue length in vhost comms - could
+allow a malicious guest to crash or get code execution on the host</li>
+<li>Also fixed a possible DoS attack between a malicious vhost-user primary
+and secondary where the primary can spam the secondary with with a huge
+number of open file-descriptors which eventually leads the secondary to
+exhaust it&rsquo;s fd limit and hence DoS</li>
 </ul>
-<h3 id="usn-5383-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5383-1">USN-5383-1</a>] Linux kernel vulnerabilities</h3>
+<h3 id="usn-5402-1-openssl-vulnerabilities-01-36">[<a href="https://ubuntu.com/security/notices/USN-5402-1">USN-5402-1</a>] OpenSSL vulnerabilities [01:36]</h3>
 <ul>
-<li>8 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-26878">CVE-2022-26878</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-44879">CVE-2021-44879</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1473">CVE-2022-1473</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1434">CVE-2022-1434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1343">CVE-2022-1343</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1292">CVE-2022-1292</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
-</ul>
-<h3 id="usn-5384-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5384-1">USN-5384-1</a>] Linux kernel vulnerabilities</h3>
+<li>All 4 affect 22.04 whilst only one affects the older releases - in this
+case if running 22.04, exposed to 4 vulns whilst for the older releases
+only 1
 <ul>
-<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
+<li>Would be interesting to try and compare number of CVEs over the
+lifetime of a piece of software - if always running the latest version
+do you get exposed to more and more CVEs each time you upgrade? Is it
+better to stick with older software since the rate of vulns found over
+time likely decreases as it gets older&hellip;</li>
 </ul>
 </li>
+<li>Anyway, of these vulns 1 is a memory leak during certificate decoding
+which could usually affect something like an TLS server which uses client
+certs for authentication, plus a possible MiTM attack against RC4-MD5,
+incorrect return code when validating OCSP messages which could cause a
+user / application to believe was valid when in fact was not plus
+possible code execution via the <code>c_rehash</code> script through
+shell-metacharacters - but no privilege escalation so only get whatever
+privileges the script is executing under (<code>c_rehash</code> is used to create
+symlinks named as the hashes of certs etc when importing a cert into a
+cert store so it can then easily be looked up via it&rsquo;s hash value as the
+filename)</li>
 </ul>
-<h3 id="usn-5385-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5385-1">USN-5385-1</a>] Linux kernel vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5387-1-barbican-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5387-1">USN-5387-1</a>] Barbican vulnerabilities</h3>
-<ul>
-<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-23452">CVE-2022-23452</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-23451">CVE-2022-23451</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5376-2-git-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5376-2">USN-5376-2</a>] Git vulnerability</h3>
-<ul>
-<li>1 CVEs addressed in Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-24765">CVE-2022-24765</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5388-1-openjdk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5388-1">USN-5388-1</a>] OpenJDK vulnerabilities</h3>
-<ul>
-<li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-21496">CVE-2022-21496</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21476">CVE-2022-21476</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21443">CVE-2022-21443</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21434">CVE-2022-21434</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21426">CVE-2022-21426</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5388-2-openjdk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5388-2">USN-5388-2</a>] OpenJDK vulnerabilities</h3>
-<ul>
-<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-21496">CVE-2022-21496</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21476">CVE-2022-21476</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21443">CVE-2022-21443</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21434">CVE-2022-21434</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21426">CVE-2022-21426</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21449">CVE-2022-21449</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5389-1-libcroco-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5389-1">USN-5389-1</a>] Libcroco vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Xenial ESM (16.04 ESM)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-12825">CVE-2020-12825</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-8871">CVE-2017-8871</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-8834">CVE-2017-8834</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2017-7960">CVE-2017-7960</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5390-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5390-1">USN-5390-1</a>] Linux kernel vulnerabilities</h3>
-<ul>
-<li>3 CVEs addressed in Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5376-3-git-regression">[<a href="https://ubuntu.com/security/notices/USN-5376-3">USN-5376-3</a>] Git regression</h3>
-<ul>
-<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)</li>
-</ul>
-<h3 id="usn-5391-1-libsepol-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5391-1">USN-5391-1</a>] libsepol vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2021-36087">CVE-2021-36087</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-36086">CVE-2021-36086</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-36085">CVE-2021-36085</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-36084">CVE-2021-36084</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5366-2-fribidi-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5366-2">USN-5366-2</a>] FriBidi vulnerabilities</h3>
-<ul>
-<li>3 CVEs addressed in Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-25310">CVE-2022-25310</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-25309">CVE-2022-25309</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-25308">CVE-2022-25308</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5393-1-thunderbird-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5393-1">USN-5393-1</a>] Thunderbird vulnerabilities</h3>
-<ul>
-<li>8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-1197">CVE-2022-1197</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-28289">CVE-2022-28289</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-28286">CVE-2022-28286</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-28285">CVE-2022-28285</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-28282">CVE-2022-28282</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-28281">CVE-2022-28281</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1196">CVE-2022-1196</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1097">CVE-2022-1097</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5371-2-nginx-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5371-2">USN-5371-2</a>] nginx vulnerability</h3>
-<ul>
-<li>3 CVEs addressed in Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-36309">CVE-2020-36309</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2020-11724">CVE-2020-11724</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3618">CVE-2021-3618</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5394-1-webkitgtk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5394-1">USN-5394-1</a>] WebKitGTK vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-22637">CVE-2022-22637</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22629">CVE-2022-22629</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22628">CVE-2022-22628</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22624">CVE-2022-22624</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5392-1-mutt-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5392-1">USN-5392-1</a>] Mutt vulnerabilities</h3>
-<ul>
-<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-1328">CVE-2022-1328</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-32055">CVE-2021-32055</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5395-1-networkd-dispatcher-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5395-1">USN-5395-1</a>] networkd-dispatcher vulnerabilities</h3>
+<h3 id="usn-5395-2-networkd-dispatcher-regression-03-44">[<a href="https://ubuntu.com/security/notices/USN-5395-2">USN-5395-2</a>] networkd-dispatcher regression [03:44]</h3>
 <ul>
 <li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
 <ul>
@@ -274,218 +134,260 @@ Ubuntu 22.04 LTS release.</p>
 <li><a href="https://ubuntu.com/security/CVE-2022-29799">CVE-2022-29799</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-158/">Episode 158</a> - upstream fix contained a small regression where an error
+would be encountered under certain situations</li>
 </ul>
-<h3 id="usn-5396-1-ghostscript-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5396-1">USN-5396-1</a>] Ghostscript vulnerability</h3>
+<h3 id="usn-5354-2-twisted-vulnerability-04-06">[<a href="https://ubuntu.com/security/notices/USN-5354-2">USN-5354-2</a>] Twisted vulnerability [04:06]</h3>
 <ul>
-<li>1 CVEs addressed in Bionic (18.04 LTS)
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Jammy (22.04 LTS)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2019-25059">CVE-2019-25059</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5397-1-curl-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5397-1">USN-5397-1</a>] curl vulnerabilities</h3>
-<ul>
-<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-27776">CVE-2022-27776</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-27775">CVE-2022-27775</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-27774">CVE-2022-27774</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-22576">CVE-2022-22576</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21716">CVE-2022-21716</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-156/">Episode 156</a> - Equivalent update for ESM releases plus latest Ubuntu LTS release</li>
 </ul>
-<h3 id="usn-5398-1-simple-directmedia-layer-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5398-1">USN-5398-1</a>] Simple DirectMedia Layer vulnerability</h3>
+<h3 id="usn-5403-1-sqlite-vulnerability-04-20">[<a href="https://ubuntu.com/security/notices/USN-5403-1">USN-5403-1</a>] SQLite vulnerability [04:20]</h3>
 <ul>
-<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Impish (21.10)
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2021-33657">CVE-2021-33657</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5399-1-libvirt-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5399-1">USN-5399-1</a>] libvirt vulnerabilities</h3>
-<ul>
-<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2021-3631">CVE-2021-3631</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2020-25637">CVE-2020-25637</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-0897">CVE-2022-0897</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-4147">CVE-2021-4147</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3975">CVE-2021-3975</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2021-3667">CVE-2021-3667</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36690">CVE-2021-36690</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li>Crash / possible code execution in CLI client when using a crafted
+query - upstream dispute this as an actual vuln since if can execute
+sqlite cli then can already execute arbitrary commands</li>
 </ul>
-<h3 id="usn-5400-1-mysql-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5400-1">USN-5400-1</a>] MySQL vulnerabilities</h3>
+<h3 id="usn-5405-1-jbig2dec-vulnerabilities-04-40">[<a href="https://ubuntu.com/security/notices/USN-5405-1">USN-5405-1</a>] jbig2dec vulnerabilities [04:40]</h3>
 <ul>
-<li>23 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-21478">CVE-2022-21478</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21462">CVE-2022-21462</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21460">CVE-2022-21460</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21459">CVE-2022-21459</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21457">CVE-2022-21457</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21454">CVE-2022-21454</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21452">CVE-2022-21452</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21451">CVE-2022-21451</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21444">CVE-2022-21444</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21440">CVE-2022-21440</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21438">CVE-2022-21438</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21437">CVE-2022-21437</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21436">CVE-2022-21436</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21435">CVE-2022-21435</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21427">CVE-2022-21427</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21425">CVE-2022-21425</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21423">CVE-2022-21423</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21418">CVE-2022-21418</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21417">CVE-2022-21417</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21415">CVE-2022-21415</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21414">CVE-2022-21414</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21413">CVE-2022-21413</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21412">CVE-2022-21412</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12268">CVE-2020-12268</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9216">CVE-2017-9216</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li>used in ghostscript, mupdf and others for handling JBIG2 files</li>
+<li>NULL ptr dereference -&gt; crash -&gt; DoS</li>
+<li>Heap buffer overflow -&gt; crash / code execution</li>
 </ul>
-<h3 id="usn-5400-2-mysql-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5400-2">USN-5400-2</a>] MySQL vulnerabilities</h3>
+<h3 id="usn-5259-2-cron-vulnerabilities-04-58">[<a href="https://ubuntu.com/security/notices/USN-5259-2">USN-5259-2</a>] Cron vulnerabilities [04:58]</h3>
 <ul>
-<li>6 CVEs addressed in Xenial ESM (16.04 ESM)
+<li>4 CVEs addressed in Bionic (18.04 LTS)
 <ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-21460">CVE-2022-21460</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21454">CVE-2022-21454</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21451">CVE-2022-21451</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21444">CVE-2022-21444</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21427">CVE-2022-21427</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-21417">CVE-2022-21417</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-</ul>
-<h3 id="usn-5390-2-linux-kernel--raspberry-pi--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5390-2">USN-5390-2</a>] Linux kernel (Raspberry Pi) vulnerabilities</h3>
-<ul>
-<li>3 CVEs addressed in Jammy (22.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9706">CVE-2019-9706</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9705">CVE-2019-9705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9704">CVE-2019-9704</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9525">CVE-2017-9525</a> <!-- raw HTML omitted --></li>
 </ul>
 </li>
+<li>DoS via a very large crontab file with many many lines or very long lines</li>
+<li>Ubuntu specific vuln allowing possible privesc from crontab group to root
+<strong>when the crontab package is upgraded</strong> via a symlink attack - so in general
+was a dormant / latent vuln that would only be able to be triggered if a
+sysadmin manually reinstalled cron <strong>or</strong> we released a new update 😁 - so
+fixed now</li>
+</ul>
+<h3 id="usn-5259-3-cron-regression-05-47">[<a href="https://ubuntu.com/security/notices/USN-5259-3">USN-5259-3</a>] Cron regression [05:47]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-9706">CVE-2019-9706</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9705">CVE-2019-9705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9704">CVE-2019-9704</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9525">CVE-2017-9525</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>but unfortunately caused a minor regression where some harmless but
+possibly scary looking error messages would be printed when cron was
+upgraded - fixed with this further update</li>
+</ul>
+<h3 id="usn-5404-1-rsyslog-vulnerability-05-57">[<a href="https://ubuntu.com/security/notices/USN-5404-1">USN-5404-1</a>] Rsyslog vulnerability [05:57]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24903">CVE-2022-24903</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Potential heap buffer overflow in TCP syslog reception - so a malicious
+host which is logging to a centralized syslog server could possibly crash
+or get code execution on the server (as the <code>syslog</code> user only)</li>
+</ul>
+<h3 id="usn-5244-2-dbus-vulnerability-06-18">[<a href="https://ubuntu.com/security/notices/USN-5244-2">USN-5244-2</a>] DBus vulnerability [06:18]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-35512">CVE-2020-35512</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible UAF when running on a system where multiple usernames are mapped
+to the same UID - if policy references these usernames, may free it via
+one username whilst it is still being accessed by the other</li>
+<li>Not really likely to encounter this setup or be able to easily exploit it</li>
+</ul>
+<h3 id="usn-5179-2-busybox-vulnerability-07-03">[<a href="https://ubuntu.com/security/notices/USN-5179-2">USN-5179-2</a>] BusyBox vulnerability [07:03]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-28831">CVE-2021-28831</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-141/">Episode 141</a></li>
+</ul>
+<h3 id="usn-5407-1-cairo-vulnerabilities-07-10">[<a href="https://ubuntu.com/security/notices/USN-5407-1">USN-5407-1</a>] Cairo vulnerabilities [07:10]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-35492">CVE-2020-35492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-6462">CVE-2019-6462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9814">CVE-2017-9814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-9082">CVE-2016-9082</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 OOB reads, stack buffer overflow and infinite loop in handling of
+crafted image / font files</li>
+</ul>
+<h3 id="usn-5408-1-dnsmasq-vulnerability-07-24">[<a href="https://ubuntu.com/security/notices/USN-5408-1">USN-5408-1</a>] Dnsmasq vulnerability [07:24]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0934">CVE-2022-0934</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap-based UAF found by oss-fuzz when handling malicious DHCPv6 requests</li>
+</ul>
+<h3 id="usn-5409-1-libsndfile-vulnerability-07-46">[<a href="https://ubuntu.com/security/notices/USN-5409-1">USN-5409-1</a>] libsndfile vulnerability [07:46]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-4156">CVE-2021-4156</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read in FLAC codec -&gt; crash / possible info leak</li>
+</ul>
+<h3 id="usn-5410-1-nss-vulnerability-07-54">[<a href="https://ubuntu.com/security/notices/USN-5410-1">USN-5410-1</a>] NSS vulnerability [07:54]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25648">CVE-2020-25648</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Mishandled <code>ChangeCipherSpec</code> messages in TLS 1.3 - remote client could
+crash a server by sending multiple of these</li>
+</ul>
+<h3 id="usn-5411-1-firefox-vulnerabilities-08-06">[<a href="https://ubuntu.com/security/notices/USN-5411-1">USN-5411-1</a>] Firefox vulnerabilities [08:06]</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29918">CVE-2022-29918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29917">CVE-2022-29917</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29916">CVE-2022-29916</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29915">CVE-2022-29915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29914">CVE-2022-29914</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29912">CVE-2022-29912</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29911">CVE-2022-29911</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29909">CVE-2022-29909</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>100.0 - usual mix of issues for web browsers/rendering engines (XSS, RCE,
+DoS, bypass permission checks etc)</li>
+</ul>
+<h3 id="usn-5412-1-curl-vulnerabilities-08-24">[<a href="https://ubuntu.com/security/notices/USN-5412-1">USN-5412-1</a>] curl vulnerabilities [08:24]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-27782">CVE-2022-27782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27781">CVE-2022-27781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27780">CVE-2022-27780</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>More curl vulns - seems to be more every 5-10 weeks or so lately -
+fuzzing?
+<ul>
+<li>logic error on connection reuse could reuse an old connection after
+parameters had been changed</li>
+<li>Possible infinite loop when constructing a server&rsquo;s TLS cert chain -&gt;
+DoS</li>
+<li>incorrect handling of %-encoded URL separators - could parse URL
+wrongly and so end up visiting wrong URL or bypassing access checks /
+filters etc</li>
+</ul>
+</li>
+<li>curl is part of <a href="https://hackerone.com/ibb/hacktivity?type=team">hackerone</a> and has so far paid out $17k USD in bounties</li>
+<li>Whilst preparing this week&rsquo;s episode 6 more vulns were announced in curl</li>
+<li>Interesting <a href="https://twitter.com/bagder/status/1524379653464592384">twitter thread</a> from curl maintainer on the ratio of vulns
+which are due to C mistakes vs general programming logic mistakes -
+general mistakes higher so I assume this is used as an argument as to why
+implementing such a ubiquitous piece of software in such an unsafe
+language is &ldquo;ok&rdquo; - can&rsquo;t say I agree</li>
+<li>Also <a href="https://twitter.com/bagder/status/1524497676137598976">compared</a> how long it takes to find vulns from C mistakes vs non-C
+mistakes - non-C mistakes take longer to find, presumably due to lack of
+good tools for finding them (compared to say UBSan, Coverity etc for
+finding C specific mistakes)</li>
 </ul>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-<h3 id="nimbuspwn-01-46">Nimbuspwn [01:46]</h3>
+<h3 id="what-s-new-in-security-in-ubuntu-22-dot-04-lts--part-2--11-35">What&rsquo;s new in security in Ubuntu 22.04 LTS (part 2) [11:35]</h3>
 <ul>
-<li>Nimbuspwn -
-<a href="https://www.microsoft.com/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/">https://www.microsoft.com/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/</a></li>
-<li>At the end of April Microsoft disclosed some vulnerabilities which
-gathered a lot of <a href="https://www.itnews.com.au/news/patch-now-against-linux-nimbuspwn-root-priv-esc-bugs-579295">media</a> <a href="https://www.bleepingcomputer.com/news/security/new-nimbuspwn-linux-vulnerability-gives-hackers-root-privileges/">attention</a>, leading to a lot of outlets seemingly
-claiming most Linux systems were affected and that this was a high
-severity issue</li>
-<li>Describes a number of issues in <code>networkd-dispatcher</code> which could be used
-to get RCE
+<li>In part 1 we covered new security features in the kernel</li>
+<li>This week we look at userspace security improvements
 <ul>
-<li>directory traversal</li>
-<li>symlink race</li>
-<li>TOCTOU permissions check race condition</li>
+<li>OpenSSL 3
+<ul>
+<li>disables a lot of legacy algorithms by default, upstream have a
+<a href="https://www.openssl.org/docs/manmaster/man7/migration_guide.html">migration guide</a> which explains the main changes from 1.1.1 as well
+as how to enable the legacy provider if you still require access to
+them</li>
+<li>Default security level is still 2 but it now disables (D)TLS 1.2
+protocols (and below)</li>
 </ul>
 </li>
-<li>However, all relies on being able to have an arbitrary process run under
-the <code>systemd-network</code> user (since this user is the only one which can bind
-to the right dbus name <code>org.freedesktop.network1</code>)</li>
-<li>Originally they provided some vague mentions of gpgv plugins and epmd
-running under this user.</li>
-<li>gpgv plugins are launched by <code>apt=/=apt-get</code> during package install /
-upgrade so this sounds like a common scenario that would affect most
-users (instead of say epmd which is the erlang port mapper daemon, so
-unless you are running erland applications you would not be affected by
-that)</li>
-<li>Looking again though at these gpg plugins running as the <code>systemd-network</code>
-user - this is definitely not the case for standard Ubuntu - since <code>apt</code> is
-very clear to run them under the <code>_apt</code> user account purposefully to
-restrict their privileges</li>
-<li>After we <a href="https://twitter.com/marcdeslaur/status/1521467237571383296">questioned</a> Microsoft about this, they amended the blog post to
-then just say they were able to detect several instances of other
-processes running under this user in various customer environments but
-then state that some of these were due to customer
-misconfigurations.</li>
-<li>So there is no real evidence here that in general Ubuntu / Linux users
-would be affected as all the original media reporting suggested</li>
-<li>Perhaps these customers were using containers and running processes in
-those where the UID mapped back to the systemd-network user ID on the
-host? This is a common pitfall with containers and something which users
-need to be aware of when deploying containers</li>
-<li>As such, what appeared to be quite a high priority and <a href="https://www.securityweek.com/microsoft-warns-nimbuspwn-security-flaws-haunting-linux">high</a> <a href="https://www.itnews.com.au/news/patch-now-against-linux-nimbuspwn-root-priv-esc-bugs-579295">profile</a>
-<a href="https://www.bleepingcomputer.com/news/security/new-nimbuspwn-linux-vulnerability-gives-hackers-root-privileges/">vulnerability</a> in fact is likely more of a bit of a non-issue - whilst it
-could be argued that these are real issues in <code>networkd-dispatcher</code> since
-they are not able to be exploited in standard configurations they are not
-a real threat to most users</li>
-<li>Interesting to note while the blog post has been
-amended, all the various media articles which cited the original report
-have not been updated and still seem to claim that Ubuntu and other
-distros would be affected by this</li>
-<li>Also interesting to note, Microsoft worked directly with the upstream
-maintainer of <code>networkd-dispatcher</code> but didn&rsquo;t involve any downstream
-distros - as suggested by <a href="https://twitter.com/JulianKlode/status/1521525589529743360">Julian Andres Klode</a> from the Ubuntu Foundations
-team (and upstream apt maintainer) - perhaps Microsoft should have
-pre-disclosed this issue to the <a href="https://oss-security.openwall.org/wiki/mailing-lists/distros">linux-distros mailing list</a> - if they had
-done so this likely would have been assessed and clarified earlier so
-that Microsoft could have more properly understood the extent of the
-vulnerabilities which they discovered the internet could have avoided
-another brief panic scenario</li>
-</ul>
-<h3 id="what-s-new-in-ubuntu-22-dot-04-lts--part-1--08-05">What&rsquo;s new in Ubuntu 22.04 LTS (part 1) [08:05]</h3>
+<li>openssh 8.9
 <ul>
-<li>Preview of the first half of blog post which will be published in the
-coming weeks on the various security features which are included in
-Ubuntu 22.04 LTS. This week we will look at enhancements provided by the
-Linux kernel whilst next week we will look at features provided by other
-parts of the distribution.</li>
-<li>22.04 LTS latest long term support release - 5 years of standard support
-plus 5 years of ESM - total 10 years of support via Ubuntu Advantage
-(free for personal use)</li>
-<li>Great foundation to use then to deploy services / applications etc and
-know they will be supported for a long time to come</li>
-<li>Has been 2 years since the last LTS so there are lots of features to
-cover - I will only touch on some of them - if you want a more deep dive,
-check out the <a href="https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-21-04">blog</a> <a href="https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-21-10">posts</a> we published for the interim releases</li>
-<li>Optimised kernels for different platforms
-<ul>
-<li>OEM desktops - 5.17</li>
-<li>Desktop &amp; server - 5.15</li>
-<li>Desktop will get HWE stack by default so in future will get kernel
-version upgrades bringing new features etc whilst server will stick
-with GA kernel for stability</li>
-<li>Clouds have their own optimised kernels</li>
+<li>Lots of changes since 8.2 in 20.04 LTS, but in particular has
+improved handling of FIDO/U2F hardware tokens - openssh in 20.04 LTS
+first introduced support for FIDO/U2F tokens as 2FA for remote SSH
+logins - basically would generate a new openssh key where the private
+half of the key is only accessible with the FIDO/U2F token - this new
+release brings support for using a PIN with the token <strong>and</strong> much better
+improved UX so that users don&rsquo;t have to keep getting prompted for
+their PIN each time. Plus supports verifying WebAuthn signatures</li>
 </ul>
 </li>
-<li>Hardware specific enhancements
+<li>nftables as default firewall backend
 <ul>
-<li>SGX on Intel for secure enclaves</li>
-<li>Memory tagging on ARM64 to protect against memory corruption attacks</li>
-<li>AMD SEV for KVM to protect guest VM registers from the host</li>
+<li>firewalling on Linux has 2 components - kernel-space mechanism and
+userspace tooling to control that</li>
+<li>traditionally kernel supported iptables (aka xtables - ip,ip6,arp,eb -tables)</li>
+<li>nftables as introduced into the kernel in 3.13 as a new mechanism to
+implement network packet classification and handling - aka firewalling
+etc</li>
+<li>kernel has 2 mechanisms then - xtables and nftables</li>
+<li>userspace then has 2 primary tools for handling these - iptables for
+xtables and nftables (nft) for nftables</li>
+<li>iptables userspace added a nft backend so existing iptables rules and
+users would be switched to that automatically - so can still use
+traditional <code>iptables</code> command to configure firewall rules etc but they
+will then be loaded into the kernel&rsquo;s <code>nft</code> backend rather than <code>xtables</code></li>
+<li>also has a separate userspace command <code>nft</code> to directly configure <code>nft</code>
+backend which supports more advanced rule types</li>
+<li>Need to be careful that all tools which configure firewall rules use
+the same backend in the kernel otherwise they may conflict and get
+weird results</li>
 </ul>
 </li>
-<li>Generic kernel improvements
+<li>gcc 11 with improved static analysis via <code>-fanalyzer</code>
 <ul>
-<li>Core scheduling to provide a means to use SMT in the face of various
-hardware microarchitectural side-channel attacks like L1TF and the like
-(this was only partially mitigated in SW/microcode and could still
-potentially affect VMs running across SMT siblings) - so in past had to
-disable SMT to be fully certain were protected - now can use core
-scheduling to specify to the kernel which processes should not be
-scheduled on sibling HTs to avoid these sorts of attack</li>
-<li>Kernel stack offset randomisation across system calls</li>
-<li>BPF improvements - one of the most popular subsystems in the kernel,
-used not just for tracing and packet filtering but also now BPF LSM and
-more use-cases. However, has also caused a number of security vulns as
-covered previously - now disabled unprivileged BPF by default. Also
-work has been done to try and support signed BPF programs to ensure
-only trusted code is executed as well.</li>
-<li>Landlock LSM for application-level sandboxing - like seccomp, Landlock
-allows a process to specify it&rsquo;s own policy so can sandbox itself -
-rather than say traditional MAC systems of AppArmor/SELinux where the
-system admin configures the policy
-<ul>
-<li>LSM stacking allows Landlock to be used in conjunction with AppArmor
-for a more defense-in-depth approach</li>
+<li>Double free, UAF, free of non-heap memory, malloc leak, NULL ptr
+deref, unsafe calls within signal handlers and more</li>
 </ul>
 </li>
+<li>bash 5.1 - <code>$SRANDOM</code> vs <code>$RANDOM</code>
+<ul>
+<li>RANDOM is a psuedo-random number which comes internally from bash and
+hence is deterministic based on the original seed value</li>
+<li>SRANDOM is derived from the kernel&rsquo;s <code>/dev/urandom</code> and hence is not
+reproducible / deterministic - ie. is actually more truly random</li>
+</ul>
+</li>
+<li><a href="https://ubuntu.com/blog/private-home-directories-for-ubuntu-21-04">Private home directories by default</a></li>
 </ul>
 </li>
 </ul>
@@ -498,7 +400,7 @@ for a more defense-in-depth approach</li>
 <li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
-          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E158.mp3" length="14501621" type="audio/mpeg" /><itunes:duration>1101</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E159.mp3" length="15367285" type="audio/mpeg" /><itunes:duration>1157</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 157</title>
@@ -21594,6 +21496,466 @@ on Rust in Ubuntu to win a copy</li>
 </ul>
 ]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
           <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E074.mp3" length="44084780" type="audio/mpeg" /><itunes:duration>45:55</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
+          <title>Episode 158</title>
+          <link>https://ubuntusecuritypodcast.org/episode-158/</link>
+          <pubDate>Fri, 06 May 2022 16:46:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>836608c25bd99f0c47f32c21cd7cd01fe44f01f7c56caab27fc7af02df27b3be53c185fb29188c7cf8612cde2df601a1520449a8e60fc6c576306542e78a9642</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 158</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
+  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
+  a 2 part series looking at some of the security features in the latest
+  Ubuntu 22.04 LTS...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
+  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
+  a 2 part series looking at some of the security features in the latest
+  Ubuntu 22.04 LTS release.
+  </itunes:summary>
+        <description>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
+  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
+  a 2 part series looking at some of the security features in the latest
+  Ubuntu 22.04 LTS release.
+  </description>
+        <googleplay:description>  Microsoft&#39;s Nimbuspwn sets the Linux security media ablaze but where
+  there&#39;s smoke there&#39;s not always fire, plus we bring you the first part of
+  a 2 part series looking at some of the security features in the latest
+  Ubuntu 22.04 LTS release.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Microsoft&rsquo;s Nimbuspwn sets the Linux security media ablaze but where
+there&rsquo;s smoke there&rsquo;s not always fire, plus we bring you the first part of
+a 2 part series looking at some of the security features in the latest
+Ubuntu 22.04 LTS release.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>92 unique CVEs addressed</p>
+<h3 id="usn-5381-1-linux-kernel--oem--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5381-1">USN-5381-1</a>] Linux kernel (OEM) vulnerabilities</h3>
+<ul>
+<li>11 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27223">CVE-2022-27223</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26966">CVE-2022-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24958">CVE-2022-24958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1048">CVE-2022-1048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1011">CVE-2022-1011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0854">CVE-2022-0854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0494">CVE-2022-0494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5383-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5383-1">USN-5383-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26878">CVE-2022-26878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44879">CVE-2021-44879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43976">CVE-2021-43976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5384-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5384-1">USN-5384-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5385-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5385-1">USN-5385-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24959">CVE-2022-24959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24448">CVE-2022-24448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-43975">CVE-2021-43975</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5387-1-barbican-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5387-1">USN-5387-1</a>] Barbican vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23452">CVE-2022-23452</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23451">CVE-2022-23451</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5376-2-git-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5376-2">USN-5376-2</a>] Git vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24765">CVE-2022-24765</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5388-1-openjdk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5388-1">USN-5388-1</a>] OpenJDK vulnerabilities</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21496">CVE-2022-21496</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21476">CVE-2022-21476</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21443">CVE-2022-21443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21434">CVE-2022-21434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21426">CVE-2022-21426</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5388-2-openjdk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5388-2">USN-5388-2</a>] OpenJDK vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21496">CVE-2022-21496</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21476">CVE-2022-21476</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21443">CVE-2022-21443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21434">CVE-2022-21434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21426">CVE-2022-21426</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21449">CVE-2022-21449</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5389-1-libcroco-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5389-1">USN-5389-1</a>] Libcroco vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-12825">CVE-2020-12825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-8871">CVE-2017-8871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-8834">CVE-2017-8834</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-7960">CVE-2017-7960</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5390-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5390-1">USN-5390-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5376-3-git-regression">[<a href="https://ubuntu.com/security/notices/USN-5376-3">USN-5376-3</a>] Git regression</h3>
+<ul>
+<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)</li>
+</ul>
+<h3 id="usn-5391-1-libsepol-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5391-1">USN-5391-1</a>] libsepol vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-36087">CVE-2021-36087</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36086">CVE-2021-36086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36085">CVE-2021-36085</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36084">CVE-2021-36084</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5366-2-fribidi-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5366-2">USN-5366-2</a>] FriBidi vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-25310">CVE-2022-25310</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25309">CVE-2022-25309</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25308">CVE-2022-25308</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5393-1-thunderbird-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5393-1">USN-5393-1</a>] Thunderbird vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1197">CVE-2022-1197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28289">CVE-2022-28289</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28286">CVE-2022-28286</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28285">CVE-2022-28285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28282">CVE-2022-28282</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28281">CVE-2022-28281</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1196">CVE-2022-1196</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1097">CVE-2022-1097</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5371-2-nginx-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5371-2">USN-5371-2</a>] nginx vulnerability</h3>
+<ul>
+<li>3 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-36309">CVE-2020-36309</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11724">CVE-2020-11724</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3618">CVE-2021-3618</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5394-1-webkitgtk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5394-1">USN-5394-1</a>] WebKitGTK vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22637">CVE-2022-22637</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22629">CVE-2022-22629</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22628">CVE-2022-22628</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22624">CVE-2022-22624</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5392-1-mutt-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5392-1">USN-5392-1</a>] Mutt vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1328">CVE-2022-1328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32055">CVE-2021-32055</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5395-1-networkd-dispatcher-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5395-1">USN-5395-1</a>] networkd-dispatcher vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29800">CVE-2022-29800</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29799">CVE-2022-29799</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5396-1-ghostscript-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5396-1">USN-5396-1</a>] Ghostscript vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-25059">CVE-2019-25059</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5397-1-curl-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5397-1">USN-5397-1</a>] curl vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-27776">CVE-2022-27776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27775">CVE-2022-27775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27774">CVE-2022-27774</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22576">CVE-2022-22576</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5398-1-simple-directmedia-layer-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5398-1">USN-5398-1</a>] Simple DirectMedia Layer vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33657">CVE-2021-33657</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5399-1-libvirt-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5399-1">USN-5399-1</a>] libvirt vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3631">CVE-2021-3631</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25637">CVE-2020-25637</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0897">CVE-2022-0897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4147">CVE-2021-4147</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3975">CVE-2021-3975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3667">CVE-2021-3667</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5400-1-mysql-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5400-1">USN-5400-1</a>] MySQL vulnerabilities</h3>
+<ul>
+<li>23 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21478">CVE-2022-21478</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21462">CVE-2022-21462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21460">CVE-2022-21460</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21459">CVE-2022-21459</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21457">CVE-2022-21457</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21454">CVE-2022-21454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21452">CVE-2022-21452</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21451">CVE-2022-21451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21444">CVE-2022-21444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21440">CVE-2022-21440</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21438">CVE-2022-21438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21437">CVE-2022-21437</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21436">CVE-2022-21436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21435">CVE-2022-21435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21427">CVE-2022-21427</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21425">CVE-2022-21425</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21423">CVE-2022-21423</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21418">CVE-2022-21418</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21417">CVE-2022-21417</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21415">CVE-2022-21415</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21414">CVE-2022-21414</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21413">CVE-2022-21413</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21412">CVE-2022-21412</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5400-2-mysql-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5400-2">USN-5400-2</a>] MySQL vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21460">CVE-2022-21460</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21454">CVE-2022-21454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21451">CVE-2022-21451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21444">CVE-2022-21444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21427">CVE-2022-21427</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21417">CVE-2022-21417</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5390-2-linux-kernel--raspberry-pi--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5390-2">USN-5390-2</a>] Linux kernel (Raspberry Pi) vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26490">CVE-2022-26490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1015">CVE-2022-1015</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="nimbuspwn-01-46">Nimbuspwn [01:46]</h3>
+<ul>
+<li>Nimbuspwn -
+<a href="https://www.microsoft.com/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/">https://www.microsoft.com/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/</a></li>
+<li>At the end of April Microsoft disclosed some vulnerabilities which
+gathered a lot of <a href="https://www.itnews.com.au/news/patch-now-against-linux-nimbuspwn-root-priv-esc-bugs-579295">media</a> <a href="https://www.bleepingcomputer.com/news/security/new-nimbuspwn-linux-vulnerability-gives-hackers-root-privileges/">attention</a>, leading to a lot of outlets seemingly
+claiming most Linux systems were affected and that this was a high
+severity issue</li>
+<li>Describes a number of issues in <code>networkd-dispatcher</code> which could be used
+to get RCE
+<ul>
+<li>directory traversal</li>
+<li>symlink race</li>
+<li>TOCTOU permissions check race condition</li>
+</ul>
+</li>
+<li>However, all relies on being able to have an arbitrary process run under
+the <code>systemd-network</code> user (since this user is the only one which can bind
+to the right dbus name <code>org.freedesktop.network1</code>)</li>
+<li>Originally they provided some vague mentions of gpgv plugins and epmd
+running under this user.</li>
+<li>gpgv plugins are launched by <code>apt=/=apt-get</code> during package install /
+upgrade so this sounds like a common scenario that would affect most
+users (instead of say epmd which is the erlang port mapper daemon, so
+unless you are running erland applications you would not be affected by
+that)</li>
+<li>Looking again though at these gpg plugins running as the <code>systemd-network</code>
+user - this is definitely not the case for standard Ubuntu - since <code>apt</code> is
+very clear to run them under the <code>_apt</code> user account purposefully to
+restrict their privileges</li>
+<li>After we <a href="https://twitter.com/marcdeslaur/status/1521467237571383296">questioned</a> Microsoft about this, they amended the blog post to
+then just say they were able to detect several instances of other
+processes running under this user in various customer environments but
+then state that some of these were due to customer
+misconfigurations.</li>
+<li>So there is no real evidence here that in general Ubuntu / Linux users
+would be affected as all the original media reporting suggested</li>
+<li>Perhaps these customers were using containers and running processes in
+those where the UID mapped back to the systemd-network user ID on the
+host? This is a common pitfall with containers and something which users
+need to be aware of when deploying containers</li>
+<li>As such, what appeared to be quite a high priority and <a href="https://www.securityweek.com/microsoft-warns-nimbuspwn-security-flaws-haunting-linux">high</a> <a href="https://www.itnews.com.au/news/patch-now-against-linux-nimbuspwn-root-priv-esc-bugs-579295">profile</a>
+<a href="https://www.bleepingcomputer.com/news/security/new-nimbuspwn-linux-vulnerability-gives-hackers-root-privileges/">vulnerability</a> in fact is likely more of a bit of a non-issue - whilst it
+could be argued that these are real issues in <code>networkd-dispatcher</code> since
+they are not able to be exploited in standard configurations they are not
+a real threat to most users</li>
+<li>Interesting to note while the blog post has been
+amended, all the various media articles which cited the original report
+have not been updated and still seem to claim that Ubuntu and other
+distros would be affected by this</li>
+<li>Also interesting to note, Microsoft worked directly with the upstream
+maintainer of <code>networkd-dispatcher</code> but didn&rsquo;t involve any downstream
+distros - as suggested by <a href="https://twitter.com/JulianKlode/status/1521525589529743360">Julian Andres Klode</a> from the Ubuntu Foundations
+team (and upstream apt maintainer) - perhaps Microsoft should have
+pre-disclosed this issue to the <a href="https://oss-security.openwall.org/wiki/mailing-lists/distros">linux-distros mailing list</a> - if they had
+done so this likely would have been assessed and clarified earlier so
+that Microsoft could have more properly understood the extent of the
+vulnerabilities which they discovered the internet could have avoided
+another brief panic scenario</li>
+</ul>
+<h3 id="what-s-new-in-security-in-ubuntu-22-dot-04-lts--part-1--08-05">What&rsquo;s new in security in Ubuntu 22.04 LTS (part 1) [08:05]</h3>
+<ul>
+<li>Preview of the first half of blog post which will be published in the
+coming weeks on the various security features which are included in
+Ubuntu 22.04 LTS. This week we will look at enhancements provided by the
+Linux kernel whilst next week we will look at features provided by other
+parts of the distribution.</li>
+<li>22.04 LTS latest long term support release - 5 years of standard support
+plus 5 years of ESM - total 10 years of support via Ubuntu Advantage
+(free for personal use)</li>
+<li>Great foundation to use then to deploy services / applications etc and
+know they will be supported for a long time to come</li>
+<li>Has been 2 years since the last LTS so there are lots of features to
+cover - I will only touch on some of them - if you want a more deep dive,
+check out the <a href="https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-21-04">blog</a> <a href="https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-21-10">posts</a> we published for the interim releases</li>
+<li>Optimised kernels for different platforms
+<ul>
+<li>OEM desktops - 5.17</li>
+<li>Desktop &amp; server - 5.15</li>
+<li>Desktop will get HWE stack by default so in future will get kernel
+version upgrades bringing new features etc whilst server will stick
+with GA kernel for stability</li>
+<li>Clouds have their own optimised kernels</li>
+</ul>
+</li>
+<li>Hardware specific enhancements
+<ul>
+<li>SGX on Intel for secure enclaves</li>
+<li>Memory tagging on ARM64 to protect against memory corruption attacks</li>
+<li>AMD SEV for KVM to protect guest VM registers from the host</li>
+</ul>
+</li>
+<li>Generic kernel improvements
+<ul>
+<li>Core scheduling to provide a means to use SMT in the face of various
+hardware microarchitectural side-channel attacks like L1TF and the like
+(this was only partially mitigated in SW/microcode and could still
+potentially affect VMs running across SMT siblings) - so in past had to
+disable SMT to be fully certain were protected - now can use core
+scheduling to specify to the kernel which processes should not be
+scheduled on sibling HTs to avoid these sorts of attack</li>
+<li>Kernel stack offset randomisation across system calls</li>
+<li>BPF improvements - one of the most popular subsystems in the kernel,
+used not just for tracing and packet filtering but also now BPF LSM and
+more use-cases. However, has also caused a number of security vulns as
+covered previously - now disabled unprivileged BPF by default. Also
+work has been done to try and support signed BPF programs to ensure
+only trusted code is executed as well.</li>
+<li>Landlock LSM for application-level sandboxing - like seccomp, Landlock
+allows a process to specify it&rsquo;s own policy so can sandbox itself -
+rather than say traditional MAC systems of AppArmor/SELinux where the
+system admin configures the policy
+<ul>
+<li>LSM stacking allows Landlock to be used in conjunction with AppArmor
+for a more defense-in-depth approach</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E158.mp3" length="14501621" type="audio/mpeg" /><itunes:duration>1101</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 152</title>
