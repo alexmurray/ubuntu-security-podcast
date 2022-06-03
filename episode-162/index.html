@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+  InfluxDB and more, plus we take a quick look at some open positions on the
+  team - come join us!
+  ">
+
+<meta name="generator" content="Hugo 0.96.0" />
+
+<meta property="og:title" content="Episode 162" />
+<meta name="twitter:title" content="Episode 162"/>
+<meta itemprop="name" content="Episode 162">
+<meta property="article:published_time" content="2022-06-03T16:50:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-06-03T16:51:13&#43;09:30" />
+<meta property="og:updated_time" content="2022-06-03T16:51:13&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+  InfluxDB and more, plus we take a quick look at some open positions on the
+  team - come join us!
+  " />
+    <meta name="twitter:description" content="  This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+  InfluxDB and more, plus we take a quick look at some open positions on the
+  team - come join us!
+  " />
+    <meta itemprop="description" content="  This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+  InfluxDB and more, plus we take a quick look at some open positions on the
+  team - come join us!
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-162/" />
+
+
+
+
+<title>Episode 162</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-162/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 162</h1><small>Posted on Friday, Jun 3, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+InfluxDB and more, plus we take a quick look at some open positions on the
+team - come join us!
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E162.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we cover security updates for dpkg, logrotate, GnuPG, CUPS,
+InfluxDB and more, plus we take a quick look at some open positions on the
+team - come join us!</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>31 unique CVEs addressed</p>
+<h3 id="usn-5446-1-usn-5446-2-dpkg-vulnerability-00-42">[<a href="https://ubuntu.com/security/notices/USN-5446-1">USN-5446-1</a>, <a href="https://ubuntu.com/security/notices/USN-5446-2">USN-5446-2</a>] dpkg vulnerability [00:42]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1664">CVE-2022-1664</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Directory traversal vulnerability when extracting untrusted <strong>source</strong> packages
+<ul>
+<li>debian source packages consist of two tarballs - orig and debian</li>
+<li>orig is unpacked and then debian in unpacked on top of that - if orig
+is crafted to contain a symlink which pointed to a file outside of the
+source code, then when unpacking debian it will follow that symlink and
+hence would overwrite arbitrary files outside the source directory</li>
+<li>Only really a problem for debian/ubuntu developers</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5447-1-logrotate-vulnerability-02-58">[<a href="https://ubuntu.com/security/notices/USN-5447-1">USN-5447-1</a>] logrotate vulnerability [02:58]</h3>
+<ul>
+<li>1 CVEs addressed in Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1348">CVE-2022-1348</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>logrotate creates a &lsquo;state&rsquo; file to avoid parallel executions of itself -
+each instance locks this file as a mutex mechanism</li>
+<li>if this doesn&rsquo;t exist, it gets created - <strong>but</strong> is created world readable -
+which allows unprivileged users to take the lock on this file</li>
+<li>as such the real logrotate will fail to run since it can&rsquo;t get the lock
+-&gt; DoS</li>
+</ul>
+<h3 id="usn-5402-2-openssl-vulnerabilities-04-13">[<a href="https://ubuntu.com/security/notices/USN-5402-2">USN-5402-2</a>] OpenSSL vulnerabilities [04:13]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1473">CVE-2022-1473</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1292">CVE-2022-1292</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-159/">Episode 159</a></li>
+</ul>
+<h3 id="usn-5448-1-ncurses-vulnerabilities-04-21">[<a href="https://ubuntu.com/security/notices/USN-5448-1">USN-5448-1</a>] ncurses vulnerabilities [04:21]</h3>
+<ul>
+<li>11 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-13728">CVE-2017-13728</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-11113">CVE-2017-11113</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13734">CVE-2017-13734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13733">CVE-2017-13733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13732">CVE-2017-13732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13731">CVE-2017-13731</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13730">CVE-2017-13730</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-13729">CVE-2017-13729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-11112">CVE-2017-11112</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-10685">CVE-2017-10685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-10684">CVE-2017-10684</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Crafted inputs could cause ncurses to crash - most of these were found
+via fuzzing and are stack buffer overflows - these are generally
+mitigated via stack-protector, others are NULL ptr deref, but again same
+outcome (crash -&gt; DoS)</li>
+<li>Possible infinite loop as well -&gt; cpu based DoS</li>
+</ul>
+<h3 id="usn-5449-1-libxv-vulnerability-04-58">[<a href="https://ubuntu.com/security/notices/USN-5449-1">USN-5449-1</a>] libXv vulnerability [04:58]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2016-5407">CVE-2016-5407</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Remove X server could trigger OOB read in the X client via crafted
+response -&gt; crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-5431-1-gnupg-vulnerability-04-24">[<a href="https://ubuntu.com/security/notices/USN-5431-1">USN-5431-1</a>] GnuPG vulnerability [04:24]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-13050">CVE-2019-13050</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Weakness in PGP/SKS keyserver design - if a key/certificate has many
+signatures, GnuPG will take an inordinate amount of time to process these
+when downloading the key from the keyserver -&gt; DoS
+<ul>
+<li>Certificate spamming attack - anyone can sign someone else&rsquo;s cert
+thereby attaching another signature to it on the SKS keyserver network</li>
+<li>The OpenPGP spec doesn&rsquo;t limit the number of signatures (but SKS
+keyserver network does - 150k)</li>
+<li>So anyone can poison someone else&rsquo;s cert by attaching a large number of
+signatures to it</li>
+<li>GnuPG would download <strong>all</strong> of these signatures when importing a key <strong>and</strong>
+then proceed to validate them all
+<ul>
+<li>Also would do this when say validating a signature from that poisoned
+cert</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fixed to not import key signatures by default anymore and to then
+fallback to only import self-signatures on large keyblocks</li>
+</ul>
+<h3 id="usn-5452-1-ntfs-3g-vulnerability-07-55">[<a href="https://ubuntu.com/security/notices/USN-5452-1">USN-5452-1</a>] NTFS-3G vulnerability [07:55]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-46790">CVE-2021-46790</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><code>ntfsck</code> tool failed to perform proper bounds checking on filesystem
+metadata - if could trick a user into running it on an untrusted
+filesystem image could then possibly get code execution
+<ul>
+<li>Upstream have deprecated this tool and it is only present in the
+<code>ntfs-3g-dev</code> package which is not installed by default</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5453-1-freetype-vulnerability-08-38">[<a href="https://ubuntu.com/security/notices/USN-5453-1">USN-5453-1</a>] FreeType vulnerability [08:38]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-27406">CVE-2022-27406</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB read when processing a crafted font file -&gt; DoS</li>
+</ul>
+<h3 id="usn-5454-1-usn-5454-2-cups-vulnerabilities-08-50">[<a href="https://ubuntu.com/security/notices/USN-5454-1">USN-5454-1</a>, <a href="https://ubuntu.com/security/notices/USN-5454-2">USN-5454-2</a>] CUPS vulnerabilities [08:50]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-10001">CVE-2020-10001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-8842">CVE-2019-8842</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26691">CVE-2022-26691</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Upstream Apple advisory describes this as:
+<ul>
+<li>&ldquo;Logic issue addressed with improved state management&hellip; An application
+may be able to gain elevated privileges&rdquo;</li>
+</ul>
+</li>
+<li>Looks like it was discovered by <a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2022/MNDT-2022-0026/MNDT-2022-0026.md">Mandiant</a>
+<ul>
+<li>CUPS provides the ability to authenticate via Basic Web Authentication
+or through a 32-byte randomly generated token created at runtime</li>
+<li>Comparison function would only compare the supplied token value against
+the real one based on the length of the shortest input - so if supplied
+an empty string then would compare 0 bytes of the two and return
+success!</li>
+</ul>
+</li>
+<li>Other two issues were memory handling issues in IPP printing - could
+submit a print job which would cause an OOB read in CUPS -&gt; crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-5451-1-influxdb-vulnerability-10-39">[<a href="https://ubuntu.com/security/notices/USN-5451-1">USN-5451-1</a>] InfluxDB vulnerability [10:39]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-20933">CVE-2019-20933</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similar authentication bug in InfluxDB - could bypass authentication by
+supplying a JWT token with an empty SharedSecret</li>
+</ul>
+<h3 id="usn-5442-2-linux-kernel-vulnerabilities-11-06">[<a href="https://ubuntu.com/security/notices/USN-5442-2">USN-5442-2</a>] Linux kernel vulnerabilities [11:06]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30594">CVE-2022-30594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1116">CVE-2022-1116</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29581">CVE-2022-29581</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - GCP/GKE/IBM/Oracle/Raspi</li>
+<li>Bing-Jhong Billy Jheng found integer overflow in <code>io_uring</code> - an
+unprivileged user can spam requests which would eventually overflow
+counter and then could be used to trigger an OOB write -&gt; controlled
+memory corruption -&gt; privesc
+<ul>
+<li>Not the first bug in <code>io_uring</code> found by this researcher -
+<a href="https://seclists.org/oss-sec/2021/q2/127">https://seclists.org/oss-sec/2021/q2/127</a></li>
+</ul>
+</li>
+<li>Similarly, Jann Horn (GPZ) found kernel didn&rsquo;t properly check privileges
+of a process when allowing it to set a flag which would then disable
+seccomp filters on another process or itself
+<ul>
+<li>Could then allow an unprivileged process to turn of seccomp for itself
+/ other processes and allow them to bypass intended access restrictions</li>
+</ul>
+</li>
+<li>Regular kernel security bug - ref count issue in network queueing
+subsystem -&gt; UAF - able to be triggered by a local attacker -&gt; crash /
+code execution</li>
+</ul>
+<h3 id="usn-5443-2-linux-kernel-vulnerabilities-12-47">[<a href="https://ubuntu.com/security/notices/USN-5443-2">USN-5443-2</a>] Linux kernel vulnerabilities [12:47]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30594">CVE-2022-30594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29581">CVE-2022-29581</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.13 Oracle/GCP</li>
+</ul>
+<h3 id="usn-5457-1-webkitgtk-vulnerabilities-12-58">[<a href="https://ubuntu.com/security/notices/USN-5457-1">USN-5457-1</a>] WebKitGTK vulnerabilities [12:58]</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26719">CVE-2022-26719</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26717">CVE-2022-26717</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26716">CVE-2022-26716</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26709">CVE-2022-26709</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26700">CVE-2022-26700</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest webkit point release - usual mix of issues fixed - XSS, DoS, RCE
+etc</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="hiring">Hiring</h3>
+<h4 id="security-engineer-ubuntu-13-25">Security Engineer - Ubuntu [13:25]</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a></li>
+</ul>
+<h4 id="security-certifications-product-manager-cis-fips-fedramp-and-more-14-24">Security Certifications Product Manager - CIS, FIPS, FedRAMP and more [14:24]</h4>
+<ul>
+<li><a href="https://canonical.com/careers/3781589/security-certifications-product-manager-cis-fips-fedramp-and-more-remote">https://canonical.com/careers/3781589/security-certifications-product-manager-cis-fips-fedramp-and-more-remote</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-161/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-162\/",
+        text: "Episode 162"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
