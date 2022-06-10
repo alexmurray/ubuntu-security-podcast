@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we dig into some of the details of another recent Linux malware
+  sample called Symbiote, plus we cover security updates for the Linux
+  kernel, vim, FreeRDP, NTFS-3G and more.
+  ">
+
+<meta name="generator" content="Hugo 0.96.0" />
+
+<meta property="og:title" content="Episode 163" />
+<meta name="twitter:title" content="Episode 163"/>
+<meta itemprop="name" content="Episode 163">
+<meta property="article:published_time" content="2022-06-10T15:40:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-06-10T15:41:28&#43;09:30" />
+<meta property="og:updated_time" content="2022-06-10T15:41:28&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we dig into some of the details of another recent Linux malware
+  sample called Symbiote, plus we cover security updates for the Linux
+  kernel, vim, FreeRDP, NTFS-3G and more.
+  " />
+    <meta name="twitter:description" content="  This week we dig into some of the details of another recent Linux malware
+  sample called Symbiote, plus we cover security updates for the Linux
+  kernel, vim, FreeRDP, NTFS-3G and more.
+  " />
+    <meta itemprop="description" content="  This week we dig into some of the details of another recent Linux malware
+  sample called Symbiote, plus we cover security updates for the Linux
+  kernel, vim, FreeRDP, NTFS-3G and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-163/" />
+
+
+
+
+<title>Episode 163</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-163/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 163</h1><small>Posted on Friday, Jun 10, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we dig into some of the details of another recent Linux malware
+sample called Symbiote, plus we cover security updates for the Linux
+kernel, vim, FreeRDP, NTFS-3G and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E163.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we dig into some of the details of another recent Linux malware
+sample called Symbiote, plus we cover security updates for the Linux
+kernel, vim, FreeRDP, NTFS-3G and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>82 unique CVEs addressed</p>
+<h3 id="usn-5456-1-imagemagick-vulnerability-00-36">[<a href="https://ubuntu.com/security/notices/USN-5456-1">USN-5456-1</a>] ImageMagick vulnerability [00:36]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28463">CVE-2022-28463</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap UAF found by oss-fuzz</li>
+</ul>
+<h3 id="lsn-0086-1-linux-kernel-vulnerability-00-51">[<a href="https://ubuntu.com/security/notices/LSN-0086-1">LSN-0086-1</a>] Linux kernel vulnerability [00:51]</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30594">CVE-2022-30594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29581">CVE-2022-29581</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1116">CVE-2022-1116</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1055">CVE-2022-1055</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0492">CVE-2022-0492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39713">CVE-2021-39713</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various recent local privesc vulns:
+<ul>
+<li>cgroups v1 <code>release_agent</code></li>
+<li>UAF in network scheduling subsystem</li>
+<li>UAF in network traffic control subsystem</li>
+<li>integer overflow in <code>io_uring</code></li>
+<li>seccomp restrictions bypass</li>
+<li>UAF in network queuing and scheduling subsystem</li>
+</ul>
+</li>
+<li>Secure boot bypass through <code>kgdb</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>canonical-livepatch status
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Kernel type</th>
+<th>22.04</th>
+<th>20.04</th>
+<th>18.04</th>
+<th>16.04</th>
+<th>14.04</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aws</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>aws-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>aws-hwe</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure-4.15</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp</td>
+<td>86.4</td>
+<td>86.3</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp-4.15</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-4.15</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-4.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+</tr>
+<tr>
+<td>generic-5.4</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke</td>
+<td>86.4</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke-4.15</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gke-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gkeop</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gkeop-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm</td>
+<td>86.4</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>86.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency</td>
+<td>86.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-4.15</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-4.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+</tr>
+<tr>
+<td>lowlatency-5.4</td>
+<td>—</td>
+<td>86.3</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>oem</td>
+<td>—</td>
+<td>—</td>
+<td>86.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usn-5465-1-linux-kernel-vulnerabilities-02-02">[<a href="https://ubuntu.com/security/notices/USN-5465-1">USN-5465-1</a>] Linux kernel vulnerabilities [02:02]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30594">CVE-2022-30594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>secure boot bypass via kgdb</li>
+<li>UAF in netfliter -&gt; privesc</li>
+<li>seccomp restrictions bypass</li>
+</ul>
+<h3 id="usn-5466-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5466-1">USN-5466-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28390">CVE-2022-28390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1419">CVE-2022-1419</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4149">CVE-2021-4149</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3772">CVE-2021-3772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>secure boot bypass, netfilter UAF plus btrfs deadlock, infoleak in
+netfilter + virtual graphics manager, double free in 802.2 LLC driver and
+EMS CAN/USB drivers</li>
+</ul>
+<h3 id="usn-5467-1-linux-kernel-vulnerabilities-02-29">[<a href="https://ubuntu.com/security/notices/USN-5467-1">USN-5467-1</a>] Linux kernel vulnerabilities [02:29]</h3>
+<ul>
+<li>21 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28390">CVE-2022-28390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28389">CVE-2022-28389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26966">CVE-2022-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24958">CVE-2022-24958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23042">CVE-2022-23042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23041">CVE-2022-23041</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23040">CVE-2022-23040</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23039">CVE-2022-23039</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23038">CVE-2022-23038</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23037">CVE-2022-23037</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23036">CVE-2022-23036</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1516">CVE-2022-1516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1353">CVE-2022-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1198">CVE-2022-1198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1158">CVE-2022-1158</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1011">CVE-2022-1011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3772">CVE-2021-3772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Most of the above plus privesc via mishandling of permission checks when
+migrating processes across cgroups, KVM page table handling -&gt; host crash
+(DoS), UAF in USB-Gadget, Microchip CAN BUS Analyzer, 6pack protocol
+driver and more</li>
+</ul>
+<h3 id="usn-5468-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5468-1">USN-5468-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28390">CVE-2022-28390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24958">CVE-2022-24958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1972">CVE-2022-1972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1158">CVE-2022-1158</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Subset of the above</li>
+</ul>
+<h3 id="usn-5469-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5469-1">USN-5469-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>20 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28390">CVE-2022-28390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28389">CVE-2022-28389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28388">CVE-2022-28388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1972">CVE-2022-1972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1671">CVE-2022-1671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1651">CVE-2022-1651</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1516">CVE-2022-1516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1353">CVE-2022-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1263">CVE-2022-1263</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1204">CVE-2022-1204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1199">CVE-2022-1199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1198">CVE-2022-1198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1195">CVE-2022-1195</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1158">CVE-2022-1158</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1048">CVE-2022-1048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0168">CVE-2022-0168</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>More of the same</li>
+</ul>
+<h3 id="usn-5470-1-linux-kernel--oem--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5470-1">USN-5470-1</a>] Linux kernel (OEM) vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1972">CVE-2022-1972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1836">CVE-2022-1836</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5471-1-linux-kernel--oem--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5471-1">USN-5471-1</a>] Linux kernel (OEM) vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29968">CVE-2022-29968</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1972">CVE-2022-1972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1836">CVE-2022-1836</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1966">CVE-2022-1966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21499">CVE-2022-21499</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5458-1-vim-vulnerabilities-03-17">[<a href="https://ubuntu.com/security/notices/USN-5458-1">USN-5458-1</a>] Vim vulnerabilities [03:17]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0443">CVE-2022-0443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0408">CVE-2022-0408</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0368">CVE-2022-0368</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0361">CVE-2022-0361</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0359">CVE-2022-0359</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0351">CVE-2022-0351</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0319">CVE-2022-0319</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0213">CVE-2022-0213</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4193">CVE-2021-4193</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB reads, heap buffer overflows, stack buffer overflows, UAFs etc via
+crafted input files</li>
+</ul>
+<h3 id="usn-5460-1-vim-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5460-1">USN-5460-1</a>] Vim vulnerabilities</h3>
+<ul>
+<li>10 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1621">CVE-2022-1621</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1620">CVE-2022-1620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1619">CVE-2022-1619</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1616">CVE-2022-1616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0943">CVE-2022-0943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0729">CVE-2022-0729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0714">CVE-2022-0714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0685">CVE-2022-0685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0572">CVE-2022-0572</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0554">CVE-2022-0554</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5459-1-cifs-utils-vulnerabilities-03-49">[<a href="https://ubuntu.com/security/notices/USN-5459-1">USN-5459-1</a>] cifs-utils vulnerabilities [03:49]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29869">CVE-2022-29869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27239">CVE-2022-27239</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20208">CVE-2021-20208</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14342">CVE-2020-14342</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Tools for managing cifs mounts etc</li>
+<li>Privesc via stack buffer overflow in <code>mount.cifs</code> via crafted command-line
+arguments - used <code>strcpy()</code> to copy the provided IP address after first
+checking length - but did comparison using <code>strnlen()</code> which returns the
+max length even if the string is longer - so subsequent <code>strcpy()</code> would
+then overflow</li>
+<li>Possible shell command injection into <code>mount.cifs</code> when it spawns a
+subshell for password input</li>
+<li>Exposure of host kerberos credentials when mounting a CIFS share using
+kerberos authentication within a container</li>
+</ul>
+<h3 id="usn-5461-1-freerdp-vulnerabilities-05-21">[<a href="https://ubuntu.com/security/notices/USN-5461-1">USN-5461-1</a>] FreeRDP vulnerabilities [05:21]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24883">CVE-2022-24883</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24882">CVE-2022-24882</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-162/">Episode 162</a> - Last week we talked about a couple different packages that
+mishandled empty password to then improperly authenticate a user
+<ul>
+<li>Similar vuln in FreeRDP when using NTLM authentication - allows a
+client to authenticate to the server with an empty NTLM password</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5462-1-usn-5462-2-ruby-vulnerabilities-06-11">[<a href="https://ubuntu.com/security/notices/USN-5462-1">USN-5462-1</a>, <a href="https://ubuntu.com/security/notices/USN-5462-2">USN-5462-2</a>] Ruby vulnerabilities [06:11]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28739">CVE-2022-28739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28738">CVE-2022-28738</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Double free in regexp compiler when handling a crafted regex as input -
+so if allow attackers to provide regex which will then get compiled could
+abuse this to gain code execution as the ruby interpreter</li>
+</ul>
+<h3 id="usn-5463-1-ntfs-3g-vulnerabilities-06-41">[<a href="https://ubuntu.com/security/notices/USN-5463-1">USN-5463-1</a>] NTFS-3G vulnerabilities [06:41]</h3>
+<ul>
+<li>8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30787">CVE-2022-30787</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30785">CVE-2022-30785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30789">CVE-2022-30789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30788">CVE-2022-30788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30786">CVE-2022-30786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30784">CVE-2022-30784</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30783">CVE-2022-30783</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-46790">CVE-2021-46790</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ntfsck code execution via crafted disk images (<a href="https://ubuntusecuritypodcast.org/episode-162/">Episode 162</a>)</li>
+<li>Incorrect handling of crafted disk images during mounting etc -&gt; various
+heap buffer overflows -&gt; code execution</li>
+<li>Logic error exposes a user to intercept the FUSE protocol traffic between
+nfts-3g and the kernel</li>
+</ul>
+<h3 id="usn-5464-1-e2fsprogs-vulnerability-07-17">[<a href="https://ubuntu.com/security/notices/USN-5464-1">USN-5464-1</a>] E2fsprogs vulnerability [07:17]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1304">CVE-2022-1304</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similarly, OOB R/W in e2fsprogs -&gt; used when doing fsck, mkfs, resizefs,
+badblocks etc on crafted file system image -&gt; code execution</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="symbiote-linux-malware-analysis-07-58">Symbiote Linux malware analysis [07:58]</h3>
+<ul>
+<li><a href="https://www.intezer.com/blog/research/new-linux-threat-symbiote/">https://www.intezer.com/blog/research/new-linux-threat-symbiote/</a></li>
+<li>Research from Intezer and Blackberry</li>
+<li>Found targeting financial sector in Latin America</li>
+<li>Described as &rsquo;nearly impossible&rsquo; to detect</li>
+<li>Uses <code>LD_PRELOAD</code> to &lsquo;infect&rsquo; binaries on system</li>
+<li>Evades detection by then hooking various functions in libc, libpcap etc
+to change their behaviour and alter their output so that when running
+tools like ls, ps etc they don&rsquo;t show evidence of infection</li>
+<li>Also loads BPF filter to hide it&rsquo;s own network traffic from being seen
+when say running a local <code>tcpdump</code> etc</li>
+<li>&lsquo;Nearly impossible to detect&rsquo; claim
+<ul>
+<li>Indeed, is going to be very hard to detect it from the machine itself
+which is compromised</li>
+<li>If an attacker has control over the machine they can clearly influence
+that environment to hide themselves</li>
+</ul>
+</li>
+<li>Reminds of a recent <a href="https://twitter.com/halvarflake/status/1528660068798955520">twitter thread</a> involving halvarflake, Mathias Krause
+and others, and then a follow-up <a href="https://grsecurity.net/tetragone_a_lesson_in_security_fundamentals">blog post</a> from Brad Spengler from
+grsecurity looking at Tetragon eBPF Security Observability and Runtime
+Environment
+<ul>
+<li>eBPF based system which allows sysadmins to develop policy to detect
+and kill exploits</li>
+<li>Runs on the system itself in kernel-space and tries to detect once a
+user has elevated privileges etc
+<ul>
+<li>e.g. kernel memory corruption to set their own uid as 0</li>
+</ul>
+</li>
+<li>But since the attacker has already got code execution in the kernel to
+be able to achieve this they can just as easily first disable Tetragon
+and then go and elevate privileges and hence not be detected</li>
+</ul>
+</li>
+<li>Basically if you are trying to detect compromise from within the
+environment itself the attacker is always at an advantage and can change
+the environment to evade detection and make everything look normal /
+disable checks etc</li>
+<li>Instead need to be at a higher level of abstraction</li>
+<li>In the case of detecting Symbiote - would need to say take a disk image
+and analyse it offline from another machine so that the analysis
+environment can&rsquo;t be influenced by the malware itself</li>
+</ul>
+<h3 id="ubuntu-21-dot-10--impish-indri--reaches-end-of-life-on-july-14-2022-12-45">Ubuntu 21.10 (Impish Indri) reaches End of Life on July 14 2022 [12:45]</h3>
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2022-May/000280.html">https://lists.ubuntu.com/archives/ubuntu-announce/2022-May/000280.html</a></li>
+</ul>
+<h3 id="hiring-13-16">Hiring [13:16]</h3>
+<h4 id="security-engineer-ubuntu">Security Engineer - Ubuntu</h4>
+<ul>
+<li><a href="https://canonical.com/careers/2925180/security-engineer-ubuntu-remote">https://canonical.com/careers/2925180/security-engineer-ubuntu-remote</a></li>
+</ul>
+<h4 id="security-certifications-product-manager-cis-fips-fedramp-and-more">Security Certifications Product Manager - CIS, FIPS, FedRAMP and more</h4>
+<ul>
+<li><a href="https://canonical.com/careers/3781589/security-certifications-product-manager-cis-fips-fedramp-and-more-remote">https://canonical.com/careers/3781589/security-certifications-product-manager-cis-fips-fedramp-and-more-remote</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-162/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-163\/",
+        text: "Episode 163"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
