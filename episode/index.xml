@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 10 Jun 2022 15:40:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jun 2022 19:17:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,282 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 164</title>
+          <link>https://ubuntusecuritypodcast.org/episode-164/</link>
+          <pubDate>Fri, 17 Jun 2022 19:17:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>3ae25f6f37c5cadc9898038d54b3f94bb44ae39757365c96ff47956f056a7290c39fdf2e8f4565751021bb25e3698f5221352c86135c1866d88aa4a3a45d7ec2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 164</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  </itunes:summary>
+        <description>  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  </description>
+        <googleplay:description>  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+cover security vulnerabilities and updates for ca-certificates, Varnish
+Cache, FFmpeg, Firefox, PHP and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>64 unique CVEs addressed</p>
+<h3 id="usn-5473-1-ca-certificates-update-00-41">[<a href="https://ubuntu.com/security/notices/USN-5473-1">USN-5473-1</a>] ca-certificates update [00:41]</h3>
+<ul>
+<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)</li>
+<li>Updates to the latest 2.50 version of the Mozilla CA bundle - in
+particular this removes a bunch of expired certs plus an old (but still
+valid) GeoTrust certificate and others - also adds some new CA certs from
+GlobalTrust, Certum, GlobalSign too</li>
+</ul>
+<h3 id="usn-5396-2-ghostscript-vulnerability-01-30">[<a href="https://ubuntu.com/security/notices/USN-5396-2">USN-5396-2</a>] Ghostscript vulnerability [01:30]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-25059">CVE-2019-25059</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-158/">Episode 158</a></li>
+</ul>
+<h3 id="usn-5474-1-varnish-cache-vulnerabilities-01-41">[<a href="https://ubuntu.com/security/notices/USN-5474-1">USN-5474-1</a>] Varnish Cache vulnerabilities [01:41]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23959">CVE-2022-23959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36740">CVE-2021-36740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11653">CVE-2020-11653</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-20637">CVE-2019-20637</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Thanks to Luís Infante da Câmara for preparing, testing and providing the
+debdiff&rsquo;s for these updates
+<ul>
+<li>Possible HTTP/1 and HTTP/2 request smuggling attacks</li>
+<li>DoS via triggering an assertion failure</li>
+<li>Pointer of one client reused on the next if both share the same
+connection - can expose info from the old client to the new one</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5472-1-ffmpeg-vulnerabilities-02-30">[<a href="https://ubuntu.com/security/notices/USN-5472-1">USN-5472-1</a>] FFmpeg vulnerabilities [02:30]</h3>
+<ul>
+<li>35 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-38291">CVE-2021-38291</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22025">CVE-2020-22025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1475">CVE-2022-1475</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38171">CVE-2021-38171</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38114">CVE-2021-38114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35965">CVE-2020-35965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22037">CVE-2020-22037</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22035">CVE-2020-22035</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22030">CVE-2020-22030</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22029">CVE-2020-22029</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22027">CVE-2020-22027</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22033">CVE-2020-22033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22021">CVE-2020-22021</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22019">CVE-2020-22019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22042">CVE-2020-22042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22036">CVE-2020-22036</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22034">CVE-2020-22034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22032">CVE-2020-22032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22031">CVE-2020-22031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22028">CVE-2020-22028</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22026">CVE-2020-22026</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22025">CVE-2022-22025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22023">CVE-2020-22023</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22022">CVE-2020-22022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22020">CVE-2020-22020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22017">CVE-2020-22017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22016">CVE-2020-22016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22015">CVE-2020-22015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21697">CVE-2020-21697</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21688">CVE-2020-21688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21041">CVE-2020-21041</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20450">CVE-2020-20450</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20453">CVE-2020-20453</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20446">CVE-2020-20446</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20445">CVE-2020-20445</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Thanks to Luís Infante da Câmara for preparing, testing and providing the
+debdiff&rsquo;s for these updates</li>
+<li>Updates ffmpeg to latest upstream bug-fix releases
+<ul>
+<li>4.4.2 for 21.10, 22.04 LTS</li>
+<li>4.2.7 for 20.04 LTS</li>
+<li>3.4.11 for 18.04 LTS</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5475-1-firefox-vulnerabilities-03-04">[<a href="https://ubuntu.com/security/notices/USN-5475-1">USN-5475-1</a>] Firefox vulnerabilities [03:04]</h3>
+<ul>
+<li>12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31748">CVE-2022-31748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31747">CVE-2022-31747</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31745">CVE-2022-31745</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31744">CVE-2022-31744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31743">CVE-2022-31743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31742">CVE-2022-31742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31741">CVE-2022-31741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31740">CVE-2022-31740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31738">CVE-2022-31738</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31737">CVE-2022-31737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31736">CVE-2022-31736</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1919">CVE-2022-1919</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>101.0.1</li>
+<li>Usual mix of web browser / framework issues fixed - specially crafted
+website -&gt; could exploit to cause DoS, info leak, spoof the browser UI,
+conduct XSS attacks, bypass content security policy (CSP) restrictions,
+or execute arbitrary code</li>
+</ul>
+<h3 id="usn-5476-1-liblouis-vulnerabilities-03-54">[<a href="https://ubuntu.com/security/notices/USN-5476-1">USN-5476-1</a>] Liblouis vulnerabilities [03:54]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31783">CVE-2022-31783</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26981">CVE-2022-26981</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Braille translation library + utils</li>
+<li>Buffer overflow -&gt; crash -&gt; DoS</li>
+<li>OOB write -&gt; crash -&gt; DoS / RCE</li>
+</ul>
+<h3 id="usn-5359-2-rsync-vulnerability-04-27">[<a href="https://ubuntu.com/security/notices/USN-5359-2">USN-5359-2</a>] rsync vulnerability [04:27]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-25032">CVE-2018-25032</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-156/">Episode 156</a> (zlib memory corruption issue when compressing input data)</li>
+</ul>
+<h3 id="usn-5477-1-ncurses-vulnerabilities-04-54">[<a href="https://ubuntu.com/security/notices/USN-5477-1">USN-5477-1</a>] ncurses vulnerabilities [04:54]</h3>
+<ul>
+<li>6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29458">CVE-2022-29458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39537">CVE-2021-39537</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-17595">CVE-2019-17595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-17594">CVE-2019-17594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19211">CVE-2018-19211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-16879">CVE-2017-16879</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption vulns fixed - requires to process crafted input
+files (e.g. termcap - but this is usually trusted so hence negligible
+rating for most of these CVEs)</li>
+</ul>
+<h3 id="usn-5478-1-util-linux-vulnerability-05-28">[<a href="https://ubuntu.com/security/notices/USN-5478-1">USN-5478-1</a>] util-linux vulnerability [05:28]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2016-5011">CVE-2016-5011</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Memory leak in libblkid when parsing crafted MSDOS partition table</li>
+</ul>
+<h3 id="usn-5479-1-php-vulnerabilities-05-40">[<a href="https://ubuntu.com/security/notices/USN-5479-1">USN-5479-1</a>] PHP vulnerabilities [05:40]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31626">CVE-2022-31626</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31625">CVE-2022-31625</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>both issues in handling of crafted inputs into database drivers - 1 for
+postgres and 1 for mysql
+<ul>
+<li>uninitialised var in pg driver -&gt; UAF in certain error scenario -&gt; RCE</li>
+<li>buffer overflow in password handler for mysqlnd (native driver) - rogue
+MySQL server could trigger this to get RCE</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="news-on-latest-intel-security-issues-06-33">News on latest Intel security issues [06:33]</h3>
+<ul>
+<li>Hertzbleed &amp; MMIO stale data both disclosed this week</li>
+<li>Hertzbleed - interesting new crypto side-channel attack demonstrated
+against SIKE (Supersingular Isogeny Key Encapsulation - post-quantum key
+encapsulation mechanism)
+<ul>
+<li>Turns a frequency side-channel into a timing side-channel such that
+code which was previously assumed to be constant time can still leak
+information about the key, allowing it to be recovered by mounting a
+chosen cipher-text attack from a client, observing the timing response
+of the server and then inferring the secret key as a result</li>
+<li>Acknowledged by both Intel and AMD but likely all modern processors
+which employ dynamic voltage and frequency scaling are affected</li>
+<li>Intel have released guidance for how to harden crypto implementations
+against this attack</li>
+<li>No changes/fixes for this in kernel/microcode/toolchain etc - instead
+will be up to individual libraries to assess if they may be affected
+and then refactor accordindly</li>
+</ul>
+</li>
+<li>MMIO stale-data
+<ul>
+<li>Vulns in memory mapped I/O - generally only applicable to
+virtualisation when untrusted guest have access to MMIO
+<ul>
+<li>not transient execution attacks themselves <strong>but</strong> since these vulns
+allow stale data to persist, can then be inferred by a TEA (think
+Spectre etc)</li>
+</ul>
+</li>
+<li>consists of a series of different issues for various microarchitectural
+buffers / registers where stale data is left after being copied /
+moved - then can be sampled via a TEA to infer the value</li>
+<li>different processor models have different microarchitectural buffers so
+some may or may not be affected</li>
+<li>3 separate vulns (CVEs) identified based on the microarchitectural
+buffer affected and the technique used to read from it</li>
+<li>Fixes required in both kernel and intel-microcode packages
+<ul>
+<li>Kernels will have already been released by the time you hear this</li>
+<li>Microcode is currently being released via the -updates pocket of the
+archive - will then publish to -security once fully phased to all
+users
+<ul>
+<li>Likely early on Monday next week</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>More details in next week&rsquo;s episode</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E164.mp3" length="8622745" type="audio/mpeg" /><itunes:duration>710</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 163</title>
           <link>https://ubuntusecuritypodcast.org/episode-163/</link>

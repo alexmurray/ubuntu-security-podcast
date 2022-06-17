@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  ">
+
+<meta name="generator" content="Hugo 0.96.0" />
+
+<meta property="og:title" content="Episode 164" />
+<meta name="twitter:title" content="Episode 164"/>
+<meta itemprop="name" content="Episode 164">
+<meta property="article:published_time" content="2022-06-17T19:17:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-06-17T19:17:39&#43;09:30" />
+<meta property="og:updated_time" content="2022-06-17T19:17:39&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  " />
+    <meta name="twitter:description" content="  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  " />
+    <meta itemprop="description" content="  More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+  cover security vulnerabilities and updates for ca-certificates, Varnish
+  Cache, FFmpeg, Firefox, PHP and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-164/" />
+
+
+
+
+<title>Episode 164</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-164/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 164</h1><small>Posted on Friday, Jun 17, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+cover security vulnerabilities and updates for ca-certificates, Varnish
+Cache, FFmpeg, Firefox, PHP and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E164.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+cover security vulnerabilities and updates for ca-certificates, Varnish
+Cache, FFmpeg, Firefox, PHP and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>64 unique CVEs addressed</p>
+<h3 id="usn-5473-1-ca-certificates-update-00-41">[<a href="https://ubuntu.com/security/notices/USN-5473-1">USN-5473-1</a>] ca-certificates update [00:41]</h3>
+<ul>
+<li>Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)</li>
+<li>Updates to the latest 2.50 version of the Mozilla CA bundle - in
+particular this removes a bunch of expired certs plus an old (but still
+valid) GeoTrust certificate and others - also adds some new CA certs from
+GlobalTrust, Certum, GlobalSign too</li>
+</ul>
+<h3 id="usn-5396-2-ghostscript-vulnerability-01-30">[<a href="https://ubuntu.com/security/notices/USN-5396-2">USN-5396-2</a>] Ghostscript vulnerability [01:30]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-25059">CVE-2019-25059</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-158/">Episode 158</a></li>
+</ul>
+<h3 id="usn-5474-1-varnish-cache-vulnerabilities-01-41">[<a href="https://ubuntu.com/security/notices/USN-5474-1">USN-5474-1</a>] Varnish Cache vulnerabilities [01:41]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23959">CVE-2022-23959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36740">CVE-2021-36740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11653">CVE-2020-11653</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-20637">CVE-2019-20637</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Thanks to Luís Infante da Câmara for preparing, testing and providing the
+debdiff&rsquo;s for these updates
+<ul>
+<li>Possible HTTP/1 and HTTP/2 request smuggling attacks</li>
+<li>DoS via triggering an assertion failure</li>
+<li>Pointer of one client reused on the next if both share the same
+connection - can expose info from the old client to the new one</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5472-1-ffmpeg-vulnerabilities-02-30">[<a href="https://ubuntu.com/security/notices/USN-5472-1">USN-5472-1</a>] FFmpeg vulnerabilities [02:30]</h3>
+<ul>
+<li>35 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-38291">CVE-2021-38291</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22025">CVE-2020-22025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1475">CVE-2022-1475</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38171">CVE-2021-38171</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-38114">CVE-2021-38114</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35965">CVE-2020-35965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22037">CVE-2020-22037</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22035">CVE-2020-22035</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22030">CVE-2020-22030</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22029">CVE-2020-22029</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22027">CVE-2020-22027</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22033">CVE-2020-22033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22021">CVE-2020-22021</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22019">CVE-2020-22019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22042">CVE-2020-22042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22036">CVE-2020-22036</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22034">CVE-2020-22034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22032">CVE-2020-22032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22031">CVE-2020-22031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22028">CVE-2020-22028</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22026">CVE-2020-22026</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22025">CVE-2022-22025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22023">CVE-2020-22023</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22022">CVE-2020-22022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22020">CVE-2020-22020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22017">CVE-2020-22017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22016">CVE-2020-22016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-22015">CVE-2020-22015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21697">CVE-2020-21697</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21688">CVE-2020-21688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-21041">CVE-2020-21041</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20450">CVE-2020-20450</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20453">CVE-2020-20453</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20446">CVE-2020-20446</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-20445">CVE-2020-20445</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Thanks to Luís Infante da Câmara for preparing, testing and providing the
+debdiff&rsquo;s for these updates</li>
+<li>Updates ffmpeg to latest upstream bug-fix releases
+<ul>
+<li>4.4.2 for 21.10, 22.04 LTS</li>
+<li>4.2.7 for 20.04 LTS</li>
+<li>3.4.11 for 18.04 LTS</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5475-1-firefox-vulnerabilities-03-04">[<a href="https://ubuntu.com/security/notices/USN-5475-1">USN-5475-1</a>] Firefox vulnerabilities [03:04]</h3>
+<ul>
+<li>12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31748">CVE-2022-31748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31747">CVE-2022-31747</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31745">CVE-2022-31745</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31744">CVE-2022-31744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31743">CVE-2022-31743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31742">CVE-2022-31742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31741">CVE-2022-31741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31740">CVE-2022-31740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31738">CVE-2022-31738</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31737">CVE-2022-31737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31736">CVE-2022-31736</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1919">CVE-2022-1919</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>101.0.1</li>
+<li>Usual mix of web browser / framework issues fixed - specially crafted
+website -&gt; could exploit to cause DoS, info leak, spoof the browser UI,
+conduct XSS attacks, bypass content security policy (CSP) restrictions,
+or execute arbitrary code</li>
+</ul>
+<h3 id="usn-5476-1-liblouis-vulnerabilities-03-54">[<a href="https://ubuntu.com/security/notices/USN-5476-1">USN-5476-1</a>] Liblouis vulnerabilities [03:54]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31783">CVE-2022-31783</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26981">CVE-2022-26981</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Braille translation library + utils</li>
+<li>Buffer overflow -&gt; crash -&gt; DoS</li>
+<li>OOB write -&gt; crash -&gt; DoS / RCE</li>
+</ul>
+<h3 id="usn-5359-2-rsync-vulnerability-04-27">[<a href="https://ubuntu.com/security/notices/USN-5359-2">USN-5359-2</a>] rsync vulnerability [04:27]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-25032">CVE-2018-25032</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-156/">Episode 156</a> (zlib memory corruption issue when compressing input data)</li>
+</ul>
+<h3 id="usn-5477-1-ncurses-vulnerabilities-04-54">[<a href="https://ubuntu.com/security/notices/USN-5477-1">USN-5477-1</a>] ncurses vulnerabilities [04:54]</h3>
+<ul>
+<li>6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29458">CVE-2022-29458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39537">CVE-2021-39537</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-17595">CVE-2019-17595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-17594">CVE-2019-17594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19211">CVE-2018-19211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-16879">CVE-2017-16879</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption vulns fixed - requires to process crafted input
+files (e.g. termcap - but this is usually trusted so hence negligible
+rating for most of these CVEs)</li>
+</ul>
+<h3 id="usn-5478-1-util-linux-vulnerability-05-28">[<a href="https://ubuntu.com/security/notices/USN-5478-1">USN-5478-1</a>] util-linux vulnerability [05:28]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2016-5011">CVE-2016-5011</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Memory leak in libblkid when parsing crafted MSDOS partition table</li>
+</ul>
+<h3 id="usn-5479-1-php-vulnerabilities-05-40">[<a href="https://ubuntu.com/security/notices/USN-5479-1">USN-5479-1</a>] PHP vulnerabilities [05:40]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31626">CVE-2022-31626</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31625">CVE-2022-31625</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>both issues in handling of crafted inputs into database drivers - 1 for
+postgres and 1 for mysql
+<ul>
+<li>uninitialised var in pg driver -&gt; UAF in certain error scenario -&gt; RCE</li>
+<li>buffer overflow in password handler for mysqlnd (native driver) - rogue
+MySQL server could trigger this to get RCE</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="news-on-latest-intel-security-issues-06-33">News on latest Intel security issues [06:33]</h3>
+<ul>
+<li>Hertzbleed &amp; MMIO stale data both disclosed this week</li>
+<li>Hertzbleed - interesting new crypto side-channel attack demonstrated
+against SIKE (Supersingular Isogeny Key Encapsulation - post-quantum key
+encapsulation mechanism)
+<ul>
+<li>Turns a frequency side-channel into a timing side-channel such that
+code which was previously assumed to be constant time can still leak
+information about the key, allowing it to be recovered by mounting a
+chosen cipher-text attack from a client, observing the timing response
+of the server and then inferring the secret key as a result</li>
+<li>Acknowledged by both Intel and AMD but likely all modern processors
+which employ dynamic voltage and frequency scaling are affected</li>
+<li>Intel have released guidance for how to harden crypto implementations
+against this attack</li>
+<li>No changes/fixes for this in kernel/microcode/toolchain etc - instead
+will be up to individual libraries to assess if they may be affected
+and then refactor accordindly</li>
+</ul>
+</li>
+<li>MMIO stale-data
+<ul>
+<li>Vulns in memory mapped I/O - generally only applicable to
+virtualisation when untrusted guest have access to MMIO
+<ul>
+<li>not transient execution attacks themselves <strong>but</strong> since these vulns
+allow stale data to persist, can then be inferred by a TEA (think
+Spectre etc)</li>
+</ul>
+</li>
+<li>consists of a series of different issues for various microarchitectural
+buffers / registers where stale data is left after being copied /
+moved - then can be sampled via a TEA to infer the value</li>
+<li>different processor models have different microarchitectural buffers so
+some may or may not be affected</li>
+<li>3 separate vulns (CVEs) identified based on the microarchitectural
+buffer affected and the technique used to read from it</li>
+<li>Fixes required in both kernel and intel-microcode packages
+<ul>
+<li>Kernels will have already been released by the time you hear this</li>
+<li>Microcode is currently being released via the -updates pocket of the
+archive - will then publish to -security once fully phased to all
+users
+<ul>
+<li>Likely early on Monday next week</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>More details in next week&rsquo;s episode</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-163/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-164\/",
+        text: "Episode 164"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
