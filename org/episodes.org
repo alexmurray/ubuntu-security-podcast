@@ -8,6 +8,197 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 164
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-164
+:EXPORT_DATE: 2022-06-17 19:17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E164.mp3 :podcast_duration "710" :podcast_bytes "8622745" :permalink "https://ubuntusecuritypodcast.org/episode-164/" :guid 3ae25f6f37c5cadc9898038d54b3f94bb44ae39757365c96ff47956f056a7290c39fdf2e8f4565751021bb25e3698f5221352c86135c1866d88aa4a3a45d7ec2
+:END:
+#+begin_description
+More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+cover security vulnerabilities and updates for ca-certificates, Varnish
+Cache, FFmpeg, Firefox, PHP and more.
+#+end_description
+** Overview
+More Intel CPU issues, including Hertzbleed and MMIO stale data, plus we
+cover security vulnerabilities and updates for ca-certificates, Varnish
+Cache, FFmpeg, Firefox, PHP and more.
+** This week in Ubuntu Security Updates
+64 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5473-1][USN-5473-1]]] ca-certificates update [00:41]
+- Affecting Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+- Updates to the latest 2.50 version of the Mozilla CA bundle - in
+  particular this removes a bunch of expired certs plus an old (but still
+  valid) GeoTrust certificate and others - also adds some new CA certs from
+  GlobalTrust, Certum, GlobalSign too
+
+*** [[[https://ubuntu.com/security/notices/USN-5396-2][USN-5396-2]]] Ghostscript vulnerability [01:30]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2019-25059][CVE-2019-25059]] @@html:<!-- medium -->@@
+- [[https://ubuntusecuritypodcast.org/episode-158/][Episode 158]]
+
+*** [[[https://ubuntu.com/security/notices/USN-5474-1][USN-5474-1]]] Varnish Cache vulnerabilities [01:41]
+- 4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-23959][CVE-2022-23959]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-36740][CVE-2021-36740]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-11653][CVE-2020-11653]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2019-20637][CVE-2019-20637]] @@html:<!-- medium -->@@
+- Thanks to Luís Infante da Câmara for preparing, testing and providing the
+  debdiff's for these updates
+  - Possible HTTP/1 and HTTP/2 request smuggling attacks
+  - DoS via triggering an assertion failure
+  - Pointer of one client reused on the next if both share the same
+    connection - can expose info from the old client to the new one
+
+*** [[[https://ubuntu.com/security/notices/USN-5472-1][USN-5472-1]]] FFmpeg vulnerabilities [02:30]
+- 35 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-38291][CVE-2021-38291]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22025][CVE-2020-22025]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1475][CVE-2022-1475]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-38171][CVE-2021-38171]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-38114][CVE-2021-38114]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-35965][CVE-2020-35965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22037][CVE-2020-22037]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22035][CVE-2020-22035]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22030][CVE-2020-22030]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22029][CVE-2020-22029]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22027][CVE-2020-22027]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22033][CVE-2020-22033]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22021][CVE-2020-22021]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22019][CVE-2020-22019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22042][CVE-2020-22042]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22036][CVE-2020-22036]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22034][CVE-2020-22034]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22032][CVE-2020-22032]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22031][CVE-2020-22031]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22028][CVE-2020-22028]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22026][CVE-2020-22026]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-22025][CVE-2022-22025]] @@html:<!--  -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22023][CVE-2020-22023]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22022][CVE-2020-22022]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22020][CVE-2020-22020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22017][CVE-2020-22017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22016][CVE-2020-22016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-22015][CVE-2020-22015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-21697][CVE-2020-21697]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-21688][CVE-2020-21688]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-21041][CVE-2020-21041]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-20450][CVE-2020-20450]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2020-20453][CVE-2020-20453]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2020-20446][CVE-2020-20446]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2020-20445][CVE-2020-20445]] @@html:<!-- low -->@@
+- Thanks to Luís Infante da Câmara for preparing, testing and providing the
+  debdiff's for these updates
+- Updates ffmpeg to latest upstream bug-fix releases
+  - 4.4.2 for 21.10, 22.04 LTS
+  - 4.2.7 for 20.04 LTS
+  - 3.4.11 for 18.04 LTS
+
+*** [[[https://ubuntu.com/security/notices/USN-5475-1][USN-5475-1]]] Firefox vulnerabilities [03:04]
+- 12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10)
+  - [[https://ubuntu.com/security/CVE-2022-31748][CVE-2022-31748]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31747][CVE-2022-31747]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31745][CVE-2022-31745]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31744][CVE-2022-31744]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31743][CVE-2022-31743]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31742][CVE-2022-31742]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31741][CVE-2022-31741]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31740][CVE-2022-31740]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31738][CVE-2022-31738]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31737][CVE-2022-31737]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31736][CVE-2022-31736]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1919][CVE-2022-1919]] @@html:<!-- medium -->@@
+- 101.0.1
+- Usual mix of web browser / framework issues fixed - specially crafted
+  website -> could exploit to cause DoS, info leak, spoof the browser UI,
+  conduct XSS attacks, bypass content security policy (CSP) restrictions,
+  or execute arbitrary code
+
+*** [[[https://ubuntu.com/security/notices/USN-5476-1][USN-5476-1]]] Liblouis vulnerabilities [03:54]
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-31783][CVE-2022-31783]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-26981][CVE-2022-26981]] @@html:<!-- low -->@@
+- Braille translation library + utils
+- Buffer overflow -> crash -> DoS
+- OOB write -> crash -> DoS / RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-5359-2][USN-5359-2]]] rsync vulnerability [04:27]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2018-25032][CVE-2018-25032]] @@html:<!-- medium -->@@
+- [[https://ubuntusecuritypodcast.org/episode-156/][Episode 156]] (zlib memory corruption issue when compressing input data)
+
+*** [[[https://ubuntu.com/security/notices/USN-5477-1][USN-5477-1]]] ncurses vulnerabilities [04:54]
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-29458][CVE-2022-29458]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2021-39537][CVE-2021-39537]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2019-17595][CVE-2019-17595]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2019-17594][CVE-2019-17594]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2018-19211][CVE-2018-19211]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2017-16879][CVE-2017-16879]] @@html:<!-- negligible -->@@
+- Various memory corruption vulns fixed - requires to process crafted input
+  files (e.g. termcap - but this is usually trusted so hence negligible
+  rating for most of these CVEs)
+
+*** [[[https://ubuntu.com/security/notices/USN-5478-1][USN-5478-1]]] util-linux vulnerability [05:28]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2016-5011][CVE-2016-5011]] @@html:<!-- low -->@@
+- Memory leak in libblkid when parsing crafted MSDOS partition table
+
+*** [[[https://ubuntu.com/security/notices/USN-5479-1][USN-5479-1]]] PHP vulnerabilities [05:40]
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-31626][CVE-2022-31626]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31625][CVE-2022-31625]] @@html:<!-- medium -->@@
+- both issues in handling of crafted inputs into database drivers - 1 for
+  postgres and 1 for mysql
+  - uninitialised var in pg driver -> UAF in certain error scenario -> RCE
+  - buffer overflow in password handler for mysqlnd (native driver) - rogue
+    MySQL server could trigger this to get RCE
+
+** Goings on in Ubuntu Security Community
+*** News on latest Intel security issues [06:33]
+- Hertzbleed & MMIO stale data both disclosed this week
+- Hertzbleed - interesting new crypto side-channel attack demonstrated
+  against SIKE (Supersingular Isogeny Key Encapsulation - post-quantum key
+  encapsulation mechanism)
+  - Turns a frequency side-channel into a timing side-channel such that
+    code which was previously assumed to be constant time can still leak
+    information about the key, allowing it to be recovered by mounting a
+    chosen cipher-text attack from a client, observing the timing response
+    of the server and then inferring the secret key as a result
+  - Acknowledged by both Intel and AMD but likely all modern processors
+    which employ dynamic voltage and frequency scaling are affected
+  - Intel have released guidance for how to harden crypto implementations
+    against this attack
+  - No changes/fixes for this in kernel/microcode/toolchain etc - instead
+    will be up to individual libraries to assess if they may be affected
+    and then refactor accordindly
+- MMIO stale-data
+  - Vulns in memory mapped I/O - generally only applicable to
+    virtualisation when untrusted guest have access to MMIO
+    - not transient execution attacks themselves *but* since these vulns
+      allow stale data to persist, can then be inferred by a TEA (think
+      Spectre etc)
+  - consists of a series of different issues for various microarchitectural
+    buffers / registers where stale data is left after being copied /
+    moved - then can be sampled via a TEA to infer the value
+  - different processor models have different microarchitectural buffers so
+    some may or may not be affected
+  - 3 separate vulns (CVEs) identified based on the microarchitectural
+    buffer affected and the technique used to read from it
+  - Fixes required in both kernel and intel-microcode packages
+    - Kernels will have already been released by the time you hear this
+    - Microcode is currently being released via the -updates pocket of the
+      archive - will then publish to -security once fully phased to all
+      users
+      - Likely early on Monday next week
+- More details in next week's episode
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 163
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-163
