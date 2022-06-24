@@ -15,13 +15,13 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E165.mp3 :podcast_duration "2051" :podcast_bytes "21987701" :permalink "https://ubuntusecuritypodcast.org/episode-165/" :guid 1ef7b560fd187efb9b0e6167b27197acafc0c1675211b6c0e42a2a62aa199c79a72f21eca4fad4a58d4fe76f9272715ee24e53757f4c6e0e26e4223f4388ae56
 :END:
 #+begin_description
-This week Camila dives dives into the details on some of the most prolific
+This week Camila dives into the details on some of the most prolific
 buzzwords flying around the cybersecurity community, plus we cover security
 updates for BlueZ, the Linux kernel, Intel Microcode, QEMU, Apache and
 more.
 #+end_description
 ** Overview
-This week Camila dives dives into the details on some of the most prolific
+This week Camila dives into the details on some of the most prolific
 buzzwords flying around the cybersecurity community, plus we cover security
 updates for BlueZ, the Linux kernel, Intel Microcode, QEMU, Apache and
 more.

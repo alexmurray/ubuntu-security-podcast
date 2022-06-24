@@ -1,13 +1,13 @@
 +++
 title = "Episode 165"
 description = """
-  This week Camila dives dives into the details on some of the most prolific
+  This week Camila dives into the details on some of the most prolific
   buzzwords flying around the cybersecurity community, plus we cover security
   updates for BlueZ, the Linux kernel, Intel Microcode, QEMU, Apache and
   more.
   """
 date = 2022-06-24T16:02:00+09:30
-lastmod = 2022-06-24T16:03:22+09:30
+lastmod = 2022-06-24T16:08:39+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -21,7 +21,7 @@ guid = "1ef7b560fd187efb9b0e6167b27197acafc0c1675211b6c0e42a2a62aa199c79a72f21ec
 
 ## Overview {#overview}
 
-This week Camila dives dives into the details on some of the most prolific
+This week Camila dives into the details on some of the most prolific
 buzzwords flying around the cybersecurity community, plus we cover security
 updates for BlueZ, the Linux kernel, Intel Microcode, QEMU, Apache and
 more.
