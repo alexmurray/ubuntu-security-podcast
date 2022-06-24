@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jun 2022 19:17:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jun 2022 16:02:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 165</title>
+      <link>https://ubuntusecuritypodcast.org/episode-165/</link>
+      <pubDate>Fri, 24 Jun 2022 16:02:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-165/</guid>
+      <description>Overview This week Camila dives dives into the details on some of the most prolific buzzwords flying around the cybersecurity community, plus we cover security updates for BlueZ, the Linux kernel, Intel Microcode, QEMU, Apache and more.
+This week in Ubuntu Security Updates 58 unique CVEs addressed
+[USN-5481-1] BlueZ vulnerabilities [00:38]  Affecting Bionic (18.04 LTS), Focal (20.04 LTS) Not all vulnerabilities / security issues get CVEs ;) Possible OOB read in A/V Remote Control Protocol profile Possible OOB write and a possible 1-byte buffer overflow in A/V Distribution Transport Protocol profile  [LSN-0087-1] Linux kernel vulnerability [01:20]  2 CVEs addressed in Trusty ESM (14.</description>
+    </item>
+    
     <item>
       <title>Episode 164</title>
       <link>https://ubuntusecuritypodcast.org/episode-164/</link>
