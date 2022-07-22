@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  It&#39;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+  at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.
+  ">
+
+<meta name="generator" content="Hugo 0.101.0" />
+
+<meta property="og:title" content="Episode 169" />
+<meta name="twitter:title" content="Episode 169"/>
+<meta itemprop="name" content="Episode 169">
+<meta property="article:published_time" content="2022-07-22T23:17:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-07-22T23:17:57&#43;09:30" />
+<meta property="og:updated_time" content="2022-07-22T23:17:57&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  It&#39;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+  at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.
+  " />
+    <meta name="twitter:description" content="  It&#39;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+  at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.
+  " />
+    <meta itemprop="description" content="  It&#39;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+  at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-169/" />
+
+
+
+
+<title>Episode 169</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-169/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 169</h1><small>Posted on Friday, Jul 22, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            It&rsquo;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E169.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>It&rsquo;s the 22.10 mid-cycle roadmap sprint at Canonical this week plus we look
+at security updates for Git, the Linux kernel, Vim, Python, PyJWT and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>58 unique CVEs addressed</p>
+<h3 id="usn-5511-1-git-vulnerabilities-00-45">[<a href="https://ubuntu.com/security/notices/USN-5511-1">USN-5511-1</a>] Git vulnerabilities [00:45]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29187">CVE-2022-29187</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24765">CVE-2022-24765</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Related to CVE-2022-24765 which we covered back in <a href="https://ubuntusecuritypodcast.org/episode-157/">Episode 157</a> - this was
+a vuln in Git for Windows which could allow a local user who could write
+to <code>C:\</code> to create a gitconfig that would contain commands that may then
+get executed by other users when running <code>git</code> themselves</li>
+<li>Is an issue for Ubuntu since with WSL you can now run git as shipped in
+Ubuntu on Windows which then would be vulnerable (or at least it was
+until we fixed it 😁)</li>
+</ul>
+<h3 id="usn-5473-2-ca-certificates-update-01-41">[<a href="https://ubuntu.com/security/notices/USN-5473-2">USN-5473-2</a>] ca-certificates update [01:41]</h3>
+<ul>
+<li>Affecting Xenial ESM (16.04 ESM)</li>
+<li><a href="https://ubuntusecuritypodcast.org/episode-164/">Episode 164</a></li>
+</ul>
+<h3 id="usn-5513-1-linux-kernel--aws--vulnerabilities-01-53">[<a href="https://ubuntu.com/security/notices/USN-5513-1">USN-5513-1</a>] Linux kernel (AWS) vulnerabilities [01:53]</h3>
+<ul>
+<li>19 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28388">CVE-2022-28388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28356">CVE-2022-28356</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24958">CVE-2022-24958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21166">CVE-2022-21166</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21125">CVE-2022-21125</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21123">CVE-2022-21123</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1419">CVE-2022-1419</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1353">CVE-2022-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0330">CVE-2022-0330</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4202">CVE-2021-4202</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39714">CVE-2021-39714</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-39685">CVE-2021-39685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3760">CVE-2021-3760</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3752">CVE-2021-3752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3609">CVE-2021-3609</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 kernel for 14.04 ESM machines on AWS</li>
+<li>Most interesting vulnerablity is a race condition in the CAN BCM
+networking protocol which then results in multiple possible UAFs - the
+use of unprivileged user namespaces allows a local unprivileged user to
+exploit this and then gain root priviliges in the root namespace - PoC on
+github along with a very detailed write-up, hence the high priority
+rating given to this vulnerability</li>
+<li>Various other similar vulns (race conditions and the like which can then
+allow a local user to possibly escalate privileges to root) - but the
+others don&rsquo;t have public exploits, hence the medium priority rating</li>
+</ul>
+<h3 id="usn-5514-1-linux-kernel-vulnerabilities-03-11">[<a href="https://ubuntu.com/security/notices/USN-5514-1">USN-5514-1</a>] Linux kernel vulnerabilities [03:11]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33981">CVE-2022-33981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1789">CVE-2022-1789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1204">CVE-2022-1204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1199">CVE-2022-1199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1195">CVE-2022-1195</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 GA / HWE for 18.04 LTS as well as various kernels optimised for the
+different public clouds</li>
+<li>Bunch of vulns in AX.25 amateur radio protocol implementation - local
+attacker could possibly crash kernel or privesc - would likely need a
+custom H/W device to do this though</li>
+<li>Race condition in the floppy driver -&gt; UAF etc</li>
+</ul>
+<h3 id="usn-5515-1-linux-kernel-vulnerabilities-03-41">[<a href="https://ubuntu.com/security/notices/USN-5515-1">USN-5515-1</a>] Linux kernel vulnerabilities [03:41]</h3>
+<ul>
+<li>10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28389">CVE-2022-28389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2380">CVE-2022-2380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1516">CVE-2022-1516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1353">CVE-2022-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1204">CVE-2022-1204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1199">CVE-2022-1199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1198">CVE-2022-1198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1011">CVE-2022-1011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 18.04 LTS GA + clouds + devices (raspi, snapdragon etc), 16.04 ESM
+HWE + clouds etc</li>
+</ul>
+<h3 id="usn-5517-1-linux-kernel--oem--vulnerabilities-04-04">[<a href="https://ubuntu.com/security/notices/USN-5517-1">USN-5517-1</a>] Linux kernel (OEM) vulnerabilities [04:04]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34494">CVE-2022-34494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.14 OEM</li>
+<li>OEM kernel contains various hardware enablement features for the
+different OEM platforms which Ubuntu comes pre-installed on, these
+eventually find they way back to the GA/HWE kernels</li>
+</ul>
+<h3 id="usn-5518-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5518-1">USN-5518-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33981">CVE-2022-33981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1975">CVE-2022-1975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1974">CVE-2022-1974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1789">CVE-2022-1789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0500">CVE-2022-0500</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 GA + clouds, devices, lowlatency etc</li>
+</ul>
+<h3 id="usn-5516-1-vim-vulnerabilities-04-18">[<a href="https://ubuntu.com/security/notices/USN-5516-1">USN-5516-1</a>] Vim vulnerabilities [04:18]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2210">CVE-2022-2210</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2207">CVE-2022-2207</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2000">CVE-2022-2000</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>vim is definitely fast becoming one of our most updated packages -
+particularly in 16.04 ESM</li>
+<li>More bugs found via fuzzing - shows what having a bug bounty can do to
+shine a light on possible vulnerabilities (or does it just attract
+shallow bug hunters&hellip;) - it&rsquo;s hard to say for certain how much of a
+security impact these different vulnerabilities have</li>
+<li>OOB write + 2 heap buffer overflows - all classified as high priority on
+the bounty platform ($95 reward apparently for each)</li>
+</ul>
+<h3 id="usn-5520-1-usn-5520-2-http-daemon-vulnerability-05-18">[<a href="https://ubuntu.com/security/notices/USN-5520-1">USN-5520-1</a>, <a href="https://ubuntu.com/security/notices/USN-5520-2">USN-5520-2</a>] HTTP-Daemon vulnerability [05:18]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31081">CVE-2022-31081</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Perl library implementing a simple HTTP server - not often used in
+production (since would then use nginx or apache)</li>
+<li>Request smuggling vuln through a crafted Content-Length parameter - could
+then allow requests that would otherwise be rejected</li>
+</ul>
+<h3 id="usn-5519-1-python-vulnerability-05-54">[<a href="https://ubuntu.com/security/notices/USN-5519-1">USN-5519-1</a>] Python vulnerability [05:54]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Impish (21.10), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2015-20107">CVE-2015-20107</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Oldest vuln patched this week - fix and CVE were disclosed back in April
+this year but the bug was first reported back in 2015 - at that time
+there was disagreement between the reporter and the upstream developers
+as to whether this was a real vuln or not - this is a bug in handling of
+mailcap entries - and mailcap is designed to execute arbitrary commands -
+but those defined by the user - whereas in this case, if it was used to
+launch a command on a crafted filename, the filename itself could specify
+the command to be executed, not what the user had thought that they had
+configured via their mailcap entry</li>
+<li>Fixed to appropriately quote the arguments</li>
+</ul>
+<h3 id="usn-5522-1-webkitgtk-vulnerabilities-07-19">[<a href="https://ubuntu.com/security/notices/USN-5522-1">USN-5522-1</a>] WebKitGTK vulnerabilities [07:19]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26710">CVE-2022-26710</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22677">CVE-2022-22677</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Speaking of one of the most updated packages ;)</li>
+<li>WebKitGTK sees regular upstream security releases (similar to Firefox)
+and we publish these as they are released</li>
+<li>UAF via crafted malcious web content -&gt; RCE</li>
+</ul>
+<h3 id="usn-5523-1-libtiff-vulnerabilities-08-02">[<a href="https://ubuntu.com/security/notices/USN-5523-1">USN-5523-1</a>] LibTIFF vulnerabilities [08:02]</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-22844">CVE-2022-22844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19144">CVE-2020-19144</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19131">CVE-2020-19131</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0924">CVE-2022-0924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0909">CVE-2022-0909</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0908">CVE-2022-0908</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0907">CVE-2022-0907</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr deref, div by zero -&gt; DoS</li>
+<li>various OOB reads -&gt; info leak / DoS</li>
+</ul>
+<h3 id="usn-5524-1-harfbuzz-vulnerability-08-37">[<a href="https://ubuntu.com/security/notices/USN-5524-1">USN-5524-1</a>] HarfBuzz vulnerability [08:37]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33068">CVE-2022-33068</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Integer overflow discovered via in-built fuzzer within HarrBuzz combined
+with running HB with <a href="https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html">UBSan</a> to detect memory corruption</li>
+<li>Likely heap buffer overflow -&gt; RCE / crash</li>
+</ul>
+<h3 id="usn-5526-1-pyjwt-vulnerability-08-58">[<a href="https://ubuntu.com/security/notices/USN-5526-1">USN-5526-1</a>] PyJWT vulnerability [08:58]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29217">CVE-2022-29217</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>JSON web token implementation in python</li>
+<li>Supports using various crypto algorithms for signing / validation including SSH public keys etc</li>
+<li>Turns out an attacker could &ldquo;sign&rdquo; a JWT with the public half of an SSH
+key pair as the key for one of the HMAC algorithms - as far as an API
+user of PyJWT would see, the token would then validate the same as if it
+had been actually signed by the private key of the same SSH public key
+pair</li>
+<li>Fixed to disallow the use of SSH public keys as inputs for signing keys</li>
+</ul>
+<h3 id="usn-5527-1-checkmk-vulnerabilities-09-43">[<a href="https://ubuntu.com/security/notices/USN-5527-1">USN-5527-1</a>] Checkmk vulnerabilities [09:43]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24565">CVE-2022-24565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40906">CVE-2021-40906</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36563">CVE-2021-36563</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-9781">CVE-2017-9781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-14955">CVE-2017-14955</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>system monitoring system / framework</li>
+<li>various XSS vulns in web console, ability to read sensitive info from GUI
+crash report</li>
+</ul>
+<h3 id="usn-5525-1-apache-xml-security-for-java-vulnerability-09-56">[<a href="https://ubuntu.com/security/notices/USN-5525-1">USN-5525-1</a>] Apache XML Security for Java vulnerability [09:56]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-40690">CVE-2021-40690</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Vuln in handling of crafted XPath transform, where an attacker could read
+arbitrary local XML files</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="22-dot-10-mid-cycle-product-roadmap-sprint-10-13">22.10 mid-cycle product roadmap sprint [10:13]</h3>
+<ul>
+<li>This week is the 22.10 mid-cycle product roadmap sprint at Canonical</li>
+<li>Engineering teams at Canonical work on a 6-month development cycle,
+in-line with the Ubuntu release cycle - even though not all teams work on
+Ubuntu</li>
+<li>Each 6 month cycle consists of 3 week-long sprint sessions - 2 product
+roadmap sprints, and 1 engineering sprint</li>
+<li>At the start of each cycle there is an initial product roadmap sprint to
+review the progress / achievements etc of the previous 6 month
+development cycle and set the goals for the coming development cycle.</li>
+<li>At the approximate mid-point of that new development cycle, 3 months
+later, there is the mid-cycle product roadmap sprint to review progress
+etc along the way</li>
+<li>Generally consists of managers and senior technical team members from
+each team presenting on their progress etc and reviews it with the other
+teams, plus there many cross-team meetings etc</li>
+<li>Traditionally these were in-person events but with COVID etc they all
+moved to being virtual - this year has seen the resumption of in-person
+sprints for the start-of-roadmap sprints but the mid-cycle ones are still
+virtual</li>
+<li>As far as the security team is concerned, we talked over various topics
+like progress on FIPS certification for 22.04 LTS, as well as various
+AppArmor enhancements, as well as customer specific work-items and
+general progress on maintenence tasks like CVE patching, MIR security
+reviews and more.</li>
+<li>Next roadmap sprint will be at the end of October to review how this
+cycle went <strong>and</strong> to set the goals for 23.04 cycle - this will also be
+followed by an engineering sprint, where all members of the engineering
+sprint get together for a week <strong>in-person</strong> to collaborate and hack on
+whatever their team needs</li>
+<li>That will then also be followed by a new revived <a href="https://www.omgubuntu.co.uk/2022/04/ubuntu-summit-returns-in-autumn-2022">Ubuntu Summit</a> (modeled
+somewhat like the old Ubuntu Developer Summits) - a chance for folks from
+the community to gather in person alongside folks from Canonical to
+discuss and drive forwards various features for Ubuntu and the like.</li>
+<li>Exciting times ahead!</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-168/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-169\/",
+        text: "Episode 169"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
