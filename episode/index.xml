@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 22 Jul 2022 23:17:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2022 14:36:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,218 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 170</title>
+          <link>https://ubuntusecuritypodcast.org/episode-170/</link>
+          <pubDate>Fri, 29 Jul 2022 14:36:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>7f865994becd82b4b740912dcdec4611f3c1aa21498d64af237b68281f63af8b6ccef116c10f64b7a2837fecfd3747c5a83e2196f99070f116a6352625598db2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 170</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we&#39;re diving down into the depths of binary exploitation and
+  analysis, looking at a number of recent vulnerability and malware
+  teardowns, plus we cover security updates for FreeType, PHP, ImageMagick,
+  protobuf-c and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we&#39;re diving down into the depths of binary exploitation and
+  analysis, looking at a number of recent vulnerability and malware
+  teardowns, plus we cover security updates for FreeType, PHP, ImageMagick,
+  protobuf-c and more.
+  </itunes:summary>
+        <description>  This week we&#39;re diving down into the depths of binary exploitation and
+  analysis, looking at a number of recent vulnerability and malware
+  teardowns, plus we cover security updates for FreeType, PHP, ImageMagick,
+  protobuf-c and more.
+  </description>
+        <googleplay:description>  This week we&#39;re diving down into the depths of binary exploitation and
+  analysis, looking at a number of recent vulnerability and malware
+  teardowns, plus we cover security updates for FreeType, PHP, ImageMagick,
+  protobuf-c and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we&rsquo;re diving down into the depths of binary exploitation and
+analysis, looking at a number of recent vulnerability and malware
+teardowns, plus we cover security updates for FreeType, PHP, ImageMagick,
+protobuf-c and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>22 unique CVEs addressed</p>
+<h3 id="usn-5528-1-freetype-vulnerabilities-01-03">[<a href="https://ubuntu.com/security/notices/USN-5528-1">USN-5528-1</a>] FreeType vulnerabilities [01:03]</h3>
+<ul>
+<li>4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31782">CVE-2022-31782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27406">CVE-2022-27406</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27405">CVE-2022-27405</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-27404">CVE-2022-27404</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various heap buffer overflows - all which could be triggered from a
+crafted font file</li>
+</ul>
+<h3 id="usn-5529-1-linux-kernel--oem--vulnerabilities-01-22">[<a href="https://ubuntu.com/security/notices/USN-5529-1">USN-5529-1</a>] Linux kernel (OEM) vulnerabilities [01:22]</h3>
+<ul>
+<li>11 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34495">CVE-2022-34495</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34494">CVE-2022-34494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21166">CVE-2022-21166</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21125">CVE-2022-21125</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21123">CVE-2022-21123</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2078">CVE-2022-2078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1973">CVE-2022-1973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1852">CVE-2022-1852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1789">CVE-2022-1789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.17 22.04 LTS OEM</li>
+</ul>
+<h3 id="usn-5530-1-php-vulnerability-01-41">[<a href="https://ubuntu.com/security/notices/USN-5530-1">USN-5530-1</a>] PHP vulnerability [01:41]</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31627">CVE-2022-31627</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>php-8.1 in 22.04 LTS - heap buffer overflow in <code>finfo_buffer</code> function -
+used to get info etc from a binary string - in the example in the
+upstream documentation shows using this function to get the MIME info of
+a <code>$_POST</code> parameter - so likely this is being used in a bunch of places on
+untrusted data - DoS/RCE</li>
+</ul>
+<h3 id="usn-5532-1-bottle-vulnerability-02-34">[<a href="https://ubuntu.com/security/notices/USN-5532-1">USN-5532-1</a>] Bottle vulnerability [02:34]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31799">CVE-2022-31799</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Python framework for building web-applications</li>
+<li>Failed to handle errors properly - could allow a remote request to
+trigger an exception -&gt; DoS</li>
+</ul>
+<h3 id="usn-5533-1-vim-vulnerability-02-50">[<a href="https://ubuntu.com/security/notices/USN-5533-1">USN-5533-1</a>] Vim vulnerability [02:50]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2129">CVE-2022-2129</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Another OOB write in vim -&gt; crash / RCE</li>
+</ul>
+<h3 id="usn-5534-1-imagemagick-vulnerabilities-02-58">[<a href="https://ubuntu.com/security/notices/USN-5534-1">USN-5534-1</a>] ImageMagick vulnerabilities [02:58]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-32547">CVE-2022-32547</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32546">CVE-2022-32546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32545">CVE-2022-32545</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Someone has been running ImageMagick via UBSAN - found a number of cases
+of possible UB - impact is not clear but could be possible to crash/RCE
+etc</li>
+</ul>
+<h3 id="usn-5531-1-protobuf-c-vulnerability-02-32">[<a href="https://ubuntu.com/security/notices/USN-5531-1">USN-5531-1</a>] protobuf-c vulnerability [02:32]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33070">CVE-2022-33070</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used to compile protobuf specification to C code along with a library
+which is then linked against that generated code to marshal/unmarshal
+protobuf&rsquo;s</li>
+<li>Invalid arithmetic shift - previous code would right shift signed values
+which is implementation defined - so depending on what compiler was used
+could have different behaviour - and thus result in code that would write
+outside of memory bounds etc - fixed by converting the code to cast to
+unsigned type before shifting so that the behaviour is known</li>
+</ul>
+<h2 id="goings-on-in-linux-security-community">Goings on in Linux Security Community</h2>
+<h3 id="introduction-to-x64-linux-binary-exploitation-by-ch0pin-04-24">Introduction to x64 Linux Binary Exploitation by <a href="https://twitter.com/ch0pin">@ch0pin</a> [04:24]</h3>
+<ul>
+<li>Great series of blog posts from earlier this year</li>
+<li>Starts by creating a small program with a basic stack buffer overflow
+vulnerability</li>
+<li>Then disables all the various hardening features which have been added to
+Ubuntu to then allow it to be easily exploited</li>
+<li>Along the way explains memory layout, processor architecture etc to help
+understand the process of developing exploits</li>
+<li>Further blog posts in the series then start to enable the various
+hardening features one-by-one and in the process walk through more
+detailed and complex techniques for defeating these</li>
+<li>Great insight to the process - also includes good references along the
+way to other sources of documentation / information on related concepts</li>
+</ul>
+<h4 id="part-1-basic-buffer-overflow">Part 1 - Basic Buffer Overflow</h4>
+<ul>
+<li><a href="https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-1-14ad4a27aeef">https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-1-14ad4a27aeef</a></li>
+</ul>
+<h4 id="part-2-return-into-libc">Part 2 - Return into libc</h4>
+<ul>
+<li><a href="https://valsamaras.medium.com/introduction-to-x64-binary-exploitation-part-2-return-into-libc-c325017f465">https://valsamaras.medium.com/introduction-to-x64-binary-exploitation-part-2-return-into-libc-c325017f465</a></li>
+</ul>
+<h4 id="part-3-rop-gadgets-and-chain">Part 3 - RoP gadgets and chain</h4>
+<ul>
+<li><a href="https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-3-rop-chains-3cdcf17e8826">https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-3-rop-chains-3cdcf17e8826</a></li>
+</ul>
+<h4 id="part-4-stack-canaries">Part 4 - Stack Canaries</h4>
+<ul>
+<li><a href="https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-4-stack-canaries-e9b6dd2c3127">https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-4-stack-canaries-e9b6dd2c3127</a></li>
+</ul>
+<h4 id="part-5-aslr-overview-and-bypass-technique">Part 5 - ASLR overview and bypass technique</h4>
+<ul>
+<li><a href="https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-5-aslr-394d0dc8e4fb">https://valsamaras.medium.com/introduction-to-x64-linux-binary-exploitation-part-5-aslr-394d0dc8e4fb</a></li>
+</ul>
+<h3 id="cve-2022-20186-vulnerability-plus-exploit-walkthrough-by-github-07-04">CVE-2022-20186 vulnerability + exploit walkthrough by Github [07:04]</h3>
+<ul>
+<li><a href="https://github.blog/2022-07-27-corrupting-memory-without-memory-corruption/">https://github.blog/2022-07-27-corrupting-memory-without-memory-corruption/</a></li>
+<li>Vulnerability in the ARM Mali GPU driver in the Android kernel</li>
+<li>Walks through the code to give a good understanding of how memory pages
+are handled by the driver and then eventually how this can be exploited
+from userspace to overwrite arbitrary kernel memory due to an integer
+overflow bug</li>
+<li>Even includes an exploit for Pixel 6 (patched with the June Pixel update
+from Google)</li>
+<li>Interesting footnote about how the patch for the vuln was visible in the
+Android tree 2 weeks before the vulnerability was disclosed</li>
+</ul>
+<h3 id="a-detailed-technical-teardown-of-symbiote-by-geekscyber-08-49">A detailed technical teardown of Symbiote by <a href="https://twitter.com/GeeksCyber">@GeeksCyber</a> [08:49]</h3>
+<ul>
+<li><a href="https://cybergeeks.tech/how-to-analyze-linux-malware-a-case-study-of-symbiote/">https://cybergeeks.tech/how-to-analyze-linux-malware-a-case-study-of-symbiote/</a></li>
+<li>We covered a different teardown of Symbiote back in <a href="https://ubuntusecuritypodcast.org/episode-163/">Episode 163</a> - this
+one has a fair bit more technical details along with disassembled code
+sections - good chance to put your skills in Linux binary exploitation to
+the test to follow along with the analysis</li>
+</ul>
+<h3 id="the-utopic-tale-of-ubuntu-by-the-linux-user-space-podcast-09-31">The Utopic Tale of Ubuntu by the Linux User Space podcast [09:31]</h3>
+<ul>
+<li><a href="https://www.linuxuserspace.show/302">https://www.linuxuserspace.show/302</a></li>
+<li>Starts around 9:45 - covers every year of Ubuntu from 2004 through to now
+along with the major developments / highlights and some low-lights along
+the way</li>
+<li>Great walk down memory lane / background for those new to Ubuntu</li>
+<li>Not really security specific but is a great listen (beware goes for over
+1.5 hours)</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E170.mp3" length="9252288" type="audio/mpeg" /><itunes:duration>669</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 169</title>
           <link>https://ubuntusecuritypodcast.org/episode-169/</link>
