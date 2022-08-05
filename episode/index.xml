@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 29 Jul 2022 14:36:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 5 Aug 2022 22:18:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,397 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 171</title>
+          <link>https://ubuntusecuritypodcast.org/episode-171/</link>
+          <pubDate>Fri, 05 Aug 2022 22:18:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>5cdcc2c0bd2d2f825af0ec52ac6e4c43a7b1b3b420af9a71e46cde9ee0fbfa5fee9cb5604e8138b824977826ea69695a65cf021f5e8cc48e3b5b67b4417f9d90</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 171</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we dig into what community sponsored security updates are all
+  about, plus Ubuntu 22.04.1 LTS gets delayed by a week and we cover security
+  updates for MySQL, the Linux kernel, Samba, Net-SNMP and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we dig into what community sponsored security updates are all
+  about, plus Ubuntu 22.04.1 LTS gets delayed by a week and we cover security
+  updates for MySQL, the Linux kernel, Samba, Net-SNMP and more.
+  </itunes:summary>
+        <description>  This week we dig into what community sponsored security updates are all
+  about, plus Ubuntu 22.04.1 LTS gets delayed by a week and we cover security
+  updates for MySQL, the Linux kernel, Samba, Net-SNMP and more.
+  </description>
+        <googleplay:description>  This week we dig into what community sponsored security updates are all
+  about, plus Ubuntu 22.04.1 LTS gets delayed by a week and we cover security
+  updates for MySQL, the Linux kernel, Samba, Net-SNMP and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we dig into what community sponsored security updates are all
+about, plus Ubuntu 22.04.1 LTS gets delayed by a week and we cover security
+updates for MySQL, the Linux kernel, Samba, Net-SNMP and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>75 unique CVEs addressed</p>
+<h3 id="usn-5535-1-intel-microcode-vulnerabilities-00-43">[<a href="https://ubuntu.com/security/notices/USN-5535-1">USN-5535-1</a>] Intel Microcode vulnerabilities [00:43]</h3>
+<ul>
+<li>10 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33120">CVE-2021-33120</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33117">CVE-2021-33117</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21166">CVE-2022-21166</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21151">CVE-2022-21151</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21125">CVE-2022-21125</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21127">CVE-2022-21127</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21123">CVE-2022-21123</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0127">CVE-2021-0127</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0146">CVE-2021-0146</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-0145">CVE-2021-0145</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream release IPU 2022.1</li>
+<li><a href="/episode-165/#usn-5486-1-intel-microcode-vulnerabilities-06-01">[USN-5486-1] Intel Microcode vulnerabilities</a></li>
+<li>Includes fixes for MMIO stale data which we covered in <a href="/episode-164/#news-on-latest-intel-security-issues-06-33">News on latest Intel security issues in Episode 164</a></li>
+</ul>
+<h3 id="usn-5537-1-usn-5537-2-mysql-vulnerabilities-01-22">[<a href="https://ubuntu.com/security/notices/USN-5537-1">USN-5537-1</a>, <a href="https://ubuntu.com/security/notices/USN-5537-2">USN-5537-2</a>] MySQL vulnerabilities [01:22]</h3>
+<ul>
+<li>18 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21569">CVE-2022-21569</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21553">CVE-2022-21553</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21547">CVE-2022-21547</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21539">CVE-2022-21539</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21538">CVE-2022-21538</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21537">CVE-2022-21537</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21534">CVE-2022-21534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21531">CVE-2022-21531</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21530">CVE-2022-21530</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21529">CVE-2022-21529</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21528">CVE-2022-21528</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21527">CVE-2022-21527</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21526">CVE-2022-21526</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21525">CVE-2022-21525</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21522">CVE-2022-21522</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21517">CVE-2022-21517</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21515">CVE-2022-21515</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21509">CVE-2022-21509</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest point releases from Oracle</li>
+<li>8.0.30 for 20.04 and 22.04 LTS</li>
+<li>5.7.39 for 18.04 LTS and 16.04 ESM</li>
+<li>As always - includes both security and bug fixes as well as new features
+and possible incompatible changes</li>
+</ul>
+<h3 id="usn-5538-1-libtirpc-vulnerability-01-59">[<a href="https://ubuntu.com/security/notices/USN-5538-1">USN-5538-1</a>] libtirpc vulnerability [01:59]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-46828">CVE-2021-46828</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Transport independent RPC library - Used by autofs, libvirt, nfs-utils,
+python, samba, yp-tools and lots more</li>
+<li>Failed to properly handle timeouts from idle clients - would still keep a
+file descriptor open and eventually would exhaust available fds so could
+then not accept new connections (since it would also not handle the case
+of no available fds either and would spin in a busy loop trying to accept
+new connections) - CPU-based DoS</li>
+</ul>
+<h3 id="usn-5536-1-firefox-vulnerabilities-02-47">[<a href="https://ubuntu.com/security/notices/USN-5536-1">USN-5536-1</a>] Firefox vulnerabilities [02:47]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36320">CVE-2022-36320</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36319">CVE-2022-36319</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36318">CVE-2022-36318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36316">CVE-2022-36316</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36315">CVE-2022-36315</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2505">CVE-2022-2505</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>103.0</li>
+<li>Firefox is now a snap on 22.04 LTS so gets updated automatically by
+Mozilla</li>
+</ul>
+<h3 id="usn-5544-1-linux-kernel-vulnerabilities-03-06">[<a href="https://ubuntu.com/security/notices/USN-5544-1">USN-5544-1</a>] Linux kernel vulnerabilities [03:06]</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28893">CVE-2022-28893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 22.04 LTS GA / 20.04 LTS HWE</li>
+<li>UAF in Atheros ath9k driver when handling certain error conditions, Sun
+RPC and floppy driver</li>
+<li>Also a type confusion bug in netfilter - local user who has <code>CAP_NET_ADMIN</code>
+(which can be done via mapping to root in an unprivileged user
+namespace) -&gt; privesc</li>
+</ul>
+<h3 id="usn-5545-1-linux-kernel--oem--vulnerability-03-49">[<a href="https://ubuntu.com/security/notices/USN-5545-1">USN-5545-1</a>] Linux kernel (OEM) vulnerability [03:49]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>netfilter privesc above for 5.14 and 5.17 OEM kernels in 20.04 and 22.04
+LTS respectively</li>
+</ul>
+<h3 id="usn-5539-1-linux-kernel-vulnerabilities-04-11">[<a href="https://ubuntu.com/security/notices/USN-5539-1">USN-5539-1</a>] Linux kernel vulnerabilities [04:11]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33981">CVE-2022-33981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28388">CVE-2022-28388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1789">CVE-2022-1789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1204">CVE-2022-1204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1199">CVE-2022-1199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1195">CVE-2022-1195</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - NVIDIA BlueField on 20.04 LTS and GCP/GKE 18.04 LTS</li>
+<li>6 out of 7 are various UAF bugs - 3 in the AX.25 amateur radio protocol
+driver, 1 in 6pack and mkiss protocol drivers, 1 in 8 Devices USB2CAN and
+1 in floppy driver</li>
+<li>KVM hypervisor failed to handle guest TLB invalidations - guest could
+then corrupt host memory</li>
+<li>Result of all these is memory corruption -&gt; crash / code-execution</li>
+</ul>
+<h3 id="usn-5541-1-linux-kernel--azure--vulnerabilities-05-04">[<a href="https://ubuntu.com/security/notices/USN-5541-1">USN-5541-1</a>] Linux kernel (Azure) vulnerabilities [05:04]</h3>
+<ul>
+<li>11 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-28389">CVE-2022-28389</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28388">CVE-2022-28388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2380">CVE-2022-2380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1516">CVE-2022-1516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1353">CVE-2022-1353</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1204">CVE-2022-1204</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1199">CVE-2022-1199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1198">CVE-2022-1198</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1011">CVE-2022-1011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4197">CVE-2021-4197</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 azure</li>
+<li>Most of the same vulnerabilities mentioned earlier plus some covered in
+previous episodes - cgroup process migration privesc, UAF in FUSE etc</li>
+</ul>
+<h3 id="usn-5540-1-linux-kernel-vulnerabilities-05-26">[<a href="https://ubuntu.com/security/notices/USN-5540-1">USN-5540-1</a>] Linux kernel vulnerabilities [05:26]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25375">CVE-2022-25375</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-25258">CVE-2022-25258</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20141">CVE-2022-20141</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 - 16.04 ESM GA (lowlatency, AWS, KVM etc) + 14.04 ESM</li>
+<li>race-condition -&gt; UAF in IGMP protocol impl - local user -&gt; DoS /
+code-exec</li>
+<li>Memory corruption in USB gadget driver</li>
+<li>OOB read in RNDIS driver -&gt; info leak / crash</li>
+<li>netfilter privesc</li>
+</ul>
+<h3 id="usn-5542-1-samba-vulnerabilities-06-06">[<a href="https://ubuntu.com/security/notices/USN-5542-1">USN-5542-1</a>] Samba vulnerabilities [06:06]</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-32746">CVE-2022-32746</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32745">CVE-2022-32745</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32744">CVE-2022-32744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32742">CVE-2022-32742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2031">CVE-2022-2031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3670">CVE-2021-3670</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Didn&rsquo;t handle <code>MaxQueryDuration</code> as expected</li>
+<li>Possible privesc since restrictions were not enforced properly when
+changing passwords</li>
+<li>Separate password-based privesc since could forge a password request with
+your own key that was destined for another user and therefore change
+their password (including domain admin)</li>
+<li>Memory corruption via crafted LDAP request -&gt; DoS / info leak</li>
+<li>Unfortunately due to the large amount of code-churn in samba from the
+version used in 18.04 LTS (4.7.6) compared to the current upstream
+release (4.16.x) it is not possible to backport these patches without a
+reasonable risk of introducing a regression - as such users of samba in
+18.04 LTS who are concerned about these vulnerabilities are advised to
+upgrade to Ubuntu 20.04 LTS or newer to continue receiving security
+support for samba</li>
+</ul>
+<h3 id="usn-5543-1-net-snmp-vulnerabilities-07-25">[<a href="https://ubuntu.com/security/notices/USN-5543-1">USN-5543-1</a>] Net-SNMP vulnerabilities [07:25]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24810">CVE-2022-24810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24809">CVE-2022-24809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24808">CVE-2022-24808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24807">CVE-2022-24807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24806">CVE-2022-24806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24805">CVE-2022-24805</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption bugs (OOB reads, NULL ptr derefs, buffer
+overflows) which could be triggered via crafted SNMP requests -&gt; crash
+(DoS), RCE</li>
+</ul>
+<h3 id="usn-5463-2-ntfs-3g-vulnerabilities-07-45">[<a href="https://ubuntu.com/security/notices/USN-5463-2">USN-5463-2</a>] NTFS-3G vulnerabilities [07:45]</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30787">CVE-2022-30787</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30785">CVE-2022-30785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30789">CVE-2022-30789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30788">CVE-2022-30788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30786">CVE-2022-30786</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30784">CVE-2022-30784</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30783">CVE-2022-30783</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-163/#usn-5463-1-ntfs-3g-vulnerabilities-06-41">[USN-5463-1] NTFS-3G vulnerabilities - Episode 163</a></li>
+<li>DoS / RCE via mounting crafted disk image, mishandling of file handles -
+arbitrary memory R/W, intercept traffic between FUSE and kernel -&gt; info
+leak etc</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="an-overview-of-the-community-security-updates-sponsoring-process-08-20">An overview of the community security updates sponsoring process [08:20]</h3>
+<ul>
+<li>Ubuntu Security team supports packages in main+restricted as per <a href="https://wiki.ubuntu.com/SecurityTeam/FAQ#Standard_Support">standard support</a></li>
+<li>Universe (and multiverse) components are supported by the community</li>
+<li>The ideal process here is a community member files a bug on LP,
+subscribes the <a href="https://launchpad.net/~ubuntu-security-sponsors">Ubuntu Security Sponsors team</a> and attaches a debdiff</li>
+<li>What is a debdiff?
+<ul>
+<li>A debdiff is a diff of the source package between the current version
+in the Ubuntu archive and the new updated version being proposed</li>
+</ul>
+</li>
+<li>What should the debdiff contain?
+<ul>
+<li>The bare minimum of changes required to patch the vulnerability
+<ul>
+<li>ie. a patch file derived from the original upstream project&rsquo;s patch
+which fixed the vulnerability, as well as a new changelog entry
+describing this update</li>
+<li>In general even though an upstream project may release a new version
+of their software when patching security vulnerabilies, in Ubuntu we
+will not just upgrade to this new version (in the lifetime of a
+stable release) to fix the vulnerability - instead we will just
+cherry-pick the minimal change required to fix the issue and apply
+this ontop of the older version of the software which is maintained
+for the life a given Ubuntu release</li>
+<li>This reduces the chance of introducing a regression due to new
+upstream features getting introduced etc
+<ul>
+<li><a href="https://wiki.ubuntu.com/SecurityTeam/FAQ#Versions">https://wiki.ubuntu.com/SecurityTeam/FAQ#Versions</a></li>
+<li><a href="https://wiki.ubuntu.com/StableReleaseUpdates#Why">https://wiki.ubuntu.com/StableReleaseUpdates#Why</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Regarding patches - most packages use <a href="https://wiki.debian.org/UsingQuilt">Quilt</a> to manage the set of
+patches that get applied ontop of the upstream source tarball within a
+debian package</li>
+<li>Therefore the debdiff should likely be a new patch file within the
+<code>debian/patches</code> directory as well as a corresponding entry for it in the
+<code>debian/patches/series</code> file, and then a new <code>debian/changelog</code> entry</li>
+<li>Sometimes to backport a fix other supporting commits from the upstream
+project may be needed - these can then be included as additional patch
+files too</li>
+</ul>
+</li>
+<li>What happens next?
+<ul>
+<li>Ubuntu Security team member reviews the debiff to make sure it conforms
+to the above - in particular to check that the original upstream patch
+was used and no other changes were introduced (again to make sure we
+keep the risk of regression low and so we have provenance of the code
+which has been introduced)</li>
+<li>Will usually do a local build of the package and then upload it to the
+<a href="https://launchpad.net/~ubuntu-security-proposed/+archive/ubuntu/ppa/">Ubuntu Security Proposed PPA</a> - this is a publicly accessible PPA which
+allows the resulting candidate packages to be tested by the Security
+Team member as well as the community member</li>
+<li>Once testing looks good, the package can be published to the Ubuntu
+archive along with an associated USN</li>
+</ul>
+</li>
+<li>A recent examples of this is in
+<a href="https://bugs.launchpad.net/ubuntu/+source/spip/+bug/1971185">https://bugs.launchpad.net/ubuntu/+source/spip/+bug/1971185</a> which
+corresponded to <a href="/episode-165/#usn-5482-1-spip-vulnerabilities-07-55">USN-5482-1 - SPIP for bionic</a></li>
+<li>The team maintains a lot of documentation on how we set up our local
+<a href="https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment">build</a> and <a href="https://wiki.ubuntu.com/SecurityTeam/TestingEnvironment">testing</a> environments to make the process a lot easier - in
+particular the <code>umt</code> tool which can be used for managing most of these
+steps (ie. downloading source packages, adding a new changelog entry,
+building the package locally in a schroot, testing the package locally in
+a VM etc)</li>
+</ul>
+<h3 id="ubuntu-22-dot-04-dot-1-release-delayed-17-00">Ubuntu 22.04.1 release delayed [17:00]</h3>
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/jammy-jellyfish-22-04-1-lts-point-release-status-tracking/29102">https://discourse.ubuntu.com/t/jammy-jellyfish-22-04-1-lts-point-release-status-tracking/29102</a></li>
+<li>Delayed until 11th August - can see test status on the <a href="http://iso.qa.ubuntu.com/qatracker/milestones/437/builds">ISO tracker</a> -
+essentially was a bug in snapd when being installed in OEM mode
+<ul>
+<li>Used by OEMs to install Ubuntu on machines so that when first powered
+on by the end user they are offered to setup the machine (create a
+local user account, set timezone/language etc)</li>
+</ul>
+</li>
+<li>Bug is that firefox wouldn&rsquo;t run</li>
+<li>As earlier, Firefox is now a snap in 22.04 LTS - and the bug is that all
+snaps which are seeded (ie. shipped on the ISO and installed OOTB) would
+not run
+<ul>
+<li>only 2 applications fit this - firefox and snap-store - but both are
+crucial applications (ie web browser and app store)</li>
+</ul>
+</li>
+<li>snaps are squashfs images that get mounted on boot as systemd mount units</li>
+<li>like many systemd units, they specify as <code>WantedBy=multi-user.target</code> - ie
+the multi-user target wants them which ensures they are mounted during
+normal boot (equivalent to runlevel 2 - ie. not a rescue shell or
+shutdown etc) - so basically any normal boot of the system and they
+should be mounted</li>
+<li>During OEM mode though, on that first boot by the user, the OEM installer
+has set the boot target to it&rsquo;s own <code>oem-config.target</code> so it can run first
+(to create a new user etc) - and then once it is done it sets the target
+to the usual <code>graphical.target</code> which includes <code>multi-user.target</code></li>
+<li>Everything then should work though as we do eventually hit the right target</li>
+<li>Current thinking is that the new <code>snapd-desktop-integration</code> which is used
+to try and automatically install theme snaps and the like to match the
+system theme - gets started as part of the <code>oem-config</code> and it then
+pokes the <code>snapd.socket</code> which causes <code>snapd.service</code> to be started - yet the
+snap mount units are not in place, so snapd can&rsquo;t see any of the expected
+snaps, as such it fails to correctly generate their state information</li>
+<li>when they do go to be run, they have none of their expected interfaces
+defined or connected and so cannot access anything and fail - and even a
+reboot doesn&rsquo;t help as the old invalid state is still kept even though
+the snaps are now mounted correctly</li>
+<li>requires a fix in snapd so that the mount units specify not just
+<code>multi-user.target</code> but <code>default.target</code> so they get mounted no matter what
+target is being booted into</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E171.mp3" length="15962550" type="audio/mpeg" /><itunes:duration>1372</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 170</title>
           <link>https://ubuntusecuritypodcast.org/episode-170/</link>
