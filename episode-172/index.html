@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+  plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+  Django, libxml, the Linux kernel and more.
+  ">
+
+<meta name="generator" content="Hugo 0.101.0" />
+
+<meta property="og:title" content="Episode 172" />
+<meta name="twitter:title" content="Episode 172"/>
+<meta itemprop="name" content="Episode 172">
+<meta property="article:published_time" content="2022-08-12T17:31:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-08-12T17:32:02&#43;09:30" />
+<meta property="og:updated_time" content="2022-08-12T17:32:02&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+  plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+  Django, libxml, the Linux kernel and more.
+  " />
+    <meta name="twitter:description" content="  Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+  plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+  Django, libxml, the Linux kernel and more.
+  " />
+    <meta itemprop="description" content="  Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+  plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+  Django, libxml, the Linux kernel and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-172/" />
+
+
+
+
+<title>Episode 172</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-172/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 172</h1><small>Posted on Friday, Aug 12, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+Django, libxml, the Linux kernel and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E172.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>Finally, Ubuntu 22.04.1 LTS is released and we look at how best to upgrade,
+plus we cover security updates for NVIDIA graphics drivers, OpenJDK,
+Django, libxml, the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>52 unique CVEs addressed</p>
+<h3 id="usn-5547-1-nvidia-graphics-drivers-vulnerabilities-00-43">[<a href="https://ubuntu.com/security/notices/USN-5547-1">USN-5547-1</a>] NVIDIA graphics drivers vulnerabilities [00:43]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31608">CVE-2022-31608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31615">CVE-2022-31615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31607">CVE-2022-31607</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Local priv-esc by user with basic capabilities (?) - likely memory
+corruption since apparently could also DoS, perform data tampering and
+info leaks</li>
+<li>Also NULL ptr deref in kernel driver able to be triggered from &ldquo;local
+user with basic capabilities&rdquo; -&gt; DoS</li>
+<li>Also shipped a DBus configuration for the <a href="https://download.nvidia.com/XFree86/Linux-x86_64/510.60.02/README/dynamicboost.html">Dynamic Boost component</a> - this
+is a system wide power controller which manages CPU and GPU power basd on
+overall system workload to get best system performance per watt -
+according to upstream documentation. Is only active when on AC power.
+<ul>
+<li>Is not enabled by default but shipped a DBus policy file that allowed
+any process to communicate with the nvidia-powerd server and hence to
+perform privileged actions through it</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5546-1-usn-5546-2-openjdk-vulnerabilities-03-09">[<a href="https://ubuntu.com/security/notices/USN-5546-1">USN-5546-1</a>, <a href="https://ubuntu.com/security/notices/USN-5546-2">USN-5546-2</a>] OpenJDK vulnerabilities [03:09]</h3>
+<ul>
+<li>10 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34169">CVE-2022-34169</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21549">CVE-2022-21549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21541">CVE-2022-21541</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21540">CVE-2022-21540</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21496">CVE-2022-21496</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21476">CVE-2022-21476</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21443">CVE-2022-21443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21434">CVE-2022-21434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21426">CVE-2022-21426</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-21449">CVE-2022-21449</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>openjdk-8,11,17 for Ubuntu 18.04, 20.04 &amp; 22.04 LTS</li>
+<li>openjdk-8 for Ubuntu 16.04 ESM</li>
+<li>Most interesting is <a href="https://neilmadden.blog/2022/04/19/psychic-signatures-in-java/">&ldquo;Psychic Signatures&rdquo;</a> bug - described even in the
+upstream advisory as an &ldquo;easily exploitable vuln&rdquo;, where an attacker
+could forge certain SSL certificates (ie ones using ECDSA signatures) and
+hence allow them to intercept or modify communications without being
+detected.</li>
+<li>When adding support for validating ECDSA signatures, failed to check the
+provided signature values were not zero - a signature consists of two
+values, <code>r</code> and <code>s</code> and these are used to then perform a bunch of
+calculations to check it is valid - this involves comparing <code>r</code> against <code>r</code>
+multiplied by a value derived from <code>s</code> - so if <code>r</code> and <code>s</code> are both zero you
+effectively check <code>0 = 0</code></li>
+<li>Affects anything which uses ECDSA signatures - including signed JWTs,
+SAML assertions, WedAuthn messages etc</li>
+<li>This only affected openjdk 15 though 18 since this code was rewritten in
+native Java (previously was C++ which was not vulnerable) for Java 15 -
+so for Ubuntu this is openjdk-17 only which is not the default JRE
+(openjdk-11 is)</li>
+</ul>
+<h3 id="usn-5549-1-django-vulnerability-06-16">[<a href="https://ubuntu.com/security/notices/USN-5549-1">USN-5549-1</a>] Django vulnerability [06:16]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36359">CVE-2022-36359</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible &ldquo;Reflected File Download&rdquo; attack - attack type first detailed at
+BH Euroe in 2014 - causes a web application to &ldquo;virtually&rdquo; download a file from a
+trusted domain - which then can get executed since is trusted</li>
+<li>Usually involves the application failing to validate input such that an
+attacker can craft header content to get reflected into the response
+body - this is then the contents for a file, as well as get some content
+injected in the resulting filename - and then cause the response to be
+downloaded which will</li>
+<li>In this case, if a Django application was setting the <code>Content-Disposition</code>
+header of a <code>FileResponse</code> object based on a filename which is derived from
+user input - fixed to escape the filename so can&rsquo;t then inject content
+into the <code>Content-Disposition</code> header</li>
+</ul>
+<h3 id="usn-5550-1-gnutls-vulnerabilities-07-55">[<a href="https://ubuntu.com/security/notices/USN-5550-1">USN-5550-1</a>] GnuTLS vulnerabilities [07:55]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2509">CVE-2022-2509</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4209">CVE-2021-4209</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL pointer deref and double-free during verification of pkcs7
+signatures -&gt; DoS / RCE</li>
+</ul>
+<h3 id="usn-5551-1-mod-wsgi-vulnerability-08-10">[<a href="https://ubuntu.com/security/notices/USN-5551-1">USN-5551-1</a>] mod-wsgi vulnerability [08:10]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2255">CVE-2022-2255</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Would pass through the <code>X-Client-IP</code> header to <code>WSGI</code> applications, even when
+it came from an untrusted proxy and hence could allow unintended access
+to services</li>
+</ul>
+<h3 id="usn-5548-1-libxml2-vulnerability-08-32">[<a href="https://ubuntu.com/security/notices/USN-5548-1">USN-5548-1</a>] libxml2 vulnerability [08:32]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2016-3709">CVE-2016-3709</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possible HTML/code injection -&gt; XSS since would fail to properly handle
+escape server-side includes</li>
+<li>Reported back in 2016 to GNOME project, was seemingly ignored until the
+offending commit which introduced the vuln was reverted ~2 years ago</li>
+<li>Later versions not affected then</li>
+<li>CVE only assigned a few weeks ago</li>
+<li>Interestingly the discussion in 2018 included a pointer to three
+different CVEs in other XML/HTML parsing and sanitization libraries for
+the same type of issue - but in this case was ignored and no CVE assigned
+until now</li>
+</ul>
+<h3 id="usn-5552-1-phpliteadmin-vulnerability-11-29">[<a href="https://ubuntu.com/security/notices/USN-5552-1">USN-5552-1</a>] phpLiteAdmin vulnerability [11:29]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-46709">CVE-2021-46709</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>XSS through failure to validate the <code>newRows</code> parameter</li>
+</ul>
+<h3 id="usn-5553-1-libjpeg-turbo-vulnerabilities-11-42">[<a href="https://ubuntu.com/security/notices/USN-5553-1">USN-5553-1</a>] libjpeg-turbo vulnerabilities [11:42]</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-17541">CVE-2020-17541</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-14152">CVE-2020-14152</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-14498">CVE-2018-14498</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-11813">CVE-2018-11813</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption issues -&gt; heap and stack buffer overflows</li>
+<li>Logic issue and a failure to limit overall memory consumption during
+decompression leading to very large memory usage -&gt; DoS</li>
+</ul>
+<h3 id="usn-5554-1-gdk-pixbuf-vulnerability-12-06">[<a href="https://ubuntu.com/security/notices/USN-5554-1">USN-5554-1</a>] GDK-PixBuf vulnerability [12:06]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-46829">CVE-2021-46829</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow for crafted animated GIFs -&gt; code execution
+particularly on 32-bit platforms</li>
+</ul>
+<h3 id="usn-5555-1-gstreamer-good-plugins-vulnerabilities-12-29">[<a href="https://ubuntu.com/security/notices/USN-5555-1">USN-5555-1</a>] GStreamer Good Plugins vulnerabilities [12:29]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2122">CVE-2022-2122</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1925">CVE-2022-1925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1924">CVE-2022-1924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1923">CVE-2022-1923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1922">CVE-2022-1922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1921">CVE-2022-1921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1920">CVE-2022-1920</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various integer overflows etc leading to heap buffer overflows in various
+video codec handlers -&gt; DoS / RCE</li>
+</ul>
+<h3 id="usn-5558-1-libcdio-vulnerabilities-13-00">[<a href="https://ubuntu.com/security/notices/USN-5558-1">USN-5558-1</a>] libcdio vulnerabilities [13:00]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-18199">CVE-2017-18199</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-18198">CVE-2017-18198</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Audio CD read/control library</li>
+<li>2 different memory management issues when handling crafted ISO files -
+heap buffer over-read and NULL pointer dereference -&gt; DoS</li>
+</ul>
+<h3 id="usn-5557-1-linux-kernel-vulnerabilities-13-44">[<a href="https://ubuntu.com/security/notices/USN-5557-1">USN-5557-1</a>] Linux kernel vulnerabilities [13:44]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4</li>
+<li>UAF in Network package scheduler - could create a route filter which when
+removed would still be referred to by other data structures and then
+allow a user to trigger access to this -&gt; DoS / RCE</li>
+<li>Similarly in netfilter, could have one nft object be referred to by an
+nft set in another table -&gt; UAF</li>
+</ul>
+<h3 id="usn-5560-1-usn-5560-2-linux-kernel-vulnerabilities-14-37">[<a href="https://ubuntu.com/security/notices/USN-5560-1">USN-5560-1</a>, <a href="https://ubuntu.com/security/notices/USN-5560-2">USN-5560-2</a>] Linux kernel vulnerabilities [14:37]</h3>
+<ul>
+<li>13 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33981">CVE-2022-33981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1975">CVE-2022-1975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1974">CVE-2022-1974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1195">CVE-2022-1195</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1048">CVE-2022-1048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0494">CVE-2022-0494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 GA for 18.04 LTS, HWE etc for 16.04 ESM, Azure for 14.04 ESM</li>
+<li>Various vulns plus the 2 network related UAFs above</li>
+</ul>
+<h3 id="usn-5561-1-gnome-web-vulnerabilities-14-58">[<a href="https://ubuntu.com/security/notices/USN-5561-1">USN-5561-1</a>] GNOME Web vulnerabilities [14:58]</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29536">CVE-2022-29536</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45087">CVE-2021-45087</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45086">CVE-2021-45086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45085">CVE-2021-45085</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Epiphany web browser</li>
+<li>3 different XSS issues, 1 buffer overflow via a very long page title -&gt;
+gets ellipsised but UTF-8 length of ellipsis is not properly counted so
+then overflows bounds -&gt; DoS/RCE</li>
+</ul>
+<h3 id="usn-5559-1-moment-dot-js-vulnerabilities-15-40">[<a href="https://ubuntu.com/security/notices/USN-5559-1">USN-5559-1</a>] Moment.js vulnerabilities [15:40]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31129">CVE-2022-31129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24785">CVE-2022-24785</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Date handling library for nodejs applications</li>
+<li>Path traversal vuln since could end up using a user provided locale
+string to switch the locale which would then result in reading arbitrary
+local files</li>
+<li>Quadratic complexity algorithm due to use of regexps to parse strings to
+dates - in particular <a href="https://www.rfc-editor.org/rfc/rfc2822">rfc2822</a> formats which are tried by default - ReDoS
+-&gt; very large input could result in significant CPU-based DoS</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-22-dot-04-dot-1-lts-released-16-43">Ubuntu 22.04.1 LTS released [16:43]</h3>
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2022-August/000282.html">https://lists.ubuntu.com/archives/ubuntu-announce/2022-August/000282.html</a></li>
+<li><a href="https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668">https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668</a></li>
+<li><a href="https://www.youtube.com/watch?v=REdxblQpsDE">https://www.youtube.com/watch?v=REdxblQpsDE</a></li>
+<li>Includes all the various bug and security fixes that have gone into the
+22.04 LTS release so far - if you are already running 22.04 LTS you don&rsquo;t
+have to do anything to get this- just make sure you have been installing
+updates 😉</li>
+<li>The full list of changes targeted for this release can be found at
+<a href="https://discourse.ubuntu.com/t/jammy-jellyfish-point-release-changes/29835">https://discourse.ubuntu.com/t/jammy-jellyfish-point-release-changes/29835</a></li>
+<li>Now is when users of 20.04 LTS desktop will start being prompted to
+upgrade to 22.04 - I definitely recommend to upgrade, and to make the
+process as smooth as possible, do it from a virtual terminal
+<ul>
+<li>This is the standard interface used for Ubuntu Server - full-screen
+terminal running directly on a console - no graphical environment</li>
+<li>as such, has a lot less processes and infrastructure running and so
+there is less chance that something may crash during the upgrade
+process - since libraries get swapped out from underneath various
+running processes etc</li>
+</ul>
+</li>
+<li>Log out of your graphical session, then when at the GDM Greeter / user
+chooser log in screen hit <code>CTRL + ALT + F2</code></li>
+<li>You will then be presented with a console prompt - log in with your
+username and password, then you can start the upgrade process by running</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo <span style="color:#66d9ef">do</span>-release-upgrade
+</span></span></code></pre></div><ul>
+<li>This is the same way this is done for Ubuntu Server</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-171/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-172\/",
+        text: "Episode 172"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+
