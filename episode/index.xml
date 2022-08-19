@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 12 Aug 2022 17:31:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 19 Aug 2022 17:51:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,261 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 173</title>
+          <link>https://ubuntusecuritypodcast.org/episode-173/</link>
+          <pubDate>Fri, 19 Aug 2022 17:51:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>79329274187ca09e2c678e95c1f9ad44cd0a78ba6bf2d9a33256d902e5e6b3ca2559fcf2ee8c986af040dcc03cc09f4ec4ac1ee7c7798c8c52153d904fab9842</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 173</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we take a look at the recent announcement of .NET 6 for Ubuntu
+  22.04 LTS, plus we cover security updates for the Linux kernel, Booth,
+  WebKitGTK, Unbound and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we take a look at the recent announcement of .NET 6 for Ubuntu
+  22.04 LTS, plus we cover security updates for the Linux kernel, Booth,
+  WebKitGTK, Unbound and more.
+  </itunes:summary>
+        <description>  This week we take a look at the recent announcement of .NET 6 for Ubuntu
+  22.04 LTS, plus we cover security updates for the Linux kernel, Booth,
+  WebKitGTK, Unbound and more.
+  </description>
+        <googleplay:description>  This week we take a look at the recent announcement of .NET 6 for Ubuntu
+  22.04 LTS, plus we cover security updates for the Linux kernel, Booth,
+  WebKitGTK, Unbound and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we take a look at the recent announcement of .NET 6 for Ubuntu
+22.04 LTS, plus we cover security updates for the Linux kernel, Booth,
+WebKitGTK, Unbound and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>24 unique CVEs addressed</p>
+<h3 id="usn-5562-1-linux-kernel-vulnerabilities-00-49">[<a href="https://ubuntu.com/security/notices/USN-5562-1">USN-5562-1</a>] Linux kernel vulnerabilities [00:49]</h3>
+<ul>
+<li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28893">CVE-2022-28893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1975">CVE-2022-1975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1974">CVE-2022-1974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1048">CVE-2022-1048</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0494">CVE-2022-0494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 20.04 LTS GA etc + 18.04 HWE etc</li>
+<li>3 high priority CVEs
+<ul>
+<li>2 of these covered in <a href="/episode-172/#usn-5557-1-linux-kernel-vulnerabilities-13-44">last week&rsquo;s episode</a> 1 in netfilter and 1 in
+network packet scheduler</li>
+<li>New this week is a second CVE in the netfilter subsystem - affects
+kernels since 4.1 - type confusion bug leading to a buffer overflow -&gt;
+code execution within the kernel and hence privilege escalation -
+requires an attacker to gain <code>CAP_NET_ADMIN</code> which is privileged, <strong>but</strong>
+with unprivileged user-namespaces this is trivial - so can mitigate
+this by disabling unpriv userns - but this may then affect applications
+like Google Chrome and others which use this to setup their sandboxes
+etc</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo sysctl kernel.unprivileged_userns_clone<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><h3 id="usn-5564-1-linux-kernel--intel-iotg--vulnerabilities-02-32">[<a href="https://ubuntu.com/security/notices/USN-5564-1">USN-5564-1</a>] Linux kernel (Intel IoTG) vulnerabilities [02:32]</h3>
+<ul>
+<li>15 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33981">CVE-2022-33981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29901">CVE-2022-29901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29900">CVE-2022-29900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28893">CVE-2022-28893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1975">CVE-2022-1975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1974">CVE-2022-1974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1789">CVE-2022-1789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1734">CVE-2022-1734</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0500">CVE-2022-0500</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2585">CVE-2022-2585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 Intel <a href="https://www.intel.com/content/www/us/en/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html">IOTG</a>
+<ul>
+<li><a href="https://ubuntu.com/download/iot/intel-iotg">https://ubuntu.com/download/iot/intel-iotg</a></li>
+<li>Atom x6000E, Pentium, Celeron N and J series processors</li>
+</ul>
+</li>
+<li>Similar to above, but also includes a 4th high priority CVE in the POSIX
+timers subsystem - UAF which could be triggered by an unpriv user -&gt;
+priv esc - since kernel 5.7 only</li>
+</ul>
+<h3 id="usn-5566-1-linux-kernel-vulnerabilities-03-08">[<a href="https://ubuntu.com/security/notices/USN-5566-1">USN-5566-1</a>] Linux kernel vulnerabilities [03:08]</h3>
+<ul>
+<li>9 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-34918">CVE-2022-34918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29901">CVE-2022-29901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29900">CVE-2022-29900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28893">CVE-2022-28893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1679">CVE-2022-1679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1652">CVE-2022-1652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2585">CVE-2022-2585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 public cloud optimised kernels (IBM, GCP, AWS, GKE, Azure, Oracle) +
+KVM and Raspi</li>
+<li>All 4 high priority CVEs mentioned above</li>
+</ul>
+<h3 id="usn-5565-1-linux-kernel-vulnerabilities-03-34">[<a href="https://ubuntu.com/security/notices/USN-5565-1">USN-5565-1</a>] Linux kernel vulnerabilities [03:34]</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29901">CVE-2022-29901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29900">CVE-2022-29900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2585">CVE-2022-2585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 22.04 LTS GA + 20.04 LTS HWE</li>
+<li>POSIX timers, netfilter and network scheduler UAFs</li>
+</ul>
+<h3 id="usn-5567-1-linux-kernel--oem--vulnerabilities-03-48">[<a href="https://ubuntu.com/security/notices/USN-5567-1">USN-5567-1</a>] Linux kernel (OEM) vulnerabilities [03:48]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2585">CVE-2022-2585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2586">CVE-2022-2586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2588">CVE-2022-2588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.17 OEM 22.04 LTS, 5.14 OEM 20.04 LTS</li>
+<li>POSIX timers, netfilter and network scheduler UAFs</li>
+</ul>
+<h3 id="usn-5563-1-http-parser-vulnerability-04-00">[<a href="https://ubuntu.com/security/notices/USN-5563-1">USN-5563-1</a>] http-parser vulnerability [04:00]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-8287">CVE-2020-8287</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP parsing library written in C by Joyent (not actively maintained
+anymore either) - parses requests &amp; responses without making any
+syscalls, memory allocations or buffering of data</li>
+<li>Request smuggling vuln - would allow two copies of a particular header
+within a HTTP message - ie. 2 <code>Transfer-Encoding</code> - but would only process
+the first - could then allow the second to be misinterpreted by other
+proxies etc which could then be used for a request smuggling attack</li>
+</ul>
+<h3 id="usn-5556-1-booth-vulnerability-05-20">[<a href="https://ubuntu.com/security/notices/USN-5556-1">USN-5556-1</a>] Booth vulnerability [05:20]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2553">CVE-2022-2553</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Ignored the <code>authfile</code> directive in its config file, allowing sites / nodes
+which did not have the correct auth key to communicate with nodes that
+did - oops&hellip; - upstream refactored code previously which introduced this
+vuln - reverted the refactor to fix this</li>
+</ul>
+<h3 id="usn-5568-1-webkitgtk-vulnerabilities-05-57">[<a href="https://ubuntu.com/security/notices/USN-5568-1">USN-5568-1</a>] WebKitGTK vulnerabilities [05:57]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-32816">CVE-2022-32816</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32792">CVE-2022-32792</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2294">CVE-2022-2294</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow in WebRTC, UI spoofing and OOB write - all able to
+be triggered by a malicious website -&gt; RCE or other</li>
+</ul>
+<h3 id="usn-5569-1-unbound-vulnerabilities-06-22">[<a href="https://ubuntu.com/security/notices/USN-5569-1">USN-5569-1</a>] Unbound vulnerabilities [06:22]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-30699">CVE-2022-30699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-30698">CVE-2022-30698</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to properly handle delegation caching - an attacker could query
+unbound just at the time when the cached delegation info is about to
+expire - unbound then queries the upstream nameserver which could then
+delay its response until the cache expires in unbound - when receiving
+the response unbound would overwrite the now expired one - and so the
+attacker can continue to do this and hence keep the rogue delegation
+information in the unbound cache</li>
+</ul>
+<h3 id="usn-5526-2-pyjwt-regression-07-10">[<a href="https://ubuntu.com/security/notices/USN-5526-2">USN-5526-2</a>] PyJWT regression [07:10]</h3>
+<ul>
+<li>Affecting Jammy (22.04 LTS)</li>
+<li><a href="/episode-169/#usn-5526-1-pyjwt-vulnerability-08-58">[USN-5526-1] PyJWT vulnerability [08:58]​</a> - upstream patch bumped the
+package version to 2.4.0 and so when including this, the internal package
+version got bumped even though the deb package version didn&rsquo;t - so would
+get files installed as say 2.4.0 even though the deb is 2.3.0 which could
+possibly cause a regression due to a change in path - fixed to revert
+this internal package version bump</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="dot-net-6-now-available-in-ubuntu-22-dot-04-lts-07-45">.NET 6 now available in Ubuntu 22.04 LTS [07:45]</h3>
+<ul>
+<li><a href="https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/">https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/</a></li>
+<li><a href="https://packages.ubuntu.com/jammy-updates/dotnet6"><code>dotnet6</code> package in Ubuntu</a> contains the .NET 6 SDK - so can do .NET
+development on Ubuntu</li>
+<li>In the future, Microsoft will share CVE info ahead of public releases
+with Ubuntu so that we can release updates for the package in Ubuntu as
+they become publicly known</li>
+<li>Also includes new &lsquo;chiseled&rsquo; containers - ultra-slimmed down docker
+containers to provide just the minimum needed - think of it as the
+Canonical version of distroless containers.</li>
+<li>results in a 100MB saving in container size whilst still providing
+everything that is needed
+<ul>
+<li>Similar in size to Alpine containers (Chiseled Ubuntu 22.04 <code>aspnet</code>
+<code>104MB</code> cf. <code>apsnet:6.0-alpine</code> <code>100MB</code>)</li>
+<li>Alpine has traditionally been praised for their minimal size, but use a
+different libc (<code>musl</code>) and has other differences too</li>
+<li>So can now get the benefit of a familiar Ubuntu container environment
+that you know and love along with the benefits of a super small
+container image (including things like decreased attack surface etc)</li>
+</ul>
+</li>
+<li>Also includes the benefit of a secure supply chain from Canonical direct
+to Microsoft so that the provenance of Ubuntu-based .NET images is
+known - instead of previously where these were pulled from Dockerhub
+<ul>
+<li>And in the future will include signed images as well so that consumers
+of these images can also verify them too</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E173.mp3" length="9249799" type="audio/mpeg" /><itunes:duration>717</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 172</title>
           <link>https://ubuntusecuritypodcast.org/episode-172/</link>
