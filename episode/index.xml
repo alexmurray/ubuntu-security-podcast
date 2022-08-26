@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 19 Aug 2022 17:51:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 26 Aug 2022 16:25:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,244 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 174</title>
+          <link>https://ubuntusecuritypodcast.org/episode-174/</link>
+          <pubDate>Fri, 26 Aug 2022 16:25:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>15ba43838b15754484b2d2dbe8c52b8e826b3e652bb8cf54ae8921c0359da39f4c944af6366bf00d9f0b0ec4716c5cb4b676497afb54f5cb93004700834a75f2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 174</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          This week we cover the debate around the decision in Ubuntu 22.10 to disable
+  presenting platform security assessments to end users via GNOME, plus we look at
+  security updates for zlib, PostgreSQL, the Linux kernel, Exim and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we cover the debate around the decision in Ubuntu 22.10 to disable
+  presenting platform security assessments to end users via GNOME, plus we look at
+  security updates for zlib, PostgreSQL, the Linux kernel, Exim and more.
+  </itunes:summary>
+        <description>  This week we cover the debate around the decision in Ubuntu 22.10 to disable
+  presenting platform security assessments to end users via GNOME, plus we look at
+  security updates for zlib, PostgreSQL, the Linux kernel, Exim and more.
+  </description>
+        <googleplay:description>  This week we cover the debate around the decision in Ubuntu 22.10 to disable
+  presenting platform security assessments to end users via GNOME, plus we look at
+  security updates for zlib, PostgreSQL, the Linux kernel, Exim and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we cover the debate around the decision in Ubuntu 22.10 to disable
+presenting platform security assessments to end users via GNOME, plus we look at
+security updates for zlib, PostgreSQL, the Linux kernel, Exim and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>12 unique CVEs addressed</p>
+<h3 id="usn-5570-1-usn-5573-1-zlib-and-rsync-vulnerability-00-43">[<a href="https://ubuntu.com/security/notices/USN-5570-1">USN-5570-1</a>, <a href="https://ubuntu.com/security/notices/USN-5573-1">USN-5573-1</a>] zlib and rsync vulnerability [00:43]</h3>
+<ul>
+<li>1 CVEs addressed for zlib in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)</li>
+<li>1 CVEs addressed for rsync in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-37434">CVE-2022-37434</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap-buffer over-read via crafted gzip header - requires an application to
+call the <code>inflateGetHeader()</code> function so not everything that uses zlib would be
+affected - impact is DoS via crash</li>
+<li>Also turns out the original fix introduced a regression upstream so required a
+couple different patches to fix this
+<ul>
+<li>thankfully by the time we got around to patching this the regression had
+already been identified and fixed upstream but some other distros who were
+quicker off-the-mark were affected by the regression</li>
+</ul>
+</li>
+<li>Also affects rsync in older Ubuntu releases since it contains a vendored copy
+of zlib - but on newer releases rsync uses the system install zlib and so once
+that is patched then rsync is also effectively patched too</li>
+</ul>
+<h3 id="usn-5571-1-postgresql-vulnerability-02-12">[<a href="https://ubuntu.com/security/notices/USN-5571-1">USN-5571-1</a>] PostgreSQL vulnerability [02:12]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2625">CVE-2022-2625</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Allowed possible code execution as the postgres superuser via various
+extensions - some of these are bundled with postgres itself and some may come
+from external sources - was fixed however in the core postgres server so no
+need to modify/fix other extensions to remediate this vuln - just need to
+update to this new patched version</li>
+</ul>
+<h3 id="usn-5572-1-linux-kernel--aws--vulnerabilities-02-45">[<a href="https://ubuntu.com/security/notices/USN-5572-1">USN-5572-1</a>] Linux kernel (AWS) vulnerabilities [02:45]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33741">CVE-2022-33741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33740">CVE-2022-33740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26365">CVE-2022-26365</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 16.04 ESM AWS</li>
+<li>3 issues all in Xen paravirtualisation handling - 1 in virtual block driver
+and another in the PV frontend - both of which failed to properly initialise
+memory - could then allow a local attacker to see guest memory contents</li>
+<li>Third one - memory mgmt issue in PV frontend which could end up sharing
+unrelated data when communicating with various backends - could then possibly
+lead to a crash of the guest or info leak of guest memory etc</li>
+</ul>
+<h3 id="usn-5577-1-linux-kernel--oem--vulnerabilities-03-38">[<a href="https://ubuntu.com/security/notices/USN-5577-1">USN-5577-1</a>] Linux kernel (OEM) vulnerabilities [03:38]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.14 OEM kernels</li>
+<li>Intel 10GbE PCI Express driver - insufficient control flow management -&gt; local
+DoS</li>
+<li>Framebuffer driver failed to verify size limits when changing font / screen
+sizes -&gt; OOB write -&gt; DoS/codeexec-&gt;privesc</li>
+</ul>
+<h3 id="usn-5574-1-exim-vulnerability-04-11">[<a href="https://ubuntu.com/security/notices/USN-5574-1">USN-5574-1</a>] Exim vulnerability [04:11]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-37452">CVE-2022-37452</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Single-byte heap buffer overflow when doing a host name lookup under certain
+configurations - failed to account for terminating NUL byte and so could
+overwrite this and hence leave a string without a trailing NUL - run of end of
+string -&gt; subsequent further buffer overflow</li>
+<li><a href="https://github.com/ivd38/exim_overflow">https://github.com/ivd38/exim_overflow</a></li>
+<li>Requires to have set a custom configuration where the value of one config
+items references the global variable <code>sender_host_name</code> so unlikely to affect
+most installations</li>
+</ul>
+<h3 id="usn-5575-1-usn-5575-2-libxslt-vulnerabilities-05-06">[<a href="https://ubuntu.com/security/notices/USN-5575-1">USN-5575-1</a>, <a href="https://ubuntu.com/security/notices/USN-5575-2">USN-5575-2</a>] Libxslt vulnerabilities [05:06]</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-30560">CVE-2021-30560</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-5815">CVE-2019-5815</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>originally reported against blink (chromium browser engine) - heap corruption
+via crafted HTML</li>
+<li>plus type confusion bug when handling crafted XML -&gt; heap buffer overflow as
+well</li>
+</ul>
+<h3 id="usn-5576-1-twisted-vulnerability-05-41">[<a href="https://ubuntu.com/security/notices/USN-5576-1">USN-5576-1</a>] Twisted vulnerability [05:41]</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24801">CVE-2022-24801</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP desync - form of HTTP request smuggling</li>
+<li>parsed various HTTP requests more leniently than permitted by RFC 7230 - can
+then allow requests which should have been blocked and hence lead to desync if
+requests pass though multiple parsers -&gt; request smuggling -&gt; access to
+privileged endpoints etc</li>
+</ul>
+<h3 id="usn-5578-1-open-vm-tools-vulnerability-06-23">[<a href="https://ubuntu.com/security/notices/USN-5578-1">USN-5578-1</a>] Open VM Tools vulnerability [06:23]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31676">CVE-2022-31676</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>VMWare OpenVM Tools - failed to properly check access controls on certain
+requests - could then allow a local user who has non-admin access to a guest
+VM to escalate privileges and gain root within the VM</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-22-dot-10-to-disable-gnome-43-s-device-security-panel-07-09">Ubuntu 22.10 To Disable GNOME 43’s ‘Device Security’ Panel [07:09]</h3>
+<ul>
+<li><a href="https://www.omgubuntu.co.uk/2022/08/ubuntu-22-10-device-security-panel-disabled">https://www.omgubuntu.co.uk/2022/08/ubuntu-22-10-device-security-panel-disabled</a></li>
+<li>GNOME 43 (Ubuntu 22.10 / Kinetic Kudu) has as new Device Security Panel in
+GNOME Control Center / Settings</li>
+<li>Shows an assessment of the security of the hardware platform
+<ul>
+<li>HSI security levels for the host</li>
+<li><a href="https://fwupd.github.io/libfwupdplugin/hsi.html">https://fwupd.github.io/libfwupdplugin/hsi.html</a></li>
+<li>Designed to raise awareness of platform security issues to put pressure on
+vendors to build and provide security configurations OOTB</li>
+<li>LVFS analyses firmware binaries to determine how they then affect the security
+of hardware platforms</li>
+<li>fwupd then assesses the hardware platform settings in conjuction with the
+details from LVFS for the firmware of the machine and the results can be
+viewed in g-c-c</li>
+<li>Includes details like:
+<ul>
+<li>Whether SPI memory regions are defined and locked by the BIOS</li>
+<li>TPM 2.0 presence</li>
+<li>UEFI platform key</li>
+<li>IOMMU</li>
+<li>Intel BootGuard</li>
+<li>Ability to accurately reconstruct the PCR0 value from the TPM event log</li>
+<li>Intel CET (<a href="/episode-79/#joe-discusses-intel-cet-with-john-johansen--aka-jj--09-28">Episode 79 - Joe discusses Intel CET with John Johansen (aka JJ)</a>)</li>
+</ul>
+</li>
+<li>Unfortunately for most of these options, there is not a lot a user can do to
+easily increase their security / get to a higher level of conformance</li>
+<li>So showing this could just alarm users when there is no good action they can
+take to remediate it
+<ul>
+<li>especially from the GUI - some of this could be done at a more low-level
+but this has the chance of breaking things</li>
+<li>e.g. could try and potentially recompile everything with CET enabled (this
+is already done in Ubuntu for the vast majority of packages but not for
+the kernel - still waiting on Intel to upstream patches required to make
+this work)</li>
+<li>but if you do this there is a good chance you could break your install if
+you don&rsquo;t get it right</li>
+</ul>
+</li>
+<li>Ideally if GNOME wants to display security information to the user,
+especially if they want to try and increase security awareness etc, this
+needs to be actionable - and be actionable from the same place as the info
+is displayed - ie in g-c-c itself</li>
+<li>and if g-c-c is going to then trigger steps to try and make things more
+secure for the user this needs to be super robust to make sure we still
+don&rsquo;t brick machines etc</li>
+<li>so overall, for Ubuntu the desktop and security teams feel this is not ready
+to be included for Ubuntu 22.10 in such a prominent way
+<ul>
+<li>users can already get the same info via fwupd already (even in Ubuntu 22.04 LTS)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>          fwupdmgr security
+</span></span></code></pre></div></li>
+<li>interesting to note this shows a message:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>          The HSI specification is not yet complete. To ignore this warning, use --force
+</span></span></code></pre></div></li>
+<li>so even fwupd developers realise this is perhaps still not ready for prime
+time</li>
+</ul>
+</li>
+<li>So the question then as LVFS/fwupd developer Richard Hughes put it:
+&ldquo;I suppose that not knowing is more secure?&rdquo;</li>
+<li>And as I responded in the LP bug - at this stage yes, since currently it
+would just create alarm with no easy actions for a user to take to remediate
+it - since then there is a risk of DoS by say enabling secure boot when
+unknowingly using unsigned drivers etc</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E174.mp3" length="12178336" type="audio/mpeg" /><itunes:duration>1005</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 173</title>
           <link>https://ubuntusecuritypodcast.org/episode-173/</link>
