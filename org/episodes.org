@@ -8,6 +8,136 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 176
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-176
+:EXPORT_DATE: 2022-09-09 14:20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E176.mp3 :podcast_duration "769" :podcast_bytes "8809875" :permalink "https://ubuntusecuritypodcast.org/episode-176/" :guid 0911577d54ba0fb45c577e01f98db9b4d2ad924219830d9166749894b47fab9d1c47be6bf70a24e28a0171cb22c8217d0953e79c8b1f10ce7cc44acbc78bff5b
+:END:
+#+begin_description
+On this week's episode we dive into the Shikitega Linux malware report from AT&T
+Alien Labs, plus we cover security updates for the Linux kernel, curl and
+Zstandard as well as some open positions on the team. Join us!
+#+end_description
+** Overview
+On this week's episode we dive into the Shikitega Linux malware report from AT&T
+Alien Labs, plus we cover security updates for the Linux kernel, curl and
+Zstandard as well as some open positions on the team. Join us!
+** This week in Ubuntu Security Updates
+13 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5591-1][USN-5591-1]], [[https://ubuntu.com/security/notices/USN-5591-2][USN-5591-2]], [[https://ubuntu.com/security/notices/USN-5591-3][USN-5591-3]], [[https://ubuntu.com/security/notices/USN-5591-4][USN-5591-4]], [[https://ubuntu.com/security/notices/USN-5597-1][USN-5597-1]], [[https://ubuntu.com/security/notices/USN-5598-1][USN-5598-1]]] Linux kernel (+ HWE, AWS, Oracle) vulnerability [00:47]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33656][CVE-2021-33656]] @@html:<!-- medium -->@@
+- OOB write in virtual terminal driver when changing VGA console fonts - covered
+  back in [[*\[\[\[https://ubuntu.com/security/notices/USN-5580-1\]\[USN-5580-1\]\]\] Linux kernel (AWS) vulnerabilities \[01:54\]][USN-5580-1 - Linux kernel (AWS) vulnerabilities - in Episode 175]]
+
+*** [[[https://ubuntu.com/security/notices/USN-5592-1][USN-5592-1]], [[https://ubuntu.com/security/notices/USN-5595-1][USN-5595-1]], [[https://ubuntu.com/security/notices/USN-5596-1][USN-5596-1]], [[https://ubuntu.com/security/notices/USN-5600-1][USN-5600-1]]] Linux kernel (+ OEM, HWE) vulnerabilities [01:04]
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33656][CVE-2021-33656]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-33061][CVE-2021-33061]] @@html:<!-- medium -->@@
+- OOB write in virtual terminal driver when changing VGA console fonts
+- Improper control flow mgmt in Intel 10GbE PCIe driver - local DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5594-1][USN-5594-1]], [[https://ubuntu.com/security/notices/USN-5599-1][USN-5599-1]]] Linux kernel (+ Oracle) vulnerabilities [01:28]
+- 9 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-2959][CVE-2022-2959]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2873][CVE-2022-2873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2503][CVE-2022-2503]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1973][CVE-2022-1973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1943][CVE-2022-1943]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1852][CVE-2022-1852]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1729][CVE-2022-1729]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1012][CVE-2022-1012]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-33061][CVE-2021-33061]] @@html:<!-- medium -->@@
+- Above issues plus:
+  - NULL pointer deref in KVM on host if a VM tried to execute an illegal instruction
+  - OOB write in UDF file-system driver
+  - UAF in NFTS under certain error conditions
+  - OOB write in Intel SMBus host controller driver
+  - Race condition in handling of pipe buffers -> OOB
+
+*** [[[https://ubuntu.com/security/notices/USN-5587-1][USN-5587-1]]] curl vulnerability [02:12]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-35252][CVE-2022-35252]] @@html:<!-- low -->@@
+- Cookies generally contain =NAME=VALUE= pairs using ASCII chars for both
+- [[man:ascii][ASCII character set]] contains usual A-Za-z0-9 and punctuation (space, "!#&)
+  plus a bunch of control codes - NUL, BEL, LF, CR, HT (\t) and more
+- These have a byte value below 32
+- curl since 4.9 would accept cookies with control codes
+- As with cookies, these get sent back to the server on subsequent requests
+- Over time web servers have started rejecting cookies with control codes and
+  returning a HTTP 400 response code (Bad Request)
+- As such, a malicious "sister site" could return a cookie with control codes
+  inside it, this then would get sent by curl to other sites in the same domain,
+  which would then reject the request and effectively DoS the user
+- Fixed to have curl validate and then reject such cookies in the first place
+
+*** [[[https://ubuntu.com/security/notices/USN-5593-1][USN-5593-1]]] Zstandard vulnerability [04:34]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2019-11922][CVE-2019-11922]] @@html:<!-- medium -->@@
+- [[*\[\[\[https://usn.ubuntu.com/4108-1/\]\[USN-4108-1\]\]\] Zstandard vulnerability \[09:20\]][Originally discussed all the way back in Episode 44 - [USN-4108-1] Zstandard
+  vulnerability]]
+- Race condition when using single-pass compression, might allow attacker
+  to get OOB write IF the caller had provided a smaller output buffer than
+  the recommended size
+- So likely won't affect all packages which use zstd (there are many) -
+  should always follow best practice
+
+** Goings on in Ubuntu Security Community
+*** AT&T Alien Labs teardown of Shikitega Linux malware [05:40]
+- https://cybersecurity.att.com/blogs/labs-research/shikitega-new-stealthy-malware-targeting-linux
+- Targets endpoints and IoT devices running Linux
+- Uses multiple different binaries to achieve its purpose - each does one task
+  of the process
+- Uses various components of [[https://github.com/rapid7/metasploit-framework][Metasploit]] along the way
+  - Framework containing various exploits plus different tools to help develop
+    exploits as well as scan environments etc
+- Initial dropper is a very small binary that is encoded using one of the
+  standard Metasploit encoders to help it evade detection from AV scanners etc
+- Decodes basic shellcode to open a socket to the C2 server and downloads
+  additional shellcode to run plus the [[https://github.com/rapid7/mettle][mettle]] interpreter so that it can make
+  use of off-the-shelf components from Metasploit in further stages
+- Also downloads the next stage dropper
+- This again is encoded the same as the first component - contained within is
+  shellcode to spawn a shell via =/bin/sh= - from this shell it then attempts to
+  run commands to exploit two known privesc vulns - CVE-2021-4034
+  ([[*\[\[\[https://ubuntu.com/security/notices/USN-5252-1\]\[USN-5252-1\]\], \[\[https://ubuntu.com/security/notices/USN-5252-2\]\[USN-5252-2\]\]\] PolicyKit vulnerability \[10:06\]][[USN-5252-1, USN-5252-2] PolicyKit vulnerability from Episode 147]]) and
+  CVE-2021-3493 ([[*\[\[\[https://ubuntu.com/security/notices/USN-4916-2\]\[USN-4916-2\]\]\] Linux kernel regression \[00:48\]][[USN-4916-2] Linux kernel vulnerability in Episode 113]])
+- Once has gained root privileges via these vulns, with then move on to achieve
+  persistence and execute the primary payload - cryptominer
+- Persistence is achieved simply by using cron to download the cryptominer from
+  C2 on boot - and then another cron job to execute the cryptominer - and this
+  is done for both the standard user and root
+- As such the only traces left on the machine at reboot is the crontabs
+- cryptominer is the [[https://xmrig.com/][XMRig]] and is configured to mine Monero
+- C2 is seemingly fronted by cloudflare and cloudfront
+- No details provided on initial compromise but is good to see details on the
+  privesc vulns - both of these were patched in Ubuntu quite a while ago - and
+  we released a Livepatch for the kernel privesc too - shows the value in such
+  services - can still stay protected against the kind of vulnerabilities that
+  attackers are actually exploiting without the need to reboot
+- Shows the increasing prevalence of Linux malware (and the resulting interest
+  in it from organisations like AT&T) but also the value in ensuring systems are
+  kept updated
+*** systemd/open-vm-tools regression for Ubuntu 18.04 LTS [10:56]
+- Had mentioned last week that I would likely cover this - is still a
+  work-in-progress so hopefully next week 🤞
+
+** Hiring [11:30]
+- https://canonical.com/careers/engineering?search=security
+- [[https://canonical.com/careers/3781589][Security Certifications Product Manager]]
+  - Home based, EMEA
+- [[https://canonical.com/careers/2925180][Security Engineer - Ubuntu]]
+  - Home based, worldwide
+- [[https://canonical.com/careers/4192903][Ubuntu Security Manager]]
+  - Home based, worldwide
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 175
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-175
