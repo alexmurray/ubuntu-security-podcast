@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+  recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+  Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+  ">
+
+<meta name="generator" content="Hugo 0.103.0" />
+
+<meta property="og:title" content="Episode 177" />
+<meta name="twitter:title" content="Episode 177"/>
+<meta itemprop="name" content="Episode 177">
+<meta property="article:published_time" content="2022-09-16T16:18:00&#43;09:30" />
+<meta property="article:modified_time" content="2022-09-16T16:23:05&#43;09:30" />
+<meta property="og:updated_time" content="2022-09-16T16:23:05&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+  recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+  Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+  " />
+    <meta name="twitter:description" content="  Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+  recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+  Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+  " />
+    <meta itemprop="description" content="  Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+  recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+  Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-177/" />
+
+
+
+
+<title>Episode 177</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-177/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 177</h1><small>Posted on Friday, Sep 16, 2022 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E177.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>Alex talks with special guests Nishit Majithia and Matthew Ruffell about a
+recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for
+Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>28 unique CVEs addressed</p>
+<h3 id="usn-4976-2-dnsmasq-vulnerability-00-55">[<a href="https://ubuntu.com/security/notices/USN-4976-2">USN-4976-2</a>] Dnsmasq vulnerability [00:55]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3448">CVE-2021-3448</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-118/#usn-4976-1-dnsmasq-vulnerability-08-56">[USN-4976-1] Dnsmasq vulnerability for Episode 118</a></li>
+<li>Failed to properly randomise source port (ie used a fixed port) when
+forwarding queries when configured to use a specific server for a given
+network interface - could then allow a remote attacker to more easily
+perform cache poisoning attacks (ie just need to guess the transmission
+ID once know the source port to get a forged reply accepted)
+<ul>
+<li>As I said back in Episode 118, this is very similar to the issues that were
+discovered back in 2008 by Dan Kaminsky - the whole reason source port
+randomisation was introduced as part of the DNS protocol</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5602-1-linux-kernel--raspberry-pi--vulnerabilities-02-11">[<a href="https://ubuntu.com/security/notices/USN-5602-1">USN-5602-1</a>] Linux kernel (Raspberry Pi) vulnerabilities [02:11]</h3>
+<ul>
+<li>9 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2959">CVE-2022-2959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2873">CVE-2022-2873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1973">CVE-2022-1973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1943">CVE-2022-1943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1852">CVE-2022-1852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-176/#usn-5594-1-usn-5599-1-linux-kernel--plus-oracle--vulnerabilities-01-28">See [USN-5594-1, USN-5599-1] Linux kernel (+ Oracle) vulnerabilities from last week</a></li>
+</ul>
+<h3 id="usn-5603-1-linux-kernel--raspberry-pi--vulnerabilities-02-29">[<a href="https://ubuntu.com/security/notices/USN-5603-1">USN-5603-1</a>] Linux kernel (Raspberry Pi) vulnerabilities [02:29]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33656">CVE-2021-33656</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-176/#usn-5592-1-usn-5595-1-usn-5596-1-usn-5600-1-linux-kernel--plus-oem-hwe--vulnerabilities-01-04">See [USN-5592-1, USN-5595-1, USN-5596-1, USN-5600-1] Linux kernel (+ OEM, HWE) vulnerabilities from last week</a></li>
+</ul>
+<h3 id="usn-5605-1-linux-kernel--azure-cvm--vulnerabilities-02-38">[<a href="https://ubuntu.com/security/notices/USN-5605-1">USN-5605-1</a>] Linux kernel (Azure CVM) vulnerabilities [02:38]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33656">CVE-2021-33656</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-176/#usn-5592-1-usn-5595-1-usn-5596-1-usn-5600-1-linux-kernel--plus-oem-hwe--vulnerabilities-01-04">See [USN-5592-1, USN-5595-1, USN-5596-1, USN-5600-1] Linux kernel (+ OEM, HWE) vulnerabilities from last week</a></li>
+</ul>
+<h3 id="usn-5523-2-libtiff-vulnerabilities-02-45">[<a href="https://ubuntu.com/security/notices/USN-5523-2">USN-5523-2</a>] LibTIFF vulnerabilities [02:45]</h3>
+<ul>
+<li>7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-19144">CVE-2020-19144</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19131">CVE-2020-19131</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-22844">CVE-2022-22844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0924">CVE-2022-0924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0909">CVE-2022-0909</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0908">CVE-2022-0908</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0907">CVE-2022-0907</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-169/#usn-5523-1-libtiff-vulnerabilities-08-02">[USN-5523-1] LibTIFF vulnerabilities from Episode 169</a></li>
+</ul>
+<h3 id="usn-5604-1-libtiff-vulnerabilities-03-13">[<a href="https://ubuntu.com/security/notices/USN-5604-1">USN-5604-1</a>] LibTIFF vulnerabilities [03:13]</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2868">CVE-2022-2868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2869">CVE-2022-2869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2867">CVE-2022-2867</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5606-1-poppler-vulnerability-03-23">[<a href="https://ubuntu.com/security/notices/USN-5606-1">USN-5606-1</a>] poppler vulnerability [03:23]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-38784">CVE-2022-38784</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Integer overflow in JBIG2 decoder -&gt; heap buffer overflow via crafted PDF /
+JBIG2 image - very similar to <a href="https://ubuntu.com/security/CVE-2022-38171">CVE-2022-38171</a> in xpdf
+<ul>
+<li>poppler started life as a fork of code from xpdf-3.0 but now has diverged so
+much that in general a vuln in one cannot be assumed to exist in the other,
+hence the separate CVE IDs for these two vulns</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5607-1-gdk-pixbuf-vulnerability-04-11">[<a href="https://ubuntu.com/security/notices/USN-5607-1">USN-5607-1</a>] GDK-PixBuf vulnerability [04:11]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-44648">CVE-2021-44648</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow when decoding lzw compressed stream from GIF files</li>
+</ul>
+<h3 id="usn-5608-1-dpdk-vulnerability-04-26">[<a href="https://ubuntu.com/security/notices/USN-5608-1">USN-5608-1</a>] DPDK vulnerability [04:26]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2132">CVE-2022-2132</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Crafted Vhost header could cause a DoS</li>
+</ul>
+<h3 id="usn-5609-1-dot-net-6-vulnerability-04-39">[<a href="https://ubuntu.com/security/notices/USN-5609-1">USN-5609-1</a>] .NET 6 vulnerability [04:39]</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-38013">CVE-2022-38013</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>DoS in .NET Core - &ldquo;a malicious client could cause a stack overflow which may
+result in a denial of service attack when an attacker sends a customized
+payload that is parsed during model binding&rdquo;</li>
+<li><a href="https://devblogs.microsoft.com/dotnet/september-2022-updates/">https://devblogs.microsoft.com/dotnet/september-2022-updates/</a></li>
+<li>Updates to latest upstream release 6.0.109</li>
+</ul>
+<h3 id="usn-5583-2-systemd-regression-05-16">[<a href="https://ubuntu.com/security/notices/USN-5583-2">USN-5583-2</a>] systemd regression [05:16]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2526">CVE-2022-2526</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Mentioned in passing in both the last 2 weeks episodes</li>
+</ul>
+<h3 id="usn-5610-1-rust-regex-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5610-1">USN-5610-1</a>] rust-regex vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24713">CVE-2022-24713</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ReDoS in regex crate - already includes various mitigations against DoS via
+untrusted regexes (and these can be tuned by users of the crate) - however was
+able to be bypassed by a regex that specified an empty subexpression that
+should be matched up to say 294 million times - this then gets compiled but is
+able to evade the existing mitigations since doesn&rsquo;t take any memory - but it
+does take a lot of CPU time</li>
+<li>Fixed by changing code such that it will take a fake amount of memory for each
+empty subexpression and therefore will trip the existing detection logic in a
+reasonable amount of time</li>
+</ul>
+<h3 id="usn-5611-1-webkitgtk-vulnerability-06-53">[<a href="https://ubuntu.com/security/notices/USN-5611-1">USN-5611-1</a>] WebKitGTK vulnerability [06:53]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-32893">CVE-2022-32893</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>OOB write via malicious web content - Apple reported that this was being
+actively exploited for iOS users (Safari uses Webkit)</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="discussion-of-the-recent-systemd-regression-in-ubuntu-18-dot-04-lts-with-nishit-majithia-and-matthew-ruffell-07-49">Discussion of the recent systemd regression in Ubuntu 18.04 LTS with Nishit Majithia and Matthew Ruffell [07:49]</h3>
+<ul>
+<li>Gathered media attention</li>
+<li><a href="https://thenewstack.io/ubuntu-linux-and-azure-dns-problem-gives-azure-fits/">https://thenewstack.io/ubuntu-linux-and-azure-dns-problem-gives-azure-fits/</a></li>
+<li>Matthew is from the Sustaining Engineering Team at Canonical - I talked about
+his blog in <a href="/episode-97/#analysis-of-the-dovecat-and-hy4-linux-malware-12-36">Analysis of the dovecat and hy4 Linux Malware - from Episode 97</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-176/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-177\/",
+        text: "Episode 177"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

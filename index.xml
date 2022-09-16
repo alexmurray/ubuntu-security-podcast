@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Sep 2022 14:20:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Sep 2022 16:18:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 177</title>
+      <link>https://ubuntusecuritypodcast.org/episode-177/</link>
+      <pubDate>Fri, 16 Sep 2022 16:18:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-177/</guid>
+      <description>Overview Alex talks with special guests Nishit Majithia and Matthew Ruffell about a recent systemd regression on Ubuntu 18.04 LTS plus we cover security updates for Dnsmasq, the Linux kernel, poppler, .NET 6, rust-regex and more.
+This week in Ubuntu Security Updates 28 unique CVEs addressed
+[USN-4976-2] Dnsmasq vulnerability [00:55] 1 CVEs addressed in Xenial ESM (16.04 ESM) CVE-2021-3448 [USN-4976-1] Dnsmasq vulnerability for Episode 118 Failed to properly randomise source port (ie used a fixed port) when forwarding queries when configured to use a specific server for a given network interface - could then allow a remote attacker to more easily perform cache poisoning attacks (ie just need to guess the transmission ID once know the source port to get a forged reply accepted) As I said back in Episode 118, this is very similar to the issues that were discovered back in 2008 by Dan Kaminsky - the whole reason source port randomisation was introduced as part of the DNS protocol [USN-5602-1] Linux kernel (Raspberry Pi) vulnerabilities [02:11] 9 CVEs addressed in Jammy (22.</description>
+    </item>
+    
     <item>
       <title>Episode 176</title>
       <link>https://ubuntusecuritypodcast.org/episode-176/</link>
