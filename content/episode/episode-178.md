@@ -1,12 +1,12 @@
 +++
 title = "Episode 178"
 description = """
-  You can't test your way out of security vulnerabilties (at least when writing
+  You can't test your way out of security vulnerabilities (at least when writing
   your code in C), plus we cover security updates for Intel Microcode, vim,
   Wayland, the Linux kernel, SQLite and more.
   """
 date = 2022-09-23T15:36:00+09:30
-lastmod = 2022-09-23T15:36:47+09:30
+lastmod = 2022-09-23T15:41:23+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -20,7 +20,7 @@ guid = "a6046f312d6829a2168ac6205bf34b67766bdc72927dc70a31e08fd7b4dd6ed099bdd565
 
 ## Overview {#overview}
 
-You can't test your way out of security vulnerabilties (at least when writing
+You can't test your way out of security vulnerabilities (at least when writing
 your code in C), plus we cover security updates for Intel Microcode, vim,
 Wayland, the Linux kernel, SQLite and more.
 

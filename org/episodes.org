@@ -15,12 +15,12 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E178.mp3 :podcast_duration "655" :podcast_bytes "11247928" :permalink "https://ubuntusecuritypodcast.org/episode-178/" :guid a6046f312d6829a2168ac6205bf34b67766bdc72927dc70a31e08fd7b4dd6ed099bdd5650ba586a18cea3e465f6f73549999537a473811ed164a0b1c5bde6b71
 :END:
 #+begin_description
-You can't test your way out of security vulnerabilties (at least when writing
+You can't test your way out of security vulnerabilities (at least when writing
 your code in C), plus we cover security updates for Intel Microcode, vim,
 Wayland, the Linux kernel, SQLite and more.
 #+end_description
 ** Overview
-You can't test your way out of security vulnerabilties (at least when writing
+You can't test your way out of security vulnerabilities (at least when writing
 your code in C), plus we cover security updates for Intel Microcode, vim,
 Wayland, the Linux kernel, SQLite and more.
 ** This week in Ubuntu Security Updates
