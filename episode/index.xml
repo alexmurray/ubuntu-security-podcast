@@ -51,26 +51,26 @@
         <itunes:title>Episode 178</itunes:title>
         <itunes:subtitle><![CDATA[
         
-          You can&#39;t test your way out of security vulnerabilties (at least when writing
+          You can&#39;t test your way out of security vulnerabilities (at least when writing
   your code in C), plus we cover security updates for Intel Microcode, vim,
   Wayland, the Linux kernel, SQLite and more.
   
         
         ]]></itunes:subtitle>
-        <itunes:summary>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+        <itunes:summary>  You can&#39;t test your way out of security vulnerabilities (at least when writing
   your code in C), plus we cover security updates for Intel Microcode, vim,
   Wayland, the Linux kernel, SQLite and more.
   </itunes:summary>
-        <description>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+        <description>  You can&#39;t test your way out of security vulnerabilities (at least when writing
   your code in C), plus we cover security updates for Intel Microcode, vim,
   Wayland, the Linux kernel, SQLite and more.
   </description>
-        <googleplay:description>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+        <googleplay:description>  You can&#39;t test your way out of security vulnerabilities (at least when writing
   your code in C), plus we cover security updates for Intel Microcode, vim,
   Wayland, the Linux kernel, SQLite and more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>You can&rsquo;t test your way out of security vulnerabilties (at least when writing
+<p>You can&rsquo;t test your way out of security vulnerabilities (at least when writing
 your code in C), plus we cover security updates for Intel Microcode, vim,
 Wayland, the Linux kernel, SQLite and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>

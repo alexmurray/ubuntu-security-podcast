@@ -13,7 +13,7 @@
       <pubDate>Fri, 23 Sep 2022 15:36:00 +0930</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-178/</guid>
-      <description>Overview You can&amp;rsquo;t test your way out of security vulnerabilties (at least when writing your code in C), plus we cover security updates for Intel Microcode, vim, Wayland, the Linux kernel, SQLite and more.
+      <description>Overview You can&amp;rsquo;t test your way out of security vulnerabilities (at least when writing your code in C), plus we cover security updates for Intel Microcode, vim, Wayland, the Linux kernel, SQLite and more.
 This week in Ubuntu Security Updates 68 unique CVEs addressed
 [USN-5606-2] poppler regression [00:45] Affecting Xenial ESM (16.04 ESM), Bionic (18.04 LTS) [USN-5606-1] poppler vulnerability from Episode 177 - integer overflow in JBIG2 decoder When backporting the series of patches, missed one that updated the CMakeLists.</description>
     </item>
