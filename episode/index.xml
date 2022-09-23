@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 16 Sep 2022 16:18:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 23 Sep 2022 15:36:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,328 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 178</title>
+          <link>https://ubuntusecuritypodcast.org/episode-178/</link>
+          <pubDate>Fri, 23 Sep 2022 15:36:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>a6046f312d6829a2168ac6205bf34b67766bdc72927dc70a31e08fd7b4dd6ed099bdd5650ba586a18cea3e465f6f73549999537a473811ed164a0b1c5bde6b71</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 178</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          You can&#39;t test your way out of security vulnerabilties (at least when writing
+  your code in C), plus we cover security updates for Intel Microcode, vim,
+  Wayland, the Linux kernel, SQLite and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+  your code in C), plus we cover security updates for Intel Microcode, vim,
+  Wayland, the Linux kernel, SQLite and more.
+  </itunes:summary>
+        <description>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+  your code in C), plus we cover security updates for Intel Microcode, vim,
+  Wayland, the Linux kernel, SQLite and more.
+  </description>
+        <googleplay:description>  You can&#39;t test your way out of security vulnerabilties (at least when writing
+  your code in C), plus we cover security updates for Intel Microcode, vim,
+  Wayland, the Linux kernel, SQLite and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>You can&rsquo;t test your way out of security vulnerabilties (at least when writing
+your code in C), plus we cover security updates for Intel Microcode, vim,
+Wayland, the Linux kernel, SQLite and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>68 unique CVEs addressed</p>
+<h3 id="usn-5606-2-poppler-regression-00-45">[<a href="https://ubuntu.com/security/notices/USN-5606-2">USN-5606-2</a>] poppler regression [00:45]</h3>
+<ul>
+<li>Affecting Xenial ESM (16.04 ESM), Bionic (18.04 LTS)</li>
+<li><a href="/episode-177/#usn-5606-1-poppler-vulnerability-03-23">[USN-5606-1] poppler vulnerability from Episode 177</a> - integer overflow in
+JBIG2 decoder</li>
+<li>When backporting the series of patches, missed one that updated the
+CMakeLists.txt to ensure a new header file that was added as part of the
+security update is actually installed by the libpoppler-dev package - without
+this if installed the update and then tried to recompile something locally it
+would fail</li>
+</ul>
+<h3 id="usn-5612-1-intel-microcode-vulnerability-01-29">[<a href="https://ubuntu.com/security/notices/USN-5612-1">USN-5612-1</a>] Intel Microcode vulnerability [01:29]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-21233">CVE-2022-21233</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream Intel Microcode release (IPU 2022.2) - only security relevant
+for SGX</li>
+</ul>
+<h3 id="usn-5613-1-usn-5613-2-vim-vulnerabilities-01-54">[<a href="https://ubuntu.com/security/notices/USN-5613-1">USN-5613-1</a>, <a href="https://ubuntu.com/security/notices/USN-5613-2">USN-5613-2</a>] Vim vulnerabilities [01:54]</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-1621">CVE-2022-1621</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1620">CVE-2022-1620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1619">CVE-2022-1619</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1616">CVE-2022-1616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1420">CVE-2022-1420</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1154">CVE-2022-1154</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0943">CVE-2022-0943</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various buffer overflows and the like that could be triggered when editing
+crafted files - have said in the past that vim is fast becoming one of the
+most security-patched packages in Ubuntu - all driven by their bug-bounty
+<a href="https://huntr.dev/repos/vim/vim/">https://huntr.dev/repos/vim/vim/</a></li>
+</ul>
+<h3 id="usn-5614-1-wayland-vulnerability-02-17">[<a href="https://ubuntu.com/security/notices/USN-5614-1">USN-5614-1</a>] Wayland vulnerability [02:17]</h3>
+<ul>
+<li>1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3782">CVE-2021-3782</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Reference count overflow - used a 32-bit int to count the number of
+references - but on a 64-bit machine it is quite possible that a malicious
+client could allocate a huge amount of buffers to overflow and then possibly
+get a UAF - highly unlikely to be able to exploit in practice since would also
+need a large number of connections to the compositor as well - fixed by
+limiting the max number of objects that can be allocated</li>
+</ul>
+<h3 id="usn-5615-1-sqlite-vulnerabilities-03-01">[<a href="https://ubuntu.com/security/notices/USN-5615-1">USN-5615-1</a>] SQLite vulnerabilities [03:01]</h3>
+<ul>
+<li>3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20223">CVE-2021-20223</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35527">CVE-2020-35527</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35525">CVE-2020-35525</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr deref, OOB read, unicode parsing issue - disputed by upstream as an
+actual vuln</li>
+<li>Has such a large amount of tests - <a href="https://www.sqlite.org/testing.html">https://www.sqlite.org/testing.html</a>
+<ul>
+<li>for 151 KSLOC has 92,038 KSLOC of tests -&gt; 608 times as much code in tests
+that the actual library itself</li>
+<li>4 different test harnesses, 100% branch coverage, OOM tests, I/O error
+tests, fuzz tests, boundary conditions, regression tests, valgrind, UB etc</li>
+<li>yet still has new vulns discovered every now and then</li>
+<li>you can&rsquo;t test your way out of security issues - at least when you write
+your code in C which has just too many different operations that have UB</li>
+<li>you can perhaps do it via formal methods (seL4 etc) but is <a href="https://sel4.systems/Info/Docs/GD-NICTA-whitepaper.pdf">very expensive</a>..
+<ul>
+<li>$200-400/LoC</li>
+<li>eg. to formally prove SQLite would then cost ~$18.4M-$36.8M</li>
+</ul>
+</li>
+<li>use rust?
+<ul>
+<li>would hopefully help at least for the first 2 issues - can still have
+logic flaws and hence security vulns (eg. failing to properly validate a
+TLS cert or similar)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5616-1-linux-kernel--intel-iotg--vulnerabilities-06-00">[<a href="https://ubuntu.com/security/notices/USN-5616-1">USN-5616-1</a>] Linux kernel (Intel IoTG) vulnerabilities [06:00]</h3>
+<ul>
+<li>10 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2959">CVE-2022-2959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2873">CVE-2022-2873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1973">CVE-2022-1973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1943">CVE-2022-1943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1852">CVE-2022-1852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32296">CVE-2022-32296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15</li>
+<li>Some of these have covered previously
+<ul>
+<li>Intel 10GbE PCI Express driver, IP source port randomisation failure, perf
+UAF, KVM NULL ptr deref, various file-system OOB R/W etc</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5621-1-linux-kernel-vulnerabilities-06-32">[<a href="https://ubuntu.com/security/notices/USN-5621-1">USN-5621-1</a>] Linux kernel vulnerabilities [06:32]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)</li>
+<li>4.15 GA 18.04 LTS, HWE 16.04 ESM
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36946">CVE-2022-36946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>console framebuffer and netfilter OOB writes covered in previous episodes</li>
+</ul>
+<h3 id="usn-5622-1-linux-kernel-vulnerabilities-06-57">[<a href="https://ubuntu.com/security/notices/USN-5622-1">USN-5622-1</a>] Linux kernel vulnerabilities [06:57]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36946">CVE-2022-36946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32296">CVE-2022-32296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 GA 20.04 LTS / HWE 18.04 LTS</li>
+</ul>
+<p>x*** [<a href="https://ubuntu.com/security/notices/USN-5624-1">USN-5624-1</a>] Linux kernel vulnerabilities [07:05]</p>
+<ul>
+<li>11 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36946">CVE-2022-36946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34495">CVE-2022-34495</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34494">CVE-2022-34494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33744">CVE-2022-33744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33743">CVE-2022-33743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33742">CVE-2022-33742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33741">CVE-2022-33741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33740">CVE-2022-33740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26365">CVE-2022-26365</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2318">CVE-2022-2318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 GA 22.04 LTS / Azure 20.04 LTS</li>
+</ul>
+<h3 id="usn-5623-1-linux-kernel--hwe--vulnerabilities-07-12">[<a href="https://ubuntu.com/security/notices/USN-5623-1">USN-5623-1</a>] Linux kernel (HWE) vulnerabilities [07:12]</h3>
+<ul>
+<li>21 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36946">CVE-2022-36946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34495">CVE-2022-34495</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-34494">CVE-2022-34494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33744">CVE-2022-33744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33743">CVE-2022-33743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33742">CVE-2022-33742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33741">CVE-2022-33741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33740">CVE-2022-33740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2959">CVE-2022-2959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2873">CVE-2022-2873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26365">CVE-2022-26365</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2318">CVE-2022-2318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1973">CVE-2022-1973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1943">CVE-2022-1943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1852">CVE-2022-1852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32296">CVE-2022-32296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33061">CVE-2021-33061</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 20.04 HWE</li>
+<li>all the vulns mentioned earlier plus a bunch in Xen (kernel side) - impact
+ranges from crashing guest and exposing its memory to DoS services on the host</li>
+</ul>
+<h3 id="usn-5617-1-xen-vulnerabilities-07-45">[<a href="https://ubuntu.com/security/notices/USN-5617-1">USN-5617-1</a>] Xen vulnerabilities [07:45]</h3>
+<ul>
+<li>20 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25604">CVE-2020-25604</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25603">CVE-2020-25603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25602">CVE-2020-25602</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25601">CVE-2020-25601</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25600">CVE-2020-25600</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25599">CVE-2020-25599</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25597">CVE-2020-25597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25596">CVE-2020-25596</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-25595">CVE-2020-25595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15567">CVE-2020-15567</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15566">CVE-2020-15566</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15565">CVE-2020-15565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15564">CVE-2020-15564</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-15563">CVE-2020-15563</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11743">CVE-2020-11743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11742">CVE-2020-11742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11741">CVE-2020-11741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11740">CVE-2020-11740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11739">CVE-2020-11739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-0543">CVE-2020-0543</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Community contributed update for xen - almost wins the award for the most CVEs
+patched in a single update for this week</li>
+<li>Most issues allow a malicious guest to attack the host -&gt; DoS, privesc,
+code-exec etc</li>
+</ul>
+<h3 id="usn-5619-1-libtiff-vulnerabilities-08-17">[<a href="https://ubuntu.com/security/notices/USN-5619-1">USN-5619-1</a>] LibTIFF vulnerabilities [08:17]</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2058">CVE-2022-2058</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2057">CVE-2022-2057</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2056">CVE-2022-2056</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1355">CVE-2022-1355</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1354">CVE-2022-1354</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19144">CVE-2020-19144</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-19131">CVE-2020-19131</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Another package vying for most security updates recently</li>
+<li>Usual memory corruption issues when handling crafted files - stack / heap
+buffer overflows etc</li>
+</ul>
+<h3 id="usn-5618-1-ghostscript-vulnerability-08-49">[<a href="https://ubuntu.com/security/notices/USN-5618-1">USN-5618-1</a>] Ghostscript vulnerability [08:49]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-27792">CVE-2020-27792</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow when parsing a crafted PDF</li>
+</ul>
+<h3 id="usn-5626-1-bind-vulnerabilities-08-58">[<a href="https://ubuntu.com/security/notices/USN-5626-1">USN-5626-1</a>] Bind vulnerabilities [08:58]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-38178">CVE-2022-38178</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38177">CVE-2022-38177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3080">CVE-2022-3080</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2906">CVE-2022-2906</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2881">CVE-2022-2881</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2795">CVE-2022-2795</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Memory leaks when handling certain crypto algorithms with DNSSEC,
+resource-based DoS, buffer over-read -&gt; info leak / crash, assertion-based
+crash via crafted query</li>
+</ul>
+<h3 id="usn-5625-1-mako-vulnerability-09-22">[<a href="https://ubuntu.com/security/notices/USN-5625-1">USN-5625-1</a>] Mako vulnerability [09:22]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-40023">CVE-2022-40023</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ReDoS via crafted content</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="preparing-for-the-release-of-ubuntu-pro-09-44">Preparing for the release of Ubuntu Pro [09:44]</h3>
+<ul>
+<li>Team has worked on this for the last few years - finally will see the light of
+day in the coming week or two - more details to come</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E178.mp3" length="11247928" type="audio/mpeg" /><itunes:duration>655</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 177</title>
           <link>https://ubuntusecuritypodcast.org/episode-177/</link>
