@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Sep 2022 15:36:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 15:41:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 179</title>
+      <link>https://ubuntusecuritypodcast.org/episode-179/</link>
+      <pubDate>Fri, 30 Sep 2022 15:41:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-179/</guid>
+      <description>Overview Finer grained control for unprivileged user namespaces is on the horizon for Ubuntu 22.10, plus we cover security updates for PCRE, etcd, OAuthLib, SoS, Squid and more.
+This week in Ubuntu Security Updates 37 unique CVEs addressed
+[USN-5626-2] Bind vulnerabilities [00:40] 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM) CVE-2022-38177 CVE-2022-2795 [USN-5626-1] Bind vulnerabilities from Episode 178 [USN-5627-1] PCRE vulnerabilities [01:01] 2 CVEs addressed in Focal (20.</description>
+    </item>
+    
     <item>
       <title>Episode 178</title>
       <link>https://ubuntusecuritypodcast.org/episode-178/</link>
