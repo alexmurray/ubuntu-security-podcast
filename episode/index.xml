@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 30 Sep 2022 15:41:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 14 Oct 2022 16:30:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,315 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 180</title>
+          <link>https://ubuntusecuritypodcast.org/episode-180/</link>
+          <pubDate>Fri, 14 Oct 2022 16:30:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>360807e8b17230ed2504da3edd48d1b4818a29016f34e960de08d0f5b010eb83d45a90b65f68faf7b5d3f987df13b5564e7c58210f180d6810dbadd85880812d</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 180</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          Ubuntu Pro beta is announced and we cover all the details with Lech Sandecki and
+  Eduardo Barretto, plus we cover security updates for DHCP, kitty, Thunderbird,
+  LibreOffice, the Linux kernel, .NET 6 and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Ubuntu Pro beta is announced and we cover all the details with Lech Sandecki and
+  Eduardo Barretto, plus we cover security updates for DHCP, kitty, Thunderbird,
+  LibreOffice, the Linux kernel, .NET 6 and more.
+  </itunes:summary>
+        <description>  Ubuntu Pro beta is announced and we cover all the details with Lech Sandecki and
+  Eduardo Barretto, plus we cover security updates for DHCP, kitty, Thunderbird,
+  LibreOffice, the Linux kernel, .NET 6 and more.
+  </description>
+        <googleplay:description>  Ubuntu Pro beta is announced and we cover all the details with Lech Sandecki and
+  Eduardo Barretto, plus we cover security updates for DHCP, kitty, Thunderbird,
+  LibreOffice, the Linux kernel, .NET 6 and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Ubuntu Pro beta is announced and we cover all the details with Lech Sandecki and
+Eduardo Barretto, plus we cover security updates for DHCP, kitty, Thunderbird,
+LibreOffice, the Linux kernel, .NET 6 and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>49 unique CVEs addressed</p>
+<h3 id="usn-5658-1-dhcp-vulnerabilities-00-53">[<a href="https://ubuntu.com/security/notices/USN-5658-1">USN-5658-1</a>] DHCP vulnerabilities [00:53]</h3>
+<ul>
+<li>
+<p>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)</p>
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-2929">CVE-2022-2929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2928">CVE-2022-2928</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p>2 different DoS against ISC DHCP server</p>
+<ul>
+<li>a client could send a lease query to the server</li>
+</ul>
+<p>which would fail to properly decrement a reference count and hence eventually
+could overflow the reference counter -&gt; abort -&gt; DoS</p>
+<ul>
+<li>memory leak could be triggered by a client sending a crafted DHCP packet
+with a FQDN label longer than 64 bytes - eventually would run out of memory
+-&gt; crash -&gt; DoS</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5659-1-kitty-vulnerabilities-01-45">[<a href="https://ubuntu.com/security/notices/USN-5659-1">USN-5659-1</a>] kitty vulnerabilities [01:45]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-41322">CVE-2022-41322</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35605">CVE-2020-35605</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Cross-platform, fast, feature-rich, GPU based terminal</li>
+<li>Includes support for image display, but if it failed to read an image file
+then would display an error message containing the file name - as such, could
+craft the name of the filename to then inject terminal control characters and
+hence arbitrary input into the shell itself and hence execute arbitrary
+code</li>
+<li>Also supports showing <a href="https://sw.kovidgoyal.net/kitty/desktop-notifications/">desktop notifications via OSC escape codes</a> - ie. a shell
+script or even a file could output these and kitty would interpret that to
+show a desktop notification. Also includes support for actions on
+notifications through a named notification id. However, would also fail to
+sanitize these ids, again allowing terminal control characters to be injected
+and hence arbitrary code to be executed <strong>if</strong> the user were to then click on a
+notification popup
+<ul>
+<li>requires an attacker can get the user to display arbitrary content, and then
+for the user to click the notification</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5657-1-graphite2-vulnerability-03-16">[<a href="https://ubuntu.com/security/notices/USN-5657-1">USN-5657-1</a>] Graphite2 vulnerability [03:16]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2018-7999">CVE-2018-7999</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL pointer deref via crafted ttf</li>
+</ul>
+<h3 id="usn-5663-1-thunderbird-vulnerabilities-03-27">[<a href="https://ubuntu.com/security/notices/USN-5663-1">USN-5663-1</a>] Thunderbird vulnerabilities [03:27]</h3>
+<ul>
+<li>12 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36059">CVE-2022-36059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3033">CVE-2022-3033</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3034">CVE-2022-3034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3032">CVE-2022-3032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38478">CVE-2022-38478</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38477">CVE-2022-38477</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38476">CVE-2022-38476</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38473">CVE-2022-38473</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38472">CVE-2022-38472</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36319">CVE-2022-36319</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36318">CVE-2022-36318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2505">CVE-2022-2505</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>102.2.2</li>
+<li>DoS against the inbuilt Matrix client</li>
+<li>2 different methods to cause TB to make a network request when an email was
+opened - both via html within an iframe - allows sender to track whether the
+email was opened etc</li>
+<li>Various web framework issues via rendering untrusted content - DoS, mount
+pointer and addressbar spoofing, RCE etc</li>
+</ul>
+<h3 id="usn-5371-3-nginx-vulnerability-04-22">[<a href="https://ubuntu.com/security/notices/USN-5371-3">USN-5371-3</a>] nginx vulnerability [04:22]</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3618">CVE-2021-3618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36309">CVE-2020-36309</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11724">CVE-2020-11724</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP request smuggling, first covered back in <a href="/episode-157/#usn-5371-1-nginx-vulnerabilities-05-55">[USN-5371-1] nginx vulnerabilities in Episode 157</a></li>
+</ul>
+<h3 id="usn-5666-1-openssh-vulnerability-04-35">[<a href="https://ubuntu.com/security/notices/USN-5666-1">USN-5666-1</a>] OpenSSH vulnerability [04:35]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-41617">CVE-2021-41617</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to properly drop permissions when executing helper commands for
+<code>AuthorizedKeysCommand</code> and <code>AuthorizedPrincipalsCommand</code> and so would run these
+with group membership of the sshd process itself (even if configured to run as
+a different user)</li>
+<li>As such is a form of privilege escalation - low impact since is a non-default
+configuration</li>
+</ul>
+<h3 id="usn-5665-1-pcre-vulnerabilities-05-19">[<a href="https://ubuntu.com/security/notices/USN-5665-1">USN-5665-1</a>] PCRE vulnerabilities [05:19]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2017-7186">CVE-2017-7186</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-6004">CVE-2017-6004</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different OOB read via crafted regexs -&gt; DoS</li>
+</ul>
+<h3 id="usn-5661-1-libreoffice-vulnerabilities-05-31">[<a href="https://ubuntu.com/security/notices/USN-5661-1">USN-5661-1</a>] LibreOffice vulnerabilities [05:31]</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-26307">CVE-2022-26307</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26306">CVE-2022-26306</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26305">CVE-2022-26305</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Document macros have been a common attack vector for Microsoft Office</li>
+<li>To mitigate this, can configure to only execute macros which have a trusted
+signature</li>
+<li>Failed to properly validate these (would only verify that the certificate for
+the signature had the same serial number and issuer string of the trusted
+certificate) - instead has to actually compare the hash of the certificate
+itself as well</li>
+<li>Also has its own password database for storing authentication info for various
+web connections</li>
+<li>A couple issues existing when encrypting the master key which result in it
+being much easier to crack the encryption via a brute force attack than should
+otherwise be - a local attacker with access to a user&rsquo;s LibreOffice config
+(and hence PW DB) could potentially get access to their credentials as used by
+LO</li>
+</ul>
+<h3 id="usn-5660-1-linux-kernel--gcp--vulnerabilities-07-02">[<a href="https://ubuntu.com/security/notices/USN-5660-1">USN-5660-1</a>] Linux kernel (GCP) vulnerabilities [07:02]</h3>
+<ul>
+<li>6 CVEs addressed in Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36946">CVE-2022-36946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1729">CVE-2022-1729</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32296">CVE-2022-32296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33655">CVE-2021-33655</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 GCP on Ubuntu 18.04 LTS</li>
+<li>Most of these have seen in previous weeks - framebuffer driver OOB when
+changing font/screen sizes -&gt; DoS/codeexec, perf race-condition -&gt; UAF -&gt;
+DoS/codeexec, netfilter remote DoS via crafted packet causing truncation below
+packet header size, lack of good enough IP source port randomisation allows a
+malicious TCP server to identify a host by the chosen source port, dm-verity
+DoS/code execution by bypassing LoadPin restrictions to load untrusted kernel
+modules / firmware (but requires root privileges in the first place)</li>
+</ul>
+<p>x*** [<a href="https://ubuntu.com/security/notices/USN-5667-1">USN-5667-1</a>] Linux kernel vulnerabilities [08:01]</p>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-39189">CVE-2022-39189</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36879">CVE-2022-36879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3176">CVE-2022-3176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26373">CVE-2022-26373</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1882">CVE-2022-1882</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 22.04 GA / 20.04 HWE - generic/clouds/lowlatency/raspi etc</li>
+<li>race condition -&gt; UAF in internal pipe impl -&gt; DoS/codeexec</li>
+<li>speculative execution vuln - Enhanced Indirect Branch Restricted Speculation
+(eIBRS) on some processors did not properly handle RET instructions in some
+cases - local attacker could read sensitive info as a result</li>
+<li><code>io_uring</code> UAF</li>
+<li>netlink xfrm ref counting bug -&gt; underflow -&gt; OOPS -&gt; DoS</li>
+<li>Unpriv guest user can compromise guest kernel since KVM failed to properly
+handle TLB flushing in some cases</li>
+</ul>
+<h3 id="usn-5668-1-linux-kernel-vulnerabilities-09-07">[<a href="https://ubuntu.com/security/notices/USN-5668-1">USN-5668-1</a>] Linux kernel vulnerabilities [09:07]</h3>
+<ul>
+<li>11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-36879">CVE-2022-36879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33744">CVE-2022-33744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33742">CVE-2022-33742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33741">CVE-2022-33741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33740">CVE-2022-33740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3176">CVE-2022-3176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26373">CVE-2022-26373</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26365">CVE-2022-26365</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2318">CVE-2022-2318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20369">CVE-2022-20369</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4159">CVE-2021-4159</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 20.04 GA / 18.04 HWE</li>
+<li>More of the same</li>
+</ul>
+<h3 id="usn-5669-1-usn-5669-2-linux-kernel-vulnerabilities-09-18">[<a href="https://ubuntu.com/security/notices/USN-5669-1">USN-5669-1</a>, <a href="https://ubuntu.com/security/notices/USN-5669-2">USN-5669-2</a>] Linux kernel vulnerabilities [09:18]</h3>
+<ul>
+<li>9 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33744">CVE-2022-33744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33742">CVE-2022-33742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33741">CVE-2022-33741</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-33740">CVE-2022-33740</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26365">CVE-2022-26365</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2318">CVE-2022-2318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32296">CVE-2022-32296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1012">CVE-2022-1012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0812">CVE-2022-0812</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 18.04 GA / 16.04 ESM HWE</li>
+</ul>
+<h3 id="usn-5670-1-dot-net-6-vulnerability-09-27">[<a href="https://ubuntu.com/security/notices/USN-5670-1">USN-5670-1</a>] .NET 6 vulnerability [09:27]</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-41032">CVE-2022-41032</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Patch Tuesday!</li>
+<li>EoP via NuGet Client to allow a local attacker to get code execution</li>
+</ul>
+<h3 id="usn-5671-1-advancecomp-vulnerabilities-09-44">[<a href="https://ubuntu.com/security/notices/USN-5671-1">USN-5671-1</a>] AdvanceCOMP vulnerabilities [09:44]</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-8383">CVE-2019-8383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-8379">CVE-2019-8379</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>recompression utils</li>
+<li>NULL ptr deref + heap buffer overflow could be triggered by opening a crafted
+files</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-pro-beta-overview-with-lech-sandecki-and-eduardo-barretto-10-08">Ubuntu Pro Beta overview with Lech Sandecki and Eduardo Barretto [10:08]</h3>
+<ul>
+<li>Hinted at briefly back in <a href="/episode-178/#preparing-for-the-release-of-ubuntu-pro-09-44">Preparing for the release of Ubuntu Pro [09:44]​</a></li>
+<li><a href="https://ubuntu.com/blog/ubuntu-pro-beta-release">https://ubuntu.com/blog/ubuntu-pro-beta-release</a></li>
+<li><a href="https://ubuntu.com/pro">https://ubuntu.com/pro</a></li>
+<li><a href="https://youtu.be/tHXL2_QTRwo">https://youtu.be/tHXL2_QTRwo</a></li>
+<li>We want your feedback:
+<ul>
+<li><a href="https://discourse.ubuntu.com/c/ubuntu-pro/116">https://discourse.ubuntu.com/c/ubuntu-pro/116</a></li>
+</ul>
+</li>
+<li>Lech is hosting a webinar on 25th October 2022 16:00 UTC (5pm UK time, 12pm EDT)
+<ul>
+<li><a href="https://ubuntu.com/engage/introduction-to-ubuntu-pro">https://ubuntu.com/engage/introduction-to-ubuntu-pro</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E180.mp3" length="33679525" type="audio/mpeg" /><itunes:duration>2148</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 179</title>
           <link>https://ubuntusecuritypodcast.org/episode-179/</link>
