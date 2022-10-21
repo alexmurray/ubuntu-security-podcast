@@ -15,14 +15,14 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E181.mp3 :podcast_duration "879" :podcast_bytes "15819036" :permalink "https://ubuntusecuritypodcast.org/episode-181/" :guid 839836f9dd9bad7919f073bec8b68fd043469979b807d947a2efdcd917ffb2876f478c7431a4dd2f50df9e6122fe2ca3da6ce6661a09e71f8e3531e0b50d17fb
 :END:
 #+begin_description
-It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you the all the
-details on what's new and improved, with a particular focus on the security
-features, plus we cover a high priority vulnerability in libksba as well.
+It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you all the details
+on what's new and improved, with a particular focus on the security features,
+plus we cover a high priority vulnerability in libksba as well.
 #+end_description
 ** Overview
-It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you the all the
-details on what's new and improved, with a particular focus on the security
-features, plus we cover a high priority vulnerability in libksba as well.
+It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you all the details
+on what's new and improved, with a particular focus on the security features,
+plus we cover a high priority vulnerability in libksba as well.
 ** This week in Ubuntu Security Updates
 39 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/USN-5672-1][USN-5672-1]]] GMP vulnerability

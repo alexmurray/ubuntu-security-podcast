@@ -1,12 +1,12 @@
 +++
 title = "Episode 181"
 description = """
-  It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you the all the
-  details on what's new and improved, with a particular focus on the security
-  features, plus we cover a high priority vulnerability in libksba as well.
+  It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you all the details
+  on what's new and improved, with a particular focus on the security features,
+  plus we cover a high priority vulnerability in libksba as well.
   """
 date = 2022-10-21T14:45:00+10:30
-lastmod = 2022-10-21T14:47:14+10:30
+lastmod = 2022-10-21T15:30:14+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -20,9 +20,9 @@ guid = "839836f9dd9bad7919f073bec8b68fd043469979b807d947a2efdcd917ffb2876f478c74
 
 ## Overview {#overview}
 
-It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you the all the
-details on what's new and improved, with a particular focus on the security
-features, plus we cover a high priority vulnerability in libksba as well.
+It's the release of Ubuntu 22.10 Kinetic Kudu, and we give you all the details
+on what's new and improved, with a particular focus on the security features,
+plus we cover a high priority vulnerability in libksba as well.
 
 
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
