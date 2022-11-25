@@ -40,7 +40,8 @@
     ("20.10" "Groovy (20.10)")
     ("21.04" "Hirsute (21.04)")
     ("21.10" "Impish (21.10)")
-    ("22.04" "Jammy (22.04 LTS)")))
+    ("22.04" "Jammy (22.04 LTS)")
+    ("22.10" "Kinetic (22.10)")))
 
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
