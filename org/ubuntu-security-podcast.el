@@ -246,7 +246,7 @@
                           "- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]\n"
                           "- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]\n"
                           "- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]\n"
-                          "- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
+                          "- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
 (defun usp-insert-episode-link (&optional episode)
   "Insert an 'org-mode' link to the show-notes for EPISODE."
