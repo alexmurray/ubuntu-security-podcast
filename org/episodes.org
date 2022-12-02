@@ -8,6 +8,228 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 183
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-183
+:EXPORT_DATE: 2022-12-02 17:48
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E183.mp3 :podcast_duration "810" :podcast_bytes "14460954" :permalink "https://ubuntusecuritypodcast.org/episode-183/" :guid a06e9819a73f35852cc208f51663d63d35295c3b7d0d6c1e429527c7b14d944e694b2daf9b7c680903915483cba822a2ea91098679e570c4b88c789aa76cfd71
+:END:
+#+begin_description
+This week we look at a recent report from Elastic Security Labs on the global
+Linux threat landscape, plus we look at a few of the security vulnerabilities
+patched by the team in the past 7 days.
+#+end_description
+** Overview
+This week we look at a recent report from Elastic Security Labs on the global
+Linux threat landscape, plus we look at a few of the security vulnerabilities
+patched by the team in the past 7 days.
+** This week in Ubuntu Security Updates
+81 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5638-3][USN-5638-3]]] Expat vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43680][CVE-2022-43680]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5739-1][USN-5739-1]]] MariaDB vulnerabilities
+- 36 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-32091][CVE-2022-32091]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32089][CVE-2022-32089]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32088][CVE-2022-32088]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32087][CVE-2022-32087]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32086][CVE-2022-32086]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32085][CVE-2022-32085]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32084][CVE-2022-32084]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32083][CVE-2022-32083]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32082][CVE-2022-32082]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32081][CVE-2022-32081]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27458][CVE-2022-27458]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27457][CVE-2022-27457]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27456][CVE-2022-27456]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27455][CVE-2022-27455]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27452][CVE-2022-27452]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27451][CVE-2022-27451]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27449][CVE-2022-27449]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27448][CVE-2022-27448]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27447][CVE-2022-27447]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27446][CVE-2022-27446]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27445][CVE-2022-27445]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27444][CVE-2022-27444]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27387][CVE-2022-27387]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27386][CVE-2022-27386]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27384][CVE-2022-27384]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27383][CVE-2022-27383]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27382][CVE-2022-27382]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27381][CVE-2022-27381]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27380][CVE-2022-27380]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27379][CVE-2022-27379]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27378][CVE-2022-27378]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27377][CVE-2022-27377]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27376][CVE-2022-27376]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-21427][CVE-2022-21427]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-46669][CVE-2021-46669]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2018-25032][CVE-2018-25032]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5740-1][USN-5740-1]]] X.Org X Server vulnerabilities
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-3551][CVE-2022-3551]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3550][CVE-2022-3550]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5736-1][USN-5736-1]]] ImageMagick vulnerabilities
+- 17 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-32547][CVE-2022-32547]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32546][CVE-2022-32546]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32545][CVE-2022-32545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28463][CVE-2022-28463]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1114][CVE-2022-1114]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-4219][CVE-2021-4219]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-39212][CVE-2021-39212]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3574][CVE-2021-3574]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20313][CVE-2021-20313]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20312][CVE-2021-20312]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20309][CVE-2021-20309]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20246][CVE-2021-20246]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20245][CVE-2021-20245]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20244][CVE-2021-20244]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20243][CVE-2021-20243]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20241][CVE-2021-20241]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20224][CVE-2021-20224]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5741-1][USN-5741-1]]] Exim vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-3559][CVE-2022-3559]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5742-1][USN-5742-1]]] JBIG-KIT vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2017-9937][CVE-2017-9937]] @@html:<!-- negligible -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5743-1][USN-5743-1]]] LibTIFF vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-3970][CVE-2022-3970]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5744-1][USN-5744-1]]] libICE vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2017-2626][CVE-2017-2626]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5745-1][USN-5745-1]], [[https://ubuntu.com/security/notices/USN-5745-2][USN-5745-2]]] shadow vulnerability & regression
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2013-4235][CVE-2013-4235]] @@html:<!-- low -->@@
+- Upstream introduced a change in file-system handling in =useradd= that required
+  newer glibc - broke on older Ubuntu releases so that update has been reverted
+  for now on those releases - still is in place on Ubuntu 22.04 LTS / 22.10
+
+*** [[[https://ubuntu.com/security/notices/USN-5689-2][USN-5689-2]]] Perl vulnerability
+- 1 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2020-16156][CVE-2020-16156]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5746-1][USN-5746-1]]] HarfBuzz vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2015-9274][CVE-2015-9274]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5747-1][USN-5747-1]]] Bind vulnerabilities
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2016-6170][CVE-2016-6170]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2016-2775][CVE-2016-2775]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5748-1][USN-5748-1]]] Sysstat vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-39377][CVE-2022-39377]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5728-3][USN-5728-3]]] Linux kernel (GCP) vulnerabilities
+- 12 CVEs addressed in Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-42719][CVE-2022-42719]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40768][CVE-2022-40768]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39188][CVE-2022-39188]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3635][CVE-2022-3635]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3625][CVE-2022-3625]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3028][CVE-2022-3028]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-29901][CVE-2022-29901]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2978][CVE-2022-2978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2153][CVE-2022-2153]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20422][CVE-2022-20422]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41222][CVE-2022-41222]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42703][CVE-2022-42703]] @@html:<!-- high -->@@
+- 2 high priority vulnerabilities both found by Jann Horn (GPZ)
+  - UAF in handling of anonymous VMA mappings
+  - UAF in memory management subsytem handling of TLBs
+  - both could be exploited by a local attacker to crash the kernel or get
+    possible code execution within the kernel and hence escalate privileges
+
+*** [[[https://ubuntu.com/security/notices/USN-5749-1][USN-5749-1]]] libsamplerate vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2017-7697][CVE-2017-7697]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5750-1][USN-5750-1]]] GnuTLS vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2021-4209][CVE-2021-4209]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5718-2][USN-5718-2]]] pixman vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-44638][CVE-2022-44638]] @@html:<!-- medium -->@@
+
+** Goings on in Ubuntu Security Community
+*** A look at Elastic Security Labs Global Threat Report
+- https://www.elastic.co/pdf/elastic-global-threat-report-vol-1-2022.pdf
+- Summarises the findings of the Elastic telemetry, which incorporates data from
+  their various products like Endgame, Endpoint and Security solution.
+- 54% of malware on Windows, 39% on Linux, 6% on MacOS
+- Of those, top 10 are:
+  - Meterpreter, Gafgyt, Mirai, Camelot, Generic, Dofloo, BPFDoor, Ransomexx,
+    Neshta, Getshell
+    - We covered BPFDoor [[*BPFDoor malware targeting Linux and Solaris \[06:08\]][previously]]
+  - Of these 80% are trojan-based, 11% are cryptominers, 4% ransomware
+    - Trojans commonly used to deploy stager and dropper binaries as part of
+      wider intrusion effort
+    - Cryptominers generally mining Monero - mostly composed of XMRig family
+- Also covers details on Windows and MacOS - interestingly Windows still has
+  lots of CobaltStrike, Metasploit and MimiKatz which are all ostensibly
+  red-team tools - also see lots of keyloggers as well as credential stealers
+  (crypto wallets)
+- Mapped behaviour against MITRE ATT&CK - 34% doing defense evasion, 22%
+  execution, 10% credential access, 8% persistence, 7% C², 6% privesc and 4%
+  initial access
+  - of this, masquerading (as another legitimate process) and system binary
+    proxy execution (using existing system binaries to perform malicious
+    actions) accounts for 72% of defense evasion techniques
+- Then dive into more detail on execution techniques (mostly native command and
+  scripting interpreters - think PowerShell, Windows Script Host etc) and
+  abusing Windows Management Instrumentation (WMI) - but won't go too much into
+  this here as this is the Ubuntu Security Podcast, not Windows ;)
+- Also cover metrics from the various public clouds - AWS had 57% of detections
+  whilst GCP and Azure each had ~22% - why does AWS have so much more? AWS has
+  at least ⅓ of the global cloud market share whilst Azure has 20% and GCP only
+  11%
+  - Also perhaps AWS users prefer to use Elastic?
+- Activities they see most in the clouds are Credential Access, Persistence,
+  Defense Evasion, Initial Access
+- 58% of initial access attempts use brute-force combined with password spraying
+- Report then breaks down each cloud to look at the activities mostly performed in each
+  - AWS - access token stealing is top, Azure showed a large usage of valid
+    account access to then attempt to retrieve other access tokens or do
+    phishing, whilst for Google service account abuse was the top
+  - Perhaps is more indicative of what each cloud is used for - ie AWS general
+    purpose, whilst Azure is AD and managed services, and Google is service
+    workers
+- Finally, the report does a deep dive on 4 different threat samples and then
+  has forecasts and recommendations based on those
+  - Of these most are windows specific, but one does predict that Linux VMs used
+    for backend DevOps in cloud environments will be an increased target
+  - This is not really surprising nor novel, and most OSS devs would likely
+    expect this threat given the nature of modern CI/CD pipelines and the
+    follow-up threat to code integrity / supply chain security etc (ie if an
+    attacker can compromise these machines can then tamper with source code /
+    build artefacts etc)
+- As always, requires organisations to have a good security posture and practice
+  good security hygiene - configure for least privilege, audit what you have,
+  deploy defense-in-depth solutions, monitoring and logging so can help detect
+  and have good incident response etc
+  - simple things too - deploy MFA, install security updates etc
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]],
+
 * Episode 182
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-182
