@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Dec 2022 16:24:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Dec 2022 17:11:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 185</title>
+      <link>https://ubuntusecuritypodcast.org/episode-185/</link>
+      <pubDate>Fri, 16 Dec 2022 17:11:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-185/</guid>
+      <description>Overview For our final episode of 2022, Camila is back with a special holiday themed discussion of the security of open source code, plus we hint at what is in store for the podcast for 2023 and we cover some recent security updates including Python, PostgreSQL, Squid and more.
+This week in Ubuntu Security Updates 54 unique CVEs addressed
+[USN-5765-1] PostgreSQL vulnerability [00:55] 1 CVEs addressed in Xenial ESM (16.04 ESM) CVE-2021-23222 [USN-5145-1] PostgreSQL vulnerabilities in Episode 138 Akin to STARTTLS vulns - could inject cleartext before a secure connection has been established [USN-5766-1] Heimdal vulnerability [01:38] 1 CVEs addressed in Trusty ESM (14.</description>
+    </item>
+    
     <item>
       <title>Episode 184</title>
       <link>https://ubuntusecuritypodcast.org/episode-184/</link>
