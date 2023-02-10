@@ -8,6 +8,819 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 186
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-186
+:EXPORT_DATE: 2023-02-10 14:14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E186.mp3 :podcast_duration "930" :podcast_bytes "16821943" :permalink "https://ubuntusecuritypodcast.org/episode-186/" :guid 986aa69cb07f2e9ab9af7d72e6c69a04c2478a022602d075234912e4ea8414d3de029c8653bbe6500c8457ff5c4c71ed8890dd6bafa116bcf554a179216cdd8a
+:END:
+#+begin_description
+The Ubuntu Security Podcast is back for 2023! We ease into the year with
+coverage of the recently announced launch of Ubuntu Pro as GA, plus we look at
+some recent vulns in git, sudo, OpenSSL and more.
+#+end_description
+** Overview
+The Ubuntu Security Podcast is back for 2023! We ease into the year with
+coverage of the recently announced launch of Ubuntu Pro as GA, plus we look at
+some recent vulns in git, sudo, OpenSSL and more.
+** This week in Ubuntu Security Updates
+212 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5778-1][USN-5778-1]]] X.Org X Server vulnerabilities
+- 6 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-46344][CVE-2022-46344]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46343][CVE-2022-46343]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46342][CVE-2022-46342]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46341][CVE-2022-46341]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46340][CVE-2022-46340]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4283][CVE-2022-4283]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5779-1][USN-5779-1]]] Linux kernel (Azure) vulnerabilities
+- 9 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-3621][CVE-2022-3621]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3594][CVE-2022-3594]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3567][CVE-2022-3567]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3566][CVE-2022-3566]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3565][CVE-2022-3565]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3564][CVE-2022-3564]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3524][CVE-2022-3524]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42703][CVE-2022-42703]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5780-1][USN-5780-1]]] Linux kernel (OEM) vulnerabilities
+- 5 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42895][CVE-2022-42895]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3628][CVE-2022-3628]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3619][CVE-2022-3619]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3524][CVE-2022-3524]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5781-1][USN-5781-1]]] Emacs vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-45939][CVE-2022-45939]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5782-1][USN-5782-1]]] Firefox vulnerabilities
+- 7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-46879][CVE-2022-46879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46878][CVE-2022-46878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46877][CVE-2022-46877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46874][CVE-2022-46874]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46873][CVE-2022-46873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46872][CVE-2022-46872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46871][CVE-2022-46871]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5783-1][USN-5783-1]]] Linux kernel (OEM) vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5784-1][USN-5784-1]]] usbredir vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3700][CVE-2021-3700]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5785-1][USN-5785-1]]] FreeRADIUS vulnerabilities
+- 3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-41861][CVE-2022-41861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41860][CVE-2022-41860]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-17185][CVE-2019-17185]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5786-1][USN-5786-1]]] GNOME Files vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-37290][CVE-2022-37290]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5787-1][USN-5787-1]]] Libksba vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-47629][CVE-2022-47629]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5782-2][USN-5782-2]]] Firefox regressions
+- 7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-46879][CVE-2022-46879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46878][CVE-2022-46878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46877][CVE-2022-46877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46874][CVE-2022-46874]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46873][CVE-2022-46873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46872][CVE-2022-46872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46871][CVE-2022-46871]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5789-1][USN-5789-1]]] Linux kernel (OEM) vulnerabilities
+- 10 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-3621][CVE-2022-3621]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3594][CVE-2022-3594]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3567][CVE-2022-3567]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3566][CVE-2022-3566]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3564][CVE-2022-3564]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3524][CVE-2022-3524]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-33743][CVE-2022-33743]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-26365][CVE-2022-26365]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42703][CVE-2022-42703]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5788-1][USN-5788-1]]] curl vulnerabilities
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43552][CVE-2022-43552]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43551][CVE-2022-43551]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5790-1][USN-5790-1]]] Linux kernel vulnerabilities
+- 7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39188][CVE-2022-39188]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-4159][CVE-2021-4159]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5791-1][USN-5791-1]]] Linux kernel vulnerabilities
+- 10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39842][CVE-2022-39842]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5792-1][USN-5792-1]]] Linux kernel vulnerabilities
+- 13 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39842][CVE-2022-39842]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39188][CVE-2022-39188]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0171][CVE-2022-0171]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5793-1][USN-5793-1]]] Linux kernel vulnerabilities
+- 17 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41850][CVE-2022-41850]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41849][CVE-2022-41849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3977][CVE-2022-3977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3623][CVE-2022-3623]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3544][CVE-2022-3544]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3543][CVE-2022-3543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3541][CVE-2022-3541]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3910][CVE-2022-3910]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5794-1][USN-5794-1]]] Linux kernel (AWS) vulnerabilities
+- 4 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5787-2][USN-5787-2]]] Libksba vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-47629][CVE-2022-47629]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5795-1][USN-5795-1]]] Net-SNMP vulnerabilities
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-44793][CVE-2022-44793]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-44792][CVE-2022-44792]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5796-1][USN-5796-1]]] w3m vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-38223][CVE-2022-38223]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5797-1][USN-5797-1]]] WebKitGTK vulnerabilities
+- 7 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-46700][CVE-2022-46700]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46699][CVE-2022-46699]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46698][CVE-2022-46698]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46692][CVE-2022-46692]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42867][CVE-2022-42867]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42856][CVE-2022-42856]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42852][CVE-2022-42852]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5792-2][USN-5792-2]]] Linux kernel vulnerabilities
+- 13 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39842][CVE-2022-39842]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39188][CVE-2022-39188]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0171][CVE-2022-0171]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5793-2][USN-5793-2]]] Linux kernel (Azure) vulnerabilities
+- 17 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41850][CVE-2022-41850]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41849][CVE-2022-41849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3977][CVE-2022-3977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3623][CVE-2022-3623]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3544][CVE-2022-3544]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3543][CVE-2022-3543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3541][CVE-2022-3541]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3910][CVE-2022-3910]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5782-3][USN-5782-3]]] Firefox regressions
+- 7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-46879][CVE-2022-46879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46878][CVE-2022-46878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46877][CVE-2022-46877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46874][CVE-2022-46874]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46873][CVE-2022-46873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46872][CVE-2022-46872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46871][CVE-2022-46871]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5796-2][USN-5796-2]]] w3m vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-38223][CVE-2022-38223]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5798-1][USN-5798-1]]] .NET 6 vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-21538][CVE-2023-21538]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5791-3][USN-5791-3]]] Linux kernel (Azure) vulnerabilities
+- 10 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39842][CVE-2022-39842]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5793-3][USN-5793-3]]] Linux kernel vulnerabilities
+- 17 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41850][CVE-2022-41850]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41849][CVE-2022-41849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3977][CVE-2022-3977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3623][CVE-2022-3623]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3544][CVE-2022-3544]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3543][CVE-2022-3543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3541][CVE-2022-3541]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3910][CVE-2022-3910]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5793-4][USN-5793-4]]] Linux kernel (IBM) vulnerabilities
+- 17 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41850][CVE-2022-41850]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-41849][CVE-2022-41849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3977][CVE-2022-3977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3649][CVE-2022-3649]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3623][CVE-2022-3623]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3544][CVE-2022-3544]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3543][CVE-2022-3543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3541][CVE-2022-3541]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3910][CVE-2022-3910]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5799-1][USN-5799-1]]] Linux kernel (OEM) vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-4378][CVE-2022-4378]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5800-1][USN-5800-1]]] Heimdal vulnerabilities
+- 4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-44640][CVE-2022-44640]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42898][CVE-2022-42898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3437][CVE-2022-3437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-44758][CVE-2021-44758]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5802-1][USN-5802-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5803-1][USN-5803-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4378][CVE-2022-4378]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5804-1][USN-5804-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5801-1][USN-5801-1]]] Vim vulnerabilities
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-0417][CVE-2022-0417]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0392][CVE-2022-0392]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5804-2][USN-5804-2]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5805-1][USN-5805-1]]] Apache Maven vulnerability
+- 1 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2021-26291][CVE-2021-26291]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5795-2][USN-5795-2]]] Net-SNMP vulnerabilities
+- 8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-44793][CVE-2022-44793]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-44792][CVE-2022-44792]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24810][CVE-2022-24810]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24809][CVE-2022-24809]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24808][CVE-2022-24808]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24807][CVE-2022-24807]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24806][CVE-2022-24806]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-24805][CVE-2022-24805]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5808-1][USN-5808-1]]] Linux kernel (IBM) vulnerabilities
+- 4 CVEs addressed in Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5810-1][USN-5810-1]], [[https://ubuntu.com/security/notices/USN-5810-2][USN-5810-2]], [[https://ubuntu.com/security/notices/USN-5810-3][USN-5810-3]]] Git vulnerabilities [01:16]
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-41903][CVE-2022-41903]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23521][CVE-2022-23521]] @@html:<!-- medium -->@@
+- Integer overflow when parsing really long paths specified in =.gitattributes=
+  - But depends if file is in working tree, index or both since when parsed
+    normally the parsing is done in chunks which mitigates the vuln
+  - leads to heap reads/writes -> RCE
+- Integer overflow when using a crafted format specifier for git log or git archive
+  - Not too common to use random format specifiers, but how many people have
+    wanted a prettier git log output, and copy-pasted something from stack
+    overflow without understanding it?
+  - We talk about the provenance and integrity of code for OSS / supply chain
+    attacks - interesting to think about it from a configuration / data point of
+    view
+    - Can ChatGPT be poisoned to spit out dangerous configs?
+
+*** [[[https://ubuntu.com/security/notices/USN-5811-1][USN-5811-1]], [[https://ubuntu.com/security/notices/USN-5811-2][USN-5811-2]], [[https://ubuntu.com/security/notices/USN-5811-3][USN-5811-3]]] Sudo vulnerabilities [03:34]
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-33070][CVE-2022-33070]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-22809][CVE-2023-22809]] @@html:<!-- medium -->@@
+- Most interesting was a vuln in sudoedit - ie the command to edit a file with
+  sudo - launches your specified editor to edit the file
+- The editor is specified via various environment variables - =SUDO_EDITOR=,
+  =VISUAL= or =EDITOR= - these would normally specify the binary of the editor to
+  use
+- But could also include extra arguments to pass to the editor - such as
+  additional filenames by separating them with a double hyphen =--=
+- As such a user could set their =EDITOR=vim -- /etc/shadow= - then when sudoedit
+  launches the editor for the originally specified file, would also launch it
+  with this file too
+- Allows a user to bypass possible restrictions set via =/etc/sudoers= - ie since
+  could be configured to only allow a user to edit say the apache config via
+  sudoedit
+
+*** [[[https://ubuntu.com/security/notices/USN-5812-1][USN-5812-1]]] urllib3 vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33503][CVE-2021-33503]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5810-2][USN-5810-2]]] Git regression
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-41903][CVE-2022-41903]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23521][CVE-2022-23521]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5813-1][USN-5813-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5814-1][USN-5814-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4378][CVE-2022-4378]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5815-1][USN-5815-1]]] Linux kernel (BlueField) vulnerabilities
+- 10 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-43750][CVE-2022-43750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39842][CVE-2022-39842]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3646][CVE-2022-3646]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3061][CVE-2022-3061]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2663][CVE-2022-2663]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-20421][CVE-2022-20421]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5816-1][USN-5816-1]]] Firefox vulnerabilities
+- 9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-23606][CVE-2023-23606]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23605][CVE-2023-23605]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23604][CVE-2023-23604]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23603][CVE-2023-23603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23602][CVE-2023-23602]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23601][CVE-2023-23601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23599][CVE-2023-23599]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23598][CVE-2023-23598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23597][CVE-2023-23597]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5817-1][USN-5817-1]]] Setuptools vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-40897][CVE-2022-40897]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5818-1][USN-5818-1]]] PHP vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-31631][CVE-2022-31631]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5819-1][USN-5819-1]]] HAProxy vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-0056][CVE-2023-0056]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5806-2][USN-5806-2]]] Ruby vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2021-33621][CVE-2021-33621]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5820-1][USN-5820-1]]] exuberant-ctags vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-4515][CVE-2022-4515]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5821-1][USN-5821-1]]] wheel vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-40898][CVE-2022-40898]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5822-1][USN-5822-1]]] Samba vulnerabilities
+- 7 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-45141][CVE-2022-45141]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42898][CVE-2022-42898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-38023][CVE-2022-38023]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-37967][CVE-2022-37967]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-37966][CVE-2022-37966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3437][CVE-2022-3437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20251][CVE-2021-20251]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5823-1][USN-5823-1]]] MySQL vulnerabilities
+- 20 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-21887][CVE-2023-21887]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21883][CVE-2023-21883]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21882][CVE-2023-21882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21881][CVE-2023-21881]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21880][CVE-2023-21880]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21879][CVE-2023-21879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21878][CVE-2023-21878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21877][CVE-2023-21877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21876][CVE-2023-21876]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21875][CVE-2023-21875]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21873][CVE-2023-21873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21871][CVE-2023-21871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21870][CVE-2023-21870]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21869][CVE-2023-21869]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21868][CVE-2023-21868]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21867][CVE-2023-21867]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21863][CVE-2023-21863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21840][CVE-2023-21840]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21836][CVE-2023-21836]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32221][CVE-2022-32221]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5823-2][USN-5823-2]]] MySQL vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-21840][CVE-2023-21840]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5825-1][USN-5825-1]]] PAM vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-28321][CVE-2022-28321]] @@html:<!-- negligible -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5826-1][USN-5826-1]]] Privoxy vulnerabilities
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-44543][CVE-2021-44543]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-44540][CVE-2021-44540]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5827-1][USN-5827-1]]] Bind vulnerabilities
+- 3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-3924][CVE-2022-3924]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3736][CVE-2022-3736]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3094][CVE-2022-3094]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5828-1][USN-5828-1]]] Kerberos vulnerabilities
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-42898][CVE-2022-42898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-20217][CVE-2018-20217]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5829-1][USN-5829-1]]] Linux kernel (Raspberry Pi) vulnerabilities
+- 4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5822-2][USN-5822-2]]] Samba regression
+- 7 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45141][CVE-2022-45141]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42898][CVE-2022-42898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-38023][CVE-2022-38023]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-37967][CVE-2022-37967]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-37966][CVE-2022-37966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3437][CVE-2022-3437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20251][CVE-2021-20251]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5830-1][USN-5830-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43945][CVE-2022-43945]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5831-1][USN-5831-1]]] Linux kernel (Azure CVM) vulnerabilities
+- 4 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4378][CVE-2022-4378]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5823-3][USN-5823-3]]] MySQL regression
+- Affecting Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+
+*** [[[https://ubuntu.com/security/notices/USN-5832-1][USN-5832-1]]] Linux kernel (Raspberry Pi) vulnerabilities
+- 4 CVEs addressed in Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-45934][CVE-2022-45934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3643][CVE-2022-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42896][CVE-2022-42896]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4378][CVE-2022-4378]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5833-1][USN-5833-1]]] python-future vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-40899][CVE-2022-40899]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5835-1][USN-5835-1]]] Cinder vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-47951][CVE-2022-47951]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5835-2][USN-5835-2]]] OpenStack Glance vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-47951][CVE-2022-47951]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5835-3][USN-5835-3]]] Nova vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-47951][CVE-2022-47951]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5834-1][USN-5834-1]]] Apache HTTP Server vulnerabilities
+- 2 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-36760][CVE-2022-36760]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2006-20001][CVE-2006-20001]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5836-1][USN-5836-1]]] Vim vulnerabilities
+- 5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-0433][CVE-2023-0433]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0288][CVE-2023-0288]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0054][CVE-2023-0054]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0049][CVE-2023-0049]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47024][CVE-2022-47024]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-4781-2][USN-4781-2]]] Slurm vulnerabilities
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2021-31215][CVE-2021-31215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-27746][CVE-2020-27746]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-27745][CVE-2020-27745]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-12693][CVE-2020-12693]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-6438][CVE-2019-6438]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-7033][CVE-2018-7033]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2017-15566][CVE-2017-15566]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2018-10995][CVE-2018-10995]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2016-10030][CVE-2016-10030]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5837-1][USN-5837-1]]] Django vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-23969][CVE-2023-23969]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5839-1][USN-5839-1]]] Apache HTTP Server vulnerabilities
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-37436][CVE-2022-37436]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-36760][CVE-2022-36760]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2006-20001][CVE-2006-20001]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5838-1][USN-5838-1]]] AdvanceCOMP vulnerabilities
+- 7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-35016][CVE-2022-35016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35015][CVE-2022-35015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35020][CVE-2022-35020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35019][CVE-2022-35019]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35018][CVE-2022-35018]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35017][CVE-2022-35017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-35014][CVE-2022-35014]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5837-2][USN-5837-2]]] Django vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-23969][CVE-2023-23969]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5839-2][USN-5839-2]]] Apache HTTP Server vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-37436][CVE-2022-37436]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5840-1][USN-5840-1]]] Long Range ZIP vulnerabilities
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2018-5786][CVE-2018-5786]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28044][CVE-2022-28044]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-26291][CVE-2022-26291]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-27347][CVE-2021-27347]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-27345][CVE-2021-27345]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2020-25467][CVE-2020-25467]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5841-1][USN-5841-1]]] LibTIFF vulnerabilities
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-48281][CVE-2022-48281]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3970][CVE-2022-3970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-35524][CVE-2020-35524]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-35523][CVE-2020-35523]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-17546][CVE-2019-17546]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-14973][CVE-2019-14973]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5816-2][USN-5816-2]]] Firefox regressions
+- 9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-23606][CVE-2023-23606]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23605][CVE-2023-23605]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23604][CVE-2023-23604]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23603][CVE-2023-23603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23602][CVE-2023-23602]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23601][CVE-2023-23601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23599][CVE-2023-23599]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23598][CVE-2023-23598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23597][CVE-2023-23597]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5825-2][USN-5825-2]]] PAM regressions
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-28321][CVE-2022-28321]] @@html:<!-- negligible -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5824-1][USN-5824-1]]] Thunderbird vulnerabilities
+- 29 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-0430][CVE-2023-0430]] @@html:<!--  -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23603][CVE-2023-23603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23602][CVE-2023-23602]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23601][CVE-2023-23601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23599][CVE-2023-23599]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23598][CVE-2023-23598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46877][CVE-2022-46877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46874][CVE-2022-46874]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46872][CVE-2022-46872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46871][CVE-2022-46871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45416][CVE-2022-45416]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45414][CVE-2022-45414]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45412][CVE-2022-45412]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23605][CVE-2023-23605]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46882][CVE-2022-46882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46881][CVE-2022-46881]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46880][CVE-2022-46880]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-46878][CVE-2022-46878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45421][CVE-2022-45421]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45420][CVE-2022-45420]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45418][CVE-2022-45418]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45411][CVE-2022-45411]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45410][CVE-2022-45410]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45409][CVE-2022-45409]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45408][CVE-2022-45408]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45406][CVE-2022-45406]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45405][CVE-2022-45405]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45404][CVE-2022-45404]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45403][CVE-2022-45403]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5842-1][USN-5842-1]]] EditorConfig Core C vulnerability [05:24]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-0341][CVE-2023-0341]] @@html:<!-- medium -->@@
+- Discovered by Mark Esler and David Fernandez Gonzalez from Ubuntu Security team
+- Will be discussed in more detail in an upcoming episode with an interview with
+  both Mark and David - TL;DR - Mark decided to fuzz some regex handling in
+  editorconfig-core-c whilst doing a security audit as part of the MIR
+  process. This uncovered a few crashes which David then looked into an
+  identified a heap buffer overflow. He then went further and was able to
+  develop an input that would allow to jump to an arbitrary location, ie. code
+  execution. So was able to demonstrate a heap buffer overflow that could lead
+  to code execution from untrusted input data.
+- Will have to wait for hopefully next weeks episode to get the real inside
+  story
+
+*** [[[https://ubuntu.com/security/notices/USN-5843-1][USN-5843-1]]] tmux vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-47016][CVE-2022-47016]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5810-3][USN-5810-3]]] Git vulnerabilities
+- 2 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-41903][CVE-2022-41903]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23521][CVE-2022-23521]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5844-1][USN-5844-1]], [[https://ubuntu.com/security/notices/USN-5845-1][USN-5845-1]], [[https://ubuntu.com/security/notices/USN-5845-2][USN-5845-2]]] OpenSSL vulnerabilities [08:06]
+- 8 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-0401][CVE-2023-0401]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0217][CVE-2023-0217]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0216][CVE-2023-0216]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0215][CVE-2023-0215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4450][CVE-2022-4450]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4304][CVE-2022-4304]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4203][CVE-2022-4203]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0286][CVE-2023-0286]] @@html:<!-- high -->@@
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-0215][CVE-2023-0215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0286][CVE-2023-0286]] @@html:<!-- high -->@@
+- Most interesting issue was a type confusion in handling of X.509
+  certificates - when parsing the X.400 address would parse it as a string but
+  other code would assume this was a simple type. As such, when comparing this
+  to other values this would not be done correctly. Thus could bypass these
+  checks, in particular which are used for CRL processing and that could then
+  lead to the ability to read other memory contents or crash the application.
+- So whilst not a [[https://ubuntu.com/security/CVE-2014-0160][heartbleed]] (since is a lot more complicated and doesn't allow
+  the same level of control of the memory which is read and hence is unlikely to
+  be able to be used to read out private keys etc)
+
+*** [[[https://ubuntu.com/security/notices/USN-5846-1][USN-5846-1]]] X.Org X Server vulnerability
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-0494][CVE-2023-0494]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5847-1][USN-5847-1]]] Grunt vulnerabilities
+- 3 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-1537][CVE-2022-1537]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0436][CVE-2022-0436]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2020-7729][CVE-2020-7729]] @@html:<!-- medium -->@@
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu Pro GA [09:33]
+- https://ubuntu.com/blog/ubuntu-pro-enters-ga
+- https://ubuntu.com/pro
+- https://www.omgubuntu.co.uk/2023/01/ubuntu-pro-general-availability
+- In late January Canonical announced the general availability of Ubuntu Pro
+  - you may have noticed this in your apt update output, e.g.:
+    #+begin_example
+  The following security updates require Ubuntu Pro with 'esm-apps' enabled:
+    python2.7-minimal python2.7 libpython2.7-minimal libpython2.7-stdlib
+  Learn more about Ubuntu Pro at https://ubuntu.com/pro
+    #+end_example
+- TL;DR - security team is now patching vulnerabilities in packages in the
+  universe component of the Ubuntu archive
+- these patched packages get published under the esm-apps service of Ubuntu Pro
+  - ESM has evolved from extended to *expanded* security maintenance
+  - not only can you get security updates for packages in main once a release
+    reaches the end of the LTS period, you also get security updates for
+    packages in universe both during the LTS period and during the 5 year ESM
+    period too
+- Ubuntu Pro gives 10 years of security support for both packages in both main
+  and universe
+- Ubuntu Pro is free for personal use on up to 5 machines (50 if you are an
+  [[https://wiki.ubuntu.com/Membership][Ubuntu member]])
+  - for commercial organisations, 30 day free trial
+- More details in [[*Ubuntu Pro Beta overview with Lech Sandecki and Eduardo Barretto \[10:08\]][Ubuntu Pro Beta overview with Lech Sandecki and Eduardo Barretto from Episode 180]]
+** Hiring [12:58]
+*** [[https://canonical.com/careers/4377100][Chief Information Security Officer]]
+*** [[https://canonical.com/careers/4811144][Product Marketing Manager - Security]]
+*** [[https://canonical.com/careers/3781589][Security Certifications Product Manager - CIS, FIPS, FedRAMP and more]]
+*** [[https://canonical.com/careers/4192903][Ubuntu Security Manager]]
+- Multiple possible focus areas:
+  - Security Maintenance (CVE and vulnerability addressing life cycle)
+  - Security Technology (AppArmor, Secureboot, and Cryptography)
+  - Certifications and Compliance (FIPS, CIS, FedRAMP)
+*** [[https://canonical.com/careers/4717512][Linux Cryptography and Security Engineer]]
+*** [[https://canonical.com/careers/2925180][Security Engineer - Ubuntu]]
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 185
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-185
