@@ -7,7 +7,7 @@ description = """
   and we also have a brief summary of the security updates from the past week.
   """
 date = 2023-02-17T21:44:00+10:30
-lastmod = 2023-02-17T21:57:34+10:30
+lastmod = 2023-02-17T22:05:32+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -111,6 +111,8 @@ and we also have a brief summary of the security updates from the past week.
 -   Interview by Camila Camargo de Matos with David Fernandez Gonzalez and Mark
     Esler about the discovery and investigation of [CVE-2023-0341](https://ubuntu.com/security/CVE-2023-0341) in Editorconfig
     ([[USN-5842-1] EditorConfig Core C vulnerability from Episode 186]({{< relref "episode-186#usn-5842-1-editorconfig-core-c-vulnerability-05-24" >}}))
+-   [Keynote: Improving FOSS Security - Mark Esler | UbuCon Asia 2022](https://www.youtube.com/watch?v=Oz6_14rT72Q)
+-   <https://litios.github.io/2023/01/14/CVE-2023-0341.html>
 
 
 ## This week in Ubuntu Security Updates [25:19] {#this-week-in-ubuntu-security-updates-25-19}

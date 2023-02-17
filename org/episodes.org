@@ -105,6 +105,8 @@ pro config set apt_news False
   Esler about the discovery and investigation of [[https://ubuntu.com/security/CVE-2023-0341][CVE-2023-0341]] in Editorconfig
   ([[*\[\[\[https://ubuntu.com/security/notices/USN-5842-1\]\[USN-5842-1\]\]\] EditorConfig Core C vulnerability
   \[05:24\]][[USN-5842-1] EditorConfig Core C vulnerability from Episode 186]])
+- [[https://www.youtube.com/watch?v=Oz6_14rT72Q][Keynote: Improving FOSS Security - Mark Esler | UbuCon Asia 2022]]
+- https://litios.github.io/2023/01/14/CVE-2023-0341.html
 ** This week in Ubuntu Security Updates [25:19]
 64 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/USN-5849-1][USN-5849-1]]] Heimdal vulnerabilities
