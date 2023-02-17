@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Feb 2023 14:14:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 21:44:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 187</title>
+      <link>https://ubuntusecuritypodcast.org/episode-187/</link>
+      <pubDate>Fri, 17 Feb 2023 21:44:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-187/</guid>
+      <description>Overview After the announcement of Ubuntu Pro GA last week, we take the time to dispel some myths around all things Ubuntu Pro, esm-apps and apt etc, plus Camila sits down with Mark and David to discuss the back store of Editorconfig CVE-2023-0341 and we also have a brief summary of the security updates from the past week.
+Ubuntu Pro, esm-apps and apt confusions [00:40] https://www.theregister.com/2022/10/13/canonical_ubuntu_ad/
+talks in general about Ubuntu Pro notices in apt but doesn&amp;rsquo;t cover any details https://www.</description>
+    </item>
+    
     <item>
       <title>Episode 186</title>
       <link>https://ubuntusecuritypodcast.org/episode-186/</link>
