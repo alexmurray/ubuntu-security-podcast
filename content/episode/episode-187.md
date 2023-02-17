@@ -3,11 +3,11 @@ title = "Episode 187"
 description = """
   After the announcement of Ubuntu Pro GA last week, we take the time to dispel
   some myths around all things Ubuntu Pro, esm-apps and apt etc, plus Camila sits
-  down with Mark and David to discuss the back store of Editorconfig [CVE-2023-0341](https://ubuntu.com/security/CVE-2023-0341)
+  down with Mark and David to discuss the backstory of Editorconfig [CVE-2023-0341](https://ubuntu.com/security/CVE-2023-0341)
   and we also have a brief summary of the security updates from the past week.
   """
 date = 2023-02-17T21:44:00+10:30
-lastmod = 2023-02-17T21:48:45+10:30
+lastmod = 2023-02-17T21:57:34+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -23,7 +23,7 @@ guid = "e368ca33159db57a94f0736b28893599a408982c77ef1f87a9a904f177e54cceaa98b9b7
 
 After the announcement of Ubuntu Pro GA last week, we take the time to dispel
 some myths around all things Ubuntu Pro, esm-apps and apt etc, plus Camila sits
-down with Mark and David to discuss the back store of Editorconfig [CVE-2023-0341](https://ubuntu.com/security/CVE-2023-0341)
+down with Mark and David to discuss the backstory of Editorconfig [CVE-2023-0341](https://ubuntu.com/security/CVE-2023-0341)
 and we also have a brief summary of the security updates from the past week.
 
 
