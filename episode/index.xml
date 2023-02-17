@@ -188,6 +188,8 @@ listeners to make use of it to ensure their systems are as secure as possible</l
 <li>Interview by Camila Camargo de Matos with David Fernandez Gonzalez and Mark
 Esler about the discovery and investigation of <a href="https://ubuntu.com/security/CVE-2023-0341">CVE-2023-0341</a> in Editorconfig
 (<a href="/episode-186/#usn-5842-1-editorconfig-core-c-vulnerability-05-24">[USN-5842-1] EditorConfig Core C vulnerability from Episode 186</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=Oz6_14rT72Q">Keynote: Improving FOSS Security - Mark Esler | UbuCon Asia 2022</a></li>
+<li><a href="https://litios.github.io/2023/01/14/CVE-2023-0341.html">https://litios.github.io/2023/01/14/CVE-2023-0341.html</a></li>
 </ul>
 <h2 id="this-week-in-ubuntu-security-updates-25-19">This week in Ubuntu Security Updates [25:19]</h2>
 <p>64 unique CVEs addressed</p>
