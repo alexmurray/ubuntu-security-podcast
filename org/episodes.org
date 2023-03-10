@@ -8,6 +8,28 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 190
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-190
+:EXPORT_DATE: 2023-03-10 19:30
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E190.mp3 :podcast_duration "80" :podcast_bytes "1913825" :permalink "https://ubuntusecuritypodcast.org/episode-190/" :guid 1255b6fcf82a7c234f903214983591518ad373ccbe13e6ba99ffa91094749a9875868cae16d88fef6da4405c36e43e2fa44b8b8262d30646cd16d5fa72ba45c8
+:END:
+#+begin_description
+The Ubuntu Security Podcast is on a two week break to focus on [[https://2023.everythingopen.au/][Everything Open
+2023]] in Melbourne next week - come hear Alex talk about [[https://2023.everythingopen.au/schedule/presentation/64/][Securing a distribution
+and securing your own open source project]] in person if you can.
+#+end_description
+** Overview
+The Ubuntu Security Podcast is on a two week break to focus on [[https://2023.everythingopen.au/][Everything Open
+2023]] in Melbourne next week - come hear Alex talk about [[https://2023.everythingopen.au/schedule/presentation/64/][Securing a distribution
+and securing your own open source project]] in person if you can.
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 189
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-189
