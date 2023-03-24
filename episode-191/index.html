@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+  behind that, plus we talk Everything Open and we cover security updates
+  including Emacs, LibreCAD, Python, vim and more.
+  ">
+
+<meta name="generator" content="Hugo 0.111.3">
+
+<meta property="og:title" content="Episode 191" />
+<meta name="twitter:title" content="Episode 191"/>
+<meta itemprop="name" content="Episode 191">
+<meta property="article:published_time" content="2023-03-24T13:51:00&#43;10:30" />
+<meta property="article:modified_time" content="2023-03-24T13:52:19&#43;10:30" />
+<meta property="og:updated_time" content="2023-03-24T13:52:19&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+  behind that, plus we talk Everything Open and we cover security updates
+  including Emacs, LibreCAD, Python, vim and more.
+  " />
+    <meta name="twitter:description" content="  This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+  behind that, plus we talk Everything Open and we cover security updates
+  including Emacs, LibreCAD, Python, vim and more.
+  " />
+    <meta itemprop="description" content="  This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+  behind that, plus we talk Everything Open and we cover security updates
+  including Emacs, LibreCAD, Python, vim and more.
+  "><meta name="twitter:site" content="@ubuntu_sec"/>
+<meta name="twitter:creator" content="@ubuntu_sec"/>
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-191/" />
+
+
+
+
+<title>Episode 191</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-191/">
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+                <li class= "nav-item ">
+                <a href="/about/" class="nav-link">
+                    
+                    <span>About</span>
+                </a>
+              </li>
+            
+          
+            
+                <li class= "nav-item ">
+                <a href="/contact/" class="nav-link">
+                    
+                    <span>Contact</span>
+                </a>
+              </li>
+            
+          
+        </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">
+      <h1>Episode 191</h1><small>Posted on Friday, Mar 24, 2023 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+behind that, plus we talk Everything Open and we cover security updates
+including Emacs, LibreCAD, Python, vim and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E191.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+behind that, plus we talk Everything Open and we cover security updates
+including Emacs, LibreCAD, Python, vim and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>82 unique CVEs addressed</p>
+<h3 id="usn-5955-1-emacs-vulnerability-00-50">[<a href="https://ubuntu.com/security/notices/USN-5955-1">USN-5955-1</a>] Emacs vulnerability [00:50]</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-48339">CVE-2022-48339</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>htmlfontify package would try and validate whether a given file is text by
+calling <code>file</code> on it - but would fail to escape the filename - so if a user
+could be tricked into running <code>htmlfontify-copy-and-link-dir</code> on a crafted
+directory, could get code execution in the context of emacs</li>
+<li>Unlikely to be an issue in practice, also there doesn&rsquo;t appear to be any users
+of this function on github (other than references to the documentation for it)</li>
+</ul>
+<h3 id="usn-5956-1-usn-5956-2-phpmailer-vulnerabilities-02-03">[<a href="https://ubuntu.com/security/notices/USN-5956-1">USN-5956-1</a>, <a href="https://ubuntu.com/security/notices/USN-5956-2">USN-5956-2</a>] PHPMailer vulnerabilities [02:03]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-3603">CVE-2021-3603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-13625">CVE-2020-13625</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19296">CVE-2018-19296</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-5223">CVE-2017-5223</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-11503">CVE-2017-11503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-10045">CVE-2016-10045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-10033">CVE-2016-10033</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>email sending library for PHP</li>
+<li>similarly, possible RCE since could possibly inject commands that would be
+passed to the shell when executing the underlying <code>mail</code> command - original
+patch didn&rsquo;t fix properly so second CVE was issued for the fix</li>
+</ul>
+<h3 id="usn-5957-1-librecad-vulnerabilities-02-58">[<a href="https://ubuntu.com/security/notices/USN-5957-1">USN-5957-1</a>] LibreCAD vulnerabilities [02:58]</h3>
+<ul>
+<li>7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-45343">CVE-2021-45343</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45342">CVE-2021-45342</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45341">CVE-2021-45341</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-21900">CVE-2021-21900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-21899">CVE-2021-21899</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-21898">CVE-2021-21898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-19105">CVE-2018-19105</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Various memory corruption issues when parsing DXF, DWG, DRW or JWW files
+<ul>
+<li>OOB writes, UAFs, NULL ptr deref - RCE / DoS</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5855-2-imagemagick-vulnerabilities-03-37">[<a href="https://ubuntu.com/security/notices/USN-5855-2">USN-5855-2</a>] ImageMagick vulnerabilities [03:37]</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-44268">CVE-2022-44268</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-44267">CVE-2022-44267</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5958-1-ffmpeg-vulnerabilities-03-45">[<a href="https://ubuntu.com/security/notices/USN-5958-1">USN-5958-1</a>] FFmpeg vulnerabilities [03:45]</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-3965">CVE-2022-3965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3964">CVE-2022-3964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3341">CVE-2022-3341</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3109">CVE-2022-3109</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 NULL ptr derefs and 2 OOB reads -&gt; DoS</li>
+</ul>
+<h3 id="usn-5954-1-firefox-vulnerabilities-03-59">[<a href="https://ubuntu.com/security/notices/USN-5954-1">USN-5954-1</a>] Firefox vulnerabilities [03:59]</h3>
+<ul>
+<li>9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28161">CVE-2023-28161</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28164">CVE-2023-28164</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28160">CVE-2023-28160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25751">CVE-2023-25751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28177">CVE-2023-28177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28176">CVE-2023-28176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28162">CVE-2023-28162</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25752">CVE-2023-25752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25750">CVE-2023-25750</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>111.0
+<ul>
+<li>usual mix of issues for web engines (DoS, info leak across domains, RCE) if
+visited a malicious website</li>
+<li>memory corruption, plus a few logic issues that could be used to either
+cause firefox to leak local information back to the web server or spoof
+parts of the UI etc</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5961-1-abcm2ps-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-5961-1">USN-5961-1</a>] abcm2ps vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-32436">CVE-2021-32436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32435">CVE-2021-32435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-32434">CVE-2021-32434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-1010069">CVE-2019-1010069</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-10771">CVE-2018-10771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-10753">CVE-2018-10753</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5962-1-linux-kernel--intel-iotg--vulnerabilities-04-47">[<a href="https://ubuntu.com/security/notices/USN-5962-1">USN-5962-1</a>] Linux kernel (Intel IoTG) vulnerabilities [04:47]</h3>
+<ul>
+<li>18 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-26605">CVE-2023-26605</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0468">CVE-2023-0468</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47521">CVE-2022-47521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47520">CVE-2022-47520</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47519">CVE-2022-47519</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47518">CVE-2022-47518</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-45869">CVE-2022-45869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4379">CVE-2022-4379</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42329">CVE-2022-42329</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42328">CVE-2022-42328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4139">CVE-2022-4139</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3545">CVE-2022-3545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3521">CVE-2022-3521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3435">CVE-2022-3435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3344">CVE-2022-3344</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3169">CVE-2022-3169</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0179">CVE-2023-0179</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0461">CVE-2023-0461</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>two high priority issues
+<ul>
+<li>netfilter mishandling of vlan headers - OOB write -&gt; crash / RCE</li>
+<li>UAF in upper-level protocol subsystem - can be triggered by local user -
+similarly, crash / RCE</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5959-1-kerberos-vulnerabilities-05-32">[<a href="https://ubuntu.com/security/notices/USN-5959-1">USN-5959-1</a>] Kerberos vulnerabilities [05:32]</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-37750">CVE-2021-37750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-36222">CVE-2021-36222</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NULL ptr derefs -&gt; crash in kerberos daemon -&gt; DoS</li>
+</ul>
+<h3 id="usn-5960-1-python-vulnerability-05-51">[<a href="https://ubuntu.com/security/notices/USN-5960-1">USN-5960-1</a>] Python vulnerability [05:51]</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-24329">CVE-2023-24329</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>possibly to bypass blocklists in <code>urllib.parse()</code> simply by prefixing the URL
+with a space - blocklisting is not part of upstream functionality but often
+would be implemented in application / library logic by first using <code>urlparse()</code>
+to parse the given URL - if prefixed with a space then can get <code>urlparse()</code> to
+fail to return the correct scheme/hostname - can workaround simply by first
+calling <code>strip()</code> on URL - apparently upstream still discussing whether the
+current fix is sufficient so watch this space</li>
+</ul>
+<h3 id="usn-5963-1-vim-vulnerabilities-07-14">[<a href="https://ubuntu.com/security/notices/USN-5963-1">USN-5963-1</a>] Vim vulnerabilities [07:14]</h3>
+<ul>
+<li>9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-1264">CVE-2023-1264</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1175">CVE-2023-1175</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1170">CVE-2023-1170</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0051">CVE-2023-0051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0433">CVE-2023-0433</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0288">CVE-2023-0288</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0054">CVE-2023-0054</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0049">CVE-2023-0049</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47024">CVE-2022-47024</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>moar vim vulns from bug-bounty - all found via fuzzing of vim - all memory
+corruption vulns -&gt; DoS / RCE</li>
+</ul>
+<h3 id="usn-5964-1-curl-vulnerabilities-07-41">[<a href="https://ubuntu.com/security/notices/USN-5964-1">USN-5964-1</a>] curl vulnerabilities [07:41]</h3>
+<ul>
+<li>5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-27538">CVE-2023-27538</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27536">CVE-2023-27536</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27535">CVE-2023-27535</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27534">CVE-2023-27534</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27533">CVE-2023-27533</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>various connection reuse issues - eg. would reuse an SSH connection even if
+caller had changed an SSH option - similar for FTP.</li>
+<li>mishandling of ~ in SFTP could then allow access to unintended files (would
+expand even if not the first part of the path)</li>
+</ul>
+<h3 id="usn-5806-3-ruby-vulnerability-08-43">[<a href="https://ubuntu.com/security/notices/USN-5806-3">USN-5806-3</a>] Ruby vulnerability [08:43]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-33621">CVE-2021-33621</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5965-1-tigervnc-vulnerability-08-53">[<a href="https://ubuntu.com/security/notices/USN-5965-1">USN-5965-1</a>] TigerVNC vulnerability [08:53]</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-26117">CVE-2020-26117</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>when processing a TLS certificate, would store that internally as a
+certificate authority - then if client connected to a different server would
+use that stored cert as a CA cert to validate the new server - could then
+allow a malicious server to impersonate other servers</li>
+</ul>
+<h3 id="usn-5904-2-sox-regression-09-35">[<a href="https://ubuntu.com/security/notices/USN-5904-2">USN-5904-2</a>] SoX regression [09:35]</h3>
+<ul>
+<li>9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-31651">CVE-2022-31651</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-31650">CVE-2022-31650</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-40426">CVE-2021-40426</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3643">CVE-2021-3643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23210">CVE-2021-23210</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23172">CVE-2021-23172</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-23159">CVE-2021-23159</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-13590">CVE-2019-13590</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33844">CVE-2021-33844</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Fix for one of the vulns fixed in the original update was incomplete</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-20-dot-04-dot-6-lts-released-09-49">Ubuntu 20.04.6 LTS Released [09:49]</h3>
+<ul>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2023-March/000287.html">https://lists.ubuntu.com/archives/ubuntu-announce/2023-March/000287.html</a></li>
+<li><a href="https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule">https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule</a></li>
+<li>Wasn&rsquo;t originally planned to be released</li>
+</ul>
+<blockquote>
+<p>Unlike previous point releases, 20.04.6 is a refresh of the amd64
+installer media after recent key revocations, re-enabling their usage
+on Secure Boot enabled systems.</p>
+<p>Many other security updates for additional high-impact bug fixes are also
+included, with a focus on maintaining stability and compatibility with
+Ubuntu 20.04 LTS.</p>
+</blockquote>
+<ul>
+<li>TL;DR - recent vulnerabilities in shim and grub meant that we revoked those
+old versions such that they would not boot anymore if updates had been
+installed - so if wanted to reinstall using the 20.04.5 media it would fail to
+boot. Can prove this to yourself:</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat /sys/firmware/efi/efivars/SbatLevelRT-605dab50-e046-4300-abb6-3dd810dd8b23
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sbat,1,2022052400
+</span></span><span style="display:flex;"><span>grub,2
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>objdump -j .sbat -s grubx64.efi
+</span></span></code></pre></div><h3 id="ubuntu-security-at-everything-open-2023-12-02">Ubuntu Security at Everything Open 2023 [12:02]</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/everything-open-2023-in-melbourne">https://ubuntu.com/blog/everything-open-2023-in-melbourne</a></li>
+<li><a href="https://2023.everythingopen.au/schedule/presentation/64/">https://2023.everythingopen.au/schedule/presentation/64/</a></li>
+<li>Presented about how the Ubuntu Security keeps Ubuntu secure and also gave
+advice on how you can improve the security of your own open source projects</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-190/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2022 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+    $("#share").jsSocials({
+        shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook",
+      },
+      {
+        share: "twitter",           
+        label: "Tweet",             
+        logo: "fab fa-twitter",
+        
+          via: "ubuntu_sec",       
+        
+        url: "https:\/\/ubuntusecuritypodcast.org\/episode-191\/",
+        text: "Episode 191"
+      },
+      {
+        share: "linkedin",
+        logo: "fab fa-linkedin"
+      },
+      {
+        share: "pinterest",
+        logo: "fab fa-pinterest"
+      }
+    ],
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
+   });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
+</script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
+

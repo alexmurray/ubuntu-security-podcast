@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Mar 2023 19:30:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Mar 2023 13:51:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 191</title>
+      <link>https://ubuntusecuritypodcast.org/episode-191/</link>
+      <pubDate>Fri, 24 Mar 2023 13:51:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-191/</guid>
+      <description>Overview This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail behind that, plus we talk Everything Open and we cover security updates including Emacs, LibreCAD, Python, vim and more.
+This week in Ubuntu Security Updates 82 unique CVEs addressed
+[USN-5955-1] Emacs vulnerability [00:50] 1 CVEs addressed in Xenial ESM (16.04 ESM) CVE-2022-48339 htmlfontify package would try and validate whether a given file is text by calling file on it - but would fail to escape the filename - so if a user could be tricked into running htmlfontify-copy-and-link-dir on a crafted directory, could get code execution in the context of emacs Unlikely to be an issue in practice, also there doesn&amp;rsquo;t appear to be any users of this function on github (other than references to the documentation for it) [USN-5956-1, USN-5956-2] PHPMailer vulnerabilities [02:03] 7 CVEs addressed in Xenial ESM (16.</description>
+    </item>
+    
     <item>
       <title>Episode 190</title>
       <link>https://ubuntusecuritypodcast.org/episode-190/</link>
