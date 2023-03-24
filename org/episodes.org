@@ -8,6 +8,234 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 191
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-191
+:EXPORT_DATE: 2023-03-24 13:51
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E191.mp3 :podcast_duration "863" :podcast_bytes "15120065" :permalink "https://ubuntusecuritypodcast.org/episode-191/" :guid dfbe5c94be00c46f75d3817b0fda07bbdfebf4db797bae1b0eea1519f46d83008a54636f60d4f7ab6840e36166379b5a925f1ac97f13c4ec06df3a5852709851
+:END:
+#+begin_description
+This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+behind that, plus we talk Everything Open and we cover security updates
+including Emacs, LibreCAD, Python, vim and more.
+#+end_description
+** Overview
+This week saw the unexpected release of Ubuntu 20.04.6 so we go into the detail
+behind that, plus we talk Everything Open and we cover security updates
+including Emacs, LibreCAD, Python, vim and more.
+** This week in Ubuntu Security Updates
+82 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-5955-1][USN-5955-1]]] Emacs vulnerability [00:50]
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-48339][CVE-2022-48339]] @@html:<!-- medium -->@@
+- htmlfontify package would try and validate whether a given file is text by
+  calling =file= on it - but would fail to escape the filename - so if a user
+  could be tricked into running =htmlfontify-copy-and-link-dir= on a crafted
+  directory, could get code execution in the context of emacs
+- Unlikely to be an issue in practice, also there doesn't appear to be any users
+  of this function on github (other than references to the documentation for it)
+
+*** [[[https://ubuntu.com/security/notices/USN-5956-1][USN-5956-1]], [[https://ubuntu.com/security/notices/USN-5956-2][USN-5956-2]]] PHPMailer vulnerabilities [02:03]
+- 7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3603][CVE-2021-3603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-13625][CVE-2020-13625]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-19296][CVE-2018-19296]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2017-5223][CVE-2017-5223]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2017-11503][CVE-2017-11503]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2016-10045][CVE-2016-10045]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2016-10033][CVE-2016-10033]] @@html:<!-- medium -->@@
+- email sending library for PHP
+- similarly, possible RCE since could possibly inject commands that would be
+  passed to the shell when executing the underlying =mail= command - original
+  patch didn't fix properly so second CVE was issued for the fix
+
+*** [[[https://ubuntu.com/security/notices/USN-5957-1][USN-5957-1]]] LibreCAD vulnerabilities [02:58]
+- 7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-45343][CVE-2021-45343]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-45342][CVE-2021-45342]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-45341][CVE-2021-45341]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-21900][CVE-2021-21900]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-21899][CVE-2021-21899]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-21898][CVE-2021-21898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-19105][CVE-2018-19105]] @@html:<!-- medium -->@@
+- Various memory corruption issues when parsing DXF, DWG, DRW or JWW files
+  - OOB writes, UAFs, NULL ptr deref - RCE / DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5855-2][USN-5855-2]]] ImageMagick vulnerabilities [03:37]
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-44268][CVE-2022-44268]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-44267][CVE-2022-44267]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5958-1][USN-5958-1]]] FFmpeg vulnerabilities [03:45]
+- 4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-3965][CVE-2022-3965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3964][CVE-2022-3964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3341][CVE-2022-3341]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3109][CVE-2022-3109]] @@html:<!-- medium -->@@
+- 2 NULL ptr derefs and 2 OOB reads -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5954-1][USN-5954-1]]] Firefox vulnerabilities [03:59]
+- 9 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-28161][CVE-2023-28161]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28164][CVE-2023-28164]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28160][CVE-2023-28160]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25751][CVE-2023-25751]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28177][CVE-2023-28177]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28176][CVE-2023-28176]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28162][CVE-2023-28162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25752][CVE-2023-25752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25750][CVE-2023-25750]] @@html:<!-- medium -->@@
+- 111.0
+  - usual mix of issues for web engines (DoS, info leak across domains, RCE) if
+    visited a malicious website
+  - memory corruption, plus a few logic issues that could be used to either
+    cause firefox to leak local information back to the web server or spoof
+    parts of the UI etc
+
+*** [[[https://ubuntu.com/security/notices/USN-5961-1][USN-5961-1]]] abcm2ps vulnerabilities
+- 6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-32436][CVE-2021-32436]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-32435][CVE-2021-32435]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-32434][CVE-2021-32434]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-1010069][CVE-2019-1010069]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2018-10771][CVE-2018-10771]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-10753][CVE-2018-10753]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5962-1][USN-5962-1]]] Linux kernel (Intel IoTG) vulnerabilities [04:47]
+- 18 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-26605][CVE-2023-26605]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0468][CVE-2023-0468]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47521][CVE-2022-47521]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47520][CVE-2022-47520]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47519][CVE-2022-47519]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47518][CVE-2022-47518]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45869][CVE-2022-45869]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4379][CVE-2022-4379]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42329][CVE-2022-42329]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-42328][CVE-2022-42328]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4139][CVE-2022-4139]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3545][CVE-2022-3545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3521][CVE-2022-3521]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3435][CVE-2022-3435]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3344][CVE-2022-3344]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3169][CVE-2022-3169]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0179][CVE-2023-0179]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0461][CVE-2023-0461]] @@html:<!-- high -->@@
+- two high priority issues
+  - netfilter mishandling of vlan headers - OOB write -> crash / RCE
+  - UAF in upper-level protocol subsystem - can be triggered by local user -
+    similarly, crash / RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-5959-1][USN-5959-1]]] Kerberos vulnerabilities [05:32]
+- 2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-37750][CVE-2021-37750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-36222][CVE-2021-36222]] @@html:<!-- medium -->@@
+- NULL ptr derefs -> crash in kerberos daemon -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-5960-1][USN-5960-1]]] Python vulnerability [05:51]
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-24329][CVE-2023-24329]] @@html:<!-- medium -->@@
+- possibly to bypass blocklists in =urllib.parse()= simply by prefixing the URL
+  with a space - blocklisting is not part of upstream functionality but often
+  would be implemented in application / library logic by first using =urlparse()=
+  to parse the given URL - if prefixed with a space then can get =urlparse()= to
+  fail to return the correct scheme/hostname - can workaround simply by first
+  calling =strip()= on URL - apparently upstream still discussing whether the
+  current fix is sufficient so watch this space
+
+*** [[[https://ubuntu.com/security/notices/USN-5963-1][USN-5963-1]]] Vim vulnerabilities [07:14]
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-1264][CVE-2023-1264]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1175][CVE-2023-1175]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1170][CVE-2023-1170]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0051][CVE-2023-0051]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0433][CVE-2023-0433]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0288][CVE-2023-0288]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0054][CVE-2023-0054]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0049][CVE-2023-0049]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47024][CVE-2022-47024]] @@html:<!-- medium -->@@
+- moar vim vulns from bug-bounty - all found via fuzzing of vim - all memory
+  corruption vulns -> DoS / RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-5964-1][USN-5964-1]]] curl vulnerabilities [07:41]
+- 5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-27538][CVE-2023-27538]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27536][CVE-2023-27536]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27535][CVE-2023-27535]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27534][CVE-2023-27534]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27533][CVE-2023-27533]] @@html:<!-- low -->@@
+- various connection reuse issues - eg. would reuse an SSH connection even if
+  caller had changed an SSH option - similar for FTP.
+- mishandling of ~ in SFTP could then allow access to unintended files (would
+  expand even if not the first part of the path)
+
+*** [[[https://ubuntu.com/security/notices/USN-5806-3][USN-5806-3]]] Ruby vulnerability [08:43]
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-33621][CVE-2021-33621]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-5965-1][USN-5965-1]]] TigerVNC vulnerability [08:53]
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-26117][CVE-2020-26117]] @@html:<!-- medium -->@@
+- when processing a TLS certificate, would store that internally as a
+  certificate authority - then if client connected to a different server would
+  use that stored cert as a CA cert to validate the new server - could then
+  allow a malicious server to impersonate other servers
+
+*** [[[https://ubuntu.com/security/notices/USN-5904-2][USN-5904-2]]] SoX regression [09:35]
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-31651][CVE-2022-31651]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-31650][CVE-2022-31650]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-40426][CVE-2021-40426]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3643][CVE-2021-3643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-23210][CVE-2021-23210]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-23172][CVE-2021-23172]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-23159][CVE-2021-23159]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-13590][CVE-2019-13590]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-33844][CVE-2021-33844]] @@html:<!-- medium -->@@
+- Fix for one of the vulns fixed in the original update was incomplete
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu 20.04.6 LTS Released [09:49]
+- https://lists.ubuntu.com/archives/ubuntu-announce/2023-March/000287.html
+- https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule
+- Wasn't originally planned to be released
+#+begin_quote
+Unlike previous point releases, 20.04.6 is a refresh of the amd64
+installer media after recent key revocations, re-enabling their usage
+on Secure Boot enabled systems.
+
+Many other security updates for additional high-impact bug fixes are also
+included, with a focus on maintaining stability and compatibility with
+Ubuntu 20.04 LTS.
+#+end_quote
+- TL;DR - recent vulnerabilities in shim and grub meant that we revoked those
+  old versions such that they would not boot anymore if updates had been
+  installed - so if wanted to reinstall using the 20.04.5 media it would fail to
+  boot. Can prove this to yourself:
+#+begin_src shell
+cat /sys/firmware/efi/efivars/SbatLevelRT-605dab50-e046-4300-abb6-3dd810dd8b23
+#+end_src
+#+begin_example
+sbat,1,2022052400
+grub,2
+#+end_example
+
+#+begin_src shell
+objdump -j .sbat -s grubx64.efi
+#+end_src
+*** Ubuntu Security at Everything Open 2023 [12:02]
+- https://ubuntu.com/blog/everything-open-2023-in-melbourne
+- https://2023.everythingopen.au/schedule/presentation/64/
+- Presented about how the Ubuntu Security keeps Ubuntu secure and also gave
+  advice on how you can improve the security of your own open source projects
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 190
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-190
