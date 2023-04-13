@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 31 Mar 2023 23:25:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Thu, 13 Apr 2023 23:12:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,355 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          <title>Episode 193</title>
+          <link>https://ubuntusecuritypodcast.org/episode-193/</link>
+          <pubDate>Thu, 13 Apr 2023 23:12:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>70e7fb923d4c039ab0a884687aa51c031dca7022501bfcd834ad27a6db9aa42077a72aafcfe14e157debbdda6ac68b5c5f714c31abbd0ca60d04d52e67f9a775</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        <itunes:title>Episode 193</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+          The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+  the things the security team has been doing along the way, plus it&#39;s our 6000th
+  USN so we look back at the last 19 years of USNs whilst covering security...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+  the things the security team has been doing along the way, plus it&#39;s our 6000th
+  USN so we look back at the last 19 years of USNs whilst covering security
+  updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.
+  </itunes:summary>
+        <description>  The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+  the things the security team has been doing along the way, plus it&#39;s our 6000th
+  USN so we look back at the last 19 years of USNs whilst covering security
+  updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.
+  </description>
+        <googleplay:description>  The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+  the things the security team has been doing along the way, plus it&#39;s our 6000th
+  USN so we look back at the last 19 years of USNs whilst covering security
+  updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+the things the security team has been doing along the way, plus it&rsquo;s our 6000th
+USN so we look back at the last 19 years of USNs whilst covering security
+updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>109 unique CVEs addressed</p>
+<h3 id="usn-5998-1-apache-log4j-vulnerabilities--01-00">[<a href="https://ubuntu.com/security/notices/USN-5998-1">USN-5998-1</a>] Apache Log4j vulnerabilities (01:00)</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-23307">CVE-2022-23307</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23305">CVE-2022-23305</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23302">CVE-2022-23302</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-17571">CVE-2019-17571</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>A bunch of older vulnerabilities, some discovered in the wake of log4shell but
+not deemed as critical</li>
+</ul>
+<h3 id="usn-6000-1-linux-kernel--bluefield--vulnerabilities--01-37">[<a href="https://ubuntu.com/security/notices/USN-6000-1">USN-6000-1</a>] Linux kernel (BlueField) vulnerabilities (01:37)</h3>
+<ul>
+<li>23 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28328">CVE-2023-28328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26607">CVE-2023-26607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23455">CVE-2023-23455</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23454">CVE-2023-23454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-20938">CVE-2023-20938</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1382">CVE-2023-1382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0394">CVE-2023-0394</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0266">CVE-2023-0266</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0045">CVE-2023-0045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47929">CVE-2022-47929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47520">CVE-2022-47520</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42329">CVE-2022-42329</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42328">CVE-2022-42328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4139">CVE-2022-4139</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41218">CVE-2022-41218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36280">CVE-2022-36280</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3623">CVE-2022-3623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3545">CVE-2022-3545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3521">CVE-2022-3521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3435">CVE-2022-3435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3424">CVE-2022-3424</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3169">CVE-2022-3169</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0461">CVE-2023-0461</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NVIDIA BlueField specific kernel (5.4)</li>
+<li>Most high priority CVE UAF in Upper Level Protocol (mentioned in the last few
+episodes)</li>
+<li>6000th USN published by the Ubuntu Security team - this one by Rodrigo Zaiden</li>
+<li>Out of interest:
+<ul>
+<li><a href="https://ubuntu.com/security/notices/USN-6000-1">USN-5000-1</a> - also a kernel USN in June 2021 (Steve Beattie)</li>
+<li><a href="https://ubuntu.com/security/notices/USN-4000-1">USN-4000-1</a> - corosync in May 2019 (Leo Barbosa)</li>
+<li><a href="https://ubuntu.com/security/notices/USN-3000-1">USN-3000-1</a> - kernel (utopic HWE backported to trusty) in June 2016 (John Johansen)</li>
+<li><a href="https://ubuntu.com/security/notices/USN-2000-1">USN-2000-1</a> - nova in October 2013 (Jamie Strandboge)</li>
+<li><a href="https://ubuntu.com/security/notices/USN-1000-1">USN-1000-1</a> - kernel again in October 2010 (Kees Cook)</li>
+<li><a href="https://ubuntu.com/security/notices/USN-1-1">USN-1-1</a> - libpng again in October 2004 (Matt Zimmerman)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6001-1-linux-kernel--aws--vulnerabilities--04-18">[<a href="https://ubuntu.com/security/notices/USN-6001-1">USN-6001-1</a>] Linux kernel (AWS) vulnerabilities (04:18)</h3>
+<ul>
+<li>51 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-1118">CVE-2023-1118</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26607">CVE-2023-26607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26545">CVE-2023-26545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23455">CVE-2023-23455</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1095">CVE-2023-1095</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1074">CVE-2023-1074</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0394">CVE-2023-0394</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47929">CVE-2022-47929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4662">CVE-2022-4662</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41850">CVE-2022-41850</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41849">CVE-2022-41849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41218">CVE-2022-41218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-39188">CVE-2022-39188</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3903">CVE-2022-3903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36879">CVE-2022-36879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3646">CVE-2022-3646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36280">CVE-2022-36280</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3628">CVE-2022-3628</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3303">CVE-2022-3303</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3111">CVE-2022-3111</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3061">CVE-2022-3061</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2991">CVE-2022-2991</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2663">CVE-2022-2663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2380">CVE-2022-2380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2318">CVE-2022-2318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2503">CVE-2022-2503</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20572">CVE-2022-20572</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20132">CVE-2022-20132</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1975">CVE-2022-1975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1974">CVE-2022-1974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1516">CVE-2022-1516</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1462">CVE-2022-1462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1205">CVE-2022-1205</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1195">CVE-2022-1195</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1016">CVE-2022-1016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0617">CVE-2022-0617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0494">CVE-2022-0494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-0487">CVE-2022-0487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-45868">CVE-2021-45868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4203">CVE-2021-4203</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-4149">CVE-2021-4149</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3772">CVE-2021-3772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3732">CVE-2021-3732</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3669">CVE-2021-3669</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3659">CVE-2021-3659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3428">CVE-2021-3428</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28713">CVE-2021-28713</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28712">CVE-2021-28712</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28711">CVE-2021-28711</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-26401">CVE-2021-26401</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-36516">CVE-2020-36516</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 kernel - wins the prize for the most number of CVEs fixed in a single
+update this week - thanks as always to the kernel team for all their work on
+these</li>
+</ul>
+<h3 id="usn-6004-1-linux-kernel--intel-iotg--vulnerabilities--04-42">[<a href="https://ubuntu.com/security/notices/USN-6004-1">USN-6004-1</a>] Linux kernel (Intel IoTG) vulnerabilities (04:42)</h3>
+<ul>
+<li>15 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28328">CVE-2023-28328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26606">CVE-2023-26606</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23559">CVE-2023-23559</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23455">CVE-2023-23455</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23454">CVE-2023-23454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0266">CVE-2023-0266</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0210">CVE-2023-0210</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0045">CVE-2023-0045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48424">CVE-2022-48424</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48423">CVE-2022-48423</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4382">CVE-2022-4382</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41218">CVE-2022-41218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36280">CVE-2022-36280</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3424">CVE-2022-3424</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2196">CVE-2022-2196</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 kernel</li>
+</ul>
+<h3 id="usn-6007-1-linux-kernel--gcp--vulnerabilities--04-51">[<a href="https://ubuntu.com/security/notices/USN-6007-1">USN-6007-1</a>] Linux kernel (GCP) vulnerabilities (04:51)</h3>
+<ul>
+<li>20 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-26607">CVE-2023-26607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-43750">CVE-2022-43750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42895">CVE-2022-42895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42329">CVE-2022-42329</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-42328">CVE-2022-42328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41850">CVE-2022-41850</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41849">CVE-2022-41849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-39842">CVE-2022-39842</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3649">CVE-2022-3649</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3646">CVE-2022-3646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3640">CVE-2022-3640</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3628">CVE-2022-3628</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3545">CVE-2022-3545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3521">CVE-2022-3521</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29901">CVE-2022-29901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29900">CVE-2022-29900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-2663">CVE-2022-2663</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26373">CVE-2022-26373</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20369">CVE-2022-20369</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0461">CVE-2023-0461</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 (backported from 18.04 LTS)</li>
+</ul>
+<h3 id="usn-6009-1-linux-kernel--gcp--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6009-1">USN-6009-1</a>] Linux kernel (GCP) vulnerabilities</h3>
+<ul>
+<li>11 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28328">CVE-2023-28328</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23559">CVE-2023-23559</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23455">CVE-2023-23455</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0394">CVE-2023-0394</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0266">CVE-2023-0266</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0045">CVE-2023-0045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-47929">CVE-2022-47929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41218">CVE-2022-41218</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-36280">CVE-2022-36280</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3424">CVE-2022-3424</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3669">CVE-2021-3669</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>follow-up kernel update including a bunch more fixes</li>
+</ul>
+<h3 id="usn-6003-1-emacs-vulnerability--05-03">[<a href="https://ubuntu.com/security/notices/USN-6003-1">USN-6003-1</a>] Emacs vulnerability (05:03)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28617">CVE-2023-28617</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similar to <a href="/episode-191/#usn-5955-1-emacs-vulnerability-00-50">[USN-5955-1] Emacs vulnerability [00:50]​</a> from Episode 191 - again
+if used org-mode to output to a latex document which included other documents
+that had shell metacharacters in their filenames, could get code execution as
+the user running Emacs</li>
+</ul>
+<h3 id="usn-6002-1-irssi-vulnerability--05-45">[<a href="https://ubuntu.com/security/notices/USN-6002-1">USN-6002-1</a>] Irssi vulnerability (05:45)</h3>
+<ul>
+<li>1 CVEs addressed in Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-29132">CVE-2023-29132</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>IRC client - UAF when outputting a line which was not formatted whilst also
+outputting a line that was formatted - only likely to be able to be triggered
+by various scripts - was discovered after a recent update to GLib 2.75 which
+stopped using it&rsquo;s own internal memory allocator and instead switched to
+regular <code>malloc()</code> / <code>free()</code> - would then trigger the memory checking of libc
+which detected this</li>
+</ul>
+<h3 id="usn-6005-1-sudo-vulnerabilities--07-25">[<a href="https://ubuntu.com/security/notices/USN-6005-1">USN-6005-1</a>] Sudo vulnerabilities (07:25)</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28487">CVE-2023-28487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28486">CVE-2023-28486</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to escape control characters in both the log output and <code>sudoreplay</code> (can
+be used to list or play back the commands executed in a sudo session) - and so
+could allow an attacker to get code execution as the user running <code>sudoreplay</code>
+by injecting terminal control characters</li>
+</ul>
+<h3 id="usn-6010-1-firefox-vulnerabilities--08-45">[<a href="https://ubuntu.com/security/notices/USN-6010-1">USN-6010-1</a>] Firefox vulnerabilities (08:45)</h3>
+<ul>
+<li>15 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-29541">CVE-2023-29541</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29539">CVE-2023-29539</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29538">CVE-2023-29538</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29536">CVE-2023-29536</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29535">CVE-2023-29535</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29533">CVE-2023-29533</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29551">CVE-2023-29551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29550">CVE-2023-29550</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29549">CVE-2023-29549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29548">CVE-2023-29548</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29547">CVE-2023-29547</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29544">CVE-2023-29544</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29543">CVE-2023-29543</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29540">CVE-2023-29540</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29537">CVE-2023-29537</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>112.0 - one Linux specific vuln in particular around the handling of
+downloaded <code>.desktop</code> files - could allow an attacker to get code execution as
+the user running firefox - interesting to note that as a snap, firefox is
+confined by default and cannot execute arbitrary commands from the host
+system - can only use binaries from within the <code>firefox</code> snap itself or the
+user&rsquo;s <code>$HOME</code> which makes exploitation of such an issue harder since less
+LOLBins to make use of</li>
+</ul>
+<h3 id="usn-6011-1-json-smart-vulnerabilities--10-00">[<a href="https://ubuntu.com/security/notices/USN-6011-1">USN-6011-1</a>] Json-smart vulnerabilities (10:00)</h3>
+<ul>
+<li>2 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-1370">CVE-2023-1370</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-31684">CVE-2021-31684</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Small and fast JSON parser for Java - two similar issues, one in handling of
+unclosed quotes and the other in unclosed brackets - both could allow an
+attacker to DoS the application through crafted input</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="preparing-for-the-release-of-ubuntu-23-dot-04--lunar-lobster----10-36">Preparing for the release of Ubuntu 23.04 (Lunar Lobster) (10:36)</h3>
+<ul>
+<li>Team has been busy finishing various items from the development roadmap for
+this cycle:
+<ul>
+<li>SBOM specification</li>
+<li>improvements to how we distribute OVAL data</li>
+<li>evaluation of dbus-broker integration with AppArmor to possibly replace
+dbus-daemon in a future Ubuntu release</li>
+<li>Testing unprivileged user namespace restrictions via AppArmor</li>
+<li><code>io_uring</code> mediation support in AppArmor</li>
+<li>Working with the snapd team on integrating <code>dm-verity</code> within snapd for
+improved integrity of snaps</li>
+<li>Usual maintenance items as well:
+<ul>
+<li>all the normal CVE patching</li>
+<li>a heap of MIR security reviews</li>
+<li>snap store reviews</li>
+<li>AppArmor upstream project maintenance</li>
+</ul>
+</li>
+<li>and more</li>
+</ul>
+</li>
+</ul>
+<h3 id="ubuntu-security-podcast-on-2-weeks-break">Ubuntu Security Podcast on 2 weeks break</h3>
+<ul>
+<li>Alex on leave next week and the following week is the 23.10 start-of-cycle
+product roadmap sprint in Prague</li>
+<li>Expect the podcast to be back the week ending 5th May</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E193.mp3" length="14913983" type="audio/mpeg" /><itunes:duration>883</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>Episode 192</title>
           <link>https://ubuntusecuritypodcast.org/episode-192/</link>
