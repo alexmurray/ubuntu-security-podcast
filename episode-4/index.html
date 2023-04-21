@@ -30,8 +30,13 @@
     <meta itemprop="description" content="  A quieter week in package updates - this week we look at some details of the 9
   unique CVEs addressed across the supported Ubuntu releases and talk about
   various hardening guides for Ubuntu.
-  "><meta name="twitter:site" content="@ubuntu_sec"/>
-<meta name="twitter:creator" content="@ubuntu_sec"/>
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
 <meta name="twitter:domain" content="ubuntu.com"/>
 
 <meta property="og:type" content="article" />
@@ -42,6 +47,24 @@
 
 <title>Episode 4</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-4/">
+
+
+ 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script> 
+
+
+
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
 
@@ -71,7 +94,8 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -88,31 +112,36 @@
           
           
             
-                <li class= "nav-item ">
-                <a href="/about/" class="nav-link">
-                    
-                    <span>About</span>
-                </a>
-              </li>
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
             
-          
-            
-                <li class= "nav-item ">
-                <a href="/contact/" class="nav-link">
-                    
-                    <span>Contact</span>
-                </a>
-              </li>
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
             
           
         </ul>
-
 
       <ul class="navbar-nav ml-auto">
         
         
           <li>
-            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
           </li>
         
         
@@ -123,6 +152,14 @@
         
         
         
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
       </ul>
   </div>
   </div>
@@ -132,8 +169,10 @@
   
 
   <div class="row">
-    <div class="col">
-      <h1>Episode 4</h1><small>Posted on Monday, Sep 10, 2018 
+    <div class="col">      
+      
+        <h1>Episode 4</h1>
+      <small>Posted on Monday, Sep 10, 2018 
 
 
 </small></div>
@@ -294,6 +333,8 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
       </div>
       
       
+      
+      
 
       <div class="row">
         
@@ -342,78 +383,67 @@ it. This is now fixed to simply delete the old copy of the password DB.</li>
 </div>
 <script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
-    $("#share").jsSocials({
-        shares: [
-      {
-        share: "facebook",
-        logo: "fab fa-facebook",
-      },
-      {
-        share: "twitter",           
-        label: "Tweet",             
-        logo: "fab fa-twitter",
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
         
-          via: "ubuntu_sec",       
+          via: "ubuntu_sec", 
         
-        url: "https:\/\/ubuntusecuritypodcast.org\/episode-4\/",
-        text: "Episode 4"
-      },
-      {
-        share: "linkedin",
-        logo: "fab fa-linkedin"
-      },
-      {
-        share: "pinterest",
-        logo: "fab fa-pinterest"
-      }
-    ],
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-4\/",
+      text: "Episode 4"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
     });
 </script>
 
 <script>
-  $(document).ready(function() {
-
-    $('.transcript').hide();
-    $(".hide_transcript").hide();
-    $(".hide_transcript").click(function () {
-    $(".transcript").hide("fast");
-    $(".show_transcript").show();
-    $(".hide_transcript").hide();
-   });
-
-    $(".show_transcript").click(function () {
-    $(".transcript").show(500);
-    $(".hide_transcript").show();
-    $(".show_transcript").hide();
-   });
-
-  });
-
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
 </script>
-
-<script>
-  var player = new MediaElementPlayer('player2', {
-      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
-      defaultSpeed: 1.0,
-      
-  });
-</script>
-
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123895434-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
 
 </body>
 </html>

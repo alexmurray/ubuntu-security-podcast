@@ -10041,13 +10041,25 @@ body {
   height: 250px;
 }
 
-.hompage_episode_description {
+.homepage_episode_description {
   padding-left: 20px;
 }
 
 .homepage_episode_row {
+  padding-top: 20px;
+}
+
+.homepage_episode_row_first {
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.homepage_episode_row_description {
+  padding-left: 0px;
+}
+
+.homepage_episode_row_image {
+  padding-right: 0px;
 }
 
 .jumbotron-host {
@@ -10508,5 +10520,9 @@ a {
   margin: 0;
   padding: 0 12px;
   width: auto;
+}
+
+a.social-links:hover {
+  color: #adb5bd !important;
 }
 /*# sourceMappingURL=blue.css.map */

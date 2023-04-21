@@ -19,8 +19,13 @@
 <meta property="article:modified_time" content="2023-04-13T23:14:37&#43;09:30" />
 <meta property="og:updated_time" content="2023-04-13T23:14:37&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
         <meta name="twitter:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
-        <meta itemprop="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." /><meta name="twitter:site" content="@ubuntu_sec"/>
-<meta name="twitter:creator" content="@ubuntu_sec"/>
+        <meta itemprop="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
 <meta name="twitter:domain" content="ubuntu.com"/>
 <meta property="og:type" content="website" />
 
@@ -31,6 +36,24 @@
 
 <title>Ubuntu Security Podcast</title>
 <link rel="canonical" href="https://ubuntusecuritypodcast.org/">
+
+
+ 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script> 
+
+
+
 
 <link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
 
@@ -60,7 +83,8 @@
         background-image: url("/img/mejs-controls.svg");
     }
     </style>
-<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
 
 </head>
 
@@ -77,31 +101,36 @@
           
           
             
-                <li class= "nav-item ">
-                <a href="/about/" class="nav-link">
-                    
-                    <span>About</span>
-                </a>
-              </li>
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
             
-          
-            
-                <li class= "nav-item ">
-                <a href="/contact/" class="nav-link">
-                    
-                    <span>Contact</span>
-                </a>
-              </li>
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
             
           
         </ul>
-
 
       <ul class="navbar-nav ml-auto">
         
         
           <li>
-            <a class = "social-links" href="https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
           </li>
         
         
@@ -111,6 +140,14 @@
         
         
         
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
         
       </ul>
   </div>
@@ -136,42 +173,42 @@
 
     </div>
 
-
     <div class = "row">
         
     </div>
     <div class = "row">
-    
-      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
-        <a class="btn btn-default" href="https://open.spotify.com/show/0g0Kh2gQWP17Y6yye9bhkZ"><i class="fab fa-spotify"></i>&nbsp;Spotify</a>
-      </div>
-    
-    
-      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
-        <a class="btn btn-default" href="https://itunes.apple.com/au/podcast/ubuntu-security-podcast/id1429360004"><i class="fa fa-podcast"></i>&nbsp;Apple Podcasts</a>
-      </div>
-    
-    
-      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
-        <a class="btn btn-default subscribe_buttons" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZWN1cml0eXBvZGNhc3Qub3JnL2VwaXNvZGUvaW5kZXgueG1s"><i class="fab fa-android"></i>&nbsp;Android</a>
-      </div>
-    
-    
-    
-    
-    
-      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
-        <a class="btn btn-default" href="https://pca.st/O9Df"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
-      </div>
-    
-    
-      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
-        <a class="btn btn-default" href="https://ubuntusecuritypodcast.org/episode/index.xml"><i class="fa fa-rss"></i>&nbsp;RSS</a>
-      </div>
-    
-
-
-</div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://open.spotify.com/show/0g0Kh2gQWP17Y6yye9bhkZ"><i class="fab fa-spotify"></i>&nbsp;Spotify</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://itunes.apple.com/au/podcast/ubuntu-security-podcast/id1429360004"><i class="fa fa-podcast"></i>&nbsp;Apple Podcasts</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default subscribe_buttons" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZWN1cml0eXBvZGNhc3Qub3JnL2VwaXNvZGUvaW5kZXgueG1s"><i class="fab fa-android"></i>&nbsp;Android</a>
+          </div>
+        
+        
+        
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://pca.st/O9Df"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://ubuntusecuritypodcast.org/episode/index.xml"><i class="fa fa-rss"></i>&nbsp;Podcast RSS</a>
+          </div>
+        
+        
+        
+    </div>
 </div>
 </div>
 
@@ -200,13 +237,15 @@
         <div class = "col-md-3">
           <a href="https://ubuntusecuritypodcast.org/episode-193/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
         </div>
-        <div class = "col-md-8"><p class = "hompage_episode_description">The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
+        <div class = "col-md-9"><p class = "hompage_episode_description">The release of Ubuntu 23.04 Lunar Lobster is nigh so we take a look at some of
 the things the security team has been doing along the way, plus it&rsquo;s our 6000th
 USN so we look back at the last 19 years of USNs whilst covering security
 updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.</p></div>
-      </div><div class = "row">
+      </div><div class = "row homepage_episode_row">
       <div class = "col-md-12">
-      <audio src="https://people.canonical.com/~amurray/USP/USP_E193.mp3" preload="auto" />
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E193.mp3" type="audio/mp3">
+          </audio>
       </div>
     </div></div>
 </div>
@@ -214,183 +253,163 @@ updates for the Linux kernel, Emacs, Irssi, Sudo, Firefox and more.</p></div>
 <section class="episode-list">
 <div class="row main_container"><div class = "col"><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-52/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 52</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-52/" class= "grid_episode_title">Episode 52</a></h3>
+          
           <small>Posted on Friday, Nov 8, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-52/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week we look at security updates for FreeTDS, HAProxy, Nokogiri, plus
 some regressions in Whoopsie, Apport and Firefox, and Joe and Alex discuss
 the release of 14.04 ESM for personal use under the Ubuntu Advantage
 program.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E052.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-51/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 51</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-51/" class= "grid_episode_title">Episode 51</a></h3>
+          
           <small>Posted on Thursday, Oct 31, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-51/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">In this Halloween Special, Joe and Alex talk about what scares them in
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">In this Halloween Special, Joe and Alex talk about what scares them in
 security, plus we look at security updates for Firefox, PHP, Samba,
 Whoopsie, Apport and more.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E051.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-50/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 50</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-50/" class= "grid_episode_title">Episode 50</a></h3>
+          
           <small>Posted on Thursday, Oct 24, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-50/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">Alex and Joe discuss the big news of this week - the release of Ubuntu
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">Alex and Joe discuss the big news of this week - the release of Ubuntu
 19.10 Eoan Ermine - plus we look at updates for the Linux kernel, libxslt,
 UW IMAP and more.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E050.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-49/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 49</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-49/" class= "grid_episode_title">Episode 49</a></h3>
+          
           <small>Posted on Friday, Oct 18, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-49/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at updates for Sudo, Python, OpenStack Octavia and more,
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week we look at updates for Sudo, Python, OpenStack Octavia and more,
 plus we discuss a recent CVE for Python which resulted in erroneous
 scientific research results, and we go over some of your feedback from
 Episode 48.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E049.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-48/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 48</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-48/" class= "grid_episode_title">Episode 48</a></h3>
+          
           <small>Posted on Thursday, Oct 10, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-48/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at security updates for the Linux kernel, SDL 2, ClamAV
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week we look at security updates for the Linux kernel, SDL 2, ClamAV
 and more, plus Alex and Joe talk security and performance trade-offs, snaps
 and OWASP Top 10 Cloud Security recommendations, and finally Alex covers
 some recent concerns about the security of the Snap Store.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E048.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-47/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 47</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-47/" class= "grid_episode_title">Episode 47</a></h3>
+          
           <small>Posted on Thursday, Oct 3, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-47/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">We catch up on details of the past few weeks of security updates, including
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">We catch up on details of the past few weeks of security updates, including
 Python, curl, Linux kernel, Exim and more, plus Alex and Joe discuss the
 recent Ubuntu Engineering Sprint in Paris and building a HoneyBot for Admin
 Magazine.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E047.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-46/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 46</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-46/" class= "grid_episode_title">Episode 46</a></h3>
+          
           <small>Posted on Thursday, Sep 12, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-46/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">A massive 85 CVEs addressed this week, including updates for Exim, the
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">A massive 85 CVEs addressed this week, including updates for Exim, the
 Linux Kernel, Samba, systemd and more, plus we discuss hacking BMCs via
 remote USB devices and password stashes.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E046.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-45/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 45</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-45/" class= "grid_episode_title">Episode 45</a></h3>
+          
           <small>Posted on Wednesday, Sep 4, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-45/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E045.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week we look at security updates for Dovecot, Ghostscript, a livepatch update for the Linux kernel, Ceph and Apache, plus Alex and Joe discuss recent Wordpress plugin vulnerabilities and the Hostinger breach, and more.</p></div></div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-44/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 44</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-44/" class= "grid_episode_title">Episode 44</a></h3>
+          
           <small>Posted on Monday, Aug 26, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-44/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E044.mp3" preload="auto" />
-          </div>
-        </div><div class = "row homepage_episode_row">
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week Joe and Alex discuss a recently disclosed backdoor in Webmin, plus we cover security updates from the past week, including for Nova, KDE, LibreOffice, Docker, CUPS and more.</p></div></div><div class = "row homepage_episode_row">
         <div class = "col-md-12">
-          <a href="https://ubuntusecuritypodcast.org/episode-43/" class= "grid_episode_title"><h3 class= "grid_episode_title">Episode 43</h3></a>
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-43/" class= "grid_episode_title">Episode 43</a></h3>
+          
           <small>Posted on Wednesday, Aug 21, 2019 
 
 
 </small>
         </div>
       </div>
-      <div class = "row homepage_episode_row"><div class = "col-md-4">
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
             <a href="https://ubuntusecuritypodcast.org/episode-43/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
           </div>
-          <div class = "col-md-8"><p class = "hompage_episode_description">This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</p></div></div><div class = "row homepage_episode_row">
-          <div class = "col-md-12 player_row">
-            <audio src="https://people.canonical.com/~amurray/USP/USP_E043.mp3" preload="auto" />
-          </div>
-        </div></div></div>
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">This week we cover vulnerabilities in Ghostscript, the Linux kernel, nginx and more, and we follow up last weeks interview with another interview with Jamie Strandboge, this time talking about the history of the Ubuntu Security team.</p></div></div></div></div>
 <div class="row">
 <div class="col-md-12"><div class = "row">
 <div class = "col">
@@ -524,78 +543,67 @@ remote USB devices and password stashes.</p></div></div><div class = "row homepa
 </div>
 <script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
 <script>
-    $("#share").jsSocials({
-        shares: [
-      {
-        share: "facebook",
-        logo: "fab fa-facebook",
-      },
-      {
-        share: "twitter",           
-        label: "Tweet",             
-        logo: "fab fa-twitter",
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
         
-          via: "ubuntu_sec",       
+          via: "ubuntu_sec", 
         
-        url: "https:\/\/ubuntusecuritypodcast.org\/",
-        text: "Ubuntu Security Podcast"
-      },
-      {
-        share: "linkedin",
-        logo: "fab fa-linkedin"
-      },
-      {
-        share: "pinterest",
-        logo: "fab fa-pinterest"
-      }
-    ],
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/",
+      text: "Ubuntu Security Podcast"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
     });
 </script>
 
 <script>
-  $(document).ready(function() {
-
-    $('.transcript').hide();
-    $(".hide_transcript").hide();
-    $(".hide_transcript").click(function () {
-    $(".transcript").hide("fast");
-    $(".show_transcript").show();
-    $(".hide_transcript").hide();
-   });
-
-    $(".show_transcript").click(function () {
-    $(".transcript").show(500);
-    $(".hide_transcript").show();
-    $(".show_transcript").hide();
-   });
-
-  });
-
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
 </script>
-
-<script>
-  var player = new MediaElementPlayer('player2', {
-      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
-      defaultSpeed: 1.0,
-      
-  });
-</script>
-
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123895434-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
 
 </body>
 </html>
