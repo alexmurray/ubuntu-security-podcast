@@ -33,6 +33,7 @@ explicit = "no"
 [params.social]
 twitter = "ubuntu_sec"
 twitter_domain = "ubuntu.com"
+mastodon = "https://fosstodon.org/@ubuntusecurity"
 
 [params.authors]
 
