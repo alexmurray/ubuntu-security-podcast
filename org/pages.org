@@ -22,4 +22,4 @@ Ubuntu Security Podcast is a weekly* podcast discussing the latest updates and d
 - [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
 - [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
 - [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
-- [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
