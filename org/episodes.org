@@ -8,6 +8,246 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 194
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-194
+:EXPORT_DATE: 2023-05-11 22:13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E194.mp3 :podcast_duration "1470" :podcast_bytes "25981353" :permalink "https://ubuntusecuritypodcast.org/episode-194/" :guid d87547b2d922d8c852d34984f55084ed7259f111427b0033cdc24964826fd80da3197901aea4989be293eef2ca3a65512db4a1d26f16ba1367ebe179c9562909
+:END:
+#+begin_description
+The team are back from Prague and bring with them a new segment, drilling into
+recent academic research in the cybersecurity space - for this inaugural segment
+new team member Andrei looks at modelling of attacks against network intrusion
+detections systems, plus we cover the week in security updates looking at
+vulnerabilities in Django, Ruby, Linux kernel, Erlang, OpenStack and more.
+#+end_description
+** Overview
+The team are back from Prague and bring with them a new segment, drilling into
+recent academic research in the cybersecurity space - for this inaugural segment
+new team member Andrei looks at modelling of attacks against network intrusion
+detections systems, plus we cover the week in security updates looking at
+vulnerabilities in Django, Ruby, Linux kernel, Erlang, OpenStack and more.
+** This week in Ubuntu Security Updates
+57 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6054-1][USN-6054-1]]] Django vulnerability (00:55)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-31047][CVE-2023-31047]] @@html:<!-- low -->@@
+- Django supports file uploading via various form constructs - it then performs
+  validation on the file
+- Was possible to upload multiple files via the form by attacking more than one
+  HTML attribute to the form - in this case though only the last file would be
+  validated - and so other files would escape validation
+- Fixed to have Django raise an error in the case that an application tries to
+  use these forms for multiple files and adds a new option to restore the old
+  behaviour if really desired - AND it adds support for validating all files in
+  this case.
+
+*** [[[https://ubuntu.com/security/notices/USN-6055-1][USN-6055-1]]] Ruby vulnerabilities (02:11)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-28756][CVE-2023-28756]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28755][CVE-2023-28755]] @@html:<!-- medium -->@@
+- Two ReDoS issues - ability to cause a CPU-based DoS through crafted input that
+  is then validated by a regex which takes an inordinate amount of time to run
+  - one in URI parsing and the other in Time parsing
+
+*** [[[https://ubuntu.com/security/notices/USN-6055-2][USN-6055-2]]] Ruby regression (03:11)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-28755][CVE-2023-28755]] @@html:<!-- medium -->@@
+- The URI parser regex fix caused a regression and so was reverted - is still
+  under investigation and hope to fix it again in a future update
+
+*** [[[https://ubuntu.com/security/notices/USN-6056-1][USN-6056-1]]] Linux kernel (OEM) vulnerability (03:13)
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1859][CVE-2023-1859]] @@html:<!-- medium -->@@
+- UAF in Xen Plan 9 file system protocol -> DoS / info leak
+
+*** [[[https://ubuntu.com/security/notices/USN-6057-1][USN-6057-1]]] Linux kernel (Intel IoTG) vulnerabilities (03:31)
+- 10 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-26545][CVE-2023-26545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1652][CVE-2023-1652]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1074][CVE-2023-1074]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1073][CVE-2023-1073]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0394][CVE-2023-0394]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4842][CVE-2022-4842]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-47929][CVE-2022-47929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4129][CVE-2022-4129]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0386][CVE-2023-0386]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1281][CVE-2023-1281]] @@html:<!-- high -->@@
+- OverlayFS is a union file-system, allowing one FS to be stacked on top of
+  another - often used for things like schroots where you want to have the
+  pristine source and then a working session chroot where you can make changes
+  and then finally dispose of the whole thing back to the original
+  - Interaction with setuid binaries and the nosuid mount option - nosuid means
+    the suid bit is ignored - in this case, if had setup an overlay with the
+    base file-system mounted nosuid, then in some cases it would be possible to
+    copy up an suid binary as an unprivileged user and have it retain the suid
+    bit - and then the user could just execute it to gain root privileges
+- UAF in Traffic-Control Index (TCINDEX) filter - found in March this year
+
+*** [[[https://ubuntu.com/security/notices/USN-6058-1][USN-6058-1]]] Linux kernel vulnerability (05:45)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1829][CVE-2023-1829]] @@html:<!-- high -->@@
+- Another UAF in Traffic-Control Index (TCINDEX) filter from April this year -
+  seems upstream is sick of these UAFs in TCINDEX so their fix simply removes
+  this classifier from the kernel and hence so does ours - in general we try not
+  to introduce breaking changes but in this case prefer to stay consistent with
+  upstream - also upstream say this does not have many known users anyway
+
+*** [[[https://ubuntu.com/security/notices/USN-6059-1][USN-6059-1]]] Erlang vulnerability (06:23)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-37026][CVE-2022-37026]] @@html:<!-- medium -->@@
+- Failed to properly maintain state during TLS handshake when validating client
+  certificate - basically a malicious client could send the certificate and then
+  simply omit the TLS handshake message which tells the server to validate the
+  cert and the server state would then show the cert had been validated
+- Note only affects Erlang applications that use client certificates for
+  authentication (ie. the ='{verify, verify_peer}'= SSL option)
+- Still planning to try and update erlang in bionic (18.04 LTS) but backport is
+  more complicated
+
+*** [[[https://ubuntu.com/security/notices/USN-6060-1][USN-6060-1]], [[https://ubuntu.com/security/notices/USN-6060-2][USN-6060-2]]] MySQL vulnerabilities (07:40)
+- 20 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-21982][CVE-2023-21982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21980][CVE-2023-21980]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21977][CVE-2023-21977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21976][CVE-2023-21976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21972][CVE-2023-21972]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21966][CVE-2023-21966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21962][CVE-2023-21962]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21955][CVE-2023-21955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21953][CVE-2023-21953]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21947][CVE-2023-21947]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21946][CVE-2023-21946]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21945][CVE-2023-21945]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21940][CVE-2023-21940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21935][CVE-2023-21935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21933][CVE-2023-21933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21929][CVE-2023-21929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21920][CVE-2023-21920]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21919][CVE-2023-21919]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21912][CVE-2023-21912]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21911][CVE-2023-21911]] @@html:<!-- medium -->@@
+- 2 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-21980][CVE-2023-21980]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21912][CVE-2023-21912]] @@html:<!-- medium -->@@
+- Latest upstream releases
+  - 8.0.33 for 20.04 LTS, 22.04 LTS, 22.10, and Lunar (23.04)
+  - 5.7.42 for 16.04 ESM and 18.04 LTS
+- As is the latest upstream point release, also includes bug fixes and possibly
+  new features / incompatible changes - full list of details from upstream:
+  - https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-42.html
+  - https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-33.html
+
+*** [[[https://ubuntu.com/security/notices/USN-6061-1][USN-6061-1]]] WebKitGTK vulnerabilities (08:14)
+- 6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-28205][CVE-2023-28205]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27954][CVE-2023-27954]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27932][CVE-2023-27932]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25358][CVE-2023-25358]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32885][CVE-2022-32885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0108][CVE-2022-0108]] @@html:<!-- medium -->@@
+- Various UAFs plus ability to track users across origins or bypass same origin
+  policy
+
+*** [[[https://ubuntu.com/security/notices/USN-6062-1][USN-6062-1]]] FreeType vulnerability (08:38)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-2004][CVE-2023-2004]] @@html:<!-- medium -->@@
+- Integer overflow when parsing a malformed font - DoS / RCE (particurly with
+  the advent of web fonts)
+
+*** [[[https://ubuntu.com/security/notices/USN-6063-1][USN-6063-1]]] Ceph vulnerabilities (09:03)
+- 4 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-3854][CVE-2022-3854]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3650][CVE-2022-3650]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0670][CVE-2022-0670]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3979][CVE-2021-3979]] @@html:<!-- low -->@@
+- backport of:
+  - 17.2.5 for 22.10, 22.04 LTS
+  - 15.2.17 for 20.04 LTS
+  - 12.2.13 for 18.04 LTS
+
+*** [[[https://ubuntu.com/security/notices/USN-6066-1][USN-6066-1]]] OpenStack Heat vulnerability (09:29)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1625][CVE-2023-1625]] @@html:<!-- medium -->@@
+- Orchestration Service for OpenStack - info leak via API
+
+*** [[[https://ubuntu.com/security/notices/USN-6067-1][USN-6067-1]]] OpenStack Neutron vulnerabilities (09:39)
+- 5 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-3277][CVE-2022-3277]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-40797][CVE-2021-40797]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-40085][CVE-2021-40085]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-38598][CVE-2021-38598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20267][CVE-2021-20267]] @@html:<!-- medium -->@@
+- Virtual Network Service
+
+*** [[[https://ubuntu.com/security/notices/USN-6068-1][USN-6068-1]]] Open vSwitch vulnerability (09:45)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-1668][CVE-2023-1668]] @@html:<!-- medium -->@@
+- Failed to properly handle IP packets which specified a protocol of 0 (used in
+  IPv6 to specify hop-by-hop options) - if a packet with protocol 0 was
+  encountered, OVS would install a dataflow path for both kernel and userspace
+  which would match on ALL IP protocols for this flow - so this would then
+  possibly match against other IP packets and so cause them to be handled
+  incorrectly (possibly allowing when should have been denied etc)
+
+*** [[[https://ubuntu.com/security/notices/USN-6065-1][USN-6065-1]]] css-what vulnerabilities (10:43)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-21222][CVE-2022-21222]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-33587][CVE-2021-33587]] @@html:<!-- medium -->@@
+- CSS selector parser for NodeJS
+- Two ReDoS issues
+
+*** [[[https://ubuntu.com/security/notices/USN-6064-1][USN-6064-1]]] SQL parse vulnerability (11:00)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-30608][CVE-2023-30608]] @@html:<!-- medium -->@@
+- Another ReDoS
+
+** Goings on in Ubuntu Security Community
+*** Ubuntu 23.10 release cycle opens (11:41)
+- The Ubuntu Security is back from Prague (Engineering Sprint) - spent the week
+  diving deep into various aspects like what kinds of tooling and processes we
+  want to try and improve across the team, talking about the culture and history
+  of the team to make sure we maintain our great culture as the team grows.
+- Even discussing mundane stuff like how to refer to and name security updates
+  which go into Ubuntu Pro vs the regular Ubuntu Archive - making sure it is
+  clear to consumers of our USNs etc what is where, plus the various policies
+  around updated for Ubuntu Pro
+- Sessions devoted to snaps and how to do appropriate security reviews for them
+  plus how to coordinate better with the snapd team
+- Even looking at tech debt within our team and our tooling and how we can try
+  and tackle some of that
+- As for more concrete plans for the security team during 23.10
+  - continue the work to use AppArmor to enable tighter controls over
+    unprivileged user namespaces within Ubuntu
+  - various improvements to our [[https://ubuntu.com/security/oval][OVAL]] feeds to make them more useful to users and
+    customers alike
+  - utilising the Canonical Hardware Certifications Lab for testing of security
+    updates for packages that require particular hardware (think things like
+    =intel-microcode=, =nvme-cli=, various graphics drivers etc)
+  - Improvements to AppArmor for more fine-grained network mediation and
+    =io_uring=
+  - More work on supporting various confidential computing use-cases (for an
+    introduction to these types of topics see
+    https://ubuntu.com/engage/introduction-to-confidential-computing-webinar)
+  - Usual work on FIPS / CIS / DISA-STIG updates plus usual security maintenance
+*** Academic paper review with Andrei Iosif (14:40)
+- New segment to dig into the details of various interesting cybersecurity
+  research papers
+- Andrei joined the team just over 1 month ago - previously was Tech Lead at a
+  SecOps startup developing open source tools for automating various
+  cybersecurity solutions - brings a wide range of great experience to our team
+- [[https://dl.acm.org/doi/10.1145/3469659][Modeling Realistic Adversarial Attacks against Network Intrusion Detection Systems]]
+- Looks at what the study was about (developing a model for attacks against
+  Network Intrusion Detection Systems, with a particular focus on IDSs that are
+  based on AI/ML approaches)
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 193
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-193
