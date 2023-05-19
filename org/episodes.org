@@ -8,6 +8,245 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 195
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-195
+:EXPORT_DATE: 2023-05-19 09:39
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E195.mp3 :podcast_duration "1618" :podcast_bytes "27273549" :permalink "https://ubuntusecuritypodcast.org/episode-195/" :guid a08dd8d12c01bc0652459f58bb61c6e52a0ec5b82606c802c6634c05c951ff17eb91d3fe5a84c58a3c02d4b6dc0dc5786c401f358f087623cc3b8f71279fb2c3
+:END:
+#+begin_description
+Alex and Camila discuss security update management strategies after a recent
+outage at Datadog was attributed to a security update for systemd on Ubuntu,
+plus we look at security vulnerabilities in the Linux kernel, OpenStack,
+Synapse, OpenJDK and more.
+#+end_description
+** Overview
+Alex and Camila discuss security update management strategies after a recent
+outage at Datadog was attributed to a security update for systemd on Ubuntu,
+plus we look at security vulnerabilities in the Linux kernel, OpenStack,
+Synapse, OpenJDK and more.
+** This week in Ubuntu Security Updates
+66 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6069-1][USN-6069-1]]] Linux kernel (Raspberry Pi) vulnerability (01:01)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1829][CVE-2023-1829]] @@html:<!-- high -->@@
+- 5.4 raspi in 20.04 / 18.04 HWE
+- [[*\[\[\[https://ubuntu.com/security/notices/USN-6058-1\]\[USN-6058-1\]\]\] Linux kernel vulnerability (05:45)][[USN-6058-1] Linux kernel vulnerability from Episode 194]]
+- UAF in Traffic-Control Index (TCINDEX) filter from April this year - fix
+  simply removes this classifier from the kernel
+
+*** [[[https://ubuntu.com/security/notices/USN-6070-1][USN-6070-1]]] Linux kernel vulnerabilities (01:37)
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1872][CVE-2023-1872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1829][CVE-2023-1829]] @@html:<!-- high -->@@
+- 5.15 raspi in 22.04, Azure FDE in 20.04
+- TCINDEX UAF plus UAF in =io_uring=
+
+*** [[[https://ubuntu.com/security/notices/USN-6071-1][USN-6071-1]]] Linux kernel (OEM) vulnerabilities (01:58)
+- 12 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-26545][CVE-2023-26545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23455][CVE-2023-23455]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1859][CVE-2023-1859]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4662][CVE-2022-4662]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4095][CVE-2022-4095]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40307][CVE-2022-40307]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3586][CVE-2022-3586]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3303][CVE-2022-3303]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2590][CVE-2022-2590]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0386][CVE-2023-0386]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0468][CVE-2023-0468]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1829][CVE-2023-1829]] @@html:<!-- high -->@@
+- 5.17
+- UAFs in TCINDEX, =io_uring=, logic issue in OverlayFS
+  ([[*\[\[\[https://ubuntu.com/security/notices/USN-6057-1\]\[USN-6057-1\]\]\]
+  Linux kernel (Intel IoTG) vulnerabilities (03:31)][[USN-6057-1] Linux kernel
+  (Intel IoTG) vulnerabilities from Episode 194]]), race-condition in handling
+  of handling of copy-on-write read-only shared memory mappings - unpriv user
+  could then get write on these read-only mappings -> privesc
+
+*** [[[https://ubuntu.com/security/notices/USN-6072-1][USN-6072-1]]] Linux kernel (OEM) vulnerabilities (02:31)
+- 6 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-26545][CVE-2023-26545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23455][CVE-2023-23455]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1859][CVE-2023-1859]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0386][CVE-2023-0386]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0468][CVE-2023-0468]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1829][CVE-2023-1829]] @@html:<!-- high -->@@
+- 6.0
+- UAFs in TCINDEX, =io_uring=, logic issue in OverlayFS
+
+*** [[[https://ubuntu.com/security/notices/USN-6079-1][USN-6079-1]]] Linux kernel vulnerabilities (02:49)
+- 25 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-1118][CVE-2023-1118]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32269][CVE-2023-32269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-26544][CVE-2023-26544]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23455][CVE-2023-23455]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23454][CVE-2023-23454]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2162][CVE-2023-2162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21106][CVE-2023-21106]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21102][CVE-2023-21102]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1652][CVE-2023-1652]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1513][CVE-2023-1513]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1078][CVE-2023-1078]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1075][CVE-2023-1075]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1074][CVE-2023-1074]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1073][CVE-2023-1073]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0459][CVE-2023-0459]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0458][CVE-2023-0458]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0394][CVE-2023-0394]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0210][CVE-2023-0210]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48424][CVE-2022-48424]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48423][CVE-2022-48423]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4842][CVE-2022-4842]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4129][CVE-2022-4129]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3707][CVE-2022-3707]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-36280][CVE-2022-36280]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27672][CVE-2022-27672]] @@html:<!-- medium -->@@
+- 5.19 22.10 / 22.04 Azure
+
+*** [[[https://ubuntu.com/security/notices/USN-6080-1][USN-6080-1]]] Linux kernel vulnerabilities (02:55)
+- 10 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1118][CVE-2023-1118]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32269][CVE-2023-32269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2162][CVE-2023-2162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20938][CVE-2023-20938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1513][CVE-2023-1513]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1078][CVE-2023-1078]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1075][CVE-2023-1075]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0459][CVE-2023-0459]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-3707][CVE-2022-3707]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27672][CVE-2022-27672]] @@html:<!-- medium -->@@
+- 5.15 22.04 / 20.04 HWE
+
+*** [[[https://ubuntu.com/security/notices/USN-6081-1][USN-6081-1]]] Linux kernel vulnerabilities (03:02)
+- 5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-1118][CVE-2023-1118]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32269][CVE-2023-32269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2162][CVE-2023-2162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1513][CVE-2023-1513]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0459][CVE-2023-0459]] @@html:<!-- medium -->@@
+- 4.15 18.04 GA / 16.04 AWS (Ubuntu Pro)
+
+*** [[[https://ubuntu.com/security/notices/USN-6073-1][USN-6073-1]], [[https://ubuntu.com/security/notices/USN-6073-2][USN-6073-2]], USN-6073-3, [[https://ubuntu.com/security/notices/USN-6073-4][USN-6073-4]]] Cinder, Glance Store, Nova, os-brick vulnerability (03:14)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-2088][CVE-2023-2088]] @@html:<!-- medium -->@@
+- Inconsistency between Cinder (block storage service of OpenStack) and Nova
+  (compute / virtual server provisioning) could result in storage volumes being
+  attached to the wrong compute instances - would happen when trying to detach a
+  volume from an instance
+- Lots of interacting components, all need a consistent view of the system etc
+
+*** [[[https://ubuntu.com/security/notices/USN-6073-5][USN-6073-5]]] Nova regression
+- Affecting Focal (20.04 LTS)
+- Above update meant that in some circumstances Nova would be unable to detach
+  volumes from instances
+
+*** [[[https://ubuntu.com/security/notices/USN-6074-1][USN-6074-1]]] Firefox vulnerabilities (04:15)
+- 11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-32209][CVE-2023-32209]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32208][CVE-2023-32208]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32206][CVE-2023-32206]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32216][CVE-2023-32216]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32215][CVE-2023-32215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32213][CVE-2023-32213]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32212][CVE-2023-32212]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32211][CVE-2023-32211]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32210][CVE-2023-32210]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32207][CVE-2023-32207]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32205][CVE-2023-32205]] @@html:<!-- medium -->@@
+- 113.0
+
+*** [[[https://ubuntu.com/security/notices/USN-6074-2][USN-6074-2]]] Firefox regressions (04:27)
+- 11 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-32209][CVE-2023-32209]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32208][CVE-2023-32208]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32206][CVE-2023-32206]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32216][CVE-2023-32216]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32215][CVE-2023-32215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32213][CVE-2023-32213]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32212][CVE-2023-32212]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32211][CVE-2023-32211]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32210][CVE-2023-32210]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32207][CVE-2023-32207]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32205][CVE-2023-32205]] @@html:<!-- medium -->@@
+- 113.0.1 from upstream
+
+*** [[[https://ubuntu.com/security/notices/USN-6075-1][USN-6075-1]]] Thunderbird vulnerabilities (04:36)
+- 7 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-32206][CVE-2023-32206]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32215][CVE-2023-32215]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32213][CVE-2023-32213]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32212][CVE-2023-32212]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32211][CVE-2023-32211]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32207][CVE-2023-32207]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32205][CVE-2023-32205]] @@html:<!-- medium -->@@
+- 102.11.0
+
+*** [[[https://ubuntu.com/security/notices/USN-6060-3][USN-6060-3]]] MySQL regression (05:02)
+- Affecting Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+- [[*\[\[\[https://ubuntu.com/security/notices/USN-6060-1\]\[USN-6060-1\]\], \[\[https://ubuntu.com/security/notices/USN-6060-2\]\[USN-6060-2\]\]\] MySQL vulnerabilities (07:40)][[USN-6060-1, USN-6060-2] MySQL vulnerabilities from Episode 194]]
+- Latest upstream release 8.0.33 introduced a regression on 32-bit ARM (armhf) -
+  would crash on startup - to fix, reverted an upstream commit which was
+  introduced to help with performance of atomic operations
+
+*** [[[https://ubuntu.com/security/notices/USN-6076-1][USN-6076-1]]] Synapse vulnerabilities (05:39)
+- 7 CVEs addressed in Bionic (18.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2018-16515][CVE-2018-16515]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-5885][CVE-2019-5885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-12423][CVE-2018-12423]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2019-11842][CVE-2019-11842]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-10657][CVE-2018-10657]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-12291][CVE-2018-12291]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-18835][CVE-2019-18835]] @@html:<!-- medium -->@@
+- Matrix homeserver
+- Various issues - signature checking on APIs, failure to properly apply event
+  visibility rules, DoS - exploited in the wild, insufficient randomness when
+  generating random IDs made them guessable, ability for unauthorised users to
+  hijack rooms, more predictable randomness which could allow remote attackers
+  to impersonate users, event spoofing due to improper signature validation -
+  some of these require to be the admin of a room or to have a malicious server
+  etc - but since Matrix is federated, this is not so implausible
+
+*** [[[https://ubuntu.com/security/notices/USN-6078-1][USN-6078-1]]] libwebp vulnerability (06:38)
+- 1 CVEs addressed in Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-1999][CVE-2023-1999]] @@html:<!-- medium -->@@
+- Double free when handling crafted content
+
+*** [[[https://ubuntu.com/security/notices/USN-6077-1][USN-6077-1]]] OpenJDK vulnerabilities (06:45)
+- 7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-21968][CVE-2023-21968]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21967][CVE-2023-21967]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21954][CVE-2023-21954]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21939][CVE-2023-21939]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21938][CVE-2023-21938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21937][CVE-2023-21937]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21930][CVE-2023-21930]] @@html:<!-- medium -->@@
+- Latest upstream point releases
+  - Most Ubuntu releases support more then 1 version of OpenJDK - this update is
+    for OpenJDK versions 20, 17, 11 and 8 across the various Ubuntu releases
+
+*** [[[https://ubuntu.com/security/notices/USN-6082-1][USN-6082-1]]] EventSource vulnerability (07:02)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic (18.04 LTS), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-1650][CVE-2022-1650]] @@html:<!-- medium -->@@
+- EventSource client for NodeJS - info leak - could leak cookies and
+  authorisation headers to third party applications - but should have been
+  sanitising headers to avoid this as per same-origin-policy
+
+** Goings on in Ubuntu Security Community
+*** Datadog outage and management of security updates (07:32)
+- https://newsletter.pragmaticengineer.com/p/inside-the-datadog-outage
+- Alex and Camila discuss a recent outage at Datadog on their Ubuntu systems
+  that was triggered by a security update for systemd and the pros and cons of
+  automatic security updates plus other approaches which can be taken to allow
+  updates to be applied in a more controlled manner
+- https://ubuntu.com/blog/3-ways-to-apply-security-patches-in-linux
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 194
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-194
