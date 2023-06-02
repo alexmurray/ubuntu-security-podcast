@@ -32,7 +32,7 @@
   '(("12.04" "Precise ESM (12.04 ESM)")
     ("14.04" "Trusty ESM (14.04 ESM)")
     ("16.04" "Xenial ESM (16.04 ESM)")
-    ("18.04" "Bionic (18.04 LTS)")
+    ("18.04" "Bionic ESM (18.04 ESM)")
     ("18.10" "Cosmic (18.10)")
     ("19.04" "Disco (19.04)")
     ("19.10" "Eoan (19.10)")
