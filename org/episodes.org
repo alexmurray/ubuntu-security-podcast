@@ -7,6 +7,258 @@
 # https://github.com/kaushalmodi/ox-hugo/issues/180
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
+
+* Episode 199
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-199
+:EXPORT_DATE: 2023-06-16 18:47
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E199.mp3 :podcast_duration "1639" :podcast_bytes "28566522" :permalink "https://ubuntusecuritypodcast.org/episode-199/" :guid 80d53c07cf49e3f9fafba0661c170262d228b0b6f2ea02d3353b846c55e44ffa666c2a4021d31a2c272b95bb5296ee3b84f676a8ffd8ef62b0f7b463942a696e
+:END:
+#+begin_description
+For our 199th episode Andrei looks at Fuzzing Configurations of Program Options
+plus we discuss Google's findings on the =io_uring= kernel subsystem and we look
+at vulnerability fixes for Netatalk, Jupyter Core, Vim, SSSD, GNU binutils, GLib
+and more.
+#+end_description
+** Overview
+For our 199th episode Andrei looks at Fuzzing Configurations of Program Options
+plus we discuss Google's findings on the =io_uring= kernel subsystem and we look
+at vulnerability fixes for Netatalk, Jupyter Core, Vim, SSSD, GNU binutils, GLib
+and more.
+** This week in Ubuntu Security Updates
+53 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6145-1][USN-6145-1]]] Sysstat vulnerabilities (00:55)
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-33204][CVE-2023-33204]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-39377][CVE-2022-39377]] @@html:<!-- medium -->@@
+- system performance tools - integer overflow leading to possible buffer
+  overflow - original fix was incomplete so a second CVE was issued
+
+*** [[[https://ubuntu.com/security/notices/USN-6146-1][USN-6146-1]]] Netatalk vulnerabilities (01:22)
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-45188][CVE-2022-45188]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43634][CVE-2022-43634]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23125][CVE-2022-23125]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23124][CVE-2022-23124]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23123][CVE-2022-23123]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23122][CVE-2022-23122]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-23121][CVE-2022-23121]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0194][CVE-2022-0194]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2021-31439][CVE-2021-31439]] @@html:<!-- medium -->@@
+- Implementation of the Apple Filing Protocol - allows a Ubuntu server to share
+  files with macOS clients - similar to Samba for Windows
+- Lots of different buffer overflows - some / most disclosed via ZDI
+- Almost all due to missing length checks on the input data - some OOB write,
+  others OOB read - sadly there is no AppArmor profile for netatalk but it would
+  be interesting to try and create one
+
+*** [[[https://ubuntu.com/security/notices/USN-6147-1][USN-6147-1]]] SpiderMonkey vulnerability (02:21)
+- 1 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-34416][CVE-2023-34416]] @@html:<!-- medium -->@@
+- Latest release of mozjs-102.12.0 (Mozilla's SpiderMonkey JS engine)
+- Used by gnome-shell etc
+- Upstream mozilla describes this issue as 'memory safety bugs'
+
+*** [[[https://ubuntu.com/security/notices/USN-6149-1][USN-6149-1]]] Linux kernel vulnerabilities (02:52)
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-28328][CVE-2023-28328]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1073][CVE-2023-1073]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1380][CVE-2023-1380]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-30456][CVE-2023-30456]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31436][CVE-2023-31436]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32233][CVE-2023-32233]] @@html:<!-- high -->@@
+- 4.4 based kernel (Xenial GA kernel)
+- All interesting CVEs discussed last week - [[*\[\[\[https://ubuntu.com/security/notices/USN-6130-1\]\[USN-6130-1\]\]\] Linux kernel vulnerabilities (02:23)][[USN-6130-1] Linux kernel vulnerabilities in Episode 198]]
+- OOB read in the USB handling code for Broadcom FullMAC USB WiFi driver
+- KVM mishandling of control registers for nested guest VMs
+- OOB write in network queuing scheduler - able to be triggered though an
+  unprivileged user namespace (again)
+- race condition -> UAF -> privesc in netfilter
+
+*** [[[https://ubuntu.com/security/notices/USN-6150-1][USN-6150-1]], [[https://ubuntu.com/security/notices/USN-6162-1][USN-6162-1]]] Linux kernel vulnerabilities (03:55)
+- 5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-2612][CVE-2023-2612]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1380][CVE-2023-1380]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-30456][CVE-2023-30456]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31436][CVE-2023-31436]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32233][CVE-2023-32233]] @@html:<!-- high -->@@
+- 5.15 Raspi + Intel-IoTG 22.04 LTS,
+- 5.4 Raspi + Intel-IoTG 20.04 LTS
+
+*** [[[https://ubuntu.com/security/notices/USN-6151-1][USN-6151-1]]] Linux kernel (Xilinx ZynqMP) vulnerabilities (04:13)
+- 4 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-23559][CVE-2023-23559]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4382][CVE-2022-4382]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2196][CVE-2022-2196]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3669][CVE-2021-3669]] @@html:<!-- low -->@@
+- 5.4
+
+*** [[[https://ubuntu.com/security/notices/USN-6152-1][USN-6152-1]]] Linux kernel (GKE) regression (04:21)
+- Affecting Focal (20.04 LTS), Jammy (22.04 LTS)
+- 5.15 - NFS cache issue causing a severe degradation in performance under
+  certain conditions
+
+*** [[[https://ubuntu.com/security/notices/USN-6153-1][USN-6153-1]]] Jupyter Core vulnerability (04:42)
+- 1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2022-39286][CVE-2022-39286]] @@html:<!-- medium -->@@
+- Executed untrusted files from current working directory - possible RCE - would
+  unconditionally prepend the current working dir to the search path
+
+*** [[[https://ubuntu.com/security/notices/USN-6154-1][USN-6154-1]]] Vim vulnerabilities (04:58)
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-2610][CVE-2023-2610]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2609][CVE-2023-2609]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2426][CVE-2023-2426]] @@html:<!-- medium -->@@
+- Moar vim CVEs
+- Seems we talk about vim every month or so lately
+- Only a few CVEs per year until 2021 - then 20, 113 for 2022, so far only 15
+  for 2023 - is this the sign that the rate of vim CVEs are decreasing?
+#+CAPTION: Vulnerabilities by year in vim from https://www.cvedetails.com/product/14270/VIM-VIM.html?vendor_id=8218
+[[./../static/img/vim-cves-by-year.png]]
+*** [[[https://ubuntu.com/security/notices/USN-6155-1][USN-6155-1]]] Requests vulnerability (05:56)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-32681][CVE-2023-32681]] @@html:<!-- medium -->@@
+- Python requests library - leaked Proxy-Authorization headers to the
+  destination server when redirected by a HTTPS endpoint
+
+*** [[[https://ubuntu.com/security/notices/USN-6156-1][USN-6156-1]]] SSSD vulnerability (06:11)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-4254][CVE-2022-4254]] @@html:<!-- medium -->@@
+- Failed to sanitise certificate attributes before issuing an LDAP search -
+  ie. a certificate may contain parenthesis in say the =Subject DN= field - this
+  would then be used directly in the query and would be interpreted as
+  parameters in the LDAP query - could then allow a malicious client to provide
+  a crafted certificate which performs arbitrary LDAP queries etc - such that
+  when used in conjunction with FreeIPA they could elevate their privileges
+
+*** [[[https://ubuntu.com/security/notices/USN-6148-1][USN-6148-1]]] SNI Proxy vulnerability (06:54)
+- 1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-25076][CVE-2023-25076]] @@html:<!-- high -->@@
+- Buffer overflow when handling a crafted HTTP packet that specifies an IPv6
+  address longer than the maximum possible - since parses it into a fixed size
+  buffer
+
+*** [[[https://ubuntu.com/security/notices/USN-6157-1][USN-6157-1]]] GlusterFS vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-26253][CVE-2023-26253]] @@html:<!-- medium -->@@
+- Stack buffer overread - generally protected by stack protector on Ubuntu -
+  crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6143-2][USN-6143-2]]] Firefox regressions (07:25)
+- 4 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-34415][CVE-2023-34415]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-34417][CVE-2023-34417]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-34416][CVE-2023-34416]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-34414][CVE-2023-34414]] @@html:<!-- medium -->@@
+- 114.0.1 - crash on startup if on disk metadata is corrupted / invalid - fixed
+  to just indicate an error occurred and continue without the data
+
+*** [[[https://ubuntu.com/security/notices/USN-6158-1][USN-6158-1]]] Node Fetch vulnerability (07:45)
+- 1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-0235][CVE-2022-0235]] @@html:<!-- medium -->@@
+- If redirected to another site, would leak the cookie of the originating site
+  to the other - violation of same origin policy
+
+*** [[[https://ubuntu.com/security/notices/USN-6159-1][USN-6159-1]]] Tornado vulnerability (07:59)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-28370][CVE-2023-28370]] @@html:<!-- medium -->@@
+- Open redirect - allows an attacker to craft a URL to a site that when visited
+  will redirect the user to a different arbitrary site - can then be used to
+  phish the user
+
+*** [[[https://ubuntu.com/security/notices/USN-6160-1][USN-6160-1]]] GNU binutils vulnerability (08:27)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-45078][CVE-2021-45078]] @@html:<!-- low -->@@
+- Heap based buffer overflow when reading certain debugging information - could
+  then possibly get code execution - requires the user to run objdump or similar
+  on an attacker controlled binary - in general binutils is expected to only be
+  run on trusted inputs - so if you are using objdump etc for reverse
+  engineering arbitrary binaries, should do this in an isolated environment - VM
+
+*** [[[https://ubuntu.com/security/notices/USN-6161-1][USN-6161-1]]] .NET vulnerabilities (09:02)
+- 5 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-33128][CVE-2023-33128]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32032][CVE-2023-32032]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-29337][CVE-2023-29337]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-29331][CVE-2023-29331]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-24936][CVE-2023-24936]] @@html:<!-- medium -->@@
+- Latest .NET point releases from Microsoft for .NET 6 and 7 fixing various
+  issues in the language runtime (not a lot of details provided by MS on these)
+
+*** [[[https://ubuntu.com/security/notices/USN-6164-1][USN-6164-1]]] c-ares vulnerabilities (09:24)
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-32067][CVE-2023-32067]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31130][CVE-2023-31130]] @@html:<!-- medium -->@@
+- library for async DNS lookups - used by apt-cacher-ng, frr, wireshark, sssd
+  and more
+- Buffer underflow when looking up crafted IPv6 addresses - appears to be able
+  to be tricked into writing infront of an allocated buffer - memory corruption
+  -> DoS / RCE
+- DoS via an attacker forging a zero length UDP packet in response to a query -
+  then cause the resolver to shutdown the "connection" as it sees a 0 byte
+  read - however that code path assumes the transport protocol is TCP - this is
+  not a valid assumption for UDP as UDP is connectionless
+
+*** [[[https://ubuntu.com/security/notices/USN-6165-1][USN-6165-1]]] GLib vulnerabilities (11:07)
+- 7 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-32665][CVE-2023-32665]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32643][CVE-2023-32643]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32636][CVE-2023-32636]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32611][CVE-2023-32611]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-29499][CVE-2023-29499]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25180][CVE-2023-25180]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-24593][CVE-2023-24593]] @@html:<!-- low -->@@
+- Various issues in the handling of GVariants - looks like someone has been
+  fuzzing glib - GVariant used for on-the-wire encoding of parameters in DBus
+  etc - similar to protobuf's etc
+
+*** [[[https://ubuntu.com/security/notices/USN-6166-1][USN-6166-1]]] libcap2 vulnerabilities (11:35)
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-2603][CVE-2023-2603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2602][CVE-2023-2602]] @@html:<!-- low -->@@
+- DoS via a memory leak through thread creation plus an integer overflow when
+  handling really large strings
+
+** Goings on in Ubuntu Security Community
+*** Google disables =io_uring= in ChromeOS and their production servers (12:00)
+- https://security.googleblog.com/2023/06/learnings-from-kctf-vrps-42-linux.html
+- Google runs kCTF as part of the vuln rewards program, offering a bug-bounty /
+  monetary rewards for researchers who find exploitable bugs in Google
+  Kubernetes Engine (GKE) or the underlying Linux kernel
+- Has paid out $1.8m USD - 60% of submissions exploited =io_uring= - with around
+  $1m USD rewarded for =io_uring= submissions alone - and =io_uring= was used in all
+  submissions which bypassed their mitigations
+  - followed by net and then fs subsystems
+  - clearly is a target rich environment
+- As such, disabled =io_uring= in ChromeOS (was originally enabled back in
+  November 2022 to increase performance of their =arcvm= which is used to run
+  Android apps on ChromeOS) but then now [[https://chromium-review.googlesource.com/c/chromiumos/third_party/kernel/+/4228112][disabled]] 4 months later in Feb this
+  year
+- Use seccomp-bpf to block access to =io_uring= to Android applications and in the
+  future will also use SELinux to restrict access even further to only select
+  system processes
+- Will likely disable it also on GKE AutoPilot - where Google manages the config
+  of your GKE Kubernetes cluster
+- And have disabled =io_uring= on their production servers
+- Essentially due to the newness of =io_uring= and ongoing development of features
+  for it, it presents too much of a risk for use by untrusted applications etc
+
+*** Andrei discusses Fuzzing Configurations of Program Options (15:06)
+- https://doi.org/10.1145/3580597
+- https://google.github.io/fuzzbench/
+- https://github.com/google/AFL
+- https://github.com/AFLplusplus/AFLplusplus
+- https://llvm.org/docs/CommandGuide/llvm-cov.html
+- https://github.com/google/AFL/tree/master/experimental/argv_fuzzing
+- https://github.com/AFLplusplus/AFLplusplus/tree/stable/utils/argv_fuzzing
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 198
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-198
