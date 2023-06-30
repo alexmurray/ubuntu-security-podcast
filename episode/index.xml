@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 23 Jun 2023 18:47:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jun 2023 14:49:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,456 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 201
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-201/</link>
+          <pubDate>Fri, 30 Jun 2023 14:49:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>1a5a33984b59b0c901a90c2f627707d238fbd027424b02f28e2d031dc16cd7606583d07d407b63db90a87b63b2df2231dbb14786cbd9d11159454fae21a3d9a8</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 201</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          This week we look at the top 25 most dangerous vulnerability types, as well as
+  the announcement of the program for LSS EU, and we cover security updates for
+  Bind, the Linux kernel, CUPS, etcd and more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we look at the top 25 most dangerous vulnerability types, as well as
+  the announcement of the program for LSS EU, and we cover security updates for
+  Bind, the Linux kernel, CUPS, etcd and more.
+  </itunes:summary>
+        <description>  This week we look at the top 25 most dangerous vulnerability types, as well as
+  the announcement of the program for LSS EU, and we cover security updates for
+  Bind, the Linux kernel, CUPS, etcd and more.
+  </description>
+        <googleplay:description>  This week we look at the top 25 most dangerous vulnerability types, as well as
+  the announcement of the program for LSS EU, and we cover security updates for
+  Bind, the Linux kernel, CUPS, etcd and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we look at the top 25 most dangerous vulnerability types, as well as
+the announcement of the program for LSS EU, and we cover security updates for
+Bind, the Linux kernel, CUPS, etcd and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>36 unique CVEs addressed</p>
+<h3 id="usn-6183-1-bind-vulnerabilities--00-53">[<a href="https://ubuntu.com/security/notices/USN-6183-1">USN-6183-1</a>] Bind vulnerabilities (00:53)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2911">CVE-2023-2911</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2828">CVE-2023-2828</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Two DoS issues - when bind was configured as a recursive resolver, possible to
+cause the configured cache size to be exceeded by a remote attacker by
+performing queries in a particular manner (as this would then evade the normal
+cache cleaning algorithm) - DoS due to excessive memory usage -&gt; OOM killer
+etc</li>
+<li>The other was due to a recursive algorithm that could be triggered in a
+pathological way when particular configuration options were used - eventually
+would exhaust the available stack space -&gt; killed by stack protections -&gt; DoS</li>
+</ul>
+<h3 id="usn-6185-1-linux-kernel-vulnerabilities--01-52">[<a href="https://ubuntu.com/security/notices/USN-6185-1">USN-6185-1</a>] Linux kernel vulnerabilities (01:52)</h3>
+<ul>
+<li>8 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2985">CVE-2023-2985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25012">CVE-2023-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1998">CVE-2023-1998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1859">CVE-2023-1859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1670">CVE-2023-1670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1079">CVE-2023-1079</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1077">CVE-2023-1077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1076">CVE-2023-1076</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - IBM, GCP, GKEOP, raspi2, Azure, AWS, Bluefield, KVM, Oracle</li>
+<li>type confusion in real-time scheduler -&gt; DoS</li>
+<li>few different UAF in various USB device drivers (and even PCMCIA) - could all
+be triggered by a local attacker with physical access</li>
+<li>UAF in HFS+ file-system + Xen 9P file-system protocol impl</li>
+</ul>
+<h3 id="usn-6187-1-linux-kernel--ibm--vulnerabilities--02-49">[<a href="https://ubuntu.com/security/notices/USN-6187-1">USN-6187-1</a>] Linux kernel (IBM) vulnerabilities (02:49)</h3>
+<ul>
+<li>9 CVEs addressed in Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2985">CVE-2023-2985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25012">CVE-2023-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1998">CVE-2023-1998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1859">CVE-2023-1859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1670">CVE-2023-1670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1079">CVE-2023-1079</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1077">CVE-2023-1077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1076">CVE-2023-1076</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4269">CVE-2022-4269</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.19 IBM</li>
+<li>All of the above plus a possible deadlock in the network traffic control
+subsystem that could be triggered by a local attacker -&gt; DoS</li>
+</ul>
+<h3 id="usn-6186-1-linux-kernel-vulnerabilities--03-06">[<a href="https://ubuntu.com/security/notices/USN-6186-1">USN-6186-1</a>] Linux kernel vulnerabilities (03:06)</h3>
+<ul>
+<li>20 CVEs addressed in Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-33288">CVE-2023-33288</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-33203">CVE-2023-33203</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30772">CVE-2023-30772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28866">CVE-2023-28866</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28466">CVE-2023-28466</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2612">CVE-2023-2612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2235">CVE-2023-2235</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2194">CVE-2023-2194</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1990">CVE-2023-1990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1989">CVE-2023-1989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1859">CVE-2023-1859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1855">CVE-2023-1855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1670">CVE-2023-1670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1611">CVE-2023-1611</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1583">CVE-2023-1583</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4269">CVE-2022-4269</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1380">CVE-2023-1380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30456">CVE-2023-30456</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-31436">CVE-2023-31436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32233">CVE-2023-32233</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All interesting CVEs discussed previously - <a href="/episode-198/#usn-6130-1-linux-kernel-vulnerabilities--02-23">[USN-6130-1] Linux kernel vulnerabilities in Episode 198</a>
+<ul>
+<li>netfilter race condition able to be triggered by a local attacker -&gt; UAF -&gt; DoS/RCE</li>
+<li>OOB read in the USB handling code for Broadcom FullMAC USB WiFi driver</li>
+<li>KVM mishandling of control registers for nested guest VMs</li>
+<li>OOB write in network queuing scheduler - able to be triggered though an
+unprivileged user namespace (again)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6184-1-cups-vulnerability--03-55">[<a href="https://ubuntu.com/security/notices/USN-6184-1">USN-6184-1</a>] CUPS vulnerability (03:55)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-34241">CVE-2023-34241</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF since would log details of a connection after closing the connection (and
+hence freeing the memory associated with the connection) - since was in the
+logging code, would only happen if the log level was set to <code>warn</code> or higher -
+could then either cause a crash (SEGV etc) or could potentially end up logging
+sensitive info if that was then present in that memory location</li>
+</ul>
+<h3 id="usn-6188-1-openssl-vulnerability--04-43">[<a href="https://ubuntu.com/security/notices/USN-6188-1">USN-6188-1</a>] OpenSSL vulnerability (04:43)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2650">CVE-2023-2650</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-197/#usn-6119-1-openssl-vulnerabilities--13-20">[USN-6119-1] OpenSSL vulnerabilities from Episode 197</a></li>
+<li>CPU-based DoS when parsing crafted ASN.1 object identifiers</li>
+</ul>
+<h3 id="usn-6161-2-dot-net-regression--05-02">[<a href="https://ubuntu.com/security/notices/USN-6161-2">USN-6161-2</a>] .NET regression (05:02)</h3>
+<ul>
+<li>5 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-33128">CVE-2023-33128</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32032">CVE-2023-32032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29337">CVE-2023-29337</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29331">CVE-2023-29331</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-24936">CVE-2023-24936</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-199/#usn-6161-1-dot-net-vulnerabilities--09-02">[USN-6161-1] .NET vulnerabilities from Episode 199</a></li>
+<li>New upstream point release to address a regression in the previous release -
+would fail to import PKCS12 blobs where the private keys were protected by a
+null password (apparently this was non-deterministic which sounds like it was
+due to an uninitialised local variable&hellip;?)</li>
+</ul>
+<h3 id="usn-6189-1-etcd-vulnerability--05-55">[<a href="https://ubuntu.com/security/notices/USN-6189-1">USN-6189-1</a>] etcd vulnerability (05:55)</h3>
+<ul>
+<li>1 CVEs addressed in Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-28235">CVE-2021-28235</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Leaked credentials into the debug log which could then be accessed by a remote
+attacker via the debug API endpoint</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="mitre-2023-cwe-top-25-most-dangerous-software-weaknesses-published--06-20">MITRE 2023 CWE Top 25 Most Dangerous Software Weaknesses published (06:20)</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>ID</th>
+<th>Name</th>
+<th>Score</th>
+<th>CVEs in KEV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CWE-787</td>
+<td>Out-of-bounds Write</td>
+<td>63.72</td>
+<td>70</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CWE-79</td>
+<td>Improper Neutralization of Input During Web Page Generation (&lsquo;Cross-site Scripting&rsquo;)</td>
+<td>45.54</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CWE-89</td>
+<td>Improper Neutralization of Special Elements used in an SQL Command (&lsquo;SQL Injection&rsquo;)</td>
+<td>34.27</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CWE-416</td>
+<td>Use After Free</td>
+<td>16.71</td>
+<td>44</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CWE-78</td>
+<td>Improper Neutralization of Special Elements used in an OS Command (&lsquo;OS Command Injection&rsquo;)</td>
+<td>15.65</td>
+<td>23</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CWE-20</td>
+<td>Improper Input Validation</td>
+<td>15.50</td>
+<td>35</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CWE-125</td>
+<td>Out-of-bounds Read</td>
+<td>14.60</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>CWE-22</td>
+<td>Improper Limitation of a Pathname to a Restricted Directory (&lsquo;Path Traversal&rsquo;)</td>
+<td>14.11</td>
+<td>16</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CWE-352</td>
+<td>Cross-Site Request Forgery (CSRF)</td>
+<td>11.73</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>CWE-434</td>
+<td>Unrestricted Upload of File with Dangerous Type</td>
+<td>10.41</td>
+<td>5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>CWE-862</td>
+<td>Missing Authorization</td>
+<td>6.90</td>
+<td>0</td>
+</tr>
+<tr>
+<td>12</td>
+<td>CWE-476</td>
+<td>NULL Pointer Dereference</td>
+<td>6.59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CWE-287</td>
+<td>Improper Authentication</td>
+<td>6.39</td>
+<td>10</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CWE-190</td>
+<td>Integer Overflow or Wraparound</td>
+<td>5.89</td>
+<td>4</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CWE-502</td>
+<td>Deserialization of Untrusted Data</td>
+<td>5.56</td>
+<td>14</td>
+</tr>
+<tr>
+<td>16</td>
+<td>CWE-77</td>
+<td>Improper Neutralization of Special Elements used in a Command (&lsquo;Command Injection&rsquo;)</td>
+<td>4.95</td>
+<td>4</td>
+</tr>
+<tr>
+<td>17</td>
+<td>CWE-119</td>
+<td>Improper Restriction of Operations within the Bounds of a Memory Buffer</td>
+<td>4.75</td>
+<td>7</td>
+</tr>
+<tr>
+<td>18</td>
+<td>CWE-798</td>
+<td>Use of Hard-coded Credentials</td>
+<td>4.57</td>
+<td>2</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CWE-918</td>
+<td>Server-Side Request Forgery (SSRF)</td>
+<td>4.56</td>
+<td>16</td>
+</tr>
+<tr>
+<td>20</td>
+<td>CWE-306</td>
+<td>Missing Authentication for Critical Function</td>
+<td>3.78</td>
+<td>8</td>
+</tr>
+<tr>
+<td>21</td>
+<td>CWE-362</td>
+<td>Concurrent Execution using Shared Resource with Improper Synchronization (&lsquo;Race Condition&rsquo;)</td>
+<td>3.53</td>
+<td>8</td>
+</tr>
+<tr>
+<td>22</td>
+<td>CWE-269</td>
+<td>Improper Privilege Management</td>
+<td>3.31</td>
+<td>5</td>
+</tr>
+<tr>
+<td>23</td>
+<td>CWE-94</td>
+<td>Improper Control of Generation of Code (&lsquo;Code Injection&rsquo;)</td>
+<td>3.30</td>
+<td>6</td>
+</tr>
+<tr>
+<td>24</td>
+<td>CWE-863</td>
+<td>Incorrect Authorization</td>
+<td>3.16</td>
+<td>0</td>
+</tr>
+<tr>
+<td>25</td>
+<td>CWE-276</td>
+<td>Incorrect Default Permissions</td>
+<td>3.16</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://cwe.mitre.org/top25/archive/2023/2023_top25_list.html">https://cwe.mitre.org/top25/archive/2023/2023_top25_list.html</a></li>
+<li>MITRE (operates the US Homeland Security Systems Engineering and Development
+Institute) released the 2023 CWE Top 25 Most Dangerous Software Weaknesses</li>
+<li>Calculated by analysing the previous 2 years worth of public vulnerability
+data from NVD for their various root-causes and ranking those</li>
+<li>Also incorporates updates weakness data for the CVEs that form CISA&rsquo;s (US
+Cybersecurity &amp; Infrastructure Security Agency) known exploited
+vulnerabilities catalog (KEV)</li>
+<li>root-causes - CWE - common weakness enumeration - list of software and
+hardware weakness types</li>
+<li>Looked at CVEs published in 2021 and 2022 and used those where the CWEs could
+be mapped to the simplified collection of 130 weakness types which are the
+most common set</li>
+<li>Each CVE published by NVD has associated CWEs that identify the root-case for
+the vulnerability - these are generally chosen by the CNA who assigns the CVE
+(as they are most familiar with the product and vulnerability in question) or
+by an NVD analyst - multiple CWEs can be assigned for a CVE since they can
+often be part of chain</li>
+<li>Score was calculated as the frequency of the CWE compared to other CWEs in the
+dataset, multiplied by the average CVSS score for all CVEs that had the CWE
+<ul>
+<li>Have spoken in the past about perceived inaccuracies in CVSS scores and how
+they are not necessarily a good fit for determining the risk of a given
+CVE - but in this case, using them as the basis for this calculation is
+perhaps not awful as they are the only real objective measure of the
+potential <strong>severity</strong> of a CVE - and this is a noisy measure anyway</li>
+</ul>
+</li>
+<li>Looking at the top 10, OOB writes come in way at the top with a score of 63.7,
+then XSS (45.5), SQLi (34.3) after which follows a long tail of CWEs with
+scores in the teens - UAF (16.7), OS Command Injection (15.6), Improper Input
+Validation (15.5), OOB Read (14.6), Path Traversal (14.11), CSRF (11.73) and
+finally Unrestricted Upload of File with Dangerous Type (10.4)
+<ul>
+<li>Interesting to see the top 3 have a much higher score (all over 34) where as
+the rest are half this - below 16</li>
+</ul>
+</li>
+<li>They also quote the number of CVEs that featured in the KEV list (known
+exploited vulns) - OOB W (70) yet XSS (4) + SQLi (6) - so just because there
+are more of a given type of vuln, doesn&rsquo;t mean that they get exploited more -
+e.g. OOB reads are #7 yet only 2 in the list of KEV, and CSRF #9 yet none in
+the KEV list</li>
+<li>What does this mean for Ubuntu Security? Ultimately it is interesting and
+seems to back up our more traditional approach to CVE priority assignment
+compared to trying to use CVSS as a priority (again this is a severity score
+but doesn&rsquo;t really indicate risk, which is what our traditional priority score
+is based on) - but perhaps is more interesting from an industry point of
+view - memory corruption vulns (OOB Writes) still most prevalent and
+impactful - static / dynamic analysis still very important to try and find
+these - but ultimately the move to memory safe languages (Rust, Go etc) is
+where we will finally see a shift away from this dominance</li>
+<li>Even then, will still be security bugs (XSS + SQLi, OS Command Injection,
+Improper Input Validation, Path Traveral, CSRF etc)</li>
+</ul>
+<h3 id="linux-security-summit-eu-schedule-published--17-16">Linux Security Summit EU Schedule Published (17:16)</h3>
+<ul>
+<li><a href="https://events.linuxfoundation.org/linux-security-summit-europe/program/schedule/">https://events.linuxfoundation.org/linux-security-summit-europe/program/schedule/</a></li>
+<li>20-21 September - in Bilbao Spain alongside the Open Source Summit</li>
+<li>Still chance to get Early Bird Registration (closes 6th July)</li>
+<li>BPF, exploit detection, estimating security risk of a given OSS project,
+OP-TEE (ARM Trust-Zone) usage, novel project using CHERI hardware architecture
+to protect security sensitive parts of the kernel, using TPM for per-process
+secret storage, secure boot, LSM Updates + LandLock and some more</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E201.mp3" length="20883398" type="audio/mpeg" /><itunes:duration>1213</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 200
