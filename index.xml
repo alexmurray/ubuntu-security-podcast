@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jun 2023 14:49:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 16:41:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 202</title>
+      <link>https://ubuntusecuritypodcast.org/episode-202/</link>
+      <pubDate>Fri, 07 Jul 2023 16:41:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-202/</guid>
+      <description>Overview We take a sneak peek at the upcoming AppArmor 4.0 release, plus we cover vulnerabilities in AccountsService, the Linux Kernel, ReportLab, GNU Screen, containerd and more.
+This week in Ubuntu Security Updates 50 unique CVEs addressed
+[USN-6190-1] AccountsService vulnerability (00:47) 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04) CVE-2023-3297 Mentioned in passing last week - reported to us by Kevin Backhouse from the Github Security Lab team DBus service that provides APIs to add, delete or modify system accounts - ie create a new user etc Originally developed by GNOME - used by gnome-control-center etc Also allows to configure language / locale settings etc In Ubuntu, we carry a custom patch which is used to synchronise the language and locale from accountsservice to the local users ~/.</description>
+    </item>
+    
     <item>
       <title>Episode 201</title>
       <link>https://ubuntusecuritypodcast.org/episode-201/</link>
