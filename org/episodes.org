@@ -8,6 +8,217 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 202
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-202
+:EXPORT_DATE: 2023-07-07 16:41
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E202.mp3 :podcast_duration "1300" :podcast_bytes "21757397" :permalink "https://ubuntusecuritypodcast.org/episode-202/" :guid dcd25643d17ef3404076fe3419f9229ee24472e1c2264105eb4338d0488a35e5eef0ed3a997528cdd9c750df5992c1bef4092a9bc21a6cc94b10bf5160af8e25
+:END:
+#+begin_description
+We take a sneak peek at the upcoming AppArmor 4.0 release, plus we cover
+vulnerabilities in AccountsService, the Linux Kernel, ReportLab, GNU Screen,
+containerd and more.
+#+end_description
+** Overview
+We take a sneak peek at the upcoming AppArmor 4.0 release, plus we cover
+vulnerabilities in AccountsService, the Linux Kernel, ReportLab, GNU Screen,
+containerd and more.
+** This week in Ubuntu Security Updates
+50 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6190-1][USN-6190-1]]] AccountsService vulnerability (00:47)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-3297][CVE-2023-3297]] @@html:<!-- medium -->@@
+- Mentioned in passing last week - reported to us by Kevin Backhouse from the
+  Github Security Lab team
+- DBus service that provides APIs to add, delete or modify system accounts - ie
+  create a new user etc
+- Originally developed by GNOME - used by gnome-control-center etc
+- Also allows to configure language / locale settings etc
+- In Ubuntu, we carry a custom patch which is used to synchronise the language
+  and locale from accountsservice to the local users =~/.pam_environment= file
+  which is used to configure various per-user session environment variables -
+  this way no matter how you log in to a Ubuntu system, the locale etc that you
+  configured via g-c-c etc gets used
+- Turned out there was a number of cases of UAF due to logic errors in the
+  original patch - so an unprivileged user could trigger this and crash the
+  accounts-daemon which runs as root
+
+*** [[[https://ubuntu.com/security/notices/USN-6191-1][USN-6191-1]]] Linux kernel regression (02:44)
+- Affecting Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+- Spurious warning message would be printed via the IPv6 subsystem
+
+*** [[[https://ubuntu.com/security/notices/USN-6192-1][USN-6192-1]]] Linux kernel vulnerabilities (03:10)
+- 2 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10)
+  - [[https://ubuntu.com/security/CVE-2023-2430][CVE-2023-2430]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35788][CVE-2023-35788]] @@html:<!-- high -->@@
+- Off-by-one in the flower network traffic classifier - flow based traffic
+  control filter - allows to define a "flow" by a set of key/value pairs
+  (ie. src MAC address, port number or various other types) - could be leveraged
+  for DoS or potential code execution - PoC posted publicly but even then was
+  stated that it doesn't even crash the kernel, however gdb can be used to
+  detect the OOB write
+- Mishandling of locking in the =io_uring= subsystem - local attacker could use
+  this to trigger a deadlock and hence a DoS
+- Possible info leak via stale page table entries - when KPTI was introduced in
+  the wake of Meltdown, to minimise the cost of flushing page table on every
+  entry/exit to/from kernel space, PCIDs are a hardware feature that was
+  introduced in more recent Intel processors to try and minimise this cost by
+  only flushing on exit back to userspace - this is done by issuing the =INVLPG=
+  instruction - but it was found that on certain hardware platforms this did not
+  actually flush the global TLB contrary to expectation - and so could leak
+  kernel memory back to userspace
+
+*** [[[https://ubuntu.com/security/notices/USN-6193-1][USN-6193-1]]] Linux kernel vulnerabilities
+- 1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-35788][CVE-2023-35788]] @@html:<!-- high -->@@
+- TC flower + INVLPG
+
+*** [[[https://ubuntu.com/security/notices/USN-6194-1][USN-6194-1]]] Linux kernel (OEM) vulnerabilities (06:04)
+- 3 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-2176][CVE-2023-2176]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2430][CVE-2023-2430]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35788][CVE-2023-35788]] @@html:<!-- high -->@@
+- =io_uring= and TC flower plus OOB read in InfiniBand RDMA driver - DoS / info
+  leak
+
+*** [[[https://ubuntu.com/security/notices/USN-6195-1][USN-6195-1]]] Vim vulnerabilities (06:26)
+- 6 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-0696][CVE-2022-0696]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0407][CVE-2022-0407]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0393][CVE-2022-0393]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0158][CVE-2022-0158]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0156][CVE-2022-0156]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-0128][CVE-2022-0128]] @@html:<!-- medium -->@@
+- More vim fuzzing results - OOB read, UAF, heap buffer overflow, NULL pointer
+  dereference etc.
+
+*** [[[https://ubuntu.com/security/notices/USN-6196-1][USN-6196-1]]] ReportLab vulnerability (06:47)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-33733][CVE-2023-33733]] @@html:<!-- high -->@@
+- Python library for producing PDFs - often used to convert HTML to PDF etc
+- Bypass of validation originally put in place for a previous [[https://ubuntu.com/security/CVE-2019-17626][CVE-2019-17626]]
+  (see [[*\[\[\[https://usn.ubuntu.com/4273-1/\]\[USN-4273-1\]\]\] ReportLab vulnerability \[05:48\]][[USN-4273-1] ReportLab vulnerability in Episode 62]])
+- That vuln was RCE since reportlab would call the python =eval()= function
+  directly on value obtained from an XML document
+- To fix that, introduced a complex validation scheme so they could still use
+  =eval()= without having to remove this functionality - new update disables this
+  by default and instead only allows a much limited subset of colors to be
+  parsed
+
+*** [[[https://ubuntu.com/security/notices/USN-6197-1][USN-6197-1]]] OpenLDAP vulnerability (08:48)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-2953][CVE-2023-2953]] @@html:<!-- low -->@@
+- NULL pointer deref in certain circumstances if failed to allocate memory
+  during various string handling operations - unlikely to be able to be
+  triggered easily (would first need a memory leak bug or similar...)
+
+*** [[[https://ubuntu.com/security/notices/USN-6198-1][USN-6198-1]]] GNU Screen vulnerability (09:25)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-24626][CVE-2023-24626]] @@html:<!-- low -->@@
+- screen provides an API to allow the processes under its controlled to be say
+  killed from another session - but would fail to check if the specified PID was
+  actually owned by the calling user - so if screen was setuid, would allow a
+  local user to send a SIGHUP to any other process on the system
+- In Ubuntu screen is not setuid so this was not a real issue
+
+*** [[[https://ubuntu.com/security/notices/USN-6199-1][USN-6199-1]]] PHP vulnerability (10:35)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-3247][CVE-2023-3247]] @@html:<!-- medium -->@@
+- When generating a nonce for use in HTTP Digest during SOAP authentication,
+  wouldn't actually check the return value from the call to generate random data
+  for the nonce - as such, the nonce would be whatever was previously in the
+  stack memory - so could leak info from the stack, or this could be say all
+  zeros which would defeat the purpose of the nonce
+
+*** [[[https://ubuntu.com/security/notices/USN-6200-1][USN-6200-1]]] ImageMagick vulnerabilities (11:27)
+- 20 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-34151][CVE-2023-34151]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3195][CVE-2023-3195]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1289][CVE-2023-1289]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3428][CVE-2023-3428]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1906][CVE-2023-1906]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3610][CVE-2021-3610]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32547][CVE-2022-32547]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32546][CVE-2022-32546]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-32545][CVE-2022-32545]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28463][CVE-2022-28463]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-39212][CVE-2021-39212]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20313][CVE-2021-20313]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20312][CVE-2021-20312]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20246][CVE-2021-20246]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20309][CVE-2021-20309]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20244][CVE-2021-20244]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20243][CVE-2021-20243]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20241][CVE-2021-20241]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-20224][CVE-2021-20224]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-29599][CVE-2020-29599]] @@html:<!-- negligible -->@@
+- Time for another frequent mention in the podcast - ImageMagick (seems to come
+  up every 10 episodes or so)
+- Huge range of CVEs fixed across the various releases with some dating back to
+  2020
+- OOB read, stack bufffer overflow, NULL ptr deref, lots of heap buffer overflows
+- Since 20.04, ImageMagick is now in universe, so for 20.04 LTS this update is
+  available via Ubuntu Pro
+
+*** [[[https://ubuntu.com/security/notices/USN-6201-1][USN-6201-1]]] Firefox vulnerabilities (12:27)
+- 13 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-37208][CVE-2023-37208]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37206][CVE-2023-37206]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37204][CVE-2023-37204]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37203][CVE-2023-37203]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3482][CVE-2023-3482]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37212][CVE-2023-37212]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37211][CVE-2023-37211]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37210][CVE-2023-37210]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37209][CVE-2023-37209]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37207][CVE-2023-37207]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37205][CVE-2023-37205]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37202][CVE-2023-37202]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-37201][CVE-2023-37201]] @@html:<!-- medium -->@@
+- 115.0
+- Usual web browser issues (DoS, domain bypass, RCE etc) - but also bypass of
+  cookie storage protections, possible spoofing attack via fullscreen
+  notifications and others
+
+*** [[[https://ubuntu.com/security/notices/USN-6202-1][USN-6202-1]]] containerd vulnerabilities (13:09)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-25173][CVE-2023-25173]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-25153][CVE-2023-25153]] @@html:<!-- medium -->@@
+- DoS when importing an OCI image with a really large manifest or image layout
+  file - would try and read the whole JSON file into memory - could cause
+  containerd to crash by running out of memory - limited to 20MBs
+
+*** [[[https://ubuntu.com/security/notices/USN-6203-1][USN-6203-1]]] Django vulnerability (13:55)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-36053][CVE-2023-36053]] @@html:<!-- medium -->@@
+- ReDoS in EmailValidator and URLValidator classes when parsing really long
+  strings - fixed by rejecting anything longer than some hardcoded constants
+  (2KB for URL, 320 chars for email as per RFC x3696)
+** Goings on in Ubuntu Security Community
+*** AppArmor 4.0-alpha1 in progress (14:44)
+- https://gitlab.com/apparmor/apparmor/-/wikis/Release_Notes_4.0-alpha1
+- "Bridge" between 3.0 style policy and new 4.0 policy
+- New profile flags
+  - unconfined, debug
+- New mediation types
+  - [[https://gitlab.com/apparmor/apparmor/-/wikis/mqueue-rules][Fine grained POSIX message queues]]
+  - [[https://gitlab.com/apparmor/apparmor/-/wikis/unprivileged_userns_restriction][User namespaces]]
+  - [[https://gitlab.com/apparmor/apparmor/-/wikis/io_uring-rules][io_uring]]
+- Minor changes
+  - Ability to filter the output of aa-status
+  - Inclusion of a new utility called aa-load which can load pre-compiled /
+    cached binary policies without the use of =apparmor_parser=
+  - Ability to run and compile policies as an unprivileged user (still need to
+    be root to actually load the policy into the kernel)
+*** AppArmor kernel fixes for Linux 6.5 (20:42)
+- https://lore.kernel.org/all/b68ad9e0-2ce1-50d5-4856-e4d8fe97fc82@canonical.com/
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 201
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-201
