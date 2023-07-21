@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we talk about the dual use purposes of eBPF - both for security and
+  for exploitation, and how you can keep your systems safe, plus we cover security
+  updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.
+  ">
+
+<meta name="generator" content="Hugo 0.115.4">
+
+<meta property="og:title" content="Episode 203" />
+<meta name="twitter:title" content="Episode 203"/>
+<meta itemprop="name" content="Episode 203">
+<meta property="article:published_time" content="2023-07-21T21:00:00&#43;09:30" />
+<meta property="article:modified_time" content="2023-07-21T21:00:57&#43;09:30" />
+<meta property="og:updated_time" content="2023-07-21T21:00:57&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we talk about the dual use purposes of eBPF - both for security and
+  for exploitation, and how you can keep your systems safe, plus we cover security
+  updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.
+  " />
+    <meta name="twitter:description" content="  This week we talk about the dual use purposes of eBPF - both for security and
+  for exploitation, and how you can keep your systems safe, plus we cover security
+  updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.
+  " />
+    <meta itemprop="description" content="  This week we talk about the dual use purposes of eBPF - both for security and
+  for exploitation, and how you can keep your systems safe, plus we cover security
+  updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-203/" />
+
+
+
+
+<title>Episode 203</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-203/">
+
+
+ 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123895434-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script> 
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 203</h1>
+      <small>Posted on Friday, Jul 21, 2023 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we talk about the dual use purposes of eBPF - both for security and
+for exploitation, and how you can keep your systems safe, plus we cover security
+updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E203.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we talk about the dual use purposes of eBPF - both for security and
+for exploitation, and how you can keep your systems safe, plus we cover security
+updates for the Linux kernel, Ruby, SciPy, YAJL, ConnMan, curl and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>80 unique CVEs addressed</p>
+<h3 id="usn-6220-1-linux-kernel-vulnerabilities--00-50">[<a href="https://ubuntu.com/security/notices/USN-6220-1">USN-6220-1</a>] Linux kernel vulnerabilities (00:50)</h3>
+<ul>
+<li>1 CVEs addressed in Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-35788">CVE-2023-35788</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.2 gcp, ibm, azure, oracle</li>
+<li><a href="/episode-202/#usn-6192-1-linux-kernel-vulnerabilities--03-10">[USN-6192-1] Linux kernel vulnerabilities for Episode 202</a>
+<ul>
+<li>Off-by-one in the flower network traffic classifier</li>
+<li>info leak via stale page table entries (INVLPG)</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6234-1-linux-kernel--xilinx-zynqmp--vulnerability--01-20">[<a href="https://ubuntu.com/security/notices/USN-6234-1">USN-6234-1</a>] Linux kernel (Xilinx ZynqMP) vulnerability (01:20)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-35788">CVE-2023-35788</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 Xilinux ZynqMP platform</li>
+</ul>
+<h3 id="usn-6221-1-linux-kernel-vulnerabilities--01-32">[<a href="https://ubuntu.com/security/notices/USN-6221-1">USN-6221-1</a>] Linux kernel vulnerabilities (01:32)</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-3111">CVE-2023-3111</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1990">CVE-2023-1990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-29901">CVE-2022-29901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-26373">CVE-2022-26373</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-1184">CVE-2022-1184</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-3753">CVE-2021-3753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-20321">CVE-2021-20321</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 Xenial ESM, Trusty ESM LTS Xenial
+<ul>
+<li>AWS, KVM, Generic, Low latency</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6222-1-linux-kernel--xilinx-zynqmp--vulnerabilities--02-13">[<a href="https://ubuntu.com/security/notices/USN-6222-1">USN-6222-1</a>] Linux kernel (Xilinx ZynqMP) vulnerabilities (02:13)</h3>
+<ul>
+<li>31 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-32269">CVE-2023-32269</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32233">CVE-2023-32233</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-3161">CVE-2023-3161</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-31436">CVE-2023-31436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30456">CVE-2023-30456</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2985">CVE-2023-2985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26545">CVE-2023-26545</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2612">CVE-2023-2612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25012">CVE-2023-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2162">CVE-2023-2162</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1998">CVE-2023-1998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1859">CVE-2023-1859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1829">CVE-2023-1829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1670">CVE-2023-1670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1513">CVE-2023-1513</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1380">CVE-2023-1380</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1281">CVE-2023-1281</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1118">CVE-2023-1118</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1079">CVE-2023-1079</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1078">CVE-2023-1078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1077">CVE-2023-1077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1076">CVE-2023-1076</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1075">CVE-2023-1075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1074">CVE-2023-1074</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1073">CVE-2023-1073</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0459">CVE-2023-0459</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0458">CVE-2023-0458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4129">CVE-2022-4129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3903">CVE-2022-3903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3707">CVE-2022-3707</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3108">CVE-2022-3108</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6223-1-linux-kernel--azure-cvm--vulnerabilities--02-25">[<a href="https://ubuntu.com/security/notices/USN-6223-1">USN-6223-1</a>] Linux kernel (Azure CVM) vulnerabilities (02:25)</h3>
+<ul>
+<li>9 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-35788">CVE-2023-35788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2985">CVE-2023-2985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25012">CVE-2023-25012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1998">CVE-2023-1998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1859">CVE-2023-1859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1670">CVE-2023-1670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1079">CVE-2023-1079</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1077">CVE-2023-1077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1076">CVE-2023-1076</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6224-1-usn-6228-1-linux-kernel-vulnerabilities--02-36">[<a href="https://ubuntu.com/security/notices/USN-6224-1">USN-6224-1</a>, <a href="https://ubuntu.com/security/notices/USN-6228-1">USN-6228-1</a>] Linux kernel vulnerabilities (02:36)</h3>
+<ul>
+<li>2 CVEs addressed in Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2176">CVE-2023-2176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2124">CVE-2023-2124</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.2 Oracle, Azure, GCP, IBM, Raspi, AWS, KVM, Low latency</li>
+</ul>
+<h3 id="usn-6231-1-linux-kernel--oem--vulnerabilities--02-53">[<a href="https://ubuntu.com/security/notices/USN-6231-1">USN-6231-1</a>] Linux kernel (OEM) vulnerabilities (02:53)</h3>
+<ul>
+<li>5 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-3212">CVE-2023-3212</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-3141">CVE-2023-3141</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-31084">CVE-2023-31084</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-3090">CVE-2023-3090</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2124">CVE-2023-2124</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.1 OEM</li>
+<li>OOB write due to uninitialized memory in packet control buffer for IP-VLAN
+network driver</li>
+</ul>
+<h3 id="usn-6235-1-linux-kernel--oem--vulnerabilities--03-17">[<a href="https://ubuntu.com/security/notices/USN-6235-1">USN-6235-1</a>] Linux kernel (OEM) vulnerabilities (03:17)</h3>
+<ul>
+<li>8 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-35788">CVE-2023-35788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2430">CVE-2023-2430</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2176">CVE-2023-2176</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2124">CVE-2023-2124</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1073">CVE-2023-1073</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0597">CVE-2023-0597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0459">CVE-2023-0459</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4842">CVE-2022-4842</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.0 OEM</li>
+<li>Flower, missing lock in <code>io_uring</code>
+<ul>
+<li><a href="/episode-202/#usn-6192-1-linux-kernel-vulnerabilities--03-10">[USN-6192-1] Linux kernel vulnerabilities from Episode 202</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6219-1-ruby-vulnerabilities--03-32">[<a href="https://ubuntu.com/security/notices/USN-6219-1">USN-6219-1</a>] Ruby vulnerabilities (03:32)</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-36617">CVE-2023-36617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28755">CVE-2023-28755</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ReDoS in URI parser - only one issue really but fix for first was incomplete</li>
+</ul>
+<h3 id="usn-6216-1-lib3mf-vulnerability--04-09">[<a href="https://ubuntu.com/security/notices/USN-6216-1">USN-6216-1</a>] lib3mf vulnerability (04:09)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-21772">CVE-2021-21772</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UAF</li>
+</ul>
+<h3 id="usn-6225-1-knot-resolver-vulnerability--04-14">[<a href="https://ubuntu.com/security/notices/USN-6225-1">USN-6225-1</a>] Knot Resolver vulnerability (04:14)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-40188">CVE-2022-40188</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>CPU-based DoS due to high algorithmic complexity - requires an authoritative
+server to return large address sets - fixed by adding a limit to various lookups etc</li>
+</ul>
+<h3 id="usn-6226-1-scipy-vulnerabilities--04-45">[<a href="https://ubuntu.com/security/notices/USN-6226-1">USN-6226-1</a>] SciPy vulnerabilities (04:45)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-29824">CVE-2023-29824</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25399">CVE-2023-25399</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 issues in reference count handling - both appear to be disputed by
+upstream - first, as it would only be able to triggered by first
+deterministicly exhausting memory, the other since the only way to trigger it
+would be to first be able to execute arbitrary Python code. Both were reported
+by the same user who discovered them via static analysis</li>
+</ul>
+<h3 id="usn-6227-1-spidermonkey-vulnerabilities--05-47">[<a href="https://ubuntu.com/security/notices/USN-6227-1">USN-6227-1</a>] SpiderMonkey vulnerabilities (05:47)</h3>
+<ul>
+<li>2 CVEs addressed in Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-37211">CVE-2023-37211</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-37202">CVE-2023-37202</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>mozjs102 (102.13.0) - memory mishandling in JS engine</li>
+</ul>
+<h3 id="usn-6229-1-libtiff-vulnerabilities--06-00">[<a href="https://ubuntu.com/security/notices/USN-6229-1">USN-6229-1</a>] LibTIFF vulnerabilities (06:00)</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-3316">CVE-2023-3316</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26966">CVE-2023-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-26965">CVE-2023-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-25433">CVE-2023-25433</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 heap buffer overflows, one OOB read, one NULL ptr deref</li>
+</ul>
+<h3 id="usn-6230-1-postgresql-vulnerability--06-24">[<a href="https://ubuntu.com/security/notices/USN-6230-1">USN-6230-1</a>] PostgreSQL vulnerability (06:24)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2454">CVE-2023-2454</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-197/#usn-6104-1-postgresql-vulnerabilities--00-55">[USN-6104-1] PostgreSQL vulnerabilities from Episode 197</a></li>
+</ul>
+<h3 id="usn-6184-2-cups-vulnerability--06-34">[<a href="https://ubuntu.com/security/notices/USN-6184-2">USN-6184-2</a>] CUPS vulnerability (06:34)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-34241">CVE-2023-34241</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-201/#usn-6184-1-cups-vulnerability--03-55">[USN-6184-1] CUPS vulnerability from Episode 201</a></li>
+</ul>
+<h3 id="usn-6078-2-libwebp-vulnerability--06-43">[<a href="https://ubuntu.com/security/notices/USN-6078-2">USN-6078-2</a>] libwebp vulnerability (06:43)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-1999">CVE-2023-1999</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-195/#usn-6078-1-libwebp-vulnerability--06-38">[USN-6078-1] libwebp vulnerability from Episode 195</a></li>
+</ul>
+<h3 id="usn-6183-2-bind-vulnerability--06-46">[<a href="https://ubuntu.com/security/notices/USN-6183-2">USN-6183-2</a>] Bind vulnerability (06:46)</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2911">CVE-2023-2911</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2828">CVE-2023-2828</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-201/#usn-6183-1-bind-vulnerabilities--00-53">[USN-6183-1] Bind vulnerabilities from Episode 201</a></li>
+</ul>
+<h3 id="usn-6233-1-yajl-vulnerabilities--06-56">[<a href="https://ubuntu.com/security/notices/USN-6233-1">USN-6233-1</a>] YAJL vulnerabilities (06:56)</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-33460">CVE-2023-33460</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24795">CVE-2022-24795</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-16516">CVE-2017-16516</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Yet Another JSON library - used by i3, mpd, uwsgi, modsecurity, libvirt and others</li>
+<li>Memory leak, buffer overflow on unicode parsing, integer overflow -&gt; heap
+buffer overflow when handling inputs larger than 2GB</li>
+</ul>
+<h3 id="usn-6236-1-connman-vulnerabilities--07-33">[<a href="https://ubuntu.com/security/notices/USN-6236-1">USN-6236-1</a>] ConnMan vulnerabilities (07:33)</h3>
+<ul>
+<li>9 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28488">CVE-2023-28488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32293">CVE-2022-32293</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-32292">CVE-2022-32292</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23098">CVE-2022-23098</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23097">CVE-2022-23097</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-23096">CVE-2022-23096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-26676">CVE-2021-26676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-33833">CVE-2021-33833</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-26675">CVE-2021-26675</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>a number of issues in internal gdhcp client - stack buffer overflow, OOB read
+(info leak) - requires an attacker to run a malicious DHCP server - think
+public wifi etc</li>
+<li>UAF in WISPR HTTP handling (MiTM)</li>
+<li>Heap buffer overflow gweb component - RCE</li>
+<li>2 different OOB read in DNS proxy component - crash / info leak</li>
+<li>Also an infinite loop in DNS proxy</li>
+</ul>
+<h3 id="usn-6237-1-curl-vulnerabilities--08-45">[<a href="https://ubuntu.com/security/notices/USN-6237-1">USN-6237-1</a>] curl vulnerabilities (08:45)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Kinetic (22.10), Lunar (23.04)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-32001">CVE-2023-32001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28322">CVE-2023-28322</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-28321">CVE-2023-28321</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Improperly matched wildcard patterns when doing certificate validation - in
+particular could match a punycode-encoded IDN against an ascii wildcard of <code>x*</code>
+as punycode names always start with <code>xn--</code></li>
+<li>Logic error where would use the read callback to ask a remote client to ask
+for data to send even if the same handle had been used previously for a PUT
+request - unexpected behaviour for applications using curl, so could result in
+potentially sending the wrong data (info leak) or a UAF etc.</li>
+<li>Race condition on fopen() - used to save cookies etc to files - would first
+check that file is a real file before opening - local attacker could race to
+say replace it with a symlink instead to then get cookies written to a
+different file etc.</li>
+</ul>
+<h2 id="the-dual-use-of-ebpf-as-both-a-tool-for-malware-and-a-tool-for-detecting-malware--10-34">The dual use of eBPF as both a tool for malware and a tool for detecting malware (10:34)</h2>
+<ul>
+<li>Interesting write-up on the use of eBPF by malware authors for hooking into
+libpam to steal credentials
+<ul>
+<li><a href="https://blog.aquasec.com/detecting-ebpf-malware-with-tracee">https://blog.aquasec.com/detecting-ebpf-malware-with-tracee</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/citronneur/pamspy">pamspy</a> - uses eBPF uprobes - way of hooking into userspace functions from the
+kernel using user-level return probe</li>
+<li>requires to be root in the first place to be able to create a uretprobe
+through <code>/sys/kernel/debug/tracing/uprobe_events</code> but once done, allows to then
+have a BPF program executed every time the specified function within a
+specified library / binary is executed - so by hooking libpam can then log the
+credentials used by any user when logging in / authenticating for sudo etc.</li>
+<li>More traditional approach would have been to use say <code>LD_PRELOAD</code> to hook into
+the functions - but this requires that binaries get executed with this
+environment set so is harder to achieve</li>
+<li>But uretprobes have their own problems - implementation is based on
+breakpoints so potentially be detected by the program which is being traced by
+examining its own code (<code>.text</code> section) to look for breakpoint opcode (<code>0xCC</code>) or
+it could look for the special memory mapping <code>[uprobes]</code> in <code>/proc/self/maps</code>
+<ul>
+<li><a href="https://blog.quarkslab.com/defeating-ebpf-uprobe-monitoring.html">https://blog.quarkslab.com/defeating-ebpf-uprobe-monitoring.html</a></li>
+</ul>
+</li>
+<li>Potentially more easy to find that they are being used on a system as well by
+just looking at the contents of <code>/sys/kernel/debug/tracing/uprobe_events</code> -
+which lists all the uretprobes currently in use on the system</li>
+<li>Interesting to see that (not surprisingly) each new technology can be used in
+multiple ways - BPF+uprobes is a great way to do tracing of userspace code for
+developers / sysadmins etc when debugging - but is also a great way for
+malware authors to do the same</li>
+<li>Also interesting to see the aquasec team mention the use of eBPF for system
+monitoring / instrumentation to detect malware - ie. using an eBPF program to
+detect malicious use of eBPF
+<ul>
+<li>but perhaps the best solution is to disable the use of eBPF by unprivileged
+/ untrusted users and use seccomp or similar (via systemd units) to restrict
+the use of eBPF to only those applications which really need it</li>
+<li>then the only way for malware to use eBPF would be to compromise something
+which already has access to eBPF - ie. the kernel itself or a privileged
+process - ie. reducing the attack surface</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-202/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2023 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-203\/",
+      text: "Episode 203"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+
