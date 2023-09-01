@@ -6,7 +6,7 @@ description = """
   the Linux kernel, AMD Microcode and more.
   """
 date = 2023-09-01T23:16:00+09:30
-lastmod = 2023-09-01T23:17:26+09:30
+lastmod = 2023-09-02T07:43:14+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -347,8 +347,8 @@ the Linux kernel, AMD Microcode and more.
         they are the CNA of last resort - <https://cveform.mitre.org/>
     -   BUT like all CNAs, they should be checking validating the information before
         assigning a CVE
-    -   MITRE even rejected the request by Daniel Bagder (cURL maintainer) to reject
-        the CVE
+    -   MITRE even rejected the request by Daniel Stenberg (@bagder) (cURL
+        maintainer) to reject the CVE
     -   clearly something is breaking down here
 -   Not only does this create a heap of work for the upstream projects (as
     mentioned by Risky Biz) but for all the downstreams like Ubuntu and other

@@ -305,8 +305,8 @@ the Linux kernel, AMD Microcode and more.
     they are the CNA of last resort - https://cveform.mitre.org/
   - BUT like all CNAs, they should be checking validating the information before
     assigning a CVE
-  - MITRE even rejected the request by Daniel Bagder (cURL maintainer) to reject
-    the CVE
+  - MITRE even rejected the request by Daniel Stenberg (@bagder) (cURL
+    maintainer) to reject the CVE
   - clearly something is breaking down here
 - Not only does this create a heap of work for the upstream projects (as
   mentioned by Risky Biz) but for all the downstreams like Ubuntu and other
