@@ -449,8 +449,8 @@ impact here</li>
 they are the CNA of last resort - <a href="https://cveform.mitre.org/">https://cveform.mitre.org/</a></li>
 <li>BUT like all CNAs, they should be checking validating the information before
 assigning a CVE</li>
-<li>MITRE even rejected the request by Daniel Bagder (cURL maintainer) to reject
-the CVE</li>
+<li>MITRE even rejected the request by Daniel Stenberg (@bagder) (cURL
+maintainer) to reject the CVE</li>
 <li>clearly something is breaking down here</li>
 </ul>
 </li>
