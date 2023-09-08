@@ -6,7 +6,18 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Sep 2023 23:16:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 23:18:00 +0930</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 208</title>
+      <link>https://ubuntusecuritypodcast.org/episode-208/</link>
+      <pubDate>Fri, 08 Sep 2023 23:18:00 +0930</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-208/</guid>
+      <description>Overview This week we detail the recently announced and long-awaited feature of TPM-backed full-disk encryption for the upcoming Ubuntu 23.10 release, plus we cover security updates for elfutils, GitPython, atftp, BusyBox, Docker Registry and more.
+This week in Ubuntu Security Updates 93 unique CVEs addressed
+[USN-6322-1] elfutils vulnerabilities (00:38) 10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS) CVE-2021-33294 CVE-2020-21047 CVE-2019-7665 CVE-2019-7150 CVE-2019-7149 CVE-2018-18521 CVE-2018-18520 CVE-2018-18310 CVE-2018-16403 CVE-2018-16062 All the older CVEs (2018-2019) for Ubuntu 14.</description>
+    </item>
+    
     <item>
       <title>Episode 207</title>
       <link>https://ubuntusecuritypodcast.org/episode-207/</link>
