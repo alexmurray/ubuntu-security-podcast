@@ -8,6 +8,298 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 209
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-209
+:EXPORT_DATE: 2023-09-15 22:12
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E209.mp3 :podcast_duration "1489" :podcast_bytes "39797603" :permalink "https://ubuntusecuritypodcast.org/episode-209/" :guid c3d31ac5077a301d17fc6350fea73d569b91c919ad72b80c6bed467349740d83eb8f97509602d8c337630c3230cd38e1f98761f64e176433c7121ae498ca4ed2
+:END:
+#+begin_description
+Andrei is back this week with a deep dive into recent research around CVSS
+scoring inconsistencies, plus we look at a recent Ubuntu blog post on the
+internals of package updates and the repositories, and we cover security updates
+in Apache Shiro, GRUB2, CUPS, RedCloth, curl and more.
+#+end_description
+** Overview
+Andrei is back this week with a deep dive into recent research around CVSS
+scoring inconsistencies, plus we look at a recent Ubuntu blog post on the
+internals of package updates and the repositories, and we cover security updates
+in Apache Shiro, GRUB2, CUPS, RedCloth, curl and more.
+** This week in Ubuntu Security Updates
+77 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6346-1][USN-6346-1]]] Linux kernel (Raspberry Pi) vulnerabilities (00:55)
+- 5 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-3776][CVE-2023-3776]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3611][CVE-2023-3611]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3609][CVE-2023-3609]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20593][CVE-2023-20593]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40982][CVE-2022-40982]] @@html:<!-- medium -->@@
+- 5.4 raspi + HWE on 18.04
+- Covered previously in [[*\[\[\[https://ubuntu.com/security/notices/USN-6315-1\]\[USN-6315-1\]\]\] Linux kernel vulnerabilities (06:58)][[USN-6315-1] Linux kernel vulnerabilities from Episode 207]]
+
+*** [[[https://ubuntu.com/security/notices/USN-6347-1][USN-6347-1]]] Linux kernel (Azure CVM) vulnerabilities
+- 24 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-35829][CVE-2023-35829]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35828][CVE-2023-35828]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35824][CVE-2023-35824]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35823][CVE-2023-35823]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-33288][CVE-2023-33288]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-33203][CVE-2023-33203]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3268][CVE-2023-3268]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32248][CVE-2023-32248]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3141][CVE-2023-3141]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-30772][CVE-2023-30772]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28466][CVE-2023-28466]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-23004][CVE-2023-23004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2235][CVE-2023-2235]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2194][CVE-2023-2194]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2163][CVE-2023-2163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2124][CVE-2023-2124]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2002][CVE-2023-2002]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1990][CVE-2023-1990]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1855][CVE-2023-1855]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1611][CVE-2023-1611]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0597][CVE-2023-0597]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48502][CVE-2022-48502]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4269][CVE-2022-4269]] @@html:<!-- medium -->@@
+- Microsoft Azure CVM cloud systems - 5.15
+
+*** [[[https://ubuntu.com/security/notices/USN-6348-1][USN-6348-1]]] Linux kernel vulnerabilities
+- 11 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4015][CVE-2023-4015]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4004][CVE-2023-4004]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3995][CVE-2023-3995]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3777][CVE-2023-3777]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3776][CVE-2023-3776]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3611][CVE-2023-3611]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3610][CVE-2023-3610]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3609][CVE-2023-3609]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21400][CVE-2023-21400]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20593][CVE-2023-20593]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40982][CVE-2022-40982]] @@html:<!-- medium -->@@
+- 5.15 Raspi on 22.04 / Intel-IoTG on 20.04
+
+*** [[[https://ubuntu.com/security/notices/USN-6349-1][USN-6349-1]]] Linux kernel (Azure) vulnerabilities
+- 9 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-35828][CVE-2023-35828]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35824][CVE-2023-35824]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35823][CVE-2023-35823]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3268][CVE-2023-3268]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2163][CVE-2023-2163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2002][CVE-2023-2002]] @@html:<!-- medium -->@@
+- 5.4 Azure
+
+*** [[[https://ubuntu.com/security/notices/USN-6350-1][USN-6350-1]], [[https://ubuntu.com/security/notices/USN-6351-1][USN-6351-1]], [[https://ubuntu.com/security/notices/USN-6339-2][USN-6339-2]], [[https://ubuntu.com/security/notices/USN-6339-3][USN-6339-3]]] Linux kernel vulnerabilities
+- 8 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-38429][CVE-2023-38429]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38428][CVE-2023-38428]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38426][CVE-2023-38426]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3212][CVE-2023-3212]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2898][CVE-2023-2898]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48425][CVE-2022-48425]] @@html:<!-- medium -->@@
+- 5.15
+  - Oracle, AWS, GKE, Raspi, Azure on 22.04
+  - IBM, Oracle, AWS, GKE, Azure on 20.04
+
+*** [[[https://ubuntu.com/security/notices/USN-6340-2][USN-6340-2]]] Linux kernel vulnerabilities
+- 9 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-35828][CVE-2023-35828]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35824][CVE-2023-35824]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35823][CVE-2023-35823]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3268][CVE-2023-3268]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2163][CVE-2023-2163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2002][CVE-2023-2002]] @@html:<!-- medium -->@@
+- 5.4 Xilinx ZyncMP, GKEOP, Raspi on 20.04; Raspi, GCP, Azure on 18.04 (Ubuntu Pro)
+
+*** [[[https://ubuntu.com/security/notices/USN-6342-2][USN-6342-2]]] Linux kernel (Azure) vulnerabilities
+- 6 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-3776][CVE-2023-3776]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3611][CVE-2023-3611]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2985][CVE-2023-2985]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20593][CVE-2023-20593]] @@html:<!-- high -->@@
+- 4.15 Azure on all
+
+*** [[[https://ubuntu.com/security/notices/USN-6338-2][USN-6338-2]]] Linux kernel vulnerabilities
+- 11 CVEs addressed in Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-38429][CVE-2023-38429]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38428][CVE-2023-38428]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38426][CVE-2023-38426]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32258][CVE-2023-32258]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32257][CVE-2023-32257]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32252][CVE-2023-32252]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32250][CVE-2023-32250]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32247][CVE-2023-32247]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2898][CVE-2023-2898]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+- 6.2
+  - Starfive, IBM, Oracle, GCP on 23.04
+  - GCP on 22.04
+
+*** [[[https://ubuntu.com/security/notices/USN-6357-1][USN-6357-1]]] Linux kernel (IBM) vulnerabilities
+- 14 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-3776][CVE-2023-3776]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3611][CVE-2023-3611]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3609][CVE-2023-3609]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35828][CVE-2023-35828]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35824][CVE-2023-35824]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-35823][CVE-2023-35823]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3268][CVE-2023-3268]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2163][CVE-2023-2163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20593][CVE-2023-20593]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2002][CVE-2023-2002]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40982][CVE-2022-40982]] @@html:<!-- medium -->@@
+- 5.4 IBM on 20.04 / 18.04
+
+*** [[[https://ubuntu.com/security/notices/USN-6345-1][USN-6345-1]]] SoX vulnerability (02:42)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-32627][CVE-2023-32627]] @@html:<!-- medium -->@@
+- Floating point exception via crafted content -> crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6352-1][USN-6352-1]]] Apache Shiro vulnerabilities (03:03)
+- 2 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-17510][CVE-2020-17510]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-13933][CVE-2020-13933]] @@html:<!-- medium -->@@
+- Two different authentication bypasses for crafted HTTP requests - not great to
+  have in a component whose purpose is to to authentication, authorisation,
+  cryptopraphy and session management
+
+*** [[[https://ubuntu.com/security/notices/USN-6353-1][USN-6353-1]]] PLIB vulnerability (03:25)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-38714][CVE-2021-38714]] @@html:<!-- medium -->@@
+- Portable games library - aims to work across a range of HW and OSes - used by
+  torcs and flightgear
+- Integer overflow -> buffer overflow on crafted TGA file
+
+*** [[[https://ubuntu.com/security/notices/USN-6354-1][USN-6354-1]]] Python vulnerability (03:54)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-48565][CVE-2022-48565]] @@html:<!-- medium -->@@
+- XML eXternal Entity when parsing XML plist files - fix was to reject entity
+  declarations in plist files - this is consistent with the behaviour in Apple's
+  plutil tool as well
+
+*** [[[https://ubuntu.com/security/notices/USN-6355-1][USN-6355-1]]] GRUB2 vulnerabilities (04:14)
+- 10 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-3775][CVE-2022-3775]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28737][CVE-2022-28737]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28736][CVE-2022-28736]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28735][CVE-2022-28735]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28734][CVE-2022-28734]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28733][CVE-2022-28733]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3981][CVE-2021-3981]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3697][CVE-2021-3697]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3696][CVE-2021-3696]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3695][CVE-2021-3695]] @@html:<!-- medium -->@@
+- Various grub vulns - see [[*\[\[\[https://ubuntu.com/security/notices/USN-4992-1\]\[USN-4992-1\]\]\] GRUB 2 vulnerabilities \[03:33\]][[USN-4992-1] GRUB 2 vulnerabilities from Episode 121]]
+  for the previous lot - these updates were published back in February to the
+  -updates pocket and have now been synced to -security
+- various OOB R/W via crafted images (Daniel Axtens), integer overflow when
+  parsing crafted IP packets -> buffer overflow, OOB write via crafted HTTP
+  header, UAF in chainloader and more
+
+*** [[[https://ubuntu.com/security/notices/USN-6356-1][USN-6356-1]]] OpenDMARC vulnerabilities (05:08)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-12460][CVE-2020-12460]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-12272][CVE-2020-12272]] @@html:<!-- low -->@@
+- Open Source implementation of the DMARC specification
+- Possible to inject authentication results via a crafted domain
+- 1-byte heap buffer overflow of a NUL-byte - likely just crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6164-2][USN-6164-2]]] c-ares vulnerabilities (05:39)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-32067][CVE-2023-32067]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31130][CVE-2023-31130]] @@html:<!-- medium -->@@
+- [[*\[\[\[https://ubuntu.com/security/notices/USN-6164-1\]\[USN-6164-1\]\]\] c-ares vulnerabilities (09:24)][[USN-6164-1] c-ares vulnerabilities from Episode 199]]
+
+*** [[[https://ubuntu.com/security/notices/USN-6237-3][USN-6237-3]]] curl vulnerabilities (05:50)
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-32001][CVE-2023-32001]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28322][CVE-2023-28322]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28321][CVE-2023-28321]] @@html:<!-- low -->@@
+- [[*\[\[\[https://ubuntu.com/security/notices/USN-6237-1\]\[USN-6237-1\]\]\] curl vulnerabilities (08:45)][[USN-6237-1] curl vulnerabilities from Episode 203]]
+
+*** [[[https://ubuntu.com/security/notices/USN-6359-1][USN-6359-1]]] file vulnerability (06:01)
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-48554][CVE-2022-48554]] @@html:<!-- medium -->@@
+- stack-based buffer over-read -> crash, DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6360-1][USN-6360-1]]] FLAC vulnerability (06:18)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-22219][CVE-2020-22219]] @@html:<!-- medium -->@@
+- buffer overflow -> RCE / crash
+
+*** [[[https://ubuntu.com/security/notices/USN-6361-1][USN-6361-1]]] CUPS vulnerability (06:27)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-32360][CVE-2023-32360]] @@html:<!-- medium -->@@
+- Default configuration failed to require authentication for the
+  =CUPS-Get-Document= operation - could allow other users to fetch print documents
+  without authentication
+
+*** [[[https://ubuntu.com/security/notices/USN-6362-1][USN-6362-1]]] .NET vulnerability (06:46)
+- 1 CVEs addressed in Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-36799][CVE-2023-36799]] @@html:<!-- medium -->@@
+- DoS in X509 certs handling
+
+*** [[[https://ubuntu.com/security/notices/USN-6358-1][USN-6358-1]]] RedCloth vulnerability (06:52)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-31606][CVE-2023-31606]] @@html:<!-- medium -->@@
+- ReDoS via crafted HTML payload - upstream maintainer hasn't responded to the
+  original report or to the PR with the proposed fix - one of the rare occasions
+  where we deploy a fix that is not blessed by upstream - also demonstrates
+  though that we try and maintain the software in Ubuntu even when upstream
+  stops supporting it (whether officially or not)
+
+*** [[[https://ubuntu.com/security/notices/USN-6363-1][USN-6363-1]]] curl vulnerability (08:03)
+- 1 CVEs addressed in Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-38039][CVE-2023-38039]] @@html:<!-- medium -->@@
+- Provides an API to access headers from past HTTP responses - so stores headers
+  in memory, but failed to limit how large this could be - so if a malicious
+  server provided a response with a very large header then could DoS the
+  application using libcurl - limited to 300KB total per response - which is
+  similar to how Chrome behaves
+
+** Goings on in Ubuntu Security Community
+*** Part 4 of Andrei's deep dive into cybersecurity research ()
+“Shedding Light on CVSS Scoring Inconsistencies: A User-Centric Study on
+Evaluating Widespread Security Vulnerabilities” - to appear in IEEE Symposium on
+Security & Privacy (aka S&P) in 2024
+- Tries to answer the questions "Are CVSS evaluations consistent?" and "Which
+  factors influence CVSS assessments?"
+- https://arxiv.org/abs/2308.15259
+- https://www.first.org/cvss/specification-document
+- https://www.first.org/cvss/user-guide
+- https://www.first.org/cvss/examples
+- https://www.first.org/cvss/examples#OpenSSL-Heartbleed-Vulnerability-CVE-2014-0160
+- https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
+- https://ubuntu.com/blog/securing-open-source-through-cve-prioritisation
+*** Ubuntu updates, releases and repositories explained (22:18)
+- https://ubuntu.com/blog/ubuntu-updates-releases-and-repositories-explained
+- by Aaron Whitehouse - Senior Public Cloud Enablement Director at Canonical,
+  leads the team that drives Canonical's joint initiatives with the major
+  public clouds
+
+** Get in contact
+- Come find us in person at [[https://events.linuxfoundation.org/linux-security-summit-europe/][LSS EU 2023 in Bilbao, Spain]]
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 208
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-208
