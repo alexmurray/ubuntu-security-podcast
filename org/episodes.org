@@ -8,6 +8,367 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 210
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-210
+:EXPORT_DATE: 2023-09-22 12:39
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E210.mp3 :podcast_duration "1280" :podcast_bytes "36992861" :permalink "https://ubuntusecuritypodcast.org/episode-210/" :guid 2f29842942c9ee3000ad00007a2bdaa3315e95d912afceb84efbba06fc340630ea10a6acb8956848977109c47ce8aa6cc5683af50e1cac70ca44ce4a2124fec6
+:END:
+#+begin_description
+It's the Linux Security Summit in Bilbao this week and we bring you some
+highlights from our favourite talks, plus we cover the 25 most stubborn software
+weaknesses, and we look at security updates for Open VM Tools, libwebp, Django,
+binutils, Indent, the Linux kernel and more.
+#+end_description
+** Overview
+It's the Linux Security Summit in Bilbao this week and we bring you some
+highlights from our favourite talks, plus we cover the 25 most stubborn software
+weaknesses, and we look at security updates for Open VM Tools, libwebp, Django,
+binutils, Indent, the Linux kernel and more.
+** This week in Ubuntu Security Updates
+88 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6365-1][USN-6365-1]]] Open VM Tools vulnerability (00:45)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-20900][CVE-2023-20900]] @@html:<!-- medium -->@@
+- Failed to properly validate SAML tokens - uses the xmlsec library but when
+  verifying the signature on a SAML document, failed to configure the library to
+  only use the X509 certificate for validation - since presumably an attacker
+  could intercept the SAML token, and replace the X509 cert with a different
+  type of signature which would then be trusted by the xmlsec library and allow
+  the attacker to gain access
+
+*** [[[https://ubuntu.com/security/notices/USN-6366-1][USN-6366-1]]] PostgreSQL vulnerability (01:34)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-39417][CVE-2023-39417]] @@html:<!-- medium -->@@
+- Fixed for other releases in [[*\[\[\[https://ubuntu.com/security/notices/USN-6296-1\]\[USN-6296-1\]\]\] PostgreSQL vulnerabilities (06:44)][[USN-6296-1] PostgreSQL vulnerabilities in Episode
+  206]] - one issue, which allowed an attacker to escalate their privileges
+  (from =CREATE= to being able to execute arbitrary code as a bootstrap superuser)
+  also affected PostgreSQL 9.5 in Ubuntu 16.04
+
+*** [[[https://ubuntu.com/security/notices/USN-6364-1][USN-6364-1]]] Ghostscript vulnerabilities (01:59)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-21890][CVE-2020-21890]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-21710][CVE-2020-21710]] @@html:<!-- medium -->@@
+- Divide by zero and buffer overflow in handling of PDFs -> DoS / RCE?
+
+*** [[[https://ubuntu.com/security/notices/USN-6369-1][USN-6369-1]]] libwebp vulnerability (02:19)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-4863][CVE-2023-4863]] @@html:<!-- medium -->@@
+- heap buffer overflow -> OOB write -> RCE
+- originally reported as a vuln in Chrome on 12 September - full impact that
+  this was actually a bug in libwebp became clear a few days later
+  - Solar Designer has a good thread on the details on [[https://marc.info/?i=20230921205250.GA13106@openwall.com][oss-security]]
+
+*** [[[https://ubuntu.com/security/notices/USN-6367-1][USN-6367-1]]] Firefox vulnerability (03:55)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4863][CVE-2023-4863]] @@html:<!-- medium -->@@
+- 117.0.1 for the libwebp fix above
+
+*** [[[https://ubuntu.com/security/notices/USN-6368-1][USN-6368-1]]] Thunderbird vulnerabilities (04:04)
+- 6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-4863][CVE-2023-4863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4584][CVE-2023-4584]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4581][CVE-2023-4581]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4575][CVE-2023-4575]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4574][CVE-2023-4574]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4573][CVE-2023-4573]] @@html:<!-- medium -->@@
+- 102.15.1 - libwebp issue above plus various other issues - various UAFs,
+  missing =.xll= files from standard blocklist that warns users when downloading
+  executables - more of a windows issue but these are Excel add-in files -
+  ie. plugins for Excel, "memory safety bugs"
+
+*** [[[https://ubuntu.com/security/notices/USN-6370-1][USN-6370-1]]] ModSecurity vulnerabilities (04:42)
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-24021][CVE-2023-24021]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48279][CVE-2022-48279]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-42717][CVE-2021-42717]] @@html:<!-- medium -->@@
+- CPU-based DoS when parsing excessively nested JSON objects (needs to be
+  tens-of-thousands deep)
+- Mishandling of NUL byte in file uploads - would parse the filename as a string
+  but if it contained an embedded NUL byte then filename would be truncated and
+  hence could result in a buffer overread or the ability to bypass the web
+  application firewall for rules which read from the =FILES_TMP_CONTENT= variable
+- Mishandling of HTTP multipart requests could also allow to bypass WAF
+
+*** [[[https://ubuntu.com/security/notices/USN-6371-1][USN-6371-1]]] libssh2 vulnerability (06:07)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-22218][CVE-2020-22218]] @@html:<!-- medium -->@@
+- OOB read - low impact since requires to connect to a malicious server to
+  trigger - and outcome is likely a DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6372-1][USN-6372-1]]] DBus vulnerability (06:26)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-34969][CVE-2023-34969]] @@html:<!-- low -->@@
+- Ability to crash the dbus daemon by an unprivileged user - BUT only if there
+  is a privileged user using the in-built monitoring interface of dbus to
+  monitor the traffic - so low chance of being able to trigger this and the
+  outcome is just a DoS anyway - and will be restarted by systemd anyway
+
+*** [[[https://ubuntu.com/security/notices/USN-6373-1][USN-6373-1]]] gawk vulnerability (07:02)
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4156][CVE-2023-4156]] @@html:<!-- medium -->@@
+- Heap OOB read - DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6374-1][USN-6374-1]]] Mutt vulnerabilities (07:16)
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-4875][CVE-2023-4875]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4874][CVE-2023-4874]] @@html:<!-- medium -->@@
+- 2 different NULL ptr deref
+  - viewing crafted email
+  - composing from a specially crafted draft email
+  - DoS only
+
+*** [[[https://ubuntu.com/security/notices/USN-6375-1][USN-6375-1]]] atftp vulnerability (07:38)
+- Affecting Jammy (22.04 LTS), Lunar (23.04)
+- Could crash =atftpd= if requesting a non-existant file - turns out to be a
+  buffer overflow so could possibly be used for code execution
+
+*** [[[https://ubuntu.com/security/notices/USN-6376-1][USN-6376-1]]] c-ares vulnerability (7:50)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-22217][CVE-2020-22217]] @@html:<!-- medium -->@@
+- OOB read when parsing a crafted Start of Authority (SOA) reply
+
+*** [[[https://ubuntu.com/security/notices/USN-6377-1][USN-6377-1]]] LibRaw vulnerability (7:56)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-22628][CVE-2020-22628]] @@html:<!-- medium -->@@
+- Failed to reject images with invalid pixel aspect ratio - leading to an OOB
+  read -> crash
+
+*** [[[https://ubuntu.com/security/notices/USN-6378-1][USN-6378-1]]] Django vulnerability (08:08)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-41164][CVE-2023-41164]] @@html:<!-- medium -->@@
+- DoS via handling of URIs with a very large number of unicode characters -
+  algorithm would parse from start of string forwards for every invalid unicode
+  character - instead of just using the remainder of the string
+
+*** [[[https://ubuntu.com/security/notices/USN-6379-1][USN-6379-1]]] vsftpd vulnerability (08:47)
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2021-3618][CVE-2021-3618]] @@html:<!-- low -->@@
+- Possible application layer confusion attack ([[https://alpaca-attack.com/][ALPACA]]) - abuses wildcard or
+  multi-domain certificates to redirect traffic from one subdomain to another
+
+*** [[[https://ubuntu.com/security/notices/USN-6381-1][USN-6381-1]]] GNU binutils vulnerabilities (09:07)
+- 8 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-47695][CVE-2022-47695]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-44840][CVE-2022-44840]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-35342][CVE-2020-35342]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-45703][CVE-2022-45703]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-46174][CVE-2021-46174]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-19726][CVE-2020-19726]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-21490][CVE-2020-21490]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-19724][CVE-2020-19724]] @@html:<!-- medium -->@@
+- memory leaks in nm and when disassembling microblaze instructions -> DoS
+- various buffer overflows in different functions -> DoS / RCE
+- failure to zero memory -> info leak
+- OOB read in objdump
+- heap buffer overflow in readelf
+- in general, we don't consider it safe to run binutils on untrusted inputs
+
+*** [[[https://ubuntu.com/security/notices/USN-6380-1][USN-6380-1]]] Node.js vulnerabilities (09:54)
+- 6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2020-8287][CVE-2020-8287]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-8265][CVE-2020-8265]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2020-8174][CVE-2020-8174]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-15606][CVE-2019-15606]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-15605][CVE-2019-15605]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2019-15604][CVE-2019-15604]] @@html:<!-- medium -->@@
+- abort when sending a crafted X509 certificate -> DoS
+- 2 different HTTP request smuggling attacks
+- possible bypass of HTTP authorization since would include whitespace in HTTP
+  headers
+- couple memory corruption issues in various operations implemented in C
+
+*** [[[https://ubuntu.com/security/notices/USN-6382-1][USN-6382-1]]] Memcached vulnerability (10:23)
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-48571][CVE-2022-48571]] @@html:<!-- medium -->@@
+- NULL ptr deref upon reception of a UDP multi-packet request
+
+*** [[[https://ubuntu.com/security/notices/USN-6389-1][USN-6389-1]]] Indent vulnerability (10:30)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-40305][CVE-2023-40305]] @@html:<!-- medium -->@@
+- heap buffer overflow -> DoS / RCE
+
+*** [[[https://ubuntu.com/security/notices/USN-6339-4][USN-6339-4]]] Linux kernel (Intel IoTG) vulnerabilities (10:53)
+- 8 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-38429][CVE-2023-38429]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38428][CVE-2023-38428]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-38426][CVE-2023-38426]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3212][CVE-2023-3212]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31084][CVE-2023-31084]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2898][CVE-2023-2898]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21255][CVE-2023-21255]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48425][CVE-2022-48425]] @@html:<!-- medium -->@@
+- 5.15
+- same set of vulns from [[*\[\[\[https://ubuntu.com/security/notices/USN-6350-1\]\[USN-6350-1\]\], \[\[https://ubuntu.com/security/notices/USN-6351-1\]\[USN-6351-1\]\], \[\[https://ubuntu.com/security/notices/USN-6339-2\]\[USN-6339-2\]\], \[\[https://ubuntu.com/security/notices/USN-6339-3\]\[USN-6339-3\]\]\] Linux kernel vulnerabilities][[USN-6350-1, USN-6351-1, USN-6339-2, USN-6339-3] Linux
+  kernel vulnerabilities]]
+
+*** [[[https://ubuntu.com/security/notices/USN-6383-1][USN-6383-1]]] Linux kernel vulnerabilities (11:15)
+- 5 CVEs addressed in Jammy (22.04 LTS), Lunar (23.04)
+  - [[https://ubuntu.com/security/CVE-2023-4569][CVE-2023-4569]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4128][CVE-2023-4128]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-40283][CVE-2023-40283]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-21264][CVE-2023-21264]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20588][CVE-2023-20588]] @@html:<!-- high -->@@
+- 6.2 all in 23.04, HWE in 22.04
+- speculative execution leak when performing a divide-by-zero on various AMD processors
+- possible privilege escalation in ARM64 KVM implementation -> guest VM could
+  then write to host memory -> code execution
+- UAF in L2CAP socket handling in bluetooth - local DoS / code execution
+- UAF in various network packet classifiers - local DoS via unprivileged user
+  namespace
+- Memory leak in netfilter - also able to be abused by an unprivileged user in a
+  user namespace
+
+*** [[[https://ubuntu.com/security/notices/USN-6384-1][USN-6384-1]]] Linux kernel (OEM) vulnerabilities (12:23)
+- 2 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4569][CVE-2023-4569]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20588][CVE-2023-20588]] @@html:<!-- high -->@@
+- 6.1
+- speculative execution leak when performing a divide-by-zero on various AMD processors
+- Memory leak in netfilter - also able to be abused by an unprivileged user in a
+  user namespace
+
+*** [[[https://ubuntu.com/security/notices/USN-6385-1][USN-6385-1]]] Linux kernel (OEM) vulnerabilities (12:37)
+- 37 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4569][CVE-2023-4569]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4273][CVE-2023-4273]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4128][CVE-2023-4128]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-40283][CVE-2023-40283]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4015][CVE-2023-4015]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4004][CVE-2023-4004]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3995][CVE-2023-3995]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3863][CVE-2023-3863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3777][CVE-2023-3777]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3776][CVE-2023-3776]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3611][CVE-2023-3611]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3610][CVE-2023-3610]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3609][CVE-2023-3609]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3390][CVE-2023-3390]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32269][CVE-2023-32269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3220][CVE-2023-3220]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-31436][CVE-2023-31436]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3141][CVE-2023-3141]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3090][CVE-2023-3090]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2898][CVE-2023-2898]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28466][CVE-2023-28466]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-28328][CVE-2023-28328]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2269][CVE-2023-2269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2235][CVE-2023-2235]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2163][CVE-2023-2163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2162][CVE-2023-2162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20593][CVE-2023-20593]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-2002][CVE-2023-2002]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1611][CVE-2023-1611]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1380][CVE-2023-1380]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1206][CVE-2023-1206]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4194][CVE-2023-4194]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1076][CVE-2023-1076]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-1075][CVE-2023-1075]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-0458][CVE-2023-0458]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-4269][CVE-2022-4269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-27672][CVE-2022-27672]] @@html:<!-- medium -->@@
+- 6.0 OEM
+- All the previously mentioned vulns plus a heap more - kudos to OEM team and
+  Timo Aaltonen from the kernel team for the most number of CVEs fixed this week
+
+*** [[[https://ubuntu.com/security/notices/USN-6386-1][USN-6386-1]]] Linux kernel vulnerabilities (13:01)
+- 4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4569][CVE-2023-4569]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4128][CVE-2023-4128]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-40283][CVE-2023-40283]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20588][CVE-2023-20588]] @@html:<!-- high -->@@
+- 5.15 22.04 GA. 20.04 HWE
+
+*** [[[https://ubuntu.com/security/notices/USN-6387-1][USN-6387-1]]] Linux kernel vulnerabilities (13:08)
+- 3 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-4128][CVE-2023-4128]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-40283][CVE-2023-40283]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-20588][CVE-2023-20588]] @@html:<!-- high -->@@
+- 5.4 20.04 GA, 18.04 HWE
+
+*** [[[https://ubuntu.com/security/notices/USN-6388-1][USN-6388-1]]] Linux kernel vulnerabilities (13:12)
+- 9 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-4459][CVE-2023-4459]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4387][CVE-2023-4387]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4385][CVE-2023-4385]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-4128][CVE-2023-4128]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-40283][CVE-2023-40283]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3863][CVE-2023-3863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-32269][CVE-2023-32269]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3212][CVE-2023-3212]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-40982][CVE-2022-40982]] @@html:<!-- medium -->@@
+- 4.4 16.04 GA, 14.04 HWE
+
+** Goings on in Ubuntu Security Community
+*** Highlights from LSS EU (13:29)
+- [[https://sched.co/1OL76][Hardware-backed Per-process Secrets - Matthew Garrett, Aurora]]
+  - Mark Esler described as a crystal clear explanation of how TPM works and
+    proposes an automated attestation for confidential computing
+- [[https://sched.co/1OL6x][Estimating Security Risk Through Repository Mining - Tamas K. Lengyel, Intel]]
+  proposed that most common metrics don't demonstrate code quality, except
+  possibly percentage of *cognitive complex functions*
+  - cyclomatic complexity measured how hard to test - cognitive complexity
+    tries to measure how hard to understand
+    - premise is that if you can't understand it, you can't see the vulns
+  - intuitively makes sense, but relies on the ability actually measure
+    cognitive complexity
+    - and [[https://www.sciencedirect.com/science/article/abs/pii/S0164121222002370][recent]] [[https://arxiv.org/abs/2303.07722][studies]] seem to show that the current cognitive complexity
+      measurements are no better at accurately identifying code that is hard
+      to understand than the more traditional methods of LOC or cyclomatic
+      complexity
+  - [[https://www.sonarsource.com/docs/CognitiveComplexity.pdf][Cognitive Complexity: A new way of measuring understandability white paper by G. Ann Campbell of SonarSource]]
+  - I missed this one but as Steve Beattie said, it does provide some things to
+    think about in the context of the security reviews that the Ubuntu Security
+    does as part of the MIR process (for a good overview of this, take a step
+    back in time to [[*Main inclusion review security code audits discussion with Seth Arnold][Main inclusion review security code audits discussion with
+    Seth Arnold from Episode 32]])
+
+*** Top 25 most stubborn weaknesses (17:13)
+- https://cwe.mitre.org/top25/archive/2023/2023_stubborn_weaknesses.html
+- [[*MITRE 2023 CWE Top 25 Most Dangerous Software Weaknesses published (06:20)][MITRE 2023 CWE Top 25 Most Dangerous Software Weaknesses published from Episode 201]]
+- 15 CWEs present in every one of the last 5 top 25 most dangerous lists from MITRE
+
+| CWE-ID  | Description                                                                                | 2023 Rank |
+|---------+--------------------------------------------------------------------------------------------+-----------|
+| CWE-787 | Out-of-bounds Write                                                                        |         1 |
+| CWE-79  | Improper Neutralization of Input During Web Page Generation (‘Cross-site Scripting’)       |         2 |
+| CWE-89  | Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’)       |         3 |
+| CWE-416 | Use After Free                                                                             |         4 |
+| CWE-78  | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') |         5 |
+| CWE-20  | Improper Input Validation                                                                  |         6 |
+| CWE-125 | Out-of-bounds Read                                                                         |         7 |
+| CWE-22  | Improper Limitation of a Pathname to a Restricted Directory (‘Path Traversal’)             |         8 |
+| CWE-352 | Cross-Site Request Forgery (CSRF)                                                          |         9 |
+| CWE-476 | NULL Pointer Dereference                                                                   |        12 |
+| CWE-287 | Improper Authentication                                                                    |        13 |
+| CWE-190 | Integer Overflow or Wraparound                                                             |        14 |
+| CWE-502 | Deserialization of Untrusted Data                                                          |        15 |
+| CWE-119 | Improper Restriction of Operations within Bounds of a Memory Buffer                        |        17 |
+| CWE-798 | Use of Hard-coded Credentials                                                              |        18 |
+
+- all fall into one of three different categories
+  - errors when processing of data from untrusted sources providing an initial
+    entry point for compromise
+  - weaknesses from using languages that don't provide strong memory safety
+    guarantees
+  - poor security architecture / design choices
+- re memory safety - MITRE note that this has been coming down - CWE-119
+  ("Improper Restriction of Operations within Bounds of a Memory Buffer") was
+  once ranked 1 5 years ago, is now 17. Related (but not directly memory safety
+  but more correctness) CWE-190 ("Integer Overflow or Wraparound") was ranked 5,
+  is now 7.
+- Really shows that if you are implementing any new code, choosing a language
+  that is memory safe will help avoid a lot of the most prevalent security
+  issues - clearly won't help with lack of proper input validation or poor
+  security architecture etc - but will cut out the most dangerous and most
+  stubborn issues (OOB W, UAF etc)
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 209
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-209
