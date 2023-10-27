@@ -6,14 +6,25 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2023 17:14:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Oct 2023 17:17:00 +1030</lastBuildDate><atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 212</title>
+      <link>https://ubuntusecuritypodcast.org/episode-212/</link>
+      <pubDate>Fri, 27 Oct 2023 17:17:00 +1030</pubDate>
+      
+      <guid>https://ubuntusecuritypodcast.org/episode-212/</guid>
+      <description>Overview With the Ubuntu Summit just around the corner, we preview a couple talks by the Ubuntu Security team, plus we look at security updates for OpenSSL, Sofia-SIP, AOM, ncurses, the Linux kernel and more.
+This week in Ubuntu Security Updates 91 unique CVEs addressed
+[USN-6437-1] VIPS vulnerabilities (00:35) 5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Jammy (22.04 LTS) CVE-2023-40032 CVE-2021-27847 CVE-2020-20739 CVE-2019-6976 CVE-2018-7998 Image processing library / CLI tool NULL ptr derefs + divide by zero -&amp;gt; crash -&amp;gt; DoS info leak since would fail to clear memory and leak this in the generated image [USN-6435-1] OpenSSL vulnerabilities (01:26) 2 CVEs addressed in Xenial ESM (16.</description>
+    </item>
+    
     <item>
       <title>Episode 211</title>
       <link>https://ubuntusecuritypodcast.org/episode-211/</link>
       <pubDate>Fri, 20 Oct 2023 17:14:00 +1030</pubDate>
       
       <guid>https://ubuntusecuritypodcast.org/episode-211/</guid>
-      <description>Overview After a well-deserved break, Alex is back looking at the recent Ubuntu 23.10 release and the significant security technologies it introduces along with a call for testing of unprivileged user namespace restrictions, plus the details of security updates for curl, Samba, iperf3, CUE and more.
+      <description>Overview After a well-deserved break, we&amp;rsquo;re is back looking at the recent Ubuntu 23.10 release and the significant security technologies it introduces along with a call for testing of unprivileged user namespace restrictions, plus the details of security updates for curl, Samba, iperf3, CUE and more.
 This week in Ubuntu Security Updates 26 unique CVEs addressed
 [USN-6429-2, USN-6429-3] curl vulnerability (00:51) 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.</description>
     </item>
