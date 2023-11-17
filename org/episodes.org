@@ -8,6 +8,85 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 213
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-213
+:EXPORT_DATE: 2023-11-17 16:59
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E213.mp3 :podcast_duration "549" :podcast_bytes "9454333" :permalink "https://ubuntusecuritypodcast.org/episode-213/" :guid acd3fb1a5d192f6a10536faa9017e11410bc0af3959b5568869ca13405bd30fa27dee0da6a59f179ed5f75202fb94c0d4c98b895e074382722e9b06c1cdb13d2
+:END:
+#+begin_description
+As we ease back into regular programming, we cover the various activities the
+team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+and Ubuntu Engineering Sprint.
+#+end_description
+** Overview
+As we ease back into regular programming, we cover the various activities the
+team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+and Ubuntu Engineering Sprint.
+** Goings on in Ubuntu Security Community
+*** Ubuntu Security team at the Ubuntu Summit (00:48)
+- [[*Preparation for Riga Product Roadmap Sprint, Ubuntu Summit and Engineering Sprint (17:33)][Preparation for Riga Product Roadmap Sprint, Ubuntu Summit and Engineering Sprint from Episode 212]]
+- In the last episode we previewed a couple talks by different folks from the
+  Ubuntu Security Team - recordings for these will be available but currently
+  there is only the livestreams from the main plenary room - as such, right now
+  you can go watch Tobias' talk "From Asahi Linux to Ubuntu: Running Linux on
+  Apple Silicon"
+  - https://youtu.be/XIGxKyekvBQ?list=PL-qBHd6_LXWZqbxr3542fZs_IMn0gAb2B&t=20272
+
+*** Andrei publishes The Open Source Fortress (01:41)
+- https://discourse.ubuntu.com/t/the-open-source-fortress-is-now-live/40183
+- Back in August, Andrei put out a call for topic suggestions for a
+  vulnerability discovery workshop that he was putting together, with a
+  particular focus on open source code bases
+- He presented this in a 90 minute session 2 weeks ago on the final day of the
+  Ubuntu Summit
+- He covered a number of topics with a focus on practical application of each
+  using dedicated tooling, e.g.:
+  - Threat modelling with OWASP Threat Dragon
+  - Secret scanning with Gitleaks
+  - Dependency scanning with OSV-Scanner
+  - Linting with Bandit and flawfinder
+  - Code querying with Semgrep
+  - Fuzzing with AFL++
+  - Symbolic execution with KLEE
+- So not only did participants learn about a given technique, such as what
+  fuzzing is etc, but also how they can easily apply it with standard tooling to
+  find real world problems
+- Due to the success of the workshop, he has decided to make the contents
+  publicly available
+  - Online wiki https://ossfortress.io/
+  - [[https://github.com/iosifache/oss_fortress/blob/main/presentation/ubuntu-summit-23/export.pdf][Presentation from the Summit]]
+  - [[https://github.com/iosifache/oss_fortress][Github repository]] with example projects to run the various tools against
+  - Pre-built docker images for the various tools used in the workshop
+- Designed to be worked through in your own time
+
+*** UbuCTF at the Ubuntu Engineering Sprint (04:15)
+- Emi, Nishit, Andei, Amir and David from the team organised and held the first
+  UbuCTF at the Engineering Sprint the week after the Ubuntu Summit
+- Organised around a story of cyber crime fighting against a criminal gang in Riga
+- 5 days, 26 challenges, 64 players
+- Challenges covered a variety of topics
+  - Networking
+  - Web
+  - Crypto(graphy)
+  - Reverse engineering
+  - Pwning
+  - Vulnerability Patching
+- Gave experience using tools like [[https://github.com/xmendez/wfuzz][Wfuzz]], [[https://github.com/Gallopsled/pwntools][Pwntools]], [[https://cutter.re/][cutter]] / [[https://rizin.re/][rizin]] / [[https://snapcraft.io/radare2][radare2]],
+  [[https://snapcraft.io/ghidra][Ghidra]], [[https://www.wireshark.org/][Wireshark]], [[https://snapcraft.io/insomnia][insomnia]] and more
+- 457 flags submitted (110 correct), 47 patches submitted
+- Result was very close - won by Anton Troyanov (Senior Engineer on the MAAS team)
+- Ubuntu Security team members were barred from competing as we had previously
+  worked on these challenges - BUT shout out to Sudhakar Verma who just joined
+  our team only 4 weeks ago and so didn't have any prior experience with this
+  CTF - managed to solve every single challenge 💪💪💪
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 212
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-212
@@ -76,7 +155,7 @@ AOM, ncurses, the Linux kernel and more.
     - In practice this is unlikely to be an issue since it doesn't not affect
       non-empty data authentication which is the vast majority of use-cases
 
-*** [[[https://ubuntu.com/security/notices/USN-6165-2][USN-6165-2]]] GLib vulnerabilities (07:57)
+*** [[[https://ubuntu.com/security/notices/USN-6165-2][USN-6165-2]]] GLib vulnerabilities (05:07)
 - 5 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
   - [[https://ubuntu.com/security/CVE-2023-32665][CVE-2023-32665]] @@html:<!-- medium -->@@
   - [[https://ubuntu.com/security/CVE-2023-32643][CVE-2023-32643]] @@html:<!-- medium -->@@
