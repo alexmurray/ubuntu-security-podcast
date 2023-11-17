@@ -7,29 +7,29 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta name="description" content="  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-  Alex covers the week in security updates including Mutt, NVIDIA graphics
-  drivers, Mailman and more.
+  <meta name="description" content="  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
   ">
 
 <meta name="generator" content="Hugo 0.120.4">
 
-<meta property="og:title" content="Episode 81" />
-<meta name="twitter:title" content="Episode 81"/>
-<meta itemprop="name" content="Episode 81">
-<meta property="article:published_time" content="2020-07-03T12:28:00&#43;09:30" />
-<meta property="article:modified_time" content="2022-05-15T18:06:35&#43;09:30" />
-<meta property="og:updated_time" content="2022-05-15T18:06:35&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-  Alex covers the week in security updates including Mutt, NVIDIA graphics
-  drivers, Mailman and more.
+<meta property="og:title" content="Episode 213" />
+<meta name="twitter:title" content="Episode 213"/>
+<meta itemprop="name" content="Episode 213">
+<meta property="article:published_time" content="2023-11-17T16:59:00&#43;10:30" />
+<meta property="article:modified_time" content="2023-11-17T17:01:21&#43;10:30" />
+<meta property="og:updated_time" content="2023-11-17T17:01:21&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
   " />
-    <meta name="twitter:description" content="  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-  Alex covers the week in security updates including Mutt, NVIDIA graphics
-  drivers, Mailman and more.
+    <meta name="twitter:description" content="  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
   " />
-    <meta itemprop="description" content="  Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-  Alex covers the week in security updates including Mutt, NVIDIA graphics
-  drivers, Mailman and more.
+    <meta itemprop="description" content="  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
   ">
 
   
@@ -40,13 +40,13 @@
 <meta name="twitter:domain" content="ubuntu.com"/>
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/episode-81/" />
+<meta property="og:url" content="/episode-213/" />
 
 
 
 
-<title>Episode 81</title>
-<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-81/">
+<title>Episode 213</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-213/">
 
 
  
@@ -171,8 +171,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col">      
       
-        <h1>Episode 81</h1>
-      <small>Posted on Friday, Jul 3, 2020 
+        <h1>Episode 213</h1>
+      <small>Posted on Friday, Nov 17, 2023 
 
 
 </small></div>
@@ -184,16 +184,16 @@ if (!doNotTrack) {
             <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
           </div>
           <div class="col-md-8">
-            Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-Alex covers the week in security updates including Mutt, NVIDIA graphics
-drivers, Mailman and more.
+            As we ease back into regular programming, we cover the various activities the
+team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+and Ubuntu Engineering Sprint.
           </div>
         </div>
     <div class="row">
           <div class="col-md-12 player_row">
 
           <audio id="player2" style="width: 100%" controls preload="none">
-            <source src="https://people.canonical.com/~amurray/USP/USP_E081.mp3" type="audio/mp3">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E213.mp3" type="audio/mp3">
             </audio>
           </div>
         </div>
@@ -202,88 +202,81 @@ drivers, Mailman and more.
     <div class="col">
       <h2>Show Notes</h2>
       <h2 id="overview">Overview</h2>
-<p>Joe talks cyber security policy with Dr David Reed from CU Boulder, plus
-Alex covers the week in security updates including Mutt, NVIDIA graphics
-drivers, Mailman and more.</p>
-<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
-<p>6 unique CVEs addressed</p>
-<h3 id="usn-4403-1-mutt-vulnerability-and-regression-00-40">[<a href="https://usn.ubuntu.com/4403-1/">USN-4403-1</a>] Mutt vulnerability and regression [00:40]</h3>
-<ul>
-<li>1 CVEs addressed in Precise ESM (12.04 ESM), Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-14954">CVE-2020-14954</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-<li>When connecting to an IMAP/SMTP/POP3 server via STARTTLS, would read
-additional data after the clear-text command to begin TLS - if someone
-was able to intercept the connection they could inject content which
-would then later get processed by Mutt as though it had come from the TLS
-connection. Fixed to simply clear input buffer at the start of TLS
-negotiation.</li>
-<li>Also includes a fix for a possible regression in the previous security
-update (<a href="https://ubuntusecuritypodcast.org/episode-80/">Episode 80</a>)</li>
-</ul>
-<h3 id="usn-4404-1-usn-4404-2-nvidia-graphics-drivers-and-linux-kernel-vulnerabilities-01-59">[<a href="https://usn.ubuntu.com/4404-1/">USN-4404-1</a>, <a href="https://usn.ubuntu.com/4404-2/">USN-4404-2</a>] NVIDIA graphics drivers &amp; Linux kernel vulnerabilities [01:59]</h3>
-<ul>
-<li>3 CVEs addressed in Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-5973">CVE-2020-5973</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2020-5967">CVE-2020-5967</a> <!-- raw HTML omitted --></li>
-<li><a href="https://ubuntu.com/security/CVE-2020-5963">CVE-2020-5963</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-<li>CUDA driver failed to properly perform access control during IPC - could
-allow a local attacker to DoS/RCE</li>
-<li>UVM driver (Unified Virtual Memory - used with CUDA driver for better
-performance) race condition - local attacker DoS</li>
-<li>Virtual guest GPU driver unspecified vuln -&gt; privileged operations -&gt; DoS</li>
-<li>Updates the linux kernel source package since this is used to provide the
-DKMS packages</li>
-</ul>
-<h3 id="usn-4405-1-glib-networking-vulnerability-03-15">[<a href="https://usn.ubuntu.com/4405-1/">USN-4405-1</a>] GLib Networking vulnerability [03:15]</h3>
-<ul>
-<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS), Eoan (19.10), Focal (20.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-13645">CVE-2020-13645</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-<li>glib-networking - additional library for glib/gio to provide TLS (ie
-links against gnutls etc.)</li>
-<li>Would fail to verify that the hostname of a server&rsquo;s TLS certificate
-matches the expected hostname by the client - but only if the client
-failed to specify the hostname itself. If did not provide hostname, would
-expect it to fail validation completely. Balsa (GNOME mail client) did
-this, so could possibly be tricked into connecting to a different mail
-server as a result.</li>
-</ul>
-<h3 id="usn-4406-1-mailman-vulnerability-04-48">[<a href="https://usn.ubuntu.com/4406-1/">USN-4406-1</a>] Mailman vulnerability [04:48]</h3>
-<ul>
-<li>1 CVEs addressed in Xenial (16.04 LTS), Bionic (18.04 LTS)
-<ul>
-<li><a href="https://ubuntu.com/security/CVE-2020-15011">CVE-2020-15011</a> <!-- raw HTML omitted --></li>
-</ul>
-</li>
-<li>Failed to validate inputs to the private archive login page - would then
-echo these back inside the generated page and so provides arbitrary
-content injection from a crafted URL.</li>
-</ul>
+<p>As we ease back into regular programming, we cover the various activities the
+team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+and Ubuntu Engineering Sprint.</p>
 <h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
-<h3 id="joe-talks-cyber-security-policy-with-dr-david-reed-scholar-in-residence-uc-boulder-05-51">Joe talks cyber security policy with Dr David Reed, Scholar in Residence @ UC Boulder [05:51]</h3>
+<h3 id="ubuntu-security-team-at-the-ubuntu-summit--00-48">Ubuntu Security team at the Ubuntu Summit (00:48)</h3>
 <ul>
-<li><a href="https://www.colorado.edu/program/tcp/people/david-reed">https://www.colorado.edu/program/tcp/people/david-reed</a></li>
-<li>Stock price study:
+<li><a href="/episode-212/#preparation-for-riga-product-roadmap-sprint-ubuntu-summit-and-engineering-sprint--17-33">Preparation for Riga Product Roadmap Sprint, Ubuntu Summit and Engineering Sprint from Episode 212</a></li>
+<li>In the last episode we previewed a couple talks by different folks from the
+Ubuntu Security Team - recordings for these will be available but currently
+there is only the livestreams from the main plenary room - as such, right now
+you can go watch Tobias&rsquo; talk &ldquo;From Asahi Linux to Ubuntu: Running Linux on
+Apple Silicon&rdquo;
 <ul>
-<li><a href="https://www.comparitech.com/blog/information-security/data-breach-share-price-analysis/">https://www.comparitech.com/blog/information-security/data-breach-share-price-analysis/</a></li>
+<li><a href="https://youtu.be/XIGxKyekvBQ?list=PL-qBHd6_LXWZqbxr3542fZs_IMn0gAb2B&amp;t=20272">https://youtu.be/XIGxKyekvBQ?list=PL-qBHd6_LXWZqbxr3542fZs_IMn0gAb2B&amp;t=20272</a></li>
 </ul>
 </li>
-<li>FCC 5G FAST Plan</li>
-<li><a href="https://docs.fcc.gov/public/attachments/DOC-354326A1.pdf">https://docs.fcc.gov/public/attachments/DOC-354326A1.pdf</a></li>
 </ul>
-<h3 id="ubuntu-security-notices-relocated-27-00">Ubuntu Security Notices relocated [27:00]</h3>
+<h3 id="andrei-publishes-the-open-source-fortress--01-41">Andrei publishes The Open Source Fortress (01:41)</h3>
 <ul>
-<li>Thanks to the design and web teams at Canonical</li>
-<li>Notices now live at <a href="https://ubuntu.com/security/notices/">https://ubuntu.com/security/notices/</a></li>
-<li>Old notices from <a href="https://usn.ubuntu.com">https://usn.ubuntu.com</a> will get redirected</li>
+<li><a href="https://discourse.ubuntu.com/t/the-open-source-fortress-is-now-live/40183">https://discourse.ubuntu.com/t/the-open-source-fortress-is-now-live/40183</a></li>
+<li>Back in August, Andrei put out a call for topic suggestions for a
+vulnerability discovery workshop that he was putting together, with a
+particular focus on open source code bases</li>
+<li>He presented this in a 90 minute session 2 weeks ago on the final day of the
+Ubuntu Summit</li>
+<li>He covered a number of topics with a focus on practical application of each
+using dedicated tooling, e.g.:
+<ul>
+<li>Threat modelling with OWASP Threat Dragon</li>
+<li>Secret scanning with Gitleaks</li>
+<li>Dependency scanning with OSV-Scanner</li>
+<li>Linting with Bandit and flawfinder</li>
+<li>Code querying with Semgrep</li>
+<li>Fuzzing with AFL++</li>
+<li>Symbolic execution with KLEE</li>
+</ul>
+</li>
+<li>So not only did participants learn about a given technique, such as what
+fuzzing is etc, but also how they can easily apply it with standard tooling to
+find real world problems</li>
+<li>Due to the success of the workshop, he has decided to make the contents
+publicly available
+<ul>
+<li>Online wiki <a href="https://ossfortress.io/">https://ossfortress.io/</a></li>
+<li><a href="https://github.com/iosifache/oss_fortress/blob/main/presentation/ubuntu-summit-23/export.pdf">Presentation from the Summit</a></li>
+<li><a href="https://github.com/iosifache/oss_fortress">Github repository</a> with example projects to run the various tools against</li>
+<li>Pre-built docker images for the various tools used in the workshop</li>
+</ul>
+</li>
+<li>Designed to be worked through in your own time</li>
+</ul>
+<h3 id="ubuctf-at-the-ubuntu-engineering-sprint--04-15">UbuCTF at the Ubuntu Engineering Sprint (04:15)</h3>
+<ul>
+<li>Emi, Nishit, Andei, Amir and David from the team organised and held the first
+UbuCTF at the Engineering Sprint the week after the Ubuntu Summit</li>
+<li>Organised around a story of cyber crime fighting against a criminal gang in Riga</li>
+<li>5 days, 26 challenges, 64 players</li>
+<li>Challenges covered a variety of topics
+<ul>
+<li>Networking</li>
+<li>Web</li>
+<li>Crypto(graphy)</li>
+<li>Reverse engineering</li>
+<li>Pwning</li>
+<li>Vulnerability Patching</li>
+</ul>
+</li>
+<li>Gave experience using tools like <a href="https://github.com/xmendez/wfuzz">Wfuzz</a>, <a href="https://github.com/Gallopsled/pwntools">Pwntools</a>, <a href="https://cutter.re/">cutter</a> / <a href="https://rizin.re/">rizin</a> / <a href="https://snapcraft.io/radare2">radare2</a>,
+<a href="https://snapcraft.io/ghidra">Ghidra</a>, <a href="https://www.wireshark.org/">Wireshark</a>, <a href="https://snapcraft.io/insomnia">insomnia</a> and more</li>
+<li>457 flags submitted (110 correct), 47 patches submitted</li>
+<li>Result was very close - won by Anton Troyanov (Senior Engineer on the MAAS team)</li>
+<li>Ubuntu Security team members were barred from competing as we had previously
+worked on these challenges - BUT shout out to Sudhakar Verma who just joined
+our team only 4 weeks ago and so didn&rsquo;t have any prior experience with this
+CTF - managed to solve every single challenge 💪💪💪</li>
 </ul>
 <h2 id="get-in-contact">Get in contact</h2>
 <ul>
@@ -291,7 +284,7 @@ content injection from a crafted URL.</li>
 <li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
 <li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
 <li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
-<li><a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
 </ul>
 
     </div>
@@ -322,18 +315,18 @@ content injection from a crafted URL.</li>
             <ul class="pagination">
               
                 <li class="page-item">
-                  <a href="https://ubuntusecuritypodcast.org/episode-80/" class="page-link">
+                  <a href="https://ubuntusecuritypodcast.org/episode-212/" class="page-link">
                     <span aria-hidden="true">&larr;</span>
                     Previous</a>
                 </li>
                 
               
-                <li class="page-item">
-                  <a href="https://ubuntusecuritypodcast.org/episode-82/" class="page-link">Next
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </li>
-                
+              
             </ul>
           </nav>
         </div>
@@ -381,8 +374,8 @@ content injection from a crafted URL.</li>
           via: "ubuntu_sec", 
         
       
-      url: "https:\/\/ubuntusecuritypodcast.org\/episode-81\/",
-      text: "Episode 81"
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-213\/",
+      text: "Episode 213"
     },
     {
       share: "linkedin",

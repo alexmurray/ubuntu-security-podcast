@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 27 Oct 2023 17:17:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 17 Nov 2023 16:59:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,129 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 213
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-213/</link>
+          <pubDate>Fri, 17 Nov 2023 16:59:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>acd3fb1a5d192f6a10536faa9017e11410bc0af3959b5568869ca13405bd30fa27dee0da6a59f179ed5f75202fb94c0d4c98b895e074382722e9b06c1cdb13d2</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 213</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
+  </itunes:summary>
+        <description>  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
+  </description>
+        <googleplay:description>  As we ease back into regular programming, we cover the various activities the
+  team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+  and Ubuntu Engineering Sprint.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>As we ease back into regular programming, we cover the various activities the
+team got up to over the past few weeks whilst away in Riga for the Ubuntu Summit
+and Ubuntu Engineering Sprint.</p>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-security-team-at-the-ubuntu-summit--00-48">Ubuntu Security team at the Ubuntu Summit (00:48)</h3>
+<ul>
+<li><a href="/episode-212/#preparation-for-riga-product-roadmap-sprint-ubuntu-summit-and-engineering-sprint--17-33">Preparation for Riga Product Roadmap Sprint, Ubuntu Summit and Engineering Sprint from Episode 212</a></li>
+<li>In the last episode we previewed a couple talks by different folks from the
+Ubuntu Security Team - recordings for these will be available but currently
+there is only the livestreams from the main plenary room - as such, right now
+you can go watch Tobias&rsquo; talk &ldquo;From Asahi Linux to Ubuntu: Running Linux on
+Apple Silicon&rdquo;
+<ul>
+<li><a href="https://youtu.be/XIGxKyekvBQ?list=PL-qBHd6_LXWZqbxr3542fZs_IMn0gAb2B&amp;t=20272">https://youtu.be/XIGxKyekvBQ?list=PL-qBHd6_LXWZqbxr3542fZs_IMn0gAb2B&amp;t=20272</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="andrei-publishes-the-open-source-fortress--01-41">Andrei publishes The Open Source Fortress (01:41)</h3>
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/the-open-source-fortress-is-now-live/40183">https://discourse.ubuntu.com/t/the-open-source-fortress-is-now-live/40183</a></li>
+<li>Back in August, Andrei put out a call for topic suggestions for a
+vulnerability discovery workshop that he was putting together, with a
+particular focus on open source code bases</li>
+<li>He presented this in a 90 minute session 2 weeks ago on the final day of the
+Ubuntu Summit</li>
+<li>He covered a number of topics with a focus on practical application of each
+using dedicated tooling, e.g.:
+<ul>
+<li>Threat modelling with OWASP Threat Dragon</li>
+<li>Secret scanning with Gitleaks</li>
+<li>Dependency scanning with OSV-Scanner</li>
+<li>Linting with Bandit and flawfinder</li>
+<li>Code querying with Semgrep</li>
+<li>Fuzzing with AFL++</li>
+<li>Symbolic execution with KLEE</li>
+</ul>
+</li>
+<li>So not only did participants learn about a given technique, such as what
+fuzzing is etc, but also how they can easily apply it with standard tooling to
+find real world problems</li>
+<li>Due to the success of the workshop, he has decided to make the contents
+publicly available
+<ul>
+<li>Online wiki <a href="https://ossfortress.io/">https://ossfortress.io/</a></li>
+<li><a href="https://github.com/iosifache/oss_fortress/blob/main/presentation/ubuntu-summit-23/export.pdf">Presentation from the Summit</a></li>
+<li><a href="https://github.com/iosifache/oss_fortress">Github repository</a> with example projects to run the various tools against</li>
+<li>Pre-built docker images for the various tools used in the workshop</li>
+</ul>
+</li>
+<li>Designed to be worked through in your own time</li>
+</ul>
+<h3 id="ubuctf-at-the-ubuntu-engineering-sprint--04-15">UbuCTF at the Ubuntu Engineering Sprint (04:15)</h3>
+<ul>
+<li>Emi, Nishit, Andei, Amir and David from the team organised and held the first
+UbuCTF at the Engineering Sprint the week after the Ubuntu Summit</li>
+<li>Organised around a story of cyber crime fighting against a criminal gang in Riga</li>
+<li>5 days, 26 challenges, 64 players</li>
+<li>Challenges covered a variety of topics
+<ul>
+<li>Networking</li>
+<li>Web</li>
+<li>Crypto(graphy)</li>
+<li>Reverse engineering</li>
+<li>Pwning</li>
+<li>Vulnerability Patching</li>
+</ul>
+</li>
+<li>Gave experience using tools like <a href="https://github.com/xmendez/wfuzz">Wfuzz</a>, <a href="https://github.com/Gallopsled/pwntools">Pwntools</a>, <a href="https://cutter.re/">cutter</a> / <a href="https://rizin.re/">rizin</a> / <a href="https://snapcraft.io/radare2">radare2</a>,
+<a href="https://snapcraft.io/ghidra">Ghidra</a>, <a href="https://www.wireshark.org/">Wireshark</a>, <a href="https://snapcraft.io/insomnia">insomnia</a> and more</li>
+<li>457 flags submitted (110 correct), 47 patches submitted</li>
+<li>Result was very close - won by Anton Troyanov (Senior Engineer on the MAAS team)</li>
+<li>Ubuntu Security team members were barred from competing as we had previously
+worked on these challenges - BUT shout out to Sudhakar Verma who just joined
+our team only 4 weeks ago and so didn&rsquo;t have any prior experience with this
+CTF - managed to solve every single challenge 💪💪💪</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E213.mp3" length="9454333" type="audio/mpeg" /><itunes:duration>549</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 212
