@@ -6,8 +6,17 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Nov 2023 16:59:00 +1030</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2023 18:51:00 +1030</lastBuildDate>
     <atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 214</title>
+      <link>https://ubuntusecuritypodcast.org/episode-214/</link>
+      <pubDate>Fri, 01 Dec 2023 18:51:00 +1030</pubDate>
+      <guid>https://ubuntusecuritypodcast.org/episode-214/</guid>
+      <description>Overview This week we take a deep dive into the Reptar vuln in Intel processors plus we look into some relic vulnerabilities in Squid and OpenZFS and finally we detail new hardening measures in tracker-miners to keep your desktop safer.
+This week in Ubuntu Security Updates 115 unique CVEs addressed
+[USN-6481-1] FRR vulnerabilities (01:21) 2 CVEs addressed in Jammy (22.04 LTS), Lunar (23.04), Mantic (23.10) CVE-2023-46753 CVE-2023-46752 Two different crashes reported by network pentester from Amazon - appears to be fuzzing frr -&amp;gt; DoS [USN-6482-1] Quagga vulnerabilities (01:42) 2 CVEs addressed in Focal (20.</description>
+    </item>
     <item>
       <title>Episode 213</title>
       <link>https://ubuntusecuritypodcast.org/episode-213/</link>
