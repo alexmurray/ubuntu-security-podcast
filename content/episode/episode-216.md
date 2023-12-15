@@ -1,12 +1,12 @@
 +++
 title = "Episode 216"
 description = """
-  For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-  in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-  for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+  For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+  looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+  BlueZ, Netatalk, GNOME Settings and a heap more.
   """
 date = 2023-12-15T17:42:00+10:30
-lastmod = 2023-12-15T17:44:51+10:30
+lastmod = 2023-12-15T18:14:38+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -20,9 +20,9 @@ guid = "a9b3c8424de1fec26c9ae3352932c8fc603ddf45496a325446d859d65d68cb0ba7b872c0
 
 ## Overview {#overview}
 
-For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+BlueZ, Netatalk, GNOME Settings and a heap more.
 
 
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}

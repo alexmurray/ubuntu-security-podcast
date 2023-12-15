@@ -15,14 +15,14 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E216.mp3 :podcast_duration "1276" :podcast_bytes "21878509" :permalink "https://ubuntusecuritypodcast.org/episode-216/" :guid a9b3c8424de1fec26c9ae3352932c8fc603ddf45496a325446d859d65d68cb0ba7b872c086f130aff9c646ddf3234459c2a141825bb5214be0d75f4c30e10c69
 :END:
 #+begin_description
-For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+BlueZ, Netatalk, GNOME Settings and a heap more.
 #+end_description
 ** Overview
-For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+BlueZ, Netatalk, GNOME Settings and a heap more.
 ** This week in Ubuntu Security Updates
 57 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/USN-6535-1][USN-6535-1]]] curl vulnerabilities (00:54)
