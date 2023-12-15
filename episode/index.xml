@@ -57,28 +57,28 @@
         
         <itunes:subtitle><![CDATA[
         
-          For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-  in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-  for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+          For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+  looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+  BlueZ, Netatalk, GNOME Settings and a heap more.
   
         
         ]]></itunes:subtitle>
-        <itunes:summary>  For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-  in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-  for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+        <itunes:summary>  For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+  looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+  BlueZ, Netatalk, GNOME Settings and a heap more.
   </itunes:summary>
-        <description>  For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-  in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-  for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+        <description>  For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+  looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+  BlueZ, Netatalk, GNOME Settings and a heap more.
   </description>
-        <googleplay:description>  For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-  in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-  for curl, BlueZ, Netatalk, GNOME Settings and a heap more.
+        <googleplay:description>  For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+  looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+  BlueZ, Netatalk, GNOME Settings and a heap more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
-<p>For the final episode of 2023 we discuss challenges in creating PoCs for vulns
-in tar and the looming EOL for Ubuntu 23.04, plus we look into security updates
-for curl, BlueZ, Netatalk, GNOME Settings and a heap more.</p>
+<p>For the final episode of 2023 we discuss creating PoCs for vulns in tar and the
+looming EOL for Ubuntu 23.04, plus we look into security updates for curl,
+BlueZ, Netatalk, GNOME Settings and a heap more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>57 unique CVEs addressed</p>
 <h3 id="usn-6535-1-curl-vulnerabilities--00-54">[<a href="https://ubuntu.com/security/notices/USN-6535-1">USN-6535-1</a>] curl vulnerabilities (00:54)</h3>
