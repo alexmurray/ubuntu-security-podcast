@@ -2,7 +2,6 @@ baseURL = "https://ubuntusecuritypodcast.org/"
 languageCode = "en-us"
 title = "Ubuntu Security Podcast"
 theme = "castanet"
-googleAnalytics = "UA-123895434-1"
 
 [params]
 site_theme = "ubuntu"
