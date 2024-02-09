@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  AppArmor unprivileged user namespace restrictions are back on the agenda this
+  week as we survey the latest improvements to this hardening feature in the
+  upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+  container escapes and Qualys&#39; recent disclosure of a privilege escalation
+  exploit for GNU libc and more.
+  ">
+
+<meta name="generator" content="Hugo 0.122.0">
+
+<meta property="og:title" content="Episode 218" />
+<meta name="twitter:title" content="Episode 218"/>
+<meta itemprop="name" content="Episode 218">
+<meta property="article:published_time" content="2024-02-09T19:06:00&#43;10:30" />
+<meta property="article:modified_time" content="2024-02-09T19:09:18&#43;10:30" />
+<meta property="og:updated_time" content="2024-02-09T19:09:18&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  AppArmor unprivileged user namespace restrictions are back on the agenda this
+  week as we survey the latest improvements to this hardening feature in the
+  upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+  container escapes and Qualys&#39; recent disclosure of a privilege escalation
+  exploit for GNU libc and more.
+  " />
+    <meta name="twitter:description" content="  AppArmor unprivileged user namespace restrictions are back on the agenda this
+  week as we survey the latest improvements to this hardening feature in the
+  upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+  container escapes and Qualys&#39; recent disclosure of a privilege escalation
+  exploit for GNU libc and more.
+  " />
+    <meta itemprop="description" content="  AppArmor unprivileged user namespace restrictions are back on the agenda this
+  week as we survey the latest improvements to this hardening feature in the
+  upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+  container escapes and Qualys&#39; recent disclosure of a privilege escalation
+  exploit for GNU libc and more.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-218/" />
+
+
+
+
+<title>Episode 218</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-218/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 218</h1>
+      <small>Posted on Friday, Feb 9, 2024 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            AppArmor unprivileged user namespace restrictions are back on the agenda this
+week as we survey the latest improvements to this hardening feature in the
+upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+container escapes and Qualys&rsquo; recent disclosure of a privilege escalation
+exploit for GNU libc and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E218.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>AppArmor unprivileged user namespace restrictions are back on the agenda this
+week as we survey the latest improvements to this hardening feature in the
+upcoming Ubuntu 24.04 LTS, plus we discuss SMTP smuggling in Postfix, runC
+container escapes and Qualys&rsquo; recent disclosure of a privilege escalation
+exploit for GNU libc and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>39 unique CVEs addressed</p>
+<h3 id="usn-6591-2-postfix-update--00-48">[<a href="https://ubuntu.com/security/notices/USN-6591-2">USN-6591-2</a>] Postfix update (00:48)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-51764">CVE-2023-51764</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>On 18th December (during the holiday break), SEC Consult published a report
+about a new technique for email spoofing, which they dubbed SMTP Smuggling
+<ul>
+<li>Similar to HTTP Request Smuggling - relies on exploiting differences in how
+SMTP protocol is interpreted by outbound (originating) vs inbound
+(receiving) SMTP servers. In particular the end-of-data sequence
+<code>&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;</code> gets interpreted loosely so that it is possible to include
+extra SMTP commands within the message data which would then go on to be
+interpreted as an additional SMTP commands to be executed by the receiving
+server and to cause it to receive two emails when only one was sent in the
+first place, and where the usual SPF checks get bypassed for this second
+email - so can bypass SPF/DMARC policies to spoof emails from various
+domains</li>
+</ul>
+</li>
+<li>Affected a number of projects including postfix - Upstream postfix released
+version 3.8.4 with an initial fix on 22nd December</li>
+<li>We then released <a href="https://ubuntu.com/security/notices/USN-6591-1">USN-6591-1</a> with that fix</li>
+<li>Then on 21st January released a more robust fix with an additional config
+option to increase interoperability whilst still preventing SMTP smuggling</li>
+<li>This second update includes the reworked fix</li>
+</ul>
+<h3 id="usn-6619-1-runc-vulnerability--03-22">[<a href="https://ubuntu.com/security/notices/USN-6619-1">USN-6619-1</a>] runC vulnerability (03:22)</h3>
+<ul>
+<li>1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21626">CVE-2024-21626</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>&ldquo;Internal file descriptor leak&rdquo; - using a specially crafted container image,
+allows an attacker to cause a newly spawned container to have a working
+directory within the host filesystem namespace which in turn can allow the
+attacker to escape the container - various ways this can be attacked, full
+details on the upstream advisory
+<a href="https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv">https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv</a></li>
+</ul>
+<h3 id="usn-6620-1-gnu-c-library-vulnerabilities--04-17">[<a href="https://ubuntu.com/security/notices/USN-6620-1">USN-6620-1</a>] GNU C Library vulnerabilities (04:17)</h3>
+<ul>
+<li>3 CVEs addressed in Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-6780">CVE-2023-6780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6779">CVE-2023-6779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6246">CVE-2023-6246</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest round of vulnerabilities from <a href="https://www.qualys.com/2024/01/30/cve-2023-6246/syslog.txt">Qualys</a></li>
+<li>Affect the <a href="https://manpages.ubuntu.com/manpages/noble/man3/syslog.3.html"><code>syslog()</code></a> system call</li>
+<li>Heap buffer overflow, off-by-one buffer overflow and integer overflow</li>
+<li>Of these the heap buffer overflow is the most severe - Qualys were able to
+demonstrate they could exploit and up-to-date default install of Fedora 38 to
+escalate privileges from a local unprivileged user to root.
+<ul>
+<li>uses the value of <code>argv[0]</code> in a call to snprintf() into a fixed size buffer
+allocated on the stack - snprintf() won&rsquo;t overflow this but will return a
+value larger than the fixed size buffer - as a result a heap buffer to then
+contain this string would only get allocated with a size of 1 byte but then
+the full expected data would get copied into it - and since the attacker
+controls this value they can write arbitrary data to the heap by just using
+a crafted program name (which is easy to do via the the <a href="https://ss64.com/bash/exec.html"><code>exec</code> command</a> built
+in to bash etc)</li>
+</ul>
+</li>
+<li>Various setuid binaries like <code>/usr/bin/su</code> call <code>syslog()</code> internally and so can
+be abused in this way</li>
+</ul>
+<h3 id="usn-6587-4-x-dot-org-x-server-regression--07-14">[<a href="https://ubuntu.com/security/notices/USN-6587-4">USN-6587-4</a>] X.Org X Server regression (07:14)</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21886">CVE-2024-21886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21885">CVE-2024-21885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0409">CVE-2024-0409</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0408">CVE-2024-0408</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0229">CVE-2024-0229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6816">CVE-2023-6816</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6621-1-imagemagick-vulnerability--07-28">[<a href="https://ubuntu.com/security/notices/USN-6621-1">USN-6621-1</a>] ImageMagick vulnerability (07:28)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-5341">CVE-2023-5341</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ImageMagick is in universe, so these updates are available via <a href="https://ubuntu.com/pro">Ubuntu Pro</a></li>
+<li>Heap UAF in BMP decoder - likely DoS but possible code-execution via a
+crafted BMP file</li>
+</ul>
+<h3 id="usn-6622-1-openssl-vulnerabilities--08-07">[<a href="https://ubuntu.com/security/notices/USN-6622-1">USN-6622-1</a>] OpenSSL vulnerabilities (08:07)</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0727">CVE-2024-0727</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6237">CVE-2023-6237</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6129">CVE-2023-6129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-5678">CVE-2023-5678</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Two CPU-based DoS issues where OpenSSL would spend an excessive amount of
+time trying to check an invalid RSA or X9.42 DH keys</li>
+<li>NULL ptr deref when parsing a malicious PKCS12 file</li>
+<li>Issue specific to PowerPC (ppc64el arch in Ubuntu) - possible to corrupt
+application state since the POLY1305 MAC implementation (hand-coded assembly)
+saves the contents of the vector registers in a different order than when they
+get restored - so some registers will be corrupted when returning to the
+caller
+<ul>
+<li>Only relevant on newer PowerPC processors which support the PowerISA 2.07
+instructions</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6592-2-libssh-vulnerabilities--09-27">[<a href="https://ubuntu.com/security/notices/USN-6592-2">USN-6592-2</a>] libssh vulnerabilities (09:27)</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-6918">CVE-2023-6918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6004">CVE-2023-6004</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Recent libssh update now also available for Ubuntu Pro users on older releases</li>
+</ul>
+<h3 id="usn-6623-1-django-vulnerability--09-34">[<a href="https://ubuntu.com/security/notices/USN-6623-1">USN-6623-1</a>] Django vulnerability (09:34)</h3>
+<ul>
+<li>1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24680">CVE-2024-24680</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ReDoS when using the <code>intcomma</code> template</li>
+</ul>
+<h3 id="usn-6609-3-linux-kernel--oracle--vulnerabilities--09-45">[<a href="https://ubuntu.com/security/notices/USN-6609-3">USN-6609-3</a>] Linux kernel (Oracle) vulnerabilities (09:45)</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0193">CVE-2024-0193</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6932">CVE-2023-6932</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6931">CVE-2023-6931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6817">CVE-2023-6817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6606">CVE-2023-6606</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6040">CVE-2023-6040</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Refer back to <a href="https://ubuntusecuritypodcast.org/episode-217/">Episode 217</a> for most recent kernel vulns</li>
+</ul>
+<h3 id="usn-6610-2-firefox-regressions--09-57">[<a href="https://ubuntu.com/security/notices/USN-6610-2">USN-6610-2</a>] Firefox regressions (09:57)</h3>
+<ul>
+<li>14 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0746">CVE-2024-0746</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0755">CVE-2024-0755</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0754">CVE-2024-0754</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0753">CVE-2024-0753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0751">CVE-2024-0751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0750">CVE-2024-0750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0749">CVE-2024-0749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0748">CVE-2024-0748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0747">CVE-2024-0747</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0745">CVE-2024-0745</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0744">CVE-2024-0744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0743">CVE-2024-0743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0742">CVE-2024-0742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0741">CVE-2024-0741</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Similarly, last week I mentioned <a href="/episode-217/#usn-6610-1-firefox-vulnerabilities">[USN-6610-1] Firefox vulnerabilities</a> -
+upstream 122.0 release has various minor regressions now fixed in this 122.0.1
+release - including an issue if you happened to be using the Yaru-Remix theme
+in Ubuntu</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="updates-for-unprivileged-user-namespace-restrictions-in-ubuntu-24-dot-04-lts--10-32">Updates for unprivileged user namespace restrictions in Ubuntu 24.04 LTS (10:32)</h3>
+<ul>
+<li>Previously mentioned this work a few times on the podcast (<a href="/episode-211/#call-for-testing-of-unprivileged-user-namespace-restrictions-on-mantic">Call for testing of Unprivileged User Namespace Restrictions on Mantic in Episode 211</a> and <a href="/episode-205/#unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu--17-00">Unprivileged user namespace restrictions via AppArmor in Ubuntu in Episode 205</a>)</li>
+<li>Both those times was about user namespace restrictions in Ubuntu 23.10 (the current interim release)</li>
+<li>For those not familiar - user namespaces provide a mechanism for operating as
+a different UID on a Linux system - in particular, can operate as uid 0 within
+a namespace which is then constrained by the original parent namespace -
+ie. as a normal unprivileged user, I could create a new user namespace and map
+my UID to 0 within that namespace, which can then allow me to have say
+<code>CAP_NET_ADMIN</code> within that namespace and so create firewall rules etc that only
+affect applications within that namespace and not the host system
+<ul>
+<li>Can also be used for isolation etc</li>
+<li>However, since within the namespace my unprivieleged user now has extra
+privileges, exposes additional kernel attack surface - various bugs have
+been found in differetn kernel subsystems that allow an unprivileged user to
+exploit the kernel as a result</li>
+</ul>
+</li>
+<li>Want a way to provide fine grained controls over unprivileged user namespaces</li>
+<li>Previously, used AppArmor to deny the ability to create a new user namespace
+unless an application was explicitly tagged via an associated AppArmor profile</li>
+<li>John and Georgia from the AppArmor team have made a number of enhancements, in
+particular adding a new default functionality where you can define in AppArmor
+policy a different AppArmor profile which an application should transition
+into when it creates a user namespace</li>
+<li>In particular, we can now do this even for the &ldquo;unconfined&rdquo; profile - and then
+ship a default &ldquo;unconfined_userns&rdquo; profile which allows an application to
+create a userns but to not gain any additional capabilities within that by
+default</li>
+<li>Various sandboxing frameworks behave much more sensibly with this - so instead
+of just failing when they try and create the userns, they instead are able to
+create one but then if they try and gain additional capabilities (like
+<code>CAP_NET_ADMIN</code> etc as mentioned before) this is then denied</li>
+<li>This also matches the semantics which we want to achieve since it is not
+really the user namespace itself that is the original issue, it is the ability
+to gain additional capabilities within that which the unprivileged user did
+not have originally</li>
+<li>In addition, Georgia has been busy testing various applications within the
+archive and across the Linux ecosystem to ensure we ship any required profiles
+for them out-of-the-box so as many pieces of software continue to work as
+expected with these restrictions in place</li>
+<li>AppArmor in noble is already enabling this restriction and these updates are
+now in the <code>apparmor</code> package in noble-proposed pocket
+<ul>
+<li>Expect to be available in noble within the next few days once automated
+testing completes</li>
+</ul>
+</li>
+<li>Requires some additional kernel support - Kernel Team has merged this into
+their current <a href="https://launchpad.net/~canonical-kernel-team/+archive/ubuntu/unstable">linux-unstable kernel</a> (available via the Kernel Team&rsquo;s unstable
+PPA) which will land eventually land in 24.04 proper</li>
+<li>On track to have this additional security hardening feature enabled by default
+for 24.04 LTS at release so we can close off one of the more prevalent sources
+of kernel privilege escalation bugs in the past few years</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-217/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2023 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-218\/",
+      text: "Episode 218"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+
