@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 1 Mar 2024 17:01:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Sat, 9 Mar 2024 09:23:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,397 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 221
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-221/</link>
+          <pubDate>Sat, 09 Mar 2024 09:23:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>d0313887e011deeeb9b1c69573b4c97c96b416d56fada7785a53df16330055081e579712d80b8aca11fe38fb40f917943d49582eb31a55344081db6eff6627c3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 221</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          Andrei is back to discuss recent academic research into malware within the
+  Python/PyPI ecosystem and whether it is possible to effectively combat it with
+  open source tooling, plus we cover security updates for Unbound, libuv, node.js,...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Andrei is back to discuss recent academic research into malware within the
+  Python/PyPI ecosystem and whether it is possible to effectively combat it with
+  open source tooling, plus we cover security updates for Unbound, libuv, node.js,
+  the Linux kernel, libgit2 and more.
+  </itunes:summary>
+        <description>  Andrei is back to discuss recent academic research into malware within the
+  Python/PyPI ecosystem and whether it is possible to effectively combat it with
+  open source tooling, plus we cover security updates for Unbound, libuv, node.js,
+  the Linux kernel, libgit2 and more.
+  </description>
+        <googleplay:description>  Andrei is back to discuss recent academic research into malware within the
+  Python/PyPI ecosystem and whether it is possible to effectively combat it with
+  open source tooling, plus we cover security updates for Unbound, libuv, node.js,
+  the Linux kernel, libgit2 and more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Andrei is back to discuss recent academic research into malware within the
+Python/PyPI ecosystem and whether it is possible to effectively combat it with
+open source tooling, plus we cover security updates for Unbound, libuv, node.js,
+the Linux kernel, libgit2 and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>56 unique CVEs addressed</p>
+<h3 id="usn-6665-1-unbound-vulnerabilities--00-50">[<a href="https://ubuntu.com/security/notices/USN-6665-1">USN-6665-1</a>] Unbound vulnerabilities (00:50)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-50868">CVE-2023-50868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50387">CVE-2023-50387</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Another update for recent vulns discovered in DNSSEC standard - <a href="/episode-219/#usn-6633-1-bind-vulnerabilities--07-33">[USN-6633-1]
+Bind vulnerabilities from Episode 219</a> and <a href="/episode-220/#usn-6657-1-dnsmasq-vulnerabilities--07-10">[USN-6657-1] Dnsmasq
+vulnerabilities from Episode 220</a></li>
+</ul>
+<h3 id="usn-6666-1-libuv-vulnerability--01-16">[<a href="https://ubuntu.com/security/notices/USN-6666-1">USN-6666-1</a>] libuv vulnerability (01:16)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24806">CVE-2024-24806</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Async event handling library - used by nodejs and others - supports async
+handling TCP/UDP sockets, DNS resolution, file system operations etc</li>
+<li>Would truncate hostnames to 256 characters before calling <code>getaddrinfo()</code> - but
+would then fail to NUL-terminate the string - as such, <code>getaddrinfo()</code> would
+read past the end of the buffer and the address that got resolved may not be
+the intended one - so then a remote attacker who could influence this could
+end up causing the application to contact a different address than expected
+and so perhaps access internal services etc</li>
+</ul>
+<h3 id="usn-6667-1-cpanel-json-xs-vulnerability--02-21">[<a href="https://ubuntu.com/security/notices/USN-6667-1">USN-6667-1</a>] Cpanel-JSON-XS vulnerability (02:21)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-48623">CVE-2022-48623</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Perl module for JSON serialisation</li>
+<li>OOB read on crafted JSON - when parsing in relaxed mode, if JSON was malformed
+and missing a colon would read beyond the end of the data and so potentially
+could result in an info-leak or a crash</li>
+</ul>
+<h3 id="usn-6668-1-python-openstackclient-vulnerability--02-55">[<a href="https://ubuntu.com/security/notices/USN-6668-1">USN-6668-1</a>] python-openstackclient vulnerability (02:55)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-6110">CVE-2023-6110</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When deleting an access rule, would search for it by name - if it didn&rsquo;t exist
+may end up returning a different rule which would then get deleted instead -
+changes the semantics to only allow rules to be deleted via their ID which is
+unique</li>
+</ul>
+<h3 id="usn-6648-2-linux-kernel--azure--vulnerabilities--03-23">[<a href="https://ubuntu.com/security/notices/USN-6648-2">USN-6648-2</a>] Linux kernel (Azure) vulnerabilities (03:23)</h3>
+<ul>
+<li>4 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0646">CVE-2024-0646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0565">CVE-2024-0565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6915">CVE-2023-6915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-220/#usn-6648-1-linux-kernel-vulnerabilities--02-00">[USN-6648-1] Linux kernel vulnerabilities from Episode 220</a></li>
+<li>OOB write in KTLS</li>
+<li>UAF in AppleTalk network driver</li>
+</ul>
+<h3 id="usn-6651-2-usn-6651-3-linux-kernel--including-starfive--vulnerabilities--03-52">[<a href="https://ubuntu.com/security/notices/USN-6651-2">USN-6651-2</a>, <a href="https://ubuntu.com/security/notices/USN-6651-3">USN-6651-3</a>] Linux kernel (including StarFive) vulnerabilities (03:52)</h3>
+<ul>
+<li>6 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0646">CVE-2024-0646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0582">CVE-2024-0582</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0565">CVE-2024-0565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6915">CVE-2023-6915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51780">CVE-2023-51780</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6653-2-usn-6653-3-usn-6653-4-linux-kernel--aws-low-latency-and-gke--vulnerabilities--04-07">[<a href="https://ubuntu.com/security/notices/USN-6653-2">USN-6653-2</a>, <a href="https://ubuntu.com/security/notices/USN-6653-3">USN-6653-3</a>, <a href="https://ubuntu.com/security/notices/USN-6653-4">USN-6653-4</a>] Linux kernel (AWS, Low Latency &amp; GKE) vulnerabilities (04:07)</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0646">CVE-2024-0646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0565">CVE-2024-0565</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6915">CVE-2023-6915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51780">CVE-2023-51780</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6647-2-linux-kernel--azure--vulnerabilities--04-15">[<a href="https://ubuntu.com/security/notices/USN-6647-2">USN-6647-2</a>] Linux kernel (Azure) vulnerabilities (04:15)</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-7192">CVE-2023-7192</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51780">CVE-2023-51780</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-220/#usn-6647-1-linux-kernel-vulnerabilities--01-14">[USN-6647-1] Linux kernel vulnerabilities from Episode 220</a></li>
+<li>Memory leak in netfilter able to be abused via an unprivileged user
+namespace - DoS via exhausting system memory</li>
+</ul>
+<h3 id="usn-6670-1-php-guzzlehttp-psr7-vulnerabilities--04-36">[<a href="https://ubuntu.com/security/notices/USN-6670-1">USN-6670-1</a>] php-guzzlehttp-psr7 vulnerabilities (04:36)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-29197">CVE-2023-29197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-24775">CVE-2022-24775</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>HTTP message library conforming the the PSR-7 specification - failed to
+properly account for embedded newlines in HTTP headers - classic HTTP
+smuggling attack vuln</li>
+<li>Original fix from 2022 was found to be incomplete so additional CVE assigned
+for the follow-up fix</li>
+</ul>
+<h3 id="usn-6671-1-php-nyholm-psr7-vulnerability--05-15">[<a href="https://ubuntu.com/security/notices/USN-6671-1">USN-6671-1</a>] php-nyholm-psr7 vulnerability (05:15)</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-29197">CVE-2023-29197</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Alternative PSR-7 implementation which also suffered from the same issue</li>
+</ul>
+<h3 id="usn-6669-1-thunderbird-vulnerabilities--05-35">[<a href="https://ubuntu.com/security/notices/USN-6669-1">USN-6669-1</a>] Thunderbird vulnerabilities (05:35)</h3>
+<ul>
+<li>17 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-1552">CVE-2024-1552</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1551">CVE-2024-1551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1546">CVE-2024-1546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0746">CVE-2024-0746</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1553">CVE-2024-1553</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1550">CVE-2024-1550</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1549">CVE-2024-1549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1548">CVE-2024-1548</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1547">CVE-2024-1547</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0755">CVE-2024-0755</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0753">CVE-2024-0753</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0751">CVE-2024-0751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0750">CVE-2024-0750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0749">CVE-2024-0749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0747">CVE-2024-0747</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0742">CVE-2024-0742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0741">CVE-2024-0741</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>115.8.1</li>
+</ul>
+<h3 id="usn-6672-1-node-dot-js-vulnerabilities--06-03">[<a href="https://ubuntu.com/security/notices/USN-6672-1">USN-6672-1</a>] Node.js vulnerabilities (06:03)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-2650">CVE-2023-2650</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23920">CVE-2023-23920</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23919">CVE-2023-23919</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Leverages OpenSSL for cryptographic related work - failed to clear the OpenSSL
+error stack in when calling various routines - as such, may get false-positive
+errors on subsequent calls to OpenSSL from the same thread and hence DoS - so
+a remote attacker could provide an invalid cert which would then set this
+error and subsequent routines to validate certs would also appear to fail even
+if they were valid</li>
+<li>Uses ICU for unicode handling - allows a user to specify their own ICU data
+via an environment variable - but node.js can run in different privilege
+contexts so a user could then force it to load data under their control when
+running with elevated privileges</li>
+<li>ASN.1 encoding issue inherited from OpenSSL</li>
+</ul>
+<h3 id="usn-6673-1-python-cryptography-vulnerabilities--07-30">[<a href="https://ubuntu.com/security/notices/USN-6673-1">USN-6673-1</a>] python-cryptography vulnerabilities (07:30)</h3>
+<ul>
+<li>2 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26130">CVE-2024-26130</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50782">CVE-2023-50782</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Another issue of mishandling the OpenSSL API - in this case would not properly
+handle errors returned from OpenSSL when processing certificates that had
+incorrect padding (talked about this last week in <a href="/episode-220/#usn-6663-1-openssl-update--08-40">[USN-6663-1] OpenSSL update</a>)</li>
+<li>Mishandled error case when a PKCS+12 key and certificate did not match
+one-another - would trigger an exception at runtime</li>
+</ul>
+<h3 id="usn-6674-1-usn-6674-2-django-vulnerability--08-22">[<a href="https://ubuntu.com/security/notices/USN-6674-1">USN-6674-1</a>, <a href="https://ubuntu.com/security/notices/USN-6674-2">USN-6674-2</a>] Django vulnerability (08:22)</h3>
+<ul>
+<li>1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27351">CVE-2024-27351</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ReDoS in Truncator template filter - if supplied an input string of all
+opening angle brackets <code>&lt;&lt;&lt;&lt;&lt;&lt;....</code> then would cause exponential performance
+degredation</li>
+</ul>
+<h3 id="usn-6675-1-imageprocessing-vulnerability--08-52">[<a href="https://ubuntu.com/security/notices/USN-6675-1">USN-6675-1</a>] ImageProcessing vulnerability (08:52)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-24720">CVE-2022-24720</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Image processing library for ruby based on ImageMagick</li>
+<li>If an application allowed the user to specify the set of operations to be
+performed, could then be abused to get arbitrary shell command execution -
+internally used <code>send()</code> rather than <code>public_send()</code> which allowed access to
+private methods to directly execute system calls</li>
+</ul>
+<h3 id="usn-6677-1-libde265-vulnerabilities--09-23">[<a href="https://ubuntu.com/security/notices/USN-6677-1">USN-6677-1</a>] libde265 vulnerabilities (09:23)</h3>
+<ul>
+<li>7 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-49468">CVE-2023-49468</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49467">CVE-2023-49467</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49465">CVE-2023-49465</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-47471">CVE-2023-47471</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-43887">CVE-2023-43887</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27103">CVE-2023-27103</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-27102">CVE-2023-27102</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Next lot of libde265 vulns after discussed previously in both
+<a href="/episode-220/#usn-6659-1-libde265-vulnerabilities--07-52">[USN-6659-1] libde265 vulnerabilities from
+Episode 221</a> and
+<a href="/episode-219/#usn-6627-1-libde265-vulnerabilities--04-10">[USN-6627-1] libde265 vulnerabilities from
+Episode 219</a> - more fuzzing related fixes for usual sorts of issues - this
+time includes a couple from our own David (aka <a href="https://litios.github.io/">@litios</a>)</li>
+</ul>
+<h3 id="usn-6678-1-libgit2-vulnerabilities--09-50">[<a href="https://ubuntu.com/security/notices/USN-6678-1">USN-6678-1</a>] libgit2 vulnerabilities (09:50)</h3>
+<ul>
+<li>5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24577">CVE-2024-24577</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24575">CVE-2024-24575</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22742">CVE-2023-22742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12279">CVE-2020-12279</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-12278">CVE-2020-12278</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Used by various tools like cargo, gnome-builder etc</li>
+<li>Fix for a possible infinite loop (CPU-based DoS) when parsing a crafted
+revision named simply <code>@</code></li>
+<li>Use-after free when handling crafted input to <code>git_index_add</code></li>
+<li>Mishandles equivalent filenames due to NTFS Data Streams (similar to
+CVE-2019-1352 - <a href="/episode-56/#usn-4220-1-git-vulnerabilities-08-16">[USN-4220-1] Git vulnerabilities from Episode 56</a>)</li>
+<li>Failed to perform certificate checking when using an SSH remote via the
+optional libssh2 backend - which we do in Ubuntu</li>
+</ul>
+<h3 id="usn-6649-2-firefox-regressions--10-47">[<a href="https://ubuntu.com/security/notices/USN-6649-2">USN-6649-2</a>] Firefox regressions (10:47)</h3>
+<ul>
+<li>12 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-1556">CVE-2024-1556</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1552">CVE-2024-1552</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1551">CVE-2024-1551</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1546">CVE-2024-1546</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1557">CVE-2024-1557</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1555">CVE-2024-1555</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1554">CVE-2024-1554</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1553">CVE-2024-1553</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1550">CVE-2024-1550</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1549">CVE-2024-1549</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1548">CVE-2024-1548</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1547">CVE-2024-1547</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>123.0.1</li>
+</ul>
+<h3 id="usn-6676-1-c-ares-vulnerability--10-55">[<a href="https://ubuntu.com/security/notices/USN-6676-1">USN-6676-1</a>] c-ares vulnerability (10:55)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25629">CVE-2024-25629</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>async DNS lookup library</li>
+<li>Failed to properly handle embedded NUL characters when parsing
+<code>/erc/resolv.conf</code> <code>/etc/hosts</code>, <code>/etc/nsswitch.conf</code> or anything specifed via the
+<code>HOSTALIASES</code> environment variable - if has an embedded NUL as the first
+character in a new line, would then attempt to read memory prior to the start
+of the buffer and hence an OOB read -&gt; crash</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="andrei-discusses-malware-detection-with-the-python-and-pypi-ecosystem--11-46">Andrei discusses malware detection with the Python and PyPi ecosystem (11:46)</h3>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/10172836">Bad Snakes: Understanding and Improving Python Package Index Malware Scanning</a></li>
+</ul>
+<p>Hey, Alex!</p>
+<p>We will continue our journey today beyond the scope of the previous episodes. We&rsquo;ve delved into the realms of network security, federated infrastructures, and vulnerability detection and assessment.</p>
+<h4 id="today-s-paper">Today’s paper</h4>
+<p>Last year, the Ubuntu Security Team participated in the Linux Security Summit in Bilbao. At that time, I managed to have a discussion with Zach, who hosted a presentation at the Supply Chain Security Con entitled “Will Large-Scale Automated Scanning Stop Malware on OSS Repositories?”. I later discovered that his talk was backed by a paper that he and his colleagues from Chainguard had published.</p>
+<p>With this in mind, today we will be examining “Bad Snakes: Understanding and Improving Python Package Index Malware Scanning”, which was published last year in ACM’s International Conference on Software Engineering.</p>
+<p>The aim of the paper is to highlight the current state of the Python and PyPi ecosystems from a malware detection standpoint, identify the requirements for a mature malware scanner that can be integrated into PyPi, and ascertain whether the existing open-source tools meet these objectives.</p>
+<h4 id="repositories-dot-pypi">Repositories. PyPi</h4>
+<p>With this in mind, let&rsquo;s start by understanding the context.</p>
+<p>Applications can be distributed through repositories. This means that the applications are packaged into a generic format and published in either managed or unmanaged repositories. Users can then install the application by querying the repositories, downloading the application in a format that they can unpack through a client, and subsequently run on their hosts.</p>
+<p>There are numerous repositories out there. Some target specific operating systems, as is the case with Debian repositories, the Snap Store, Google Play, or the Microsoft Store. Others are designed to store packages for a specific programming language, such as PyPi, npm, and RubyGems. Firefox Add-ons and the Chrome extension store target a specific platform, namely the browser.</p>
+<p>Another relevant characteristic when discussing repositories is the level of curation. The Ubuntu Archive is considered a curated repository of software packages because there are several trustworthy contributors able to publish software within the repository. Conversely, npm is unmanaged because any member of the open-source community can publish anything in it.</p>
+<p>We will discuss the Python Package Index extensively, which is the de facto unmanaged repository for the Python programming language. As of the 7th of March 2024, there were 5.4 million releases for 520 thousand projects and nearly 800 thousand users. It is governed by a non-profit organisation and run by volunteers worldwide.</p>
+<h4 id="supply-chain-attacks">Supply chain attacks</h4>
+<p>Software repositories foster the dependencies of software on other pieces of software, controlled by different parties. As seen in campaigns such as the SolarWinds SUNBURST attack, this can go awry. Attackers can gain control over software in a company&rsquo;s supply chain, gain initial access to their infrastructure, and exploit this advantage.</p>
+<p>Multiple attack vectors are possible. Accounts can be hijacked. Attackers may publish packages with similar names (in a tactic known as typosquatting). They can also leverage shrink-wrapped clones, which are duplicates of existing packages, where malicious code is injected after gaining users&rsquo; trust. While covering all attack vectors is beyond the scope of this podcast episode, you can find a comprehensive taxonomy in a paper called “Taxonomy of Attacks on Open-Source Software Supply Chains”, which lists over 100 unique attack vectors.</p>
+<p>From 2017 to 2022, the number of unique projects removed from PyPi increased rapidly: 38 in the first year, followed by 130, 60, 500, 27 thousands, and finally 12 thousands in the last year. Despite the fact that most of these were reported as malware, it&rsquo;s worth noting that the impact of some of them is limited due to the lack of organic usage.</p>
+<h4 id="malware-analysis">Malware analysis</h4>
+<p>These attacks can be mitigated by implementing techniques such as multi-factor authentication, software signing, update frameworks, or reproducible builds, but the most widespread method is malware analysis.</p>
+<p>Some engines check for anomalies via static and dynamic heuristics, while others rely on signatures due to their simplicity. Once a piece of software is detected as malicious, its hash is added to a deny list that is embedded in the anti-malware engine. Each file is then hashed and the result is checked against the deny list. If the heuristics or the hash comparison identifies the file as malicious, it is either reported, blocked, or deleted depending on the strategy implemented by the anti-malware engine.</p>
+<h4 id="malware-analysis-in-pypi">Malware analysis in PyPi</h4>
+<p>These solutions are already implemented in software repositories. In the case of PyPi, malware scanning was introduced in February 2022 with the assistance of a malware check feature in Warehouse, the application serving PyPi. However, it was disabled by the administrators two years later and ultimately removed in May 2023 due to an overload of alerts.</p>
+<p>In addition to this technical solution, PyPi also capitalises on a form of social symbiosis. Software security companies and individuals conduct security research, reporting any discovered malware to the PyPi administrators via email. The administrators typically allocate 20 minutes per week to review these malware reports and remove any packages that can be verified as true positives. Ultimately, the reporting companies and individuals gain reputation or attention for their brands, products, and services.</p>
+<h4 id="requirements">Requirements</h4>
+<p>In addition to information about software repositories, supply chain attacks, malware analysis, and PyPi, the researchers also interviewed administrators from PyPi to understand their requirements for a malware analysis tool that could assist them. The three interviews, each lasting one hour, were conducted in July and August 2022 and involved only three individuals. This limited number of interviews is due to the focus on the PyPi ecosystem, where only ten people are directly involved in malware scanning activities.</p>
+<p>When discussing requirements, the administrators desired tools with a binary outcome, which could be determined by checking if a numerical score exceeds a threshold or not. The decision should also be supported by arguments. While administrators can tolerate false negatives, they aim to reduce the rate of false positives to zero. The tool should also operate on limited resources and be easy to adopt, use and maintain.</p>
+<h4 id="current-tooling">Current tooling</h4>
+<p>But do the current solutions tick these boxes?</p>
+<p>The researchers selected tools based on a set of criteria: analysing the code of the packages, having public detection techniques, and detection rules. Upon examining the available solutions, they found that only three could be used for evaluation in the context of their research: PyPi&rsquo;s malware checks, Bandit4Mal, and OSSGadget&rsquo;s OSS Detect Backdoor.</p>
+<p>Regarding the former, it should be noted that the researchers did not match the YARA rules only against the setup files, but also against all files in the Python package. The second, Bandit4Mal, is an open-source version of Bandit that has been adapted to include multiple rules for detecting malicious patterns in the AST generated from a program&rsquo;s codebase. The last, OSSGadget&rsquo;s OSS Detect Backdoor, is a tool developed by Microsoft in June 2020 to perform rule-based malware detection on each file in a package.</p>
+<p>These tools were tested against both malicious and benign Python packages. The researchers used two datasets containing 168 manually-selected malicious packages. For the benign packages, they selected 1,400 popular packages and one thousand randomly-selected benign Python packages.</p>
+<p>For the evaluation process, they considered an alert in a malicious package to be a true positive and an alert in a benign package to be a false positive.</p>
+<p>The true positive rate was 85% for the PyPi checks, the same for OSS Detect Backdoor and 90% for Bandit4Mal. The false positive rates ranged from 15% for the PyPi checks over the random packages, to 80% for Bandit4Mal on popular packages.</p>
+<p>The tools ran in a time-effective manner, with a median time of around two seconds per package across all datasets. The maximum runtime was recorded for Ansible’s package, which was scanned in 26 minutes.</p>
+<p>Despite their efficient run times, we can infer from these results that the tools are not accurate enough to meet the demands of PyPi’s administrators. The analysts may be overwhelmed by alerts for benign packages, which could interfere with their other operations.</p>
+<h4 id="conclusions">Conclusions</h4>
+<p>And with this, we can conclude the episode of the Ubuntu Security Podcast, which details the paper “Bad Snakes: Understanding and Improving Python Package Index Malware Scanning”. We have discussed software repositories, malware analysis, and malware-related operations within PyPi. We&rsquo;ve also explored the requirements that would make a new open-source Python malware scanner suitable for the PyPi administrators and evaluated how the current solutions perform.</p>
+<p>If you come across any interesting topics that you believe should be discussed, please email us at <a href="mailto:security@ubuntu.com">security@ubuntu.com</a>.</p>
+<p>Over to you, Alex!</p>
+<h4 id="resources">Resources</h4>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/10172836">Bad Snakes: Understanding and Improving Python Package Index Malware Scanning</a></li>
+<li><a href="https://arxiv.org/abs/2204.04008">Taxonomy of Attacks on Open-Source Software Supply Chains</a></li>
+<li><a href="https://github.com/lyvd/bandit4mal">Bandit4Mal</a></li>
+<li><a href="https://github.com/microsoft/OSSGadget/tree/main/src/oss-detect-backdoor">OSS Detect Backdoor</a></li>
+<li><a href="https://github.com/pypi/warehouse/commit/319cbc0cc2bb6d721d04d49dbf3c82445eca4000">PyPi’s malware checks</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E221.mp3" length="24247149" type="audio/mpeg" /><itunes:duration>1394</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 220
