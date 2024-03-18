@@ -17,12 +17,12 @@
 #+begin_description
 We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
 of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
 #+end_description
 ** Overview
 We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
 of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
 ** This week in Ubuntu Security Updates
 102 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/USN-6679-1][USN-6679-1]]] FRR vulnerability (01:11)

@@ -3,10 +3,10 @@ title = "Episode 222"
 description = """
   We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
   of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-  vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+  vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
   """
 date = 2024-03-18T14:32:00+10:30
-lastmod = 2024-03-18T14:33:34+10:30
+lastmod = 2024-03-18T14:40:09+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -22,7 +22,7 @@ guid = "ff852f280b70cd8d6aa50eaa1d446f2a985c11666f1667ce5118acee340a3de659acc42b
 
 We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
 of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
 
 
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
