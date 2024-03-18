@@ -59,26 +59,26 @@
         
           We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
   of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-  vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+  vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
   
         
         ]]></itunes:subtitle>
         <itunes:summary>  We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
   of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-  vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+  vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
   </itunes:summary>
         <description>  We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
   of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-  vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+  vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
   </description>
         <googleplay:description>  We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
   of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-  vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.
+  vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.
   </googleplay:description>
         <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
 <p>We cover recent Linux malware from the Magnet Goblin threat actor, plus the news
 of Ubuntu 23.10 as a target in Pwn2Own Vancouver 2024 and we detail
-vulnerabilities in the Puma, AccountsService, Open vSwitch, OVN, and more.</p>
+vulnerabilities in Puma, AccountsService, Open vSwitch, OVN, and more.</p>
 <h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
 <p>102 unique CVEs addressed</p>
 <h3 id="usn-6679-1-frr-vulnerability--01-11">[<a href="https://ubuntu.com/security/notices/USN-6679-1">USN-6679-1</a>] FRR vulnerability (01:11)</h3>
