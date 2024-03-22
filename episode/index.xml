@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Mon, 18 Mar 2024 14:32:00 &#43;1030</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2024 16:44:00 &#43;1030</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,368 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 223
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-223/</link>
+          <pubDate>Fri, 22 Mar 2024 16:44:00 +1030 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>50edf2179cdf046568b40430dd07484f04a91601133004d7335a7266efb0853c28ca7a092de4e490194e54f4a51b4a4ba6c980826dfd4973a84f3f9faaea03d3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 223</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          This week we bring you a sneak peak of how Ubuntu 23.10 fared at Pwn2Own
+  Vancouver 2024, plus news of malicious themes in the KDE Store and we cover
+  security updates for the Linux kernel, X.Org X Server, TeX Live, Expat, Bash and
+  more....
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  This week we bring you a sneak peak of how Ubuntu 23.10 fared at Pwn2Own
+  Vancouver 2024, plus news of malicious themes in the KDE Store and we cover
+  security updates for the Linux kernel, X.Org X Server, TeX Live, Expat, Bash and
+  more.
+  </itunes:summary>
+        <description>  This week we bring you a sneak peak of how Ubuntu 23.10 fared at Pwn2Own
+  Vancouver 2024, plus news of malicious themes in the KDE Store and we cover
+  security updates for the Linux kernel, X.Org X Server, TeX Live, Expat, Bash and
+  more.
+  </description>
+        <googleplay:description>  This week we bring you a sneak peak of how Ubuntu 23.10 fared at Pwn2Own
+  Vancouver 2024, plus news of malicious themes in the KDE Store and we cover
+  security updates for the Linux kernel, X.Org X Server, TeX Live, Expat, Bash and
+  more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>This week we bring you a sneak peak of how Ubuntu 23.10 fared at Pwn2Own
+Vancouver 2024, plus news of malicious themes in the KDE Store and we cover
+security updates for the Linux kernel, X.Org X Server, TeX Live, Expat, Bash and
+more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>61 unique CVEs addressed</p>
+<h3 id="usn-6681-3-linux-kernel-vulnerabilities--00-54">[<a href="https://ubuntu.com/security/notices/USN-6681-3">USN-6681-3</a>] Linux kernel vulnerabilities (00:54)</h3>
+<ul>
+<li>8 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0340">CVE-2024-0340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51780">CVE-2023-51780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4244">CVE-2023-4244</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22995">CVE-2023-22995</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44879">CVE-2021-44879</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - IBM, Oracle</li>
+<li>UAF due to a race-condition in netfilter - underflow a reference counter -&gt;
+UAF</li>
+</ul>
+<h3 id="usn-6686-2-linux-kernel-vulnerabilities--01-42">[<a href="https://ubuntu.com/security/notices/USN-6686-2">USN-6686-2</a>] Linux kernel vulnerabilities (01:42)</h3>
+<ul>
+<li>9 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0340">CVE-2024-0340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46862">CVE-2023-46862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46343">CVE-2023-46343</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4134">CVE-2023-4134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22995">CVE-2023-22995</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - Raspi, Lowlatency</li>
+</ul>
+<h3 id="usn-6699-1-linux-kernel-vulnerabilities--01-52">[<a href="https://ubuntu.com/security/notices/USN-6699-1">USN-6699-1</a>] Linux kernel vulnerabilities (01:52)</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24855">CVE-2024-24855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4921">CVE-2023-4921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30456">CVE-2023-30456</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>3.13 - generic, lowlatency, server, virtual</li>
+<li>KVM mishandling of control registers for nested guest VMs
+<ul>
+<li><a href="/episode-197/#usn-6123-1-linux-kernel--oem--vulnerabilities--06-48">[USN-6123-1] Linux kernel (OEM) vulnerabilities from Episode 197</a></li>
+</ul>
+</li>
+<li>UAF in Quick Fair Queuing network packet scheduler
+<ul>
+<li>Local privesc, reported to Google&rsquo;s kCTF</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6700-1-linux-kernel-vulnerabilities--02-40">[<a href="https://ubuntu.com/security/notices/USN-6700-1">USN-6700-1</a>] Linux kernel vulnerabilities (02:40)</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24855">CVE-2024-24855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0775">CVE-2024-0775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-39197">CVE-2023-39197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-34256">CVE-2023-34256</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-20567">CVE-2022-20567</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.4 - generic, kvm, lowlatency, virtual, aws (14.04 only)</li>
+<li>UAF in nftables - also originally reported to kCTF</li>
+</ul>
+<h3 id="usn-6701-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6701-1">USN-6701-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>12 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24855">CVE-2024-24855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0775">CVE-2024-0775</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46838">CVE-2023-46838</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4132">CVE-2023-4132</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-39197">CVE-2023-39197</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-34256">CVE-2023-34256</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-3006">CVE-2023-3006</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23000">CVE-2023-23000</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-2002">CVE-2023-2002</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 - oracle, kvm, aws, generic, lowlatency</li>
+<li>UAF in nftables from above and UAF in AppleTalk network driver - <a href="/episode-220/#usn-6648-1-linux-kernel-vulnerabilities--02-00">[USN-6648-1]
+Linux kernel vulnerabilities from Episode 220</a></li>
+</ul>
+<h3 id="usn-6680-3-linux-kernel--aws--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6680-3">USN-6680-3</a>] Linux kernel (AWS) vulnerabilities</h3>
+<ul>
+<li>7 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25744">CVE-2024-25744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6560">CVE-2023-6560</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46343">CVE-2023-46343</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.5 - aws</li>
+</ul>
+<h3 id="usn-6681-4-linux-kernel--aws--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6681-4">USN-6681-4</a>] Linux kernel (AWS) vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0340">CVE-2024-0340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51780">CVE-2023-51780</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4244">CVE-2023-4244</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22995">CVE-2023-22995</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-44879">CVE-2021-44879</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - aws</li>
+<li>UAF in netfilter discussed earlier</li>
+</ul>
+<h3 id="usn-6686-3-linux-kernel--oracle--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6686-3">USN-6686-3</a>] Linux kernel (Oracle) vulnerabilities</h3>
+<ul>
+<li>9 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0340">CVE-2024-0340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46862">CVE-2023-46862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46343">CVE-2023-46343</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4134">CVE-2023-4134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22995">CVE-2023-22995</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - oracle</li>
+</ul>
+<h3 id="usn-6702-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6702-1">USN-6702-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24855">CVE-2024-24855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23004">CVE-2023-23004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23000">CVE-2023-23000</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - iot, ibm, bluefield, gkeop, kvm, oracle, gcp, generic, lowlatency, oem</li>
+<li>Second netfilter UAF above</li>
+</ul>
+<h3 id="usn-6587-5-x-dot-org-x-server-vulnerabilities--03-34">[<a href="https://ubuntu.com/security/notices/USN-6587-5">USN-6587-5</a>] X.Org X Server vulnerabilities (03:34)</h3>
+<ul>
+<li>7 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21886">CVE-2024-21886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21885">CVE-2024-21885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0409">CVE-2024-0409</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0408">CVE-2024-0408</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0229">CVE-2024-0229</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6816">CVE-2023-6816</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6478">CVE-2023-6478</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Previous updates for X now available in 14.04 ESM</li>
+<li>Most issues either OOB R/W - impact is then can crash X Server or potentially
+get code execution - nowadays X runs unprivileged but in 14.04 still runs as
+root so these vulns are more severe in the older releases</li>
+</ul>
+<h3 id="usn-6673-2-python-cryptography-vulnerability--04-21">[<a href="https://ubuntu.com/security/notices/USN-6673-2">USN-6673-2</a>] python-cryptography vulnerability (04:21)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-50782">CVE-2023-50782</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-221/#usn-6673-1-python-cryptography-vulnerabilities--07-30">[USN-6673-1] python-cryptography vulnerabilities from Episode 220</a></li>
+</ul>
+<h3 id="usn-6695-1-tex-live-vulnerabilities--04-28">[<a href="https://ubuntu.com/security/notices/USN-6695-1">USN-6695-1</a>] TeX Live vulnerabilities (04:28)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25262">CVE-2024-25262</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32668">CVE-2023-32668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-18604">CVE-2019-18604</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow via a crafted TTF file</li>
+<li>LuaTeX specific issue - allowed a document to make arbitrary network requests
+since it didn&rsquo;t disable access to the underlying lua socket library</li>
+<li>Misused sprint() resulting in a buffer overflow in the axohelp - helper
+program for the LaTeX axodraw2 package when used with pdflatex</li>
+</ul>
+<h3 id="usn-6694-1-expat-vulnerabilities--05-24">[<a href="https://ubuntu.com/security/notices/USN-6694-1">USN-6694-1</a>] Expat vulnerabilities (05:24)</h3>
+<ul>
+<li>2 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28757">CVE-2024-28757</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52425">CVE-2023-52425</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>C library for parsing xml
+<ul>
+<li>used by many other applications like gdb, dbus, audacity, git, python,
+polkit, squid and more</li>
+</ul>
+</li>
+<li>CPU/memory-based DoS since would do many full reparsings of a document in some cases</li>
+<li>XML Entity Expansion attack
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">billion laughs attack</a> / XML bomb - 10 entities which each comprise 10 of the
+previous entity with the document containing a single instance of the
+largest entity - 1 billion copies of the original entity</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6696-1-openjdk-8-vulnerabilities--06-40">[<a href="https://ubuntu.com/security/notices/USN-6696-1">USN-6696-1</a>] OpenJDK 8 vulnerabilities (06:40)</h3>
+<ul>
+<li>6 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-20952">CVE-2024-20952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20945">CVE-2024-20945</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20926">CVE-2024-20926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20921">CVE-2024-20921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20919">CVE-2024-20919</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20918">CVE-2024-20918</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-220/#usn-6660-1-usn-6661-1-openjdk-11-and-17-vulnerabilities--08-17">[USN-6660-1, USN-6661-1] OpenJDK 11 &amp; 17 vulnerabilities from Episode 220</a></li>
+</ul>
+<h3 id="usn-6697-1-bash-vulnerability--07-01">[<a href="https://ubuntu.com/security/notices/USN-6697-1">USN-6697-1</a>] Bash vulnerability (07:01)</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-3715">CVE-2022-3715</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer overflow on a valid parameter transformation - can then
+unexpectedly lead to possible code execution</li>
+</ul>
+<h3 id="usn-6698-1-vim-vulnerability--07-30">[<a href="https://ubuntu.com/security/notices/USN-6698-1">USN-6698-1</a>] Vim vulnerability (07:30)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-22667">CVE-2024-22667</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>stack buffer overflow when parsing a crafted command file - ie. the user has
+to load a crafted file to be sourced by vim</li>
+</ul>
+<h3 id="usn-6703-1-firefox-vulnerabilities--07-48">[<a href="https://ubuntu.com/security/notices/USN-6703-1">USN-6703-1</a>] Firefox vulnerabilities (07:48)</h3>
+<ul>
+<li>11 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2613">CVE-2024-2613</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2612">CVE-2024-2612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2610">CVE-2024-2610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2608">CVE-2024-2608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2607">CVE-2024-2607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2606">CVE-2024-2606</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-5388">CVE-2023-5388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2615">CVE-2024-2615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2614">CVE-2024-2614</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2611">CVE-2024-2611</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2609">CVE-2024-2609</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>124.0</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="summary-of-pwn2own-vancouver-2024-results-against-ubuntu-23-dot-10--08-05">Summary of Pwn2Own Vancouver 2024 results against Ubuntu 23.10 (08:05)</h3>
+<ul>
+<li><a href="https://www.zerodayinitiative.com/blog/2024/3/20/pwn2own-vancouver-2024-day-one-results">https://www.zerodayinitiative.com/blog/2024/3/20/pwn2own-vancouver-2024-day-one-results</a></li>
+<li>The DEVCORE Team was able to execute their LPE attack against Ubuntu
+Linux. However, the bug they used was previously known. They still earn
+$10,000 and 1 Master of Pwn points.
+<ul>
+<li><a href="https://youtube.com/shorts/fXUrMIM2KYc?si=VIR7YKIt86NGEceU">https://youtube.com/shorts/fXUrMIM2KYc?si=VIR7YKIt86NGEceU</a></li>
+</ul>
+</li>
+<li>Kyle Zeng from ASU SEFCOM used an ever tricky race condition to escalate
+privileges on Ubuntu Linux desktop. This earns him him $20,000 and 20 Master
+of Pwn points.
+<ul>
+<li><a href="https://www.youtube.com/shorts/HSIasEbEkXY">https://www.youtube.com/shorts/HSIasEbEkXY</a></li>
+</ul>
+</li>
+<li><a href="https://www.zerodayinitiative.com/blog/2024/3/21/pwn2own-vancouver-2024-day-two-results">https://www.zerodayinitiative.com/blog/2024/3/21/pwn2own-vancouver-2024-day-two-results</a></li>
+<li>STAR Labs SG successfully demonstrated their privilege escalation on Ubuntu
+desktop. However, they used a bug that was previously reported. They still
+earn $5,000 and 1 Master of Pwn point.</li>
+<li>The final entry of Pwn2Own Vancouver 2024 ends as a collision as Theori used a
+bug that was previously know to escalate privileges on Ubuntu desktop. He
+still wins $5,000 and 1 Master of Pwn point.</li>
+</ul>
+<h3 id="reports-of-malicious-themes-in-kde-store--10-27">Reports of malicious themes in KDE Store (10:27)</h3>
+<ul>
+<li><a href="https://www.bleepingcomputer.com/news/linux/kde-advises-extreme-caution-after-theme-wipes-linux-users-files/">https://www.bleepingcomputer.com/news/linux/kde-advises-extreme-caution-after-theme-wipes-linux-users-files/</a></li>
+<li><a href="https://floss.social/@kde/112128243960545659">https://floss.social/@kde/112128243960545659</a></li>
+<li><a href="https://www.reddit.com/r/kde/comments/1bixmbx/do_not_install_global_themes_some_wipe_out_all/">https://www.reddit.com/r/kde/comments/1bixmbx/do_not_install_global_themes_some_wipe_out_all/</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E223.mp3" length="17195285" type="audio/mpeg" /><itunes:duration>1034</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 222
