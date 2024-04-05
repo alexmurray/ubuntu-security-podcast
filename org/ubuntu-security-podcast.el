@@ -170,6 +170,7 @@
         (1+ (string-to-number (match-string 1)))
       1)))
 
+;;;###autoload
 (defun usp-update-episode-metadata ()
   "Update the duration and bytes for the current episode."
   (interactive)
@@ -192,21 +193,22 @@
         (re-search-forward "^:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E[0-9]+\.mp3 :podcast_duration \"\\(.*\\)\" :podcast_bytes \"\\(NUM_BYTES\\|[0-9]\+\\)\" :permalink \"https://ubuntusecuritypodcast.org/episode-[0-9]+/\" :guid [a-z0-9]+$")
         (replace-match (format "%d" duration) t t nil 1)
         (replace-match (format "%d" num-bytes) t t nil 2)
-      (save-excursion
-        ;; now update timestamps for each heading when available
-        (let ((labels))
-          (with-temp-buffer
-            (ignore-errors
-              (insert-file-contents labels-file-name))
-            (goto-char (point-min))
-            (while (re-search-forward "\\([0-9\\.]+\\)\\s-+\\([0-9\\.]+\\)\\s-+\\(.*\\)" nil t)
-              (let ((time (round (string-to-number (match-string 1))))
-                    (label (substring-no-properties (match-string 3))))
-                (setq labels (cons `(,label . ,time) labels)))))
-          (dolist (label (nreverse labels))
-            (when (re-search-forward (car label) nil t)
-              (insert (format " [%02d:%02d]" (/ (cdr label) 60) (% (cdr label) 60)))))))))))
+        (save-excursion
+          ;; now update timestamps for each heading when available
+          (let ((labels))
+            (with-temp-buffer
+              (ignore-errors
+                (insert-file-contents labels-file-name))
+              (goto-char (point-min))
+              (while (re-search-forward "\\([0-9\\.]+\\)\\s-+\\([0-9\\.]+\\)\\s-+\\(.*\\)" nil t)
+                (let ((time (round (string-to-number (match-string 1))))
+                      (label (substring-no-properties (match-string 3))))
+                  (setq labels (cons `(,label . ,time) labels)))))
+            (dolist (label (nreverse labels))
+              (when (re-search-forward (car label) nil t)
+                (insert (format " [%02d:%02d]" (/ (cdr label) 60) (% (cdr label) 60)))))))))))
 
+;;;###autoload
 (defun usp-insert-episode-template (episode publish-date start end description)
   "Insert template for EPISODE on PUBLISH-DATE from START to END with DESCRIPTION."
   (interactive
@@ -250,6 +252,7 @@
                           "- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]\n"
                           "- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]\n"))))))
 
+;;;###autoload
 (defun usp-insert-episode-link (&optional episode)
   "Insert an 'org-mode' link to the show-notes for EPISODE."
   (interactive "nEpisode: ")
