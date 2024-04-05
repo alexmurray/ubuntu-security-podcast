@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  It&#39;s been an absolutely manic week in the Linux security community as the news
+  and reaction to the recent announcement of a backdoor in the xz-utils project
+  was announced late last week, so we dive deep into this issue and discuss how it
+  impacts Ubuntu and give some insights for what this means for the open source
+  and Linux communities in the future.
+  ">
+
+<meta name="generator" content="Hugo 0.124.1">
+
+<meta property="og:title" content="Episode 224" />
+<meta name="twitter:title" content="Episode 224"/>
+<meta itemprop="name" content="Episode 224">
+<meta property="article:published_time" content="2024-04-05T15:10:00&#43;10:30" />
+<meta property="article:modified_time" content="2024-04-05T15:15:24&#43;10:30" />
+<meta property="og:updated_time" content="2024-04-05T15:15:24&#43;10:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  It&#39;s been an absolutely manic week in the Linux security community as the news
+  and reaction to the recent announcement of a backdoor in the xz-utils project
+  was announced late last week, so we dive deep into this issue and discuss how it
+  impacts Ubuntu and give some insights for what this means for the open source
+  and Linux communities in the future.
+  " />
+    <meta name="twitter:description" content="  It&#39;s been an absolutely manic week in the Linux security community as the news
+  and reaction to the recent announcement of a backdoor in the xz-utils project
+  was announced late last week, so we dive deep into this issue and discuss how it
+  impacts Ubuntu and give some insights for what this means for the open source
+  and Linux communities in the future.
+  " />
+    <meta itemprop="description" content="  It&#39;s been an absolutely manic week in the Linux security community as the news
+  and reaction to the recent announcement of a backdoor in the xz-utils project
+  was announced late last week, so we dive deep into this issue and discuss how it
+  impacts Ubuntu and give some insights for what this means for the open source
+  and Linux communities in the future.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-224/" />
+
+
+
+
+<title>Episode 224</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-224/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 224</h1>
+      <small>Posted on Friday, Apr 5, 2024 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            It&rsquo;s been an absolutely manic week in the Linux security community as the news
+and reaction to the recent announcement of a backdoor in the xz-utils project
+was announced late last week, so we dive deep into this issue and discuss how it
+impacts Ubuntu and give some insights for what this means for the open source
+and Linux communities in the future.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E224.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>It&rsquo;s been an absolutely manic week in the Linux security community as the news
+and reaction to the recent announcement of a backdoor in the xz-utils project
+was announced late last week, so we dive deep into this issue and discuss how it
+impacts Ubuntu and give some insights for what this means for the open source
+and Linux communities in the future.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>20 unique CVEs addressed</p>
+<h3 id="usn-6718-2-curl-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6718-2">USN-6718-2</a>] curl vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2398">CVE-2024-2398</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6719-1-util-linux-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6719-1">USN-6719-1</a>] util-linux vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28085">CVE-2024-28085</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6686-5-linux-kernel--intel-iotg--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6686-5">USN-6686-5</a>] Linux kernel (Intel IoTG) vulnerabilities</h3>
+<ul>
+<li>9 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0340">CVE-2024-0340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6121">CVE-2023-6121</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51782">CVE-2023-51782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51779">CVE-2023-51779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46862">CVE-2023-46862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46343">CVE-2023-46343</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4134">CVE-2023-4134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-22995">CVE-2023-22995</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6715-1-unixodbc-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6715-1">USN-6715-1</a>] unixODBC vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-1013">CVE-2024-1013</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6704-4-linux-kernel--intel-iotg--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6704-4">USN-6704-4</a>] Linux kernel (Intel IoTG) vulnerabilities</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24855">CVE-2024-24855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1085">CVE-2024-1085</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32247">CVE-2023-32247</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-23000">CVE-2023-23000</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6707-4-linux-kernel--azure--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6707-4">USN-6707-4</a>] Linux kernel (Azure) vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26599">CVE-2024-26599</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26597">CVE-2024-26597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1085">CVE-2024-1085</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6720-1-cacti-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6720-1">USN-6720-1</a>] Cacti vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-39361">CVE-2023-39361</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="xz-utils-backdoor-and-ubuntu">xz-utils backdoor and Ubuntu</h3>
+<ul>
+<li><a href="https://www.openwall.com/lists/oss-security/2024/03/29/4">https://www.openwall.com/lists/oss-security/2024/03/29/4</a></li>
+<li>Late last week, 28th / 29th March backdoor in liblzma from xz-utils was
+disclosed to the open source community via oss-security mailing list - this
+was in the recent 5.6.0/5.6.1 releases from late Feb/early March this year</li>
+<li>initially the impact was not entirely clear - assumed initially that it may
+impact only xz-utils and so only in handling of xz compressed data / files -
+but even with that assumption that perhaps it could then infect anything that
+got compressed/decompressed</li>
+<li>within a few hours though became clear that the primary target was not
+xz-utils/liblzma itself but openssh - and the affect was to provide a backdoor
+into openssh that would allow the attacker to get remote access to any machine
+running ssh server with this backdoor liblzma installed</li>
+<li>To paint a picture - this was all unfolding on late Thursday / Friday of the
+Easter break, so lots of folks were either EOD or on leave etc - and trying to
+grapple with a threat that we knew could possibly impact the impedending 24.04
+LTS release</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Good news:</li>
+<li>TL;DR for Ubuntu, this version was only ever in the -proposed pocket for the
+currently in-development 24.04 release - not in any other Ubuntu versions -
+and was removed as soon as we became aware, so unless you are running the
+devel release AND you had manually opted to install this version from the
+-proposed pocket, you would not be affected - very lucky</li>
+<li><a href="https://discourse.ubuntu.com/t/xz-liblzma-security-update/43714">https://discourse.ubuntu.com/t/xz-liblzma-security-update/43714</a></li>
+<li>What do we know about this? A lot - there has been significant investigation
+(and speculation) since it was announced, both at the social side of things
+and the technical aspects of the backdoor itself</li>
+<li>For the purpose of the podcast, we won&rsquo;t go too deep into either but will try
+and cover the salient details</li>
+<li>Regarding the inclusion of the backdoor itself - looks to have been a very
+long and patient campaign by the attacker, who slowly gained the trust of the
+upstream project over the last 2 years and likely pressured the maintainer via
+sock-puppet accounts to then get themselves added as an additional maintainer</li>
+<li>Since then they seemed to be quite a good maintainer themselves - diligently
+adding new features and bug fixes etc over the past 2 years, but then suddenly
+introduced the backdoor into the most recent 2 releases</li>
+<li>The method of introducing the backdoor was also interesting, in that it
+required 2 parts - the binary containing the backdoor and the code to get this
+compiled into the liblzma library at build time
+<ul>
+<li>The binary was committed into the upstream git repo disguised as an xz
+archive itself used as part of the test suite</li>
+<li>The code to inject this into the build was NOT part of the git repo, but
+instead was just in the tarball prepared by the maintainer for the official
+release</li>
+<li>And it used many levels of obfuscation to hide this backdoor within that
+fake test xz archive</li>
+</ul>
+</li>
+<li>So the attacker was not just patient but also very technically skilled - and
+not just multiple levels of obfuscation in the build process but the backdoor
+code itself contained many elements to try and make it harder to recognise and
+reverse engineer, presumably to allow it to hide in plain sight
+<ul>
+<li>although as we will see, this runtime obfuscation within the backdoor binary
+was what gave it away eventually</li>
+</ul>
+</li>
+<li>It&rsquo;s often said that one of the advantages of Open Source is the huge
+community, which is summarised as <a href="https://en.wikipedia.org/wiki/Linus%27s_law">Linus&rsquo; Law</a> - with enough eyeballs all bugs
+are shallow - but sadly this wasn&rsquo;t proven out in this case</li>
+<li>Backdoor was not
+found by anyone doing review of the changes upstream or by the various distros
+like Debian / Fedora / OpenSUSE / Arch or even Ubuntu when incorporating this
+new version into their repos - but instead was found by Andres Freund, one of
+the maintainers of PostgreSQL, when they were looking to benchmark some new
+changes scheduled for the next PostgreSQL release</li>
+<li>Luckily decided to use Debian unstable for this, and Debian had incorporated
+this new version into unstable a few weeks ago, and wanted to get the
+performance noise floor of the system as low as possible before doing
+benchmarking of PostgreSQL - noticed large transient CPU spikes in sshd and
+then eventually weird memory errors in sshd due to bugs in the initial version
+of the backdoor</li>
+<li>After a lot of painstaking work was able to determine that liblzma was the
+culprit and appeared to contain some very strange code to hook into the
+authentication process of sshd when it was launched via systemd</li>
+<li>Was able to trace that back to the aforementioned manually prepared tarballs
+of xz-utils on Github</li>
+<li>The CPU spikes Andres observed were due to the use of things like a trie to
+lookup symbol names at runtime, rather than directly encoding them in the
+exploit binary, presumably to try and make reverse engineering of the binary
+harder (since you can&rsquo;t just run <code>strings</code> on it and get any real sensible output)</li>
+<li>Some excellent writeups have been done regarding both the technical aspects of
+the backdoor itself, as well as the process taken by the attacker to
+incorporate this into the xz-utils project - both from a community point of
+view and a technical point of view</li>
+<li>From a technical point of view, the impact of this backdoor was to allow an
+attacker to get pre-authentication remote-code execution in sshd via a
+specific private key when connecting to the server - NOBUS
+<ul>
+<li>Hooked into the RSA certificate validation process in sshd, looking for a
+particular matching private key from the client - and if found would then
+proceed to execute arbitrary commands specified by the client without
+requiring usual authentication</li>
+<li>By using this mechanism, nobody but the attacker can use the backdoor since
+they don&rsquo;t have the matching private key - so the impact of the backdoor is
+somewhat limited</li>
+<li>BUT the fact they targeted such a widely used and deployed package across a
+huge number of distros, means they essentially wanted a backdoor into any
+Linux machine in the future that only they could use</li>
+</ul>
+</li>
+<li>Interesting to try and speculate who the attacker could be (nation state?) and
+what their intended purpose was especially given this wide reaching goal of
+getting this into all the major Linux distros - but it would be just
+speculation</li>
+<li>So rather than speculate, for the purpose of this podcast episode, interesting
+to look at the timeline as it concerned Ubuntu</li>
+<li>The publishing history of the package is all visible in <a href="https://launchpad.net/ubuntu/+source/xz-utils/+publishinghistory">Launchpad</a></li>
+<li>Packages in Ubuntu get inherited from Debian who also publish <a href="https://tracker.debian.org/pkg/xz-utils">history</a></li>
+<li>Upstream published the first backdoored version 5.6.0 via GitHub tarball on 24th Feb 2024</li>
+<li>Debian incorporated this into unstable on 26th Feb</li>
+<li>On 27th Feb, the Ubuntu Archive Auto-Sync bot copied this version into noble-proposed</li>
+<li>Due to the ongoing time_t transition, sat it noble-proposed for the next month</li>
+<li>Security team heard whispers of the possible backdoor just hours before it was
+publicly disclosed, and as soon as we heard of the possible backdoor, and
+realised that it only affected the version in-development noble-proposed we
+quickly notified the Archive Admin team who then deleted it from
+noble-proposed on 29th March, neutralising the main threat</li>
+<li>Most important thing to know for Ubuntu, we have taken a very conservative
+approach - not only have we removed this version from noble-proposed as soon
+as we became aware, we are then rebuilding every binary package that got built
+since that compromised version was in noble-proposed originally - out of an
+abundance of caution - we don&rsquo;t have any information that says this backdoor
+was doing anything other than what the various writeups have found so far, BUT
+we also can&rsquo;t be certain that it didn&rsquo;t have other functionality either - so
+being very cautious and rebuilding everything that was itself built since 27th
+Feb</li>
+<li>As such, delayed the development of 24.04 so beta release is <a href="https://discourse.ubuntu.com/t/xz-liblzma-security-update-post-2/43801">slipping by one week</a></li>
+<li>One of the most interesting parts is the sheer luck that this was found - not
+by security researchers or maintainers but by a developer from Microsoft who
+happened to be looking for the right things at the right time and decided to
+be curious</li>
+<li>Also for Ubuntu, luck that the <a href="https://wiki.debian.org/ReleaseGoals/64bit-time">time_t transition</a> in Debian/Ubuntu caused many
+packages to be stuck in noble-proposed and not in the release pocket, else
+many Ubuntu users and developers would have been impacted if this had migrated
+to the noble release pocket</li>
+<li>Also interesting that the attacker appears to have had quite a good grasp on
+OSS development practices and was quite persistent in trying to get this
+incorporated into distros - even <a href="https://bugs.launchpad.net/ubuntu/+source/xz-utils/+bug/2059417">urging</a> for this new version to be synced to
+Ubuntu so that it would land in the upcoming noble release as recently as
+Thursday last week, just hours before the public disclosure
+<ul>
+<li>Not only could they do all the original social engineering work upstream,
+and technical work to develop and hide the backdoor, but could then
+interface with distros via their established practices to try and get them
+to incorporate their new backdoored version faster than they may have
+otherwise</li>
+</ul>
+</li>
+<li>Huge amount of work has been done to detail both the <a href="https://research.swtch.com/xz-timeline">timeline</a> of the attack as
+well as the technical details of both the <a href="https://research.swtch.com/xz-script">code used to incorporate the
+backdoored code</a> into the final liblzma binary during the build process, as
+well as the details of the <a href="https://github.com/amlweems/xzbot">backdoor itself and how it operates at runtime</a></li>
+<li>In the end highlights both the challenges and strengths of OSS - lots of OSS
+projects have long dependency chains - in this case openssh when integrated
+with libsystemd which in turn used liblzma - and it is unclear who the
+maintainers and authors are or what procedures are in place for vetting and
+transferring ownership of OSS projects - all present significant challenges
+for OSS</li>
+<li>However, significant strength of OSS is the visibility and ability for anyone
+to get involved, which is what we saw in the aftermath - despite all the
+advanced obfuscation techniques employed was able to be analysed in a matter
+of days by the community working together - and to analyse it in a huge amount
+of depth and in such an open way that it leaves little room for questioning
+the validity of the assessment - anyone can double check the work and come to
+the same conclusions</li>
+<li>This isn&rsquo;t the first software supply chain attack and likely isn&rsquo;t even the
+first against an OSS project but it is a wake-up call to the OSS and Linux
+ecosystem</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-223/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2024 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-224\/",
+      text: "Episode 224"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+

@@ -6,8 +6,15 @@
     <description>Recent content on Ubuntu Security Podcast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Mar 2024 16:44:33 +1030</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2024 15:15:24 +1030</lastBuildDate>
     <atom:link href="https://ubuntusecuritypodcast.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Episode 224</title>
+      <link>https://ubuntusecuritypodcast.org/episode-224/</link>
+      <pubDate>Fri, 05 Apr 2024 15:10:00 +1030</pubDate>
+      <guid>https://ubuntusecuritypodcast.org/episode-224/</guid>
+      <description>Overview It&amp;rsquo;s been an absolutely manic week in the Linux security community as the news and reaction to the recent announcement of a backdoor in the xz-utils project was announced late last week, so we dive deep into this issue and discuss how it impacts Ubuntu and give some insights for what this means for the open source and Linux communities in the future.&#xA;This week in Ubuntu Security Updates 20 unique CVEs addressed</description>
+    </item>
     <item>
       <title>Episode 223</title>
       <link>https://ubuntusecuritypodcast.org/episode-223/</link>
