@@ -18,13 +18,13 @@
 This week we cover the recent reports of a new local privilege escalation
 exploit against the Linux kernel, follow-up on the xz-utils backdoor from last
 week and it's the beta release of Ubuntu 24.04 LTS - plus we talk security
-vulnerabilities the X Server, Django, util-linux and more.
+vulnerabilities in the X Server, Django, util-linux and more.
 #+end_description
 ** Overview
 This week we cover the recent reports of a new local privilege escalation
 exploit against the Linux kernel, follow-up on the xz-utils backdoor from last
 week and it's the beta release of Ubuntu 24.04 LTS - plus we talk security
-vulnerabilities the X Server, Django, util-linux and more.
+vulnerabilities in the X Server, Django, util-linux and more.
 ** This week in Ubuntu Security Updates
 76 unique CVEs addressed
 *** [[[https://ubuntu.com/security/notices/LSN-0102-1][LSN-0102-1]]] Linux kernel vulnerability (00:53)

@@ -4,10 +4,10 @@ description = """
   This week we cover the recent reports of a new local privilege escalation
   exploit against the Linux kernel, follow-up on the xz-utils backdoor from last
   week and it's the beta release of Ubuntu 24.04 LTS - plus we talk security
-  vulnerabilities the X Server, Django, util-linux and more.
+  vulnerabilities in the X Server, Django, util-linux and more.
   """
 date = 2024-04-12T17:21:00+09:30
-lastmod = 2024-04-12T17:24:10+09:30
+lastmod = 2024-04-12T17:28:32+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -24,7 +24,7 @@ guid = "67195c686e5b9b18b4b5ee4bd467624681f3b8d68a065eea4e94f7be68725af5f3bc564a
 This week we cover the recent reports of a new local privilege escalation
 exploit against the Linux kernel, follow-up on the xz-utils backdoor from last
 week and it's the beta release of Ubuntu 24.04 LTS - plus we talk security
-vulnerabilities the X Server, Django, util-linux and more.
+vulnerabilities in the X Server, Django, util-linux and more.
 
 
 ## This week in Ubuntu Security Updates {#this-week-in-ubuntu-security-updates}
