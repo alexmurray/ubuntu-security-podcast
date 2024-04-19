@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 12 Apr 2024 17:21:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2024 16:45:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,440 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 226
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-226/</link>
+          <pubDate>Fri, 19 Apr 2024 16:45:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>10f17d09cebded4973031faf11b1b7c26cde4b8e16154b16825840b98e9fef85b9c0ca60e75ee0fbe91c55963e78bcbe7ec32d61ca69ccd333f986d8e34010d3</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 226</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          John and Georgia are at the Linux Security Summit presenting on some long
+  awaited developments in AppArmor and we give you all the details in a sneak peek
+  preview as well as some of the other talks to look out for, plus we cover...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  John and Georgia are at the Linux Security Summit presenting on some long
+  awaited developments in AppArmor and we give you all the details in a sneak peek
+  preview as well as some of the other talks to look out for, plus we cover
+  security updates for NSS, Squid, Apache, libvirt and more and we put out a call
+  for testing of a pending AppArmor security fix too.
+  </itunes:summary>
+        <description>  John and Georgia are at the Linux Security Summit presenting on some long
+  awaited developments in AppArmor and we give you all the details in a sneak peek
+  preview as well as some of the other talks to look out for, plus we cover
+  security updates for NSS, Squid, Apache, libvirt and more and we put out a call
+  for testing of a pending AppArmor security fix too.
+  </description>
+        <googleplay:description>  John and Georgia are at the Linux Security Summit presenting on some long
+  awaited developments in AppArmor and we give you all the details in a sneak peek
+  preview as well as some of the other talks to look out for, plus we cover
+  security updates for NSS, Squid, Apache, libvirt and more and we put out a call
+  for testing of a pending AppArmor security fix too.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>John and Georgia are at the Linux Security Summit presenting on some long
+awaited developments in AppArmor and we give you all the details in a sneak peek
+preview as well as some of the other talks to look out for, plus we cover
+security updates for NSS, Squid, Apache, libvirt and more and we put out a call
+for testing of a pending AppArmor security fix too.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>86 unique CVEs addressed</p>
+<h3 id="usn-6727-1-usn-6727-2-nss-vulnerabilities-plus-regression--01-02">[<a href="https://ubuntu.com/security/notices/USN-6727-1">USN-6727-1</a>, <a href="https://ubuntu.com/security/notices/USN-6727-2">USN-6727-2</a>] NSS vulnerabilities + regression (01:02)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-6135">CVE-2023-6135</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-5388">CVE-2023-5388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4421">CVE-2023-4421</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All various different timing side channels - two were effectively the same
+since the original fix was incomplete - mishandling of padding in PKCS#1 (RSA)
+certificate checks - possible to infer the length of the encrypted message and
+other properties to eventually infer secret key by sending a large number of
+attacker-chosen ciphertexts, the other when using various NIST
+curves (elliptic curve cryptography)</li>
+<li>Original fix caused some issues with loading NSS security modules so published
+a second update to fix that on focal+jammy</li>
+</ul>
+<h3 id="usn-6728-1-usn-6728-2-squid-vulnerabilities-plus-regression--02-05">[<a href="https://ubuntu.com/security/notices/USN-6728-1">USN-6728-1</a>, <a href="https://ubuntu.com/security/notices/USN-6728-2">USN-6728-2</a>] Squid vulnerabilities + regression (02:05)</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25617">CVE-2024-25617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25111">CVE-2024-25111</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23638">CVE-2024-23638</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-5824">CVE-2023-5824</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49288">CVE-2023-49288</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All found by the same researcher (Joshua Rogers) who performed a security
+audit of Squid back in 2021 -
+<a href="https://megamansec.github.io/Squid-Security-Audit/">https://megamansec.github.io/Squid-Security-Audit/</a> - first mentioned by us in
+<a href="/episode-214/#usn-6500-1-squid-vulnerabilities--10-20">[USN-6500-1] Squid vulnerabilities in Episode
+214</a> back in December 2023</li>
+<li>Then we mentioned how squid was under-resourced and so hadn&rsquo;t be able to fix
+all the identified issues - over time upstream has published fixes for more
+issues and we are now incorporating those into squid in Ubuntu</li>
+<li>All of these were various DoS issues where could either cause squid to crash
+or stop responding</li>
+<li>One of these fixes was problematic and caused squid to crash itself so was reverted</li>
+</ul>
+<h3 id="usn-6729-1-apache-http-server-vulnerabilities--03-01">[<a href="https://ubuntu.com/security/notices/USN-6729-1">USN-6729-1</a>] Apache HTTP Server vulnerabilities (03:01)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27316">CVE-2024-27316</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24795">CVE-2024-24795</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-38709">CVE-2023-38709</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>2 different issues that could result in HTTP request splitting attacks -
+similar to HTTP request smuggling which is a more specific version of this
+attack, relies on different parsing/interpretation of HTTP request messages by
+an intermediate (load balancer/proxy/WAF etc.) to split a single HTTP request
+into multiple HTTP requests at the backend - allowing to bypass restrictions
+along the way - usually involves the use of injected CR/LF/TAB/SPC etc in
+headers</li>
+<li>Plus memory-based DoS in handling of HTTP/2 - client could just keep sending
+more headers, buffered by the server so it can generate an informative
+response, until it exhausts memory
+<ul>
+<li>limit to just 100 headers before bailing with such an error</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6730-1-apache-maven-shared-utils-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6730-1">USN-6730-1</a>] Apache Maven Shared Utils vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-29599">CVE-2022-29599</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6731-1-yard-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6731-1">USN-6731-1</a>] YARD vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27285">CVE-2024-27285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-1020001">CVE-2019-1020001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-17042">CVE-2017-17042</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6732-1-webkitgtk-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6732-1">USN-6732-1</a>] WebKitGTK vulnerabilities</h3>
+<ul>
+<li>8 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-23284">CVE-2024-23284</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23280">CVE-2024-23280</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23263">CVE-2024-23263</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23254">CVE-2024-23254</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23252">CVE-2024-23252</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-42956">CVE-2023-42956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-42950">CVE-2023-42950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-42843">CVE-2023-42843</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6733-1-gnutls-vulnerabilities--04-57">[<a href="https://ubuntu.com/security/notices/USN-6733-1">USN-6733-1</a>] GnuTLS vulnerabilities (04:57)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28835">CVE-2024-28835</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-28834">CVE-2024-28834</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Timing side-channel in ECDSA</li>
+<li>Crash when verifying crafted PEM bundles -&gt; DoS</li>
+</ul>
+<h3 id="usn-6734-1-libvirt-vulnerabilities--05-13">[<a href="https://ubuntu.com/security/notices/USN-6734-1">USN-6734-1</a>] libvirt vulnerabilities (05:13)</h3>
+<ul>
+<li>3 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2496">CVE-2024-2496</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2494">CVE-2024-2494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1441">CVE-2024-1441</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>off-by-one in handling of udev interface names - unpriv client could then
+abuse this to send crafted udev data to the libvirt daemon, triggering a crash -&gt; DoS</li>
+<li>NULL ptr deref in same code - race condition, need to detach a host interface
+whilst calling into the function</li>
+<li>Crash in RPC handling - pass a negative length value, would then try and
+allocate a negative number of array indices - uses underlying <code>g_new0()</code> from
+<a href="https://developer-old.gnome.org/glib/stable/glib-Memory-Allocation.html#g-new0">glib</a> which expects an unsigned value -&gt; tries to allocate an extremely large
+amount of memory -&gt; crash</li>
+</ul>
+<h3 id="usn-6735-1-node-dot-js-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6735-1">USN-6735-1</a>] Node.js vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-30590">CVE-2023-30590</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30589">CVE-2023-30589</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-30588">CVE-2023-30588</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6736-1-klibc-vulnerabilities--06-33">[<a href="https://ubuntu.com/security/notices/USN-6736-1">USN-6736-1</a>] klibc vulnerabilities (06:33)</h3>
+<ul>
+<li>4 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-37434">CVE-2022-37434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-25032">CVE-2018-25032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-9841">CVE-2016-9841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2016-9840">CVE-2016-9840</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>All old memory corruption issues in zlib - vendored within klibc</li>
+</ul>
+<h3 id="usn-6724-2-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6724-2">USN-6724-2</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>12 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52438">CVE-2023-52438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52439">CVE-2023-52439</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52435">CVE-2023-52435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52436">CVE-2023-52436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52434">CVE-2023-52434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23850">CVE-2024-23850</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-22705">CVE-2024-22705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6610">CVE-2023-6610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23851">CVE-2024-23851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52429">CVE-2023-52429</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50431">CVE-2023-50431</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46838">CVE-2023-46838</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6725-2-linux-kernel--aws--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6725-2">USN-6725-2</a>] Linux kernel (AWS) vulnerabilities</h3>
+<ul>
+<li>46 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52470">CVE-2023-52470</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52469">CVE-2023-52469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52451">CVE-2023-52451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52610">CVE-2023-52610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52441">CVE-2023-52441</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52467">CVE-2023-52467</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52449">CVE-2023-52449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26591">CVE-2024-26591</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52458">CVE-2023-52458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26597">CVE-2024-26597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26633">CVE-2024-26633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52436">CVE-2023-52436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52444">CVE-2023-52444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26589">CVE-2024-26589</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26586">CVE-2024-26586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26598">CVE-2024-26598</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52612">CVE-2023-52612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52439">CVE-2023-52439</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26631">CVE-2024-26631</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52442">CVE-2023-52442</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52443">CVE-2023-52443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52480">CVE-2023-52480</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52438">CVE-2023-52438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52454">CVE-2023-52454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52456">CVE-2023-52456</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52464">CVE-2023-52464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52457">CVE-2023-52457</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52448">CVE-2023-52448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52609">CVE-2023-52609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52462">CVE-2023-52462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52445">CVE-2023-52445</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52463">CVE-2023-52463</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24860">CVE-2024-24860</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23850">CVE-2024-23850</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-22705">CVE-2024-22705</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23851">CVE-2024-23851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52429">CVE-2023-52429</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52340">CVE-2023-52340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46838">CVE-2023-46838</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-3867">CVE-2023-3867</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-38431">CVE-2023-38431</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-38430">CVE-2023-38430</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-38427">CVE-2023-38427</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32258">CVE-2023-32258</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-32254">CVE-2023-32254</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1194">CVE-2023-1194</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6726-2-linux-kernel--iot--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6726-2">USN-6726-2</a>] Linux kernel (IoT) vulnerabilities</h3>
+<ul>
+<li>23 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52438">CVE-2023-52438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52436">CVE-2023-52436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52454">CVE-2023-52454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52470">CVE-2023-52470</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52451">CVE-2023-52451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52445">CVE-2023-52445</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52469">CVE-2023-52469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52609">CVE-2023-52609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52444">CVE-2023-52444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52449">CVE-2023-52449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26597">CVE-2024-26597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26633">CVE-2024-26633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52612">CVE-2023-52612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52439">CVE-2023-52439</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52443">CVE-2023-52443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52457">CVE-2023-52457</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52448">CVE-2023-52448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52464">CVE-2023-52464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23851">CVE-2024-23851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52429">CVE-2023-52429</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52340">CVE-2023-52340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46838">CVE-2023-46838</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6726-3-linux-kernel--xilinx-zynqmp--vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6726-3">USN-6726-3</a>] Linux kernel (Xilinx ZynqMP) vulnerabilities</h3>
+<ul>
+<li>23 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52438">CVE-2023-52438</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52436">CVE-2023-52436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52454">CVE-2023-52454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52470">CVE-2023-52470</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52451">CVE-2023-52451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52445">CVE-2023-52445</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52469">CVE-2023-52469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52609">CVE-2023-52609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52444">CVE-2023-52444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52449">CVE-2023-52449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26597">CVE-2024-26597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26633">CVE-2024-26633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52612">CVE-2023-52612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52439">CVE-2023-52439</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52443">CVE-2023-52443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52457">CVE-2023-52457</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52448">CVE-2023-52448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52464">CVE-2023-52464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0607">CVE-2024-0607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23851">CVE-2024-23851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52429">CVE-2023-52429</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52340">CVE-2023-52340</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46838">CVE-2023-46838</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="linux-security-summit-na-2024--07-22">Linux Security Summit NA 2024 (07:22)</h3>
+<ul>
+<li><a href="https://events.linuxfoundation.org/linux-security-summit-north-america/">https://events.linuxfoundation.org/linux-security-summit-north-america/</a></li>
+<li><a href="https://lssna24.sched.com/event/1aIe6/unprivileged-access-control-in-apparmor-john-johansen-georgia-garcia-canonical?iframe=no">Unprivileged Access Control in AppArmor - John Johansen &amp; Georgia Garcia, Canonical</a>
+<ul>
+<li><a href="https://static.sched.com/hosted_files/lssna24/97/AppArmor%20-%20Unprivileged%20Application%20Policy.pdf">https://static.sched.com/hosted_files/lssna24/97/AppArmor%20-%20Unprivileged%20Application%20Policy.pdf</a></li>
+<li>Friday 19th @ 9.15am PDT - live stream at <a href="https://www.youtube.com/watch?v=S-RQZGRoQFY">https://www.youtube.com/watch?v=S-RQZGRoQFY</a></li>
+<li>AppArmor - MAC - sysadmin defines policy</li>
+<li>Allowing applications to define and load their own policy
+<ul>
+<li>APIs in libapparmor to allow this to be done from static policy OR to build up policy over time</li>
+<li>policy is compiled in userspace and loaded into the kernel as usual</li>
+<li>To then stop a compromised application from unloading its policy, can mark
+it immutable so it can&rsquo;t be further modified / removed</li>
+<li>Any further restrictions though can then be stacked against the immutable
+policy to say allow it to be confined futher</li>
+<li>On kernel side
+<ul>
+<li>sysctl to allow/deny applications to load their own policy</li>
+<li>checks on the amount of memory able to be used to avoid apps DoSing system</li>
+<li>verification of compiled policy by kernel state machine</li>
+<li>policy only applies to the task and its children</li>
+</ul>
+</li>
+<li>Various complexities in handling credentials/labels across tasks
+(ie. processes) and how these interact with the userspace
+processes/threads etc</li>
+<li>Also still have to resolve whether to use prctl vs syscall as the
+interface since we can&rsquo;t use the LSM syscalls
+<ul>
+<li>May result in an AppArmor specific syscall</li>
+<li>But for now just using a prctl</li>
+</ul>
+</li>
+<li>Application profiles then stack against any relevant system policy</li>
+<li>ie. if there is system policy, and policy loaded by the application itself is bounded by the system policy</li>
+</ul>
+</li>
+<li>Demo of implementing <code>pledge()</code> and <code>unveil()</code> from OpenBSD
+<ul>
+<li>pledge is similar to seccomp() on linux - allows an application to
+restrict what it can do by declaring what subsystems it should be allowed
+access to &ldquo;promises&rdquo;
+<ul>
+<li>stdio, inet, bpf, unix, audio, video and many others</li>
+<li>map these to equivalent AppArmor permissions (although this is not a perfect mapping but WIP)</li>
+<li>also since this is at the LSM layer, we are not necessarily blocking
+syscalls as is done by pledge (since it is more akin to seccomp)</li>
+<li>but can use seccomp to plug any gaps</li>
+<li>to fully emulate this also need to emulate the return value - since on
+OpenBSD if the application violates the promise, deliver a SIGABRT -
+whereas LSMs return EACCES</li>
+<li>can do this via a new profile flag called <code>kill</code> along with the associated signal to deliver</li>
+<li>further complications to this since not always SIGABRT, sometimes is an errno (ENOSYS/EACCES) too</li>
+<li>extend apparmor policy to allow to specify priorities of what action should be taken in various cases</li>
+<li>can use the aforementioned immutable profile flag and stacking to then implement the promise reduction feature of <code>pledge()</code></li>
+</ul>
+</li>
+<li>unveil is used to remove visibility of parts of the file-system
+<ul>
+<li>maps quite cleanly to apparmor file rules</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Full video of the session should be available soon</li>
+</ul>
+</li>
+<li>Lots of other interesting talks:
+<ul>
+<li><a href="https://lssna24.sched.com/event/1aIe8/stacked-lsms-and-user-space-casey-schaufler-the-smack-project?iframe=yes&amp;w=100%25&amp;sidebar=yes&amp;bg=no">Stacked LSMs and User Space - Casey Schaufler, The Smack Project</a>
+<ul>
+<li>LSM syscalls and associated liblsm to provide an easier API plus emulation for older systems</li>
+<li><a href="https://static.sched.com/hosted_files/lssna24/1a/2024-04-LSSNA-liblsm.pdf">https://static.sched.com/hosted_files/lssna24/1a/2024-04-LSSNA-liblsm.pdf</a></li>
+</ul>
+</li>
+<li><a href="https://lssna24.sched.com/event/1aIe9/mitigating-integer-overflow-in-c-kees-cook-google?iframe=yes&amp;w=100%25&amp;sidebar=yes&amp;bg=no">Mitigating Integer Overflow in C - Kees Cook, Google</a>
+<ul>
+<li>LKSPP - latest efforts to mitigate integer overflows within the kernel
+through the use of compiler sanitizers</li>
+<li><a href="https://static.sched.com/hosted_files/lssna24/fb/Mitigating%20Integer%20Overflow%20in%20C.pdf">https://static.sched.com/hosted_files/lssna24/fb/Mitigating%20Integer%20Overflow%20in%20C.pdf</a></li>
+</ul>
+</li>
+<li><a href="https://lssna24.sched.com/event/1aIeF/enhancing-kernel-bug-discovery-with-large-language-models-zahra-tarkhani-microsoft?iframe=yes&amp;w=100%25&amp;sidebar=yes&amp;bg=no">Enhancing Kernel Bug Discovery with Large Language Models - Zahra Tarkhani, Microsoft</a></li>
+<li><a href="https://lssna24.sched.com/event/1aIeG/sandbox-mode-sbm-new-execution-mode-between-kernel-and-user-space-petr-tesarik-self-employed?iframe=yes&amp;w=100%25&amp;sidebar=yes&amp;bg=no">SandBox Mode (SBM) - New Execution Mode Between Kernel and User Space - Petr Tesarik, Self-employed</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="upcoming-apparmor-security-update-for-cve-2016-1585">Upcoming AppArmor Security update for CVE-2016-1585</h3>
+<ul>
+<li><a href="https://discourse.ubuntu.com/t/upcoming-apparmor-security-update-for-cve-2016-1585/44268/1">https://discourse.ubuntu.com/t/upcoming-apparmor-security-update-for-cve-2016-1585/44268/1</a></li>
+<li><a href="https://bugs.launchpad.net/apparmor/+bug/1597017">https://bugs.launchpad.net/apparmor/+bug/1597017</a></li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E226.mp3" length="24772081" type="audio/mpeg" /><itunes:duration>1439</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 225
