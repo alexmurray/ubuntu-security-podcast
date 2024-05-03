@@ -43,7 +43,8 @@
     ("22.04" "Jammy (22.04 LTS)")
     ("22.10" "Kinetic (22.10)")
     ("23.04" "Lunar (23.04)")
-    ("23.10" "Mantic (23.10)")))
+    ("23.10" "Mantic (23.10)")
+    ("24.04" "Noble (24.04 LTS)")))
 
 (defun usp-get-release-codename (release)
   "Get codename for RELEASE."
