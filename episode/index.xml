@@ -14,7 +14,7 @@
     <atom:link href="https://ubuntusecuritypodcast.org/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://ubuntusecuritypodcast.org/</link>
     <description>A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community.</description>
-    <lastBuildDate>Fri, 19 Apr 2024 16:45:00 &#43;0930</lastBuildDate>
+    <lastBuildDate>Fri, 3 May 2024 16:53:00 &#43;0930</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -40,6 +40,494 @@
     <itunes:category text="Technology">
       </itunes:category><itunes:explicit>no</itunes:explicit>
     <googleplay:explicit>no</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>
+          
+            <title>Episode 227
+          
+          
+          </title>
+          <link>https://ubuntusecuritypodcast.org/episode-227/</link>
+          <pubDate>Fri, 03 May 2024 16:53:00 +0930 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>dac27fc0478de34f908353bfab652f82a039179d082bacd34fe18963b11c4267082151362e17318e8260cfee3f5b6260974dee0ffb7c209179d1fe223d19d7a6</guid>
+          <itunes:author>Ubuntu Security Team</itunes:author>
+          
+        
+          <itunes:title>Episode 227</itunes:title>
+        
+        <itunes:subtitle><![CDATA[
+        
+          Ubuntu 24.04 LTS is finally released and we cover all the new security features
+  it brings, plus we look at security vulnerabilities in, and updates for,
+  FreeRDP, Zabbix, CryptoJS, cpio, less, JSON5 and a heap more.
+  
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>  Ubuntu 24.04 LTS is finally released and we cover all the new security features
+  it brings, plus we look at security vulnerabilities in, and updates for,
+  FreeRDP, Zabbix, CryptoJS, cpio, less, JSON5 and a heap more.
+  </itunes:summary>
+        <description>  Ubuntu 24.04 LTS is finally released and we cover all the new security features
+  it brings, plus we look at security vulnerabilities in, and updates for,
+  FreeRDP, Zabbix, CryptoJS, cpio, less, JSON5 and a heap more.
+  </description>
+        <googleplay:description>  Ubuntu 24.04 LTS is finally released and we cover all the new security features
+  it brings, plus we look at security vulnerabilities in, and updates for,
+  FreeRDP, Zabbix, CryptoJS, cpio, less, JSON5 and a heap more.
+  </googleplay:description>
+        <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Ubuntu 24.04 LTS is finally released and we cover all the new security features
+it brings, plus we look at security vulnerabilities in, and updates for,
+FreeRDP, Zabbix, CryptoJS, cpio, less, JSON5 and a heap more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>61 unique CVEs addressed</p>
+<h3 id="usn-6749-1-freerdp-vulnerabilities--00-45">[<a href="https://ubuntu.com/security/notices/USN-6749-1">USN-6749-1</a>] FreeRDP vulnerabilities (00:45)</h3>
+<ul>
+<li>7 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-32459">CVE-2024-32459</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32460">CVE-2024-32460</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32458">CVE-2024-32458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32041">CVE-2024-32041</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32040">CVE-2024-32040</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32039">CVE-2024-32039</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-22211">CVE-2024-22211</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Bunch of issues all reported by researcher from Kaspersky - usual sorts of issues in this package - written in C etc</li>
+<li>OOB reads, heap buffer overflow, integer overflow / underflow -&gt; OOB write</li>
+</ul>
+<h3 id="usn-6752-1-freerdp-vulnerabilities--01-41">[<a href="https://ubuntu.com/security/notices/USN-6752-1">USN-6752-1</a>] FreeRDP vulnerabilities (01:41)</h3>
+<ul>
+<li>4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-32661">CVE-2024-32661</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32660">CVE-2024-32660</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32659">CVE-2024-32659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32658">CVE-2024-32658</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Not long after those - more CVEs announced</li>
+<li>OOB read, NULL ptr deref and memory exhaustion</li>
+</ul>
+<h3 id="usn-6657-2-dnsmasq-vulnerabilities--01-54">[<a href="https://ubuntu.com/security/notices/USN-6657-2">USN-6657-2</a>] Dnsmasq vulnerabilities (01:54)</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-28450">CVE-2023-28450</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50868">CVE-2023-50868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50387">CVE-2023-50387</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-220/#usn-6657-1-dnsmasq-vulnerabilities--07-10">[USN-6657-1] Dnsmasq vulnerabilities from Episode 220</a></li>
+</ul>
+<h3 id="usn-6743-3-linux-kernel--azure--vulnerabilities--02-13">[<a href="https://ubuntu.com/security/notices/USN-6743-3">USN-6743-3</a>] Linux kernel (Azure) vulnerabilities (02:13)</h3>
+<ul>
+<li>5 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52603">CVE-2023-52603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26581">CVE-2024-26581</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26591">CVE-2024-26591</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26589">CVE-2024-26589</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52600">CVE-2023-52600</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6750-1-thunderbird-vulnerabilities--02-19">[<a href="https://ubuntu.com/security/notices/USN-6750-1">USN-6750-1</a>] Thunderbird vulnerabilities (02:19)</h3>
+<ul>
+<li>8 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-3861">CVE-2024-3861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3859">CVE-2024-3859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3857">CVE-2024-3857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3854">CVE-2024-3854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3302">CVE-2024-3302</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3864">CVE-2024-3864</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-3852">CVE-2024-3852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2609">CVE-2024-2609</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>115.10.1</li>
+</ul>
+<h3 id="usn-6751-1-zabbix-vulnerabilities--02-54">[<a href="https://ubuntu.com/security/notices/USN-6751-1">USN-6751-1</a>] Zabbix vulnerabilities (02:54)</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-35230">CVE-2022-35230</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-35229">CVE-2022-35229</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>First time Zabbix has featured in the podcast!</li>
+<li>Fixes 2 reflected XSS issues - in newer versions both require the attacker to
+be able to specify the user&rsquo;s specific CSRF token - but in older versions only
+there was only a session ID which is easier to guess</li>
+</ul>
+<h3 id="usn-6753-1-cryptojs-vulnerability--03-38">[<a href="https://ubuntu.com/security/notices/USN-6753-1">USN-6753-1</a>] CryptoJS vulnerability (03:38)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-46233">CVE-2023-46233</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Insecure default config - uses older parameters for the implementation of
+PBKDF2 - SHA1 with a single iteration - makes any passwords protected via
+PBKDF2 in crypto-js easier to brute-force from the hashed value - instead
+updated to use SHA256 with 250,000 rounds</li>
+</ul>
+<h3 id="usn-6754-1-nghttp2-vulnerabilities--04-32">[<a href="https://ubuntu.com/security/notices/USN-6754-1">USN-6754-1</a>] nghttp2 vulnerabilities (04:32)</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28182">CVE-2024-28182</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-44487">CVE-2023-44487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9513">CVE-2019-9513</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-9511">CVE-2019-9511</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Fixes for most recent issue in HTTP/2 (plus a few older HTTP/2 issues for ESM
+releases - HTTP/2 Rapid Reset and 2 disclosed by Netflix back in 2019 which we
+covered back in <a href="/episode-43/#usn-4099-1-nginx-vulnerabilities">[USN-4099-1] nginx vulnerabilities from Episode 49</a> -
+all DoS attacks)</li>
+<li>HTTP/2 continuation frames - no proper limit on the amount of these frames
+which can be sent in a single stream - attacker can send many to cause a DoS
+on the server either through CPU by lots of processing or memory by storing
+all these headers in memory</li>
+</ul>
+<h3 id="usn-6755-1-gnu-cpio-vulnerabilities--05-42">[<a href="https://ubuntu.com/security/notices/USN-6755-1">USN-6755-1</a>] GNU cpio vulnerabilities (05:42)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-7207">CVE-2023-7207</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Path traversal vuln - possible to write outside of the target directory</li>
+<li>Specific to Debian/Ubuntu etc since reverted part of the fix for historic
+CVE-2015-1197 - path traversal via inclusion of a malicious symlink in the
+archive - since it broke the use of the <code>--no-absolute-filenames</code> CLI argument</li>
+<li>Was reverted back in 2.13+dfsg-2 - this was included in all releases of Ubuntu
+since focal</li>
+<li>Now use more correct fix from upstream (April 2023)</li>
+</ul>
+<h3 id="usn-6756-1-less-vulnerability--07-10">[<a href="https://ubuntu.com/security/notices/USN-6756-1">USN-6756-1</a>] less vulnerability (07:10)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-32487">CVE-2024-32487</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Second vuln in less in the last 10 weeks or so - <a href="/episode-220/#usn-6664-1-less-vulnerability--09-40">[USN-6664-1] less vulnerability from Episode 220</a></li>
+<li>Similar issue - this time in the use of <code>LESSOPEN</code> environment variable - failed
+to properly quote newlines embedded in a filename - could then allow for
+arbitrary code execution if ran <code>less</code> on some untrusted file</li>
+<li><code>LESSOPEN</code> is automatically set in Debian/Ubuntu via <code>lesspipe</code> - allows to run
+less on say a gz compressed log file or even on a tar.gz tarball to list the
+files etc</li>
+</ul>
+<h3 id="usn-6757-1-php-vulnerabilities--08-41">[<a href="https://ubuntu.com/security/notices/USN-6757-1">USN-6757-1</a>] PHP vulnerabilities (08:41)</h3>
+<ul>
+<li>3 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-3096">CVE-2024-3096</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2756">CVE-2024-2756</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4900">CVE-2022-4900</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Incomplete fix for historic CVE-2022-31629 - ability for an attacker on the
+same network/site could set a cookie via HTTP with one name, which then gets
+used by sessions using HTTPS and when using a different cookie name - is a
+problem since certain cookie names (like <code>__Host-</code> and <code>__Secure-</code>) have specific
+meanings which in general should be allowed to be specified by the network but
+only by the browser itself - so can be used to bypass usual restrictions
+(apparently this issue was reported upstream by the original reported of the
+2022 vuln but it got ignored by upstream till now&hellip;)</li>
+<li><code>password_verify()</code> function would sometimes return true for wrong passwords -
+ie if the actual password started with a NUL byte and the specified a password
+was the empty string would verify as true (unlikely to be an issue in practice)</li>
+<li>Heap buffer overflow due to a large <code>PHP_CLI_SERVER_WORKERS</code> env var value -
+integer overflow -&gt; wraparound -&gt; allocate small amount of memory for a large
+number of values -&gt; buffer overflow (low priority since would need to be able
+to set this env var first)</li>
+</ul>
+<h3 id="usn-6761-1-anope-vulnerability--11-15">[<a href="https://ubuntu.com/security/notices/USN-6761-1">USN-6761-1</a>] Anope vulnerability (11:15)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-30187">CVE-2024-30187</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to deny ability to reset the password of a suspended account and hence
+gain access again</li>
+</ul>
+<h3 id="usn-6758-1-json5-vulnerability--11-37">[<a href="https://ubuntu.com/security/notices/USN-6758-1">USN-6758-1</a>] JSON5 vulnerability (11:37)</h3>
+<ul>
+<li>1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-46175">CVE-2022-46175</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>NodeJS module for the JSON5 format - &ldquo;JSON for humans&rdquo; - much more similar to
+yaml, does away with a lot of the usual quotes etc</li>
+<li>Protoype pollution vuln - when parsing would fail to restrict use of the
+<code>__proto__</code> key and hence would allow the ability to set arbitrary keys etc
+within the returned object -&gt; RCE</li>
+</ul>
+<h3 id="lsn-0103-1-linux-kernel-vulnerability--12-46">[<a href="https://ubuntu.com/security/notices/LSN-0103-1">LSN-0103-1</a>] Linux kernel vulnerability (12:46)</h3>
+<ul>
+<li>7 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26597">CVE-2024-26597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1086">CVE-2024-1086</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1085">CVE-2024-1085</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0193">CVE-2024-0193</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-51781">CVE-2023-51781</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6817">CVE-2023-6817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-4569">CVE-2023-4569</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Kernel type</th>
+<th>22.04</th>
+<th>20.04</th>
+<th>18.04</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aws</td>
+<td>103.3</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>aws-5.15</td>
+<td>—</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>aws-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>103.3</td>
+</tr>
+<tr>
+<td>aws-6.5</td>
+<td>103.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure</td>
+<td>103.3</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>azure-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>103.3</td>
+</tr>
+<tr>
+<td>azure-6.5</td>
+<td>103.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp</td>
+<td>103.3</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp-5.15</td>
+<td>—</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>gcp-5.4</td>
+<td>—</td>
+<td>—</td>
+<td>103.3</td>
+</tr>
+<tr>
+<td>gcp-6.5</td>
+<td>103.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-5.15</td>
+<td>—</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>generic-5.4</td>
+<td>—</td>
+<td>103.3</td>
+<td>103.3</td>
+</tr>
+<tr>
+<td>gke</td>
+<td>103.3</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>hwe-6.5</td>
+<td>103.1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm</td>
+<td>103.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ibm-5.15</td>
+<td>—</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>103.3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-5.15</td>
+<td>—</td>
+<td>103.3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>lowlatency-5.4</td>
+<td>—</td>
+<td>103.3</td>
+<td>103.3</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>canonical-livepatch status
+</span></span></code></pre></div><h3 id="usn-6760-1-gerbv-vulnerability--13-01">[<a href="https://ubuntu.com/security/notices/USN-6760-1">USN-6760-1</a>] Gerbv vulnerability (13:01)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-4508">CVE-2023-4508</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Vuln found by the Ubuntu Security team - David and (former member) Andrei -
+Andrei found this whilst patching Gerbv back in 2023 and doing a bunch of
+testing with ASan enabled - crafted filename -&gt; crash</li>
+</ul>
+<h3 id="usn-6759-1-freerdp-vulnerabilities--13-41">[<a href="https://ubuntu.com/security/notices/USN-6759-1">USN-6759-1</a>] FreeRDP vulnerabilities (13:41)</h3>
+<ul>
+<li>5 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-32662">CVE-2024-32662</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32661">CVE-2024-32661</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32660">CVE-2024-32660</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32659">CVE-2024-32659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-32658">CVE-2024-32658</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6737-2-gnu-c-library-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6737-2">USN-6737-2</a>] GNU C Library vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2961">CVE-2024-2961</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6729-3-apache-http-server-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6729-3">USN-6729-3</a>] Apache HTTP Server vulnerabilities</h3>
+<ul>
+<li>3 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27316">CVE-2024-27316</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24795">CVE-2024-24795</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-38709">CVE-2023-38709</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6718-3-curl-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6718-3">USN-6718-3</a>] curl vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2398">CVE-2024-2398</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-2004">CVE-2024-2004</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6733-2-gnutls-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6733-2">USN-6733-2</a>] GnuTLS vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28835">CVE-2024-28835</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-28834">CVE-2024-28834</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6734-2-libvirt-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6734-2">USN-6734-2</a>] libvirt vulnerabilities</h3>
+<ul>
+<li>2 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-2494">CVE-2024-2494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-1441">CVE-2024-1441</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6744-3-pillow-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6744-3">USN-6744-3</a>] Pillow vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-28219">CVE-2024-28219</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="ubuntu-24-dot-04-lts--noble-numbat--released--14-27">Ubuntu 24.04 LTS (Noble Numbat) released (14:27)</h3>
+<ul>
+<li><a href="https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat">https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat</a></li>
+<li><a href="https://ubuntu.com/blog/ubuntu-desktop-24-04-noble-numbat-deep-dive">https://ubuntu.com/blog/ubuntu-desktop-24-04-noble-numbat-deep-dive</a></li>
+<li><a href="https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-24-04-lts">https://ubuntu.com/blog/whats-new-in-security-for-ubuntu-24-04-lts</a></li>
+<li>Up to 12 years of support via Ubuntu Pro + Legacy Support Add-on</li>
+<li>New security features / improvements:
+<ul>
+<li>Unprivileged user namespace restrictions</li>
+<li>Binary hardening</li>
+<li>AppArmor 4</li>
+<li>Disabling of old TLS versions</li>
+<li>Upstream Kernel Security Features
+<ul>
+<li>Intel shadow stack support</li>
+<li>Secure virtualisation with AMD SEV-SNP and Intel TDX</li>
+<li>Strict compile-time bounds checking</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></itunes:image>
+          <googleplay:image href="https://ubuntusecuritypodcast.org/img/usp_logo_500.png"></googleplay:image><enclosure url="https://people.canonical.com/~amurray/USP/USP_E227.mp3" length="24684354" type="audio/mpeg" /><itunes:duration>1481</itunes:duration><itunes:explicit>false</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           
             <title>Episode 226
