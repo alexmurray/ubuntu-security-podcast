@@ -8,6 +8,35 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 230
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-230
+:EXPORT_DATE: 2024-06-20 12:26
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E230.mp3 :podcast_duration "1272" :podcast_bytes "20752959" :permalink "https://ubuntusecuritypodcast.org/episode-230/" :guid d375f992307b9e0e79153d07b3afd34147177050ede5d1db4d83dd25492a5c56ec2f47957a3fe9f4d383410fc00475062b24b05cdc855d8312539b0e4c3f2149
+:END:
+#+begin_description
+This week we bring you a special edition of the podcast, featuring an interview
+between Ijlal Loutfi and Karen Horovitz who deep-dive into Confidential
+Computing. Ranging from a high-level discussion of the need for and the features
+provided by confidential computing, through to the specifics of how this is
+implemented in Ubuntu and a look at similar future security technologies that
+are on the horizon.
+#+end_description
+** Overview
+This week we bring you a special edition of the podcast, featuring an interview
+between Ijlal Loutfi and Karen Horovitz who deep-dive into Confidential
+Computing. Ranging from a high-level discussion of the need for and the features
+provided by confidential computing, through to the specifics of how this is
+implemented in Ubuntu and a look at similar future security technologies that
+are on the horizon.
+** Confidential Computing with Ijlal Loutfi and Karen Horovitz (01:17)
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 229
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-229
