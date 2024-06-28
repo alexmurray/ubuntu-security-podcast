@@ -15,12 +15,12 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E231.mp3 :podcast_duration "1140" :podcast_bytes "19801297" :permalink "https://ubuntusecuritypodcast.org/episode-231/" :guid 5e6c69d53c1d16b3c824c806db52971853b8b00ea973f251169f8aaa8476e4c258d696025d8ac3bcd06ee5d7c1bdf2895223b0d60320ef09fc62cbd454eebe87
 :END:
 #+begin_description
-A look into CISA's Known Exploited Vulnerability Catalogue is on minds this
+A look into CISA's Known Exploited Vulnerability Catalogue is on our minds this
 week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
 Roundcube, the Linux kernel and more.
 #+end_description
 ** Overview
-A look into CISA's Known Exploited Vulnerability Catalogue is on minds this
+A look into CISA's Known Exploited Vulnerability Catalogue is on our minds this
 week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
 Roundcube, the Linux kernel and more.
 ** This week in Ubuntu Security Updates
