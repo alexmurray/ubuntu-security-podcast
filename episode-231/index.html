@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  A look into CISA&#39;s Known Exploited Vulnerability Catalogue is on our minds this
+  week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+  Roundcube, the Linux kernel and more.
+  ">
+
+<meta name="generator" content="Hugo 0.128.0">
+
+<meta property="og:title" content="Episode 231" />
+<meta name="twitter:title" content="Episode 231"/>
+<meta itemprop="name" content="Episode 231">
+<meta property="article:published_time" content="2024-06-28T19:15:00&#43;09:30" />
+<meta property="article:modified_time" content="2024-06-28T19:24:01&#43;09:30" />
+<meta property="og:updated_time" content="2024-06-28T19:24:01&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  A look into CISA&#39;s Known Exploited Vulnerability Catalogue is on our minds this
+  week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+  Roundcube, the Linux kernel and more.
+  " />
+    <meta name="twitter:description" content="  A look into CISA&#39;s Known Exploited Vulnerability Catalogue is on our minds this
+  week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+  Roundcube, the Linux kernel and more.
+  " />
+    <meta itemprop="description" content="  A look into CISA&#39;s Known Exploited Vulnerability Catalogue is on our minds this
+  week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+  Roundcube, the Linux kernel and more.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-231/" />
+
+
+
+
+<title>Episode 231</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-231/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 231</h1>
+      <small>Posted on Friday, Jun 28, 2024 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            A look into CISA&rsquo;s Known Exploited Vulnerability Catalogue is on our minds this
+week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+Roundcube, the Linux kernel and more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E231.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>A look into CISA&rsquo;s Known Exploited Vulnerability Catalogue is on our minds this
+week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+Roundcube, the Linux kernel and more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>175 unique CVEs addressed</p>
+<h3 id="usn-6842-1-gdb-vulnerabilities--01-10">[<a href="https://ubuntu.com/security/notices/USN-6842-1">USN-6842-1</a>] gdb vulnerabilities (01:10)</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-39130">CVE-2023-39130</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-39129">CVE-2023-39129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-39128">CVE-2023-39128</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-1972">CVE-2023-1972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-4285">CVE-2022-4285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-16599">CVE-2020-16599</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>a couple of these are inherited from binutils as they share that code -
+parsing of crafted ELF executables -&gt; NULL ptr deref or possible heap based
+buffer overflow -&gt; DoS/RCE</li>
+<li>other stack and heap buffer overflows as well - parsing of crafted ada files
+and crafted debug info files as well -&gt; DoS/RCE</li>
+</ul>
+<h3 id="usn-6845-1-hibernate-vulnerability--02-12">[<a href="https://ubuntu.com/security/notices/USN-6845-1">USN-6845-1</a>] Hibernate vulnerability (02:12)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-25638">CVE-2020-25638</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Object relational-mapping (ORM) library for Java</li>
+<li>SQL injection in the JPA Criteria API implementation - could allow unvalidated
+literals when they are used in the SQL comments of a query when logging is
+enabled - fixed by properly escaping comments in this case</li>
+</ul>
+<h3 id="usn-6846-1-ansible-vulnerabilities--02-46">[<a href="https://ubuntu.com/security/notices/USN-6846-1">USN-6846-1</a>] Ansible vulnerabilities (02:46)</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-5764">CVE-2023-5764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-3697">CVE-2022-3697</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Possibly would leak the password into log file when using the AWS EC2 module
+since failed to validate the <code>tower_callback</code> (nowadays is called <code>aap_callback</code> -
+Ansible Automation Platform) parameter appropriately</li>
+<li>Allows to mark variables as <code>unsafe</code> - in that they may come from an external,
+untrusted source - won&rsquo;t get evaluated/expanded when used to avoid possible
+info leaks etc - various issues where ansible would fail to respect this and
+essentially forget they were tagged as unsafe and end up exposing secrets as a
+result</li>
+</ul>
+<h3 id="usn-6844-1-cups-vulnerability--04-08">[<a href="https://ubuntu.com/security/notices/USN-6844-1">USN-6844-1</a>] CUPS vulnerability (04:08)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-35235">CVE-2024-35235</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>When starting, cups would arbitrarily chmod the socket specified as the Listen
+parameter to make it world-writable - if this was a symlink, would then make
+the target of the symlink world-readable - in general the cups config file is
+only writable by root so requires some other vuln to be able to exploit it
+where you can get write access to the config file to exploit it OR be able to
+replace the regular cups socket path with a user-controlled symlink - but if
+you can, then you can even change the cups config itself to be world-writable
+and hence modify other parameters like the user and group that cups should run
+as, as well as a crafted <code>FoomaticRIPCommandLine</code> then can run arbitrary commands
+as root</li>
+</ul>
+<h3 id="usn-6849-1-salt-vulnerabilities--06-20">[<a href="https://ubuntu.com/security/notices/USN-6849-1">USN-6849-1</a>] Salt vulnerabilities (06:20)</h3>
+<ul>
+<li>2 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2020-11652">CVE-2020-11652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-11651">CVE-2020-11651</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Failed to properly validate paths in some methods and also failed to restrict
+access to other methods, allowing them to be used without authentication -
+could then either allow arbitrary directory access or the ability to retrieve
+tokens from the master or run arbitrary commands on minions</li>
+</ul>
+<h3 id="usn-6746-2-google-guest-agent-and-google-os-config-agent-vulnerability--06-44">[<a href="https://ubuntu.com/security/notices/USN-6746-2">USN-6746-2</a>] Google Guest Agent and Google OS Config Agent vulnerability (06:44)</h3>
+<ul>
+<li>1 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24786">CVE-2024-24786</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>A vuln in the embedded golang protobuf module - when parsing JSON could end up
+in an infinite loop -&gt; DoS</li>
+</ul>
+<h3 id="usn-6850-1-openvpn-vulnerability--07-04">[<a href="https://ubuntu.com/security/notices/USN-6850-1">USN-6850-1</a>] OpenVPN vulnerability (07:04)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-0547">CVE-2022-0547</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="/episode-155/#usn-5347-1-openvpn-vulnerability-02-00">[USN-5347-1] OpenVPN vulnerability from Episode 155</a> - possibly gets confused
+when using multiple authentication plugins and deferred authentication</li>
+</ul>
+<h3 id="usn-6847-1-libheif-vulnerabilities--07-36">[<a href="https://ubuntu.com/security/notices/USN-6847-1">USN-6847-1</a>] libheif vulnerabilities (07:36)</h3>
+<ul>
+<li>8 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-49464">CVE-2023-49464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49463">CVE-2023-49463</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49462">CVE-2023-49462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49460">CVE-2023-49460</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-29659">CVE-2023-29659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-0996">CVE-2023-0996</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-23109">CVE-2020-23109</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2019-11471">CVE-2019-11471</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>First time to mention libheif on the podcast - High Efficiency Image File
+Format - part of the MPEG-H standard - container format used to store images
+or sequences of images</li>
+<li>Commonly seen due to its use by Apple for images on iPhone</li>
+<li>C++ - usual types of issues
+<ul>
+<li>UAF, buffer overflows, floating point exception etc
+<ul>
+<li>most found through fuzzing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6848-1-roundcube-vulnerabilities--08-21">[<a href="https://ubuntu.com/security/notices/USN-6848-1">USN-6848-1</a>] Roundcube vulnerabilities (08:21)</h3>
+<ul>
+<li>4 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-37384">CVE-2024-37384</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-37383">CVE-2024-37383</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-47272">CVE-2023-47272</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-5631">CVE-2023-5631</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>webmail front-end for IMAP</li>
+<li>2 different possible XSS issues due to mishandling of SVG - email containing
+an SVG could embed JS that then gets loaded when the email is viewed</li>
+<li>Also possible XSS through a crafted user preference value - similarly through
+a crafted Content-Type/Content-Disposition header which can be used for
+attachment preview/download</li>
+</ul>
+<h3 id="usn-6819-4-linux-kernel--oracle--vulnerabilities--09-21">[<a href="https://ubuntu.com/security/notices/USN-6819-4">USN-6819-4</a>] Linux kernel (Oracle) vulnerabilities (09:21)</h3>
+<ul>
+<li>149 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26631">CVE-2024-26631</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52694">CVE-2023-52694</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52685">CVE-2023-52685</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52682">CVE-2023-52682</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35835">CVE-2024-35835</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52446">CVE-2023-52446</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52487">CVE-2023-52487</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52619">CVE-2023-52619</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52627">CVE-2023-52627</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52674">CVE-2023-52674</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26598">CVE-2024-26598</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52679">CVE-2023-52679</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52455">CVE-2023-52455</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26671">CVE-2024-26671</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52444">CVE-2023-52444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52683">CVE-2023-52683</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52690">CVE-2023-52690</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35842">CVE-2024-35842</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52610">CVE-2023-52610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26607">CVE-2024-26607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52445">CVE-2023-52445</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52497">CVE-2023-52497</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52488">CVE-2023-52488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26623">CVE-2024-26623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52607">CVE-2023-52607</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52677">CVE-2023-52677</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52457">CVE-2023-52457</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26673">CVE-2024-26673</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26594">CVE-2024-26594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26638">CVE-2024-26638</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52621">CVE-2023-52621</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52594">CVE-2023-52594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52468">CVE-2023-52468</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26647">CVE-2024-26647</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52492">CVE-2023-52492</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52452">CVE-2023-52452</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26615">CVE-2024-26615</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52448">CVE-2023-52448</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52698">CVE-2023-52698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52443">CVE-2023-52443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52614">CVE-2023-52614</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52494">CVE-2023-52494</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35837">CVE-2024-35837</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26582">CVE-2024-26582</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52632">CVE-2023-52632</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52680">CVE-2023-52680</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52595">CVE-2023-52595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52626">CVE-2023-52626</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52495">CVE-2023-52495</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52451">CVE-2023-52451</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52583">CVE-2023-52583</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52469">CVE-2023-52469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52584">CVE-2023-52584</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52450">CVE-2023-52450</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26608">CVE-2024-26608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52609">CVE-2023-52609</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52464">CVE-2023-52464</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52591">CVE-2023-52591</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26645">CVE-2024-26645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35838">CVE-2024-35838</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52470">CVE-2023-52470</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52456">CVE-2023-52456</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52589">CVE-2023-52589</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26585">CVE-2024-26585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52696">CVE-2023-52696</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52633">CVE-2023-52633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52462">CVE-2023-52462</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52597">CVE-2023-52597</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52587">CVE-2023-52587</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26584">CVE-2024-26584</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26636">CVE-2024-26636</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52491">CVE-2023-52491</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52493">CVE-2023-52493</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26627">CVE-2024-26627</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52465">CVE-2023-52465</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52687">CVE-2023-52687</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52593">CVE-2023-52593</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26595">CVE-2024-26595</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26629">CVE-2024-26629</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35840">CVE-2024-35840</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52666">CVE-2023-52666</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26633">CVE-2024-26633</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52686">CVE-2023-52686</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52467">CVE-2023-52467</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52667">CVE-2023-52667</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52449">CVE-2023-52449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52473">CVE-2023-52473</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52670">CVE-2023-52670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26649">CVE-2024-26649</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52498">CVE-2023-52498</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52693">CVE-2023-52693</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26583">CVE-2024-26583</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52678">CVE-2023-52678</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52675">CVE-2023-52675</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52489">CVE-2023-52489</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26640">CVE-2024-26640</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26618">CVE-2024-26618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52599">CVE-2023-52599</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26634">CVE-2024-26634</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52608">CVE-2023-52608</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26625">CVE-2024-26625</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52486">CVE-2023-52486</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26632">CVE-2024-26632</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52669">CVE-2023-52669</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52676">CVE-2023-52676</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52635">CVE-2023-52635</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52664">CVE-2023-52664</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35841">CVE-2024-35841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52598">CVE-2023-52598</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52458">CVE-2023-52458</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26644">CVE-2024-26644</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52697">CVE-2023-52697</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52617">CVE-2023-52617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26612">CVE-2024-26612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52672">CVE-2023-52672</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52490">CVE-2023-52490</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35839">CVE-2024-35839</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26610">CVE-2024-26610</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26616">CVE-2024-26616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52588">CVE-2023-52588</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52623">CVE-2023-52623</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26669">CVE-2024-26669</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52692">CVE-2023-52692</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26620">CVE-2024-26620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52606">CVE-2023-52606</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26592">CVE-2024-26592</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52616">CVE-2023-52616</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26641">CVE-2024-26641</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52622">CVE-2023-52622</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52611">CVE-2023-52611</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52453">CVE-2023-52453</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52681">CVE-2023-52681</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26586">CVE-2024-26586</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52472">CVE-2023-52472</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26646">CVE-2024-26646</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26670">CVE-2024-26670</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52454">CVE-2023-52454</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26668">CVE-2024-26668</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52447">CVE-2023-52447</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52463">CVE-2023-52463</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52618">CVE-2023-52618</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52691">CVE-2023-52691</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26808">CVE-2024-26808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52612">CVE-2023-52612</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24860">CVE-2024-24860</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23849">CVE-2024-23849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6536">CVE-2023-6536</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6535">CVE-2023-6535</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6356">CVE-2023-6356</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Of all these CVEs, 6 had a high priority rating
+<ul>
+<li>many are due to bugs in the async handling of cryto operations in the
+in-kernel TLS implementation
+<ul>
+<li>CVE-2024-26582 and CVE-2024-26584 - both reported by Google kernelCTF program (talked about back in <a href="/episode-228/#usn-6766-2-linux-kernel-vulnerabilities--01-07">[USN-6766-2] Linux kernel vulnerabilities from Episode 228</a>)
+<ul>
+<li>first is UAF in TLS handling of scattter/gather arrays</li>
+<li>second is UAF when crypto requests get backlogged and the underlying
+crypto engine can&rsquo;t process them all in time - can then end up having
+the async callback invoked twice</li>
+</ul>
+</li>
+<li>CVE-2024-26585
+<ul>
+<li>very similar - UAF in handling of crypto operations from TLS - thread
+which handles the socket could close this before all the operations had
+been scheduled</li>
+</ul>
+</li>
+<li>CVE-2024-26583 - similarly, race between async notify event and socket close -&gt; UAF</li>
+</ul>
+</li>
+<li>UAF in BPF and a UAF in netfilter - also reported via Google kernelCTF -
+both able to be triggered via an unpriv userns</li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="discussion-of-cisa-kev">Discussion of CISA KEV</h3>
+<ul>
+<li>US Gov Cybersecurity &amp; Infrastructure Security Agency
+<ul>
+<li>&ldquo;America&rsquo;s Cyber Defense Agency&rdquo;</li>
+<li>National Coordinator for Critical Infrastructure Security and Resilience</li>
+</ul>
+</li>
+<li>Publish various guidance for organisations around topics of cybersecurity
+<ul>
+<li>for instance, recently published a report <a href="https://www.cisa.gov/resources-tools/resources/exploring-memory-safety-critical-open-source-projects">&ldquo;Exploring Memory Safety in Critical Open Source Projects&rdquo;</a>
+<ul>
+<li>Joint guidance (FBI, ASD / ACSC &amp; Candadian CSC)</li>
+<li>Builds on the previous case for memory safe roadmaps by looking at the
+prevalence of memory unsafe languages in various critical open source
+projects</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Also maintain the KEV - Known Exploitable Vulnerabilities Catalog
+<ul>
+<li>&ldquo;authoritative source of vulnerabilities that have been exploited in the wild&rdquo;</li>
+<li>Mandates for federal civilian agencies in the US to remediate KEV vulns within various timeframes</li>
+<li>Also recommend that anyone else monitors this list and immediately addresses these vulns as part of the vuln remediation plan</li>
+<li>List of vilns that are causing immediate harm based on observed adversarial activity</li>
+<li>Various requirements to be listed in the KEV:
+<ul>
+<li>CVE ID assigned</li>
+<li>Evidence it has been or is being actively exploited
+<ul>
+<li>reliable evidence that execution of malicious code was performed on a system by an unauthorised actor</li>
+<li>also includes both attempted and successful exploitation (e.g. includes honeypots as well as real systems)</li>
+</ul>
+</li>
+<li>Clear remediation guidelines
+<ul>
+<li>An update is available and should be applied OR</li>
+<li>Vulnerable component should be removed from networks etc if it is EOL and cannot be updated</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>available as CSV or JSON</li>
+<li>Currently lists 1126 CVEs including:
+<ul>
+<li>Accellion File Transfer Appliances</li>
+<li>Adobe Reader, Flash Player</li>
+<li>Apache HTTP Server, Struts (Solarwinds), Log4j</li>
+<li>Huge number of Apple iOS etc (WebKit and more)</li>
+<li>Atlassian Confluence</li>
+<li>Citrix Gateways</li>
+<li>Exim</li>
+<li>Fortinet</li>
+<li>Gitlab</li>
+<li>Google Chromium</li>
+<li>ImageMagick</li>
+<li>Microsoft Windows and Exchange</li>
+<li>Mozilla Firefox</li>
+<li>Ivanti Pulse Connect Security</li>
+<li>SaltStack</li>
+<li>VMWare</li>
+<li>WordPress</li>
+</ul>
+</li>
+<li>Oldest CVEs are 2 against Windows from 2002 and 2004</li>
+<li>Newest include 26 2024 CVEs - various Chromium, Windows, Android Pixel, Ivanti and more
+<ul>
+<li>interestingly includes ARM Mali GPU Driver CVE-2024-4610 - this affects
+the Bifrost and Valhall drivers - in Ubuntu we only ship the related
+Midgard driver back in bionic and focal so not affected by this one</li>
+</ul>
+</li>
+<li>but as you may have noticed, lots that we potentially are affected by
+<ul>
+<li>Apache HTTP Server, Exim, Firefox, Thunderbird - plus OpenJDK, GNU C
+Library, Bash, Roundcube (mentioned earlier but not this particular vuln),
+WinRAR (unrar), not to mention a number against the Linux kernel
+<ul>
+<li>all for Linux kernel are privesc - most against either netfilter or
+various other systems like perf, <code>AF_PACKET</code>, tty, ptrace, futex and
+others</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Ubuntu, not surprisingly, we prioritise these vulnerabilities in our
+patching process</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-230/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2024 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-231\/",
+      text: "Episode 231"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.">
+  
+
+<meta name="generator" content="Hugo 0.128.0">
+
+<meta property="og:title" content="Ubuntu Security Podcast" />
+<meta name="twitter:title" content="Ubuntu Security Podcast"/>
+<meta itemprop="name" content="Ubuntu Security Podcast">
+<meta property="article:published_time" content="2024-06-28T19:15:00&#43;09:30" />
+<meta property="article:modified_time" content="2024-06-28T19:24:01&#43;09:30" />
+<meta property="og:updated_time" content="2024-06-28T19:24:01&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+        <meta name="twitter:description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+        <meta itemprop="description" content="A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community." />
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="/" />
+
+
+
+
+<title>Ubuntu Security Podcast</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+
+  
+  <div class="container-fluid grid_container">
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col">
+            <p>
+                A weekly podcast talking about the latest developments and updates from the Ubuntu Security team.
+              </p>
+        </div>
+
+        
+
+    </div>
+
+    <div class = "row">
+        
+    </div>
+    <div class = "row">
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://open.spotify.com/show/0g0Kh2gQWP17Y6yye9bhkZ"><i class="fab fa-spotify"></i>&nbsp;Spotify</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://itunes.apple.com/au/podcast/ubuntu-security-podcast/id1429360004"><i class="fa fa-podcast"></i>&nbsp;Apple Podcasts</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default subscribe_buttons" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZWN1cml0eXBvZGNhc3Qub3JnL2VwaXNvZGUvaW5kZXgueG1s"><i class="fab fa-android"></i>&nbsp;Android</a>
+          </div>
+        
+        
+        
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://pca.st/O9Df"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
+          </div>
+        
+        
+          <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="https://ubuntusecuritypodcast.org/episode/index.xml"><i class="fa fa-rss"></i>&nbsp;Podcast RSS</a>
+          </div>
+        
+        
+        
+    </div>
+</div>
+</div>
+
+  
+
+
+
+
+  <div class="row hero_container">
+    <div class="col-md-12">
+  <h2>
+  Latest Episode
+  </h2>
+
+  
+    <div class = "row homepage_episode_row">
+      <div class = "col-md-12">
+        <a href="https://ubuntusecuritypodcast.org/episode-231/" class = "row_latest_episode_title"><h2>Episode 231</h2></a>
+        
+        <small>Posted on Friday, Jun 28, 2024 
+
+
+</small>
+      </div>
+    </div><div class = "row homepage_episode_row">
+        <div class = "col-md-3">
+          <a href="https://ubuntusecuritypodcast.org/episode-231/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
+        </div>
+        <div class = "col-md-9"><p class = "hompage_episode_description">A look into CISA&rsquo;s Known Exploited Vulnerability Catalogue is on our minds this
+week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
+Roundcube, the Linux kernel and more.</p></div>
+      </div><div class = "row homepage_episode_row">
+      <div class = "col-md-12">
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://people.canonical.com/~amurray/USP/USP_E231.mp3" type="audio/mp3">
+          </audio>
+      </div>
+    </div></div>
+</div>
+
+<section class="episode-list">
+<div class="row main_container"><div class = "col"><div class = "row homepage_episode_row">
+        <div class = "col-md-12">
+          
+            <h3><a href="https://ubuntusecuritypodcast.org/episode-0/" class= "grid_episode_title">Episode 0</a></h3>
+          
+          <small>Posted on Tuesday, Aug 14, 2018 
+
+
+</small>
+        </div>
+      </div>
+      <div class = "row homepage_episode_row"><div class = "col-md-3 homepage_episode_row_image">
+            <a href="https://ubuntusecuritypodcast.org/episode-0/"><img class = "img-fluid" src = "https://ubuntusecuritypodcast.org/img/usp_logo_500.png" /></a>
+          </div>
+          <div class = "col-md-9 homepage_episode_row_description"><p class = "homepage_episode_description">The first ever episode of the Ubuntu Security Podcast!</p></div></div></div></div>
+<div class="row">
+<div class="col-md-12"><div class = "row">
+<div class = "col">
+
+
+<nav class="pagination justify-content-center">
+
+
+
+
+  
+  
+  
+  
+    
+      
+    
+    
+    
+  
+
+<ul class="pagination pagination-lg">
+	
+  
+    <li class="page-item">
+            <a href="https://ubuntusecuritypodcast.org/" aria-label="First" class="page-link"><span aria-hidden="true">&laquo;&laquo;</span></a>
+            </li>
+  
+
+
+  <li class="page-item">
+    		<a href="/page/23/" class="page-link"> &laquo; </a>
+    	</li>
+  
+  
+  
+  
+    
+      <li class = " page-item"><a href="/" class="page-link hidden-md-down">1</a></li>
+    
+  
+    
+      <li class="disabled page-item"><a name="" class="page-link hidden-md-down">&hellip;</a></li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class = " page-item"><a href="/page/20/" class="page-link hidden-md-down">20</a></li>
+    
+  
+    
+      <li class = " page-item"><a href="/page/21/" class="page-link hidden-md-down">21</a></li>
+    
+  
+    
+      <li class = " page-item"><a href="/page/22/" class="page-link hidden-md-down">22</a></li>
+    
+  
+    
+      <li class = " page-item"><a href="/page/23/" class="page-link hidden-md-down">23</a></li>
+    
+  
+    
+      <li class = "active page-item"><a href="/page/24/" class="page-link hidden-md-down">24</a></li>
+    
+  
+  
+  
+  
+  
+  
+</ul>
+
+</nav>
+</div>
+</div></div></div>
+</div> 
+
+  
+
+
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2024 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/",
+      text: "Ubuntu Security Podcast"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+
