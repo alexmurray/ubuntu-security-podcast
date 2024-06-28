@@ -1,12 +1,12 @@
 +++
 title = "Episode 231"
 description = """
-  A look into CISA's Known Exploited Vulnerability Catalogue is on minds this
+  A look into CISA's Known Exploited Vulnerability Catalogue is on our minds this
   week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
   Roundcube, the Linux kernel and more.
   """
 date = 2024-06-28T19:15:00+09:30
-lastmod = 2024-06-28T19:18:05+09:30
+lastmod = 2024-06-28T19:24:01+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -20,7 +20,7 @@ guid = "5e6c69d53c1d16b3c824c806db52971853b8b00ea973f251169f8aaa8476e4c258d69602
 
 ## Overview {#overview}
 
-A look into CISA's Known Exploited Vulnerability Catalogue is on minds this
+A look into CISA's Known Exploited Vulnerability Catalogue is on our minds this
 week, plus we look at vulnerability updates for gdb, Ansible, CUPS, libheif,
 Roundcube, the Linux kernel and more.
 
