@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we deep-dive into one of the best vulnerabilities we&#39;ve seen in a long
+  time _regreSSHion_ - an unauthenticated, remote, root code-execution vulnerability
+  in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+  FontForge, OpenVPN and a whole lot more.
+  ">
+
+<meta name="generator" content="Hugo 0.128.2">
+
+<meta property="og:title" content="Episode 232" />
+<meta name="twitter:title" content="Episode 232"/>
+<meta itemprop="name" content="Episode 232">
+<meta property="article:published_time" content="2024-07-05T19:18:00&#43;09:30" />
+<meta property="article:modified_time" content="2024-07-05T19:20:20&#43;09:30" />
+<meta property="og:updated_time" content="2024-07-05T19:20:20&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we deep-dive into one of the best vulnerabilities we&#39;ve seen in a long
+  time _regreSSHion_ - an unauthenticated, remote, root code-execution vulnerability
+  in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+  FontForge, OpenVPN and a whole lot more.
+  " />
+    <meta name="twitter:description" content="  This week we deep-dive into one of the best vulnerabilities we&#39;ve seen in a long
+  time _regreSSHion_ - an unauthenticated, remote, root code-execution vulnerability
+  in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+  FontForge, OpenVPN and a whole lot more.
+  " />
+    <meta itemprop="description" content="  This week we deep-dive into one of the best vulnerabilities we&#39;ve seen in a long
+  time _regreSSHion_ - an unauthenticated, remote, root code-execution vulnerability
+  in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+  FontForge, OpenVPN and a whole lot more.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-232/" />
+
+
+
+
+<title>Episode 232</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-232/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 232</h1>
+      <small>Posted on Friday, Jul 5, 2024 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we deep-dive into one of the best vulnerabilities we&rsquo;ve seen in a long
+time <em>regreSSHion</em> - an unauthenticated, remote, root code-execution vulnerability
+in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+FontForge, OpenVPN and a whole lot more.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E232.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we deep-dive into one of the best vulnerabilities we&rsquo;ve seen in a long
+time <em>regreSSHion</em> - an unauthenticated, remote, root code-execution vulnerability
+in OpenSSH. Plus we cover updates for Plasma Workspace, Ruby, Netplan,
+FontForge, OpenVPN and a whole lot more.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>39 unique CVEs addressed</p>
+<h3 id="usn-6843-1-plasma-workspace-vulnerability--01-23">[<a href="https://ubuntu.com/security/notices/USN-6843-1">USN-6843-1</a>] Plasma Workspace vulnerability (01:23)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-36041">CVE-2024-36041</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>KDE Session Manager - used for restoring previously running applications at next boot</li>
+<li>Provides ability to clients to connect to it via Inter-Client Exchange (ICE)
+protocol - protocol within X for allowing X clients to interact with
+one-another</li>
+<li>Since X supports remote clients, is important to authenticate connections - in
+this case KDE SM would authenticate to ensure the connection was coming from
+the local machine - but this could then allow any local user to connect to
+another users SM and hence use the session management features to set some
+arbitrary application to be run when the session is restored - as that other
+user</li>
+</ul>
+<h3 id="usn-6852-1-usn-6852-2-wget-vulnerability--02-42">[<a href="https://ubuntu.com/security/notices/USN-6852-1">USN-6852-1</a>, <a href="https://ubuntu.com/security/notices/USN-6852-2">USN-6852-2</a>] Wget vulnerability (02:42)</h3>
+<ul>
+<li>1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-38428">CVE-2024-38428</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>mishandled semicolons in userinfo of a URL - this is the <code>user@host:port</code>
+combination - so would possibly then use a different hostname than the one the
+user expected</li>
+</ul>
+<h3 id="usn-6853-1-ruby-vulnerability--03-12">[<a href="https://ubuntu.com/security/notices/USN-6853-1">USN-6853-1</a>] Ruby vulnerability (03:12)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27280">CVE-2024-27280</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Provides methods <code>ungetbyte()/ungetc()</code> to push-back characters on an IO
+stream - would possibly read beyond the end of the buffer - OOB read</li>
+</ul>
+<h3 id="usn-6851-1-netplan-vulnerabilities--03-37">[<a href="https://ubuntu.com/security/notices/USN-6851-1">USN-6851-1</a>] Netplan vulnerabilities (03:37)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-4968">CVE-2022-4968</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Two different issues
+<ul>
+<li>When configuring a Wireguard interface, would write the wireguard private
+key into the netplan interface configuration - but would then leave this
+with world-readable permissions</li>
+<li>This can either be specified as the filename to the private key OR the
+private key itself - so if had chosen to specify the actual private key,
+this is now world-readable to any other user
+<ul>
+<li>Fixed to use restrictive permissions on the generated configuration files
+and to fixup any existing ones as well</li>
+</ul>
+</li>
+<li>Failed to escape control characters in various backend files - a malicious
+application that is able to create a netplan configuration could then abuse
+this to get code execution as netplan</li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6851-2-netplan-regression">[<a href="https://ubuntu.com/security/notices/USN-6851-2">USN-6851-2</a>] Netplan regression</h3>
+<ul>
+<li>Affecting Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)</li>
+<li>Failed to properly do the permissions fixup on already existing files</li>
+</ul>
+<h3 id="usn-6854-1-openssl-vulnerability--05-10">[<a href="https://ubuntu.com/security/notices/USN-6854-1">USN-6854-1</a>] OpenSSL vulnerability (05:10)</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-40735">CVE-2022-40735</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Related to a historical vulnerability - <a href="https://dheatattack.gitlab.io/">https://dheatattack.gitlab.io/</a> - CVE-2002-20001</li>
+<li>DoS against Diffie-Hellman key exchange protocol - during key negotiation a
+client can trigger expensive CPU calculations -&gt; CPU-based DoS</li>
+</ul>
+<h3 id="usn-6856-1-fontforge-vulnerabilities--05-50">[<a href="https://ubuntu.com/security/notices/USN-6856-1">USN-6856-1</a>] FontForge vulnerabilities (05:50)</h3>
+<ul>
+<li>2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25082">CVE-2024-25082</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25081">CVE-2024-25081</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Uses various external utilities to do things like decompress archive files etc</li>
+<li>However, would do this via the <code>system()</code> system-call - which spawns a shell -
+so if a filename contained any shell metacharacters, could then just easily
+get arbitrary code execution</li>
+<li>Changed to use the utility functions from glib that do not spawn a shell and
+instead just exec() the expected command directly</li>
+</ul>
+<h3 id="usn-6857-1-squid-vulnerabilities--06-48">[<a href="https://ubuntu.com/security/notices/USN-6857-1">USN-6857-1</a>] Squid vulnerabilities (06:48)</h3>
+<ul>
+<li>6 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25617">CVE-2024-25617</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-50269">CVE-2023-50269</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49286">CVE-2023-49286</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49285">CVE-2023-49285</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-41318">CVE-2022-41318</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-28651">CVE-2021-28651</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6566-2-sqlite-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6566-2">USN-6566-2</a>] SQLite vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-7104">CVE-2023-7104</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-5615-3-sqlite-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-5615-3">USN-5615-3</a>] SQLite vulnerability</h3>
+<ul>
+<li>3 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2021-20223">CVE-2021-20223</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35527">CVE-2020-35527</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2020-35525">CVE-2020-35525</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6855-1-libcdio-vulnerability--06-58">[<a href="https://ubuntu.com/security/notices/USN-6855-1">USN-6855-1</a>] libcdio vulnerability (06:58)</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-36600">CVE-2024-36600</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>ISO file parser - used strcpy() instead of strncpy() so could be made to quite
+easily achieve buffer overflow and hence possible code-execution</li>
+</ul>
+<h3 id="usn-6858-1-espeak-ng-vulnerabilities--07-33">[<a href="https://ubuntu.com/security/notices/USN-6858-1">USN-6858-1</a>] eSpeak NG vulnerabilities (07:33)</h3>
+<ul>
+<li>5 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-49994">CVE-2023-49994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49993">CVE-2023-49993</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49992">CVE-2023-49992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49991">CVE-2023-49991</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-49990">CVE-2023-49990</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>speech synthesiser - pass file to it and it will read it aloud</li>
+<li>various buffer overflows when parsing different formats - found by a researcher via fuzzing</li>
+</ul>
+<h3 id="usn-6844-2-cups-regression--07-51">[<a href="https://ubuntu.com/security/notices/USN-6844-2">USN-6844-2</a>] CUPS regression (07:51)</h3>
+<ul>
+<li>Affecting Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)</li>
+<li><a href="/episode-231/#usn-6844-1-cups-vulnerability--04-08">[USN-6844-1] CUPS vulnerability from Episode 231</a></li>
+</ul>
+<h3 id="usn-6860-1-openvpn-vulnerabilities--07-57">[<a href="https://ubuntu.com/security/notices/USN-6860-1">USN-6860-1</a>] OpenVPN vulnerabilities (07:57)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-5594">CVE-2024-5594</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-28882">CVE-2024-28882</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Client was able to keep the session alive even when the server had been
+instructed to disconnect the client</li>
+<li>Client was able to send junk/non-printable characters in the control channel
+since would then get logged and possibly allow to corrupt the log file or
+cause high CPU load</li>
+</ul>
+<h3 id="usn-6862-1-firefox-vulnerabilities--08-27">[<a href="https://ubuntu.com/security/notices/USN-6862-1">USN-6862-1</a>] Firefox vulnerabilities (08:27)</h3>
+<ul>
+<li>13 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-5696">CVE-2024-5696</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5695">CVE-2024-5695</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5694">CVE-2024-5694</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5688">CVE-2024-5688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5701">CVE-2024-5701</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5700">CVE-2024-5700</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5699">CVE-2024-5699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5698">CVE-2024-5698</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5697">CVE-2024-5697</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5693">CVE-2024-5693</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5691">CVE-2024-5691</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5690">CVE-2024-5690</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-5689">CVE-2024-5689</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><a href="https://www.mozilla.org/en-US/firefox/127.0.2/releasenotes/">127.0.2</a></li>
+</ul>
+<h3 id="usn-6859-1-openssh-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6859-1">USN-6859-1</a>] OpenSSH vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS), Mantic (23.10), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-6387">CVE-2024-6387</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="deep-dive-into-regresshion-remote-unauthenticated-code-execution-vulnerablity-in-openssh">Deep-dive into regreSSHion - Remote Unauthenticated Code Execution Vulnerablity in OpenSSH</h3>
+<ul>
+<li><a href="https://blog.qualys.com/vulnerabilities-threat-research/2024/07/01/regresshion-remote-unauthenticated-code-execution-vulnerability-in-openssh-server">https://blog.qualys.com/vulnerabilities-threat-research/2024/07/01/regresshion-remote-unauthenticated-code-execution-vulnerability-in-openssh-server</a></li>
+<li><a href="https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt">https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt</a></li>
+<li>First notified late last week by Qualys of a pending update for OpenSSH which
+fixes a newly discovered unauthenticated remote code execution vulnerability -
+<strong>as root</strong> - this is about as bad as it can get
+<ul>
+<li>Exactly the kind of thing that &ldquo;Jia Tan&rdquo; spent all that time working on in
+xz-utils to try and achieve (<a href="/episode-224/#xz-utils-backdoor-and-ubuntu">xz-utils backdoor and Ubuntu from Episode 224</a>)</li>
+</ul>
+</li>
+<li>Qualys are quite specific to note that this only affects OpenSSH on glibc (so
+distros which use say musl are not affected) - due to the intricacies of the
+vulnerablity and how they exploit it</li>
+<li>Also OpenSSH is quite carefully designed - employs privilege separation to try
+keep the privileged part as minimal as possible - but in this case, the vuln
+is in this privielged part, hence why code execution as root</li>
+<li>OpenSSH developers released 9.8p1 on Monday this week which has some quite
+significant refactoring to help address this vuln - in particular it includes
+functionality similar to fail2ban to penalise clients that appear to be
+malicious AND it employs even more privilege separation than before</li>
+<li>Qualys are quite careful to say that they think OpenSSH is one of the most
+secure pieces of software in the world &ldquo;near-flawless implementation&rdquo; with
+inspirational defense-in-depth - but clearly bugs still slip through</li>
+<li>In this case is a signal handler race condition
+<ul>
+<li>Diversion - what are signals?
+<ul>
+<li><a href="https://manpages.ubuntu.com/manpages/noble/en/man7/signal.7.html">signal (7)</a>
+<ul>
+<li>simple, asynchronous form of IPC which allows sending a single piece of information - the type of signal
+<ul>
+<li>many different types - e.g. SIGSEGV for invalid memory access, or
+SIGFPE for a math error - or can be sent by other processes - SIGTERM
+/ SIGKILL / SIGINT</li>
+<li>process can then set itself up so that a particular signal handler
+function of its choosing is invoked for a given signal</li>
+<li>when a signal is sent to a process, it is queued up and then delivered
+to a process the next time the kernel returns from kernel space to
+that process - ie. when returning from a system-call or scheduling of
+that process</li>
+<li>to deliver it, kernel constructs an entirely new stack frame and
+passes execution to the signal handler function - this runs and then
+eventually returns control back to the original thread of the process</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Signal handlers are special - since they run on their own special stack
+and outside of the normal thread of execution of the process, they can
+potentially cause issues if they do things which modify the global state
+of the process - many regular functions are off-limits within signal
+handlers since they can inadvertently modify such global state
+<ul>
+<li>only some functions are hence <a href="https://manpages.ubuntu.com/manpages/noble/en/man7/signal-safety.7.html">async-signal-safe (7)</a>
+<ul>
+<li>list contains a lot of functions BUT many which might ordinarily get
+used are not included - in particular <a href="https://manpages.ubuntu.com/manpages/noble/man3/malloc.3.html"><code>malloc()/free()</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This vuln was caused then by use of one of these async unsafe functions</li>
+</ul>
+</li>
+<li>OpenSSH has a functionality called LoginGraceTime which allows an admin to
+configure how long OpenSSH will allow a client to take to login - if they
+don&rsquo;t log in in that time then it closes the connection
+<ul>
+<li>Since this code is all single-threaded, can&rsquo;t just have the code which is
+listening to the client connection bail out easily - so instead this is
+implemented via the SIGALARM signal - used by the <a href="https://manpages.ubuntu.com/manpages/noble/en/man2/alarm.2.html">alarm (2)</a> system call to
+configure the SIGALARM signal to be delivered to a process some number of
+seconds later</li>
+<li>Unfortunately in the signal handler function for this SIGALARM, OpenSSH
+can end up calling <code>syslog()</code> when trying to which is one of those unsafe functions
+<ul>
+<li>in glibc <code>syslog()</code> will potentially call <code>malloc()/free()</code> which as we
+mentioned earlier is not async safe
+<ul>
+<li>it is possible that the original thread may be in the middle of a call
+to <code>malloc() / free()</code> and then <code>SIGALARM</code> signal is delivered (since
+<code>malloc()/free()</code> calls <a href="https://manpages.ubuntu.com/manpages/noble/man2/brk.2.html">brk (2)</a> system call under the hood and so a
+pending signal <code>SIGALARM</code> may be delivered on return from <code>brk()</code>)</li>
+<li>both the original thread and the signal handler are then calling
+<code>malloc()</code> at the same time - corrupting the global state of the heap
+etc</li>
+<li>as we know, if can corrupt the heap state &lsquo;correctly&rsquo; can get code
+execution</li>
+<li>but requires the ability to win this race</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In fact, this is a reoccurrence of historical <a href="https://ubuntu.com/security/CVE-2006-5051">CVE-2006-5051</a> - discovered by
+Mark Dowd but subsequently fixed
+<ul>
+<li>code in question was refactored in October 2020 and released in OpenSSH
+8.5p1 which would then call <code>syslog()</code> during the <code>SIGALARM</code> signal handler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>To exploit this, Qualys take inspiration from a <a href="https://lcamtuf.coredump.cx/signals.txt">2001 paper by Michal Zalewski</a>
+(aka lcamtuf previously Director of Information Security Engineering at Google
+and now VP Security Engineering at Snap (ie Snapchat etc))</li>
+<li>Even so, it is an incredibly difficult path to get to a working exploit - both
+since this is a race-condition so it is very hard to get the right timing
+conditions and second due to defence-in-depth measures like ASLR
+<ul>
+<li>First develop an exploit for the original 2006 CVE against a couple older versions
+<ul>
+<li>OpenSSH 3.4p1 on Debian Woody
+<ul>
+<li>even on i386 which has much worse ASLR than amd64, takes 10,000 tries to
+win the race - even then with 10 concurrent connections and each with a
+LoginGraceTime of 5 minutes - ~1week to get a remote root shell</li>
+</ul>
+</li>
+<li>OpenSSH 4.2p1 on Ubuntu 6.06 (Dapper Drake) - first LTS version of
+Ubuntu - this vuln was patched during the lifetime of 6.06 release but
+original install media still contains the unpatched version
+<ul>
+<li>Similarly, takes ~10,000 tries to win the race - with LoginGraceTime of
+only 2 minutes can reduce the time to get a remote root shell to 1-2
+days</li>
+</ul>
+</li>
+<li>Finally, OpenSSH 9.2p1 from current Debian stable on i386
+<ul>
+<li>10,000 tries - now 100 connections with 2 minutes grace time - in
+practice still ~6-8 hours since still have to guess the address used by
+glibc and due to ASLR is only 50% accurate</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All of these are lab conditions - VMs with quite stable network - and only on
+i386 - but Qualys say they were starting on an exploit even for amd64 but
+didn&rsquo;t continue after they noticed a related bug report about this
+async-unsafe signal handling - so decided that may draw attention to the issue
+and others may discover the vuln and start exploiting it - so best to disclose
+it in its current state</li>
+<li>For Ubuntu, since this only affects version since 8.5p1, only 22.04 LTS
+onwards were affected - we released patches on Monday - unattended-upgrades is
+enabled by default on all relases since 16.04 LTS anyway - checks for and
+installs security updates every 24 hours - so any affected Ubuntu users would
+likely have been automatically patched within ~24 of the vuln becoming public
+(and the restart logic in OpenSSH would have restarted the service when it got
+upgraded as well)</li>
+<li>Other thing which is more internal for Ubuntu is that Qualys explicitly called
+out OpenSSH in 24.04 LTS as having a deficiency in the enablement of ASLR -
+since we are using systemd socket activation we disable reexec support for
+OpenSSH - so it never reexecutes itself for its child processes - so they
+never get the benefit of ASLR - BUT by chance it also makes this unexploitable
+since it changes the use of <code>syslog()</code> within OpenSSH so that <code>syslog()</code> gets
+called early on in the use of OpenSSH and so then when it gets called in the
+SIGALARM signal handler it doesn&rsquo;t do the same memory allocation and hence
+can&rsquo;t be used to corrupt memory and get code execution</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-231/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2024 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-232\/",
+      text: "Episode 232"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+
