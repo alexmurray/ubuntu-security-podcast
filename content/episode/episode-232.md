@@ -7,7 +7,7 @@ description = """
   FontForge, OpenVPN and a whole lot more.
   """
 date = 2024-07-05T19:18:00+09:30
-lastmod = 2024-07-05T19:20:20+09:30
+lastmod = 2024-07-05T19:28:11+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -206,6 +206,7 @@ FontForge, OpenVPN and a whole lot more.
 
 -   <https://blog.qualys.com/vulnerabilities-threat-research/2024/07/01/regresshion-remote-unauthenticated-code-execution-vulnerability-in-openssh-server>
 -   <https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt>
+-   <https://ubuntu.com/blog/ubuntu-regresshion-security-fix>
 -   First notified late last week by Qualys of a pending update for OpenSSH which
     fixes a newly discovered unauthenticated remote code execution vulnerability -
     **as root** - this is about as bad as it can get
