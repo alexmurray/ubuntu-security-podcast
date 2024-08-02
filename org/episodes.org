@@ -8,6 +8,1119 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 233
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-233
+:EXPORT_DATE: 2024-08-02 17:05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E233.mp3 :podcast_duration "1447" :podcast_bytes "22580692" :permalink "https://ubuntusecuritypodcast.org/episode-233/" :guid ba8f315e6aff94fd8f0f481fef53b3cb064a5383e1e2673a7dfe3998fdf2d50476f22f2050b82f7f7f6ab8a51ce3a7ceebef1739cce5b8a2f341c5cdab896d7e
+:END:
+#+begin_description
+This week we take a look at the recent Crowdstrike outage and what we can learn
+from it compared to the testing and release process for security updates in
+Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+#+end_description
+** Overview
+This week we take a look at the recent Crowdstrike outage and what we can learn
+from it compared to the testing and release process for security updates in
+Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+** This week in Ubuntu Security Updates
+462 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6915-1][USN-6915-1]]] poppler vulnerability (01:35)
+- 1 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-6239][CVE-2024-6239]] @@html:<!-- medium -->@@
+- Installed by default in Ubuntu due to use by cups
+- PDF document format describes a Catalog which has a tree of destinations -
+  essentially hyperlinks within the document. These can be either a page number
+  etc or a named location within the document. If open a crafted document with a
+  missing name property for a destination - name would then be NULL and would
+  trigger a NULL ptr deref -> crash -> DoS
+
+*** [[[https://ubuntu.com/security/notices/USN-6913-1][USN-6913-1]]] phpCAS vulnerability (02:26)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-39369][CVE-2022-39369]] @@html:<!-- medium -->@@
+- Authentication library for PHP to allow PHP applications to authenticates
+  users against a Central Authentication Server (ie. SSO).
+- When used for SSO, a client who is trying to use a web application gets
+  directed to the CAS. The CAS then authenticates the user and returns a service
+  ticket - the client then needs to validate this ticket with the CAS since it
+  could have possibly been injected via the application. To do this, pass the
+  ticket along with its own service identifier to CAS - and if this succeeds is
+  provided with the details of which user was authenticated etc.
+- For clients, previously would use HTTP headers to determine where the CAS
+  server was to authenticate the ticket. Since these can be manipulated by a
+  malicious application, could essentially redirect the client to send the
+  ticket to the attacker who could then use that to impersonate the client and
+  login as the user.
+- Fix requires a refactor to include an additional API parameter which specifies
+  either a fixed CAS server for the client to use, or a mechanism to
+  auto-discover this in a secure way - either way, applications using phpCAS now
+  need to be updated.
+
+*** [[[https://ubuntu.com/security/notices/USN-6914-1][USN-6914-1]]] OCS Inventory vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-39369][CVE-2022-39369]] @@html:<!-- medium -->@@
+- Same as above since has an embedded copy of phpCAS
+
+*** [[[https://ubuntu.com/security/notices/USN-6916-1][USN-6916-1]]] Lua vulnerabilities (04:44)
+- 2 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-33099][CVE-2022-33099]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-28805][CVE-2022-28805]] @@html:<!-- medium -->@@
+- Heap buffer over-read and a possible heap buffer over-flow via recursive error
+  handling - looks like both require to be interpreting malicious code
+
+*** [[[https://ubuntu.com/security/notices/USN-6920-1][USN-6920-1]]] EDK II vulnerabilities (05:04)
+- 5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2019-0160][CVE-2019-0160]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2018-3613][CVE-2018-3613]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2018-12183][CVE-2018-12183]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2018-12182][CVE-2018-12182]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2017-5731][CVE-2017-5731]] @@html:<!-- medium -->@@
+- UEFI firmware implementation in qemu etc
+- Various missing bounds checks -> stack and heap buffer overflows -> DoS or
+  code execution in BIOS context -> privilege escalation within VM
+
+*** [[[https://ubuntu.com/security/notices/USN-6928-1][USN-6928-1]]] Python vulnerabilities (05:49)
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-4032][CVE-2024-4032]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-0397][CVE-2024-0397]] @@html:<!-- medium -->@@
+- Memory race in the ssl module - can call into various functions to get
+  certificate information at the same time as certs are loaded if happening to
+  be doing a TLS handshake with a certificate directory configured - all via
+  different threads. Python would then possibly return inconsistent results
+  leading to various issues
+- Occurs since ssl module is implemented in C to interface with openssl and did
+  not properly lock access to the certificate store
+
+*** [[[https://ubuntu.com/security/notices/USN-6929-1][USN-6929-1]], [[https://ubuntu.com/security/notices/USN-6930-1][USN-6930-1]]] OpenJDK 8 and OpenJDK 11 vulnerabilities (06:52)
+- 6 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-21147][CVE-2024-21147]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21145][CVE-2024-21145]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21144][CVE-2024-21144]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21140][CVE-2024-21140]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21138][CVE-2024-21138]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21131][CVE-2024-21131]] @@html:<!-- medium -->@@
+- Latest upstream releases of OpenJDK 8 and 11
+- 8u422-b05-1,  11.0.24+8
+- Fixes various issues in the Hotspot and Concurrency components
+
+*** [[[https://ubuntu.com/security/notices/USN-6931-1][USN-6931-1]], [[https://ubuntu.com/security/notices/USN-6932-1][USN-6932-1]]] OpenJDK 17 and OpenJDK 21 vulnerabilities (07:11)
+- 5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-21147][CVE-2024-21147]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21145][CVE-2024-21145]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21140][CVE-2024-21140]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21138][CVE-2024-21138]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21131][CVE-2024-21131]] @@html:<!-- medium -->@@
+- Latest upstream releases of OpenJDK 17 and 21
+- 17.0.12+7,  21.0.4+7
+- Fixes the same issues in the Hotspot component
+
+*** [[[https://ubuntu.com/security/notices/USN-6934-1][USN-6934-1]]] MySQL vulnerabilities (07:29)
+- 15 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-21185][CVE-2024-21185]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21179][CVE-2024-21179]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21177][CVE-2024-21177]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21173][CVE-2024-21173]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21171][CVE-2024-21171]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21165][CVE-2024-21165]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21163][CVE-2024-21163]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21162][CVE-2024-21162]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21142][CVE-2024-21142]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21134][CVE-2024-21134]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21130][CVE-2024-21130]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21129][CVE-2024-21129]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21127][CVE-2024-21127]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21125][CVE-2024-21125]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-20996][CVE-2024-20996]] @@html:<!-- medium -->@@
+- Also latest upstream release
+- 8.0.39
+- Bug fixes, possible new features and incompatible changes - consult release
+  notes:
+  - https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-38.html
+  - https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-39.html
+  - https://www.oracle.com/security-alerts/cpujul2024.html
+
+*** [[[https://ubuntu.com/security/notices/USN-6917-1][USN-6917-1]]] Linux kernel vulnerabilities (07:57)
+- 156 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-35933][CVE-2024-35933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35910][CVE-2024-35910]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27393][CVE-2024-27393]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27004][CVE-2024-27004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27396][CVE-2024-27396]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36029][CVE-2024-36029]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26955][CVE-2024-26955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26966][CVE-2024-26966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26811][CVE-2024-26811]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35871][CVE-2024-35871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52699][CVE-2023-52699]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35796][CVE-2024-35796]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35851][CVE-2024-35851]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35885][CVE-2024-35885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35813][CVE-2024-35813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35789][CVE-2024-35789]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35825][CVE-2024-35825]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26994][CVE-2024-26994]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35815][CVE-2024-35815]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27395][CVE-2024-27395]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26981][CVE-2024-26981]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35886][CVE-2024-35886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26931][CVE-2024-26931]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35791][CVE-2024-35791]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35849][CVE-2024-35849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35978][CVE-2024-35978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35895][CVE-2024-35895]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35918][CVE-2024-35918]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35902][CVE-2024-35902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26926][CVE-2024-26926]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35934][CVE-2024-35934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35807][CVE-2024-35807]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35805][CVE-2024-35805]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36008][CVE-2024-36008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26950][CVE-2024-26950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26973][CVE-2024-26973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35898][CVE-2024-35898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35955][CVE-2024-35955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36004][CVE-2024-36004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36006][CVE-2024-36006]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35990][CVE-2024-35990]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35944][CVE-2024-35944]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36007][CVE-2024-36007]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35896][CVE-2024-35896]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35819][CVE-2024-35819]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26988][CVE-2024-26988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35872][CVE-2024-35872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36025][CVE-2024-36025]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26957][CVE-2024-26957]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35897][CVE-2024-35897]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27016][CVE-2024-27016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35806][CVE-2024-35806]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35927][CVE-2024-35927]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48808][CVE-2022-48808]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35960][CVE-2024-35960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27001][CVE-2024-27001]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35970][CVE-2024-35970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35988][CVE-2024-35988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36005][CVE-2024-36005]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35821][CVE-2024-35821]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35925][CVE-2024-35925]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26961][CVE-2024-26961]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35817][CVE-2024-35817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26922][CVE-2024-26922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26976][CVE-2024-26976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35899][CVE-2024-35899]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35984][CVE-2024-35984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26929][CVE-2024-26929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27018][CVE-2024-27018]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35907][CVE-2024-35907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35884][CVE-2024-35884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52488][CVE-2023-52488]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35982][CVE-2024-35982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26934][CVE-2024-26934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26935][CVE-2024-26935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35973][CVE-2024-35973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26958][CVE-2024-26958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27008][CVE-2024-27008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35809][CVE-2024-35809]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26951][CVE-2024-26951]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35900][CVE-2024-35900]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35888][CVE-2024-35888]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26965][CVE-2024-26965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26828][CVE-2024-26828]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35935][CVE-2024-35935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35857][CVE-2024-35857]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26642][CVE-2024-26642]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26989][CVE-2024-26989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35893][CVE-2024-35893]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35877][CVE-2024-35877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27009][CVE-2024-27009]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35785][CVE-2024-35785]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35905][CVE-2024-35905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27020][CVE-2024-27020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35901][CVE-2024-35901]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26956][CVE-2024-26956]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26977][CVE-2024-26977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26969][CVE-2024-26969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26810][CVE-2024-26810]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26813][CVE-2024-26813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35930][CVE-2024-35930]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26970][CVE-2024-26970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26687][CVE-2024-26687]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27015][CVE-2024-27015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35847][CVE-2024-35847]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26999][CVE-2024-26999]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35940][CVE-2024-35940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35890][CVE-2024-35890]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26814][CVE-2024-26814]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35958][CVE-2024-35958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35804][CVE-2024-35804]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26629][CVE-2024-26629]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26974][CVE-2024-26974]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52880][CVE-2023-52880]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26937][CVE-2024-26937]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35922][CVE-2024-35922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35854][CVE-2024-35854]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27013][CVE-2024-27013]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35853][CVE-2024-35853]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27000][CVE-2024-27000]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35989][CVE-2024-35989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35852][CVE-2024-35852]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35823][CVE-2024-35823]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36020][CVE-2024-36020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36031][CVE-2024-36031]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26923][CVE-2024-26923]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26654][CVE-2024-26654]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26925][CVE-2024-26925]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35855][CVE-2024-35855]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35997][CVE-2024-35997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35822][CVE-2024-35822]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35938][CVE-2024-35938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35915][CVE-2024-35915]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35912][CVE-2024-35912]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35936][CVE-2024-35936]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35969][CVE-2024-35969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27059][CVE-2024-27059]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26964][CVE-2024-26964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27437][CVE-2024-27437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26960][CVE-2024-26960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35950][CVE-2024-35950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26817][CVE-2024-26817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26984][CVE-2024-26984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26812][CVE-2024-26812]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35879][CVE-2024-35879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26996][CVE-2024-26996]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26993][CVE-2024-26993]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25739][CVE-2024-25739]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24861][CVE-2024-24861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-23307][CVE-2024-23307]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-38096][CVE-2022-38096]] @@html:<!-- medium -->@@
+- 5.15 - Azure + FDE (CVM)
+
+*** [[[https://ubuntu.com/security/notices/USN-6918-1][USN-6918-1]]] Linux kernel vulnerabilities
+- 180 CVEs addressed in Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35932][CVE-2024-35932]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35937][CVE-2024-35937]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27006][CVE-2024-27006]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35960][CVE-2024-35960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27011][CVE-2024-27011]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35924][CVE-2024-35924]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35946][CVE-2024-35946]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35942][CVE-2024-35942]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35921][CVE-2024-35921]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35908][CVE-2024-35908]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26811][CVE-2024-26811]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27008][CVE-2024-27008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35871][CVE-2024-35871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36019][CVE-2024-36019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35965][CVE-2024-35965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35973][CVE-2024-35973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26981][CVE-2024-26981]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27009][CVE-2024-27009]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36022][CVE-2024-36022]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35910][CVE-2024-35910]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35907][CVE-2024-35907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35860][CVE-2024-35860]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35951][CVE-2024-35951]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26924][CVE-2024-26924]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26921][CVE-2024-26921]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35901][CVE-2024-35901]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35972][CVE-2024-35972]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35889][CVE-2024-35889]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27017][CVE-2024-27017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35913][CVE-2024-35913]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35936][CVE-2024-35936]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36025][CVE-2024-36025]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35961][CVE-2024-35961]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35977][CVE-2024-35977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35902][CVE-2024-35902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26817][CVE-2024-26817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26994][CVE-2024-26994]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52699][CVE-2023-52699]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35868][CVE-2024-35868]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35899][CVE-2024-35899]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35888][CVE-2024-35888]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26995][CVE-2024-26995]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35865][CVE-2024-35865]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26993][CVE-2024-26993]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35863][CVE-2024-35863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35970][CVE-2024-35970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35943][CVE-2024-35943]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35875][CVE-2024-35875]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35978][CVE-2024-35978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27005][CVE-2024-27005]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35909][CVE-2024-35909]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35957][CVE-2024-35957]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35950][CVE-2024-35950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26986][CVE-2024-26986]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36020][CVE-2024-36020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35952][CVE-2024-35952]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26928][CVE-2024-26928]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35878][CVE-2024-35878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35954][CVE-2024-35954]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26998][CVE-2024-26998]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36024][CVE-2024-36024]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26936][CVE-2024-26936]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27018][CVE-2024-27018]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35900][CVE-2024-35900]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35940][CVE-2024-35940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35985][CVE-2024-35985]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35944][CVE-2024-35944]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35958][CVE-2024-35958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35864][CVE-2024-35864]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35975][CVE-2024-35975]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27002][CVE-2024-27002]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36018][CVE-2024-36018]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35974][CVE-2024-35974]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26926][CVE-2024-26926]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35877][CVE-2024-35877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35916][CVE-2024-35916]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35934][CVE-2024-35934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35930][CVE-2024-35930]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35898][CVE-2024-35898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35893][CVE-2024-35893]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35887][CVE-2024-35887]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35929][CVE-2024-35929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26923][CVE-2024-26923]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35911][CVE-2024-35911]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35919][CVE-2024-35919]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26984][CVE-2024-26984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27016][CVE-2024-27016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35926][CVE-2024-35926]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35872][CVE-2024-35872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35922][CVE-2024-35922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27007][CVE-2024-27007]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35931][CVE-2024-35931]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36021][CVE-2024-36021]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35953][CVE-2024-35953]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27004][CVE-2024-27004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27001][CVE-2024-27001]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27014][CVE-2024-27014]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35866][CVE-2024-35866]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27021][CVE-2024-27021]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35870][CVE-2024-35870]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35925][CVE-2024-35925]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35891][CVE-2024-35891]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26982][CVE-2024-26982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35879][CVE-2024-35879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35979][CVE-2024-35979]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35912][CVE-2024-35912]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35982][CVE-2024-35982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27015][CVE-2024-27015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26985][CVE-2024-26985]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35861][CVE-2024-35861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35939][CVE-2024-35939]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27003][CVE-2024-27003]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35945][CVE-2024-35945]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35967][CVE-2024-35967]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35966][CVE-2024-35966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26983][CVE-2024-26983]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35894][CVE-2024-35894]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35896][CVE-2024-35896]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36027][CVE-2024-36027]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35895][CVE-2024-35895]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26987][CVE-2024-26987]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35873][CVE-2024-35873]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26996][CVE-2024-26996]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26991][CVE-2024-26991]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27013][CVE-2024-27013]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36026][CVE-2024-36026]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26922][CVE-2024-26922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35897][CVE-2024-35897]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35917][CVE-2024-35917]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35968][CVE-2024-35968]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35890][CVE-2024-35890]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35904][CVE-2024-35904]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35867][CVE-2024-35867]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35933][CVE-2024-35933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35918][CVE-2024-35918]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35920][CVE-2024-35920]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26997][CVE-2024-26997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35981][CVE-2024-35981]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35963][CVE-2024-35963]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26989][CVE-2024-26989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26999][CVE-2024-26999]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35892][CVE-2024-35892]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27010][CVE-2024-27010]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26992][CVE-2024-26992]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35935][CVE-2024-35935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27022][CVE-2024-27022]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35971][CVE-2024-35971]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35956][CVE-2024-35956]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35862][CVE-2024-35862]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35969][CVE-2024-35969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27012][CVE-2024-27012]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26990][CVE-2024-26990]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35885][CVE-2024-35885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26925][CVE-2024-26925]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35905][CVE-2024-35905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35914][CVE-2024-35914]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35884][CVE-2024-35884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35927][CVE-2024-35927]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35882][CVE-2024-35882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26980][CVE-2024-26980]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35964][CVE-2024-35964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35955][CVE-2024-35955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27020][CVE-2024-27020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35980][CVE-2024-35980]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35903][CVE-2024-35903]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35886][CVE-2024-35886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35883][CVE-2024-35883]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35959][CVE-2024-35959]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35915][CVE-2024-35915]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35880][CVE-2024-35880]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27000][CVE-2024-27000]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35938][CVE-2024-35938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35869][CVE-2024-35869]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36023][CVE-2024-36023]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26988][CVE-2024-26988]] @@html:<!-- medium -->@@
+- 6.8 - Oracle
+
+*** [[[https://ubuntu.com/security/notices/USN-6919-1][USN-6919-1]]] Linux kernel vulnerabilities
+- 304 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52880][CVE-2023-52880]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35849][CVE-2024-35849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27073][CVE-2024-27073]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35934][CVE-2024-35934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27038][CVE-2024-27038]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26973][CVE-2024-26973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35853][CVE-2024-35853]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27047][CVE-2024-27047]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36007][CVE-2024-36007]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27024][CVE-2024-27024]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26750][CVE-2024-26750]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26833][CVE-2024-26833]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26960][CVE-2024-26960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26929][CVE-2024-26929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52488][CVE-2023-52488]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27417][CVE-2024-27417]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26922][CVE-2024-26922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26863][CVE-2024-26863]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35890][CVE-2024-35890]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27015][CVE-2024-27015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27395][CVE-2024-27395]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26779][CVE-2024-26779]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27419][CVE-2024-27419]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27013][CVE-2024-27013]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26981][CVE-2024-26981]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26798][CVE-2024-26798]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26895][CVE-2024-26895]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35922][CVE-2024-35922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52699][CVE-2023-52699]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26883][CVE-2024-26883]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35871][CVE-2024-35871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27410][CVE-2024-27410]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26884][CVE-2024-26884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26885][CVE-2024-26885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27074][CVE-2024-27074]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26751][CVE-2024-26751]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26857][CVE-2024-26857]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26848][CVE-2024-26848]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26901][CVE-2024-26901]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35844][CVE-2024-35844]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35809][CVE-2024-35809]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26687][CVE-2024-26687]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35988][CVE-2024-35988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26835][CVE-2024-26835]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26764][CVE-2024-26764]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27020][CVE-2024-27020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35907][CVE-2024-35907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35886][CVE-2024-35886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27077][CVE-2024-27077]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26787][CVE-2024-26787]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26950][CVE-2024-26950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26974][CVE-2024-26974]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35905][CVE-2024-35905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27008][CVE-2024-27008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26744][CVE-2024-26744]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35935][CVE-2024-35935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26988][CVE-2024-26988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26748][CVE-2024-26748]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26776][CVE-2024-26776]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26907][CVE-2024-26907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27053][CVE-2024-27053]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35970][CVE-2024-35970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35950][CVE-2024-35950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35854][CVE-2024-35854]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35822][CVE-2024-35822]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26961][CVE-2024-26961]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26733][CVE-2024-26733]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26773][CVE-2024-26773]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27390][CVE-2024-27390]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35888][CVE-2024-35888]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36029][CVE-2024-36029]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26643][CVE-2024-26643]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35821][CVE-2024-35821]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35819][CVE-2024-35819]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26809][CVE-2024-26809]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35984][CVE-2024-35984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26851][CVE-2024-26851]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35940][CVE-2024-35940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26654][CVE-2024-26654]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35910][CVE-2024-35910]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26891][CVE-2024-26891]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26793][CVE-2024-26793]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35938][CVE-2024-35938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26736][CVE-2024-26736]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26583][CVE-2024-26583]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26870][CVE-2024-26870]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35828][CVE-2024-35828]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35885][CVE-2024-35885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35958][CVE-2024-35958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26889][CVE-2024-26889]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35899][CVE-2024-35899]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26839][CVE-2024-26839]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26894][CVE-2024-26894]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26937][CVE-2024-26937]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35925][CVE-2024-35925]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35933][CVE-2024-35933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26771][CVE-2024-26771]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26923][CVE-2024-26923]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26852][CVE-2024-26852]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26924][CVE-2024-26924]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26872][CVE-2024-26872]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26774][CVE-2024-26774]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35930][CVE-2024-35930]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27065][CVE-2024-27065]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26993][CVE-2024-26993]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27034][CVE-2024-27034]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36020][CVE-2024-36020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26802][CVE-2024-26802]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26976][CVE-2024-26976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48808][CVE-2022-48808]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35847][CVE-2024-35847]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26996][CVE-2024-26996]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36025][CVE-2024-36025]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52652][CVE-2023-52652]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27403][CVE-2024-27403]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52447][CVE-2023-52447]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27037][CVE-2024-27037]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27413][CVE-2024-27413]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26749][CVE-2024-26749]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26956][CVE-2024-26956]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26958][CVE-2024-26958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26754][CVE-2024-26754]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26812][CVE-2024-26812]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26772][CVE-2024-26772]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27436][CVE-2024-27436]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27437][CVE-2024-27437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35912][CVE-2024-35912]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35805][CVE-2024-35805]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26845][CVE-2024-26845]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35990][CVE-2024-35990]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35791][CVE-2024-35791]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26906][CVE-2024-26906]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27039][CVE-2024-27039]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26915][CVE-2024-26915]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26970][CVE-2024-26970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26782][CVE-2024-26782]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26813][CVE-2024-26813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52645][CVE-2023-52645]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26935][CVE-2024-26935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27076][CVE-2024-27076]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35823][CVE-2024-35823]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26743][CVE-2024-26743]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26846][CVE-2024-26846]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26811][CVE-2024-26811]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26989][CVE-2024-26989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26642][CVE-2024-26642]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26659][CVE-2024-26659]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26766][CVE-2024-26766]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27393][CVE-2024-27393]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26859][CVE-2024-26859]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35898][CVE-2024-35898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35893][CVE-2024-35893]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52640][CVE-2023-52640]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26795][CVE-2024-26795]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27009][CVE-2024-27009]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26791][CVE-2024-26791]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27043][CVE-2024-27043]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26934][CVE-2024-26934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27051][CVE-2024-27051]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26804][CVE-2024-26804]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26878][CVE-2024-26878]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27030][CVE-2024-27030]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27000][CVE-2024-27000]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26777][CVE-2024-26777]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35825][CVE-2024-35825]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27415][CVE-2024-27415]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27001][CVE-2024-27001]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27004][CVE-2024-27004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26769][CVE-2024-26769]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26816][CVE-2024-26816]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35807][CVE-2024-35807]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35900][CVE-2024-35900]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35851][CVE-2024-35851]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27052][CVE-2024-27052]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26805][CVE-2024-26805]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35804][CVE-2024-35804]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35944][CVE-2024-35944]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35895][CVE-2024-35895]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26897][CVE-2024-26897]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27045][CVE-2024-27045]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26814][CVE-2024-26814]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26801][CVE-2024-26801]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26874][CVE-2024-26874]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35982][CVE-2024-35982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35915][CVE-2024-35915]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26820][CVE-2024-26820]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26603][CVE-2024-26603]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35997][CVE-2024-35997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26688][CVE-2024-26688]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27054][CVE-2024-27054]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26828][CVE-2024-26828]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35857][CVE-2024-35857]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52662][CVE-2023-52662]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35989][CVE-2024-35989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36005][CVE-2024-36005]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35785][CVE-2024-35785]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27396][CVE-2024-27396]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35884][CVE-2024-35884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52650][CVE-2023-52650]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26882][CVE-2024-26882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26879][CVE-2024-26879]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26898][CVE-2024-26898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27388][CVE-2024-27388]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35879][CVE-2024-35879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35918][CVE-2024-35918]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35978][CVE-2024-35978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26585][CVE-2024-26585]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35872][CVE-2024-35872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52497][CVE-2023-52497]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26778][CVE-2024-26778]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26999][CVE-2024-26999]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27046][CVE-2024-27046]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52434][CVE-2023-52434]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26862][CVE-2024-26862]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26810][CVE-2024-26810]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35796][CVE-2024-35796]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35960][CVE-2024-35960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35969][CVE-2024-35969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26966][CVE-2024-26966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26856][CVE-2024-26856]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35936][CVE-2024-35936]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35955][CVE-2024-35955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26763][CVE-2024-26763]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35806][CVE-2024-35806]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27059][CVE-2024-27059]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35855][CVE-2024-35855]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36008][CVE-2024-36008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27075][CVE-2024-27075]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52620][CVE-2023-52620]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26931][CVE-2024-26931]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35813][CVE-2024-35813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26788][CVE-2024-26788]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27412][CVE-2024-27412]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26861][CVE-2024-26861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36004][CVE-2024-36004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26951][CVE-2024-26951]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26903][CVE-2024-26903]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26584][CVE-2024-26584]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35877][CVE-2024-35877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26792][CVE-2024-26792]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27416][CVE-2024-27416]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27432][CVE-2024-27432]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26651][CVE-2024-26651]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35852][CVE-2024-35852]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35973][CVE-2024-35973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52656][CVE-2023-52656]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26965][CVE-2024-26965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26969][CVE-2024-26969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26840][CVE-2024-26840]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26817][CVE-2024-26817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27028][CVE-2024-27028]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26752][CVE-2024-26752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27016][CVE-2024-27016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52641][CVE-2023-52641]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35789][CVE-2024-35789]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27078][CVE-2024-27078]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26994][CVE-2024-26994]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26629][CVE-2024-26629]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26803][CVE-2024-26803]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26977][CVE-2024-26977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35830][CVE-2024-35830]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26957][CVE-2024-26957]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36006][CVE-2024-36006]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35817][CVE-2024-35817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26601][CVE-2024-26601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35845][CVE-2024-35845]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35897][CVE-2024-35897]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27414][CVE-2024-27414]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26855][CVE-2024-26855]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26877][CVE-2024-26877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35829][CVE-2024-35829]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35896][CVE-2024-35896]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26875][CVE-2024-26875]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27405][CVE-2024-27405]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26747][CVE-2024-26747]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52644][CVE-2023-52644]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26881][CVE-2024-26881]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26735][CVE-2024-26735]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26843][CVE-2024-26843]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26926][CVE-2024-26926]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26880][CVE-2024-26880]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26964][CVE-2024-26964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27044][CVE-2024-27044]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26737][CVE-2024-26737]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27431][CVE-2024-27431]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26955][CVE-2024-26955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26790][CVE-2024-26790]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26925][CVE-2024-26925]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26838][CVE-2024-26838]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26984][CVE-2024-26984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25739][CVE-2024-25739]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24861][CVE-2024-24861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-23307][CVE-2024-23307]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-22099][CVE-2024-22099]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-21823][CVE-2024-21823]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-0841][CVE-2024-0841]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-7042][CVE-2023-7042]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-6270][CVE-2023-6270]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-38096][CVE-2022-38096]] @@html:<!-- medium -->@@
+- 5.15 - Raspi
+
+*** [[[https://ubuntu.com/security/notices/USN-6922-1][USN-6922-1]]] Linux kernel vulnerabilities
+- 4 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-25739][CVE-2024-25739]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+- 6.5 - NVIDIA
+
+*** [[[https://ubuntu.com/security/notices/USN-6923-1][USN-6923-1]], [[https://ubuntu.com/security/notices/USN-6923-2][USN-6923-2]]] Linux kernel vulnerabilities
+- 6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27017][CVE-2024-27017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52752][CVE-2023-52752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26952][CVE-2024-26952]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26886][CVE-2024-26886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25742][CVE-2024-25742]] @@html:<!-- medium -->@@
+- 5.15 - generic, AWS, GCP, GKE, HWE, Intel-IOTG, KVM, LowLatency, NVIDIA, Oracle, IBM, Raspi
+
+*** [[[https://ubuntu.com/security/notices/USN-6921-1][USN-6921-1]], [[https://ubuntu.com/security/notices/USN-6921-2][USN-6921-2]]] Linux kernel vulnerabilities
+- 7 CVEs addressed in Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36008][CVE-2024-36008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35984][CVE-2024-35984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35992][CVE-2024-35992]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35997][CVE-2024-35997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35990][CVE-2024-35990]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25742][CVE-2024-25742]] @@html:<!-- medium -->@@
+- 6.8 - generic, AWS, GCP, GKE, IBM, NVIDIA, OEM, Raspi, LowLatency
+
+*** [[[https://ubuntu.com/security/notices/USN-6924-1][USN-6924-1]], [[https://ubuntu.com/security/notices/USN-6924-2][USN-6924-2]]] Linux kernel vulnerabilities
+- 7 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-26583][CVE-2024-26583]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48655][CVE-2022-48655]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26907][CVE-2024-26907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-47131][CVE-2021-47131]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26585][CVE-2024-26585]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26584][CVE-2024-26584]] @@html:<!-- high -->@@
+- 5.4 - generic, AWS, Azure, Bluefield, GCP, GKE, HWE, IBM, IOT, KVM, Raspi, Xilinx-ZynqMP
+
+*** [[[https://ubuntu.com/security/notices/USN-6925-1][USN-6925-1]]] Linux kernel vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2024-26882][CVE-2024-26882]] @@html:<!-- medium -->@@
+- 3.13 - generic, lowlatency, server, virtual
+
+*** [[[https://ubuntu.com/security/notices/USN-6926-1][USN-6926-1]]] Linux kernel vulnerabilities
+- 30 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-52752][CVE-2023-52752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52444][CVE-2023-52444]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26882][CVE-2024-26882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52449][CVE-2023-52449]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26934][CVE-2024-26934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26840][CVE-2024-26840]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27020][CVE-2024-27020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52443][CVE-2023-52443]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26923][CVE-2024-26923]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26857][CVE-2024-26857]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36902][CVE-2024-36902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35982][CVE-2024-35982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26886][CVE-2024-26886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35978][CVE-2024-35978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52469][CVE-2023-52469]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26901][CVE-2024-26901]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26884][CVE-2024-26884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52436][CVE-2023-52436]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35997][CVE-2024-35997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52620][CVE-2023-52620]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35984][CVE-2024-35984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27013][CVE-2024-27013]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52435][CVE-2023-52435]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25744][CVE-2024-25744]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25739][CVE-2024-25739]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-46343][CVE-2023-46343]] @@html:<!-- medium -->@@
+- 4.15 - generic, AWS, HWE, GCP, KVM, Oracle
+
+*** [[[https://ubuntu.com/security/notices/USN-6927-1][USN-6927-1]]] Linux kernel vulnerabilities
+- 161 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-27008][CVE-2024-27008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26951][CVE-2024-26951]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26970][CVE-2024-26970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35815][CVE-2024-35815]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26828][CVE-2024-26828]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35898][CVE-2024-35898]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26999][CVE-2024-26999]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35938][CVE-2024-35938]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27016][CVE-2024-27016]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35825][CVE-2024-35825]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35950][CVE-2024-35950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26969][CVE-2024-26969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26643][CVE-2024-26643]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26924][CVE-2024-26924]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36025][CVE-2024-36025]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52752][CVE-2023-52752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35936][CVE-2024-35936]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35847][CVE-2024-35847]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26964][CVE-2024-26964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35857][CVE-2024-35857]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35854][CVE-2024-35854]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27437][CVE-2024-27437]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35851][CVE-2024-35851]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26654][CVE-2024-26654]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26629][CVE-2024-26629]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26988][CVE-2024-26988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27001][CVE-2024-27001]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26956][CVE-2024-26956]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35990][CVE-2024-35990]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27020][CVE-2024-27020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26996][CVE-2024-26996]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35817][CVE-2024-35817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26950][CVE-2024-26950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26810][CVE-2024-26810]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35893][CVE-2024-35893]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35852][CVE-2024-35852]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35895][CVE-2024-35895]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27009][CVE-2024-27009]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26687][CVE-2024-26687]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35821][CVE-2024-35821]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35944][CVE-2024-35944]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27015][CVE-2024-27015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35822][CVE-2024-35822]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35823][CVE-2024-35823]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35890][CVE-2024-35890]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35973][CVE-2024-35973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27013][CVE-2024-27013]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35912][CVE-2024-35912]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26817][CVE-2024-26817]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35935][CVE-2024-35935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26989][CVE-2024-26989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35877][CVE-2024-35877]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26926][CVE-2024-26926]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35849][CVE-2024-35849]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26993][CVE-2024-26993]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26974][CVE-2024-26974]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35791][CVE-2024-35791]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35910][CVE-2024-35910]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36008][CVE-2024-36008]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35988][CVE-2024-35988]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26813][CVE-2024-26813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36006][CVE-2024-36006]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35879][CVE-2024-35879]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35789][CVE-2024-35789]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35969][CVE-2024-35969]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35925][CVE-2024-35925]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26984][CVE-2024-26984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35871][CVE-2024-35871]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35853][CVE-2024-35853]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27004][CVE-2024-27004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35899][CVE-2024-35899]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26931][CVE-2024-26931]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35934][CVE-2024-35934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35796][CVE-2024-35796]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36020][CVE-2024-36020]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52699][CVE-2023-52699]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35930][CVE-2024-35930]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26957][CVE-2024-26957]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35804][CVE-2024-35804]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26922][CVE-2024-26922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26814][CVE-2024-26814]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35900][CVE-2024-35900]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27395][CVE-2024-27395]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26642][CVE-2024-26642]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26960][CVE-2024-26960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26935][CVE-2024-26935]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36005][CVE-2024-36005]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26981][CVE-2024-26981]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26934][CVE-2024-26934]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26976][CVE-2024-26976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35806][CVE-2024-35806]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35915][CVE-2024-35915]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35922][CVE-2024-35922]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48808][CVE-2022-48808]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26973][CVE-2024-26973]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35933][CVE-2024-35933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35785][CVE-2024-35785]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26937][CVE-2024-26937]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35918][CVE-2024-35918]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27000][CVE-2024-27000]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26977][CVE-2024-26977]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27393][CVE-2024-27393]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35984][CVE-2024-35984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35970][CVE-2024-35970]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26955][CVE-2024-26955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35888][CVE-2024-35888]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35982][CVE-2024-35982]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35805][CVE-2024-35805]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35960][CVE-2024-35960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26812][CVE-2024-26812]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27017][CVE-2024-27017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26966][CVE-2024-26966]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52880][CVE-2023-52880]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27396][CVE-2024-27396]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35809][CVE-2024-35809]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35997][CVE-2024-35997]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26958][CVE-2024-26958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26961][CVE-2024-26961]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26923][CVE-2024-26923]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26811][CVE-2024-26811]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35813][CVE-2024-35813]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36029][CVE-2024-36029]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35896][CVE-2024-35896]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26965][CVE-2024-26965]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35885][CVE-2024-35885]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35855][CVE-2024-35855]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36007][CVE-2024-36007]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26929][CVE-2024-26929]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35897][CVE-2024-35897]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35905][CVE-2024-35905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27018][CVE-2024-27018]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26886][CVE-2024-26886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35884][CVE-2024-35884]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52488][CVE-2023-52488]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35872][CVE-2024-35872]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35819][CVE-2024-35819]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35907][CVE-2024-35907]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26952][CVE-2024-26952]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35940][CVE-2024-35940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35989][CVE-2024-35989]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27059][CVE-2024-27059]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26925][CVE-2024-26925]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35955][CVE-2024-35955]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36004][CVE-2024-36004]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26994][CVE-2024-26994]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35807][CVE-2024-35807]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35886][CVE-2024-35886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35978][CVE-2024-35978]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35958][CVE-2024-35958]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35902][CVE-2024-35902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25742][CVE-2024-25742]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25739][CVE-2024-25739]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24861][CVE-2024-24861]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24859][CVE-2024-24859]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24858][CVE-2024-24858]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24857][CVE-2024-24857]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-23307][CVE-2024-23307]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-38096][CVE-2022-38096]] @@html:<!-- medium -->@@
+- 5.15 - GCP
+
+** Goings on in Ubuntu Security Community
+*** Discussion of testing for security updates in light of CrowdStrike (11:20)
+- Recent outage of over 8 million Windows machines running CrowdStrike Falcon
+  - https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/
+- Initially very little information on what happened - CS have now released more
+  details about the apparent testing that was done but clearly were never
+  actually testing the combination of Windows + Falcon + Rapid Response Content
+  otherwise would have observed this failure immediately
+- Also clearly didn't have any kind of staged/phased update process in place either
+  - If you want to read a good analysis of the response from CS,
+    https://verse.systems/blog/post/2024-07-25-parsing-crowdstrikes-post/
+    - Toby Murray (full disclosure, my brother) - Associate Professor and
+      Co-Lead of Computer Science Research Group at School of Computing and
+      Information Systems, University of Melbourne, Director, Defence Science
+      Institute (Vic & Tas)
+  - Future plans from CS now include gradual deployment of rules with "canaries" etc and then increased testing:
+    - Local dev testing, content update testing, stress, fuzz, fault-injection,
+      stability and interface testing
+    - Toby (not surprisingly as an expert in formal software verification)
+      advocates for a formal approach to validating rules and in-kernel code etc
+- What can we learn from this for Ubuntu?
+  - Formal methods might be tractable for a large company like CS who is
+    developing a single, specific product like Falcon (particularly if they can
+    reduce the size of their kernel module), this is not the case for a Linux
+    distribution like Ubuntu which collates over 30,000 different open source
+    software projects
+    - over 4TB of source code across the various releases
+- Instead have to take the pragmatic approach of thorough testing
+  - For regular SRUs - detailed review by SRU team including a thorough test
+    plan, cross-package testing via [[https://autopkgtest.ubuntu.com/][Autopkgtest]] plus a minimum 7 day "soak"
+    testing in the proposed pocket of the release before being pushed into the
+    -updates pocket
+  - Once in -updates, [[https://ubuntu.com/server/docs/about-apt-upgrade-and-phased-updates][Phased Updates]] implements the gradual deployment model -
+    you can check the progress of various updates at
+    https://ubuntu-archive-team.ubuntu.com/phased-updates.html
+    - Watches for increased error reports via errors.ubuntu.com (captured via
+      apport/whoopsie) and if detected stops the release of the package to users
+- Compare that to the process for Security updates
+  - Separate -security pocket in the archive which packages get published to
+    immediately
+    - No standardised review by separate team
+      - instead adhoc reviews within the security team
+    - No documented test plan per update
+      - instead [[https://git.launchpad.net/qa-regression-testing/tree/README.testing][thorough test procedures]] including:
+        - checking for any changes in the build log (e.g. new compiler
+          warnings/errors) and comparing the difference between the generated
+          binaries (e.g. new / changed / missing symbols - ABI breaks)
+        - testing of the patched code including stepping through it with a
+          debugger
+        - running any existing PoC or creating one if none exists and is
+          feasible
+        - running any existing unit/integration tests within the package
+          (including dep8/autopkgtests)
+        - test apt upgrade of the package is smooth
+        - QA regression testing scripts - maintained by the security team,
+          implement various regression tests and system-level tests for
+          different packages to exercise them in various different
+          configurations
+    - Cross-package testing via [[https://people.canonical.com/~platform/security-britney/][security-britney]] - instance of the autopkgtest
+      infrastructure that runs against the public [[https://launchpad.net/~ubuntu-security-proposed/+archive/ubuntu/ppa/][Ubuntu Security Proposed PPA]]
+      (and we have a similar internal instance for the different private PPAs we
+      use for embargoed updates or ESM etc)
+    - No phased updates - instead immediate updates via specific
+      security.ubuntu.com archive, combined with unattended-upgrades
+      - designed to deliver security updates as soon as possible to remediate
+        issues
+- In general, I would argue that the process we have in place results in more
+  thorough testing for security updates - particularly checking for anything
+  anomalous like new compiler warnings / symbols / unexpected changes in
+  binaries etc as well as more thorough, standardised testing for packages
+  through the [[https://git.launchpad.net/qa-regression-testing/][QA Regression Testing]] repo scripts
+- However, the lack of phased/progressive updates combined with the separate
+  security.ubuntu.com archive and unattended-upgrades on by default, means any
+  security update is delivered to Ubuntu users within 24 hours (on average) -
+  BUT then any regression is also rolled out to all users in 24 hours as well
+- As such, kicking off discussions around possible changes to our deployment
+  strategy to potentially introduce some more guard rails on the deployment side
+- If you have any thoughts, please let us know
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
 * Episode 232
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-232
