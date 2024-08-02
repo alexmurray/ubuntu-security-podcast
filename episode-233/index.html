@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html itemscope lang="en-us">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="  This week we take a look at the recent Crowdstrike outage and what we can learn
+  from it compared to the testing and release process for security updates in
+  Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+  Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+  ">
+
+<meta name="generator" content="Hugo 0.130.0">
+
+<meta property="og:title" content="Episode 233" />
+<meta name="twitter:title" content="Episode 233"/>
+<meta itemprop="name" content="Episode 233">
+<meta property="article:published_time" content="2024-08-02T17:05:00&#43;09:30" />
+<meta property="article:modified_time" content="2024-08-02T17:10:07&#43;09:30" />
+<meta property="og:updated_time" content="2024-08-02T17:10:07&#43;09:30" /><meta property="og:site_name" content="Ubuntu Security Podcast" /><meta property="og:description" content="  This week we take a look at the recent Crowdstrike outage and what we can learn
+  from it compared to the testing and release process for security updates in
+  Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+  Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+  " />
+    <meta name="twitter:description" content="  This week we take a look at the recent Crowdstrike outage and what we can learn
+  from it compared to the testing and release process for security updates in
+  Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+  Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+  " />
+    <meta itemprop="description" content="  This week we take a look at the recent Crowdstrike outage and what we can learn
+  from it compared to the testing and release process for security updates in
+  Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+  Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+  ">
+
+  
+    <meta name="twitter:site" content="@ubuntu_sec"/>
+    <meta name="twitter:creator" content="@ubuntu_sec"/>
+  
+
+<meta name="twitter:domain" content="ubuntu.com"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/episode-233/" />
+
+
+
+
+<title>Episode 233</title>
+<link rel="canonical" href="https://ubuntusecuritypodcast.org/episode-233/">
+
+
+
+
+
+
+
+<link rel="icon" href="https://ubuntusecuritypodcast.org/img/usp_logo_32.png">
+
+
+
+
+
+
+
+
+
+<link href="https://ubuntusecuritypodcast.org/css/ubuntu.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+
+<link href=https://ubuntusecuritypodcast.org/css/all.css rel="stylesheet">
+<link href=https://ubuntusecuritypodcast.org/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=https://ubuntusecuritypodcast.org/css/speed.min.css rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Ubuntu Security Podcast" href="https://ubuntusecuritypodcast.org/episode/index.xml"/>
+
+</head>
+
+<body lang="">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="https://ubuntusecuritypodcast.org/">Ubuntu Security Podcast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarSupportedContent" class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+          
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/about/" class="nav-link">
+                      
+                      <span>About</span>
+                  </a>
+                </li>
+              
+            
+              
+                  <li class= "nav-item ">
+                  <a href="https://ubuntusecuritypodcast.org/contact/" class="nav-link">
+                      
+                      <span>Contact</span>
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        
+          <li>
+            
+
+  <a class="social-links" href = "https://twitter.com/ubuntu_sec"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
+          </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+          
+
+  <a class="social-links" href = "https://fosstodon.org/@ubuntusecurity"><i class="fab fa-mastodon fa-2x"></i></a>
+
+
+        </li>
+        
+      </ul>
+  </div>
+  </div>
+  </nav>
+
+<div class="container middle_container">
+  
+
+  <div class="row">
+    <div class="col">      
+      
+        <h1>Episode 233</h1>
+      <small>Posted on Friday, Aug 2, 2024 
+
+
+</small></div>
+  </div>
+
+  
+    <div class="row">
+          <div class="col-md-3">
+            <img src="https://ubuntusecuritypodcast.org/img/usp_logo_500.png" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            This week we take a look at the recent Crowdstrike outage and what we can learn
+from it compared to the testing and release process for security updates in
+Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+Python, OpenJDK and one package with over 300 CVE fixes in a single update.
+          </div>
+        </div>
+    <div class="row">
+          <div class="col-md-12 player_row">
+
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="https://people.canonical.com/~amurray/USP/USP_E233.mp3" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      <h2 id="overview">Overview</h2>
+<p>This week we take a look at the recent Crowdstrike outage and what we can learn
+from it compared to the testing and release process for security updates in
+Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
+Python, OpenJDK and one package with over 300 CVE fixes in a single update.</p>
+<h2 id="this-week-in-ubuntu-security-updates">This week in Ubuntu Security Updates</h2>
+<p>462 unique CVEs addressed</p>
+<h3 id="usn-6915-1-poppler-vulnerability--01-35">[<a href="https://ubuntu.com/security/notices/USN-6915-1">USN-6915-1</a>] poppler vulnerability (01:35)</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-6239">CVE-2024-6239</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Installed by default in Ubuntu due to use by cups</li>
+<li>PDF document format describes a Catalog which has a tree of destinations -
+essentially hyperlinks within the document. These can be either a page number
+etc or a named location within the document. If open a crafted document with a
+missing name property for a destination - name would then be NULL and would
+trigger a NULL ptr deref -&gt; crash -&gt; DoS</li>
+</ul>
+<h3 id="usn-6913-1-phpcas-vulnerability--02-26">[<a href="https://ubuntu.com/security/notices/USN-6913-1">USN-6913-1</a>] phpCAS vulnerability (02:26)</h3>
+<ul>
+<li>1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-39369">CVE-2022-39369</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Authentication library for PHP to allow PHP applications to authenticates
+users against a Central Authentication Server (ie. SSO).</li>
+<li>When used for SSO, a client who is trying to use a web application gets
+directed to the CAS. The CAS then authenticates the user and returns a service
+ticket - the client then needs to validate this ticket with the CAS since it
+could have possibly been injected via the application. To do this, pass the
+ticket along with its own service identifier to CAS - and if this succeeds is
+provided with the details of which user was authenticated etc.</li>
+<li>For clients, previously would use HTTP headers to determine where the CAS
+server was to authenticate the ticket. Since these can be manipulated by a
+malicious application, could essentially redirect the client to send the
+ticket to the attacker who could then use that to impersonate the client and
+login as the user.</li>
+<li>Fix requires a refactor to include an additional API parameter which specifies
+either a fixed CAS server for the client to use, or a mechanism to
+auto-discover this in a secure way - either way, applications using phpCAS now
+need to be updated.</li>
+</ul>
+<h3 id="usn-6914-1-ocs-inventory-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6914-1">USN-6914-1</a>] OCS Inventory vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-39369">CVE-2022-39369</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Same as above since has an embedded copy of phpCAS</li>
+</ul>
+<h3 id="usn-6916-1-lua-vulnerabilities--04-44">[<a href="https://ubuntu.com/security/notices/USN-6916-1">USN-6916-1</a>] Lua vulnerabilities (04:44)</h3>
+<ul>
+<li>2 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2022-33099">CVE-2022-33099</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-28805">CVE-2022-28805</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Heap buffer over-read and a possible heap buffer over-flow via recursive error
+handling - looks like both require to be interpreting malicious code</li>
+</ul>
+<h3 id="usn-6920-1-edk-ii-vulnerabilities--05-04">[<a href="https://ubuntu.com/security/notices/USN-6920-1">USN-6920-1</a>] EDK II vulnerabilities (05:04)</h3>
+<ul>
+<li>5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2019-0160">CVE-2019-0160</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-3613">CVE-2018-3613</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-12183">CVE-2018-12183</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2018-12182">CVE-2018-12182</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2017-5731">CVE-2017-5731</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>UEFI firmware implementation in qemu etc</li>
+<li>Various missing bounds checks -&gt; stack and heap buffer overflows -&gt; DoS or
+code execution in BIOS context -&gt; privilege escalation within VM</li>
+</ul>
+<h3 id="usn-6928-1-python-vulnerabilities--05-49">[<a href="https://ubuntu.com/security/notices/USN-6928-1">USN-6928-1</a>] Python vulnerabilities (05:49)</h3>
+<ul>
+<li>2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-4032">CVE-2024-4032</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0397">CVE-2024-0397</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Memory race in the ssl module - can call into various functions to get
+certificate information at the same time as certs are loaded if happening to
+be doing a TLS handshake with a certificate directory configured - all via
+different threads. Python would then possibly return inconsistent results
+leading to various issues</li>
+<li>Occurs since ssl module is implemented in C to interface with openssl and did
+not properly lock access to the certificate store</li>
+</ul>
+<h3 id="usn-6929-1-usn-6930-1-openjdk-8-and-openjdk-11-vulnerabilities--06-52">[<a href="https://ubuntu.com/security/notices/USN-6929-1">USN-6929-1</a>, <a href="https://ubuntu.com/security/notices/USN-6930-1">USN-6930-1</a>] OpenJDK 8 and OpenJDK 11 vulnerabilities (06:52)</h3>
+<ul>
+<li>6 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21147">CVE-2024-21147</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21145">CVE-2024-21145</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21144">CVE-2024-21144</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21140">CVE-2024-21140</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21138">CVE-2024-21138</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21131">CVE-2024-21131</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream releases of OpenJDK 8 and 11</li>
+<li>8u422-b05-1,  11.0.24+8</li>
+<li>Fixes various issues in the Hotspot and Concurrency components</li>
+</ul>
+<h3 id="usn-6931-1-usn-6932-1-openjdk-17-and-openjdk-21-vulnerabilities--07-11">[<a href="https://ubuntu.com/security/notices/USN-6931-1">USN-6931-1</a>, <a href="https://ubuntu.com/security/notices/USN-6932-1">USN-6932-1</a>] OpenJDK 17 and OpenJDK 21 vulnerabilities (07:11)</h3>
+<ul>
+<li>5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21147">CVE-2024-21147</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21145">CVE-2024-21145</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21140">CVE-2024-21140</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21138">CVE-2024-21138</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21131">CVE-2024-21131</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Latest upstream releases of OpenJDK 17 and 21</li>
+<li>17.0.12+7,  21.0.4+7</li>
+<li>Fixes the same issues in the Hotspot component</li>
+</ul>
+<h3 id="usn-6934-1-mysql-vulnerabilities--07-29">[<a href="https://ubuntu.com/security/notices/USN-6934-1">USN-6934-1</a>] MySQL vulnerabilities (07:29)</h3>
+<ul>
+<li>15 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-21185">CVE-2024-21185</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21179">CVE-2024-21179</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21177">CVE-2024-21177</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21173">CVE-2024-21173</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21171">CVE-2024-21171</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21165">CVE-2024-21165</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21163">CVE-2024-21163</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21162">CVE-2024-21162</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21142">CVE-2024-21142</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21134">CVE-2024-21134</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21130">CVE-2024-21130</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21129">CVE-2024-21129</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21127">CVE-2024-21127</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21125">CVE-2024-21125</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-20996">CVE-2024-20996</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>Also latest upstream release</li>
+<li>8.0.39</li>
+<li>Bug fixes, possible new features and incompatible changes - consult release
+notes:
+<ul>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-38.html">https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-38.html</a></li>
+<li><a href="https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-39.html">https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-39.html</a></li>
+<li><a href="https://www.oracle.com/security-alerts/cpujul2024.html">https://www.oracle.com/security-alerts/cpujul2024.html</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="usn-6917-1-linux-kernel-vulnerabilities--07-57">[<a href="https://ubuntu.com/security/notices/USN-6917-1">USN-6917-1</a>] Linux kernel vulnerabilities (07:57)</h3>
+<ul>
+<li>156 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-35933">CVE-2024-35933</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35910">CVE-2024-35910</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27393">CVE-2024-27393</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27004">CVE-2024-27004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27396">CVE-2024-27396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36029">CVE-2024-36029</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26955">CVE-2024-26955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35976">CVE-2024-35976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26966">CVE-2024-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26811">CVE-2024-26811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35871">CVE-2024-35871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52699">CVE-2023-52699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35796">CVE-2024-35796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35851">CVE-2024-35851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35885">CVE-2024-35885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35813">CVE-2024-35813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35789">CVE-2024-35789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35825">CVE-2024-35825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26994">CVE-2024-26994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35815">CVE-2024-35815</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27395">CVE-2024-27395</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26981">CVE-2024-26981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35886">CVE-2024-35886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26931">CVE-2024-26931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35791">CVE-2024-35791</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35849">CVE-2024-35849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35978">CVE-2024-35978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35895">CVE-2024-35895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35918">CVE-2024-35918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35902">CVE-2024-35902</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26926">CVE-2024-26926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35934">CVE-2024-35934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35807">CVE-2024-35807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35805">CVE-2024-35805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36008">CVE-2024-36008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26950">CVE-2024-26950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26973">CVE-2024-26973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35898">CVE-2024-35898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35955">CVE-2024-35955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36004">CVE-2024-36004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36006">CVE-2024-36006</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35990">CVE-2024-35990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35944">CVE-2024-35944</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36007">CVE-2024-36007</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35896">CVE-2024-35896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35819">CVE-2024-35819</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26988">CVE-2024-26988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35872">CVE-2024-35872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36025">CVE-2024-36025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26957">CVE-2024-26957</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35897">CVE-2024-35897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27016">CVE-2024-27016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35806">CVE-2024-35806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35927">CVE-2024-35927</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48808">CVE-2022-48808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35960">CVE-2024-35960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27001">CVE-2024-27001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35970">CVE-2024-35970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35988">CVE-2024-35988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36005">CVE-2024-36005</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35821">CVE-2024-35821</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35925">CVE-2024-35925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26961">CVE-2024-26961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35817">CVE-2024-35817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26922">CVE-2024-26922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26976">CVE-2024-26976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35899">CVE-2024-35899</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35984">CVE-2024-35984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26929">CVE-2024-26929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27018">CVE-2024-27018</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35907">CVE-2024-35907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35884">CVE-2024-35884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52488">CVE-2023-52488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35982">CVE-2024-35982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26934">CVE-2024-26934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26935">CVE-2024-26935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35973">CVE-2024-35973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26958">CVE-2024-26958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27008">CVE-2024-27008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35809">CVE-2024-35809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26951">CVE-2024-26951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35900">CVE-2024-35900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35888">CVE-2024-35888</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26965">CVE-2024-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26828">CVE-2024-26828</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35935">CVE-2024-35935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35857">CVE-2024-35857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26642">CVE-2024-26642</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26989">CVE-2024-26989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35893">CVE-2024-35893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35877">CVE-2024-35877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27009">CVE-2024-27009</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35785">CVE-2024-35785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35905">CVE-2024-35905</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27020">CVE-2024-27020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35901">CVE-2024-35901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26956">CVE-2024-26956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26977">CVE-2024-26977</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26969">CVE-2024-26969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26810">CVE-2024-26810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26813">CVE-2024-26813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35930">CVE-2024-35930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26970">CVE-2024-26970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26687">CVE-2024-26687</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27015">CVE-2024-27015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35847">CVE-2024-35847</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26999">CVE-2024-26999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35940">CVE-2024-35940</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35890">CVE-2024-35890</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26814">CVE-2024-26814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35958">CVE-2024-35958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35804">CVE-2024-35804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26629">CVE-2024-26629</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26974">CVE-2024-26974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52880">CVE-2023-52880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26937">CVE-2024-26937</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35922">CVE-2024-35922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35854">CVE-2024-35854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27013">CVE-2024-27013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35853">CVE-2024-35853</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27000">CVE-2024-27000</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35989">CVE-2024-35989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35852">CVE-2024-35852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35823">CVE-2024-35823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36020">CVE-2024-36020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36031">CVE-2024-36031</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26923">CVE-2024-26923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26654">CVE-2024-26654</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26925">CVE-2024-26925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35855">CVE-2024-35855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35997">CVE-2024-35997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35822">CVE-2024-35822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27019">CVE-2024-27019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35938">CVE-2024-35938</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35915">CVE-2024-35915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35912">CVE-2024-35912</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35936">CVE-2024-35936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35969">CVE-2024-35969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27059">CVE-2024-27059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26964">CVE-2024-26964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27437">CVE-2024-27437</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26960">CVE-2024-26960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35950">CVE-2024-35950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26817">CVE-2024-26817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26984">CVE-2024-26984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26812">CVE-2024-26812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35879">CVE-2024-35879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26996">CVE-2024-26996</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26993">CVE-2024-26993</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25739">CVE-2024-25739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24861">CVE-2024-24861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23307">CVE-2024-23307</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38096">CVE-2022-38096</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - Azure + FDE (CVM)</li>
+</ul>
+<h3 id="usn-6918-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6918-1">USN-6918-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>180 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35932">CVE-2024-35932</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35937">CVE-2024-35937</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27006">CVE-2024-27006</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35960">CVE-2024-35960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27011">CVE-2024-27011</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35924">CVE-2024-35924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35946">CVE-2024-35946</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35942">CVE-2024-35942</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35921">CVE-2024-35921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35908">CVE-2024-35908</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26811">CVE-2024-26811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27008">CVE-2024-27008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35871">CVE-2024-35871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36019">CVE-2024-36019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35965">CVE-2024-35965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35973">CVE-2024-35973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26981">CVE-2024-26981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27009">CVE-2024-27009</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27019">CVE-2024-27019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36022">CVE-2024-36022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35910">CVE-2024-35910</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35907">CVE-2024-35907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35860">CVE-2024-35860</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35951">CVE-2024-35951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26924">CVE-2024-26924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26921">CVE-2024-26921</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35901">CVE-2024-35901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35972">CVE-2024-35972</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35889">CVE-2024-35889</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27017">CVE-2024-27017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35913">CVE-2024-35913</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35936">CVE-2024-35936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36025">CVE-2024-36025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35961">CVE-2024-35961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35977">CVE-2024-35977</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35902">CVE-2024-35902</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26817">CVE-2024-26817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26994">CVE-2024-26994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52699">CVE-2023-52699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35868">CVE-2024-35868</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35899">CVE-2024-35899</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35888">CVE-2024-35888</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26995">CVE-2024-26995</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35865">CVE-2024-35865</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26993">CVE-2024-26993</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35863">CVE-2024-35863</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35970">CVE-2024-35970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35943">CVE-2024-35943</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35875">CVE-2024-35875</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35978">CVE-2024-35978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27005">CVE-2024-27005</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35909">CVE-2024-35909</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35957">CVE-2024-35957</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35950">CVE-2024-35950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26986">CVE-2024-26986</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36020">CVE-2024-36020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35952">CVE-2024-35952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26928">CVE-2024-26928</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35878">CVE-2024-35878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35954">CVE-2024-35954</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26998">CVE-2024-26998</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36024">CVE-2024-36024</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26936">CVE-2024-26936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27018">CVE-2024-27018</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35900">CVE-2024-35900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35940">CVE-2024-35940</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35985">CVE-2024-35985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35944">CVE-2024-35944</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35958">CVE-2024-35958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35864">CVE-2024-35864</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35975">CVE-2024-35975</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27002">CVE-2024-27002</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36018">CVE-2024-36018</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35974">CVE-2024-35974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26926">CVE-2024-26926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35877">CVE-2024-35877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35916">CVE-2024-35916</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35934">CVE-2024-35934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35930">CVE-2024-35930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35898">CVE-2024-35898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35893">CVE-2024-35893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35887">CVE-2024-35887</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35929">CVE-2024-35929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26923">CVE-2024-26923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35911">CVE-2024-35911</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35919">CVE-2024-35919</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26984">CVE-2024-26984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27016">CVE-2024-27016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35926">CVE-2024-35926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35872">CVE-2024-35872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35922">CVE-2024-35922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27007">CVE-2024-27007</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35931">CVE-2024-35931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36021">CVE-2024-36021</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35953">CVE-2024-35953</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27004">CVE-2024-27004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27001">CVE-2024-27001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27014">CVE-2024-27014</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35866">CVE-2024-35866</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27021">CVE-2024-27021</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35870">CVE-2024-35870</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35925">CVE-2024-35925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35891">CVE-2024-35891</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26982">CVE-2024-26982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35879">CVE-2024-35879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35979">CVE-2024-35979</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35912">CVE-2024-35912</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35982">CVE-2024-35982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27015">CVE-2024-27015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26985">CVE-2024-26985</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35861">CVE-2024-35861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35939">CVE-2024-35939</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27003">CVE-2024-27003</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35945">CVE-2024-35945</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35967">CVE-2024-35967</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35966">CVE-2024-35966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26983">CVE-2024-26983</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35894">CVE-2024-35894</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35896">CVE-2024-35896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36027">CVE-2024-36027</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35895">CVE-2024-35895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26987">CVE-2024-26987</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35873">CVE-2024-35873</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26996">CVE-2024-26996</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26991">CVE-2024-26991</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27013">CVE-2024-27013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36026">CVE-2024-36026</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26922">CVE-2024-26922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35897">CVE-2024-35897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35917">CVE-2024-35917</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35968">CVE-2024-35968</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35890">CVE-2024-35890</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35904">CVE-2024-35904</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35867">CVE-2024-35867</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35933">CVE-2024-35933</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35918">CVE-2024-35918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35920">CVE-2024-35920</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26997">CVE-2024-26997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35981">CVE-2024-35981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35963">CVE-2024-35963</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26989">CVE-2024-26989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26999">CVE-2024-26999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35892">CVE-2024-35892</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27010">CVE-2024-27010</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26992">CVE-2024-26992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35935">CVE-2024-35935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27022">CVE-2024-27022</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35971">CVE-2024-35971</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35956">CVE-2024-35956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35862">CVE-2024-35862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35969">CVE-2024-35969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27012">CVE-2024-27012</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26990">CVE-2024-26990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35885">CVE-2024-35885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26925">CVE-2024-26925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35905">CVE-2024-35905</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35914">CVE-2024-35914</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35884">CVE-2024-35884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35927">CVE-2024-35927</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35882">CVE-2024-35882</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26980">CVE-2024-26980</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35964">CVE-2024-35964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35955">CVE-2024-35955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27020">CVE-2024-27020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35980">CVE-2024-35980</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35903">CVE-2024-35903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35976">CVE-2024-35976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35886">CVE-2024-35886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35883">CVE-2024-35883</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35959">CVE-2024-35959</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35915">CVE-2024-35915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35880">CVE-2024-35880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27000">CVE-2024-27000</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35938">CVE-2024-35938</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35869">CVE-2024-35869</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36023">CVE-2024-36023</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26988">CVE-2024-26988</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.8 - Oracle</li>
+</ul>
+<h3 id="usn-6919-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6919-1">USN-6919-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>304 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-35976">CVE-2024-35976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52880">CVE-2023-52880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35849">CVE-2024-35849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27073">CVE-2024-27073</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35934">CVE-2024-35934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27038">CVE-2024-27038</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26973">CVE-2024-26973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35853">CVE-2024-35853</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27047">CVE-2024-27047</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36007">CVE-2024-36007</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27024">CVE-2024-27024</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26750">CVE-2024-26750</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26833">CVE-2024-26833</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26960">CVE-2024-26960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26929">CVE-2024-26929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52488">CVE-2023-52488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27417">CVE-2024-27417</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26922">CVE-2024-26922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26863">CVE-2024-26863</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35890">CVE-2024-35890</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27015">CVE-2024-27015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27395">CVE-2024-27395</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26779">CVE-2024-26779</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27419">CVE-2024-27419</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27013">CVE-2024-27013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26981">CVE-2024-26981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26798">CVE-2024-26798</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26895">CVE-2024-26895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35922">CVE-2024-35922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52699">CVE-2023-52699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26883">CVE-2024-26883</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35871">CVE-2024-35871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27410">CVE-2024-27410</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26884">CVE-2024-26884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26885">CVE-2024-26885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27074">CVE-2024-27074</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26751">CVE-2024-26751</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26857">CVE-2024-26857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26848">CVE-2024-26848</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26901">CVE-2024-26901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35844">CVE-2024-35844</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35809">CVE-2024-35809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26687">CVE-2024-26687</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35988">CVE-2024-35988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26835">CVE-2024-26835</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26764">CVE-2024-26764</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27020">CVE-2024-27020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35907">CVE-2024-35907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35886">CVE-2024-35886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27077">CVE-2024-27077</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26787">CVE-2024-26787</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26950">CVE-2024-26950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26974">CVE-2024-26974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35905">CVE-2024-35905</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27008">CVE-2024-27008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26744">CVE-2024-26744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35935">CVE-2024-35935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26988">CVE-2024-26988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26748">CVE-2024-26748</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26776">CVE-2024-26776</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26907">CVE-2024-26907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27053">CVE-2024-27053</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35970">CVE-2024-35970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35950">CVE-2024-35950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35854">CVE-2024-35854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35822">CVE-2024-35822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26961">CVE-2024-26961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26733">CVE-2024-26733</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26773">CVE-2024-26773</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27390">CVE-2024-27390</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35888">CVE-2024-35888</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36029">CVE-2024-36029</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26643">CVE-2024-26643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35821">CVE-2024-35821</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35819">CVE-2024-35819</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26809">CVE-2024-26809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35984">CVE-2024-35984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26851">CVE-2024-26851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35940">CVE-2024-35940</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26654">CVE-2024-26654</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35910">CVE-2024-35910</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26891">CVE-2024-26891</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26793">CVE-2024-26793</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35938">CVE-2024-35938</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26736">CVE-2024-26736</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26583">CVE-2024-26583</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26870">CVE-2024-26870</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35828">CVE-2024-35828</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35885">CVE-2024-35885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35958">CVE-2024-35958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26889">CVE-2024-26889</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35899">CVE-2024-35899</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26839">CVE-2024-26839</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26894">CVE-2024-26894</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26937">CVE-2024-26937</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35925">CVE-2024-35925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35933">CVE-2024-35933</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26771">CVE-2024-26771</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26923">CVE-2024-26923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26852">CVE-2024-26852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26924">CVE-2024-26924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26872">CVE-2024-26872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26774">CVE-2024-26774</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35930">CVE-2024-35930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27065">CVE-2024-27065</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26993">CVE-2024-26993</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27034">CVE-2024-27034</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36020">CVE-2024-36020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26802">CVE-2024-26802</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26976">CVE-2024-26976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48808">CVE-2022-48808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35847">CVE-2024-35847</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26996">CVE-2024-26996</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36025">CVE-2024-36025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52652">CVE-2023-52652</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27403">CVE-2024-27403</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52447">CVE-2023-52447</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27037">CVE-2024-27037</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27413">CVE-2024-27413</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26749">CVE-2024-26749</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26956">CVE-2024-26956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26958">CVE-2024-26958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26754">CVE-2024-26754</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26812">CVE-2024-26812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26772">CVE-2024-26772</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27436">CVE-2024-27436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27437">CVE-2024-27437</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35912">CVE-2024-35912</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35805">CVE-2024-35805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26845">CVE-2024-26845</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35990">CVE-2024-35990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35791">CVE-2024-35791</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26906">CVE-2024-26906</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27039">CVE-2024-27039</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26915">CVE-2024-26915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26970">CVE-2024-26970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26782">CVE-2024-26782</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26813">CVE-2024-26813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52645">CVE-2023-52645</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26935">CVE-2024-26935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27076">CVE-2024-27076</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35823">CVE-2024-35823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26743">CVE-2024-26743</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26846">CVE-2024-26846</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26811">CVE-2024-26811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26989">CVE-2024-26989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26642">CVE-2024-26642</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26659">CVE-2024-26659</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26766">CVE-2024-26766</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27393">CVE-2024-27393</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26859">CVE-2024-26859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35898">CVE-2024-35898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35893">CVE-2024-35893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52640">CVE-2023-52640</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26795">CVE-2024-26795</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27009">CVE-2024-27009</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26791">CVE-2024-26791</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27043">CVE-2024-27043</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26934">CVE-2024-26934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27051">CVE-2024-27051</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26804">CVE-2024-26804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26878">CVE-2024-26878</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27030">CVE-2024-27030</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27000">CVE-2024-27000</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26777">CVE-2024-26777</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35825">CVE-2024-35825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27415">CVE-2024-27415</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27001">CVE-2024-27001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27004">CVE-2024-27004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26769">CVE-2024-26769</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26816">CVE-2024-26816</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35807">CVE-2024-35807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35900">CVE-2024-35900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35851">CVE-2024-35851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27052">CVE-2024-27052</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26805">CVE-2024-26805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35804">CVE-2024-35804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35944">CVE-2024-35944</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35895">CVE-2024-35895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26897">CVE-2024-26897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27045">CVE-2024-27045</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26814">CVE-2024-26814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26801">CVE-2024-26801</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26874">CVE-2024-26874</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35982">CVE-2024-35982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35915">CVE-2024-35915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26820">CVE-2024-26820</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26603">CVE-2024-26603</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35997">CVE-2024-35997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26688">CVE-2024-26688</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27054">CVE-2024-27054</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26828">CVE-2024-26828</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35857">CVE-2024-35857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52662">CVE-2023-52662</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35989">CVE-2024-35989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36005">CVE-2024-36005</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35785">CVE-2024-35785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27396">CVE-2024-27396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35884">CVE-2024-35884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52650">CVE-2023-52650</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26882">CVE-2024-26882</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26879">CVE-2024-26879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26898">CVE-2024-26898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27388">CVE-2024-27388</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35879">CVE-2024-35879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35918">CVE-2024-35918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35978">CVE-2024-35978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26585">CVE-2024-26585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35872">CVE-2024-35872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52497">CVE-2023-52497</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26778">CVE-2024-26778</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26999">CVE-2024-26999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27046">CVE-2024-27046</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52434">CVE-2023-52434</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26862">CVE-2024-26862</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26810">CVE-2024-26810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35796">CVE-2024-35796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35960">CVE-2024-35960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35969">CVE-2024-35969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26966">CVE-2024-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26856">CVE-2024-26856</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35936">CVE-2024-35936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35955">CVE-2024-35955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26763">CVE-2024-26763</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35806">CVE-2024-35806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27059">CVE-2024-27059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35855">CVE-2024-35855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36008">CVE-2024-36008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27075">CVE-2024-27075</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52620">CVE-2023-52620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26931">CVE-2024-26931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35813">CVE-2024-35813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26788">CVE-2024-26788</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27412">CVE-2024-27412</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26861">CVE-2024-26861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36004">CVE-2024-36004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26951">CVE-2024-26951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26903">CVE-2024-26903</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26584">CVE-2024-26584</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35877">CVE-2024-35877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26792">CVE-2024-26792</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27416">CVE-2024-27416</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27432">CVE-2024-27432</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26651">CVE-2024-26651</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35852">CVE-2024-35852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35973">CVE-2024-35973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52656">CVE-2023-52656</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26965">CVE-2024-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26969">CVE-2024-26969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26840">CVE-2024-26840</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26817">CVE-2024-26817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27028">CVE-2024-27028</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26752">CVE-2024-26752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27016">CVE-2024-27016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52641">CVE-2023-52641</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35789">CVE-2024-35789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27078">CVE-2024-27078</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26994">CVE-2024-26994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26629">CVE-2024-26629</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26803">CVE-2024-26803</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26977">CVE-2024-26977</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35830">CVE-2024-35830</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27019">CVE-2024-27019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26957">CVE-2024-26957</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36006">CVE-2024-36006</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35817">CVE-2024-35817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26601">CVE-2024-26601</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35845">CVE-2024-35845</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35897">CVE-2024-35897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27414">CVE-2024-27414</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26855">CVE-2024-26855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26877">CVE-2024-26877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35829">CVE-2024-35829</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35896">CVE-2024-35896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26875">CVE-2024-26875</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27405">CVE-2024-27405</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26747">CVE-2024-26747</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52644">CVE-2023-52644</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26881">CVE-2024-26881</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26735">CVE-2024-26735</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26843">CVE-2024-26843</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26926">CVE-2024-26926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26880">CVE-2024-26880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26964">CVE-2024-26964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27044">CVE-2024-27044</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26737">CVE-2024-26737</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27431">CVE-2024-27431</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26955">CVE-2024-26955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26790">CVE-2024-26790</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26925">CVE-2024-26925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26838">CVE-2024-26838</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26984">CVE-2024-26984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25739">CVE-2024-25739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24861">CVE-2024-24861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23307">CVE-2024-23307</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-22099">CVE-2024-22099</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-21823">CVE-2024-21823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-0841">CVE-2024-0841</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-7042">CVE-2023-7042</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-6270">CVE-2023-6270</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38096">CVE-2022-38096</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - Raspi</li>
+</ul>
+<h3 id="usn-6922-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6922-1">USN-6922-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>4 CVEs addressed in Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-25739">CVE-2024-25739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.5 - NVIDIA</li>
+</ul>
+<h3 id="usn-6923-1-usn-6923-2-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6923-1">USN-6923-1</a>, <a href="https://ubuntu.com/security/notices/USN-6923-2">USN-6923-2</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>6 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-36016">CVE-2024-36016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27017">CVE-2024-27017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52752">CVE-2023-52752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26952">CVE-2024-26952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26886">CVE-2024-26886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25742">CVE-2024-25742</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - generic, AWS, GCP, GKE, HWE, Intel-IOTG, KVM, LowLatency, NVIDIA, Oracle, IBM, Raspi</li>
+</ul>
+<h3 id="usn-6921-1-usn-6921-2-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6921-1">USN-6921-1</a>, <a href="https://ubuntu.com/security/notices/USN-6921-2">USN-6921-2</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>7 CVEs addressed in Noble (24.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-36016">CVE-2024-36016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36008">CVE-2024-36008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35984">CVE-2024-35984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35992">CVE-2024-35992</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35997">CVE-2024-35997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35990">CVE-2024-35990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25742">CVE-2024-25742</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>6.8 - generic, AWS, GCP, GKE, IBM, NVIDIA, OEM, Raspi, LowLatency</li>
+</ul>
+<h3 id="usn-6924-1-usn-6924-2-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6924-1">USN-6924-1</a>, <a href="https://ubuntu.com/security/notices/USN-6924-2">USN-6924-2</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>7 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26583">CVE-2024-26583</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48655">CVE-2022-48655</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26907">CVE-2024-26907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2021-47131">CVE-2021-47131</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26585">CVE-2024-26585</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36016">CVE-2024-36016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26584">CVE-2024-26584</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.4 - generic, AWS, Azure, Bluefield, GCP, GKE, HWE, IBM, IOT, KVM, Raspi, Xilinx-ZynqMP</li>
+</ul>
+<h3 id="usn-6925-1-linux-kernel-vulnerability">[<a href="https://ubuntu.com/security/notices/USN-6925-1">USN-6925-1</a>] Linux kernel vulnerability</h3>
+<ul>
+<li>1 CVEs addressed in Trusty ESM (14.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-26882">CVE-2024-26882</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>3.13 - generic, lowlatency, server, virtual</li>
+</ul>
+<h3 id="usn-6926-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6926-1">USN-6926-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>30 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2023-52752">CVE-2023-52752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52444">CVE-2023-52444</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26882">CVE-2024-26882</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52449">CVE-2023-52449</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26934">CVE-2024-26934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26840">CVE-2024-26840</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36016">CVE-2024-36016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27020">CVE-2024-27020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52443">CVE-2023-52443</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26923">CVE-2024-26923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26857">CVE-2024-26857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36902">CVE-2024-36902</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35982">CVE-2024-35982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26886">CVE-2024-26886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35978">CVE-2024-35978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52469">CVE-2023-52469</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26901">CVE-2024-26901</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26884">CVE-2024-26884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52436">CVE-2023-52436</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35997">CVE-2024-35997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52620">CVE-2023-52620</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35984">CVE-2024-35984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27013">CVE-2024-27013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52435">CVE-2023-52435</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25744">CVE-2024-25744</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25739">CVE-2024-25739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-46343">CVE-2023-46343</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>4.15 - generic, AWS, HWE, GCP, KVM, Oracle</li>
+</ul>
+<h3 id="usn-6927-1-linux-kernel-vulnerabilities">[<a href="https://ubuntu.com/security/notices/USN-6927-1">USN-6927-1</a>] Linux kernel vulnerabilities</h3>
+<ul>
+<li>161 CVEs addressed in Focal (20.04 LTS)
+<ul>
+<li><a href="https://ubuntu.com/security/CVE-2024-27008">CVE-2024-27008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26951">CVE-2024-26951</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26970">CVE-2024-26970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35815">CVE-2024-35815</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26828">CVE-2024-26828</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35898">CVE-2024-35898</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26999">CVE-2024-26999</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35938">CVE-2024-35938</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27016">CVE-2024-27016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35825">CVE-2024-35825</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35950">CVE-2024-35950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26969">CVE-2024-26969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26643">CVE-2024-26643</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26924">CVE-2024-26924</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36025">CVE-2024-36025</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52752">CVE-2023-52752</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35936">CVE-2024-35936</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35847">CVE-2024-35847</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26964">CVE-2024-26964</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35857">CVE-2024-35857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35854">CVE-2024-35854</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27437">CVE-2024-27437</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35851">CVE-2024-35851</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26654">CVE-2024-26654</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26629">CVE-2024-26629</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26988">CVE-2024-26988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27001">CVE-2024-27001</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26956">CVE-2024-26956</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35990">CVE-2024-35990</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27020">CVE-2024-27020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26996">CVE-2024-26996</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35817">CVE-2024-35817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26950">CVE-2024-26950</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26810">CVE-2024-26810</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35893">CVE-2024-35893</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35852">CVE-2024-35852</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35895">CVE-2024-35895</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27009">CVE-2024-27009</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26687">CVE-2024-26687</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35821">CVE-2024-35821</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35944">CVE-2024-35944</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27015">CVE-2024-27015</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35822">CVE-2024-35822</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35823">CVE-2024-35823</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35890">CVE-2024-35890</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35973">CVE-2024-35973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27013">CVE-2024-27013</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35912">CVE-2024-35912</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26817">CVE-2024-26817</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35935">CVE-2024-35935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26989">CVE-2024-26989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35877">CVE-2024-35877</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26926">CVE-2024-26926</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35849">CVE-2024-35849</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26993">CVE-2024-26993</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26974">CVE-2024-26974</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35791">CVE-2024-35791</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35910">CVE-2024-35910</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36008">CVE-2024-36008</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35988">CVE-2024-35988</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26813">CVE-2024-26813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36006">CVE-2024-36006</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35879">CVE-2024-35879</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35789">CVE-2024-35789</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35969">CVE-2024-35969</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35925">CVE-2024-35925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26984">CVE-2024-26984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35871">CVE-2024-35871</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35853">CVE-2024-35853</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27004">CVE-2024-27004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35899">CVE-2024-35899</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26931">CVE-2024-26931</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35934">CVE-2024-35934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35796">CVE-2024-35796</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36020">CVE-2024-36020</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52699">CVE-2023-52699</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35930">CVE-2024-35930</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26957">CVE-2024-26957</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35804">CVE-2024-35804</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26922">CVE-2024-26922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26814">CVE-2024-26814</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35900">CVE-2024-35900</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27395">CVE-2024-27395</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26642">CVE-2024-26642</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26960">CVE-2024-26960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26935">CVE-2024-26935</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36005">CVE-2024-36005</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26981">CVE-2024-26981</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26934">CVE-2024-26934</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26976">CVE-2024-26976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35806">CVE-2024-35806</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35915">CVE-2024-35915</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35922">CVE-2024-35922</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-48808">CVE-2022-48808</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26973">CVE-2024-26973</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35933">CVE-2024-35933</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35785">CVE-2024-35785</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26937">CVE-2024-26937</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35918">CVE-2024-35918</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27000">CVE-2024-27000</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26977">CVE-2024-26977</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27393">CVE-2024-27393</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35984">CVE-2024-35984</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35970">CVE-2024-35970</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27019">CVE-2024-27019</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26955">CVE-2024-26955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35888">CVE-2024-35888</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35976">CVE-2024-35976</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35982">CVE-2024-35982</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35805">CVE-2024-35805</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35960">CVE-2024-35960</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26812">CVE-2024-26812</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27017">CVE-2024-27017</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26966">CVE-2024-26966</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52880">CVE-2023-52880</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27396">CVE-2024-27396</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35809">CVE-2024-35809</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35997">CVE-2024-35997</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26958">CVE-2024-26958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26961">CVE-2024-26961</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26923">CVE-2024-26923</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26811">CVE-2024-26811</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35813">CVE-2024-35813</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36029">CVE-2024-36029</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35896">CVE-2024-35896</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26965">CVE-2024-26965</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35885">CVE-2024-35885</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35855">CVE-2024-35855</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36007">CVE-2024-36007</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26929">CVE-2024-26929</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35897">CVE-2024-35897</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35905">CVE-2024-35905</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27018">CVE-2024-27018</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26886">CVE-2024-26886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35884">CVE-2024-35884</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2023-52488">CVE-2023-52488</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36016">CVE-2024-36016</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35872">CVE-2024-35872</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35819">CVE-2024-35819</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35907">CVE-2024-35907</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26952">CVE-2024-26952</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35940">CVE-2024-35940</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35989">CVE-2024-35989</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-27059">CVE-2024-27059</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26925">CVE-2024-26925</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35955">CVE-2024-35955</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-36004">CVE-2024-36004</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-26994">CVE-2024-26994</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35807">CVE-2024-35807</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35886">CVE-2024-35886</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35978">CVE-2024-35978</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35958">CVE-2024-35958</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-35902">CVE-2024-35902</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25742">CVE-2024-25742</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-25739">CVE-2024-25739</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24861">CVE-2024-24861</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24859">CVE-2024-24859</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24858">CVE-2024-24858</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-24857">CVE-2024-24857</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2024-23307">CVE-2024-23307</a> <!-- raw HTML omitted --></li>
+<li><a href="https://ubuntu.com/security/CVE-2022-38096">CVE-2022-38096</a> <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>5.15 - GCP</li>
+</ul>
+<h2 id="goings-on-in-ubuntu-security-community">Goings on in Ubuntu Security Community</h2>
+<h3 id="discussion-of-testing-for-security-updates-in-light-of-crowdstrike--11-20">Discussion of testing for security updates in light of CrowdStrike (11:20)</h3>
+<ul>
+<li>Recent outage of over 8 million Windows machines running CrowdStrike Falcon
+<ul>
+<li><a href="https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/">https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/</a></li>
+</ul>
+</li>
+<li>Initially very little information on what happened - CS have now released more
+details about the apparent testing that was done but clearly were never
+actually testing the combination of Windows + Falcon + Rapid Response Content
+otherwise would have observed this failure immediately</li>
+<li>Also clearly didn&rsquo;t have any kind of staged/phased update process in place either
+<ul>
+<li>If you want to read a good analysis of the response from CS,
+<a href="https://verse.systems/blog/post/2024-07-25-parsing-crowdstrikes-post/">https://verse.systems/blog/post/2024-07-25-parsing-crowdstrikes-post/</a>
+<ul>
+<li>Toby Murray (full disclosure, my brother) - Associate Professor and
+Co-Lead of Computer Science Research Group at School of Computing and
+Information Systems, University of Melbourne, Director, Defence Science
+Institute (Vic &amp; Tas)</li>
+</ul>
+</li>
+<li>Future plans from CS now include gradual deployment of rules with &ldquo;canaries&rdquo; etc and then increased testing:
+<ul>
+<li>Local dev testing, content update testing, stress, fuzz, fault-injection,
+stability and interface testing</li>
+<li>Toby (not surprisingly as an expert in formal software verification)
+advocates for a formal approach to validating rules and in-kernel code etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>What can we learn from this for Ubuntu?
+<ul>
+<li>Formal methods might be tractable for a large company like CS who is
+developing a single, specific product like Falcon (particularly if they can
+reduce the size of their kernel module), this is not the case for a Linux
+distribution like Ubuntu which collates over 30,000 different open source
+software projects
+<ul>
+<li>over 4TB of source code across the various releases</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Instead have to take the pragmatic approach of thorough testing
+<ul>
+<li>For regular SRUs - detailed review by SRU team including a thorough test
+plan, cross-package testing via <a href="https://autopkgtest.ubuntu.com/">Autopkgtest</a> plus a minimum 7 day &ldquo;soak&rdquo;
+testing in the proposed pocket of the release before being pushed into the
+-updates pocket</li>
+<li>Once in -updates, <a href="https://ubuntu.com/server/docs/about-apt-upgrade-and-phased-updates">Phased Updates</a> implements the gradual deployment model -
+you can check the progress of various updates at
+<a href="https://ubuntu-archive-team.ubuntu.com/phased-updates.html">https://ubuntu-archive-team.ubuntu.com/phased-updates.html</a>
+<ul>
+<li>Watches for increased error reports via errors.ubuntu.com (captured via
+apport/whoopsie) and if detected stops the release of the package to users</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Compare that to the process for Security updates
+<ul>
+<li>Separate -security pocket in the archive which packages get published to
+immediately
+<ul>
+<li>No standardised review by separate team
+<ul>
+<li>instead adhoc reviews within the security team</li>
+</ul>
+</li>
+<li>No documented test plan per update
+<ul>
+<li>instead <a href="https://git.launchpad.net/qa-regression-testing/tree/README.testing">thorough test procedures</a> including:
+<ul>
+<li>checking for any changes in the build log (e.g. new compiler
+warnings/errors) and comparing the difference between the generated
+binaries (e.g. new / changed / missing symbols - ABI breaks)</li>
+<li>testing of the patched code including stepping through it with a
+debugger</li>
+<li>running any existing PoC or creating one if none exists and is
+feasible</li>
+<li>running any existing unit/integration tests within the package
+(including dep8/autopkgtests)</li>
+<li>test apt upgrade of the package is smooth</li>
+<li>QA regression testing scripts - maintained by the security team,
+implement various regression tests and system-level tests for
+different packages to exercise them in various different
+configurations</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cross-package testing via <a href="https://people.canonical.com/~platform/security-britney/">security-britney</a> - instance of the autopkgtest
+infrastructure that runs against the public <a href="https://launchpad.net/~ubuntu-security-proposed/+archive/ubuntu/ppa/">Ubuntu Security Proposed PPA</a>
+(and we have a similar internal instance for the different private PPAs we
+use for embargoed updates or ESM etc)</li>
+<li>No phased updates - instead immediate updates via specific
+security.ubuntu.com archive, combined with unattended-upgrades
+<ul>
+<li>designed to deliver security updates as soon as possible to remediate
+issues</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In general, I would argue that the process we have in place results in more
+thorough testing for security updates - particularly checking for anything
+anomalous like new compiler warnings / symbols / unexpected changes in
+binaries etc as well as more thorough, standardised testing for packages
+through the <a href="https://git.launchpad.net/qa-regression-testing/">QA Regression Testing</a> repo scripts</li>
+<li>However, the lack of phased/progressive updates combined with the separate
+security.ubuntu.com archive and unattended-upgrades on by default, means any
+security update is delivered to Ubuntu users within 24 hours (on average) -
+BUT then any regression is also rolled out to all users in 24 hours as well</li>
+<li>As such, kicking off discussions around possible changes to our deployment
+strategy to potentially introduce some more guard rails on the deployment side</li>
+<li>If you have any thoughts, please let us know</li>
+</ul>
+<h2 id="get-in-contact">Get in contact</h2>
+<ul>
+<li><a href="mailto:security@ubuntu.com">security@ubuntu.com</a></li>
+<li><a href="https://libera.chat">#ubuntu-security on the Libera.Chat IRC network</a></li>
+<li><a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened">ubuntu-hardened mailing list</a></li>
+<li><a href="https://discourse.ubuntu.com/c/security">Security section on discourse.ubuntu.com</a></li>
+<li><a href="https://fosstodon.org/@ubuntusecurity">@ubuntusecurity@fosstodon.org</a>, <a href="https://twitter.com/ubuntu_sec">@ubuntu_sec on twitter</a></li>
+</ul>
+
+    </div>
+  </div>
+
+
+
+  
+
+  
+
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <nav>
+            <ul class="pagination">
+              
+                <li class="page-item">
+                  <a href="https://ubuntusecuritypodcast.org/episode-232/" class="page-link">
+                    <span aria-hidden="true">&larr;</span>
+                    Previous</a>
+                </li>
+                
+              
+                <li class="page-item disabled">
+                  <a href="#" class="page-link">Next
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    
+</div> 
+<div class = "container bottom_container">
+  <div class="row">
+  <div class="col-md-12">
+    <nav class = "navbar navbar-default navbar_footer">
+    <ul class="nav navbar-nav navbar-right">
+      
+        <li>
+          <p class = "footer_copyright">Copyright 2018-2024 <a href="https://www.canonical.com/">Canonical</a></p>
+        </li>
+      
+      <li>
+        &nbsp;
+      </li>
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</div>
+<script src='https://ubuntusecuritypodcast.org/js/castanet-min.js'></script>
+<script>
+  $("#share").jsSocials({
+      shares: [
+    {
+      share: "facebook",
+      logo: "fab fa-facebook",
+    },
+    {
+      share: "twitter",           
+      label: "Tweet",             
+      logo: "fab fa-twitter",
+      
+      
+      
+      
+      
+        
+          via: "ubuntu_sec", 
+        
+      
+      url: "https:\/\/ubuntusecuritypodcast.org\/episode-233\/",
+      text: "Episode 233"
+    },
+    {
+      share: "linkedin",
+      logo: "fab fa-linkedin"
+    },
+    {
+      share: "pinterest",
+      logo: "fab fa-pinterest"
+    }
+  ],
+  });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.transcript').hide();
+        $(".hide_transcript").hide();
+        $(".hide_transcript").click(function() {
+            $(".transcript").hide("fast");
+            $(".show_transcript").show();
+            $(".hide_transcript").hide();
+        });
+
+        $(".show_transcript").click(function() {
+            $(".transcript").show(500);
+            $(".hide_transcript").show();
+            $(".show_transcript").hide();
+        });
+
+    });
+</script>
+
+<script>
+    var player = new MediaElementPlayer('player2', {
+        features: ['playpause', 'current', 'progress', 'duration', 'volume', 'speed'],
+        defaultSpeed: 1.0,
+        
+    });
+</script>
+
+</body>
+</html>
+
