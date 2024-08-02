@@ -17,13 +17,13 @@
 #+begin_description
 This week we take a look at the recent Crowdstrike outage and what we can learn
 from it compared to the testing and release process for security updates in
-Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
 Python, OpenJDK and one package with over 300 CVE fixes in a single update.
 #+end_description
 ** Overview
 This week we take a look at the recent Crowdstrike outage and what we can learn
 from it compared to the testing and release process for security updates in
-Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
 Python, OpenJDK and one package with over 300 CVE fixes in a single update.
 ** This week in Ubuntu Security Updates
 462 unique CVEs addressed

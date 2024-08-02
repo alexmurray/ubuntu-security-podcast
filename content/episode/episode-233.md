@@ -3,11 +3,11 @@ title = "Episode 233"
 description = """
   This week we take a look at the recent Crowdstrike outage and what we can learn
   from it compared to the testing and release process for security updates in
-  Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+  Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
   Python, OpenJDK and one package with over 300 CVE fixes in a single update.
   """
 date = 2024-08-02T17:05:00+09:30
-lastmod = 2024-08-02T17:06:22+09:30
+lastmod = 2024-08-02T17:10:07+09:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
@@ -23,7 +23,7 @@ guid = "ba8f315e6aff94fd8f0f481fef53b3cb064a5383e1e2673a7dfe3998fdf2d50476f22f20
 
 This week we take a look at the recent Crowdstrike outage and what we can learn
 from it compared to the testing and release process for security updates in
-Ubuntu, plus we cover details of vulnerabilities in popper, phpCAS, EDK II,
+Ubuntu, plus we cover details of vulnerabilities in poppler, phpCAS, EDK II,
 Python, OpenJDK and one package with over 300 CVE fixes in a single update.
 
 
