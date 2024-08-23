@@ -8,6 +8,484 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 235
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-235
+:EXPORT_DATE: 2024-08-23 14:44
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E235.mp3 :podcast_duration "1060" :podcast_bytes "17470779" :permalink "https://ubuntusecuritypodcast.org/episode-235/" :guid e902b6e61b762c5b2de767bad9aeae3cae72fdff4f0b0e0236b612c9ae6512df40c5a50464e1cfc2463bf4ae82521f29338e3715f49b0cb7b7b4a004751a3738
+:END:
+#+begin_description
+A recent Microsoft Windows update breaks Linux dual-boot - or does it? This week
+we look into reports of the recent Windows patch-Tuesday update breaking
+dual-boot, including a deep-dive into the technical details of Secure Boot,
+SBAT, grub, shim and more, plus we look at a vulnerability in GNOME Shell and
+the handling of captive portals as well.
+#+end_description
+** Overview
+A recent Microsoft Windows update breaks Linux dual-boot - or does it? This week
+we look into reports of the recent Windows patch-Tuesday update breaking
+dual-boot, including a deep-dive into the technical details of Secure Boot,
+SBAT, grub, shim and more, plus we look at a vulnerability in GNOME Shell and
+the handling of captive portals as well.
+** This week in Ubuntu Security Updates
+135 unique CVEs addressed
+*** [[[https://ubuntu.com/security/notices/USN-6960-1][USN-6960-1]]] RMagick vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-5349][CVE-2023-5349]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6951-2][USN-6951-2]]] Linux kernel (Azure) vulnerabilities
+- 83 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2022-48674][CVE-2022-48674]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39471][CVE-2024-39471]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39292][CVE-2024-39292]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36270][CVE-2024-36270]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36904][CVE-2024-36904]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38618][CVE-2024-38618]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36014][CVE-2024-36014]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36941][CVE-2024-36941]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38637][CVE-2024-38637]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38613][CVE-2024-38613]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36286][CVE-2024-36286]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36902][CVE-2024-36902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38599][CVE-2024-38599]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39301][CVE-2024-39301]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39475][CVE-2024-39475]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36954][CVE-2024-36954]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-33621][CVE-2024-33621]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38552][CVE-2024-38552]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36950][CVE-2024-36950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38582][CVE-2024-38582]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36015][CVE-2024-36015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52434][CVE-2023-52434]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38659][CVE-2024-38659]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36940][CVE-2024-36940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38607][CVE-2024-38607]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39480][CVE-2024-39480]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38583][CVE-2024-38583]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52882][CVE-2023-52882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39467][CVE-2024-39467]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39489][CVE-2024-39489]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38601][CVE-2024-38601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52752][CVE-2023-52752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36960][CVE-2024-36960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38549][CVE-2024-38549]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38567][CVE-2024-38567]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38587][CVE-2024-38587]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38635][CVE-2024-38635]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38598][CVE-2024-38598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38612][CVE-2024-38612]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38579][CVE-2024-38579]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27401][CVE-2024-27401]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36946][CVE-2024-36946]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36017][CVE-2024-36017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48772][CVE-2022-48772]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36905][CVE-2024-36905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35947][CVE-2024-35947]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38381][CVE-2024-38381]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38565][CVE-2024-38565]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38589][CVE-2024-38589]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36939][CVE-2024-36939]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38661][CVE-2024-38661]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39488][CVE-2024-39488]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36883][CVE-2024-36883]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38621][CVE-2024-38621]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-37353][CVE-2024-37353]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38780][CVE-2024-38780]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36964][CVE-2024-36964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38627][CVE-2024-38627]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36971][CVE-2024-36971]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38615][CVE-2024-38615]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38559][CVE-2024-38559]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31076][CVE-2024-31076]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26886][CVE-2024-26886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39493][CVE-2024-39493]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27398][CVE-2024-27398]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36886][CVE-2024-36886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38633][CVE-2024-38633]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36959][CVE-2024-36959]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38634][CVE-2024-38634]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38560][CVE-2024-38560]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38558][CVE-2024-38558]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52585][CVE-2023-52585]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-37356][CVE-2024-37356]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36919][CVE-2024-36919]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36933][CVE-2024-36933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38596][CVE-2024-38596]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39276][CVE-2024-39276]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27399][CVE-2024-27399]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38600][CVE-2024-38600]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38578][CVE-2024-38578]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36934][CVE-2024-36934]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6961-1][USN-6961-1]]] BusyBox vulnerabilities
+- 4 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-42365][CVE-2023-42365]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-42364][CVE-2023-42364]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-42363][CVE-2023-42363]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48174][CVE-2022-48174]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6962-1][USN-6962-1]]] LibreOffice vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-6472][CVE-2024-6472]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6963-1][USN-6963-1]]] GNOME Shell vulnerability (01:03)
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-36472][CVE-2024-36472]] @@html:<!-- medium -->@@
+- Captive portal detection would spawn an embedded webkit browser automatically
+  to allow user to login etc
+- But the page the user gets directed to is controlled by the attacker and can
+  contain arbitrary javascript etc
+- Upstream bug report claimed could then get a reverse shell etc - not clear
+  this is the case since would still be constrained by the webkitgtk browser so would also need a sandbox escape etc.
+- This update then includes a change to both *not* automatically open the captive
+  portal page (instead it will show a notification and the user needs to click
+  that) BUT to also disable the use of the webkitgtk-based embedded browser and
+  instead use the users regular browser
+
+*** [[[https://ubuntu.com/security/notices/USN-6909-3][USN-6909-3]]] Bind vulnerabilities
+- 2 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2024-1975][CVE-2024-1975]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-1737][CVE-2024-1737]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6964-1][USN-6964-1]]] ORC vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-40897][CVE-2024-40897]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6837-2][USN-6837-2]]] Rack vulnerabilitie
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-26146][CVE-2024-26146]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26141][CVE-2024-26141]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25126][CVE-2024-25126]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6966-1][USN-6966-1]]] Firefox vulnerabilities
+- 13 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-7525][CVE-2024-7525]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7522][CVE-2024-7522]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7520][CVE-2024-7520]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7519][CVE-2024-7519]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7531][CVE-2024-7531]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7530][CVE-2024-7530]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7529][CVE-2024-7529]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7528][CVE-2024-7528]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7527][CVE-2024-7527]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7526][CVE-2024-7526]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7524][CVE-2024-7524]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7521][CVE-2024-7521]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7518][CVE-2024-7518]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6966-2][USN-6966-2]]] Firefox regressions
+- 13 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-7525][CVE-2024-7525]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7522][CVE-2024-7522]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7520][CVE-2024-7520]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7519][CVE-2024-7519]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7531][CVE-2024-7531]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7530][CVE-2024-7530]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7529][CVE-2024-7529]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7528][CVE-2024-7528]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7527][CVE-2024-7527]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7526][CVE-2024-7526]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7524][CVE-2024-7524]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7521][CVE-2024-7521]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7518][CVE-2024-7518]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6951-3][USN-6951-3]]] Linux kernel (Azure) vulnerabilities
+- 83 CVEs addressed in Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2022-48674][CVE-2022-48674]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39471][CVE-2024-39471]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39292][CVE-2024-39292]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36270][CVE-2024-36270]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36904][CVE-2024-36904]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38618][CVE-2024-38618]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36014][CVE-2024-36014]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36941][CVE-2024-36941]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38637][CVE-2024-38637]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38613][CVE-2024-38613]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36286][CVE-2024-36286]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36902][CVE-2024-36902]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38599][CVE-2024-38599]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39301][CVE-2024-39301]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39475][CVE-2024-39475]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36954][CVE-2024-36954]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-33621][CVE-2024-33621]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38552][CVE-2024-38552]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36950][CVE-2024-36950]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38582][CVE-2024-38582]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36015][CVE-2024-36015]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52434][CVE-2023-52434]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38659][CVE-2024-38659]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36940][CVE-2024-36940]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38607][CVE-2024-38607]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39480][CVE-2024-39480]] @@html:<!-- negligible -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38583][CVE-2024-38583]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52882][CVE-2023-52882]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39467][CVE-2024-39467]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39489][CVE-2024-39489]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38601][CVE-2024-38601]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27019][CVE-2024-27019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52752][CVE-2023-52752]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36960][CVE-2024-36960]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38549][CVE-2024-38549]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38567][CVE-2024-38567]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38587][CVE-2024-38587]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38635][CVE-2024-38635]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38598][CVE-2024-38598]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38612][CVE-2024-38612]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38579][CVE-2024-38579]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27401][CVE-2024-27401]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36946][CVE-2024-36946]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36017][CVE-2024-36017]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-48772][CVE-2022-48772]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36905][CVE-2024-36905]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35947][CVE-2024-35947]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38381][CVE-2024-38381]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38565][CVE-2024-38565]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38589][CVE-2024-38589]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36939][CVE-2024-36939]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38661][CVE-2024-38661]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39488][CVE-2024-39488]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36883][CVE-2024-36883]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38621][CVE-2024-38621]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-37353][CVE-2024-37353]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38780][CVE-2024-38780]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36964][CVE-2024-36964]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38627][CVE-2024-38627]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36971][CVE-2024-36971]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38615][CVE-2024-38615]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38559][CVE-2024-38559]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31076][CVE-2024-31076]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26886][CVE-2024-26886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39493][CVE-2024-39493]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27398][CVE-2024-27398]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36886][CVE-2024-36886]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38633][CVE-2024-38633]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36959][CVE-2024-36959]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38634][CVE-2024-38634]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38560][CVE-2024-38560]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38558][CVE-2024-38558]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52585][CVE-2023-52585]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-37356][CVE-2024-37356]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-35976][CVE-2024-35976]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36919][CVE-2024-36919]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36933][CVE-2024-36933]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38596][CVE-2024-38596]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-39276][CVE-2024-39276]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-27399][CVE-2024-27399]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38600][CVE-2024-38600]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-38578][CVE-2024-38578]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-36934][CVE-2024-36934]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6968-1][USN-6968-1]]] PostgreSQL vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-7348][CVE-2024-7348]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6967-1][USN-6967-1]]] Intel Microcode vulnerabilities
+- 5 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-25939][CVE-2024-25939]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24980][CVE-2024-24980]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-24853][CVE-2024-24853]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-49141][CVE-2023-49141]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-42667][CVE-2023-42667]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/LSN-0106-1][LSN-0106-1]]] Linux kernel vulnerability
+- 3 CVEs addressed in
+  - [[https://ubuntu.com/security/CVE-2024-36016][CVE-2024-36016]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2024-26585][CVE-2024-26585]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-52620][CVE-2023-52620]] @@html:<!-- high -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6969-1][USN-6969-1]]] Cacti vulnerabilities
+- 10 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-34340][CVE-2024-34340]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-34360][CVE-2024-34360]] @@html:<!--  -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31460][CVE-2024-31460]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31459][CVE-2024-31459]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31458][CVE-2024-31458]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31445][CVE-2024-31445]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31444][CVE-2024-31444]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-31443][CVE-2024-31443]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-29894][CVE-2024-29894]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-25641][CVE-2024-25641]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6970-1][USN-6970-1]]] exfatprogs vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-45897][CVE-2023-45897]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6944-2][USN-6944-2]]] curl vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2024-7264][CVE-2024-7264]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6965-1][USN-6965-1]]] Vim vulnerabilities
+- 5 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2021-4069][CVE-2021-4069]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-4019][CVE-2021-4019]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3984][CVE-2021-3984]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3974][CVE-2021-3974]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-3973][CVE-2021-3973]] @@html:<!-- low -->@@
+** Goings on in Ubuntu Security Community
+*** Reports of dual-boot Linux/Windows machines failing to boot (04:30)
+- https://arstechnica.com/security/2024/08/a-patch-microsoft-spent-2-years-preparing-is-making-a-mess-for-some-linux-users/
+- https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2022-2601
+- https://discourse.ubuntu.com/t/sbat-self-check-failed-mitigating-the-impact-of-shim-15-7-revocation-on-the-ubuntu-boot-process-for-devices-running-windows/47378
+- Microsoft released an update for Windows on 13th August 2024 - revoking old
+  versions of grub that were susceptible to [[https://ubuntu.com/security/CVE-2022-2601][CVE-2022-2601]]
+- How do you revoke grub?
+  - Secure Boot relies on each component in the boot chain verifying that the
+    next component is signed with a valid signature before it is then loaded
+    - UEFI BIOS validates shim
+    - shim validates grub
+    - grub validates kernel
+    - kernel validates kernel modules etc
+  - UEFI specification has effectively a CRL - list of hashes of binaries which
+    shouldn't be trusted
+  - BUT there is only limited space in the UEFI storage - after the original
+    BootHole vulnerabilities revoked a huge number of grub binaries from many
+    different distros, some devices failed to boot as the NVRAM was too full
+  - Microsoft and Red Hat and other maintainers of shim decided on a new scheme,
+    called SBAT - Secure Boot Advanced Targeting
+    - maintains a generation number for each component in the boot chain
+    - when say shim or grub gets updated to fix a bunch more security
+      vulnerabilities, upstream bumps the generation number
+    - shim/grub then embeds the generation number within itself
+    - Signed UEFI variable then lists which generation numbers are acceptable
+  - shim checks the generation number of a binary (grub/fwupd etc) against this
+    list and if it is too old refuses to load it
+- In Ubuntu this was patched back in [[https://bugs.launchpad.net/ubuntu/+source/grub2-unsigned/+bug/1996950][Jan 2023]] and was documented on the [[https://discourse.ubuntu.com/t/sbat-revocations-boot-process/34996][Ubuntu
+  Discourse]] - in this case we updated shim to a newer version which itself
+  revoked an older grub, =grub,1=
+- Now Microsoft's update revokes =grub,2=, ie sets the minimum generation number
+  for grub to =3=
+- You can inspect the SBAT policy by either directly reading the associated EFI
+  variable or using =mokutil --list-sbat-revocations=
+#+begin_src
+cat /sys/firmware/efi/efivars/SbatLevelRT-605dab50-e046-4300-abb6-3dd810dd8b23
+mokutil --list-sbat-revocations
+#+end_src
+#+begin_example
+sbat,1,2023012900
+shim,2
+grub,3
+grub.debian,4
+#+end_example
+
+#+begin_src shell
+objdump -j .sbat -s /boot/efi/EFI/ubuntu/grubx64.efi | xxd -r
+#+end_src
+#+begin_example
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,4,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
+grub.ubuntu,2,Ubuntu,grub2,2.12-5ubuntu4,https://www.ubuntu.com/
+grub.peimage,2,Canonical,grub2,2.12-5ubuntu4,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-use-peimage-shim.patch
+#+end_example
+
+#+begin_src shell
+rm -rf grub2-signed
+mkdir grub2-signed
+pushd grub2-signed >/dev/null || exit
+for rel in focal jammy noble; do
+  mkdir $rel
+  pushd $rel >/dev/null || exit
+  pull-lp-debs grub2-signed $rel-security 1>/dev/null 2>/dev/null || pull-lp-debs grub2-signed $rel-release 1>/dev/null 2>/dev/null
+  dpkg-deb -x grub-efi-amd64-signed*.deb grub2-signed
+  echo $rel
+  echo -----
+  find . -name grubx64.efi.signed -exec objdump -j .sbat -s {} \; | tail -n +5 | xxd -r
+  popd >/dev/null || exit
+done
+popd >/dev/null
+#+end_src
+#+begin_example
+focal
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.ubuntu,1,Ubuntu,grub2,2.06-2ubuntu14.4,https://www.ubuntu.com/
+jammy
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.ubuntu,1,Ubuntu,grub2,2.06-2ubuntu14.4,https://www.ubuntu.com/
+noble
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,4,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
+grub.ubuntu,2,Ubuntu,grub2,2.12-1ubuntu7,https://www.ubuntu.com/
+grub.peimage,2,Canonical,grub2,2.12-1ubuntu7,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-use-peimage-shim.patch
+#+end_example
+
+- So if all the current LTS releases have a grub with a generation number higher
+  than this, why are so many machines failing to boot?
+  - It is not just grub that is the issue - shim itself also got revoked in the
+    same update
+    https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2023-40547 - so
+    shim 15.8 (ie. 4th SBAT generation of shim) is now required
+  - Unfortunately, the related updates for this shim in Ubuntu are still in the
+    process of being released -
+    https://bugs.launchpad.net/ubuntu/+source/shim/+bug/2051151
+#+begin_src shell
+rm -rf shim-signed
+mkdir shim-signed
+pushd shim-signed >/dev/null || exit
+for rel in focal jammy noble; do
+  mkdir $rel
+  pushd $rel >/dev/null || exit
+  pull-lp-debs shim-signed $rel-security 1>/dev/null 2>/dev/null || pull-lp-debs shim-signed $rel-release 1>/dev/null 2>/dev/null
+  dpkg-deb -x shim-signed*.deb shim-signed
+  echo $rel
+  echo -----
+  find . -name shimx64.efi.signed.latest -exec objdump -j .sbat -s {} \; | tail -n +5 | xxd -r
+  popd >/dev/null || exit
+done
+popd >/dev/null
+#+end_src
+#+begin_example
+focal
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ubuntu,1,Ubuntu,shim,15.7-0ubuntu1,https://www.ubuntu.com/
+jammy
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ubuntu,1,Ubuntu,shim,15.7-0ubuntu1,https://www.ubuntu.com/
+noble
+-----
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ubuntu,1,Ubuntu,shim,15.8-0ubuntu1,https://www.ubuntu.com/
+#+end_example
+  - only noble has a new-enough shim in the security/release pocket - both focal
+    and jammy have the older one - but the new 4th generation shim is currently
+    undergoing testing in the -proposed pocket and will be released next week
+
+  - until then, if affected, need to disable secure boot in BIOS then can either
+    wait until the new shim is released OR just reboot twice in this mode and
+    shim will automoatically reset the SBAT policy to the previous version,
+    allowing the older shim to still be used
+
+  - then can re-enable Secure Boot in BIOS
+
+  - Once new shim is released it will reinstall the new SBAT policy to revoke
+    its older version
+
+  - One other thing, this also means the old ISOs won't boot either
+
+    - 24.04.1 will be released on 29th August
+    - upcoming 22.04.5 release will also have this new shim too
+    - no further ISO spins planned for 20.04 - so if you really want to install
+      this release on new hardware, would need to disable secure boot first, do
+      the install, then install updates to get the new shim, and re-enable
+      secure boot
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 234
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-234
