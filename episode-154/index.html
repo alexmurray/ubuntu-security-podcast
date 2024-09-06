@@ -13,7 +13,7 @@
   FUSE, Bind, Apache, the Linux kernel and more.
   ">
 
-<meta name="generator" content="Hugo 0.133.0">
+<meta name="generator" content="Hugo 0.134.1">
 
 <meta property="og:title" content="Episode 154" />
 <meta name="twitter:title" content="Episode 154"/>
@@ -431,143 +431,143 @@ OOB read / write -&gt; crash (DoS) or privesc</li>
 <li>Livepatch</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>KERNEL TYPE</th>
-<th>20.04</th>
-<th>18.04</th>
-<th>16.04</th>
-<th>14.04</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>aws</td>
-<td>85.1</td>
-<td>85.1</td>
-<td>85.1</td>
-<td>—</td>
-</tr>
-<tr>
-<td>azure</td>
-<td>85.1</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-</tr>
-<tr>
-<td>azure-4.15</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gcp</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>generic-4.15</td>
-<td>—</td>
-<td>85.1</td>
-<td>85.1</td>
-<td>—</td>
-</tr>
-<tr>
-<td>generic-4.4</td>
-<td>—</td>
-<td>—</td>
-<td>85.1</td>
-<td>85.1</td>
-</tr>
-<tr>
-<td>generic-5.4</td>
-<td>85.2</td>
-<td>85.2</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gke</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gke-4.15</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gke-5.4</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gkeop</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>gkeop-5.4</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>ibm</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>ibm-5.4</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>lowlatency-4.15</td>
-<td>—</td>
-<td>85.1</td>
-<td>85.1</td>
-<td>—</td>
-</tr>
-<tr>
-<td>lowlatency-4.4</td>
-<td>—</td>
-<td>—</td>
-<td>85.1</td>
-<td>85.1</td>
-</tr>
-<tr>
-<td>lowlatency-5.4</td>
-<td>85.2</td>
-<td>85.2</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>oem</td>
-<td>—</td>
-<td>85.1</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">KERNEL TYPE</th>
+          <th style="text-align: left">20.04</th>
+          <th style="text-align: left">18.04</th>
+          <th style="text-align: left">16.04</th>
+          <th style="text-align: left">14.04</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">aws</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">azure</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">azure-4.15</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gcp</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">generic-4.15</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">generic-4.4</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">generic-5.4</td>
+          <td style="text-align: left">85.2</td>
+          <td style="text-align: left">85.2</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gke</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gke-4.15</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gke-5.4</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gkeop</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">gkeop-5.4</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ibm</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ibm-5.4</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">lowlatency-4.15</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">lowlatency-4.4</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">85.1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">lowlatency-5.4</td>
+          <td style="text-align: left">85.2</td>
+          <td style="text-align: left">85.2</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">oem</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">85.1</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">—</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="usn-5341-1-gnu-binutils-vulnerabilities-09-04">[<a href="https://ubuntu.com/security/notices/USN-5341-1">USN-5341-1</a>] GNU binutils vulnerabilities [09:04]</h3>
 <ul>
