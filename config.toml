@@ -15,14 +15,14 @@ android_subscribe = "https://www.google.com/podcasts?feed=aHR0cHM6Ly91YnVudHVzZW
 #android_subscribe = "https://subscribeonandroid.com/ubuntusecuritypodcast.org/episode/index.xml"
 spotify_subscribe = "https://open.spotify.com/show/0g0Kh2gQWP17Y6yye9bhkZ"
 pocketcasts_subscribe = "https://pca.st/O9Df"
-description = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team."
+description = "A fortnightly podcast talking about the latest developments and updates from the Ubuntu Security team."
 media_prefix = "https://people.canonical.com/~amurray/USP/"
 
 
 [params.feed]
 copyright = "Copyright 2018-2024 Canonical"
 itunes_author = "Ubuntu Security Team"
-itunes_summary = "A weekly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of the security vulnerabilities and fixes from the last week as well as a discussion on some of the goings on in the wider Ubuntu Security community."
+itunes_summary = "A fortnightly podcast talking about the latest developments and updates from the Ubuntu Security team, including a summary of recent security vulnerabilities and fixes as well as a discussion on some of the goings on in the wider Ubuntu Security community."
 itunes_owner_name = "Alex Murray"
 itunes_owner_email = "alex.murray@canonical.com"
 itunes_image = "https://ubuntusecuritypodcast.org/img/usp_logo_1400.png"
