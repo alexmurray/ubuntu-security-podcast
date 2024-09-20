@@ -8,6 +8,263 @@
 #+AUTHOR:
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Alex Murray" :explicit no :episode_image img/usp_logo_500.png
 
+* Episode 237
+:PROPERTIES:
+:EXPORT_FILE_NAME: episode-237
+:EXPORT_DATE: 2024-09-20 11:57
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E237.mp3 :podcast_duration "976" :podcast_bytes "16295769" :permalink "https://ubuntusecuritypodcast.org/episode-237/" :guid b8a7f759543db68aa6ff041962efbead323957ed57ee414527693528c7b8090dc64d18bfde1e13c82ee7456f77f5104e226bf3117158f6e2a0ec96de75997505
+:END:
+#+begin_description
+John and Maximé have been talking about Ubuntu's AppArmor user namespace
+restrictions at the the Linux Security Summit in Europe this past week, plus we
+cover some more details from the official announcement of permission prompting
+in Ubuntu 24.10, a new release of Intel TDX for Ubuntu 24.04 LTS and more.
+#+end_description
+** Overview
+John and Maximé have been talking about Ubuntu's AppArmor user namespace
+restrictions at the the Linux Security Summit in Europe this past week, plus we
+cover some more details from the official announcement of permission prompting
+in Ubuntu 24.10, a new release of Intel TDX for Ubuntu 24.04 LTS and more.
+** This week in Ubuntu Security Updates (01:11)
+613 unique CVEs addressed in the past fortnight
+*** [[[https://ubuntu.com/security/notices/USN-6989-1][USN-6989-1]]] OpenStack vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-44082][CVE-2024-44082]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6990-1][USN-6990-1]]] znc vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-39844][CVE-2024-39844]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6992-1][USN-6992-1]]] Firefox vulnerabilities
+- 8 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-8385][CVE-2024-8385]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8384][CVE-2024-8384]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8381][CVE-2024-8381]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8389][CVE-2024-8389]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8387][CVE-2024-8387]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8386][CVE-2024-8386]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8383][CVE-2024-8383]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8382][CVE-2024-8382]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6993-1][USN-6993-1]]] Vim vulnerabilities
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-43374][CVE-2024-43374]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-41957][CVE-2024-41957]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6991-1][USN-6991-1]]] AIOHTTP vulnerability
+- 1 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-23334][CVE-2024-23334]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6995-1][USN-6995-1]]] Thunderbird vulnerabilities
+- 10 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-8384][CVE-2024-8384]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8381][CVE-2024-8381]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7525][CVE-2024-7525]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7522][CVE-2024-7522]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7519][CVE-2024-7519]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-8382][CVE-2024-8382]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7529][CVE-2024-7529]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7527][CVE-2024-7527]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7526][CVE-2024-7526]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7521][CVE-2024-7521]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6996-1][USN-6996-1]]] WebKitGTK vulnerabilities
+- 6 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-4558][CVE-2024-4558]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-40789][CVE-2024-40789]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-40782][CVE-2024-40782]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-40780][CVE-2024-40780]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-40779][CVE-2024-40779]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-40776][CVE-2024-40776]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6841-2][USN-6841-2]]] PHP vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2024-5458][CVE-2024-5458]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6997-1][USN-6997-1]], [[https://ubuntu.com/security/notices/USN-6997-2][USN-6997-2]]] LibTIFF vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-7006][CVE-2024-7006]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6994-1][USN-6994-1]]] Netty vulnerabilities
+- 2 CVEs addressed in Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2023-44487][CVE-2023-44487]] @@html:<!-- high -->@@
+  - [[https://ubuntu.com/security/CVE-2023-34462][CVE-2023-34462]] @@html:<!-- medium -->@@
+- HTTP/2 DoS, seen exploited in the wild and listen on the CISA KEV
+
+*** [[[https://ubuntu.com/security/notices/USN-6998-1][USN-6998-1]]] Unbound vulnerabilities
+- 2 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-43168][CVE-2024-43168]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-43167][CVE-2024-43167]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6999-1][USN-6999-1]]] Linux kernel vulnerabilities
+- 220 CVEs addressed in Noble (24.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7003-1][USN-7003-1]], [[https://ubuntu.com/security/notices/USN-7003-2][USN-7003-2]], [[https://ubuntu.com/security/notices/USN-7003-3][USN-7003-3]]] Linux kernel vulnerabilities
+- 85 CVEs addressed in Bionic ESM (18.04 ESM), Focal (20.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7004-1][USN-7004-1]]] Linux kernel vulnerabilities
+- 221 CVEs addressed in Noble (24.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7005-1][USN-7005-1]], [[https://ubuntu.com/security/notices/USN-7005-2][USN-7005-2]]] Linux kernel vulnerabilities
+- 219 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7006-1][USN-7006-1]]] Linux kernel vulnerabilities
+- 94 CVEs addressed in Focal (20.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7007-1][USN-7007-1]]] Linux kernel vulnerabilities
+- 219 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7008-1][USN-7008-1]]] Linux kernel vulnerabilities
+- 222 CVEs addressed in Jammy (22.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7009-1][USN-7009-1]]] Linux kernel vulnerabilities
+- 219 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7019-1][USN-7019-1]]] Linux kernel vulnerabilities
+- 429 CVEs addressed in Jammy (22.04 LTS)
+- Full CVE list elided - see USN for details
+
+*** [[[https://ubuntu.com/security/notices/USN-7002-1][USN-7002-1]]] Setuptools vulnerability
+- 1 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-6345][CVE-2024-6345]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7000-1][USN-7000-1]], [[https://ubuntu.com/security/notices/USN-7000-2][USN-7000-2]]] Expat vulnerabilities
+- 3 CVEs addressed in Trusty ESM (14.04 ESM), Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-45492][CVE-2024-45492]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-45491][CVE-2024-45491]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-45490][CVE-2024-45490]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7001-1][USN-7001-1]], [[https://ubuntu.com/security/notices/USN-7001-2][USN-7001-2]]] xmltok library vulnerabilities
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-45491][CVE-2024-45491]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-45490][CVE-2024-45490]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-6560-3][USN-6560-3]]] OpenSSH vulnerability
+- 1 CVEs addressed in Xenial ESM (16.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2023-51385][CVE-2023-51385]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7011-1][USN-7011-1]], [[https://ubuntu.com/security/notices/USN-7011-2][USN-7011-2]]] ClamAV vulnerabilities
+- 2 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-20506][CVE-2024-20506]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-20505][CVE-2024-20505]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7012-1][USN-7012-1]]] curl vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-8096][CVE-2024-8096]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7013-1][USN-7013-1]]] Dovecot vulnerabilities
+- 2 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-23185][CVE-2024-23185]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-23184][CVE-2024-23184]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7014-1][USN-7014-1]]] nginx vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-7347][CVE-2024-7347]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7015-1][USN-7015-1]]] Python vulnerabilities
+- 5 CVEs addressed in Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-8088][CVE-2024-8088]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-7592][CVE-2024-7592]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2024-6923][CVE-2024-6923]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-6232][CVE-2024-6232]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2023-27043][CVE-2023-27043]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7010-1][USN-7010-1]]] DCMTK vulnerabilities
+- 9 CVEs addressed in Xenial ESM (16.04 ESM), Bionic ESM (18.04 ESM), Focal (20.04 LTS), Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-34509][CVE-2024-34509]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-34508][CVE-2024-34508]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2024-28130][CVE-2024-28130]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-43272][CVE-2022-43272]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2121][CVE-2022-2121]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-41690][CVE-2021-41690]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-41689][CVE-2021-41689]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-41688][CVE-2021-41688]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2021-41687][CVE-2021-41687]] @@html:<!-- low -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7016-1][USN-7016-1]]] FRR vulnerability
+- 1 CVEs addressed in Jammy (22.04 LTS), Noble (24.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-44070][CVE-2024-44070]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7017-1][USN-7017-1]]] Quagga vulnerability
+- 1 CVEs addressed in Focal (20.04 LTS)
+  - [[https://ubuntu.com/security/CVE-2024-44070][CVE-2024-44070]] @@html:<!-- medium -->@@
+
+*** [[[https://ubuntu.com/security/notices/USN-7018-1][USN-7018-1]]] OpenSSL vulnerabilities
+- 6 CVEs addressed in Trusty ESM (14.04 ESM)
+  - [[https://ubuntu.com/security/CVE-2024-0727][CVE-2024-0727]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2023-3446][CVE-2023-3446]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2022-2068][CVE-2022-2068]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2022-1292][CVE-2022-1292]] @@html:<!-- medium -->@@
+  - [[https://ubuntu.com/security/CVE-2021-23840][CVE-2021-23840]] @@html:<!-- low -->@@
+  - [[https://ubuntu.com/security/CVE-2020-1968][CVE-2020-1968]] @@html:<!-- low -->@@
+
+** Goings on in Ubuntu Security Community
+*** Linux Security Summit Europe 2024 (03:44)
+- https://events.linuxfoundation.org/linux-security-summit-europe/program/schedule/
+- Sep 16-17 - Vienna, Austria
+- John Johansen and Maxime Bélair from AppArmor team presented "Restricting
+  Unprivileged User Namespaces in Ubuntu"
+  - https://youtu.be/yCHGmdXpylA?t=1053
+  - https://static.sched.com/hosted_files/lsseu2024/ed/Restricting%20Unprivileged%20User%20Namespaces%20In%20Ubuntu.pdf
+- Other talks
+  - Deep-dive into xz-utils supply chain attack
+  - Internals of the SLUB memory allocator for exploit developers
+  - Landlock update - including details of new IOCTL restrictions etc
+  - systemd and TPM2 update
+
+*** Official announcement of Permissions Prompting in Ubuntu 24.10 (09:00)
+- https://discourse.ubuntu.com/t/ubuntu-desktop-s-24-10-dev-cycle-part-5-introducing-permissions-prompting/47963
+- [[*Ubuntu Security Center with snapd-based AppArmor home file access prompting preview (05:45)][Ubuntu Security Center with snapd-based AppArmor home file access prompting preview in episode 236]]
+- Even works for command-line applications etc - not just graphical
+- Covers future developments as well:
+  - Better default response suggestions based on user feedback.
+  - Shell integration of the prompting pop-ups (eg full screen takeovers)
+  - Improved rule management summaries and better messaging of overlapping or redundant prompts.
+  - Expansion of the prompting system to cover additional snap interfaces such as camera and microphone access.
+  - Smarter client side analysis of prompts, recommending additional options if multiple similar prompts are detected.
+
+*** Version 2.1 of IntelⓇ TDX on Ubuntu 24.04 LTS Released (11:46)
+- https://discourse.ubuntu.com/t/version-2-1-of-intel-tdx-on-ubuntu-24-04-lts-released/47918/1
+- Confidential computing - using TDX to run VMs in confidential mode - runs
+  workloads (VMs) in hardware-backed isolated execution environments (Trust
+  Domains). VM memory isolation via encryption in hardware so can't be accessed
+  by the hypervisor, remote attestation etc ([[*Confidential Computing with Ijlal Loutfi and Karen Horovitz (01:17)][Confidential Computing with Ijlal
+  Loutfi and Karen Horovitz from Episode 230]])
+- https://discourse.ubuntu.com/t/intel-tdx-1-0-technology-preview-available-on-ubuntu-23-10/40698
+- Scripting to setup the required elements to use TDX on Ubuntu 24.04 host and
+  then setup guest VMs to run in confidential mode
+  - Install server image, run scripts, enable TDX in BIOS, create VM images etc
+  - Can also configure remote attestation of VM too
+- See full changes at https://github.com/canonical/tdx/releases/tag/2.1
+
+*** Ubuntu 22.04.5 LTS released (13:45)
+- https://discourse.ubuntu.com/t/jammy-jellyfish-point-release-changes/29835/8
+  - Only covers changes in main and restricted, doesn't list security updates either
+- https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668
+
+*** AppArmor security update for CVE-2016-1585 published (14:23)
+- [[*Upcoming AppArmor Security update for CVE-2016-1585][Upcoming AppArmor Security update for CVE-2016-1585 from Episode 226]]
+- https://discourse.ubuntu.com/t/upcoming-apparmor-security-update-for-cve-2016-1585/44268/3
+- Now published to -updates pocket for 20.04 LTS and 22.04 LTS
+- Will be published to -security pocket next week
+
+
+
+** Get in contact
+- [[mailto:security@ubuntu.com][security@ubuntu.com]]
+- [[https://libera.chat][#ubuntu-security on the Libera.Chat IRC network]]
+- [[https://lists.ubuntu.com/mailman/listinfo/ubuntu-hardened][ubuntu-hardened mailing list]]
+- [[https://discourse.ubuntu.com/c/security][Security section on discourse.ubuntu.com]]
+- [[https://fosstodon.org/@ubuntusecurity][@ubuntusecurity@fosstodon.org]], [[https://twitter.com/ubuntu_sec][@ubuntu_sec on twitter]]
+
 * Episode 236
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-236
