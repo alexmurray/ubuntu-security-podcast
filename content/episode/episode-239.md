@@ -5,15 +5,15 @@ description = """
   with Alex, along with Eduardo Barretto to discuss our top cybersecurity best
   practices.
   """
-date = 2024-10-18T11:36:00+10:30
-lastmod = 2024-10-18T11:54:22+10:30
+date = 2024-10-18T16:36:00+10:30
+lastmod = 2024-10-18T16:40:54+10:30
 draft = false
 weight = 1001
 episode_image = "img/usp_logo_500.png"
 explicit = "no"
 podcast_file = "USP_E239.mp3"
-podcast_duration = 2378
-podcast_bytes = 42195924
+podcast_duration = 2356
+podcast_bytes = 41784660
 permalink = "https://ubuntusecuritypodcast.org/episode-239/"
 guid = "11478a6a3b71051bf48ad3fbf86ff74dc2af44ddc341dc66b2a7bdb12a93545ff118fcb8ec0458b3cb8c2b1bfbae414b16a4fe89a92b812dfb1f0c04a49c671f"
 +++

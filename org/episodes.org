@@ -11,8 +11,8 @@
 * Episode 239
 :PROPERTIES:
 :EXPORT_FILE_NAME: episode-239
-:EXPORT_DATE: 2024-10-18 11:36
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E239.mp3 :podcast_duration "2378" :podcast_bytes "42195924" :permalink "https://ubuntusecuritypodcast.org/episode-239/" :guid 11478a6a3b71051bf48ad3fbf86ff74dc2af44ddc341dc66b2a7bdb12a93545ff118fcb8ec0458b3cb8c2b1bfbae414b16a4fe89a92b812dfb1f0c04a49c671f
+:EXPORT_DATE: 2024-10-18 16:36
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :episode_image img/usp_logo_500.png :explicit no :podcast_file USP_E239.mp3 :podcast_duration "2356" :podcast_bytes "41784660" :permalink "https://ubuntusecuritypodcast.org/episode-239/" :guid 11478a6a3b71051bf48ad3fbf86ff74dc2af44ddc341dc66b2a7bdb12a93545ff118fcb8ec0458b3cb8c2b1bfbae414b16a4fe89a92b812dfb1f0c04a49c671f
 :END:
 #+begin_description
 In the second part of our series for Cybersecurity Awareness Month, Luci is back
